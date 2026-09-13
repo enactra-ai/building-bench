@@ -1,0 +1,16 @@
+{
+  "coverage": {
+    "orbit_000": 0.10859,
+    "orbit_090": 0.11727,
+    "orbit_180": 0.10357,
+    "orbit_270": 0.11615,
+    "hidden_045": 0.11123,
+    "hidden_225": 0.10267,
+    "plan_000": 0.04788,
+    "above_135": 0.09325
+  },
+  "width": 2304,
+  "height": 1728,
+  "method": "open12-enhanced-v1",
+  "unsettled": 0
+}

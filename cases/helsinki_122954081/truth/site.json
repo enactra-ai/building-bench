@@ -1,0 +1,220 @@
+{
+ "schema": "city_bench.building_site/1",
+ "id": "helsinki_122954081",
+ "name": "Hietalahden kauppahalli",
+ "osm_ref": "way/122954081",
+ "osm_date": "2026-08-01T00:00:00Z",
+ "origin": {
+  "lat": 60.16302345051069,
+  "lon": 24.929469830652845,
+  "ground_ellipsoidal_m": 23.652875944225055,
+  "ground_source": "mesh_low"
+ },
+ "footprint_m": [
+  [
+   4.718,
+   -7.136
+  ],
+  [
+   6.878,
+   -5.61
+  ],
+  [
+   5.223,
+   -3.27
+  ],
+  [
+   14.257,
+   3.114
+  ],
+  [
+   20.048,
+   -5.064
+  ],
+  [
+   22.608,
+   -3.259
+  ],
+  [
+   23.746,
+   -2.49
+  ],
+  [
+   25.118,
+   -1.476
+  ],
+  [
+   26.712,
+   -0.351
+  ],
+  [
+   20.887,
+   7.86
+  ],
+  [
+   25.129,
+   10.813
+  ],
+  [
+   27.084,
+   12.818
+  ],
+  [
+   28.283,
+   16.072
+  ],
+  [
+   28.0,
+   19.247
+  ],
+  [
+   26.645,
+   21.787
+  ],
+  [
+   24.54,
+   23.581
+  ],
+  [
+   21.587,
+   24.55
+  ],
+  [
+   18.949,
+   24.383
+  ],
+  [
+   16.345,
+   23.202
+  ],
+  [
+   8.705,
+   17.832
+  ],
+  [
+   -19.613,
+   -2.1
+  ],
+  [
+   -23.311,
+   -4.696
+  ],
+  [
+   -26.715,
+   -7.092
+  ],
+  [
+   -28.83,
+   -9.264
+  ],
+  [
+   -29.536,
+   -10.991
+  ],
+  [
+   -29.963,
+   -12.05
+  ],
+  [
+   -29.996,
+   -13.197
+  ],
+  [
+   -30.035,
+   -14.724
+  ],
+  [
+   -28.958,
+   -17.709
+  ],
+  [
+   -26.787,
+   -20.038
+  ],
+  [
+   -24.055,
+   -21.275
+  ],
+  [
+   -20.796,
+   -21.375
+  ],
+  [
+   -17.559,
+   -20.005
+  ],
+  [
+   -14.549,
+   -17.687
+  ],
+  [
+   -8.841,
+   -25.731
+  ],
+  [
+   -8.741,
+   -25.665
+  ],
+  [
+   -6.248,
+   -23.938
+  ],
+  [
+   -5.171,
+   -23.191
+  ],
+  [
+   -3.966,
+   -22.322
+  ],
+  [
+   -2.151,
+   -21.007
+  ],
+  [
+   -6.132,
+   -15.392
+  ],
+  [
+   -8.07,
+   -12.662
+  ],
+  [
+   0.937,
+   -6.301
+  ],
+  [
+   2.591,
+   -8.64
+  ]
+ ],
+ "holes_m": [],
+ "height_m": 9.6,
+ "height_source": "guessed",
+ "parts": [],
+ "tags": {
+  "addr:city": "Helsinki",
+  "addr:housenumber": "34",
+  "addr:postcode": "00180",
+  "addr:street": "Lönnrotinkatu",
+  "alt_name": "Hietalahden halli",
+  "amenity": "marketplace",
+  "architect": "Selim A. Lindqvist",
+  "building": "retail",
+  "internet_access": "wlan",
+  "name": "Hietalahden kauppahalli",
+  "name:en": "Hietalahti Market Hall",
+  "name:fi": "Hietalahden kauppahalli",
+  "name:sv": "Sandvikens saluhall",
+  "opening_hours": "Mo-Tu 8:00-18:00; We-Th 08:00-20:00; Fr-Sa 08:00-21:00; Su off",
+  "start_date": "1903",
+  "tourism": "attraction",
+  "website": "https://www.hietalahdenkauppahalli.fi/",
+  "wikidata": "Q3135324",
+  "wikimedia_commons": "Category:Hietalahti Market Hall",
+  "wikipedia": "fi:Hietalahden kauppahalli"
+ },
+ "radius_m": 34.42,
+ "area_m2": 1170.8,
+ "top_m": 9.6
+}

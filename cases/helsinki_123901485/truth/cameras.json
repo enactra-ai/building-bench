@@ -1,0 +1,121 @@
+{
+  "schema": "city_bench.building_cameras/1",
+  "frame": {
+    "x": "east",
+    "y": "up",
+    "z": "south",
+    "units": "metres",
+    "origin": "the building's footprint centroid, at ground level"
+  },
+  "convention": {
+    "heading_deg": "clockwise from north",
+    "pitch_deg": "up from level; negative looks down",
+    "fov_deg": "HORIZONTAL field of view"
+  },
+  "views": [
+    {
+      "name": "orbit_000",
+      "family": "orbit",
+      "east": 0.0,
+      "north": 148.7282,
+      "up": 110.3013,
+      "heading_deg": 180.0,
+      "pitch_deg": -28.0,
+      "roll_deg": 0.0,
+      "fov_deg": 45.0,
+      "width": 2304,
+      "height": 1728
+    },
+    {
+      "name": "orbit_090",
+      "family": "orbit",
+      "east": 148.7282,
+      "north": 0.0,
+      "up": 110.3013,
+      "heading_deg": 270.0,
+      "pitch_deg": -28.0,
+      "roll_deg": 0.0,
+      "fov_deg": 45.0,
+      "width": 2304,
+      "height": 1728
+    },
+    {
+      "name": "orbit_180",
+      "family": "orbit",
+      "east": 0.0,
+      "north": -148.7282,
+      "up": 110.3013,
+      "heading_deg": 0.0,
+      "pitch_deg": -28.0,
+      "roll_deg": 0.0,
+      "fov_deg": 45.0,
+      "width": 2304,
+      "height": 1728
+    },
+    {
+      "name": "orbit_270",
+      "family": "orbit",
+      "east": -148.7282,
+      "north": -0.0,
+      "up": 110.3013,
+      "heading_deg": 90.0,
+      "pitch_deg": -28.0,
+      "roll_deg": 0.0,
+      "fov_deg": 45.0,
+      "width": 2304,
+      "height": 1728
+    },
+    {
+      "name": "hidden_045",
+      "family": "interpolated",
+      "east": 105.1667,
+      "north": 105.1667,
+      "up": 110.3013,
+      "heading_deg": 225.0,
+      "pitch_deg": -28.0,
+      "roll_deg": 0.0,
+      "fov_deg": 45.0,
+      "width": 2304,
+      "height": 1728
+    },
+    {
+      "name": "hidden_225",
+      "family": "interpolated",
+      "east": -105.1667,
+      "north": -105.1667,
+      "up": 110.3013,
+      "heading_deg": 45.0,
+      "pitch_deg": -28.0,
+      "roll_deg": 0.0,
+      "fov_deg": 45.0,
+      "width": 2304,
+      "height": 1728
+    },
+    {
+      "name": "plan_000",
+      "family": "plan",
+      "east": 0.0,
+      "north": 1.6531,
+      "up": 947.1786,
+      "heading_deg": 180.0,
+      "pitch_deg": -89.9,
+      "roll_deg": 0.0,
+      "fov_deg": 12.0,
+      "width": 2304,
+      "height": 1728
+    },
+    {
+      "name": "above_135",
+      "family": "extrapolated",
+      "east": 84.3302,
+      "north": -84.3302,
+      "up": 183.8681,
+      "heading_deg": 315.0,
+      "pitch_deg": -52.0,
+      "roll_deg": 0.0,
+      "fov_deg": 45.0,
+      "width": 2304,
+      "height": 1728
+    }
+  ]
+}

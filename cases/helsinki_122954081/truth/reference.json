@@ -1,0 +1,177 @@
+{
+  "albedo": [
+    0.5255,
+    0.5373,
+    0.502
+  ],
+  "empty": {
+    "silhouette": 0.0,
+    "geometry": 0.0,
+    "appearance": 0.0,
+    "triangles": 0
+  },
+  "box": {
+    "silhouette": 0.4128,
+    "outline": 0.1094,
+    "plan": 0.4856,
+    "height": 0.151,
+    "geometry": 0.3274,
+    "appearance": 0.3659,
+    "colour": 0.6403,
+    "structure": 0.0,
+    "triangles": 12,
+    "surface": {
+      "f": 0.04352,
+      "precision": 0.03311,
+      "recall": 0.06349,
+      "chamfer_m": 6.2342,
+      "tau_m": 0.5
+    }
+  },
+  "extrusion": {
+    "silhouette": 0.7227,
+    "outline": 0.3599,
+    "plan": 0.7752,
+    "height": 0.151,
+    "geometry": 0.5749,
+    "appearance": 0.377,
+    "colour": 0.6597,
+    "structure": 0.0,
+    "triangles": 172,
+    "surface": {
+      "f": 0.23756,
+      "precision": 0.2275,
+      "recall": 0.24856,
+      "chamfer_m": 1.8135,
+      "tau_m": 0.5
+    }
+  },
+  "gold": {
+    "silhouette": 0.7768,
+    "outline": 0.3982,
+    "plan": 0.7715,
+    "height": 0.0,
+    "geometry": 0.5835,
+    "appearance": 0.3771,
+    "colour": 0.66,
+    "structure": 0.0,
+    "triangles": 172,
+    "surface": {
+      "f": 0.28615,
+      "precision": 0.27609,
+      "recall": 0.29697,
+      "chamfer_m": 1.2226,
+      "tau_m": 0.5
+    }
+  },
+  "gold_measured_height": {
+    "silhouette": 0.7227,
+    "outline": 0.3599,
+    "plan": 0.7752,
+    "height": 0.151,
+    "geometry": 0.5749,
+    "appearance": 0.377,
+    "colour": 0.6597,
+    "structure": 0.0,
+    "triangles": 172,
+    "surface": {
+      "f": 0.23756,
+      "precision": 0.2275,
+      "recall": 0.24856,
+      "chamfer_m": 1.8135,
+      "tau_m": 0.5
+    }
+  },
+  "answer_key": {
+    "silhouette": {
+      "value": 0.97318,
+      "from": {
+        "step": 1,
+        "spacings": 6.0,
+        "colour": "projected"
+      },
+      "triangles": 85614
+    },
+    "outline": {
+      "value": 0.98007,
+      "from": {
+        "step": 1,
+        "spacings": 6.0,
+        "colour": "projected"
+      },
+      "triangles": 85614
+    },
+    "plan": {
+      "value": 0.96634,
+      "from": {
+        "step": 1,
+        "spacings": 6.0,
+        "colour": "projected"
+      },
+      "triangles": 85614
+    },
+    "height": {
+      "value": 0.98086,
+      "from": {
+        "step": 1,
+        "spacings": 4.0,
+        "colour": "projected"
+      },
+      "triangles": 81396
+    },
+    "colour": {
+      "value": 0.96283,
+      "from": {
+        "step": 1,
+        "spacings": 4.0,
+        "colour": "projected"
+      },
+      "triangles": 81396
+    },
+    "structure": {
+      "value": 0.95346,
+      "from": {
+        "step": 1,
+        "spacings": 4.0,
+        "colour": "projected"
+      },
+      "triangles": 81396
+    },
+    "geometry": {
+      "value": 0.97434,
+      "from": {
+        "step": 1,
+        "spacings": 6.0,
+        "colour": "projected"
+      },
+      "triangles": 85614
+    },
+    "appearance": {
+      "value": 0.95881,
+      "from": {
+        "step": 1,
+        "spacings": 4.0,
+        "colour": "projected"
+      },
+      "triangles": 81396
+    },
+    "surface_f": {
+      "value": 0.99754,
+      "from": {
+        "step": 1,
+        "spacings": 4.0,
+        "colour": "projected"
+      },
+      "triangles": 81396
+    },
+    "chamfer_m": {
+      "value": 0.0875,
+      "from": {
+        "step": 1,
+        "spacings": 4.0,
+        "colour": "projected"
+      },
+      "triangles": 81396
+    }
+  }
+}

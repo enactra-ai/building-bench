@@ -1,0 +1,11 @@
+{
+ "ground_ellipsoidal_m": 25.046,
+ "ground_spread_m": 2.838,
+ "roof_ellipsoidal_p50_m": 41.176,
+ "roof_ellipsoidal_max_m": 50.612,
+ "height_p50_m": 16.13,
+ "height_max_m": 25.565,
+ "samples_ground": 12,
+ "samples_roof": 117,
+ "misses": 0
+}

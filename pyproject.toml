@@ -1,0 +1,25 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "building-bench"
+version = "1.0.0"
+description = "Reconstruct a real building as a textured glTF from photographs with known cameras: 12 open cases, the agent's kit, and the harness."
+readme = "README.md"
+requires-python = ">=3.11"
+# The versions the reference lanes' kit ran with.
+dependencies = [
+    "numpy==2.5.1",
+    "pillow==12.3.0",
+]
+
+[project.optional-dependencies]
+test = ["pytest>=8"]
+
+[tool.setuptools.packages.find]
+include = ["bench*", "harness*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["."]

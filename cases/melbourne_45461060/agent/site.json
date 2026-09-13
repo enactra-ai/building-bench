@@ -1,0 +1,16 @@
+{
+ "schema": "city_bench.building_known/1",
+ "id": "melbourne_45461060",
+ "name": "Australian Centre for Contemporary Art",
+ "origin": {
+  "note": "ENU metres; the model's (0,0,0) is here, at ground level",
+  "lat": -37.82665588471979,
+  "lon": 144.96717308199598
+ },
+ "axes": {
+  "x": "east",
+  "y": "up",
+  "z": "south",
+  "units": "metres"
+ }
+}

@@ -1,0 +1,162 @@
+{
+ "schema": "city_bench.building_site/1",
+ "id": "melbourne_22820458",
+ "name": "State Library Victoria",
+ "osm_ref": "way/22820458",
+ "osm_date": "2026-08-01T00:00:00Z",
+ "origin": {
+  "lat": -37.8096978831743,
+  "lon": 144.96549605545098,
+  "ground_ellipsoidal_m": 27.729978379998915,
+  "ground_source": "mesh_low"
+ },
+ "footprint_m": [
+  [
+   78.042,
+   25.26
+  ],
+  [
+   61.196,
+   71.855
+  ],
+  [
+   -13.848,
+   44.251
+  ],
+  [
+   -13.311,
+   41.987
+  ],
+  [
+   -18.119,
+   40.266
+  ],
+  [
+   -18.841,
+   42.464
+  ],
+  [
+   -66.868,
+   24.805
+  ],
+  [
+   -66.119,
+   21.953
+  ],
+  [
+   -82.217,
+   16.17
+  ],
+  [
+   -94.659,
+   11.708
+  ],
+  [
+   -90.732,
+   0.864
+  ],
+  [
+   -86.857,
+   2.251
+  ],
+  [
+   -79.487,
+   -18.116
+  ],
+  [
+   -82.965,
+   -19.37
+  ],
+  [
+   -79.179,
+   -29.826
+  ],
+  [
+   -75.462,
+   -40.104
+  ],
+  [
+   -72.275,
+   -38.96
+  ],
+  [
+   -65.028,
+   -58.95
+  ],
+  [
+   -69.413,
+   -60.526
+  ],
+  [
+   -65.01,
+   -72.713
+  ],
+  [
+   -54.187,
+   -68.829
+  ],
+  [
+   -54.821,
+   -67.097
+  ],
+  [
+   -14.2,
+   -52.513
+  ],
+  [
+   -13.355,
+   -54.855
+  ],
+  [
+   34.197,
+   -37.773
+  ],
+  [
+   33.308,
+   -35.342
+  ],
+  [
+   78.905,
+   -18.971
+  ],
+  [
+   79.856,
+   -21.59
+  ],
+  [
+   93.241,
+   -16.784
+  ]
+ ],
+ "holes_m": [],
+ "height_m": 16.0,
+ "height_source": "levels",
+ "parts": [],
+ "tags": {
+  "addr:housenumber": "328",
+  "addr:postcode": "3000",
+  "addr:street": "Swanston Street",
+  "addr:suburb": "Melbourne",
+  "amenity": "library",
+  "building": "yes",
+  "building:levels": "5",
+  "email": "enquiries@slv.vic.gov.au",
+  "fax": "+61 3 9639 4737",
+  "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cd/State_Library_of_Victoria_La_Trobe_Reading_room_5th_floor_view.jpg/1200px-State_Library_of_Victoria_La_Trobe_Reading_room_5th_floor_view.jpg",
+  "internet_access": "wlan",
+  "internet_access:fee": "no",
+  "name": "State Library Victoria",
+  "name:el": "Βιβλιοθήκη της Βικτώριας",
+  "name:fr": "Bibliothèque d'État du Victoria",
+  "name:vi": "Thư viện Bang Victoria",
+  "name:zh": "维多利亚州立图书馆",
+  "opening_hours": "Mo-Su 10:00-18:00",
+  "phone": "+61 3 8664 7000",
+  "toilets": "yes",
+  "website": "https://www.slv.vic.gov.au",
+  "wikidata": "Q1200052"
+ },
+ "radius_m": 97.54,
+ "area_m2": 15101.1,
+ "top_m": 16.0
+}

@@ -1,0 +1,16 @@
+{
+ "schema": "city_bench.building_known/1",
+ "id": "helsinki_123901485",
+ "name": "Johanneskyrkan",
+ "origin": {
+  "note": "ENU metres; the model's (0,0,0) is here, at ground level",
+  "lat": 60.16181217593505,
+  "lon": 24.944994796972512
+ },
+ "axes": {
+  "x": "east",
+  "y": "up",
+  "z": "south",
+  "units": "metres"
+ }
+}

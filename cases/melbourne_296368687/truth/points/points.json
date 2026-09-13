@@ -1,0 +1,87 @@
+{
+ "stride": 9,
+ "origin": {
+  "lat": -37.818250221905984,
+  "lon": 144.94704141107977,
+  "height": 11.683327383190457
+ },
+ "views": [
+  {
+   "name": "orbit_000",
+   "pumps": 16,
+   "settled": true,
+   "tried": 13353,
+   "hits": 7286,
+   "points": 7286
+  },
+  {
+   "name": "orbit_090",
+   "pumps": 3,
+   "settled": true,
+   "tried": 17045,
+   "hits": 9929,
+   "points": 9929
+  },
+  {
+   "name": "orbit_180",
+   "pumps": 3,
+   "settled": true,
+   "tried": 14733,
+   "hits": 7569,
+   "points": 7569
+  },
+  {
+   "name": "orbit_270",
+   "pumps": 3,
+   "settled": true,
+   "tried": 17673,
+   "hits": 9994,
+   "points": 9994
+  },
+  {
+   "name": "hidden_045",
+   "pumps": 3,
+   "settled": true,
+   "tried": 11605,
+   "hits": 6259,
+   "points": 6259
+  },
+  {
+   "name": "hidden_225",
+   "pumps": 3,
+   "settled": true,
+   "tried": 13381,
+   "hits": 6878,
+   "points": 6878
+  },
+  {
+   "name": "plan_000",
+   "pumps": 3,
+   "settled": true,
+   "tried": 9277,
+   "hits": 2939,
+   "points": 2939
+  },
+  {
+   "name": "above_135",
+   "pumps": 3,
+   "settled": true,
+   "tried": 13017,
+   "hits": 6668,
+   "points": 6668
+  }
+ ],
+ "clip": {
+  "supported": true,
+  "polygons": 1,
+  "inverse": true
+ },
+ "height_clip": {
+  "origin_matrix_is_identity": false
+ },
+ "attribution": "",
+ "seconds": 36.726,
+ "points": 57522,
+ "height_m": 123.7033,
+ "pitch_m": 0.9805
+}

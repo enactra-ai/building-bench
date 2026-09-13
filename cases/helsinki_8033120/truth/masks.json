@@ -1,0 +1,16 @@
+{
+  "coverage": {
+    "orbit_000": 0.24907,
+    "orbit_090": 0.22513,
+    "orbit_180": 0.24996,
+    "orbit_270": 0.22209,
+    "hidden_045": 0.24361,
+    "hidden_225": 0.25023,
+    "plan_000": 0.09305,
+    "above_135": 0.23125
+  },
+  "width": 2304,
+  "height": 1728,
+  "method": "helsinki-enhanced-v1",
+  "unsettled": 0
+}

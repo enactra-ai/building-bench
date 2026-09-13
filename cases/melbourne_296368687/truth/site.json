@@ -1,0 +1,95 @@
+{
+ "schema": "city_bench.building_site/1",
+ "id": "melbourne_296368687",
+ "name": "Victoria Point",
+ "osm_ref": "way/296368687",
+ "osm_date": "2026-08-01T00:00:00Z",
+ "origin": {
+  "lat": -37.818250221905984,
+  "lon": 144.94704141107977,
+  "ground_ellipsoidal_m": 11.683327383190457,
+  "ground_source": "mesh_low"
+ },
+ "footprint_m": [
+  [
+   5.52,
+   -9.055
+  ],
+  [
+   8.54,
+   -5.803
+  ],
+  [
+   21.853,
+   11.124
+  ],
+  [
+   32.436,
+   25.431
+  ],
+  [
+   14.298,
+   26.929
+  ],
+  [
+   9.764,
+   29.194
+  ],
+  [
+   1.452,
+   26.175
+  ],
+  [
+   -9.88,
+   15.641
+  ],
+  [
+   -15.172,
+   5.863
+  ],
+  [
+   -19.706,
+   -6.935
+  ],
+  [
+   -20.464,
+   -18.223
+  ],
+  [
+   -19.16,
+   -27.257
+  ],
+  [
+   -16.052,
+   -33.673
+  ],
+  [
+   -8.85,
+   -36.303
+  ],
+  [
+   -5.037,
+   -37.424
+  ]
+ ],
+ "holes_m": [],
+ "height_m": 128.0,
+ "height_source": "measured",
+ "parts": [],
+ "tags": {
+  "addr:housenumber": "100",
+  "addr:postcode": "3008",
+  "addr:street": "Harbour Esplanade",
+  "addr:suburb": "Docklands",
+  "building": "apartments",
+  "building:levels": "42",
+  "height": "128",
+  "layer": "1",
+  "name": "Victoria Point",
+  "start_date": "2006",
+  "wikidata": "Q7926966"
+ },
+ "radius_m": 41.22,
+ "area_m2": 1669.9,
+ "top_m": 128.0
+}

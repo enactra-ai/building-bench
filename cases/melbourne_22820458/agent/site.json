@@ -1,0 +1,16 @@
+{
+ "schema": "city_bench.building_known/1",
+ "id": "melbourne_22820458",
+ "name": "State Library Victoria",
+ "origin": {
+  "note": "ENU metres; the model's (0,0,0) is here, at ground level",
+  "lat": -37.8096978831743,
+  "lon": 144.96549605545098
+ },
+ "axes": {
+  "x": "east",
+  "y": "up",
+  "z": "south",
+  "units": "metres"
+ }
+}

@@ -1,0 +1,38 @@
+{
+ "schema": "city_bench.building_task/1",
+ "identity": "a9f76d8244a147fd",
+ "id": "helsinki_cathedral_enhanced_v1-blind",
+ "site_id": "helsinki_cathedral",
+ "lat": 60.170385,
+ "lon": 24.952161,
+ "osm_date": "2026-08-01T00:00:00Z",
+ "osm_ref": "way/1542850662",
+ "footprint": "none",
+ "height": "none",
+ "cameras": "given",
+ "views": {
+  "orbit_count": 4,
+  "orbit_elevation_deg": 28.0,
+  "orbit_distance_radii": 4.8,
+  "heldout_count": 2,
+  "heldout_elevation_deg": 52.0,
+  "heldout_extrapolated": 1,
+  "street_count": 0,
+  "street_camera_height_m": 3.5,
+  "street_distance_radii": 2.4,
+  "plan_view": true,
+  "plan_distance_radii": 26.0,
+  "plan_fov_deg": 12.0,
+  "fov_deg": 45.0,
+  "width": 2304,
+  "height": 1728
+ },
+ "budget": {
+  "triangles": 300000,
+  "megabytes": 64.0,
+  "steps": 120,
+  "seconds": 5400.0
+ },
+ "hint_noise_m": 1.5,
+ "note": "CC BY 4.0 municipal source; supersampled render (4608x3456, MSAA 8, 2x reduce to 2304x1728)"
+}

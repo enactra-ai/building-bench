@@ -1,0 +1,4 @@
+# The lane image needs one file from this repository. Everything else --
+# above all cases/, whose truth/ is the answer key -- stays out of the build.
+*
+!docker/lane-requirements.txt

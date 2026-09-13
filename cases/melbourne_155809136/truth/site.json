@@ -1,0 +1,180 @@
+{
+ "schema": "city_bench.building_site/1",
+ "id": "melbourne_155809136",
+ "name": "Saint Patrick's Cathedral",
+ "osm_ref": "way/155809136",
+ "osm_date": "2026-08-01T00:00:00Z",
+ "origin": {
+  "lat": -37.81012740629328,
+  "lon": 144.97636479672175,
+  "ground_ellipsoidal_m": 46.07164876660139,
+  "ground_source": "mesh_low"
+ },
+ "footprint_m": [
+  [
+   27.695,
+   31.956
+  ],
+  [
+   25.273,
+   35.53
+  ],
+  [
+   22.429,
+   35.818
+  ],
+  [
+   19.461,
+   34.852
+  ],
+  [
+   18.246,
+   33.698
+  ],
+  [
+   15.102,
+   35.197
+  ],
+  [
+   12.152,
+   34.309
+  ],
+  [
+   9.669,
+   31.989
+  ],
+  [
+   8.489,
+   33.232
+  ],
+  [
+   1.577,
+   26.772
+  ],
+  [
+   -3.161,
+   31.789
+  ],
+  [
+   -6.146,
+   29.003
+  ],
+  [
+   -21.319,
+   14.807
+  ],
+  [
+   -13.068,
+   6.105
+  ],
+  [
+   -45.764,
+   -24.484
+  ],
+  [
+   -27.315,
+   -43.93
+  ],
+  [
+   5.301,
+   -13.241
+  ],
+  [
+   13.553,
+   -21.898
+  ],
+  [
+   28.408,
+   -7.869
+  ],
+  [
+   31.516,
+   -4.927
+  ],
+  [
+   27.254,
+   -0.465
+  ],
+  [
+   34.097,
+   5.994
+  ],
+  [
+   32.917,
+   7.237
+  ],
+  [
+   35.382,
+   9.568
+  ],
+  [
+   36.474,
+   12.443
+  ],
+  [
+   35.197,
+   15.64
+  ],
+  [
+   36.421,
+   16.783
+  ],
+  [
+   37.593,
+   19.669
+  ],
+  [
+   37.24,
+   22.788
+  ],
+  [
+   34.088,
+   25.152
+  ],
+  [
+   36.518,
+   27.416
+  ],
+  [
+   37.434,
+   31.611
+  ],
+  [
+   34.22,
+   35.03
+  ],
+  [
+   30.125,
+   34.22
+  ]
+ ],
+ "holes_m": [],
+ "height_m": 9.6,
+ "height_source": "guessed",
+ "parts": [],
+ "tags": {
+  "addr:country": "AU",
+  "addr:housenumber": "2-60",
+  "addr:postcode": "3002",
+  "addr:state": "VIC",
+  "addr:street": "Cathedral Place",
+  "addr:suburb": "East Melbourne",
+  "amenity": "place_of_worship",
+  "basilica": "minor",
+  "building": "church",
+  "denomination": "catholic",
+  "name": "Saint Patrick's Cathedral",
+  "name:el": "Καθεδρικός Ναός Αγίου Πατρικίου",
+  "name:fr": "Cathédrale Saint-Patrick",
+  "name:vi": "Thánh đường thánh Patriciô",
+  "name:zh": "圣巴德利爵主教座堂",
+  "ref:dove": "15155",
+  "religion": "christian",
+  "source": "Vicmap Address",
+  "wikidata": "Q1138670",
+  "wikipedia": "en:St Patrick's Cathedral, Melbourne"
+ },
+ "radius_m": 51.9,
+ "area_m2": 3236.0,
+ "top_m": 9.6
+}

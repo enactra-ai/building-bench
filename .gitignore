@@ -1,0 +1,10 @@
+.venv/
+__pycache__/
+*.pyc
+*.egg-info/
+.pytest_cache/
+# where harness.run keeps lanes and results
+lanes/
+runs/
+# figure fonts, downloaded on demand by docs/figures.py
+docs/.fontcache/

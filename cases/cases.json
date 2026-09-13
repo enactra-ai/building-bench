@@ -1,0 +1,390 @@
+{
+ "schema": "building_bench.cases/1",
+ "tier": "blind",
+ "cases": [
+  {
+   "key": "helsinki_122886734",
+   "name": "Pikkuparlamentti",
+   "city": "Helsinki",
+   "osm_ref": "way/122886734",
+   "osm_url": "https://www.openstreetmap.org/way/122886734",
+   "footprint_area_m2": 1838.6,
+   "height_m": 25.57,
+   "source": "Helsinki 3D city model (reality mesh)",
+   "publisher": "City of Helsinki (Helsingin kaupunki)",
+   "source_url": "https://hri.fi/data/en_GB/dataset/helsingin-3d-kaupunkimalli",
+   "licence": "CC BY 4.0",
+   "attribution": "Helsinki 3D city model / Helsingin kaupunki",
+   "identity": "f339c3dbf7ca4334",
+   "ledger_id": "helsinki_122886734_enhanced_v1",
+   "input_views": [
+    "orbit_000",
+    "orbit_090",
+    "orbit_180",
+    "orbit_270"
+   ],
+   "held_out_views": [
+    "hidden_045",
+    "hidden_225",
+    "plan_000",
+    "above_135"
+   ],
+   "image_size": [
+    2304,
+    1728
+   ]
+  },
+  {
+   "key": "helsinki_122954081",
+   "name": "Hietalahden kauppahalli",
+   "city": "Helsinki",
+   "osm_ref": "way/122954081",
+   "osm_url": "https://www.openstreetmap.org/way/122954081",
+   "footprint_area_m2": 1170.8,
+   "height_m": 11.98,
+   "source": "Helsinki 3D city model (reality mesh)",
+   "publisher": "City of Helsinki (Helsingin kaupunki)",
+   "source_url": "https://hri.fi/data/en_GB/dataset/helsingin-3d-kaupunkimalli",
+   "licence": "CC BY 4.0",
+   "attribution": "Helsinki 3D city model / Helsingin kaupunki",
+   "identity": "5e87c6c44927350f",
+   "ledger_id": "helsinki_122954081_enhanced_v1",
+   "input_views": [
+    "orbit_000",
+    "orbit_090",
+    "orbit_180",
+    "orbit_270"
+   ],
+   "held_out_views": [
+    "hidden_045",
+    "hidden_225",
+    "plan_000",
+    "above_135"
+   ],
+   "image_size": [
+    2304,
+    1728
+   ]
+  },
+  {
+   "key": "helsinki_123901485",
+   "name": "Johanneskyrkan",
+   "city": "Helsinki",
+   "osm_ref": "way/123901485",
+   "osm_url": "https://www.openstreetmap.org/way/123901485",
+   "footprint_area_m2": 1966.2,
+   "height_m": 62.44,
+   "source": "Helsinki 3D city model (reality mesh)",
+   "publisher": "City of Helsinki (Helsingin kaupunki)",
+   "source_url": "https://hri.fi/data/en_GB/dataset/helsingin-3d-kaupunkimalli",
+   "licence": "CC BY 4.0",
+   "attribution": "Helsinki 3D city model / Helsingin kaupunki",
+   "identity": "2f2bcd0faffa3b4a",
+   "ledger_id": "helsinki_123901485_enhanced_v1",
+   "input_views": [
+    "orbit_000",
+    "orbit_090",
+    "orbit_180",
+    "orbit_270"
+   ],
+   "held_out_views": [
+    "hidden_045",
+    "hidden_225",
+    "plan_000",
+    "above_135"
+   ],
+   "image_size": [
+    2304,
+    1728
+   ]
+  },
+  {
+   "key": "helsinki_8033120",
+   "name": "Ateneum",
+   "city": "Helsinki",
+   "osm_ref": "way/8033120",
+   "osm_url": "https://www.openstreetmap.org/way/8033120",
+   "footprint_area_m2": 3861.6,
+   "height_m": 23.82,
+   "source": "Helsinki 3D city model (reality mesh)",
+   "publisher": "City of Helsinki (Helsingin kaupunki)",
+   "source_url": "https://hri.fi/data/en_GB/dataset/helsingin-3d-kaupunkimalli",
+   "licence": "CC BY 4.0",
+   "attribution": "Helsinki 3D city model / Helsingin kaupunki",
+   "identity": "222f1000f1b7c6bf",
+   "ledger_id": "helsinki_8033120_enhanced_v1",
+   "input_views": [
+    "orbit_000",
+    "orbit_090",
+    "orbit_180",
+    "orbit_270"
+   ],
+   "held_out_views": [
+    "hidden_045",
+    "hidden_225",
+    "plan_000",
+    "above_135"
+   ],
+   "image_size": [
+    2304,
+    1728
+   ]
+  },
+  {
+   "key": "helsinki_cathedral",
+   "name": "Helsingin tuomiokirkko",
+   "city": "Helsinki",
+   "osm_ref": "way/1542850662",
+   "osm_url": "https://www.openstreetmap.org/way/1542850662",
+   "footprint_area_m2": 2566.1,
+   "height_m": 54.09,
+   "source": "Helsinki 3D city model (reality mesh)",
+   "publisher": "City of Helsinki (Helsingin kaupunki)",
+   "source_url": "https://hri.fi/data/en_GB/dataset/helsingin-3d-kaupunkimalli",
+   "licence": "CC BY 4.0",
+   "attribution": "Helsinki 3D city model / Helsingin kaupunki",
+   "identity": "a9f76d8244a147fd",
+   "ledger_id": "helsinki_cathedral_enhanced_v1",
+   "input_views": [
+    "orbit_000",
+    "orbit_090",
+    "orbit_180",
+    "orbit_270"
+   ],
+   "held_out_views": [
+    "hidden_045",
+    "hidden_225",
+    "plan_000",
+    "above_135"
+   ],
+   "image_size": [
+    2304,
+    1728
+   ]
+  },
+  {
+   "key": "melbourne_155809136",
+   "name": "Saint Patrick's Cathedral",
+   "city": "Melbourne",
+   "osm_ref": "way/155809136",
+   "osm_url": "https://www.openstreetmap.org/way/155809136",
+   "footprint_area_m2": 3236.0,
+   "height_m": 86.7,
+   "source": "City of Melbourne 3D Textured Mesh (Photomesh) 2020",
+   "publisher": "City of Melbourne",
+   "source_url": "https://data.melbourne.vic.gov.au/explore/dataset/city-of-melbourne-3d-textured-mesh-photomesh-2020/",
+   "licence": "CC BY 4.0",
+   "attribution": "City of Melbourne 3D Textured Mesh (Photomesh) 2020 / City of Melbourne",
+   "identity": "6acd4f50d8ac3cce",
+   "ledger_id": "melbourne_155809136_enhanced_v1",
+   "input_views": [
+    "orbit_000",
+    "orbit_090",
+    "orbit_180",
+    "orbit_270"
+   ],
+   "held_out_views": [
+    "hidden_045",
+    "hidden_225",
+    "plan_000",
+    "above_135"
+   ],
+   "image_size": [
+    2304,
+    1728
+   ]
+  },
+  {
+   "key": "melbourne_22820458",
+   "name": "State Library Victoria",
+   "city": "Melbourne",
+   "osm_ref": "way/22820458",
+   "osm_url": "https://www.openstreetmap.org/way/22820458",
+   "footprint_area_m2": 15101.1,
+   "height_m": 45.02,
+   "source": "City of Melbourne 3D Textured Mesh (Photomesh) 2020",
+   "publisher": "City of Melbourne",
+   "source_url": "https://data.melbourne.vic.gov.au/explore/dataset/city-of-melbourne-3d-textured-mesh-photomesh-2020/",
+   "licence": "CC BY 4.0",
+   "attribution": "City of Melbourne 3D Textured Mesh (Photomesh) 2020 / City of Melbourne",
+   "identity": "51fe1d1f686ab368",
+   "ledger_id": "melbourne_22820458_enhanced_v1",
+   "input_views": [
+    "orbit_000",
+    "orbit_090",
+    "orbit_180",
+    "orbit_270"
+   ],
+   "held_out_views": [
+    "hidden_045",
+    "hidden_225",
+    "plan_000",
+    "above_135"
+   ],
+   "image_size": [
+    2304,
+    1728
+   ]
+  },
+  {
+   "key": "melbourne_25422768",
+   "name": "Government House",
+   "city": "Melbourne",
+   "osm_ref": "way/25422768",
+   "osm_url": "https://www.openstreetmap.org/way/25422768",
+   "footprint_area_m2": 4685.4,
+   "height_m": 53.26,
+   "source": "City of Melbourne 3D Textured Mesh (Photomesh) 2020",
+   "publisher": "City of Melbourne",
+   "source_url": "https://data.melbourne.vic.gov.au/explore/dataset/city-of-melbourne-3d-textured-mesh-photomesh-2020/",
+   "licence": "CC BY 4.0",
+   "attribution": "City of Melbourne 3D Textured Mesh (Photomesh) 2020 / City of Melbourne",
+   "identity": "4354670eccf30870",
+   "ledger_id": "melbourne_25422768_enhanced_v1",
+   "input_views": [
+    "orbit_000",
+    "orbit_090",
+    "orbit_180",
+    "orbit_270"
+   ],
+   "held_out_views": [
+    "hidden_045",
+    "hidden_225",
+    "plan_000",
+    "above_135"
+   ],
+   "image_size": [
+    2304,
+    1728
+   ]
+  },
+  {
+   "key": "melbourne_296368687",
+   "name": "Victoria Point",
+   "city": "Melbourne",
+   "osm_ref": "way/296368687",
+   "osm_url": "https://www.openstreetmap.org/way/296368687",
+   "footprint_area_m2": 1669.9,
+   "height_m": 122.63,
+   "source": "City of Melbourne 3D Textured Mesh (Photomesh) 2020",
+   "publisher": "City of Melbourne",
+   "source_url": "https://data.melbourne.vic.gov.au/explore/dataset/city-of-melbourne-3d-textured-mesh-photomesh-2020/",
+   "licence": "CC BY 4.0",
+   "attribution": "City of Melbourne 3D Textured Mesh (Photomesh) 2020 / City of Melbourne",
+   "identity": "1bf184b34600e6b6",
+   "ledger_id": "melbourne_296368687_enhanced_v1",
+   "input_views": [
+    "orbit_000",
+    "orbit_090",
+    "orbit_180",
+    "orbit_270"
+   ],
+   "held_out_views": [
+    "hidden_045",
+    "hidden_225",
+    "plan_000",
+    "above_135"
+   ],
+   "image_size": [
+    2304,
+    1728
+   ]
+  },
+  {
+   "key": "melbourne_33106429",
+   "name": "Crowne Plaza",
+   "city": "Melbourne",
+   "osm_ref": "way/33106429",
+   "osm_url": "https://www.openstreetmap.org/way/33106429",
+   "footprint_area_m2": 1860.6,
+   "height_m": 52.69,
+   "source": "City of Melbourne 3D Textured Mesh (Photomesh) 2020",
+   "publisher": "City of Melbourne",
+   "source_url": "https://data.melbourne.vic.gov.au/explore/dataset/city-of-melbourne-3d-textured-mesh-photomesh-2020/",
+   "licence": "CC BY 4.0",
+   "attribution": "City of Melbourne 3D Textured Mesh (Photomesh) 2020 / City of Melbourne",
+   "identity": "dee9dee01c4d32b2",
+   "ledger_id": "melbourne_33106429_enhanced_v1",
+   "input_views": [
+    "orbit_000",
+    "orbit_090",
+    "orbit_180",
+    "orbit_270"
+   ],
+   "held_out_views": [
+    "hidden_045",
+    "hidden_225",
+    "plan_000",
+    "above_135"
+   ],
+   "image_size": [
+    2304,
+    1728
+   ]
+  },
+  {
+   "key": "melbourne_45461060",
+   "name": "Australian Centre for Contemporary Art",
+   "city": "Melbourne",
+   "osm_ref": "way/45461060",
+   "osm_url": "https://www.openstreetmap.org/way/45461060",
+   "footprint_area_m2": 3048.3,
+   "height_m": 13.93,
+   "source": "City of Melbourne 3D Textured Mesh (Photomesh) 2020",
+   "publisher": "City of Melbourne",
+   "source_url": "https://data.melbourne.vic.gov.au/explore/dataset/city-of-melbourne-3d-textured-mesh-photomesh-2020/",
+   "licence": "CC BY 4.0",
+   "attribution": "City of Melbourne 3D Textured Mesh (Photomesh) 2020 / City of Melbourne",
+   "identity": "34eb6f32c5a96023",
+   "ledger_id": "melbourne_45461060_enhanced_v1",
+   "input_views": [
+    "orbit_000",
+    "orbit_090",
+    "orbit_180",
+    "orbit_270"
+   ],
+   "held_out_views": [
+    "hidden_045",
+    "hidden_225",
+    "plan_000",
+    "above_135"
+   ],
+   "image_size": [
+    2304,
+    1728
+   ]
+  },
+  {
+   "key": "melbourne_4817059",
+   "name": "Royal Exhibition Building",
+   "city": "Melbourne",
+   "osm_ref": "way/4817059",
+   "osm_url": "https://www.openstreetmap.org/way/4817059",
+   "footprint_area_m2": 9983.7,
+   "height_m": 54.43,
+   "source": "City of Melbourne 3D Textured Mesh (Photomesh) 2020",
+   "publisher": "City of Melbourne",
+   "source_url": "https://data.melbourne.vic.gov.au/explore/dataset/city-of-melbourne-3d-textured-mesh-photomesh-2020/",
+   "licence": "CC BY 4.0",
+   "attribution": "City of Melbourne 3D Textured Mesh (Photomesh) 2020 / City of Melbourne",
+   "identity": "3bb9b6612601e6ca",
+   "ledger_id": "melbourne_4817059_enhanced_v1",
+   "input_views": [
+    "orbit_000",
+    "orbit_090",
+    "orbit_180",
+    "orbit_270"
+   ],
+   "held_out_views": [
+    "hidden_045",
+    "hidden_225",
+    "plan_000",
+    "above_135"
+   ],
+   "image_size": [
+    2304,
+    1728
+   ]
+  }
+ ]
+}

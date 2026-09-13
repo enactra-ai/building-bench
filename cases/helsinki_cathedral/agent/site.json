@@ -1,0 +1,16 @@
+{
+ "schema": "city_bench.building_known/1",
+ "id": "helsinki_cathedral",
+ "name": "Helsingin tuomiokirkko",
+ "origin": {
+  "note": "ENU metres; the model's (0,0,0) is here, at ground level",
+  "lat": 60.17037873850835,
+  "lon": 24.952182885114446
+ },
+ "axes": {
+  "x": "east",
+  "y": "up",
+  "z": "south",
+  "units": "metres"
+ }
+}

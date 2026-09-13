@@ -1,0 +1,16 @@
+{
+ "schema": "city_bench.building_known/1",
+ "id": "melbourne_155809136",
+ "name": "Saint Patrick's Cathedral",
+ "origin": {
+  "note": "ENU metres; the model's (0,0,0) is here, at ground level",
+  "lat": -37.81012740629328,
+  "lon": 144.97636479672175
+ },
+ "axes": {
+  "x": "east",
+  "y": "up",
+  "z": "south",
+  "units": "metres"
+ }
+}
