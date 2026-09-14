@@ -177,8 +177,10 @@ CONFIGS = {c.name: c for c in (
                   "that login file and nothing else from ~/.grok.",
                   "xhigh is grok-4.6's highest reasoning effort. --effort max "
                   "is passed too, but it does not change the request.",
-                  "The CLI reports neither a price nor token counts, so these "
-                  "runs carry no cost.")),
+                  "The CLI reports neither a price nor token counts. The "
+                  "reference runs' cost is estimated from each session "
+                  "record at xAI's published rates; `cost_basis` on each "
+                  "row in results/ says how.")),
     Config("glm-5.3-flash-max", "GLM 5.3 Flash (max)", "opencode",
            "openrouter/z-ai/glm-5.3-flash", "max"),
     Config("inkling-free", "Inkling (free) · opencode", "opencode",

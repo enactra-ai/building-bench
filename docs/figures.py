@@ -353,13 +353,7 @@ def place(labels: list[dict], bounds: tuple[float, float, float, float]) -> None
 
 
 def price(theme: str) -> None:
-    ranked = [l for l in board.board(board.load(board.REFERENCE)) if l["ranked"]]
-    # a row whose CLI reports no cost has no place on a price axis; it is named
-    # under the plot instead of being drawn at a price it never had
-    rows = [l for l in ranked if l["cost_usd"] is not None]
-    unpriced = [l["label"] for l in ranked if l["cost_usd"] is None]
-    missing = (f" Not drawn: {', '.join(unpriced)}, whose CLI reports no cost."
-               if unpriced else "")
+    rows = [l for l in board.board(board.load(board.REFERENCE)) if l["ranked"]]
     points = [dict(text=l["label"], overall=l["overall"], se=l["se"] or 0.0,
                    cost=l["cost_usd"]) for l in rows]
     best = {id(p) for p in frontier(points)}
@@ -437,7 +431,7 @@ def price(theme: str) -> None:
   </svg>
   <p class="note">Cost is the median of the twelve runs, on a logarithmic axis; whiskers are
     &plusmn; one standard error of the mean over the buildings. The line joins the rows nothing
-    else beats on both price and score &mdash; up and to the right is better.{missing}</p>
+    else beats on both price and score &mdash; up and to the right is better.</p>
 </div>"""
     shoot(body, "price", 1280, theme)
 
