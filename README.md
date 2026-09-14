@@ -75,7 +75,7 @@ spend.
 | 3 | Claude Fable 5 (max) | 0.729 | 0.020 | 0.417 | 0.796 | 0.709 | 39.64 | 68 |
 | 4 | Claude Opus 5 (max) | 0.708 | 0.023 | 0.364 | 0.749 | 0.745 | 46.38 | 93 |
 | 5 | DeepSeek V4.1 Flash (max) | 0.705 | 0.022 | 0.249 | 0.744 | 0.764 | 2.33 | 114 |
-| 6 | Grok 4.6 (xhigh) | 0.697 | 0.024 | 0.350 | 0.753 | 0.612 | 10.59 | 37 |
+| 6 | Grok 4.6 (xhigh) | 0.697 | 0.024 | 0.350 | 0.753 | 0.612 | 10.59 | 53 |
 | 7 | GPT-5.6 Sol (max) | 0.694 | 0.014 | 0.350 | 0.794 | 0.659 | 7.54 | 44 |
 | 8 | Muse Spark 1.3 (max) | 0.673 | 0.019 | 0.307 | 0.715 | 0.664 | 5.80 | 60 |
 | 9 | GPT-5.6 Terra (max) | 0.659 | 0.021 | 0.249 | 0.740 | 0.624 | 4.26 | 53 |
@@ -94,16 +94,11 @@ the mean over the twelve buildings and `± SE` is the standard error across
 them; a model appears only once it has run all twelve, because a mean over a
 different set of buildings is a different measurement. `$ / run` and
 `min / run` are medians, and the cost is what the agent's CLI reported, except
-where the CLI does not know it: Muse's reports nothing and is metered, and
-Claude Code priced the DeepSeek row against its own first-party card, so that
-row is the pinned endpoint's published rates on the CLI's own token counts,
-which each run carries. For subscription logins it is the API-equivalent price.
-Grok Build reports neither a price nor token counts, so the Grok row is an
-estimate: xAI's published grok-4.6 rates on token counts rebuilt from each run's
-session record, which logs the context size at every model call, with the
-previous call's prompt taken as cached. Its `min / run` is the agent's own turn,
-from the CLI's log — the CLI keeps the lane open for some minutes after the
-turn ends, uploading the session. Every run is in
+where the CLI does not know it: Muse's reports nothing and is metered, Grok
+Build's token counts are rebuilt from its session record, and Claude Code
+priced the DeepSeek row against its own first-party card, so that row is the
+pinned endpoint's published rates on the CLI's own token counts, which each run
+carries. For subscription logins it is the API-equivalent price. Every run is in
 `results/reference_runs.jsonl`; `python -m harness.board` leaves the `--ranked`
 filter off and shows the partial rows too.
 
