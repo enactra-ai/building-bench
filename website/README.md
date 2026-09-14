@@ -75,16 +75,31 @@ only downloads glbs it does not already have.
 - **Light rig** is the benchmark's `city_bench.building_light/1`, as the board's own renders use.
 - The board serves no CORS headers, so nothing is fetched live; a snapshot date is on the page.
 
-## Backups
+## Backups, and the Cloudflare trap
 
-`_backups/pre-merge-2026-09-13/` holds the version that was live at buildingbench.enactra.ai
-before the merge — `index.html` + its 133 assets, plus the pre-merge `template.html` and
-`app.js`. It was captured from the live site rather than from disk, because `build.py`
-overwrites `out/` in place and nothing here is under version control. `RESTORE.md` in that
-folder says how to put it back. Keep `_backups/` out of `out/deploy/`: every file uploaded
-there becomes a public URL.
+`_backups/pre-merge-2026-09-13/` holds the page exactly as buildingbench.enactra.ai served it
+on 2026-09-13, captured from the live site. It is a record of what was deployed — **not** the
+way to get that page back. `buildingbench-evolution/` rebuilds the same thing from source,
+with the provenance wording corrected. Keep `_backups/` out of the two site folders: every
+file uploaded to Pages becomes a public URL.
 
-**Before overwriting `out/`, snapshot what is live.** `git init` here would retire this habit.
+**Never promote a fetched copy into a deployable folder.** A page fetched from the live host
+is Cloudflare's rendering of it, not the file that was uploaded, and the difference is not
+cosmetic:
+
+- both `mailto:contact@enactra.ai` links are rewritten to `/cdn-cgi/l/email-protection#<hex>`
+  with an `email-decode.min.js` loader injected. Off Cloudflare that loader 404s, so the
+  contact links are simply **dead** — from disk, from any other static host, anywhere but the
+  live domain;
+- a `/cdn-cgi/challenge-platform/` bot script is injected too.
+
+Both editions built here come from `template.html`, so they carry the plain `mailto:` links
+and no `/cdn-cgi/` references at all — portable from disk, from any host, and behind
+Cloudflare, which re-applies its own rewrites when serving. Verify after any change:
+
+```bash
+grep -c /cdn-cgi/ buildingbench/index.html buildingbench-evolution/index.html   # must be 0
+```
 
 ## The Enactra pitch blocks
 
