@@ -5,7 +5,7 @@ import os
 import subprocess
 import sys
 
-from harness import agents, cases
+from harness import agents, cases, run
 from harness import lane as lanes
 
 
@@ -79,6 +79,55 @@ def test_the_muse_lane_carries_its_meter(monkeypatch):
         assert f"{binary}:/usr/local/bin/{name}:ro" in argv
 
 
+def test_a_grok_lane_gets_the_login_and_nothing_else(tmp_path, monkeypatch):
+    # an operator's ~/.grok after some use: beside the login, logs, sessions
+    # and another project's terminal output
+    login = tmp_path / "operator" / ".grok"
+    for rel, body in {"auth.json": '{"scope": {"key": "not-a-key"}}',
+                      "config.toml": '[cli]\ninstaller = "internal"\n',
+                      "agent_id": "an-id", "logs/unified.jsonl": "{}\n",
+                      "sessions/%2Fhome/prompt_history.jsonl": "{}\n",
+                      "projects/home-other/terminals/1.txt": "$ ls\n"}.items():
+        (login / rel).parent.mkdir(parents=True, exist_ok=True)
+        (login / rel).write_text(body)
+    (tmp_path / "grok").write_text("")
+    monkeypatch.setenv("GROK_HOME", str(login))
+    monkeypatch.setenv("GROK_BIN", str(tmp_path / "grok"))
+
+    # what run_one does before it starts the container
+    config, lane_root = agents.CONFIGS["grok46xhigh"], tmp_path / "lane"
+    lanes.prepare(cases.path("melbourne_25422768"), lane_root)
+    got = agents.access(config)
+    box = lanes.Sandbox(root=lane_root, name="t", credentials=got.credentials,
+                        writable=got.writable, tools=got.tools, env=got.env)
+    box.prepare()
+    agents.seed_home(config, lane_root)
+
+    home = lane_root / "home"
+    assert sorted(str(p.relative_to(home)) for p in home.rglob("*")) == \
+        [".grok", ".grok/auth.json"]
+    assert (home / ".grok/auth.json").read_bytes() == (login / "auth.json").read_bytes()
+    assert (home / ".grok/auth.json").stat().st_mode & 0o077 == 0
+    assert not any(str(login) in arg for arg in box.argv("true"))
+
+    run.scrub(lane_root)
+    assert [p for p in home.rglob("*") if p.is_file()] == []
+
+
+def test_a_stopped_lane_keeps_no_secret(tmp_path):
+    # everything a lane is given to authenticate with while it runs
+    for rel in ("lane.env", "home/.grok/auth.json",
+                "home/.gemini/antigravity-cli/antigravity-oauth-token"):
+        (tmp_path / rel).parent.mkdir(parents=True, exist_ok=True)
+        (tmp_path / rel).write_text("not-a-key")
+    kimi = tmp_path / "home/.kimi/config.toml"
+    kimi.parent.mkdir(parents=True)
+    kimi.write_text('default_model = "k"\napi_key = "not-a-key"\n')
+    run.scrub(tmp_path)
+    assert [p for p in tmp_path.rglob("*")
+            if p.is_file() and "not-a-key" in p.read_text()] == []
+
+
 def test_the_container_is_the_reference_sandbox(tmp_path):
     box = lanes.Sandbox(root=tmp_path, name="t")
     argv = box.argv("true")
@@ -109,6 +158,10 @@ def test_reference_commands():
     assert agents.lane_command(
         agents.CONFIGS["deepseek-v41-flash-claude-code"]).endswith(
         "--model deepseek/deepseek-v4.1-flash:wafer --output-format json --effort max")
+    # only --reasoning-effort reaches the model; --effort max changes nothing
+    assert agents.lane_command(agents.CONFIGS["grok46xhigh"]) == (
+        f"grok -p {prompt} -m grok-4.6 --output-format json --always-approve "
+        "--effort max --reasoning-effort xhigh")
     # the metered runner, and the lane binds it where the runner looks
     assert agents.lane_command(agents.CONFIGS["musespark13max"]) == (
         'muse-max-runner --model "muse-spark-1.3" --reasoning-effort ultra '

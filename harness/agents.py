@@ -96,6 +96,17 @@ PRODUCTS = {
     "muse": ('muse-max-runner --model {model} --reasoning-effort {effort} '
              '--wire-effort max --base-url http://127.0.0.1:8897/v1 '
              '--prompt {prompt}'),
+    # xAI's Grok Build, on a subscription login. Not redistributable: bring
+    # your own `grok` binary and a `grok login`. The CLI has two effort flags
+    # and only one of them reaches the model: --reasoning-effort becomes the
+    # request's `reasoning.effort`, while --effort (low..max) is the CLI's own
+    # setting and leaves the request unchanged -- captured with CLI 0.2.22,
+    # --effort max, xhigh, high, low and no flag at all each sent `"effort":
+    # "high"`, the catalogue default. Both are pinned at their top. Kept off:
+    # --check (appends a self-verification loop to the prompt) and --best-of-n
+    # (runs the task N ways and keeps the best) -- no other row had either.
+    "grok": ('grok -p {prompt} -m {model} --output-format json '
+             '--always-approve --effort max --reasoning-effort {effort}'),
     # Google's Antigravity CLI. Not redistributable: bring your own `agy`
     # binary (--tool agy=/path/to/agy) and your own login.
     "antigravity": ('agy --print {prompt} --output-format json '
@@ -156,6 +167,18 @@ CONFIGS = {c.name: c for c in (
                   "one binary you name, so name the versioned one: given the "
                   "shim alone the agent dies in seconds with \"installed "
                   "binary is missing\".",)),
+    # xAI's own model catalogue (GET /v1/models on the CLI's proxy) lists
+    # grok-4.6's reasoning efforts as low, medium, high (the default) and
+    # xhigh, "Highest effort and reasoning level"; the CLI rejects
+    # `--reasoning-effort max`.
+    Config("grok46xhigh", "Grok 4.6 (xhigh)", "grok", "grok-4.6", "xhigh",
+           notes=("Grok Build on a subscription login, not an API key: "
+                  "`grok login --device-auth` on the host, then the lane gets "
+                  "that login file and nothing else from ~/.grok.",
+                  "xhigh is grok-4.6's highest reasoning effort. --effort max "
+                  "is passed too, but it does not change the request.",
+                  "The CLI reports neither a price nor token counts, so these "
+                  "runs carry no cost.")),
     Config("glm-5.3-flash-max", "GLM 5.3 Flash (max)", "opencode",
            "openrouter/z-ai/glm-5.3-flash", "max"),
     Config("inkling-free", "Inkling (free) · opencode", "opencode",
@@ -257,6 +280,16 @@ def access(config: Config, *, codex_auth: str | None = None,
         # (--tool muse=...); these two are ours.
         got.tools.update({"muse-max-runner": MUSE / "runner.py",
                           "muse-max-meter": MUSE / "meter.py"})
+    elif config.product == "grok":
+        # Checked here; seed_home copies the login file into the lane.
+        login = _grok_home()
+        if not (login / "auth.json").is_file():
+            raise SystemExit(f"Grok Build needs a login at {login}: run "
+                             "`grok login --device-auth` first")
+        binary = Path(env.get("GROK_BIN") or "~/.local/bin/grok").expanduser()
+        if not binary.exists():
+            raise SystemExit(f"no grok binary at {binary}")
+        got.tools["grok"] = binary
     elif config.product == "antigravity":
         pass                                # binary via --tool, login via seed_home
     return got
@@ -307,6 +340,20 @@ def seed_home(config: Config, lane_root: Path, *, kimi_context: int = 0) -> None
             f'max_context_size = {kimi_context or config.context}\n'
             'capabilities = ["image_in", "thinking"]\n')
         config_file.chmod(0o600)
+    elif config.product == "grok":
+        # The login file and nothing else. The rest of ~/.grok is the
+        # operator's own use of the CLI -- logs, other sessions, other
+        # projects' terminal output -- and none of it is needed: measured in
+        # the lane image, a .grok holding only auth.json starts logged in
+        # (`grok models`), and the CLI writes its own agent_id, docs, skills
+        # and config.toml.
+        source, state = _grok_home() / "auth.json", home / ".grok"
+        if not source.is_file():
+            raise SystemExit(f"no Grok Build login at {source}: run "
+                             "`grok login --device-auth` first")
+        state.mkdir(parents=True, exist_ok=True)
+        shutil.copyfile(source, state / "auth.json")
+        (state / "auth.json").chmod(0o600)
     elif config.product == "antigravity":
         # The login, and only the login: the rest of that directory is the
         # CLI's memory of other conversations.
@@ -322,6 +369,10 @@ def seed_home(config: Config, lane_root: Path, *, kimi_context: int = 0) -> None
         if not copied:
             raise SystemExit(f"no Antigravity login under {source}: run `agy` "
                              "and sign in first")
+
+
+def _grok_home() -> Path:
+    return Path(os.environ.get("GROK_HOME") or "~/.grok").expanduser()
 
 
 def _need(name: str) -> str:

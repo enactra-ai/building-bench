@@ -68,6 +68,9 @@ def reported(product: str, stdout: str) -> dict[str, Any]:
 def scrub(lane_root: Path) -> None:
     """Secrets the lane needed while running, gone once it has stopped."""
     (lane_root / "lane.env").unlink(missing_ok=True)
+    # the login files seed_home copied into HOME, as the CLI last refreshed them
+    for login in (".grok/auth.json", ".gemini/antigravity-cli/antigravity-oauth-token"):
+        (lane_root / "home" / login).unlink(missing_ok=True)
     kimi = lane_root / "home" / ".kimi" / "config.toml"
     if kimi.is_file():
         kimi.write_text(re.sub(r'(?m)^api_key = ".*"$', 'api_key = ""', kimi.read_text()))

@@ -41,7 +41,7 @@ submissions scored, or an agent evaluated on the full set, see
 
 ## The leaderboard
 
-Fifteen models, one run per model per building, on the twelve public cases at
+Sixteen models, one run per model per building, on the twelve public cases at
 the **blind** tier — the agent is told neither the footprint nor the height.
 
 <p align="center">
@@ -75,16 +75,17 @@ spend.
 | 3 | Claude Fable 5 (max) | 0.729 | 0.020 | 0.417 | 0.796 | 0.709 | 39.64 | 68 |
 | 4 | Claude Opus 5 (max) | 0.708 | 0.023 | 0.364 | 0.749 | 0.745 | 46.38 | 93 |
 | 5 | DeepSeek V4.1 Flash (max) | 0.705 | 0.022 | 0.249 | 0.744 | 0.764 | 2.33 | 114 |
-| 6 | GPT-5.6 Sol (max) | 0.694 | 0.014 | 0.350 | 0.794 | 0.659 | 7.54 | 44 |
-| 7 | Muse Spark 1.3 (max) | 0.673 | 0.019 | 0.307 | 0.715 | 0.664 | 5.80 | 60 |
-| 8 | GPT-5.6 Terra (max) | 0.659 | 0.021 | 0.249 | 0.740 | 0.624 | 4.26 | 53 |
-| 9 | GPT-5.6 Luna (max) | 0.582 | 0.020 | 0.133 | 0.617 | 0.607 | 0.45 | 63 |
-| 10 | Gemini 3.8 Flash (high) | 0.572 | 0.059 | 0.298 | 0.723 | 0.612 | 3.33 | 40 |
-| 11 | Kimi K3 (thinking) | 0.543 | 0.027 | 0.209 | 0.616 | 0.504 | 5.84 | 125 |
-| 12 | Claude Sonnet 5 (max) | 0.541 | 0.023 | 0.146 | 0.510 | 0.584 | 15.03 | 61 |
-| 13 | GLM 5.3 Flash (max) | 0.348 | 0.090 | 0.228 | 0.630 | 0.587 | 0.22 | 101 |
-| 14 | Inkling (free) · Claude Code | 0.336 | 0.048 | 0.073 | 0.315 | 0.441 | 0.00 | 4 |
-| 15 | Claude Haiku 4.5 | 0.283 | 0.052 | 0.048 | 0.286 | 0.351 | 0.52 | 11 |
+| 6 | Grok 4.6 (xhigh) | 0.697 | 0.024 | 0.350 | 0.753 | 0.612 | – | 37 |
+| 7 | GPT-5.6 Sol (max) | 0.694 | 0.014 | 0.350 | 0.794 | 0.659 | 7.54 | 44 |
+| 8 | Muse Spark 1.3 (max) | 0.673 | 0.019 | 0.307 | 0.715 | 0.664 | 5.80 | 60 |
+| 9 | GPT-5.6 Terra (max) | 0.659 | 0.021 | 0.249 | 0.740 | 0.624 | 4.26 | 53 |
+| 10 | GPT-5.6 Luna (max) | 0.582 | 0.020 | 0.133 | 0.617 | 0.607 | 0.45 | 63 |
+| 11 | Gemini 3.8 Flash (high) | 0.572 | 0.059 | 0.298 | 0.723 | 0.612 | 3.33 | 40 |
+| 12 | Kimi K3 (thinking) | 0.543 | 0.027 | 0.209 | 0.616 | 0.504 | 5.84 | 125 |
+| 13 | Claude Sonnet 5 (max) | 0.541 | 0.023 | 0.146 | 0.510 | 0.584 | 15.03 | 61 |
+| 14 | GLM 5.3 Flash (max) | 0.348 | 0.090 | 0.228 | 0.630 | 0.587 | 0.22 | 101 |
+| 15 | Inkling (free) · Claude Code | 0.336 | 0.048 | 0.073 | 0.315 | 0.441 | 0.00 | 4 |
+| 16 | Claude Haiku 4.5 | 0.283 | 0.052 | 0.048 | 0.286 | 0.351 | 0.52 | 11 |
 
 </details>
 
@@ -96,7 +97,11 @@ different set of buildings is a different measurement. `$ / run` and
 where the CLI does not know it: Muse's reports nothing and is metered, and
 Claude Code priced the DeepSeek row against its own first-party card, so that
 row is the pinned endpoint's published rates on the CLI's own token counts,
-which each run carries. For subscription logins it is the API-equivalent price. Every run is in
+which each run carries. For subscription logins it is the API-equivalent price,
+except Grok Build's, which reports neither a price nor token counts: that row
+has no cost and is not on the price plot. Its `min / run` is the agent's own
+turn, from the CLI's log — the CLI keeps the lane open for some minutes after
+the turn ends, uploading the session. Every run is in
 `results/reference_runs.jsonl`; `python -m harness.board` leaves the `--ranked`
 filter off and shows the partial rows too.
 
@@ -188,6 +193,9 @@ python -m harness.run --agent glm-5.3-flash-max --all           # opencode: OPEN
 # lane's PATH. Name the versioned `muse-bin-*`, not the shim that dispatches to it
 python -m harness.run --agent musespark13max --all --tool muse=/path/to/muse-bin-*
 python -m harness.run --agent gemini38flash --all --tool agy=/path/to/agy
+# Grok Build: the binary at ~/.local/bin/grok (or GROK_BIN), signed in with
+# `grok login --device-auth`; the lane gets that login file and nothing else
+python -m harness.run --agent grok46xhigh --all
 
 # anything else -- {prompt} is replaced by the opening prompt, quoted, and
 # --tool and --env are how your CLI and its key reach the lane
@@ -212,7 +220,9 @@ What every reference run had, and what `harness/` reproduces:
 - each product's own CLI, headless, at the highest reasoning effort it offers,
   pinned on the command line: Claude Code 2.1.257–2.1.261, Codex CLI 0.153.0,
   opencode 1.15.12, kimi-cli 1.49.0, Antigravity (`agy`) for the Gemini rows,
-  Meta's `muse` CLI for Muse Spark, through the meter in `harness/muse/`;
+  Meta's `muse` CLI for Muse Spark, through the meter in `harness/muse/`, and
+  Grok Build 0.2.22 (`grok`) for Grok 4.6, where the level that reaches the
+  model is set by `--reasoning-effort`, not `--effort`;
 - a Docker container holding only the lane — the agent's working directory and
   its HOME — on the default bridge network, with open internet access, 8 GB of
   memory, 4 CPUs, no capabilities and at most 512 processes.
