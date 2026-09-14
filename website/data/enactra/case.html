@@ -1,0 +1,84 @@
+<div class="case-toolbar">
+  <div class="case-title">
+    <strong>Geisel Library · La Jolla, California</strong>
+    <span>10 observed views + a 57-point footprint; height withheld.</span>
+  </div>
+</div>
+<div class="demo-grid">
+  <article class="panel">
+    <div class="panel-head">
+      <strong>Agent input</strong>
+      <span>10 evidence images</span>
+    </div>
+    <div class="input-preview">
+      <img id="geisel-input-preview" alt="Observed orbit view of Geisel Library at 0 degrees" />
+      <span class="input-preview-label" id="geisel-input-label">Orbit · 0°</span>
+    </div>
+    <div class="input-thumb-grid" aria-label="Choose an input image">
+      <button class="input-thumb is-active" type="button" data-label="Orbit · 0°" data-alt="Observed orbit view of Geisel Library at 0 degrees"><img src="/assets/40e8cee30604.webp" alt="Orbit 0 degrees" /></button>
+      <button class="input-thumb" type="button" data-label="Orbit · 45°" data-alt="Observed orbit view of Geisel Library at 45 degrees"><img src="/assets/319f7e07c347.webp" alt="Orbit 45 degrees" /></button>
+      <button class="input-thumb" type="button" data-label="Orbit · 90°" data-alt="Observed orbit view of Geisel Library at 90 degrees"><img src="/assets/8fb804a2cd8c.webp" alt="Orbit 90 degrees" /></button>
+      <button class="input-thumb" type="button" data-label="Orbit · 135°" data-alt="Observed orbit view of Geisel Library at 135 degrees"><img src="/assets/225c56b2ccdc.webp" alt="Orbit 135 degrees" /></button>
+      <button class="input-thumb" type="button" data-label="Orbit · 180°" data-alt="Observed orbit view of Geisel Library at 180 degrees"><img src="/assets/e019753438f0.webp" alt="Orbit 180 degrees" /></button>
+      <button class="input-thumb" type="button" data-label="Orbit · 225°" data-alt="Observed orbit view of Geisel Library at 225 degrees"><img src="/assets/285858e17474.webp" alt="Orbit 225 degrees" /></button>
+      <button class="input-thumb" type="button" data-label="Orbit · 270°" data-alt="Observed orbit view of Geisel Library at 270 degrees"><img src="/assets/7c96365e4119.webp" alt="Orbit 270 degrees" /></button>
+      <button class="input-thumb" type="button" data-label="Orbit · 315°" data-alt="Observed orbit view of Geisel Library at 315 degrees"><img src="/assets/f8473ec8f7d6.webp" alt="Orbit 315 degrees" /></button>
+      <button class="input-thumb" type="button" data-label="Street · east" data-alt="Observed east street-level view of Geisel Library"><img src="/assets/6081c0ec3802.webp" alt="East street-level view" /></button>
+      <button class="input-thumb" type="button" data-label="Street · west" data-alt="Observed west street-level view of Geisel Library"><img src="/assets/e3fa156e888a.webp" alt="West street-level view" /></button>
+    </div>
+    <div class="input-evidence-note">
+      <span><strong>Given:</strong> 10 photographs, exact camera poses, and a map-derived footprint.</span>
+      <span><strong>Withheld:</strong> building height and 5 evaluation views.</span>
+    </div>
+  </article>
+
+  <article class="panel">
+    <div class="panel-head">
+      <strong>Agent reconstruction</strong>
+      <span>Claude Opus · executable glTF</span>
+    </div>
+    <div class="feature-viewer-wrap">
+      <canvas class="feature-model-viewer" id="eaCaseCanvas" tabindex="0" aria-label="Interactive Claude Opus reconstruction of Geisel Library"></canvas>
+      <span class="viewer-hint">Drag to orbit · scroll to zoom</span>
+    </div>
+    <div class="feature-run-strip" aria-label="Run details">
+      <div class="run-fact"><strong>157</strong><span>turns</span></div>
+      <div class="run-fact"><strong>70.7 min</strong><span>wall clock</span></div>
+      <div class="run-fact"><strong>$27.29</strong><span>run cost</span></div>
+    </div>
+  </article>
+
+  <article class="panel score-card">
+    <div class="panel-head">
+      <strong>Evaluation</strong>
+      <span>Claude Opus</span>
+    </div>
+    <div class="overall-score">
+      <small>Overall score</small>
+      <strong>0.731</strong>
+    </div>
+
+    <div class="metric">
+      <span>Silhouette</span><strong>0.867</strong>
+      <div class="metric-track"><div class="metric-fill" style="--value: 86.7%"></div></div>
+    </div>
+    <div class="metric">
+      <span>Height accuracy</span><strong>97.3%</strong>
+      <div class="metric-track"><div class="metric-fill" style="--value: 97.3%"></div></div>
+    </div>
+    <div class="metric">
+      <span>Structure</span><strong>0.719</strong>
+      <div class="metric-track"><div class="metric-fill" style="--value: 71.9%"></div></div>
+    </div>
+    <div class="metric">
+      <span>Surface F @ 0.5 m</span><strong>0.290</strong>
+      <div class="metric-track"><div class="metric-fill" style="--value: 29%"></div></div>
+    </div>
+    <p class="eval-caption">Overall and structure are normalized benchmark scores. Silhouette and Surface F are raw measurements.</p>
+    <div class="validity-row">
+      <strong>Valid executable output</strong><br />
+      2,336 triangles · 32.50 m reconstructed height vs. 31.66 m measured
+    </div>
+  </article>
+</div>
+<p class="case-takeaway"><strong>What this reveals:</strong> Opus recovers the building’s stepped massing and height, while fine surface agreement remains much lower. The benchmark turns that visible gap into a precise training signal.</p>

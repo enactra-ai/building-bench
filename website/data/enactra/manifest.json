@@ -1,0 +1,14 @@
+{
+  "source": "/Users/lianhui/Documents/Enactra/site-anthropic",
+  "blocks": {
+    "flagship": 330,
+    "case": 5340,
+    "leaderboard": 27481,
+    "evaluation": 1899,
+    "momentum": 2224
+  },
+  "caseGLB": "13cd029bd75e.glb",
+  "caseModel": "Claude Opus",
+  "assets": 16,
+  "missing": []
+}

@@ -1,0 +1,12 @@
+# Large, regenerable build inputs and outputs.
+
+# raw (1.8 GB) and slimmed (133 MB) submissions, fetched by extract.py + slim_all.py
+cache/
+
+# the 67 MB self-contained page; rebuild with build.py
+out/
+
+# local record of previously deployed pages
+_backups/
+
+.DS_Store

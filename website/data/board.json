@@ -1,0 +1,2631 @@
+{
+ "columns": [
+  {
+   "key": "overall",
+   "label": "Overall",
+   "dp": 3,
+   "best": "high",
+   "bar": true,
+   "help": "Surface, geometry and appearance, mixed. Zero is the bounding box at the measured height; one is perfect."
+  },
+  {
+   "key": "repeat_sd",
+   "label": "Repeat SD",
+   "dp": 3,
+   "best": "low",
+   "help": "How far the same model moves when the same building is run again. Measured on this model's own repeated cells; blank when nobody has repeated it, which is not the same as zero."
+  },
+  {
+   "key": "takes",
+   "label": "Runs",
+   "dp": 0,
+   "best": "high",
+   "help": "How many runs went into this row, across the cells it is ranked on. More than one per cell is a repeat."
+  },
+  {
+   "key": "f",
+   "label": "Surface F",
+   "dp": 3,
+   "best": "high",
+   "bar": true,
+   "help": "Agreement between two point clouds at half a metre."
+  },
+  {
+   "key": "geometry",
+   "label": "Geometry",
+   "dp": 3,
+   "best": "high",
+   "bar": true
+  },
+  {
+   "key": "appearance",
+   "label": "Appearance",
+   "dp": 3,
+   "best": "high",
+   "bar": true
+  },
+  {
+   "key": "silhouette",
+   "label": "Silhouette",
+   "dp": 3,
+   "best": "high"
+  },
+  {
+   "key": "outline",
+   "label": "Outline",
+   "dp": 3,
+   "best": "high"
+  },
+  {
+   "key": "plan",
+   "label": "Plan",
+   "dp": 3,
+   "best": "high"
+  },
+  {
+   "key": "height",
+   "label": "Height",
+   "dp": 3,
+   "best": "high"
+  },
+  {
+   "key": "colour",
+   "label": "Colour",
+   "dp": 3,
+   "best": "high"
+  },
+  {
+   "key": "structure",
+   "label": "Structure",
+   "dp": 3,
+   "best": "high"
+  },
+  {
+   "key": "materials",
+   "label": "Materials",
+   "dp": 3,
+   "best": "high"
+  },
+  {
+   "key": "chamfer_m",
+   "label": "Chamfer",
+   "dp": 2,
+   "best": "low",
+   "post": "\u2009m",
+   "help": "Metres. Lower is better."
+  },
+  {
+   "key": "precision",
+   "label": "Precision",
+   "dp": 3,
+   "best": "high"
+  },
+  {
+   "key": "recall",
+   "label": "Recall",
+   "dp": 3,
+   "best": "high"
+  },
+  {
+   "key": "cost",
+   "label": "Cost / run",
+   "dp": 2,
+   "best": "low",
+   "pre": "$",
+   "help": "Median of what one run of this model cost."
+  },
+  {
+   "key": "turns",
+   "label": "Turns",
+   "dp": 0,
+   "best": "low"
+  },
+  {
+   "key": "minutes",
+   "label": "Minutes",
+   "dp": 1,
+   "best": "low"
+  },
+  {
+   "key": "triangles",
+   "label": "Triangles",
+   "dp": 0,
+   "best": "high"
+  },
+  {
+   "key": "cells",
+   "label": "Buildings",
+   "dp": 0,
+   "best": "high",
+   "help": "How many buildings this row is a mean over. Rows do not all have the same number, and buildings differ, so two rows are two measurements; the column beside puts them on the same set."
+  },
+  {
+   "key": "common",
+   "label": "On the shared set",
+   "dp": 3,
+   "best": "high",
+   "omitSame": true,
+   "help": "The same model over the buildings EVERY row has run, for a like-for-like reading. Blank where this model has not run all of them."
+  },
+  {
+   "key": "ran",
+   "label": "Cells run",
+   "dp": 0,
+   "best": "high"
+  }
+ ],
+ "tracks": [
+  {
+   "id": "overall",
+   "label": "Overall",
+   "sort": "overall",
+   "columns": [
+    "overall",
+    "cells",
+    "common",
+    "repeat_sd",
+    "f",
+    "geometry",
+    "appearance",
+    "cost"
+   ]
+  },
+  {
+   "id": "geometry",
+   "label": "Geometry",
+   "sort": "f",
+   "columns": [
+    "f",
+    "silhouette",
+    "outline",
+    "plan",
+    "height",
+    "chamfer_m",
+    "precision",
+    "recall"
+   ]
+  },
+  {
+   "id": "appearance",
+   "label": "Appearance",
+   "sort": "appearance",
+   "columns": [
+    "appearance",
+    "colour",
+    "structure",
+    "materials"
+   ]
+  },
+  {
+   "id": "effort",
+   "label": "Cost & effort",
+   "sort": "cost",
+   "columns": [
+    "cost",
+    "turns",
+    "minutes",
+    "takes",
+    "triangles",
+    "overall"
+   ]
+  }
+ ],
+ "rows": [
+  {
+   "label": "gpt-6-astra (ultra)",
+   "sub": "OpenAI",
+   "org": "OpenAI",
+   "series": "gpt6astraultra",
+   "values": {
+    "overall": 0.7808,
+    "cost": 7.108274,
+    "cells": 17,
+    "ran": 17,
+    "f": 0.6214,
+    "geometry": 0.818,
+    "appearance": 0.7851,
+    "silhouette": 0.8557,
+    "outline": 0.7005,
+    "plan": 0.8021,
+    "height": 0.8829,
+    "colour": 0.7481,
+    "structure": 0.8343,
+    "materials": 0.9997,
+    "chamfer_m": 0.9177,
+    "precision": 0.6306,
+    "recall": 0.6142,
+    "triangles": 40953.8824,
+    "turns": 42.0,
+    "minutes": 30.12,
+    "takes": 17,
+    "place": 1
+   },
+   "band": {
+    "overall": 0.0153
+   },
+   "optimal": true,
+   "tags": [
+    {
+     "text": "frontier",
+     "kind": ""
+    }
+   ],
+   "facets": {
+    "family": "OpenAI",
+    "effort": "ultra"
+   }
+  },
+  {
+   "label": "claude-fable-5-1 (max)",
+   "sub": "Anthropic",
+   "org": "Anthropic",
+   "series": "fable51max",
+   "values": {
+    "overall": 0.7621,
+    "cost": 24.16195375,
+    "cells": 28,
+    "ran": 28,
+    "f": 0.5065,
+    "geometry": 0.7506,
+    "appearance": 0.8138,
+    "silhouette": 0.7628,
+    "outline": 0.6029,
+    "plan": 0.8198,
+    "height": 0.8188,
+    "colour": 0.7877,
+    "structure": 0.8485,
+    "materials": 0.9837,
+    "chamfer_m": 1.7517,
+    "precision": 0.4959,
+    "recall": 0.5287,
+    "triangles": 7071.25,
+    "turns": 161.0,
+    "minutes": 58.83,
+    "common": 0.7581,
+    "takes": 28,
+    "place": 1
+   },
+   "band": {
+    "overall": 0.0169
+   },
+   "optimal": false,
+   "tags": [],
+   "facets": {
+    "family": "Anthropic",
+    "effort": "max"
+   }
+  },
+  {
+   "label": "gpt-6-astra (max)",
+   "sub": "OpenAI",
+   "org": "OpenAI",
+   "series": "gpt6astramax",
+   "values": {
+    "overall": 0.7428,
+    "cost": 8.334316000000001,
+    "cells": 3,
+    "ran": 3,
+    "f": 0.5951,
+    "geometry": 0.7089,
+    "appearance": 0.7606,
+    "silhouette": 0.7249,
+    "outline": 0.6879,
+    "plan": 0.7577,
+    "height": 0.6241,
+    "colour": 0.7444,
+    "structure": 0.7821,
+    "materials": 1.0,
+    "chamfer_m": 0.7502,
+    "precision": 0.6028,
+    "recall": 0.5887,
+    "triangles": 72552.0,
+    "turns": 52.0,
+    "minutes": 36.82,
+    "takes": 3,
+    "place": 1
+   },
+   "band": {
+    "overall": 0.1035
+   },
+   "optimal": false,
+   "tags": [],
+   "facets": {
+    "family": "OpenAI",
+    "effort": "max"
+   }
+  },
+  {
+   "label": "claude-opus-5 (max)",
+   "sub": "Anthropic",
+   "org": "Anthropic",
+   "series": "opusmax",
+   "values": {
+    "overall": 0.7235,
+    "cost": 45.24788200000001,
+    "cells": 32,
+    "ran": 32,
+    "f": 0.4658,
+    "geometry": 0.7199,
+    "appearance": 0.7683,
+    "silhouette": 0.7377,
+    "outline": 0.5419,
+    "plan": 0.8017,
+    "height": 0.7948,
+    "colour": 0.7533,
+    "structure": 0.7884,
+    "materials": 0.9954,
+    "chamfer_m": 2.3469,
+    "precision": 0.4481,
+    "recall": 0.511,
+    "triangles": 14334.0,
+    "turns": 231.0,
+    "minutes": 95.09,
+    "common": 0.7532,
+    "takes": 32,
+    "place": 3
+   },
+   "band": {
+    "overall": 0.0208
+   },
+   "optimal": false,
+   "tags": [],
+   "facets": {
+    "family": "Anthropic",
+    "effort": "max"
+   }
+  },
+  {
+   "label": "muse-spark-1.3 (high)",
+   "sub": "Meta",
+   "org": "Meta",
+   "series": "musespark13high",
+   "values": {
+    "overall": 0.7192,
+    "cost": 4.5791504,
+    "cells": 2,
+    "ran": 2,
+    "f": 0.2546,
+    "geometry": 0.7724,
+    "appearance": 0.5681,
+    "silhouette": 0.7807,
+    "outline": 0.5852,
+    "plan": 0.8553,
+    "height": 0.8865,
+    "colour": 0.4437,
+    "structure": 0.7338,
+    "materials": 0.9636,
+    "chamfer_m": 1.952,
+    "precision": 0.2596,
+    "recall": 0.2502,
+    "triangles": 8686.0,
+    "turns": 300.0,
+    "minutes": 31.78,
+    "takes": 2,
+    "place": 3
+   },
+   "band": {
+    "overall": 0.003
+   },
+   "optimal": true,
+   "tags": [
+    {
+     "text": "frontier",
+     "kind": ""
+    }
+   ],
+   "facets": {
+    "family": "Meta",
+    "effort": "high"
+   }
+  },
+  {
+   "label": "claude-fable-5 (max)",
+   "sub": "Anthropic",
+   "org": "Anthropic",
+   "series": "fablemax",
+   "values": {
+    "overall": 0.7178,
+    "cost": 39.979621,
+    "cells": 27,
+    "ran": 27,
+    "f": 0.4315,
+    "geometry": 0.7488,
+    "appearance": 0.7255,
+    "silhouette": 0.7687,
+    "outline": 0.587,
+    "plan": 0.8485,
+    "height": 0.7718,
+    "colour": 0.731,
+    "structure": 0.7182,
+    "materials": 0.9829,
+    "chamfer_m": 1.9348,
+    "precision": 0.4139,
+    "recall": 0.4642,
+    "triangles": 6977.7778,
+    "turns": 145.0,
+    "minutes": 63.41,
+    "common": 0.6996,
+    "takes": 27,
+    "place": 3
+   },
+   "band": {
+    "overall": 0.0208
+   },
+   "optimal": false,
+   "tags": [],
+   "facets": {
+    "family": "Anthropic",
+    "effort": "max"
+   }
+  },
+  {
+   "label": "claude-opus-5 (high)",
+   "sub": "Anthropic",
+   "org": "Anthropic",
+   "series": "opus",
+   "values": {
+    "overall": 0.7128,
+    "cost": 22.831642499999987,
+    "cells": 19,
+    "ran": 19,
+    "f": 0.4679,
+    "geometry": 0.7043,
+    "appearance": 0.7495,
+    "silhouette": 0.6791,
+    "outline": 0.5526,
+    "plan": 0.8167,
+    "height": 0.8323,
+    "colour": 0.7367,
+    "structure": 0.7665,
+    "materials": 0.9997,
+    "chamfer_m": 2.8534,
+    "precision": 0.4422,
+    "recall": 0.5122,
+    "triangles": 16802.0526,
+    "turns": 167.0,
+    "minutes": 66.35,
+    "repeat_sd": 0.0505,
+    "common": 0.725,
+    "takes": 20,
+    "place": 3
+   },
+   "band": {
+    "overall": 0.0259
+   },
+   "optimal": false,
+   "tags": [],
+   "facets": {
+    "family": "Anthropic",
+    "effort": "high"
+   }
+  },
+  {
+   "label": "claude-fable-5-1 (high)",
+   "sub": "Anthropic",
+   "org": "Anthropic",
+   "series": "fable51",
+   "values": {
+    "overall": 0.7017,
+    "cost": 13.772178,
+    "cells": 15,
+    "ran": 15,
+    "f": 0.4416,
+    "geometry": 0.6868,
+    "appearance": 0.7415,
+    "silhouette": 0.6704,
+    "outline": 0.5459,
+    "plan": 0.8308,
+    "height": 0.732,
+    "colour": 0.7288,
+    "structure": 0.7584,
+    "materials": 0.9806,
+    "chamfer_m": 2.3347,
+    "precision": 0.4174,
+    "recall": 0.4986,
+    "triangles": 10471.8667,
+    "turns": 120.0,
+    "minutes": 29.25,
+    "common": 0.7134,
+    "takes": 15,
+    "place": 3
+   },
+   "band": {
+    "overall": 0.0247
+   },
+   "optimal": false,
+   "tags": [],
+   "facets": {
+    "family": "Anthropic",
+    "effort": "high"
+   }
+  },
+  {
+   "label": "gpt-5.6-sol (max)",
+   "sub": "OpenAI",
+   "org": "OpenAI",
+   "series": "gpt56solmax",
+   "values": {
+    "overall": 0.6883,
+    "cost": 6.514066400000001,
+    "cells": 37,
+    "ran": 37,
+    "f": 0.3772,
+    "geometry": 0.7218,
+    "appearance": 0.6813,
+    "silhouette": 0.7372,
+    "outline": 0.5534,
+    "plan": 0.8143,
+    "height": 0.7765,
+    "colour": 0.6659,
+    "structure": 0.7019,
+    "materials": 0.9856,
+    "chamfer_m": 2.4363,
+    "precision": 0.3622,
+    "recall": 0.4072,
+    "triangles": 10601.7297,
+    "turns": 68.0,
+    "minutes": 39.3,
+    "repeat_sd": 0.0133,
+    "common": 0.684,
+    "takes": 39,
+    "place": 3
+   },
+   "band": {
+    "overall": 0.0171
+   },
+   "optimal": false,
+   "tags": [],
+   "facets": {
+    "family": "OpenAI",
+    "effort": "max"
+   }
+  },
+  {
+   "label": "muse-spark-1.3 (max)",
+   "sub": "Meta",
+   "org": "Meta",
+   "series": "musespark13max",
+   "values": {
+    "overall": 0.6571,
+    "cost": 5.9479841,
+    "cells": 16,
+    "ran": 16,
+    "f": 0.2871,
+    "geometry": 0.7037,
+    "appearance": 0.6195,
+    "silhouette": 0.7724,
+    "outline": 0.5521,
+    "plan": 0.7322,
+    "height": 0.6617,
+    "colour": 0.594,
+    "structure": 0.6534,
+    "materials": 0.9596,
+    "chamfer_m": 2.3918,
+    "precision": 0.3011,
+    "recall": 0.2771,
+    "triangles": 2646.75,
+    "turns": 346.0,
+    "minutes": 49.86,
+    "takes": 16,
+    "place": 6
+   },
+   "band": {
+    "overall": 0.022
+   },
+   "optimal": false,
+   "tags": [],
+   "facets": {
+    "family": "Meta",
+    "effort": "max"
+   }
+  },
+  {
+   "label": "claude-fable-5 (high)",
+   "sub": "Anthropic",
+   "org": "Anthropic",
+   "series": "fable",
+   "values": {
+    "overall": 0.6563,
+    "cost": 17.440240000000003,
+    "cells": 17,
+    "ran": 17,
+    "f": 0.3398,
+    "geometry": 0.678,
+    "appearance": 0.6669,
+    "silhouette": 0.6693,
+    "outline": 0.4895,
+    "plan": 0.7898,
+    "height": 0.8061,
+    "colour": 0.669,
+    "structure": 0.6642,
+    "materials": 0.9857,
+    "chamfer_m": 3.7678,
+    "precision": 0.3371,
+    "recall": 0.3619,
+    "triangles": 7129.1471,
+    "turns": 89.0,
+    "minutes": 29.66,
+    "repeat_sd": 0.0334,
+    "common": 0.6535,
+    "takes": 21,
+    "place": 6
+   },
+   "band": {
+    "overall": 0.0325
+   },
+   "optimal": false,
+   "tags": [],
+   "facets": {
+    "family": "Anthropic",
+    "effort": "high"
+   }
+  },
+  {
+   "label": "claude-opus-5 (low)",
+   "sub": "Anthropic",
+   "org": "Anthropic",
+   "series": "opuslow",
+   "values": {
+    "overall": 0.6555,
+    "cost": 7.098065499999999,
+    "cells": 30,
+    "ran": 30,
+    "f": 0.3601,
+    "geometry": 0.7028,
+    "appearance": 0.6647,
+    "silhouette": 0.7047,
+    "outline": 0.5363,
+    "plan": 0.8017,
+    "height": 0.7873,
+    "colour": 0.6723,
+    "structure": 0.6546,
+    "materials": 0.974,
+    "chamfer_m": 2.728,
+    "precision": 0.3559,
+    "recall": 0.3757,
+    "triangles": 9834.2,
+    "turns": 88.0,
+    "minutes": 21.96,
+    "common": 0.6929,
+    "takes": 30,
+    "place": 6
+   },
+   "band": {
+    "overall": 0.0223
+   },
+   "optimal": false,
+   "tags": [],
+   "facets": {
+    "family": "Anthropic",
+    "effort": "low"
+   }
+  },
+  {
+   "label": "gemini-3.8-flash (low)",
+   "sub": "Google",
+   "org": "Google",
+   "series": "gemini38flashlow",
+   "values": {
+    "overall": 0.6516,
+    "cost": 2.84162,
+    "cells": 1,
+    "ran": 1,
+    "f": 0.1364,
+    "geometry": 0.7272,
+    "appearance": 0.5995,
+    "silhouette": 0.8482,
+    "outline": 0.4285,
+    "plan": 0.8849,
+    "height": 0.5525,
+    "colour": 0.7623,
+    "structure": 0.3825,
+    "materials": 1.0,
+    "chamfer_m": 6.4828,
+    "precision": 0.1531,
+    "recall": 0.1229,
+    "triangles": 6144.0,
+    "minutes": 10.55,
+    "takes": 1,
+    "place": 6
+   },
+   "band": {},
+   "optimal": true,
+   "tags": [
+    {
+     "text": "frontier",
+     "kind": ""
+    }
+   ],
+   "facets": {
+    "family": "Google",
+    "effort": "low"
+   }
+  },
+  {
+   "label": "claude-fable-5 (low)",
+   "sub": "Anthropic",
+   "org": "Anthropic",
+   "series": "fablelow",
+   "values": {
+    "overall": 0.6297,
+    "cost": 5.919622,
+    "cells": 7,
+    "ran": 7,
+    "f": 0.2577,
+    "geometry": 0.6905,
+    "appearance": 0.6653,
+    "silhouette": 0.7455,
+    "outline": 0.4563,
+    "plan": 0.7468,
+    "height": 0.7622,
+    "colour": 0.624,
+    "structure": 0.7204,
+    "materials": 0.9219,
+    "chamfer_m": 2.7587,
+    "precision": 0.2556,
+    "recall": 0.2634,
+    "triangles": 3771.4286,
+    "turns": 57.0,
+    "minutes": 9.32,
+    "takes": 7,
+    "place": 6
+   },
+   "band": {
+    "overall": 0.0262
+   },
+   "optimal": false,
+   "tags": [],
+   "facets": {
+    "family": "Anthropic",
+    "effort": "low"
+   }
+  },
+  {
+   "label": "gemini-3.8-flash (high)",
+   "sub": "Google",
+   "org": "Google",
+   "series": "gemini38flash",
+   "values": {
+    "overall": 0.6176,
+    "cost": 3.090545,
+    "cells": 30,
+    "ran": 30,
+    "f": 0.3193,
+    "geometry": 0.6653,
+    "appearance": 0.5857,
+    "silhouette": 0.6808,
+    "outline": 0.5051,
+    "plan": 0.6923,
+    "height": 0.7967,
+    "colour": 0.556,
+    "structure": 0.6254,
+    "materials": 0.9333,
+    "precision": 0.3186,
+    "recall": 0.3311,
+    "triangles": 7219.6667,
+    "minutes": 36.54,
+    "repeat_sd": 0.0409,
+    "common": 0.654,
+    "takes": 31,
+    "place": 8
+   },
+   "band": {
+    "overall": 0.0288
+   },
+   "optimal": false,
+   "tags": [],
+   "facets": {
+    "family": "Google",
+    "effort": "high"
+   }
+  },
+  {
+   "label": "gpt-5.6-terra (max)",
+   "sub": "OpenAI",
+   "org": "OpenAI",
+   "series": "gpt56terramax",
+   "values": {
+    "overall": 0.6155,
+    "cost": 3.3974292000000004,
+    "cells": 36,
+    "ran": 36,
+    "f": 0.2373,
+    "geometry": 0.6411,
+    "appearance": 0.6362,
+    "silhouette": 0.6837,
+    "outline": 0.4196,
+    "plan": 0.7456,
+    "height": 0.6691,
+    "colour": 0.6213,
+    "structure": 0.656,
+    "materials": 0.9736,
+    "chamfer_m": 3.9505,
+    "precision": 0.229,
+    "recall": 0.256,
+    "triangles": 5455.9722,
+    "turns": 55.0,
+    "minutes": 36.2,
+    "common": 0.6204,
+    "takes": 36,
+    "place": 10
+   },
+   "band": {
+    "overall": 0.0191
+   },
+   "optimal": false,
+   "tags": [],
+   "facets": {
+    "family": "OpenAI",
+    "effort": "max"
+   }
+  },
+  {
+   "label": "muse-spark-1.3 (ultra)",
+   "sub": "Meta",
+   "org": "Meta",
+   "series": "musespark13ultra",
+   "values": {
+    "overall": 0.5722,
+    "cost": 0.853039,
+    "cells": 18,
+    "ran": 18,
+    "f": 0.2222,
+    "geometry": 0.586,
+    "appearance": 0.6276,
+    "silhouette": 0.5773,
+    "outline": 0.3746,
+    "plan": 0.7079,
+    "height": 0.731,
+    "colour": 0.6124,
+    "structure": 0.6479,
+    "materials": 0.9171,
+    "precision": 0.2126,
+    "recall": 0.259,
+    "triangles": 2621.1667,
+    "turns": 248.0,
+    "minutes": 26.48,
+    "common": 0.6172,
+    "takes": 18,
+    "place": 10
+   },
+   "band": {
+    "overall": 0.0398
+   },
+   "optimal": true,
+   "tags": [
+    {
+     "text": "est. price",
+     "kind": "warn"
+    },
+    {
+     "text": "frontier",
+     "kind": ""
+    }
+   ],
+   "facets": {
+    "family": "Meta",
+    "effort": "ultra"
+   }
+  },
+  {
+   "label": "gpt-5.6-sol (high)",
+   "sub": "OpenAI",
+   "org": "OpenAI",
+   "series": "gpt56sol",
+   "values": {
+    "overall": 0.5647,
+    "cost": 1.7107904,
+    "cells": 28,
+    "ran": 28,
+    "f": 0.2408,
+    "geometry": 0.6013,
+    "appearance": 0.597,
+    "silhouette": 0.6293,
+    "outline": 0.3652,
+    "plan": 0.721,
+    "height": 0.6726,
+    "colour": 0.5812,
+    "structure": 0.618,
+    "materials": 0.9581,
+    "chamfer_m": 4.1671,
+    "precision": 0.2284,
+    "recall": 0.2693,
+    "triangles": 8804.2256,
+    "turns": 24.0,
+    "minutes": 11.79,
+    "repeat_sd": 0.0782,
+    "common": 0.5925,
+    "takes": 127,
+    "place": 12
+   },
+   "band": {
+    "overall": 0.0198
+   },
+   "optimal": false,
+   "tags": [],
+   "facets": {
+    "family": "OpenAI",
+    "effort": "high"
+   }
+  },
+  {
+   "label": "gpt-5.6-luna (max)",
+   "sub": "OpenAI",
+   "org": "OpenAI",
+   "series": "gpt56lunamax",
+   "values": {
+    "overall": 0.5577,
+    "cost": 0.4295,
+    "cells": 36,
+    "ran": 36,
+    "f": 0.1597,
+    "geometry": 0.5716,
+    "appearance": 0.5736,
+    "silhouette": 0.613,
+    "outline": 0.309,
+    "plan": 0.6592,
+    "height": 0.6808,
+    "colour": 0.5548,
+    "structure": 0.5988,
+    "materials": 0.9601,
+    "chamfer_m": 5.6579,
+    "precision": 0.1466,
+    "recall": 0.1861,
+    "triangles": 6315.3056,
+    "turns": 76.0,
+    "minutes": 47.32,
+    "common": 0.5642,
+    "takes": 36,
+    "place": 12
+   },
+   "band": {
+    "overall": 0.0157
+   },
+   "optimal": true,
+   "tags": [
+    {
+     "text": "frontier",
+     "kind": ""
+    }
+   ],
+   "facets": {
+    "family": "OpenAI",
+    "effort": "max"
+   }
+  },
+  {
+   "label": "gemini-3.7-flash (high)",
+   "sub": "Google",
+   "org": "Google",
+   "series": "gemini37flash",
+   "values": {
+    "overall": 0.5447,
+    "cost": 1.98631785,
+    "cells": 24,
+    "ran": 24,
+    "f": 0.251,
+    "geometry": 0.5803,
+    "appearance": 0.545,
+    "silhouette": 0.6026,
+    "outline": 0.3767,
+    "plan": 0.6924,
+    "height": 0.6357,
+    "colour": 0.5062,
+    "structure": 0.5967,
+    "materials": 0.916,
+    "precision": 0.2427,
+    "recall": 0.2815,
+    "minutes": 23.65,
+    "repeat_sd": 0.0591,
+    "common": 0.59,
+    "takes": 72,
+    "place": 12
+   },
+   "band": {
+    "overall": 0.0305
+   },
+   "optimal": false,
+   "tags": [
+    {
+     "text": "est. price",
+     "kind": "warn"
+    }
+   ],
+   "facets": {
+    "family": "Google",
+    "effort": "high"
+   }
+  },
+  {
+   "label": "claude-sonnet-5 (max)",
+   "sub": "Anthropic",
+   "org": "Anthropic",
+   "series": "sonnetmax",
+   "values": {
+    "overall": 0.5436,
+    "cost": 14.41820139999999,
+    "cells": 30,
+    "ran": 30,
+    "f": 0.1885,
+    "geometry": 0.5523,
+    "appearance": 0.568,
+    "silhouette": 0.5839,
+    "outline": 0.2992,
+    "plan": 0.6136,
+    "height": 0.7129,
+    "colour": 0.541,
+    "structure": 0.6039,
+    "materials": 0.9369,
+    "chamfer_m": 5.5047,
+    "precision": 0.1949,
+    "recall": 0.197,
+    "triangles": 8263.4,
+    "turns": 199.0,
+    "minutes": 58.57,
+    "common": 0.5769,
+    "takes": 30,
+    "place": 14
+   },
+   "band": {
+    "overall": 0.0194
+   },
+   "optimal": false,
+   "tags": [],
+   "facets": {
+    "family": "Anthropic",
+    "effort": "max"
+   }
+  },
+  {
+   "label": "muse-spark-1.1 (ultra)",
+   "sub": "Meta",
+   "org": "Meta",
+   "series": "musespark11ultraverified",
+   "values": {
+    "overall": 0.5324,
+    "cost": 2.37044015,
+    "cells": 1,
+    "ran": 1,
+    "f": 0.1503,
+    "geometry": 0.6454,
+    "appearance": 0.4122,
+    "silhouette": 0.7365,
+    "outline": 0.1908,
+    "plan": 0.684,
+    "height": 0.9265,
+    "colour": 0.413,
+    "structure": 0.4111,
+    "materials": 1.0,
+    "chamfer_m": 2.127,
+    "precision": 0.186,
+    "recall": 0.1261,
+    "triangles": 4556.0,
+    "turns": 174.0,
+    "minutes": 15.35,
+    "takes": 1,
+    "place": 14
+   },
+   "band": {},
+   "optimal": false,
+   "tags": [],
+   "facets": {
+    "family": "Meta",
+    "effort": "ultra"
+   }
+  },
+  {
+   "label": "claude-sonnet-5 (low)",
+   "sub": "Anthropic",
+   "org": "Anthropic",
+   "series": "sonnetlow",
+   "values": {
+    "overall": 0.5144,
+    "cost": 0.8929373999999999,
+    "cells": 9,
+    "ran": 9,
+    "f": 0.1255,
+    "geometry": 0.5326,
+    "appearance": 0.5439,
+    "silhouette": 0.5555,
+    "outline": 0.2753,
+    "plan": 0.5784,
+    "height": 0.7455,
+    "colour": 0.5254,
+    "structure": 0.5684,
+    "materials": 0.8513,
+    "chamfer_m": 5.6669,
+    "precision": 0.1169,
+    "recall": 0.1458,
+    "triangles": 2035.1111,
+    "turns": 33.0,
+    "minutes": 5.08,
+    "takes": 9,
+    "place": 14
+   },
+   "band": {
+    "overall": 0.0348
+   },
+   "optimal": false,
+   "tags": [],
+   "facets": {
+    "family": "Anthropic",
+    "effort": "low"
+   }
+  },
+  {
+   "label": "gemini-3.5-flash",
+   "sub": "Google",
+   "org": "Google",
+   "series": "gemini35flash",
+   "values": {
+    "overall": 0.4816,
+    "cost": 1.375885,
+    "cells": 11,
+    "ran": 11,
+    "f": 0.1763,
+    "geometry": 0.5381,
+    "appearance": 0.4323,
+    "silhouette": 0.5424,
+    "outline": 0.2802,
+    "plan": 0.706,
+    "height": 0.6455,
+    "colour": 0.4706,
+    "structure": 0.3812,
+    "materials": 0.7712,
+    "precision": 0.1565,
+    "recall": 0.2286,
+    "turns": 68.0,
+    "minutes": 9.12,
+    "takes": 11,
+    "place": 14
+   },
+   "band": {
+    "overall": 0.0618
+   },
+   "optimal": false,
+   "tags": [],
+   "facets": {
+    "family": "Google",
+    "effort": "none"
+   }
+  },
+  {
+   "label": "gpt-5.6-terra (high)",
+   "sub": "OpenAI",
+   "org": "OpenAI",
+   "series": "gpt56terra",
+   "values": {
+    "overall": 0.4801,
+    "cost": 0.5895848,
+    "cells": 32,
+    "ran": 32,
+    "f": 0.148,
+    "geometry": 0.5253,
+    "appearance": 0.527,
+    "silhouette": 0.5794,
+    "outline": 0.3,
+    "plan": 0.6462,
+    "height": 0.5022,
+    "colour": 0.5109,
+    "structure": 0.5486,
+    "materials": 0.9291,
+    "chamfer_m": 5.7727,
+    "precision": 0.1467,
+    "recall": 0.1604,
+    "triangles": 5035.5723,
+    "turns": 18.0,
+    "minutes": 6.63,
+    "repeat_sd": 0.0973,
+    "common": 0.5131,
+    "takes": 119,
+    "place": 16
+   },
+   "band": {
+    "overall": 0.0163
+   },
+   "optimal": false,
+   "tags": [],
+   "facets": {
+    "family": "OpenAI",
+    "effort": "high"
+   }
+  },
+  {
+   "label": "grok-4.6 (max)",
+   "sub": "Unplaced",
+   "org": "Unplaced",
+   "series": "grok46max",
+   "values": {
+    "overall": 0.4653,
+    "cost": null,
+    "cells": 1,
+    "ran": 1,
+    "f": 0.1768,
+    "geometry": 0.3789,
+    "appearance": 0.6839,
+    "silhouette": 0.5145,
+    "outline": 0.1431,
+    "plan": 0.5772,
+    "height": 0.022,
+    "colour": 0.6739,
+    "structure": 0.6973,
+    "materials": 0.9234,
+    "chamfer_m": 1.4953,
+    "precision": 0.1457,
+    "recall": 0.2247,
+    "triangles": 2867.0,
+    "minutes": 95.14,
+    "takes": 1,
+    "place": 16
+   },
+   "band": {},
+   "optimal": false,
+   "tags": [],
+   "facets": {
+    "family": "Unplaced",
+    "effort": "max"
+   }
+  },
+  {
+   "label": "muse-spark-1.1 (high)",
+   "sub": "Meta",
+   "org": "Meta",
+   "series": "musespark11ultra",
+   "values": {
+    "overall": 0.4652,
+    "cost": 0.789109,
+    "cells": 19,
+    "ran": 19,
+    "f": 0.1735,
+    "geometry": 0.5005,
+    "appearance": 0.5038,
+    "silhouette": 0.5427,
+    "outline": 0.2844,
+    "plan": 0.6349,
+    "height": 0.483,
+    "colour": 0.4865,
+    "structure": 0.5268,
+    "materials": 0.8601,
+    "precision": 0.1798,
+    "recall": 0.174,
+    "triangles": 4951.6316,
+    "turns": 216.0,
+    "minutes": 17.68,
+    "common": 0.5028,
+    "takes": 19,
+    "place": 16
+   },
+   "band": {
+    "overall": 0.0434
+   },
+   "optimal": false,
+   "tags": [
+    {
+     "text": "est. price",
+     "kind": "warn"
+    }
+   ],
+   "facets": {
+    "family": "Meta",
+    "effort": "high"
+   }
+  },
+  {
+   "label": "muse-spark-1.2 (ultra)",
+   "sub": "Meta",
+   "org": "Meta",
+   "series": "musespark12ultra",
+   "values": {
+    "overall": 0.455,
+    "cost": 1.360499,
+    "cells": 18,
+    "ran": 18,
+    "f": 0.1632,
+    "geometry": 0.4845,
+    "appearance": 0.4762,
+    "silhouette": 0.5089,
+    "outline": 0.3025,
+    "plan": 0.6107,
+    "height": 0.4857,
+    "colour": 0.4871,
+    "structure": 0.4618,
+    "materials": 0.8279,
+    "precision": 0.1695,
+    "recall": 0.1687,
+    "triangles": 1199.0556,
+    "turns": 245.0,
+    "minutes": 24.77,
+    "repeat_sd": 0.0167,
+    "common": 0.4717,
+    "takes": 19,
+    "place": 16
+   },
+   "band": {
+    "overall": 0.0439
+   },
+   "optimal": false,
+   "tags": [
+    {
+     "text": "est. price",
+     "kind": "warn"
+    }
+   ],
+   "facets": {
+    "family": "Meta",
+    "effort": "ultra"
+   }
+  },
+  {
+   "label": "gemini-3.1-pro (high)",
+   "sub": "Google",
+   "org": "Google",
+   "series": "gemini",
+   "values": {
+    "overall": 0.4539,
+    "cost": 1.3863974,
+    "cells": 17,
+    "ran": 17,
+    "f": 0.184,
+    "geometry": 0.5311,
+    "appearance": 0.4911,
+    "silhouette": 0.5784,
+    "outline": 0.3054,
+    "plan": 0.6531,
+    "height": 0.5274,
+    "colour": 0.5147,
+    "structure": 0.4596,
+    "materials": 0.7822,
+    "chamfer_m": 4.9407,
+    "precision": 0.1764,
+    "recall": 0.2035,
+    "triangles": 2186.5185,
+    "minutes": 14.72,
+    "repeat_sd": 0.099,
+    "takes": 66,
+    "place": 20
+   },
+   "band": {
+    "overall": 0.0201
+   },
+   "optimal": false,
+   "tags": [
+    {
+     "text": "est. price",
+     "kind": "warn"
+    }
+   ],
+   "facets": {
+    "family": "Google",
+    "effort": "high"
+   }
+  },
+  {
+   "label": "moonshotai/kimi-k3",
+   "sub": "Moonshot AI",
+   "org": "Moonshot AI",
+   "series": "kimik3",
+   "values": {
+    "overall": 0.4502,
+    "cost": 3.5901684,
+    "cells": 22,
+    "ran": 22,
+    "f": 0.1499,
+    "geometry": 0.492,
+    "appearance": 0.4705,
+    "silhouette": 0.5267,
+    "outline": 0.317,
+    "plan": 0.6057,
+    "height": 0.4697,
+    "colour": 0.478,
+    "structure": 0.4605,
+    "materials": 0.8141,
+    "precision": 0.1563,
+    "recall": 0.1515,
+    "triangles": 2000.5455,
+    "turns": 150.0,
+    "minutes": 53.99,
+    "common": 0.4496,
+    "takes": 22,
+    "place": 20
+   },
+   "band": {
+    "overall": 0.0325
+   },
+   "optimal": false,
+   "tags": [],
+   "facets": {
+    "family": "Moonshot AI",
+    "effort": "none"
+   }
+  },
+  {
+   "label": "gpt-5.6-luna (high)",
+   "sub": "OpenAI",
+   "org": "OpenAI",
+   "series": "gpt56luna",
+   "values": {
+    "overall": 0.4491,
+    "cost": 0.0931652,
+    "cells": 28,
+    "ran": 28,
+    "f": 0.1348,
+    "geometry": 0.454,
+    "appearance": 0.4964,
+    "silhouette": 0.5067,
+    "outline": 0.2279,
+    "plan": 0.5549,
+    "height": 0.4631,
+    "colour": 0.4658,
+    "structure": 0.5371,
+    "materials": 0.9168,
+    "chamfer_m": 7.0868,
+    "precision": 0.1221,
+    "recall": 0.1629,
+    "triangles": 4012.0871,
+    "turns": 24.0,
+    "minutes": 10.9,
+    "repeat_sd": 0.0839,
+    "common": 0.4613,
+    "takes": 115,
+    "place": 20
+   },
+   "band": {
+    "overall": 0.0162
+   },
+   "optimal": true,
+   "tags": [
+    {
+     "text": "frontier",
+     "kind": ""
+    }
+   ],
+   "facets": {
+    "family": "OpenAI",
+    "effort": "high"
+   }
+  },
+  {
+   "label": "claude-sonnet-5 (high)",
+   "sub": "Anthropic",
+   "org": "Anthropic",
+   "series": "sonnet",
+   "values": {
+    "overall": 0.4291,
+    "cost": 5.425412000000001,
+    "cells": 4,
+    "ran": 4,
+    "f": 0.1502,
+    "geometry": 0.4566,
+    "appearance": 0.4909,
+    "silhouette": 0.4646,
+    "outline": 0.3041,
+    "plan": 0.4454,
+    "height": 0.6508,
+    "colour": 0.486,
+    "structure": 0.4975,
+    "materials": 0.8471,
+    "chamfer_m": 5.2893,
+    "precision": 0.137,
+    "recall": 0.1767,
+    "triangles": 10154.625,
+    "turns": 88.0,
+    "minutes": 25.06,
+    "repeat_sd": 0.198,
+    "takes": 8,
+    "place": 20
+   },
+   "band": {
+    "overall": 0.077
+   },
+   "optimal": false,
+   "tags": [],
+   "facets": {
+    "family": "Anthropic",
+    "effort": "high"
+   }
+  },
+  {
+   "label": "thinkingmachines/inkling:free \u00b7 Claude Code",
+   "sub": "Thinking Machines",
+   "org": "Thinking Machines",
+   "series": "inklingfreeclaudecode",
+   "values": {
+    "overall": 0.3238,
+    "cost": 0.0,
+    "cells": 18,
+    "ran": 18,
+    "f": 0.0902,
+    "geometry": 0.33,
+    "appearance": 0.3748,
+    "silhouette": 0.4033,
+    "outline": 0.1591,
+    "plan": 0.3906,
+    "height": 0.2575,
+    "colour": 0.4016,
+    "structure": 0.3392,
+    "materials": 0.5607,
+    "precision": 0.1018,
+    "recall": 0.0884,
+    "triangles": 344.4444,
+    "turns": 65.0,
+    "minutes": 6.04,
+    "takes": 18,
+    "place": 20
+   },
+   "band": {
+    "overall": 0.0468
+   },
+   "optimal": true,
+   "tags": [
+    {
+     "text": "frontier",
+     "kind": ""
+    }
+   ],
+   "facets": {
+    "family": "Thinking Machines",
+    "effort": "none"
+   }
+  },
+  {
+   "label": "claude-haiku-4-5",
+   "sub": "Anthropic",
+   "org": "Anthropic",
+   "series": "haiku",
+   "values": {
+    "overall": 0.2595,
+    "cost": 0.5560415000000001,
+    "cells": 16,
+    "ran": 16,
+    "f": 0.035,
+    "geometry": 0.2282,
+    "appearance": 0.3081,
+    "silhouette": 0.2705,
+    "outline": 0.0842,
+    "plan": 0.2611,
+    "height": 0.2495,
+    "colour": 0.4267,
+    "structure": 0.1499,
+    "materials": 0.5324,
+    "precision": 0.0348,
+    "recall": 0.0534,
+    "triangles": 2519.1875,
+    "turns": 61.0,
+    "minutes": 8.68,
+    "repeat_sd": 0.0754,
+    "takes": 20,
+    "place": 27
+   },
+   "band": {
+    "overall": 0.0408
+   },
+   "optimal": false,
+   "tags": [],
+   "facets": {
+    "family": "Anthropic",
+    "effort": "none"
+   }
+  },
+  {
+   "label": "z-ai/glm-5.3-flash",
+   "sub": "Z.ai",
+   "org": "Z.ai",
+   "series": "glm53flash",
+   "values": {
+    "overall": 0.2218,
+    "cost": 0.13378753499999999,
+    "cells": 27,
+    "ran": 27,
+    "f": 0.0934,
+    "geometry": 0.2344,
+    "appearance": 0.2431,
+    "silhouette": 0.2507,
+    "outline": 0.1425,
+    "plan": 0.2804,
+    "height": 0.2463,
+    "colour": 0.2374,
+    "structure": 0.2507,
+    "materials": 0.39,
+    "precision": 0.0927,
+    "recall": 0.0995,
+    "turns": 86.0,
+    "minutes": 79.13,
+    "repeat_sd": 0.2416,
+    "common": 0.2388,
+    "takes": 70,
+    "place": 27
+   },
+   "band": {
+    "overall": 0.0432
+   },
+   "optimal": false,
+   "tags": [],
+   "facets": {
+    "family": "Z.ai",
+    "effort": "none"
+   }
+  }
+ ],
+ "rowsSame": [
+  {
+   "label": "claude-fable-5-1 (max)",
+   "sub": "Anthropic",
+   "org": "Anthropic",
+   "series": "fable51max",
+   "values": {
+    "overall": 0.7479,
+    "cost": 21.376012749999997,
+    "cells": 11,
+    "ran": 11,
+    "f": 0.56,
+    "geometry": 0.696,
+    "appearance": 0.8177,
+    "silhouette": 0.6654,
+    "outline": 0.5292,
+    "plan": 0.8536,
+    "height": 0.8002,
+    "colour": 0.8259,
+    "structure": 0.8068,
+    "materials": 0.9856,
+    "chamfer_m": 2.0833,
+    "precision": 0.5163,
+    "recall": 0.6301,
+    "triangles": 13216.6364,
+    "turns": 160.0,
+    "minutes": 57.43,
+    "common": 0.7479,
+    "takes": 11,
+    "place": 1
+   },
+   "band": {
+    "overall": 0.0347
+   },
+   "optimal": true,
+   "tags": [
+    {
+     "text": "frontier",
+     "kind": ""
+    }
+   ],
+   "facets": {
+    "family": "Anthropic",
+    "effort": "max"
+   }
+  },
+  {
+   "label": "claude-opus-5 (max)",
+   "sub": "Anthropic",
+   "org": "Anthropic",
+   "series": "opusmax",
+   "values": {
+    "overall": 0.7295,
+    "cost": 42.58325550000001,
+    "cells": 11,
+    "ran": 11,
+    "f": 0.5655,
+    "geometry": 0.6954,
+    "appearance": 0.7721,
+    "silhouette": 0.6706,
+    "outline": 0.5117,
+    "plan": 0.8386,
+    "height": 0.8239,
+    "colour": 0.7878,
+    "structure": 0.7512,
+    "materials": 0.9937,
+    "chamfer_m": 2.3399,
+    "precision": 0.5327,
+    "recall": 0.6534,
+    "triangles": 15062.5455,
+    "turns": 188.0,
+    "minutes": 89.4,
+    "common": 0.7295,
+    "takes": 11,
+    "place": 1
+   },
+   "band": {
+    "overall": 0.0356
+   },
+   "optimal": false,
+   "tags": [],
+   "facets": {
+    "family": "Anthropic",
+    "effort": "max"
+   }
+  },
+  {
+   "label": "claude-opus-5 (high)",
+   "sub": "Anthropic",
+   "org": "Anthropic",
+   "series": "opus",
+   "values": {
+    "overall": 0.7106,
+    "cost": 20.8379755,
+    "cells": 11,
+    "ran": 11,
+    "f": 0.5127,
+    "geometry": 0.6937,
+    "appearance": 0.7424,
+    "silhouette": 0.664,
+    "outline": 0.514,
+    "plan": 0.8403,
+    "height": 0.8272,
+    "colour": 0.7493,
+    "structure": 0.7331,
+    "materials": 0.9996,
+    "chamfer_m": 2.3952,
+    "precision": 0.4875,
+    "recall": 0.5626,
+    "triangles": 25065.6364,
+    "turns": 147.0,
+    "minutes": 66.35,
+    "common": 0.7106,
+    "takes": 11,
+    "place": 2
+   },
+   "band": {
+    "overall": 0.0323
+   },
+   "optimal": true,
+   "tags": [
+    {
+     "text": "frontier",
+     "kind": ""
+    }
+   ],
+   "facets": {
+    "family": "Anthropic",
+    "effort": "high"
+   }
+  },
+  {
+   "label": "claude-fable-5-1 (high)",
+   "sub": "Anthropic",
+   "org": "Anthropic",
+   "series": "fable51",
+   "values": {
+    "overall": 0.6956,
+    "cost": 13.772178,
+    "cells": 11,
+    "ran": 11,
+    "f": 0.4402,
+    "geometry": 0.6811,
+    "appearance": 0.7406,
+    "silhouette": 0.6515,
+    "outline": 0.5128,
+    "plan": 0.8272,
+    "height": 0.7995,
+    "colour": 0.7437,
+    "structure": 0.7364,
+    "materials": 0.9765,
+    "chamfer_m": 2.4517,
+    "precision": 0.41,
+    "recall": 0.5143,
+    "triangles": 11601.4545,
+    "turns": 118.0,
+    "minutes": 25.88,
+    "common": 0.6956,
+    "takes": 11,
+    "place": 2
+   },
+   "band": {
+    "overall": 0.0266
+   },
+   "optimal": true,
+   "tags": [
+    {
+     "text": "frontier",
+     "kind": ""
+    }
+   ],
+   "facets": {
+    "family": "Anthropic",
+    "effort": "high"
+   }
+  },
+  {
+   "label": "claude-fable-5 (max)",
+   "sub": "Anthropic",
+   "org": "Anthropic",
+   "series": "fablemax",
+   "values": {
+    "overall": 0.69,
+    "cost": 43.67774,
+    "cells": 11,
+    "ran": 11,
+    "f": 0.421,
+    "geometry": 0.6769,
+    "appearance": 0.7442,
+    "silhouette": 0.6542,
+    "outline": 0.5076,
+    "plan": 0.8472,
+    "height": 0.7436,
+    "colour": 0.7578,
+    "structure": 0.7261,
+    "materials": 0.9993,
+    "chamfer_m": 2.4419,
+    "precision": 0.3789,
+    "recall": 0.4971,
+    "triangles": 10556.0,
+    "turns": 147.0,
+    "minutes": 63.41,
+    "common": 0.69,
+    "takes": 11,
+    "place": 2
+   },
+   "band": {
+    "overall": 0.0443
+   },
+   "optimal": false,
+   "tags": [],
+   "facets": {
+    "family": "Anthropic",
+    "effort": "max"
+   }
+  },
+  {
+   "label": "claude-opus-5 (low)",
+   "sub": "Anthropic",
+   "org": "Anthropic",
+   "series": "opuslow",
+   "values": {
+    "overall": 0.6717,
+    "cost": 5.868270499999997,
+    "cells": 11,
+    "ran": 11,
+    "f": 0.3885,
+    "geometry": 0.6971,
+    "appearance": 0.6625,
+    "silhouette": 0.6759,
+    "outline": 0.5237,
+    "plan": 0.8573,
+    "height": 0.7783,
+    "colour": 0.6699,
+    "structure": 0.6527,
+    "materials": 0.9757,
+    "chamfer_m": 2.429,
+    "precision": 0.3616,
+    "recall": 0.4327,
+    "triangles": 12114.3636,
+    "turns": 76.0,
+    "minutes": 18.88,
+    "common": 0.6717,
+    "takes": 11,
+    "place": 2
+   },
+   "band": {
+    "overall": 0.0402
+   },
+   "optimal": true,
+   "tags": [
+    {
+     "text": "frontier",
+     "kind": ""
+    }
+   ],
+   "facets": {
+    "family": "Anthropic",
+    "effort": "low"
+   }
+  },
+  {
+   "label": "gpt-5.6-sol (max)",
+   "sub": "OpenAI",
+   "org": "OpenAI",
+   "series": "gpt56solmax",
+   "values": {
+    "overall": 0.6646,
+    "cost": 5.1409096000000005,
+    "cells": 11,
+    "ran": 11,
+    "f": 0.3301,
+    "geometry": 0.6543,
+    "appearance": 0.6712,
+    "silhouette": 0.6416,
+    "outline": 0.4729,
+    "plan": 0.8108,
+    "height": 0.7253,
+    "colour": 0.663,
+    "structure": 0.682,
+    "materials": 0.9904,
+    "chamfer_m": 2.5476,
+    "precision": 0.3102,
+    "recall": 0.3822,
+    "triangles": 10057.5455,
+    "turns": 52.0,
+    "minutes": 28.57,
+    "common": 0.6646,
+    "takes": 11,
+    "place": 3
+   },
+   "band": {
+    "overall": 0.0265
+   },
+   "optimal": true,
+   "tags": [
+    {
+     "text": "frontier",
+     "kind": ""
+    }
+   ],
+   "facets": {
+    "family": "OpenAI",
+    "effort": "max"
+   }
+  },
+  {
+   "label": "gemini-3.8-flash (high)",
+   "sub": "Google",
+   "org": "Google",
+   "series": "gemini38flash",
+   "values": {
+    "overall": 0.6411,
+    "cost": 2.570917,
+    "cells": 11,
+    "ran": 11,
+    "f": 0.3756,
+    "geometry": 0.6579,
+    "appearance": 0.6035,
+    "silhouette": 0.6534,
+    "outline": 0.4972,
+    "plan": 0.7473,
+    "height": 0.7665,
+    "colour": 0.5894,
+    "structure": 0.6223,
+    "materials": 0.9666,
+    "chamfer_m": 2.3898,
+    "precision": 0.3653,
+    "recall": 0.4018,
+    "triangles": 15511.1818,
+    "minutes": 32.08,
+    "common": 0.6411,
+    "takes": 11,
+    "place": 5
+   },
+   "band": {
+    "overall": 0.0388
+   },
+   "optimal": true,
+   "tags": [
+    {
+     "text": "frontier",
+     "kind": ""
+    }
+   ],
+   "facets": {
+    "family": "Google",
+    "effort": "high"
+   }
+  },
+  {
+   "label": "claude-fable-5 (high)",
+   "sub": "Anthropic",
+   "org": "Anthropic",
+   "series": "fable",
+   "values": {
+    "overall": 0.6299,
+    "cost": 12.205479000000002,
+    "cells": 11,
+    "ran": 11,
+    "f": 0.3084,
+    "geometry": 0.6437,
+    "appearance": 0.641,
+    "silhouette": 0.6344,
+    "outline": 0.4368,
+    "plan": 0.7904,
+    "height": 0.7519,
+    "colour": 0.6652,
+    "structure": 0.6089,
+    "materials": 0.9823,
+    "chamfer_m": 3.8516,
+    "precision": 0.2975,
+    "recall": 0.3511,
+    "triangles": 9831.4545,
+    "turns": 84.0,
+    "minutes": 27.04,
+    "common": 0.6299,
+    "takes": 11,
+    "place": 5
+   },
+   "band": {
+    "overall": 0.0395
+   },
+   "optimal": false,
+   "tags": [],
+   "facets": {
+    "family": "Anthropic",
+    "effort": "high"
+   }
+  },
+  {
+   "label": "muse-spark-1.3 (ultra)",
+   "sub": "Meta",
+   "org": "Meta",
+   "series": "musespark13ultra",
+   "values": {
+    "overall": 0.6147,
+    "cost": 0.689231,
+    "cells": 11,
+    "ran": 11,
+    "f": 0.2307,
+    "geometry": 0.6415,
+    "appearance": 0.6691,
+    "silhouette": 0.6258,
+    "outline": 0.4133,
+    "plan": 0.8245,
+    "height": 0.7486,
+    "colour": 0.6728,
+    "structure": 0.664,
+    "materials": 0.968,
+    "chamfer_m": 3.3519,
+    "precision": 0.2108,
+    "recall": 0.2822,
+    "triangles": 3096.4545,
+    "turns": 220.0,
+    "minutes": 19.65,
+    "common": 0.6147,
+    "takes": 11,
+    "place": 7
+   },
+   "band": {
+    "overall": 0.0283
+   },
+   "optimal": true,
+   "tags": [
+    {
+     "text": "est. price",
+     "kind": "warn"
+    },
+    {
+     "text": "frontier",
+     "kind": ""
+    }
+   ],
+   "facets": {
+    "family": "Meta",
+    "effort": "ultra"
+   }
+  },
+  {
+   "label": "gpt-5.6-sol (high)",
+   "sub": "OpenAI",
+   "org": "OpenAI",
+   "series": "gpt56sol",
+   "values": {
+    "overall": 0.6061,
+    "cost": 1.3542712,
+    "cells": 11,
+    "ran": 11,
+    "f": 0.2608,
+    "geometry": 0.6179,
+    "appearance": 0.5786,
+    "silhouette": 0.626,
+    "outline": 0.4335,
+    "plan": 0.8143,
+    "height": 0.5775,
+    "colour": 0.5642,
+    "structure": 0.5979,
+    "materials": 0.9582,
+    "chamfer_m": 3.9068,
+    "precision": 0.2386,
+    "recall": 0.3227,
+    "triangles": 6387.2727,
+    "turns": 19.0,
+    "minutes": 8.6,
+    "common": 0.6061,
+    "takes": 11,
+    "place": 7
+   },
+   "band": {
+    "overall": 0.0282
+   },
+   "optimal": false,
+   "tags": [],
+   "facets": {
+    "family": "OpenAI",
+    "effort": "high"
+   }
+  },
+  {
+   "label": "gemini-3.7-flash (high)",
+   "sub": "Google",
+   "org": "Google",
+   "series": "gemini37flash",
+   "values": {
+    "overall": 0.5947,
+    "cost": 1.98631785,
+    "cells": 11,
+    "ran": 11,
+    "f": 0.3235,
+    "geometry": 0.6115,
+    "appearance": 0.5771,
+    "silhouette": 0.6038,
+    "outline": 0.357,
+    "plan": 0.7374,
+    "height": 0.8059,
+    "colour": 0.5687,
+    "structure": 0.5883,
+    "materials": 0.952,
+    "chamfer_m": 3.8071,
+    "precision": 0.3215,
+    "recall": 0.3596,
+    "triangles": 27373.1818,
+    "minutes": 19.6,
+    "common": 0.5947,
+    "takes": 11,
+    "place": 9
+   },
+   "band": {
+    "overall": 0.0341
+   },
+   "optimal": false,
+   "tags": [
+    {
+     "text": "est. price",
+     "kind": "warn"
+    }
+   ],
+   "facets": {
+    "family": "Google",
+    "effort": "high"
+   }
+  },
+  {
+   "label": "gpt-5.6-terra (max)",
+   "sub": "OpenAI",
+   "org": "OpenAI",
+   "series": "gpt56terramax",
+   "values": {
+    "overall": 0.5893,
+    "cost": 2.9109876,
+    "cells": 11,
+    "ran": 11,
+    "f": 0.2204,
+    "geometry": 0.5863,
+    "appearance": 0.6158,
+    "silhouette": 0.6023,
+    "outline": 0.3418,
+    "plan": 0.759,
+    "height": 0.6343,
+    "colour": 0.6494,
+    "structure": 0.5709,
+    "materials": 0.9702,
+    "chamfer_m": 4.3244,
+    "precision": 0.202,
+    "recall": 0.2506,
+    "triangles": 7737.2727,
+    "turns": 47.0,
+    "minutes": 29.24,
+    "common": 0.5893,
+    "takes": 11,
+    "place": 9
+   },
+   "band": {
+    "overall": 0.0354
+   },
+   "optimal": false,
+   "tags": [],
+   "facets": {
+    "family": "OpenAI",
+    "effort": "max"
+   }
+  },
+  {
+   "label": "claude-sonnet-5 (max)",
+   "sub": "Anthropic",
+   "org": "Anthropic",
+   "series": "sonnetmax",
+   "values": {
+    "overall": 0.567,
+    "cost": 12.378139000000001,
+    "cells": 11,
+    "ran": 11,
+    "f": 0.2635,
+    "geometry": 0.6022,
+    "appearance": 0.5434,
+    "silhouette": 0.6022,
+    "outline": 0.3289,
+    "plan": 0.7422,
+    "height": 0.7799,
+    "colour": 0.5143,
+    "structure": 0.5821,
+    "materials": 0.9178,
+    "chamfer_m": 4.2382,
+    "precision": 0.2508,
+    "recall": 0.2954,
+    "triangles": 18913.0,
+    "turns": 169.0,
+    "minutes": 49.12,
+    "common": 0.567,
+    "takes": 11,
+    "place": 12
+   },
+   "band": {
+    "overall": 0.0335
+   },
+   "optimal": false,
+   "tags": [],
+   "facets": {
+    "family": "Anthropic",
+    "effort": "max"
+   }
+  },
+  {
+   "label": "gpt-5.6-luna (max)",
+   "sub": "OpenAI",
+   "org": "OpenAI",
+   "series": "gpt56lunamax",
+   "values": {
+    "overall": 0.5479,
+    "cost": 0.40637932000000004,
+    "cells": 11,
+    "ran": 11,
+    "f": 0.2051,
+    "geometry": 0.5381,
+    "appearance": 0.5542,
+    "silhouette": 0.5382,
+    "outline": 0.2972,
+    "plan": 0.6542,
+    "height": 0.7045,
+    "colour": 0.5785,
+    "structure": 0.5219,
+    "materials": 0.9589,
+    "chamfer_m": 5.6735,
+    "precision": 0.1831,
+    "recall": 0.2559,
+    "triangles": 4782.3636,
+    "turns": 67.0,
+    "minutes": 42.88,
+    "common": 0.5479,
+    "takes": 11,
+    "place": 12
+   },
+   "band": {
+    "overall": 0.0297
+   },
+   "optimal": true,
+   "tags": [
+    {
+     "text": "frontier",
+     "kind": ""
+    }
+   ],
+   "facets": {
+    "family": "OpenAI",
+    "effort": "max"
+   }
+  },
+  {
+   "label": "gpt-5.6-terra (high)",
+   "sub": "OpenAI",
+   "org": "OpenAI",
+   "series": "gpt56terra",
+   "values": {
+    "overall": 0.5014,
+    "cost": 0.5426892,
+    "cells": 11,
+    "ran": 11,
+    "f": 0.1445,
+    "geometry": 0.5361,
+    "appearance": 0.5063,
+    "silhouette": 0.563,
+    "outline": 0.27,
+    "plan": 0.7076,
+    "height": 0.5817,
+    "colour": 0.5109,
+    "structure": 0.5,
+    "materials": 0.9415,
+    "chamfer_m": 5.1944,
+    "precision": 0.1364,
+    "recall": 0.1638,
+    "triangles": 8787.6364,
+    "turns": 21.0,
+    "minutes": 4.98,
+    "common": 0.5014,
+    "takes": 11,
+    "place": 16
+   },
+   "band": {
+    "overall": 0.0344
+   },
+   "optimal": false,
+   "tags": [],
+   "facets": {
+    "family": "OpenAI",
+    "effort": "high"
+   }
+  },
+  {
+   "label": "muse-spark-1.2 (ultra)",
+   "sub": "Meta",
+   "org": "Meta",
+   "series": "musespark12ultra",
+   "values": {
+    "overall": 0.4917,
+    "cost": 1.179924,
+    "cells": 11,
+    "ran": 11,
+    "f": 0.1498,
+    "geometry": 0.5078,
+    "appearance": 0.5517,
+    "silhouette": 0.5276,
+    "outline": 0.2962,
+    "plan": 0.6028,
+    "height": 0.6041,
+    "colour": 0.5649,
+    "structure": 0.5341,
+    "materials": 0.941,
+    "chamfer_m": 5.345,
+    "precision": 0.1483,
+    "recall": 0.1663,
+    "triangles": 1511.6364,
+    "turns": 245.0,
+    "minutes": 21.14,
+    "common": 0.4917,
+    "takes": 11,
+    "place": 16
+   },
+   "band": {
+    "overall": 0.0293
+   },
+   "optimal": false,
+   "tags": [
+    {
+     "text": "est. price",
+     "kind": "warn"
+    }
+   ],
+   "facets": {
+    "family": "Meta",
+    "effort": "ultra"
+   }
+  },
+  {
+   "label": "gemini-3.5-flash",
+   "sub": "Google",
+   "org": "Google",
+   "series": "gemini35flash",
+   "values": {
+    "overall": 0.4816,
+    "cost": 1.375885,
+    "cells": 11,
+    "ran": 11,
+    "f": 0.1763,
+    "geometry": 0.5381,
+    "appearance": 0.4323,
+    "silhouette": 0.5424,
+    "outline": 0.2802,
+    "plan": 0.706,
+    "height": 0.6455,
+    "colour": 0.4706,
+    "structure": 0.3812,
+    "materials": 0.7712,
+    "precision": 0.1565,
+    "recall": 0.2286,
+    "turns": 68.0,
+    "minutes": 9.12,
+    "common": 0.4816,
+    "takes": 11,
+    "place": 16
+   },
+   "band": {
+    "overall": 0.0618
+   },
+   "optimal": false,
+   "tags": [],
+   "facets": {
+    "family": "Google",
+    "effort": "none"
+   }
+  },
+  {
+   "label": "gpt-5.6-luna (high)",
+   "sub": "OpenAI",
+   "org": "OpenAI",
+   "series": "gpt56luna",
+   "values": {
+    "overall": 0.4691,
+    "cost": 0.0931652,
+    "cells": 11,
+    "ran": 11,
+    "f": 0.1703,
+    "geometry": 0.4753,
+    "appearance": 0.4858,
+    "silhouette": 0.5017,
+    "outline": 0.23,
+    "plan": 0.5769,
+    "height": 0.5878,
+    "colour": 0.476,
+    "structure": 0.4987,
+    "materials": 0.9332,
+    "chamfer_m": 6.536,
+    "precision": 0.1558,
+    "recall": 0.1947,
+    "triangles": 3332.9091,
+    "turns": 23.0,
+    "minutes": 8.6,
+    "common": 0.4691,
+    "takes": 11,
+    "place": 17
+   },
+   "band": {
+    "overall": 0.0286
+   },
+   "optimal": true,
+   "tags": [
+    {
+     "text": "frontier",
+     "kind": ""
+    }
+   ],
+   "facets": {
+    "family": "OpenAI",
+    "effort": "high"
+   }
+  },
+  {
+   "label": "muse-spark-1.1 (high)",
+   "sub": "Meta",
+   "org": "Meta",
+   "series": "musespark11ultra",
+   "values": {
+    "overall": 0.4677,
+    "cost": 0.789109,
+    "cells": 11,
+    "ran": 11,
+    "f": 0.1617,
+    "geometry": 0.521,
+    "appearance": 0.5141,
+    "silhouette": 0.5578,
+    "outline": 0.2628,
+    "plan": 0.6504,
+    "height": 0.582,
+    "colour": 0.5236,
+    "structure": 0.5015,
+    "materials": 0.8733,
+    "precision": 0.1703,
+    "recall": 0.1608,
+    "triangles": 8119.4545,
+    "turns": 212.0,
+    "minutes": 15.34,
+    "common": 0.4677,
+    "takes": 11,
+    "place": 17
+   },
+   "band": {
+    "overall": 0.0534
+   },
+   "optimal": false,
+   "tags": [
+    {
+     "text": "est. price",
+     "kind": "warn"
+    }
+   ],
+   "facets": {
+    "family": "Meta",
+    "effort": "high"
+   }
+  },
+  {
+   "label": "gemini-3.1-pro (high)",
+   "sub": "Google",
+   "org": "Google",
+   "series": "gemini",
+   "values": {
+    "overall": 0.4488,
+    "cost": 1.9644963999999998,
+    "cells": 11,
+    "ran": 11,
+    "f": 0.1505,
+    "geometry": 0.5026,
+    "appearance": 0.455,
+    "silhouette": 0.5242,
+    "outline": 0.285,
+    "plan": 0.6307,
+    "height": 0.5569,
+    "colour": 0.4925,
+    "structure": 0.4051,
+    "materials": 0.7835,
+    "chamfer_m": 5.4233,
+    "precision": 0.1452,
+    "recall": 0.1692,
+    "triangles": 1789.2727,
+    "minutes": 21.67,
+    "common": 0.4488,
+    "takes": 11,
+    "place": 20
+   },
+   "band": {
+    "overall": 0.0332
+   },
+   "optimal": false,
+   "tags": [],
+   "facets": {
+    "family": "Google",
+    "effort": "high"
+   }
+  },
+  {
+   "label": "moonshotai/kimi-k3",
+   "sub": "Moonshot AI",
+   "org": "Moonshot AI",
+   "series": "kimik3",
+   "values": {
+    "overall": 0.4465,
+    "cost": 3.4563078000000003,
+    "cells": 11,
+    "ran": 11,
+    "f": 0.1379,
+    "geometry": 0.4981,
+    "appearance": 0.4027,
+    "silhouette": 0.5145,
+    "outline": 0.3205,
+    "plan": 0.5916,
+    "height": 0.5606,
+    "colour": 0.4221,
+    "structure": 0.377,
+    "materials": 0.7315,
+    "precision": 0.1434,
+    "recall": 0.137,
+    "triangles": 3006.9091,
+    "turns": 150.0,
+    "minutes": 52.43,
+    "common": 0.4465,
+    "takes": 11,
+    "place": 20
+   },
+   "band": {
+    "overall": 0.0532
+   },
+   "optimal": false,
+   "tags": [],
+   "facets": {
+    "family": "Moonshot AI",
+    "effort": "none"
+   }
+  },
+  {
+   "label": "z-ai/glm-5.3-flash",
+   "sub": "Z.ai",
+   "org": "Z.ai",
+   "series": "glm53flash",
+   "values": {
+    "overall": 0.4272,
+    "cost": 0.25639171,
+    "cells": 11,
+    "ran": 11,
+    "f": 0.1216,
+    "geometry": 0.4478,
+    "appearance": 0.4582,
+    "silhouette": 0.4432,
+    "outline": 0.2486,
+    "plan": 0.5143,
+    "height": 0.6386,
+    "colour": 0.4712,
+    "structure": 0.441,
+    "materials": 0.7687,
+    "precision": 0.1356,
+    "recall": 0.1239,
+    "turns": 130.0,
+    "minutes": 77.38,
+    "common": 0.4272,
+    "takes": 11,
+    "place": 20
+   },
+   "band": {
+    "overall": 0.0737
+   },
+   "optimal": false,
+   "tags": [],
+   "facets": {
+    "family": "Z.ai",
+    "effort": "none"
+   }
+  }
+ ],
+ "sameSetSize": 11,
+ "sort": "overall",
+ "who": "model",
+ "noun": "models",
+ "page": 20
+}
