@@ -1681,6 +1681,7 @@ dialog{border:1px solid #c9d9c3;border-radius:13px;padding:0;background:#fff;col
     @media (max-width: 620px) {.ea section{ padding: 40px 0; }.ea .eval-list{ grid-template-columns: 1fr; gap: 0 0; }
     }
   
+.ea .container{width:100%;max-width:none;margin:0}
 </style>
 </head>
 <body>
@@ -10610,7 +10611,10 @@ function renderChart(){
   // minimum span of 0.4 so small gaps are not exaggerated.
   // Family members with no run on this building are marked at their release date, so a
   // missing model reads as "not run here" rather than as an omission.
-  const absent=state.scope==='case'?models.filter(m=>(state.family==='All'||m.family===state.family)&&m.date&&!resultFor(m.id)):[];
+  // Only while one family is on screen: with every family shown the marker is noise, and its
+  // release date drags the axis back into empty space — Gemini 3.1 Pro has run 1 of the 12
+  // buildings, so on the other 11 it was a ghost three months left of every real point.
+  const absent=state.scope==='case'&&state.family!=='All'?models.filter(m=>m.family===state.family&&m.date&&!resultFor(m.id)):[];
   const ds=list.concat(absent).map(m=>dateValue(m.date)),ys=list.map(m=>valueFor(m));
   if(!ds.length){ds.push(dateValue(DATA.snapshot));ys.push(.5);}
   let dmin=Math.min(...ds)-16*DAY,dmax=Math.max(...ds)+16*DAY;

@@ -286,7 +286,11 @@ def page(asset_src, inline, pitch_blocks=True):
             '</body>\n</html>\n'])
     pitch, strip = ea_html(inline)
     body = template.replace('<!--ENACTRA:pitch-->', pitch).replace('<!--ENACTRA:momentum-->', strip)
-    body = body.replace('</style>', ea_neutralise(re.search(r'<style>(.*?)</style>', template, re.S).group(1)) + '\n' + ea_rewrite(ea_css, inline) + '\n</style>', 1)
+    # The pitch page centres its blocks in a 1180 px .container of its own. Here they sit
+    # inside this page's <main>, which already sets the width (1440 px less 40 px a side),
+    # so the inner cap is dropped and every block runs the same width as the explorer.
+    EA_WIDTH = '.ea .container{width:100%;max-width:none;margin:0}'
+    body = body.replace('</style>', ea_neutralise(re.search(r'<style>(.*?)</style>', template, re.S).group(1)) + '\n' + ea_rewrite(ea_css, inline) + '\n' + EA_WIDTH + '\n</style>', 1)
     parts = [body,
              '<script>window.BB_DATA=%s;</script>\n' % js_string_safe(json.dumps(DATA, separators=(',', ':'))),
              '<script>window.BB_ASSETS=%s;</script>\n' % js_string_safe(json.dumps(asset_src, separators=(',', ':'))),
