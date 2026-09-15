@@ -31,7 +31,7 @@ This repository is the open part of the benchmark:
   are built on.
 - `harness/`, `docker/` — **the harness** we run agents with: the same working
   directory, container, prompt and command line.
-- `results/` — **our reference runs** on these 12 cases: 189 runs, scored by
+- `results/` — **our reference runs** on these 12 cases: 201 runs, scored by
   our grader.
 
 The grader is not part of this release, and the leaderboard we report is
@@ -70,22 +70,22 @@ spend.
 
 | # | Model | Overall | ± SE | Surface F | Geometry | Appearance | $ / run | min / run |
 |---:|---|---:|---:|---:|---:|---:|---:|---:|
-| 1 | GPT-6 Astra (ultra) | 0.796 | 0.008 | 0.632 | 0.841 | 0.791 | 7.05 | 32 |
-| 2 | Claude Fable 5.1 (max) | 0.776 | 0.022 | 0.467 | 0.819 | 0.800 | 32.98 | 64 |
-| 3 | Claude Fable 5 (max) | 0.729 | 0.020 | 0.417 | 0.796 | 0.709 | 39.64 | 68 |
-| 4 | Claude Opus 5 (max) | 0.708 | 0.023 | 0.364 | 0.749 | 0.745 | 46.38 | 93 |
-| 5 | DeepSeek V4.1 Flash (max) | 0.705 | 0.022 | 0.249 | 0.744 | 0.764 | 2.33 | 114 |
-| 6 | Grok 4.6 (xhigh) | 0.697 | 0.024 | 0.350 | 0.753 | 0.612 | 10.59 | 53 |
-| 7 | GPT-5.6 Sol (max) | 0.694 | 0.014 | 0.350 | 0.794 | 0.659 | 7.54 | 44 |
-| 8 | Muse Spark 1.3 (max) | 0.673 | 0.019 | 0.307 | 0.715 | 0.664 | 5.80 | 60 |
-| 9 | GPT-5.6 Terra (max) | 0.659 | 0.021 | 0.249 | 0.740 | 0.624 | 4.26 | 53 |
-| 10 | GPT-5.6 Luna (max) | 0.582 | 0.020 | 0.133 | 0.617 | 0.607 | 0.45 | 63 |
-| 11 | Gemini 3.8 Flash (high) | 0.572 | 0.059 | 0.298 | 0.723 | 0.612 | 3.33 | 40 |
-| 12 | Kimi K3 (thinking) | 0.543 | 0.027 | 0.209 | 0.616 | 0.504 | 5.84 | 125 |
-| 13 | Claude Sonnet 5 (max) | 0.541 | 0.023 | 0.146 | 0.510 | 0.584 | 15.03 | 61 |
-| 14 | GLM 5.3 Flash (max) | 0.348 | 0.090 | 0.228 | 0.630 | 0.587 | 0.22 | 101 |
-| 15 | Inkling (free) · Claude Code | 0.336 | 0.048 | 0.073 | 0.315 | 0.441 | 0.00 | 4 |
-| 16 | Claude Haiku 4.5 | 0.283 | 0.052 | 0.048 | 0.286 | 0.351 | 0.52 | 11 |
+| 1 | GPT-6 Astra (ultra) | 0.843 | 0.014 | 0.557 | 0.837 | 0.912 | 7.05 | 32 |
+| 2 | Claude Fable 5.1 (max) | 0.814 | 0.017 | 0.402 | 0.829 | 0.919 | 32.98 | 64 |
+| 3 | Claude Fable 5 (max) | 0.755 | 0.022 | 0.384 | 0.803 | 0.817 | 39.64 | 68 |
+| 4 | Claude Opus 5 (max) | 0.745 | 0.021 | 0.304 | 0.773 | 0.822 | 46.38 | 93 |
+| 5 | GPT-5.6 Sol (max) | 0.739 | 0.015 | 0.311 | 0.793 | 0.753 | 7.54 | 44 |
+| 6 | DeepSeek V4.1 Flash (max) | 0.729 | 0.023 | 0.256 | 0.749 | 0.900 | 2.33 | 114 |
+| 7 | Grok 4.6 (xhigh) | 0.695 | 0.029 | 0.346 | 0.764 | 0.698 | 10.59 | 53 |
+| 8 | GPT-5.6 Terra (max) | 0.685 | 0.023 | 0.278 | 0.760 | 0.692 | 4.26 | 53 |
+| 9 | Muse Spark 1.3 (max) | 0.682 | 0.024 | 0.236 | 0.742 | 0.788 | 5.80 | 60 |
+| 10 | Gemini 3.8 Flash (high) | 0.617 | 0.040 | 0.294 | 0.707 | 0.621 | 3.33 | 40 |
+| 11 | GPT-5.6 Luna (max) | 0.616 | 0.022 | 0.168 | 0.682 | 0.670 | 0.45 | 63 |
+| 12 | Claude Sonnet 5 (max) | 0.544 | 0.032 | 0.192 | 0.612 | 0.638 | 15.03 | 61 |
+| 13 | Kimi K3 (thinking) | 0.540 | 0.037 | 0.238 | 0.673 | 0.518 | 5.84 | 125 |
+| 14 | GLM 5.3 Flash (max) | 0.330 | 0.092 | 0.226 | 0.643 | 0.657 | 0.22 | 101 |
+| 15 | Claude Haiku 4.5 | 0.312 | 0.031 | 0.075 | 0.417 | 0.183 | 0.52 | 11 |
+| 16 | Inkling (free) · Claude Code | 0.309 | 0.027 | 0.075 | 0.367 | 0.359 | 0.00 | 4 |
 
 </details>
 
@@ -98,9 +98,12 @@ where the CLI does not know it: Muse's reports nothing and is metered, Grok
 Build's token counts are rebuilt from its session record, and Claude Code
 priced the DeepSeek row against its own first-party card, so that row is the
 pinned endpoint's published rates on the CLI's own token counts, which each run
-carries. For subscription logins it is the API-equivalent price. Every run is in
-`results/reference_runs.jsonl`; `python -m harness.board` leaves the `--ranked`
-filter off and shows the partial rows too.
+carries. For subscription logins it is the API-equivalent price. A column with
+nothing to measure reads zero rather than nothing: two runs handed in a shape
+with no upward-facing surface at all, and a run that handed in no file at all
+scores zero on every column. Every run is in `results/reference_runs.jsonl`;
+`python -m harness.board` leaves the `--ranked` filter off and shows the
+partial rows too.
 
 ## The twelve cases
 
@@ -251,6 +254,11 @@ What every reference run had, and what `harness/` reproduces:
   from run to run — on this benchmark a single run's overall typically moves by
   about 0.05. Differences between models smaller than their `± SE` are not an
   ordering.
+- **The grader moves too.** A number here is the grader as it stands. These are
+  the same runs an earlier revision of this page reported, scored again: a
+  model's mean moves by up to 0.05, about 0.02 upward on average, and no row
+  moves more than two places. Numbers from two revisions of the grader do not
+  belong on one board, which is why the whole set is re-scored together.
 - **What the agent sees has changed.** `TASK.md` used to name the dataset the
   photographs were rendered from, and `agent/` held an `ATTRIBUTION.txt`; it now
   says only that the photographs are renders of a photogrammetric mesh, and the
