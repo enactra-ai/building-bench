@@ -32,37 +32,116 @@ from harness import agents, cases
 from harness import lane as lanes
 
 
-#: How a provider says "not now": a status code or a limit, in any CLI's words.
-RATE_LIMITED = re.compile(r"\b429\b|rate.?limit|daily limit|quota|usage limit|"
-                          r"credits? (are )?depleted|spend limit", re.I)
+#: How a provider says "not now" -- a status code, a limit, money run out -- in
+#: any CLI's words. Read in what a CLI says ended its run (``reported``'s
+#: ``said``): across a whole transcript it also matches a website's 429, a page
+#: about quotas, and base64 image data.
+RATE_LIMITED = re.compile(r"\b429\b|too many requests|rate.?limit|daily limit|quota|"
+                          r"usage limit|session limit|(hit|reached) your .{0,40}\blimit|"
+                          r"spend(ing)?.?limit|\b402\b|payment required|balance exhausted|"
+                          r"insufficient credit|out of (usage )?credits|"
+                          r"credit balance is too low|credits? (are )?depleted|"
+                          r"resource.exhausted", re.I)
+
+
+def _report(stdout: str) -> dict[str, Any]:
+    """A CLI's one JSON object: all of stdout, or its last line."""
+    text = stdout.strip()
+    for candidate in (text, text[text.rfind("\n") + 1:]):
+        try:
+            body = json.loads(candidate)
+        except ValueError:
+            continue
+        if isinstance(body, dict):
+            return body
+    return {}
+
+
+def _log(stdout: str) -> list[dict[str, Any] | str]:
+    """A CLI's JSON-lines log; a line that is not a JSON object stays text."""
+    lines: list[dict[str, Any] | str] = []
+    for line in stdout.splitlines():
+        try:
+            event = json.loads(line)
+        except ValueError:
+            event = None
+        if isinstance(event, dict):
+            lines.append(event)
+        elif line.strip():
+            lines.append(line.strip())
+    return lines
 
 
 def reported(product: str, stdout: str) -> dict[str, Any]:
-    """What the CLI itself says about the run, where it says anything."""
+    """What the CLI itself says about the run, where it says anything.
+
+    ``said`` is the CLI's own account of an error that ended the run, which is
+    where a provider refusing the agent shows up -- each CLI keeps it somewhere
+    else, and an error the run carried on past is not one.
+    """
+    out: dict[str, Any] = {}
+    said = ""
     if product in ("claude", "claude-openrouter"):
-        try:
-            body = json.loads(stdout)
-        except ValueError:
-            return {}
+        body = _report(stdout)
         out = {k: body.get(k) for k in ("total_cost_usd", "num_turns",
                                         "duration_ms", "is_error") if k in body}
         if body.get("is_error"):
-            out["said"] = str(body.get("result", ""))[:500]
-        return out
-    if product == "codex":
+            said = str(body.get("result", ""))
+    elif product == "codex":
         turns, usage = 0, {}
-        for line in stdout.splitlines():
-            try:
-                event = json.loads(line)
-            except ValueError:
+        for event in _log(stdout):
+            if isinstance(event, str):
                 continue
-            if isinstance(event, dict) and event.get("type") == "turn.completed":
-                turns += 1
+            # an `error` event alone is often a retry ("Reconnecting... 2/5");
+            # the one that ended the turn is repeated in turn.failed
+            if event.get("type") == "turn.failed":
+                said = str((event.get("error") or {}).get("message", ""))
+            elif event.get("type") == "turn.completed":
+                turns, said = turns + 1, ""
                 for key, value in (event.get("usage") or {}).items():
                     if isinstance(value, (int, float)):
                         usage[key] = usage.get(key, 0) + value
-        return {"turns": turns, "usage": usage} if turns else {}
-    return {}
+        if turns:
+            out = {"turns": turns, "usage": usage}
+    elif product == "grok":
+        # {"text", "stopReason", ...} for a turn that ended; {"type": "error",
+        # "message"} for one that did not. Its stderr is no guide: the CLI logs
+        # every API error there, its own side requests' too -- a 429 for
+        # `grok-build` in a lane that went on working for eighteen minutes.
+        body = _report(stdout)
+        if body.get("type") == "error":
+            said = str(body.get("message", ""))
+    elif product == "antigravity":
+        body = _report(stdout)
+        if str(body.get("status", "SUCCESS")).upper() != "SUCCESS":
+            said = str(body.get("error") or body.get("status"))
+    elif product == "muse":
+        # its last run.terminal.* event carries a reason only when it failed
+        ends = [event for event in _log(stdout) if isinstance(event, dict)
+                and str(event.get("payload_type")).startswith("run.terminal.")]
+        if ends:
+            said = str((ends[-1].get("payload") or {}).get("reason") or "")
+    elif product in ("opencode", "kimi"):
+        # Neither says how its run ended, and the lane resumes both: an error
+        # ended the run only if nothing came after it. opencode logs its errors
+        # as events (and exits 0 on them); kimi-cli prints "Error code: 429 -
+        # ..." as plain lines between its JSON messages.
+        errors: list[str] = []
+        for event in _log(stdout):
+            if isinstance(event, str):
+                if event.lower().startswith("error"):
+                    errors.append(event)
+            elif event.get("type") == "error":
+                error = event.get("error") or {}
+                data = error.get("data") or {}
+                parts = (error.get("name"), data.get("statusCode"), data.get("message"))
+                errors.append(" ".join(str(part) for part in parts if part))
+            elif event.get("type") != "step_start":
+                errors = []
+        said = "\n".join(dict.fromkeys(errors))      # each resume says it again
+    if said:
+        out["said"] = said[:500]
+    return out
 
 
 def scrub(lane_root: Path) -> None:
@@ -133,12 +212,20 @@ def run_one(case: str, args: argparse.Namespace, config: agents.Config | None,
     submission = lanes.collect(lane_root, out / "submission")
     handed_in = (submission / "building.glb").is_file()
     said = reported(config.product if config else "", stdout or "")
-    # A lane that never handed anything in AND did not exit cleanly is a run
-    # that did not happen (a refused login, a provider limit, an outage), not a
-    # model that built nothing. Say which, in the provider's own words.
-    status = "complete" if (handed_in or returncode == 0) else "failed"
-    if status == "failed" and RATE_LIMITED.search(f"{said.get('said', '')}\n{stdout}\n{stderr}"):
+    if RATE_LIMITED.search(said.get("said", "")):
+        # The provider turned the agent away, in the words the CLI ended on.
+        # That decides before the submission does: a lane cut off mid-run has
+        # handed in whatever it had built by then, which is no result either.
         status = "rate limited"
+    elif handed_in or returncode == 0:
+        status = "complete"
+    else:
+        # A lane that never handed anything in AND did not exit cleanly is a
+        # run that did not happen (a refused login, a provider limit, an
+        # outage), not a model that built nothing. A --command CLI's report is
+        # not read, so its limit can only be looked for in all it printed.
+        status = ("rate limited" if config is None
+                  and RATE_LIMITED.search(f"{stdout}\n{stderr}") else "failed")
     row = {"schema": "building_bench.run/1", "run_id": run_id, "case": case,
            "model": label, "label": config.label if config else label,
            "product": config.product if config else "custom",
