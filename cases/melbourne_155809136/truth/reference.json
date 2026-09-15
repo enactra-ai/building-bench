@@ -14,10 +14,10 @@
     "silhouette": 0.2642,
     "outline": 0.0929,
     "plan": 0.4707,
-    "height": 0.5918,
-    "geometry": 0.3204,
-    "appearance": 0.4729,
-    "colour": 0.8275,
+    "height": 0.6649,
+    "geometry": 0.3313,
+    "appearance": 0.2286,
+    "colour": 0.4001,
     "structure": 0.0,
     "triangles": 12,
     "surface": {
@@ -32,10 +32,10 @@
     "silhouette": 0.4578,
     "outline": 0.5083,
     "plan": 0.9131,
-    "height": 0.5918,
-    "geometry": 0.5791,
-    "appearance": 0.4728,
-    "colour": 0.8274,
+    "height": 0.6649,
+    "geometry": 0.59,
+    "appearance": 0.2283,
+    "colour": 0.3994,
     "structure": 0.0,
     "triangles": 132,
     "surface": {
@@ -50,10 +50,10 @@
     "silhouette": 0.7145,
     "outline": 0.5379,
     "plan": 0.9007,
-    "height": 0.0,
-    "geometry": 0.6092,
-    "appearance": 0.4817,
-    "colour": 0.843,
+    "height": 0.0273,
+    "geometry": 0.6133,
+    "appearance": 0.2488,
+    "colour": 0.4353,
     "structure": 0.0,
     "triangles": 132,
     "surface": {
@@ -68,10 +68,10 @@
     "silhouette": 0.4578,
     "outline": 0.5083,
     "plan": 0.9131,
-    "height": 0.5918,
-    "geometry": 0.5791,
-    "appearance": 0.4728,
-    "colour": 0.8274,
+    "height": 0.6649,
+    "geometry": 0.59,
+    "appearance": 0.2283,
+    "colour": 0.3994,
     "structure": 0.0,
     "triangles": 132,
     "surface": {
@@ -84,7 +84,7 @@
   },
   "answer_key": {
     "silhouette": {
-      "value": 0.97308,
+      "value": 0.91916,
       "from": {
         "step": 1,
         "spacings": 6.0,
@@ -93,7 +93,7 @@
       "triangles": 70046
     },
     "outline": {
-      "value": 0.94221,
+      "value": 0.88296,
       "from": {
         "step": 1,
         "spacings": 6.0,
@@ -102,7 +102,7 @@
       "triangles": 70046
     },
     "plan": {
-      "value": 0.97312,
+      "value": 0.95232,
       "from": {
         "step": 1,
         "spacings": 6.0,
@@ -111,7 +111,7 @@
       "triangles": 70046
     },
     "height": {
-      "value": 0.76462,
+      "value": 0.79027,
       "from": {
         "step": 1,
         "spacings": 4.0,
@@ -120,7 +120,7 @@
       "triangles": 65170
     },
     "colour": {
-      "value": 0.95813,
+      "value": 0.99995,
       "from": {
         "step": 1,
         "spacings": 4.0,
@@ -129,7 +129,7 @@
       "triangles": 65170
     },
     "structure": {
-      "value": 0.93704,
+      "value": 0.9405,
       "from": {
         "step": 1,
         "spacings": 4.0,
@@ -138,7 +138,7 @@
       "triangles": 65170
     },
     "geometry": {
-      "value": 0.93565,
+      "value": 0.89922,
       "from": {
         "step": 1,
         "spacings": 6.0,
@@ -147,7 +147,7 @@
       "triangles": 70046
     },
     "appearance": {
-      "value": 0.94909,
+      "value": 0.97447,
       "from": {
         "step": 1,
         "spacings": 4.0,
@@ -156,7 +156,7 @@
       "triangles": 65170
     },
     "surface_f": {
-      "value": 0.99453,
+      "value": 0.91278,
       "from": {
         "step": 1,
         "spacings": 4.0,
@@ -165,7 +165,7 @@
       "triangles": 65170
     },
     "chamfer_m": {
-      "value": 0.2282,
+      "value": 0.5009,
       "from": {
         "step": 1,
         "spacings": 4.0,
