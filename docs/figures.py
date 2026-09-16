@@ -37,31 +37,15 @@ CHROME = ("/Applications/Google Chrome.app/Contents/MacOS/Google Chrome",
           "/usr/bin/google-chrome", "/usr/bin/chromium",
           "/usr/bin/chromium-browser")
 
-# The house style, lifted from enactra.ai -- the same one the Pareto film uses.
+# The house style, lifted from enactra.ai.
 THEMES = {
-    "light": dict(paper="#f4f2ec", card="#fefef9", ink="#141b22", ink2="#7e858c",
-                  line="#e3e0d6", rule="#eceade", signal="#f2c230",
-                  track="#eceade", chip="#1b1f23", chipink="#fefef9"),
-    "dark": dict(paper="#131518", card="#1b1e22", ink="#f4f2ec", ink2="#8f979f",
-                 line="#2b3035", rule="#23272c", signal="#f2c230",
-                 track="#272c31", chip="#f4f2ec", chipink="#131518"),
+    "light": dict(paper="#f6f7f8", wash="#e2e6e9", ink="#000000",
+                  ink2="#5b636b", line="#c9cfd4", signal="#f2c230",
+                  track="#dfe3e7"),
+    "dark": dict(paper="#17191c", wash="#0d0f11", ink="#ffffff",
+                 ink2="#9aa2aa", line="#363c42", signal="#f2c230",
+                 track="#282d32"),
 }
-# One colour per model family, as in the film: the dot, the bar and the name
-# of a row all carry its maker's colour.
-MAKERS = (("Inkling", "#0f7a74"), ("Claude", "#c15f3c"), ("GPT", "#0d8a63"),
-          ("DeepSeek", "#4451de"),
-          ("Grok", "#9c1111"), ("Gemini", "#7818a0"), ("Kimi", "#8a6a00"),
-          ("GLM", "#b07d10"), ("Muse", "#2f86d6"))
-
-
-def maker(label: str) -> str:
-    """The colour of whoever makes this model."""
-    for name, colour in MAKERS:
-        if name.lower() in label.lower():
-            return colour
-    return "var(--ink)"
-
-
 MARK = ('<svg viewBox="55 40 280 320" class="mark">'
         '<path fill="currentColor" d="M193 55 L84 115 L84 286 L202 337 L283 301'
         ' L144 248 L144 115 L231 152 L306 113 Z"/>'
@@ -103,37 +87,18 @@ def shoot(html: str, name: str, width: int, theme: str, jpeg: bool = False,
     page = f"""<!doctype html><meta charset="utf-8"><style>
 @font-face {{ font-family: SG; font-weight: 100 900; font-style: normal;
   src: url(data:font/woff2;base64,{font()}) format('woff2'); }}
-:root {{ --paper:{colours['paper']}; --card:{colours['card']}; --ink:{colours['ink']};
-  --ink-2:{colours['ink2']}; --line:{colours['line']}; --rule:{colours['rule']};
-  --signal:{colours['signal']}; --track:{colours['track']};
-  --chip:{colours['chip']}; --chip-ink:{colours['chipink']}; }}
+:root {{ --paper:{colours['paper']}; --wash:{colours['wash']}; --ink:{colours['ink']};
+  --ink-2:{colours['ink2']}; --line:{colours['line']}; --signal:{colours['signal']};
+  --track:{colours['track']}; }}
 * {{ box-sizing: border-box; }}
 html, body {{ margin: 0; background: transparent; }}
 body {{ font-family: SG, "Helvetica Neue", Arial, sans-serif; color: var(--ink);
   -webkit-font-smoothing: antialiased; }}
 .num {{ font-variant-numeric: tabular-nums; }}
-.panel {{ width: {width}px; padding: 26px; background: var(--paper); }}
-.card {{ background: var(--card); border: 1px solid var(--line); border-radius: 18px;
-  overflow: hidden; }}
+.panel {{ width: {width}px; background: var(--paper);
+  background-image: radial-gradient(120% 90% at 78% 82%, var(--wash) 0%, var(--paper) 62%); }}
 .mark {{ display: block; }}
-/* the brand lock-up that sits in the corner of every figure */
-.lockup {{ display: flex; align-items: center; gap: 11px; }}
-.lockup .chip {{ width: 38px; height: 38px; border-radius: 11px; background: var(--chip);
-  color: var(--chip-ink); display: flex; align-items: center; justify-content: center; }}
-.lockup .chip .mark {{ width: 21px; height: 21px; }}
-.lockup b {{ display: block; font-size: 18px; font-weight: 700; letter-spacing: -0.02em;
-  line-height: 1.15; }}
-.lockup span {{ display: block; font-size: 13.5px; color: var(--ink-2);
-  letter-spacing: -0.005em; }}
-/* the two-tone heading: the name in ink, what the figure shows beside it */
-.cap {{ display: flex; align-items: flex-start; justify-content: space-between; gap: 24px; }}
-.cap h2 {{ margin: 0; font-size: 31px; font-weight: 400; color: var(--ink-2);
-  letter-spacing: -0.028em; }}
-.cap h2 b {{ font-weight: 700; color: var(--ink); }}
-.cap h2 small {{ display: block; margin-top: 7px; font-size: 13.5px; font-weight: 400;
-  color: var(--ink-2); letter-spacing: 0.005em; }}
-.note {{ margin: 26px 0 0; font-size: 13px; line-height: 1.6; color: var(--ink-2); }}
-</style><div class="panel"><div class="card">{html}</div></div>"""
+</style><div class="panel">{html}</div>"""
 
     with tempfile.TemporaryDirectory() as tmp:
         work = Path(tmp)
@@ -170,60 +135,54 @@ body {{ font-family: SG, "Helvetica Neue", Arial, sans-serif; color: var(--ink);
 
 # ------------------------------------------------------------------ figures
 
-LOCKUP = (f'<div class="lockup"><div class="chip">{MARK}</div>'
-          f'<div><b>Enactra AI</b><span>enactra.ai</span></div></div>')
-
-
 HEADER_CSS = """
-.head { padding: 46px 52px 52px; }
-.head h1 { margin: 40px 0 0; font-size: 82px; font-weight: 400; color: var(--ink-2);
-  line-height: 1.02; letter-spacing: -0.034em; }
-.head h1 b { font-weight: 700; color: var(--ink); }
-.head p { margin: 22px 0 0; max-width: 780px; font-size: 21px; line-height: 1.42;
-  color: var(--ink-2); letter-spacing: -0.014em; }
-.head .tags { margin-top: 30px; display: flex; gap: 10px; flex-wrap: wrap; }
-.head .tag { font-size: 13.5px; font-weight: 500; letter-spacing: -0.008em;
-  padding: 7px 13px; border: 1px solid var(--line); border-radius: 999px;
-  background: var(--paper); }
+.head { padding: 78px 64px 84px; text-align: center; }
+.brand { display: inline-flex; align-items: center; gap: 10px;
+  font-weight: 600; font-size: 17px; letter-spacing: -0.01em; }
+.brand .mark { width: 24px; height: 24px; }
+.head h1 { margin: 30px 0 0; font-size: 86px; font-weight: 500;
+  line-height: 1.0; letter-spacing: -0.032em; }
+.head p { margin: 24px auto 0; max-width: 820px; font-size: 22px;
+  line-height: 1.4; color: var(--ink-2); letter-spacing: -0.014em; }
 """
 
 
 def header(theme: str) -> None:
-    tags = ("12 public buildings", "16 models", "201 reference runs",
-            "CC BY 4.0 data")
-    chips = "".join(f'<span class="tag">{t}</span>' for t in tags)
     body = f"""<style>{HEADER_CSS}</style><div class="head">
-  <div class="cap"><div></div>{LOCKUP}</div>
-  <h1><b>BuildingBench</b><br>One building,<br>four photographs.</h1>
-  <p>Reconstruct real buildings as textured 3D models from aerial imagery,
+  <div class="brand">{MARK}<span>Enactra AI</span></div>
+  <h1>Building&nbsp;Bench</h1>
+  <p>Reconstruct real buildings as 3D models from aerial imagery,
      using coding agents.</p>
-  <div class="tags">{chips}</div>
 </div>"""
     shoot(body, "header", 1280, theme)
 
 
 BOARD_CSS = """
-.board { padding: 40px 48px 42px; }
+.board { padding: 52px 56px 46px; }
+.cap { display: flex; align-items: baseline; justify-content: space-between; gap: 24px; }
+.cap h2 { margin: 0; font-size: 30px; font-weight: 500; letter-spacing: -0.028em; }
+.cap span { font-size: 13px; color: var(--ink-2); letter-spacing: 0.02em; }
 table { width: 100%; border-collapse: collapse; margin-top: 30px; }
-th { font-size: 10.5px; font-weight: 600; color: var(--ink-2); text-align: right;
+th { font-size: 10.5px; font-weight: 500; color: var(--ink-2); text-align: right;
   letter-spacing: 0.08em; text-transform: uppercase; padding: 0 0 11px 30px;
   border-bottom: 1px solid var(--line); white-space: nowrap; }
 th.l, td.l { text-align: left; }
 td { font-size: 16px; padding: 11px 0 11px 30px; text-align: right; white-space: nowrap;
-  border-bottom: 1px solid var(--rule); }
+  border-bottom: 1px solid color-mix(in srgb, var(--line) 48%, transparent); }
 tr:last-child td { border-bottom: 0; }
 td.rank, th.rank { padding-left: 0; color: var(--ink-2); font-size: 13px; }
 td.name, th.name { width: 100%; padding-left: 16px; }
-td.name { font-weight: 600; letter-spacing: -0.012em; }
+td.name { font-weight: 500; letter-spacing: -0.012em; }
 td.sub, th.sub { color: var(--ink-2); }
 td.sub { font-size: 15px; }
 th.se, td.se { padding-left: 12px; }
 .bar { display: flex; align-items: center; gap: 12px; justify-content: flex-end; }
-.track { width: 152px; height: 8px; border-radius: 999px; background: var(--track);
-  position: relative; overflow: hidden; }
-.fill { position: absolute; inset: 0 auto 0 0; border-radius: 999px; }
-.score { width: 50px; font-weight: 600; letter-spacing: -0.015em; text-align: right; }
+.track { width: 152px; height: 7px; background: var(--track); position: relative; }
+.fill { position: absolute; inset: 0 auto 0 0; background: var(--ink); }
+.lead .fill { background: var(--signal); }
+.score { width: 50px; font-weight: 500; letter-spacing: -0.015em; text-align: right; }
 td.se { font-size: 13px; color: var(--ink-2); }
+.note { margin-top: 26px; font-size: 13px; line-height: 1.6; color: var(--ink-2); }
 """
 
 
@@ -239,15 +198,13 @@ def leaderboard(theme: str) -> None:
     rows = []
     for line in lines:
         lead = " lead" if line["place"] == 1 else ""
-        tone = maker(line["label"])
         bar = (f'<div class="bar"><div class="track"><div class="fill" '
-               f'style="width:{line["overall"] * 100:.1f}%;background:{tone}">'
-               f'</div></div>'
+               f'style="width:{line["overall"] * 100:.1f}%"></div></div>'
                f'<div class="score num">{line["overall"]:.3f}</div></div>')
         rows.append(
             f'<tr class="{lead.strip()}">'
             f'<td class="rank num">{line["place"]}</td>'
-            f'<td class="l name" style="color:{tone}">{line["label"]}</td>'
+            f'<td class="l name">{line["label"]}</td>'
             f'<td class="wide">{bar}</td>'
             f'<td class="se num">± {board._f(line["se"])[1:]}</td>'
             f'<td class="sub num">{board._f(line["surface_f"])}</td>'
@@ -257,9 +214,8 @@ def leaderboard(theme: str) -> None:
             f'<td class="sub num">{board._f(line["minutes"], 0)}</td></tr>')
 
     body = f"""<style>{BOARD_CSS}</style><div class="board">
-  <div class="cap"><h2><b>BuildingBench</b> Reference Leaderboard
-      <small>Twelve public buildings &middot; blind tier &middot; one run per model per building</small>
-    </h2>{LOCKUP}</div>
+  <div class="cap"><h2>Reference leaderboard</h2>
+    <span>Twelve public buildings &middot; blind tier &middot; one run per model per building</span></div>
   <table><thead><tr>{columns}</tr></thead><tbody>{''.join(rows)}</tbody></table>
   <p class="note">Overall is on 0&ndash;1, averaged over the twelve buildings; &plusmn; is the
     standard error across them. $ / run and min / run are medians.</p>
@@ -268,11 +224,13 @@ def leaderboard(theme: str) -> None:
 
 
 CASES_CSS = """
-.cases { padding: 40px 48px 42px; }
-.grid { margin-top: 30px; display: grid; grid-template-columns: repeat(4, 1fr); gap: 22px; }
-.tile img { display: block; width: 100%; aspect-ratio: 1; object-fit: cover;
-  border-radius: 12px; }
-.tile b { display: block; margin-top: 10px; font-size: 15px; font-weight: 600;
+.cases { padding: 50px 56px 46px; }
+.cap { display: flex; align-items: baseline; justify-content: space-between; gap: 24px; }
+.cap h2 { margin: 0; font-size: 30px; font-weight: 500; letter-spacing: -0.028em; }
+.cap span { font-size: 13px; color: var(--ink-2); letter-spacing: 0.02em; }
+.grid { margin-top: 28px; display: grid; grid-template-columns: repeat(4, 1fr); gap: 22px; }
+.tile img { display: block; width: 100%; aspect-ratio: 1; object-fit: cover; }
+.tile b { display: block; margin-top: 10px; font-size: 15px; font-weight: 500;
   letter-spacing: -0.012em; }
 .tile span { display: block; margin-top: 3px; font-size: 12.5px; color: var(--ink-2); }
 """
@@ -312,8 +270,8 @@ def gallery(theme: str) -> None:
                 f'<span class="num">{case["city"]} &middot; {case["height_m"]:.0f} m '
                 f'&middot; {case["footprint_area_m2"]:,.0f} m²</span></div>')
         body = f"""<style>{CASES_CSS}</style><div class="cases">
-  <div class="cap"><h2><b>BuildingBench</b> The Twelve Public Cases
-      <small>One of the four photographs each agent is given</small></h2>{LOCKUP}</div>
+  <div class="cap"><h2>The twelve public cases</h2>
+    <span>One of the four photographs each agent is given</span></div>
   <div class="grid">{''.join(tiles)}</div>
 </div>"""
         shoot(body, "cases", 1280, theme, jpeg=True, assets=pics)
@@ -321,7 +279,10 @@ def gallery(theme: str) -> None:
 
 
 PRICE_CSS = """
-.price { padding: 40px 48px 38px; }
+.price { padding: 50px 56px 40px; }
+.cap { display: flex; align-items: baseline; justify-content: space-between; gap: 24px; }
+.cap h2 { margin: 0; font-size: 30px; font-weight: 500; letter-spacing: -0.028em; }
+.cap span { font-size: 13px; color: var(--ink-2); letter-spacing: 0.02em; }
 .chart { margin-top: 26px; display: block; width: 100%; }
 .chart text { font-family: SG, sans-serif; }
 .chart .grid { stroke: var(--line); stroke-width: 1; }
@@ -332,13 +293,13 @@ PRICE_CSS = """
 .chart .err { stroke: var(--ink-2); stroke-width: 1.2; opacity: 0.55; }
 .chart .front { fill: none; stroke: var(--ink); stroke-width: 1.6;
   stroke-linejoin: round; opacity: 0.5; }
-.chart .halo { fill: none; stroke: var(--card); stroke-width: 6; stroke-linejoin: round; }
-.chart .dot { stroke: var(--card); stroke-width: 2.5; }
-.chart .dot.on { stroke: var(--ink); stroke-width: 1.6; }
-.chart .name { font-size: 12.5px; letter-spacing: -0.008em;
-  paint-order: stroke fill; stroke: var(--card); stroke-width: 3.5px;
+.chart .halo { fill: none; stroke: var(--paper); stroke-width: 6; stroke-linejoin: round; }
+.chart .dot { fill: var(--ink); stroke: var(--paper); stroke-width: 2.5; }
+.chart .dot.on { fill: var(--signal); stroke: var(--ink); stroke-width: 1.6; }
+.chart .name { font-size: 12.5px; fill: var(--ink-2); letter-spacing: -0.008em;
+  paint-order: stroke fill; stroke: var(--paper); stroke-width: 3.5px;
   stroke-linejoin: round; }
-.chart .name.on { font-size: 13.5px; font-weight: 700; }
+.chart .name.on { fill: var(--ink); font-weight: 500; }
 .note { margin-top: 22px; font-size: 13px; line-height: 1.6; color: var(--ink-2); }
 """
 
@@ -453,20 +414,17 @@ def price(theme: str) -> None:
     for point in points:
         on = " on" if id(point) in best else ""
         art.append(f'<circle class="dot{on}" cx="{point["x"]:.1f}" '
-                   f'cy="{point["y"]:.1f}" r="{6.5 if on else 5.0}" '
-                   f'fill="{maker(point["text"])}"/>')
+                   f'cy="{point["y"]:.1f}" r="5.5"/>')
 
     place(points, (left + 4, y0, W - right - 4, y1))
     for point in points:
         on = " on" if id(point) in best else ""
         art.append(f'<text class="name{on}" x="{point["lx"]:.1f}" y="{point["ly"]:.1f}" '
-                   f'text-anchor="{point["anchor"]}" fill="{maker(point["text"])}" '
-                   f'opacity="{1 if on else 0.78}">{point["text"]}</text>')
+                   f'text-anchor="{point["anchor"]}">{point["text"]}</text>')
 
     body = f"""<style>{PRICE_CSS}</style><div class="price">
-  <div class="cap"><h2><b>BuildingBench</b> Pareto Frontier
-      <small>Twelve public buildings &middot; blind tier &middot; one run per model per building</small>
-    </h2>{LOCKUP}</div>
+  <div class="cap"><h2>Score against price</h2>
+    <span>Twelve public buildings &middot; blind tier &middot; one run per model per building</span></div>
   <svg class="chart" viewBox="0 0 {W:.0f} {H:.0f}" role="img"
        aria-label="overall score against the cost of one run, on a logarithmic price axis">
     {''.join(art)}
