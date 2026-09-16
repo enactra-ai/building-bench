@@ -45,10 +45,7 @@ Sixteen models, one run per model per building, on the twelve public cases at
 the **blind** tier — the agent is told neither the footprint nor the height.
 
 <p align="center">
-  <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="docs/assets/price-dark.png">
-    <img alt="Overall score against the median cost of one run, on a logarithmic price axis. The frontier runs from a free model up through GLM 5.3 Flash, GPT-5.6 Luna and DeepSeek V4.1 Flash to GPT-6 Astra." src="docs/assets/price-light.png">
-  </picture>
+  <img alt="Overall score against the median cost of one run, on a logarithmic price axis. The frontier runs from a free model up through GLM 5.3 Flash, GPT-5.6 Luna and DeepSeek V4.1 Flash to GPT-6 Astra." src="docs/assets/pareto.gif" width="900">
 </p>
 
 Price buys very little of this benchmark. The three dearest rows — Claude
