@@ -142,6 +142,7 @@ cases/<case>/
     full/ colour/ alpha/ clean/    renders and masks from all eight cameras
     points/          the true surface, as point clouds
     reference.json   reference measurements of the true building
+    roof_grid.npz    the true roof, as a height grid over the footprint
     site.json        the building's OpenStreetMap footprint (ODbL)
     ATTRIBUTION.txt  the dataset the photographs were rendered from
     measured.json  cameras.json  held_out.json  masks.json

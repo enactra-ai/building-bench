@@ -1,177 +1,215 @@
 {
-  "albedo": [
-    0.2824,
-    0.3216,
-    0.3765
-  ],
-  "empty": {
-    "silhouette": 0.0,
-    "geometry": 0.0,
-    "appearance": 0.0,
-    "triangles": 0
+ "albedo": [
+  0.2824,
+  0.3216,
+  0.3765
+ ],
+ "answer_key": {
+  "silhouette": {
+   "value": 0.96998,
+   "from": {
+    "step": 1,
+    "spacings": 6.0,
+    "colour": "projected"
+   },
+   "triangles": 104738
   },
-  "box": {
-    "silhouette": 0.5089,
-    "outline": 0.115,
-    "plan": 0.5026,
-    "height": 0.9658,
-    "geometry": 0.4974,
-    "appearance": 0.133,
-    "colour": 0.2328,
-    "structure": 0.0,
-    "triangles": 12,
-    "surface": {
-      "f": 0.09977,
-      "precision": 0.08068,
-      "recall": 0.13072,
-      "chamfer_m": 10.4227,
-      "tau_m": 0.9805
-    }
+  "outline": {
+   "value": 0.86969,
+   "from": {
+    "step": 1,
+    "spacings": 6.0,
+    "colour": "projected"
+   },
+   "triangles": 104738
   },
-  "extrusion": {
-    "silhouette": 0.8251,
-    "outline": 0.701,
-    "plan": 0.8978,
-    "height": 0.9658,
-    "geometry": 0.8359,
-    "appearance": 0.1312,
-    "colour": 0.2296,
-    "structure": 0.0,
-    "triangles": 56,
-    "surface": {
-      "f": 0.42711,
-      "precision": 0.39975,
-      "recall": 0.45848,
-      "chamfer_m": 2.8475,
-      "tau_m": 0.9805
-    }
+  "plan": {
+   "value": 0.90137,
+   "from": {
+    "step": 1,
+    "spacings": 6.0,
+    "colour": "projected"
+   },
+   "triangles": 104738
   },
-  "gold": {
-    "silhouette": 0.7846,
-    "outline": 0.657,
-    "plan": 0.9007,
-    "height": 0.8703,
-    "geometry": 0.7952,
-    "appearance": 0.1314,
-    "colour": 0.2299,
-    "structure": 0.0,
-    "triangles": 56,
-    "surface": {
-      "f": 0.40083,
-      "precision": 0.36603,
-      "recall": 0.44293,
-      "chamfer_m": 3.4173,
-      "tau_m": 0.9805
-    }
+  "height": {
+   "value": 1.0,
+   "from": {
+    "step": 1,
+    "spacings": 4.0,
+    "colour": "projected"
+   },
+   "triangles": 98530
   },
-  "gold_measured_height": {
-    "silhouette": 0.8251,
-    "outline": 0.701,
-    "plan": 0.8978,
-    "height": 0.9658,
-    "geometry": 0.8359,
-    "appearance": 0.1312,
-    "colour": 0.2296,
-    "structure": 0.0,
-    "triangles": 56,
-    "surface": {
-      "f": 0.42711,
-      "precision": 0.39975,
-      "recall": 0.45848,
-      "chamfer_m": 2.8475,
-      "tau_m": 0.9805
-    }
+  "colour": {
+   "value": 0.99987,
+   "from": {
+    "step": 1,
+    "spacings": 4.0,
+    "colour": "projected"
+   },
+   "triangles": 98530
   },
-  "answer_key": {
-    "silhouette": {
-      "value": 0.96998,
-      "from": {
-        "step": 1,
-        "spacings": 6.0,
-        "colour": "projected"
-      },
-      "triangles": 104738
-    },
-    "outline": {
-      "value": 0.86969,
-      "from": {
-        "step": 1,
-        "spacings": 6.0,
-        "colour": "projected"
-      },
-      "triangles": 104738
-    },
-    "plan": {
-      "value": 0.90137,
-      "from": {
-        "step": 1,
-        "spacings": 6.0,
-        "colour": "projected"
-      },
-      "triangles": 104738
-    },
-    "height": {
-      "value": 1.0,
-      "from": {
-        "step": 1,
-        "spacings": 4.0,
-        "colour": "projected"
-      },
-      "triangles": 98530
-    },
-    "colour": {
-      "value": 0.99987,
-      "from": {
-        "step": 1,
-        "spacings": 4.0,
-        "colour": "projected"
-      },
-      "triangles": 98530
-    },
-    "structure": {
-      "value": 0.88111,
-      "from": {
-        "step": 1,
-        "spacings": 4.0,
-        "colour": "projected"
-      },
-      "triangles": 98530
-    },
-    "geometry": {
-      "value": 0.9407,
-      "from": {
-        "step": 1,
-        "spacings": 6.0,
-        "colour": "projected"
-      },
-      "triangles": 104738
-    },
-    "appearance": {
-      "value": 0.94897,
-      "from": {
-        "step": 1,
-        "spacings": 4.0,
-        "colour": "projected"
-      },
-      "triangles": 98530
-    },
-    "surface_f": {
-      "value": 0.99124,
-      "from": {
-        "step": 1,
-        "spacings": 4.0,
-        "colour": "projected"
-      },
-      "triangles": 98530
-    },
-    "chamfer_m": {
-      "value": 0.2347,
-      "from": {
-        "step": 1,
-        "spacings": 4.0,
-        "colour": "projected"
-      },
-      "triangles": 98530
-    }
+  "structure": {
+   "value": 0.88111,
+   "from": {
+    "step": 1,
+    "spacings": 4.0,
+    "colour": "projected"
+   },
+   "triangles": 98530
+  },
+  "geometry": {
+   "value": 0.9407,
+   "from": {
+    "step": 1,
+    "spacings": 6.0,
+    "colour": "projected"
+   },
+   "triangles": 104738
+  },
+  "appearance": {
+   "value": 0.94897,
+   "from": {
+    "step": 1,
+    "spacings": 4.0,
+    "colour": "projected"
+   },
+   "triangles": 98530
+  },
+  "upward_area_fraction": {
+   "value": 0.99424,
+   "from": {
+    "step": 1,
+    "spacings": 4.0,
+    "colour": "projected"
+   },
+   "triangles": 98530
+  },
+  "roof_match": {
+   "value": 0.88804,
+   "from": {
+    "step": 1,
+    "spacings": 4.0,
+    "colour": "projected"
+   },
+   "triangles": 98530
+  },
+  "envelope": {
+   "value": 0.91319,
+   "from": {
+    "step": 1,
+    "spacings": 4.0,
+    "colour": "projected"
+   },
+   "triangles": 98530,
+   "rays": [
+    "OSSSSSSSSSSSSSOSSSSOSSSSSSSSSOOSOOOO",
+    "SSSSOSSSSSSSSSSSSSSOSSSSSSSSSSSSSSSS",
+    "SSSSOSSSSSSSSSSSSSSOSSSSSSSSSSSSSSSS",
+    "SSSSOSSSSSSSSSSSSSOOSSSSSSSSSSSSSSSS",
+    "SSSSOSSSSSSSSSSSSSOSSSSSSSSSSSSSSSSS",
+    "SSSSOSSSSSSSSSSSSSSSOSSSSSSSSSSSSSSS",
+    "SSSSOSSSSSSSSSSSSSSSOSSSSSSSSSSSSSSS",
+    "SSSSOSSSSSSSSSSSSSSSOOSSSSSSSSSSSSSS"
+   ]
+  },
+  "surface_f": {
+   "value": 0.99124,
+   "from": {
+    "step": 1,
+    "spacings": 4.0,
+    "colour": "projected"
+   },
+   "triangles": 98530
+  },
+  "chamfer_m": {
+   "value": 0.2347,
+   "from": {
+    "step": 1,
+    "spacings": 4.0,
+    "colour": "projected"
+   },
+   "triangles": 98530
   }
+ },
+ "empty": {
+  "silhouette": 0.0,
+  "geometry": 0.0,
+  "appearance": 0.0,
+  "triangles": 0
+ },
+ "box": {
+  "silhouette": 0.5089,
+  "outline": 0.115,
+  "plan": 0.5026,
+  "height": 0.9658,
+  "geometry": 0.4974,
+  "appearance": 0.133,
+  "colour": 0.2328,
+  "structure": 0.0,
+  "triangles": 12,
+  "surface": {
+   "f": 0.09977,
+   "precision": 0.08068,
+   "recall": 0.13072,
+   "chamfer_m": 10.4227,
+   "tau_m": 0.9805
+  }
+ },
+ "extrusion": {
+  "silhouette": 0.8251,
+  "outline": 0.701,
+  "plan": 0.8978,
+  "height": 0.9658,
+  "geometry": 0.8359,
+  "appearance": 0.1312,
+  "colour": 0.2296,
+  "structure": 0.0,
+  "triangles": 56,
+  "surface": {
+   "f": 0.42711,
+   "precision": 0.39975,
+   "recall": 0.45848,
+   "chamfer_m": 2.8475,
+   "tau_m": 0.9805
+  }
+ },
+ "gold": {
+  "silhouette": 0.7846,
+  "outline": 0.657,
+  "plan": 0.9007,
+  "height": 0.8703,
+  "geometry": 0.7952,
+  "appearance": 0.1314,
+  "colour": 0.2299,
+  "structure": 0.0,
+  "triangles": 56,
+  "surface": {
+   "f": 0.40083,
+   "precision": 0.36603,
+   "recall": 0.44293,
+   "chamfer_m": 3.4173,
+   "tau_m": 0.9805
+  }
+ },
+ "gold_measured_height": {
+  "silhouette": 0.8251,
+  "outline": 0.701,
+  "plan": 0.8978,
+  "height": 0.9658,
+  "geometry": 0.8359,
+  "appearance": 0.1312,
+  "colour": 0.2296,
+  "structure": 0.0,
+  "triangles": 56,
+  "surface": {
+   "f": 0.42711,
+   "precision": 0.39975,
+   "recall": 0.45848,
+   "chamfer_m": 2.8475,
+   "tau_m": 0.9805
+  }
+ },
+ "scorer_code": ""
 }
