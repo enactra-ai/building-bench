@@ -31,7 +31,7 @@ This repository is the open part of the benchmark:
   are built on.
 - `harness/`, `docker/` — **the harness** we run agents with: the same working
   directory, container, prompt and command line.
-- `results/` — **our reference runs** on these 12 cases: 201 runs, scored by
+- `results/` — **our reference runs** on these 12 cases: 213 runs, scored by
   our grader.
 
 The grader is not part of this release, and the leaderboard we report is
@@ -41,7 +41,7 @@ submissions scored, or an agent evaluated on the full set, see
 
 ## The leaderboard
 
-Sixteen models, one run per model per building, on the twelve public cases at
+Seventeen models, one run per model per building, on the twelve public cases at
 the **blind** tier — the agent is told neither the footprint nor the height.
 
 <p align="center">
@@ -76,13 +76,14 @@ spend.
 | 7 | Grok 4.6 (xhigh) | 0.695 | 0.029 | 0.346 | 0.764 | 0.698 | 10.59 | 53 |
 | 8 | GPT-5.6 Terra (max) | 0.685 | 0.023 | 0.278 | 0.760 | 0.692 | 4.26 | 53 |
 | 9 | Muse Spark 1.3 (max) | 0.682 | 0.024 | 0.236 | 0.742 | 0.788 | 5.80 | 60 |
-| 10 | GPT-5.6 Luna (max) | 0.616 | 0.022 | 0.168 | 0.682 | 0.670 | 0.45 | 63 |
-| 11 | Gemini 3.8 Flash (high) | 0.548 | 0.061 | 0.294 | 0.707 | 0.621 | 3.33 | 40 |
-| 12 | Claude Sonnet 5 (max) | 0.544 | 0.032 | 0.192 | 0.612 | 0.638 | 15.03 | 61 |
-| 13 | Kimi K3 (thinking) | 0.540 | 0.037 | 0.238 | 0.673 | 0.518 | 5.84 | 125 |
-| 14 | GLM 5.3 Flash (max) | 0.330 | 0.092 | 0.226 | 0.643 | 0.657 | 0.22 | 101 |
-| 15 | Claude Haiku 4.5 | 0.267 | 0.051 | 0.075 | 0.417 | 0.183 | 0.52 | 11 |
-| 16 | Inkling (free) · Claude Code | 0.258 | 0.049 | 0.075 | 0.367 | 0.359 | 0.00 | 4 |
+| 10 | GLM 5.3 FlashX (max) · Claude Code | 0.680 | 0.031 | 0.287 | 0.756 | 0.712 | 2.33 | 80 |
+| 11 | GPT-5.6 Luna (max) | 0.616 | 0.022 | 0.168 | 0.682 | 0.670 | 0.45 | 63 |
+| 12 | Gemini 3.8 Flash (high) | 0.548 | 0.061 | 0.294 | 0.707 | 0.621 | 3.33 | 40 |
+| 13 | Claude Sonnet 5 (max) | 0.544 | 0.032 | 0.192 | 0.612 | 0.638 | 15.03 | 61 |
+| 14 | Kimi K3 (thinking) | 0.540 | 0.037 | 0.238 | 0.673 | 0.518 | 5.84 | 125 |
+| 15 | GLM 5.3 Flash (max) | 0.330 | 0.092 | 0.226 | 0.643 | 0.657 | 0.22 | 101 |
+| 16 | Claude Haiku 4.5 | 0.267 | 0.051 | 0.075 | 0.417 | 0.183 | 0.52 | 11 |
+| 17 | Inkling (free) · Claude Code | 0.258 | 0.049 | 0.075 | 0.367 | 0.359 | 0.00 | 4 |
 
 </details>
 
@@ -98,7 +99,7 @@ pinned endpoint's published rates on the CLI's own token counts, which each run
 carries. For subscription logins it is the API-equivalent price. A submission
 that cannot be put on the ladder scores zero: nothing admissible handed in, or
 a mesh wound inside out, where every column would be reading the inside of the
-model rather than the building — twelve of the 201 runs, with the columns
+model rather than the building — twelve of the 213 runs, with the columns
 beside them left as measured. A column with nothing to measure reads zero
 rather than nothing, the same way. Every run is in
 `results/reference_runs.jsonl`; `python -m harness.board` leaves the

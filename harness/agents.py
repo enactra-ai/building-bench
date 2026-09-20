@@ -190,6 +190,8 @@ CONFIGS = {c.name: c for c in (
                   "published rates are what priced them.",)),
     Config("inkling-free-claude-code", "Inkling (free) · Claude Code",
            "claude-openrouter", "thinkingmachines/inkling:free"),
+    Config("z-ai-glm-5.3-flashx-claude-code", "GLM 5.3 FlashX (max) · Claude Code",
+           "claude-openrouter", "z-ai/glm-5.3-flashx", "max"),
 )}
 
 def label(name: str) -> str:
