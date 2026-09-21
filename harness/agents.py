@@ -197,6 +197,11 @@ CONFIGS = {c.name: c for c in (
            "claude-openrouter", "thinkingmachines/inkling:free"),
     Config("z-ai-glm-5.3-flashx-claude-code", "GLM 5.3 FlashX (max) · Claude Code",
            "claude-openrouter", "z-ai/glm-5.3-flashx", "max"),
+    Config("step-5-preview-claude-code", "Step 5 Preview · Claude Code",
+           "claude-openrouter", "step-5-preview", "max",
+           notes=("Served by StepFun's own API, the only place step-5-preview runs, "
+                  "reached through an Anthropic-protocol adapter; StepFun's published "
+                  "rates are what priced it.",)),
 )}
 
 def label(name: str) -> str:
