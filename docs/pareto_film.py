@@ -31,7 +31,8 @@ from harness import board                                         # noqa: E402
 
 OUT = ROOT / "docs" / "assets" / "pareto.gif"
 ARRIVALS = ["fable51max", "gpt-6-astra-ultra", "deepseek-v41-flash-claude-code",
-            "z-ai-glm-5.3-flashx-claude-code", "grok47xhigh"]
+            "z-ai-glm-5.3-flashx-claude-code", "grok47xhigh",
+            "step-5-preview-claude-code"]
 
 FPS = 12
 W, H, DPI = 1920, 1080, 100
@@ -43,7 +44,9 @@ VENDOR = [("fable", "#d9765f"), ("opus", "#d9765f"), ("sonnet", "#d9765f"),
 X_TICKS = [50, 20, 10, 5, 2, 1, 0.5, 0.2]
 Y_MAX = 0.96
 
-plt.rcParams["font.family"] = ["Arial", "DejaVu Sans"]
+# Liberation Sans is Arial's metrics under a free licence: without it a Linux
+# box falls through to DejaVu, whose wider glyphs push labels into each other.
+plt.rcParams["font.family"] = ["Arial", "Liberation Sans", "DejaVu Sans"]
 
 
 def short(label: str) -> str:
