@@ -177,6 +177,11 @@ CONFIGS = {c.name: c for c in (
                   "that login file and nothing else from ~/.grok.",
                   "xhigh is grok-4.6's highest reasoning effort. --effort max "
                   "is passed too, but it does not change the request.")),
+    # grok-4.7's catalogue entry offers xhigh ("Maximum reasoning for the
+    # hardest tasks"), high (the default), medium and low.
+    Config("grok47xhigh", "Grok 4.7 (xhigh)", "grok", "grok-4.7", "xhigh",
+           notes=("Grok Build on a subscription login, as grok46xhigh is.",
+                  "xhigh is grok-4.7's highest reasoning effort.")),
     Config("glm-5.3-flash-max", "GLM 5.3 Flash (max)", "opencode",
            "openrouter/z-ai/glm-5.3-flash", "max"),
     Config("inkling-free", "Inkling (free) · opencode", "opencode",
