@@ -190,15 +190,14 @@ DATA = {
 }
 
 # ---- the Enactra pitch blocks --------------------------------------------------------
-# Four blocks lifted from the Enactra pitch page by extract_enactra.py: the flagship Geisel
-# case, the static leaderboard with its cost/score frontier plot, the evaluation breakdown
-# and the news strip. They keep their own markup, CSS and scripts, so every interaction
+# Blocks lifted from the Enactra pitch page by extract_enactra.py, then edited here: the Task
+# Format case (Johanneskyrkan, GPT-6 Astra), the static leaderboard with its cost/score
+# frontier plot and the evaluation breakdown. They keep their own markup, CSS and scripts, so every interaction
 # survives; the CSS is scoped under `.ea` by the extractor so it cannot reach this page's
 # own styles, and the markup is wrapped in that class here.
 EA = 'data/enactra'
 ea = {n: open('%s/%s.html' % (EA, n), encoding='utf-8').read() for n in
-      ('flagship', 'case', 'leaderboard', 'evaluation', 'momentum')}
-ea_manifest = json.load(open(EA + '/manifest.json'))
+      ('flagship', 'case', 'leaderboard', 'evaluation')}
 ea_css = open(EA + '/style.css', encoding='utf-8').read()
 ea_board_json = open(EA + '/board.json', encoding='utf-8').read()
 ea_js = '\n'.join(open('%s/%s.js' % (EA, n), encoding='utf-8').read() for n in ('thumbs', 'board', 'plot'))
@@ -237,14 +236,10 @@ def ea_neutralise(bb_css, scope='.ea'):
 MIME = {'.jpg': 'image/jpeg', '.jpeg': 'image/jpeg', '.png': 'image/png', '.webp': 'image/webp',
         '.gif': 'image/gif', '.svg': 'image/svg+xml', '.mp4': 'video/mp4', '.glb': 'model/gltf-binary'}
 
-# The case mesh goes through this page's own viewer, so it is registered like a submission
-# (gzipped, keyed) rather than left as a /assets/ URL.
-EA_CASE_KEY = 'ea-case'
-ea_case_gz = 'data/enactra/assets/%s.gz' % ea_manifest['caseGLB']
-if not os.path.exists(ea_case_gz):
-    import gzip
-    open(ea_case_gz, 'wb').write(gzip.compress(open('%s/assets/%s' % (EA, ea_manifest['caseGLB']), 'rb').read(), 9))
-assets[EA_CASE_KEY] = ea_case_gz
+# The Task Format case is GPT-6 Astra on Johanneskyrkan, a run the explorer already carries, so
+# its viewer reuses that submission's slimmed asset rather than shipping a second copy.
+EA_CASE_RUN = 'helsinki_123901485_enhanced_v1-blind-gpt-6-astra-ultra-20260905T053213'
+EA_CASE_KEY = next(r['assetKey'] for r in results if r['runId'] == EA_CASE_RUN)
 
 ea_files = sorted(f for f in os.listdir(EA + '/assets') if not f.endswith('.gz'))
 def ea_rewrite(text, inline):
@@ -259,8 +254,7 @@ def ea_html(inline):
     pitch = ('<div class="ea"><div class="container">' + ea['flagship']
              + '<div class="flagship-shell">' + ea['case'] + ea['leaderboard'] + ea['evaluation']
              + '</div></div></div>')
-    strip = '<div class="ea"><div class="container">' + ea['momentum'] + '</div></div>'
-    return ea_rewrite(pitch, inline), ea_rewrite(strip, inline)
+    return ea_rewrite(pitch, inline)
 
 def js_string_safe(s):
     return s.replace('</script', '<\\/script')
@@ -276,7 +270,7 @@ assert '</script' not in three and '</script' not in engine and '</script' not i
 # view without the pitch blocks, which is what the site served before they were merged in.
 def page(asset_src, inline, pitch_blocks=True):
     if not pitch_blocks:
-        body = template.replace('<!--ENACTRA:pitch-->', '').replace('<!--ENACTRA:momentum-->', '')
+        body = template.replace('<!--ENACTRA:pitch-->', '')
         return ''.join([body,
             '<script>window.BB_DATA=%s;</script>\n' % js_string_safe(json.dumps(DATA, separators=(',', ':'))),
             '<script>window.BB_ASSETS=%s;</script>\n' % js_string_safe(json.dumps(asset_src, separators=(',', ':'))),
@@ -284,8 +278,7 @@ def page(asset_src, inline, pitch_blocks=True):
             '<script>\n%s\n</script>\n' % engine,
             '<script>\n%s\n</script>\n' % app,
             '</body>\n</html>\n'])
-    pitch, strip = ea_html(inline)
-    body = template.replace('<!--ENACTRA:pitch-->', pitch).replace('<!--ENACTRA:momentum-->', strip)
+    body = template.replace('<!--ENACTRA:pitch-->', ea_html(inline))
     # The pitch page centres its blocks in a 1180 px .container of its own. Here they sit
     # inside this page's <main>, which already sets the width (1440 px less 40 px a side),
     # so the inner cap is dropped and every block runs the same width as the explorer.
@@ -321,8 +314,6 @@ for folder, pitch_blocks in SITES.items():
         os.remove(os.path.join(adir, f))
     split = {}
     for k, v in assets.items():
-        if not pitch_blocks and k == EA_CASE_KEY:
-            continue                                   # the case mesh belongs to the pitch blocks
         shutil.copyfile(v, '%s/%s.glb.gz' % (adir, k)); split[k] = 'assets/%s.glb.gz' % k
     if pitch_blocks:
         for name in ea_files:

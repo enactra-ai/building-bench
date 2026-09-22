@@ -1620,3 +1620,26 @@
     @media (max-width: 620px) {.ea section{ padding: 40px 0; }.ea .eval-list{ grid-template-columns: 1fr; gap: 0 0; }
     }
   
+/* Task Format: four input photographs, the task instruction and its full TASK.md. */
+.ea .input-thumb-grid-4{ grid-template-columns: repeat(4, 1fr); }
+.ea .task-instruction{ margin-top: 12px; padding: 11px; border: 1px solid var(--line); border-radius: 11px; background: var(--surface); }
+.ea .task-instruction-label{ display: block; margin-bottom: 4px; color: var(--accent); font-size: 10px; font-weight: 800; letter-spacing: .08em; text-transform: uppercase; }
+.ea .task-instruction > p{ margin: 0; color: var(--text); font-size: 12px; line-height: 1.5; }
+.ea .task-more{ display: inline-block; margin-top: 6px; color: var(--accent); font-size: 11px; font-weight: 800; text-decoration: none; }
+.ea .task-full-wide{ margin-top: 14px; padding: 14px 16px; border: 1px solid var(--line); border-radius: 14px; background: var(--surface); }
+.ea .task-full > summary{ cursor: pointer; color: var(--accent); font-size: 13px; font-weight: 800; list-style: none; display: flex; align-items: center; gap: 6px; }
+.ea .task-full > summary::-webkit-details-marker{ display: none; }
+.ea .task-full > summary::before{ content: "+"; display: inline-grid; place-items: center; width: 14px; height: 14px; border: 1px solid currentColor; border-radius: 50%; font-size: 11px; line-height: 1; }
+.ea .task-full[open] > summary::before{ content: "−"; }
+.ea .task-full > summary span{ color: var(--muted); font-weight: 600; font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; font-size: 10px; }
+.ea .task-md{ margin-top: 12px; color: var(--muted); font-size: 12.5px; line-height: 1.6; }
+@media (min-width: 900px){ .ea .task-md{ columns: 2; column-gap: 36px; } }
+.ea .task-md h4{ break-after: avoid; }
+.ea .task-md pre{ break-inside: avoid; }
+.ea .task-md h4{ margin: 0 0 4px; padding-top: 8px; color: var(--text); font-size: 13px; }
+.ea .task-md p{ margin: 0 0 8px; }
+.ea .task-md b{ color: var(--text); }
+.ea .task-md code, .ea .task-md pre{ font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; font-size: 10.5px; background: var(--surface-soft); border-radius: 5px; }
+.ea .task-md code{ padding: 1px 4px; }
+.ea .task-md pre{ margin: 0 0 8px; padding: 7px 9px; white-space: pre-wrap; overflow-wrap: anywhere; color: var(--text); }
+.ea .input-credit{ margin: 8px 0 0; color: var(--muted); font-size: 10px; line-height: 1.45; }

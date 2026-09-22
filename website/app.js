@@ -227,7 +227,7 @@ function renderChart(){
   const undated=models.filter(m=>(state.family==='All'||m.family===state.family)&&valueFor(m)!=null&&!m.date).length;
   $('#chartContext').textContent=(state.scope==='case'?`${currentBuilding().name} · ${currentBuilding().group==='clean'?'license-clean set':'shared set'} · one submitted run per model, at the highest reasoning effort that ran it`:state.scope==='clean'?`License-clean board · every model over the same 12 CC BY 4.0 buildings · 3D examples: ${currentBuilding().name}`:`All-results board, each model over the buildings it has run · 3D examples: ${currentBuilding().name}`)+(undated?` · ${undated} without a release date`:'')+(absent.length?` · ${absent.length} not run here: ${absent.map(m=>m.name).join(', ')}`:'');
   $('#chartHint').textContent=(all&&chart.scrollWidth>$('#chartScroll').clientWidth?`${list.length} models · Scroll horizontally for the full timeline`:`${list.length} models · ${innerWidth<=940?'Tap':'Click'} a 3D output to inspect`)+' · dotted tether = output moved aside from its point';
-  $('#chart').setAttribute('aria-label',`${state.scope==='mean'?'Board overall':'Case score'} against model release date. ${currentBuilding().name} submissions. Blind tier.`);
+  $('#chart').setAttribute('aria-label',`${state.scope==='mean'?'Board overall':'Case score'} against model release date. ${currentBuilding().name} submissions.`);
 }
 function showTooltip(m,x,y,w,h){
   const tip=$('#chartTooltip'),r=resultFor(m.id);
@@ -239,7 +239,7 @@ function renderSelection(){
   renderInspector();renderResults();$('#liveStatus').textContent=`Selected ${currentModel().name}, ${currentBuilding().name}, case score ${formatScore(resultFor(state.modelId)?.score)}.`;
 }
 let selectedViewer=null,featuredViewer=null;
-function runNote(r){return r?`${r.nruns>1?`Median of ${r.nruns} runs`:'1 run'} · ${r.ran}${r.triangles?` · ${r.triangles.toLocaleString()} triangles`:''}`:'No blind-tier run for this building';}
+function runNote(r){return r?`${r.nruns>1?`Median of ${r.nruns} runs`:'1 run'} · ${r.ran}${r.triangles?` · ${r.triangles.toLocaleString()} triangles`:''}`:'No run for this building';}
 function renderInspector(){
   const m=currentModel(),b=currentBuilding(),r=resultFor(m.id),previous=previousModel();
   $('#selectedName').textContent=m.name;$('#selectedBuilding').textContent=`${b.name} · ${m.org} · ${r?r.effortLabel:m.effortLabel}`;$('#selectedFamily').textContent=familyConfig[m.family].label;$('#selectedFamily').style.color=familyConfig[m.family].color;
@@ -255,7 +255,7 @@ function renderInspector(){
 function renderResults(){
   const list=visibleModels().sort((a,b)=>valueFor(b)-valueFor(a)),body=$('#resultsBody');body.replaceChildren();
   $('#tableSummary').textContent=`${list.length} models · ${state.scope==='case'?'same building':state.scope==='clean'?'license-clean board':'all-results board'}`;
-  $('#tableCaption').textContent=state.scope==='clean'?`License-clean board · every model over the same 12 buildings · blind tier · snapshot ${DATA.snapshot}`:state.scope==='mean'?`All-results board, each model over its own buildings · blind tier · snapshot ${DATA.snapshot}`:`${currentBuilding().name} · one blind-tier run per model · snapshot ${DATA.snapshot}`;
+  $('#tableCaption').textContent=state.scope==='clean'?`License-clean board · every model over the same 12 buildings · snapshot ${DATA.snapshot}`:state.scope==='mean'?`All-results board, each model over its own buildings · snapshot ${DATA.snapshot}`:`${currentBuilding().name} · one run per model · snapshot ${DATA.snapshot}`;
   $('#scoreTableHead').textContent=scopeName();$('#costTableHead').textContent=state.scope==='case'?'Cost / run':'Mean cost / run';$('#minutesTableHead').textContent=state.scope==='case'?'Minutes':'Mean minutes';
   list.forEach(m=>{const tr=document.createElement('tr');tr.classList.toggle('selected',m.id===state.modelId);tr.dataset.model=m.id;
     tr.innerHTML=`<td><button type="button" aria-label="Select ${escapeHTML(m.name)}">${escapeHTML(m.name)}</button></td><td>${escapeHTML(familyConfig[m.family].label)}</td><td>${escapeHTML(effortLabelOf(m))}</td><td>${escapeHTML(formatDay(m.date))}</td><td>${formatScore(valueFor(m))}</td><td>${usd(valueFor(m,'cost'))}</td><td>${formatMinutes(valueFor(m,'minutes'))}</td><td><button class="text-button" type="button">Inspect 3D ↗</button></td>`;
@@ -282,7 +282,7 @@ function openOutput(mode='selected',compareId=null){
   const controls=compare?`<div class="comparison-controls"><label>Compare with <select id="compareModel" aria-label="Choose the comparison model">${options}</select></label><span class="linked-badge"><i aria-hidden="true"></i>Linked cameras</span></div>`:`<div class="comparison-controls"><span>Selected building · one submission</span><button class="text-button" id="startCompare">Compare submissions ↗</button></div>`;
   $('#viewerDialogBody').innerHTML=controls+`<div class="output-layout"><div class="dialog-reference-panel"><img src="${escapeHTML(b.image)}" alt="${escapeHTML(b.name)} as the 3D tiles have it"><div><h3>The building itself</h3><p>${escapeHTML(b.name)}<br>${escapeHTML(b.source)}, the same case for every output.<br>Drag either model to inspect.</p></div></div><div class="dialog-outputs" style="--columns:${dialogModels.length}">${dialogModels.map(n=>{const r=resultFor(n.id,b.id);return `<div class="dialog-output"><div class="dialog-output-head"><h3>${escapeHTML(n.name)}</h3><b>${formatScore(r?.score)}</b></div><p>Case score · surface F ${formatScore(r?.surfaceF)} · ${escapeHTML(n.org)} · ${escapeHTML(r?r.effortLabel:n.effortLabel)} · released ${escapeHTML(formatDay(n.date))}</p><canvas data-model="${n.id}" tabindex="0" aria-label="${escapeHTML(n.name)} submission, drag or use arrow keys to rotate"></canvas><small>${usd(r?.costUSD)} / run · ${escapeHTML(runNote(r))}</small></div>`;}).join('')}</div></div>`;
   if(!compare)$('.dialog-reference-panel p').innerHTML=`${escapeHTML(b.name)}<br>${escapeHTML(b.source)} at the benchmark cameras.<br>Drag or use arrow keys to rotate.`;
-  $('#viewerDialogNote').textContent=`Submitted glTF, blind tier · board snapshot ${DATA.snapshot}`;$('#dialogReset').hidden=false;$('#dialogMotion').hidden=false;
+  $('#viewerDialogNote').textContent=`Submitted glTF · board snapshot ${DATA.snapshot}`;$('#dialogReset').hidden=false;$('#dialogMotion').hidden=false;
   $('#viewerDialog').showModal();
   $$('.dialog-output canvas').forEach(c=>mountOutput(c,b,modelById(c.dataset.model),{group:dialogGroup}));
   $('#compareModel')?.addEventListener('change',e=>openOutput('compare',e.target.value));
@@ -291,14 +291,13 @@ function openOutput(mode='selected',compareId=null){
 }
 function initFeatured(){
   const b=buildingById(FEATURED.buildingId),m=modelById(FEATURED.modelId),r=resultFor(m.id,b.id);$('#heroReferenceImg').src=b.image;
-  $('#featuredPill').textContent=m.name;$('#featuredNote').textContent=`Submitted glTF · blind tier · overall ${formatScore(r?.score)} on this building · released ${formatDay(m.date)}`;
+  $('#featuredPill').textContent=m.name;$('#featuredNote').textContent=`Submitted glTF · overall ${formatScore(r?.score)} on this building · released ${formatDay(m.date)}`;
   $('.featured-footer strong').textContent=b.name;
   featuredViewer=mountOutput($('#featuredCanvas'),b,m,{rotationX:.42,rotationY:-.7,centerX:.5,zoom:.97,speed:.09});
 }
 function initSnapshot(){
-  $('#snapshotLabel').textContent=`Blind tier · snapshot ${DATA.snapshot}`;
-  $('#dataNote').textContent=`Scores and costs are the Enactra bench/building board’s, blind tier, snapshot ${DATA.snapshot}. License-clean board: ${DATA.cleanBoard.runsScored.toLocaleString()} runs over ${DATA.cleanBoard.buildings} CC BY 4.0 buildings, ${DATA.cleanBoard.modelsRanked} models. All results: ${DATA.runsScored.toLocaleString()} runs, ${DATA.modelsRanked} models. Every mesh is the glTF the agent submitted.`;
-  $('#methodFoot').textContent=`Board snapshot ${DATA.snapshot}. Every ranked model is here, one row per model (${models.length}); on each building it is shown at the highest reasoning effort that ran that building, and the effort is named on the node. The buildings are the board's license-clean release set: 12 CC BY 4.0 cases (Helsinki 3D city model, City of Melbourne 2020 photomesh), run with enhanced PNG inputs by every model family. GPT‑6 Astra cells are taken from the board's astra page (astra.html), the source of record for that model. Release dates are the public launch dates. Reference stills are the licensed 3D city data at the benchmark cameras. Submissions were re-encoded for the page (textures at most 512 px; geometry welded and rounded to the centimetre), which changes how they look, not what they are.`;
+  $('#snapshotLabel').textContent=`Snapshot ${DATA.snapshot}`;
+  $('#dataNote').textContent=`Scores and costs are the Enactra bench/building board’s, snapshot ${DATA.snapshot}. License-clean board: ${DATA.cleanBoard.runsScored.toLocaleString()} runs over ${DATA.cleanBoard.buildings} CC BY 4.0 buildings, ${DATA.cleanBoard.modelsRanked} models. All results: ${DATA.runsScored.toLocaleString()} runs, ${DATA.modelsRanked} models. Every mesh is the glTF the agent submitted.`;
 }
 
 let toastTimer;
@@ -306,8 +305,8 @@ function toast(text){const t=$('#toast');t.textContent=text;t.classList.add('sho
 function downloadBlob(blob,name){const url=URL.createObjectURL(blob),a=document.createElement('a');a.href=url;a.download=name;document.body.append(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(url),1000);}
 function csvValue(v){return '"'+String(v??'').replaceAll('"','""')+'"';}
 function exportCSV(){
-  const headers=['snapshot','tier','building_or_set','model_id','model','board_label','family','effort','release_date','score_scope','overall','surface_f','cost_usd','minutes','run_id','runs_in_cell'];
-  const rows=visibleModels().map(m=>{const r=resultFor(m.id);const mean=state.scope!=='case';return [DATA.snapshot,DATA.tier,state.scope==='clean'?'board:license-clean 12':mean?'board:own buildings':currentBuilding().short,m.id,m.name,state.scope==='clean'?m.clean.label:mean?m.label:(r?.series||''),familyConfig[m.family].label,effortOf(m),m.date,state.scope,valueFor(m),state.scope==='clean'?m.clean.f:mean?m.board.f:r?.surfaceF,valueFor(m,'cost'),valueFor(m,'minutes'),mean?'':r?.runId,mean?'':r?.nruns];});
+  const headers=['snapshot','building_or_set','model_id','model','board_label','family','effort','release_date','score_scope','overall','surface_f','cost_usd','minutes','run_id','runs_in_cell'];
+  const rows=visibleModels().map(m=>{const r=resultFor(m.id);const mean=state.scope!=='case';return [DATA.snapshot,state.scope==='clean'?'board:license-clean 12':mean?'board:own buildings':currentBuilding().short,m.id,m.name,state.scope==='clean'?m.clean.label:mean?m.label:(r?.series||''),familyConfig[m.family].label,effortOf(m),m.date,state.scope,valueFor(m),state.scope==='clean'?m.clean.f:mean?m.board.f:r?.surfaceF,valueFor(m,'cost'),valueFor(m,'minutes'),mean?'':r?.runId,mean?'':r?.nruns];});
   downloadBlob(new Blob(['﻿'+[headers,...rows].map(r=>r.map(csvValue).join(',')).join('\r\n')],{type:'text/csv;charset=utf-8'}),`buildingbench-${state.buildingId}-${state.scope}-${DATA.snapshot}.csv`);
 }
 function openShare(){
@@ -325,7 +324,7 @@ async function exportFigure(){
     const out=document.createElement('canvas');out.width=(w+margin*2)*scale;out.height=(h+header+footer)*scale;const ctx=out.getContext('2d');ctx.scale(scale,scale);ctx.fillStyle='#ffffff';ctx.fillRect(0,0,out.width,out.height);
     ctx.fillStyle='#123527';ctx.font='600 19px Arial';ctx.fillText('BuildingBench  /  '+currentBuilding().name,margin,30);
     ctx.fillStyle='#73836b';ctx.font='11px Arial';ctx.fillText(`${state.family==='All'?'All families':familyConfig[state.family].label} · ${state.scope==='clean'?'License-clean board, 12 buildings':state.scope==='mean'?'All-results board, each model over its own buildings':'Selected-building scores'} · over model release date`,margin,52);
-    ctx.fillStyle='#987b4c';ctx.font='10px Arial';ctx.fillText(`Enactra bench/building · blind tier · snapshot ${DATA.snapshot}`,margin,71);
+    ctx.fillStyle='#987b4c';ctx.font='10px Arial';ctx.fillText(`Enactra bench/building · snapshot ${DATA.snapshot}`,margin,71);
     const svg=$('#chartSvg').cloneNode(true);svg.setAttribute('xmlns',SVG_NS);
     const uri=URL.createObjectURL(new Blob([new XMLSerializer().serializeToString(svg)],{type:'image/svg+xml;charset=utf-8'}));
     const img=new Image();await new Promise((resolve,reject)=>{img.onload=resolve;img.onerror=reject;img.src=uri;});ctx.drawImage(img,margin,header,w,h);URL.revokeObjectURL(uri);
@@ -353,8 +352,6 @@ $$('.close-dialog').forEach(b=>b.addEventListener('click',()=>b.closest('dialog'
 $('#viewerDialog').addEventListener('close',cleanupViewerDialog);
 $$('dialog').forEach(d=>d.addEventListener('click',e=>{if(e.target!==d)return;const r=d.getBoundingClientRect();if(e.clientX<r.left||e.clientX>r.right||e.clientY<r.top||e.clientY>r.bottom)d.close();}));
 $('#shareView').addEventListener('click',openShare);$('#copyURL').addEventListener('click',copyURL);$('#exportFigure').addEventListener('click',exportFigure);$('#exportCSV').addEventListener('click',exportCSV);
-function showMethodology(){const el=$('#methodology');el.open=true;el.scrollIntoView({behavior:reducedMotion()?'instant':'smooth'});}
-$('#showDataNotes').addEventListener('click',showMethodology);$('#methodNav').addEventListener('click',()=>{$('#methodology').open=true;});
 window.addEventListener('hashchange',()=>{if(readHash())setSelection({}, {writeHash:false});});
 let resizeTimer;window.addEventListener('resize',()=>{clearTimeout(resizeTimer);resizeTimer=setTimeout(renderChart,140);});
 window.addEventListener('keydown',e=>{if(e.key==='Escape')$('#chartTooltip').classList.remove('visible');});

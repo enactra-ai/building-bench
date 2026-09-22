@@ -1,84 +1,116 @@
 <div class="case-toolbar">
   <div class="case-title">
-    <strong>Geisel Library · La Jolla, California</strong>
-    <span>10 observed views + a 57-point footprint; height withheld.</span>
+    <strong>Johanneskyrkan · Helsinki, Finland</strong>
+    <span>4 photographs and a task instruction; footprint and height withheld.</span>
   </div>
 </div>
 <div class="demo-grid">
   <article class="panel">
     <div class="panel-head">
       <strong>Agent input</strong>
-      <span>10 evidence images</span>
+      <span>4 photographs + instruction</span>
     </div>
     <div class="input-preview">
-      <img id="geisel-input-preview" alt="Observed orbit view of Geisel Library at 0 degrees" />
-      <span class="input-preview-label" id="geisel-input-label">Orbit · 0°</span>
+      <img id="case-input-preview" alt="Photograph of Johanneskyrkan from the north, looking down at 28°" />
+      <span class="input-preview-label" id="case-input-label">Orbit · north</span>
     </div>
-    <div class="input-thumb-grid" aria-label="Choose an input image">
-      <button class="input-thumb is-active" type="button" data-label="Orbit · 0°" data-alt="Observed orbit view of Geisel Library at 0 degrees"><img src="/assets/40e8cee30604.webp" alt="Orbit 0 degrees" /></button>
-      <button class="input-thumb" type="button" data-label="Orbit · 45°" data-alt="Observed orbit view of Geisel Library at 45 degrees"><img src="/assets/319f7e07c347.webp" alt="Orbit 45 degrees" /></button>
-      <button class="input-thumb" type="button" data-label="Orbit · 90°" data-alt="Observed orbit view of Geisel Library at 90 degrees"><img src="/assets/8fb804a2cd8c.webp" alt="Orbit 90 degrees" /></button>
-      <button class="input-thumb" type="button" data-label="Orbit · 135°" data-alt="Observed orbit view of Geisel Library at 135 degrees"><img src="/assets/225c56b2ccdc.webp" alt="Orbit 135 degrees" /></button>
-      <button class="input-thumb" type="button" data-label="Orbit · 180°" data-alt="Observed orbit view of Geisel Library at 180 degrees"><img src="/assets/e019753438f0.webp" alt="Orbit 180 degrees" /></button>
-      <button class="input-thumb" type="button" data-label="Orbit · 225°" data-alt="Observed orbit view of Geisel Library at 225 degrees"><img src="/assets/285858e17474.webp" alt="Orbit 225 degrees" /></button>
-      <button class="input-thumb" type="button" data-label="Orbit · 270°" data-alt="Observed orbit view of Geisel Library at 270 degrees"><img src="/assets/7c96365e4119.webp" alt="Orbit 270 degrees" /></button>
-      <button class="input-thumb" type="button" data-label="Orbit · 315°" data-alt="Observed orbit view of Geisel Library at 315 degrees"><img src="/assets/f8473ec8f7d6.webp" alt="Orbit 315 degrees" /></button>
-      <button class="input-thumb" type="button" data-label="Street · east" data-alt="Observed east street-level view of Geisel Library"><img src="/assets/6081c0ec3802.webp" alt="East street-level view" /></button>
-      <button class="input-thumb" type="button" data-label="Street · west" data-alt="Observed west street-level view of Geisel Library"><img src="/assets/e3fa156e888a.webp" alt="West street-level view" /></button>
+    <div class="input-thumb-grid input-thumb-grid-4" aria-label="Choose an input image">
+      <button class="input-thumb is-active" type="button" data-label="Orbit · north" data-alt="Photograph of Johanneskyrkan from the north, looking down at 28°"><img src="/assets/johanneskyrkan_orbit_000.webp" alt="Orbit · north" /></button>
+      <button class="input-thumb" type="button" data-label="Orbit · east" data-alt="Photograph of Johanneskyrkan from the east, looking down at 28°"><img src="/assets/johanneskyrkan_orbit_090.webp" alt="Orbit · east" /></button>
+      <button class="input-thumb" type="button" data-label="Orbit · south" data-alt="Photograph of Johanneskyrkan from the south, looking down at 28°"><img src="/assets/johanneskyrkan_orbit_180.webp" alt="Orbit · south" /></button>
+      <button class="input-thumb" type="button" data-label="Orbit · west" data-alt="Photograph of Johanneskyrkan from the west, looking down at 28°"><img src="/assets/johanneskyrkan_orbit_270.webp" alt="Orbit · west" /></button>
+    </div>
+    <div class="task-instruction">
+      <span class="task-instruction-label">Task instruction</span>
+      <p>You are given photographs of one real building, taken from cameras whose positions are stated exactly. Produce a 3D model of that building.</p>
+      <a class="task-more" href="#taskFull">Full task description ↓</a>
     </div>
     <div class="input-evidence-note">
-      <span><strong>Given:</strong> 10 photographs, exact camera poses, and a map-derived footprint.</span>
-      <span><strong>Withheld:</strong> building height and 5 evaluation views.</span>
+      <span><strong>Given:</strong> 4 photographs, exact camera poses, and the ground origin.</span>
+      <span><strong>Withheld:</strong> the footprint, building height, and 4 evaluation views.</span>
     </div>
+    <p class="input-credit">Photographs: renders of the Helsinki 3D city model / Helsingin kaupunki, CC BY 4.0.</p>
   </article>
 
   <article class="panel">
     <div class="panel-head">
       <strong>Agent reconstruction</strong>
-      <span>Claude Opus · executable glTF</span>
+      <span>GPT‑6 Astra · executable glTF</span>
     </div>
     <div class="feature-viewer-wrap">
-      <canvas class="feature-model-viewer" id="eaCaseCanvas" tabindex="0" aria-label="Interactive Claude Opus reconstruction of Geisel Library"></canvas>
+      <canvas class="feature-model-viewer" id="eaCaseCanvas" tabindex="0" aria-label="Interactive GPT-6 Astra reconstruction of Johanneskyrkan"></canvas>
       <span class="viewer-hint">Drag to orbit · scroll to zoom</span>
     </div>
     <div class="feature-run-strip" aria-label="Run details">
-      <div class="run-fact"><strong>157</strong><span>turns</span></div>
-      <div class="run-fact"><strong>70.7 min</strong><span>wall clock</span></div>
-      <div class="run-fact"><strong>$27.29</strong><span>run cost</span></div>
+      <div class="run-fact"><strong>42</strong><span>turns</span></div>
+      <div class="run-fact"><strong>33.4 min</strong><span>wall clock</span></div>
+      <div class="run-fact"><strong>$6.54</strong><span>run cost</span></div>
     </div>
   </article>
 
   <article class="panel score-card">
     <div class="panel-head">
       <strong>Evaluation</strong>
-      <span>Claude Opus</span>
+      <span>GPT‑6 Astra</span>
     </div>
     <div class="overall-score">
       <small>Overall score</small>
-      <strong>0.731</strong>
+      <strong>0.814</strong>
     </div>
 
     <div class="metric">
-      <span>Silhouette</span><strong>0.867</strong>
-      <div class="metric-track"><div class="metric-fill" style="--value: 86.7%"></div></div>
+      <span>Silhouette</span><strong>0.893</strong>
+      <div class="metric-track"><div class="metric-fill" style="--value: 89.3%"></div></div>
     </div>
     <div class="metric">
-      <span>Height accuracy</span><strong>97.3%</strong>
-      <div class="metric-track"><div class="metric-fill" style="--value: 97.3%"></div></div>
+      <span>Height</span><strong>0.998</strong>
+      <div class="metric-track"><div class="metric-fill" style="--value: 99.8%"></div></div>
     </div>
     <div class="metric">
-      <span>Structure</span><strong>0.719</strong>
-      <div class="metric-track"><div class="metric-fill" style="--value: 71.9%"></div></div>
+      <span>Structure</span><strong>0.907</strong>
+      <div class="metric-track"><div class="metric-fill" style="--value: 90.7%"></div></div>
     </div>
     <div class="metric">
-      <span>Surface F @ 0.5 m</span><strong>0.290</strong>
-      <div class="metric-track"><div class="metric-fill" style="--value: 29%"></div></div>
+      <span>Surface F</span><strong>0.630</strong>
+      <div class="metric-track"><div class="metric-fill" style="--value: 63%"></div></div>
     </div>
-    <p class="eval-caption">Overall and structure are normalized benchmark scores. Silhouette and Surface F are raw measurements.</p>
+    <div class="metric">
+      <span>Colour</span><strong>0.633</strong>
+      <div class="metric-track"><div class="metric-fill" style="--value: 63.3%"></div></div>
+    </div>
+    <p class="eval-caption">Overall, height, structure and colour are normalized benchmark scores. Silhouette and Surface F are raw measurements; Surface F is taken at 0.63 m, this building’s ground-truth sampling.</p>
     <div class="validity-row">
       <strong>Valid executable output</strong><br />
-      2,336 triangles · 32.50 m reconstructed height vs. 31.66 m measured
+      7,324 triangles · 39.4 MB self-contained glTF with textures, roughness and normal maps
     </div>
   </article>
 </div>
-<p class="case-takeaway"><strong>What this reveals:</strong> Opus recovers the building’s stepped massing and height, while fine surface agreement remains much lower. The benchmark turns that visible gap into a precise training signal.</p>
+  <details class="task-full task-full-wide" id="taskFull">
+    <summary>Full task description given to the agent <span>TASK.md</span></summary>
+    <div class="task-md">
+    <p>You are given photographs of one real building, taken from cameras whose positions are stated exactly. Produce a 3D model of that building.</p>
+    <p>How you do it is up to you: write geometry by hand, generate it with a script, author it in three.js and export, fit primitives, produce textures procedurally or paint them from the photographs. Nothing about the method is graded. The model is.</p>
+    <h4>What you hand in</h4>
+    <pre>submission/building.glb     binary glTF 2.0, self-contained
+submission/manifest.json    at least {"method": "..."}</pre>
+    <p><b>This is not a massing study.</b> The model is imported into Unreal Engine and into three.js, lit on a stated stage, and rendered. What you author into the glTF PBR channels is what shows up there — base colour (as a texture where a flat colour cannot say what you mean, which for a facade is nearly always), metallic and roughness, and normal maps where a surface has relief. Concrete, glass and metal behave differently under light and a building made of one grey is a building made of one grey.</p>
+    <p>You may generate textures however you like: paint them from the photographs, synthesise them procedurally, write the pixels. Embed them in the .glb.</p>
+    <p><b>Units are metres. glTF is Y-up.</b> The axes are:</p>
+    <pre>+X  east          +Y  up          +Z  south   (so north is -Z)</pre>
+    <p>The origin (0, 0, 0) is <b>the centroid of the building's footprint, at ground level</b>. Build the building around it — a model that is the right shape in the wrong place is the wrong model.</p>
+    <p>Constraints: at most 300,000 triangles and 64 MB. The file has to be self-contained (no external images or .bin), and must not need Draco, meshopt or KTX2 — a submission that needs them is rejected.</p>
+    <h4>What you are given</h4>
+    <pre>views/*.png       4 photographs
+cameras.json      the pose and lens of every one of them
+site.json         the ground origin, and nothing else. The height is not given; read it off the photographs.</pre>
+    <p><code>cameras.json</code> gives, per view: the camera position in metres in the same frame your model lives in (<code>east</code>, <code>north</code>, <code>up</code>), the direction it looks (<code>heading_deg</code> clockwise from north, <code>pitch_deg</code> up from level), the horizontal field of view, and the image size. That is enough to project any point of your model into any photograph, and doing exactly that is the most direct way to check yourself.</p>
+    <p>The photographs are renders of a photogrammetric 3D mesh.</p>
+    <h4>Two tools, in this directory</h4>
+    <pre>./preview</pre>
+    <p>Renders <code>submission/building.glb</code> through every camera you were given and writes <code>previews/over_&lt;view&gt;.png</code> — your model's outline drawn on the photograph. That overlay is the fastest feedback available to you; a silhouette that hugs the building and one that is a storey too tall look identical without it.</p>
+    <pre>./check</pre>
+    <p>The acceptance checks a submission has to pass: whether the file parses, is in metres, is the right way up, is self-contained, and is within budget. It does <b>not</b> tell you your score. It exits 0 when the submission is admissible.</p>
+    <p>Both are thin wrappers over <code>bench/building/</code>, which is here for you to import: <code>glb.write(...)</code> will produce a conforming file from vertex and face arrays with normals, UVs and materials if you would rather not write the container yourself, and <code>raster.render(...)</code> is the renderer <code>./preview</code> uses. Note that <code>./preview</code> shows <b>unlit base colour</b> — it is a check of the geometry, not a picture of the lit model.</p>
+    </div>
+  </details>
+<p class="case-takeaway"><strong>What this reveals:</strong> From four photographs, with no footprint and no height, Astra recovers Johanneskyrkan’s twin spires, massing and façade structure, and gets the height almost exactly, for $6.54 in 33 minutes. Surface agreement and colour stay far lower. The benchmark turns that visible gap into a precise training signal.</p>

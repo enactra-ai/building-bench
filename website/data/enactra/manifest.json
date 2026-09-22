@@ -1,14 +1,14 @@
 {
   "source": "/Users/lianhui/Documents/Enactra/site-anthropic",
   "blocks": {
-    "flagship": 330,
-    "case": 5340,
-    "leaderboard": 27481,
-    "evaluation": 1899,
-    "momentum": 2224
+    "flagship": 59,
+    "case": 8987,
+    "leaderboard": 27190,
+    "evaluation": 1895
   },
-  "caseGLB": "13cd029bd75e.glb",
-  "caseModel": "Claude Opus",
-  "assets": 16,
-  "missing": []
+  "caseModel": "GPT-6 Astra",
+  "assets": 4,
+  "missing": [],
+  "caseRun": "helsinki_123901485_enhanced_v1-blind-gpt-6-astra-ultra-20260905T053213",
+  "note": "flagship/case/evaluation/leaderboard were edited by hand after extraction (Task Format, one tier); rerunning extract_enactra.py overwrites them"
 }

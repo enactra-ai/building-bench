@@ -79,7 +79,7 @@ only downloads glbs it does not already have.
   source of record for that model; only its **ultra** runs are loaded.
 - **Scopes**: *This building* (one run per model) and *License-clean board · 12 buildings* (that
   board's own per-model figures, where GPT‑6 Astra ranks first).
-- **Case score** = one blind-tier run per model × building: the *median* run by overall where a
+- **Case score** = one run per model × building: the *median* run by overall where a
   cell was run more than once (the inspector says how many runs there were). Scores come from
   the runs ledger, which recomputes overall with today's weighting.
 - **Board overall** (the other scope) = the board's own per-model overall / cost / minutes over
@@ -91,7 +91,7 @@ only downloads glbs it does not already have.
 - **Provenance**: the board still calls its own imagery "Google 3D Tiles" and says the
   photographs are rendered from Google's photorealistic tiles. That is wrong — the benchmark
   runs on licensed clean data. `SOURCE_LABEL` in `build.py` rewrites the label so a refetch
-  by `extract.py` cannot put it back, and the methodology copy says "licensed 3D city data".
+  by `extract.py` cannot put it back, and the page copy says "licensed 3D city data".
   The board's own wording is worth fixing at source.
 - **Light rig** is the benchmark's `city_bench.building_light/1`, as the board's own renders use.
 - The board serves no CORS headers, so nothing is fetched live; a snapshot date is on the page.
@@ -124,21 +124,27 @@ grep -c /cdn-cgi/ buildingbench/index.html buildingbench-evolution/index.html   
 
 ## The Enactra pitch blocks
 
-The release page is a merge: BuildingBench's own hero and explorer with four blocks lifted
-from the Enactra pitch page, in this order —
+The release page is a merge: BuildingBench's own hero and explorer with three blocks lifted
+from the Enactra pitch page and then edited here, in this order —
 
 | # | Block | From |
 |---|---|---|
 | 1 | Header, hero, featured reconstruction | BuildingBench |
-| 2 | Flagship task — the Geisel case, end to end | Enactra |
+| 2 | Task Format — Johanneskyrkan, GPT-6 Astra, end to end | Enactra, edited |
 | 3 | Leaderboard + cost/score frontier plot | Enactra |
 | 4 | Evaluation breakdown | Enactra |
-| 5 | The explorer — building strip, chart, inspector, table | BuildingBench |
-| 6 | "Meanwhile, coding agents are starting to build worlds" | Enactra |
+| 5 | The explorer ("Visualization" in the header) — building strip, chart, inspector, table | BuildingBench |
+
+**The blocks in `data/enactra/` are now hand-edited** (2026-09 polish): the Geisel flagship became
+*Task Format* on Johanneskyrkan (4 input photographs from `cases/helsinki_123901485/agent/views/`,
+the full `TASK.md` in an expandable block, the GPT-6 Astra ultra run's scores from the board's
+astra manifest), every blind/standard-tier mention is gone (the page has one tier and does not
+name it), and the news strip, the methodology fold and the "Explore the results" button were
+removed. **Re-running `extract_enactra.py` overwrites those edits** — reapply them if you do.
 
 `extract_enactra.py` lifts the Enactra half out of that page's **split** copy and writes it to
-`data/enactra/`; `build.py` injects it at the `<!--ENACTRA:pitch-->` and
-`<!--ENACTRA:momentum-->` markers in `template.html`. Re-run the extractor only to pick up a
+`data/enactra/`; `build.py` injects it at the `<!--ENACTRA:pitch-->` marker in
+`template.html`. Re-run the extractor only to pick up a
 change on the pitch page.
 
 ```bash
@@ -146,7 +152,7 @@ python3 extract_enactra.py                                   # default: the Anth
 python3 extract_enactra.py ~/Documents/Enactra/site-openai    # a different cut
 ```
 
-**The cut decides the Geisel panel.** It is the one thing that differs between the pitch
+**The cut decides the case panel** (before the hand edit above). It is the one thing that differs between the pitch
 page's cuts, and the panel's model, score and run facts come with it: the Anthropic cut gives
 Claude Opus at 0.731, the OpenAI cut GPT-6 Astra at 0.572, the Google cut gemini-3.8-flash at
 0.499. `manifest.json` records which was used.
@@ -170,24 +176,23 @@ Things that took a try to get right, and will bite again if the pieces are rebui
   `<canvas class="feature-model-viewer" id="eaCaseCanvas">` that `build.py` mounts a
   `GLBViewer` on — same drag-to-orbit, scroll-to-zoom and auto-rotate, on the renderer this
   page already has, and no CDN (the self-contained file must open from disk with no network).
-  The submission is gzipped and registered as the asset key `ea-case`, so it inlines and
-  splits like any other mesh. `.feature-model-viewer` already sizes a block element, so the
+  The case is a run the explorer already carries (`EA_CASE_RUN` in `build.py`), so the viewer
+  reuses that submission's slimmed asset key instead of shipping a second copy. `.feature-model-viewer` already sizes a block element, so the
   pitch CSS is untouched.
-- **Geisel is not one of the license-clean twelve** in the explorer's strip. It is the pitch
-  page's flagship case, carried in as the worked example; it is not part of the CC BY 4.0
-  release the explorer is built on.
-- The news strip's five citations are the **only** outbound links on the page, as on the
-  pitch page. Everything else is self-contained.
+- **The case is one of the license-clean twelve** (Johanneskyrkan, Helsinki 3D city model,
+  CC BY 4.0); its photographs carry that attribution under the thumbnails.
+- The only outbound links are the header's (enactra.ai, the blog, the contact address).
+  Everything else is self-contained.
 
 ## Files
 
 - `template.html` — head, CSS and HTML from the prototype with the placeholder copy replaced,
-  carrying the `<!--ENACTRA:pitch-->` and `<!--ENACTRA:momentum-->` injection markers
+  carrying the `<!--ENACTRA:pitch-->` injection marker
 - `engine.js` — one shared WebGL renderer, one scene per submission, a `GLBViewer` per canvas
   with the prototype viewer's interface (rotationX/Y, zoom, group camera, draw, destroy)
 - `app.js` — the page logic (selection state, chart, inspector, dialogs, CSV/PNG export, share hash)
 - `three-bundle.js` — three r182 + GLTFLoader/OrbitControls/RoomEnvironment as a classic script
   (lifted from the Enactra pitch page)
 - `slimglb.py`, `geomslim.py`, `glbinfo.py` — the re-encoders and an inspector for what makes a glb heavy
-- `extract_enactra.py` — lifts the four pitch blocks, their scripts and their CSS into `data/enactra/`
+- `extract_enactra.py` — lifts the pitch blocks, their scripts and their CSS into `data/enactra/`
 - `data/enactra/` — the extracted markup, scoped CSS, board JSON, scripts and media
