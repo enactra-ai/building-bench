@@ -112,6 +112,19 @@ PRODUCTS = {
     "antigravity": ('agy --print {prompt} --output-format json '
                     '--dangerously-skip-permissions --disable-slash-commands '
                     '--add-dir "$PWD" --print-timeout 180m --model {model}'),
+    # Cognition's own CLI, the only place SWE-2 is served. SWE-2 is free on a
+    # Devin account and rate limited over a window of seconds; the CLI gives up
+    # after three tries inside one second, so the lane pauses and continues the
+    # same conversation whenever that limit -- and only that limit -- stopped it.
+    "devin": (
+        'run() {{ devin --respect-workspace-trust false --permission-mode dangerous '
+        '--model {model} --export "$HOME/devin-trajectory.json" "$@" '
+        '2> >(tee -a "$HOME/devin-stderr.log" >&2); }}; '
+        ': > "$HOME/devin-stderr.log"; run -p {prompt}; rc=$?; '
+        'for attempt in $(seq 1 240); do [ $rc -eq 0 ] && break; '
+        'sleep 2; grep -qi \'rate limit\' "$HOME/devin-stderr.log" || break; '
+        ': > "$HOME/devin-stderr.log"; sleep 15; '
+        'run -c -p {resume}; rc=$?; done; exit $rc'),
 }
 
 
@@ -202,6 +215,10 @@ CONFIGS = {c.name: c for c in (
            notes=("Served by StepFun's own API, the only place step-5-preview runs, "
                   "reached through an Anthropic-protocol adapter; StepFun's published "
                   "rates are what priced it.",)),
+    Config("swe-2-max-devin", "SWE-2 (max) · Devin", "devin", "swe-2-max", "max",
+           notes=("Cognition serves SWE-2 only through its own CLI, and lists it as free "
+                  "on the account it ran on, so the run cost nothing; the rate limit that "
+                  "comes with the free tier is what the minutes include.",)),
 )}
 
 def label(name: str) -> str:
