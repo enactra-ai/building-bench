@@ -10,13 +10,34 @@ Two editions from one source, plus a self-contained copy of the full one.
 
 | Output | What |
 |---|---|
-| `buildingbench/` | **The release page.** `index.html` (~2.7 MB) + `assets/`. The explorer with the Enactra pitch blocks merged in. Upload the folder to static hosting. |
+| `buildingbench/` | **The release page.** `index.html` (~2.7 MB) + `assets/`. The explorer with the Enactra pitch blocks merged in. Live at enactra.ai/buildingbench/ — see *Deploying*. |
 | `buildingbench-evolution/` | **The explorer on its own** — model progress over release date, without the pitch blocks. Same shape, `index.html` (~2.6 MB) + `assets/`. |
 | `out/buildingbench-demo.html` | The release page self-contained (~67 MB). Opens from disk: no server, no CDN. Not committed — rebuild it. |
 
 `SITES` at the foot of `build.py` maps each folder to whether it carries the pitch blocks;
 `page(..., pitch_blocks=False)` emits the evolution edition. Everything else — data, models,
 submissions, scores — is identical between them.
+
+## Deploying
+
+The site is served by the `enactra.ai` Cloudflare Worker, which builds itself from a
+**different repository**: `DeepWorld101/webpage` (private), branch `main`. That Worker
+deploys on every push there; nothing in *this* repo is wired to hosting.
+
+So a change here reaches the public site in two steps:
+
+```bash
+python3 build.py                                    # 1. rebuild both editions from source
+cp -R buildingbench buildingbench-evolution ../../webpage/   # 2. copy the built folders into a
+cd ../../webpage && git add -A && git commit && git push origin main   #    checkout of DeepWorld101/webpage
+```
+
+About a minute after the push, enactra.ai/buildingbench/ and /buildingbench-evolution/ serve
+the new build. Commit the rebuilt `buildingbench/` and `buildingbench-evolution/` here too, so
+this repo always holds exactly what is live (the build is deterministic, so a clean rebuild
+leaves `git status` clean).
+
+Do not hand-edit `index.html` in either repo: the next `build.py` overwrites it.
 
 ## Rebuild for a new board snapshot
 
