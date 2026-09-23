@@ -219,6 +219,10 @@ CONFIGS = {c.name: c for c in (
            notes=("Cognition serves SWE-2 only through its own CLI, and lists it as free "
                   "on the account it ran on, so the run cost nothing; the rate limit that "
                   "comes with the free tier is what the minutes include.",)),
+    Config("claude-opus-5-5-max", "Claude Opus 5.5 (max)", "claude", "claude-opus-5-5", "max",
+           notes=("Run with Claude Code 2.1.280, the first build that knows the model, and a "
+                  "32 GB lane: at the 8 GB default the kernel killed its Python workers and, "
+                  "twice, the CLI itself within minutes.",)),
 )}
 
 def label(name: str) -> str:
