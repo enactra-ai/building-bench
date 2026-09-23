@@ -32,7 +32,8 @@ from harness import board                                         # noqa: E402
 OUT = ROOT / "docs" / "assets" / "pareto.gif"
 ARRIVALS = ["fable51max", "gpt-6-astra-ultra", "deepseek-v41-flash-claude-code",
             "z-ai-glm-5.3-flashx-claude-code", "grok47xhigh",
-            "step-5-preview-claude-code"]
+            "step-5-preview-claude-code",
+            "claude-opus-5-5-max"]
 
 FPS = 12
 W, H, DPI = 1920, 1080, 100
@@ -94,7 +95,11 @@ def label_offsets(points: list[dict], line: list[dict] = ()) -> dict[str, tuple[
     slots = [(0.012, 0.0, "left"), (-0.012, 0.0, "right"), (0.0, 0.035, "center"),
              (0.0, -0.045, "center"), (0.012, 0.03, "left"), (-0.012, 0.03, "right"),
              (0.012, -0.035, "left"), (-0.012, -0.035, "right"), (0.0, 0.07, "center"),
-             (0.0, -0.08, "center")]
+             (0.0, -0.08, "center"),
+             # a dot at the left edge cannot take a left or centred label, and the
+             # frontier leaving it rules out the right: these clear the line
+             (0.012, 0.05, "left"), (0.012, -0.06, "left"), (0.02, 0.07, "left"),
+             (0.02, -0.08, "left")]
     placed, out = [], {}
     dots = [(xpos(p["cost"]), ypos(p["overall"])) for p in points]
     # the frontier is an obstacle too: sample it so no label sits on the line
@@ -144,9 +149,10 @@ def draw(points: list[dict], shown: dict[str, float], fronts: list[tuple[list[di
     head = fig.text(0.04, 0.905, "BuildingBench", fontsize=30, fontweight="bold", color=INK)
     box = head.get_window_extent(renderer=fig.canvas.get_renderer())
     fig.text(0.04 + box.width / W + 0.008, 0.905, "Pareto Frontier", fontsize=30, color="#6f6f69")
+    # five to a column: a sixth line reaches down into the plot's top tick
     for i, (name, col, a) in enumerate(added):
-        fig.text(0.04, 0.868 - i * 0.03, f"+ {name}", fontsize=15, fontweight="bold",
-                 color=col, alpha=a)
+        fig.text(0.04 + (i // 5) * 0.2, 0.868 - (i % 5) * 0.03, f"+ {name}", fontsize=15,
+                 fontweight="bold", color=col, alpha=a)
     # brand, top right
     fig.text(0.955, 0.925, "Enactra AI", fontsize=17, fontweight="bold", color=INK, ha="right")
     fig.text(0.955 - 0.066, 0.9, "enactra.ai", fontsize=12, color=INK2, ha="left")
