@@ -39,34 +39,52 @@ SITES = [  # id, board site, display name, strip name
     ('royal_exhibition', 'melbourne_4817059_enhanced_v1', 'Royal Exhibition Building', None),
 ]
 GROUP = lambda site: 'clean' if site.endswith('_enhanced_v1') else 'shared'
-FAMILY = {  # board org -> page family
-    'Anthropic': 'Anthropic', 'OpenAI': 'OpenAI', 'Google': 'Google', 'Meta': 'Meta',
-}
+# One family per company, in the leaderboard figures' palette (bar + Pareto), so a model wears
+# the same colour everywhere on the page. The board files a few rows under "Unplaced" or in lower
+# case; ORG_OF fixes those by model.
+FAMILY = {'Anthropic': 'Anthropic', 'OpenAI': 'OpenAI', 'Google': 'Google', 'Meta': 'Meta', 'xAI': 'xAI',
+          'deepseek': 'DeepSeek', 'Z.ai': 'Z.ai', 'Moonshot AI': 'Moonshot', 'cognition': 'Cognition',
+          'Undisclosed': 'Undisclosed', 'Thinking Machines': 'Thinking Machines'}
+ORG_OF = {'claude-opus-5-5': 'Anthropic', 'step-5-preview': 'StepFun'}
 FAMILIES = {
-    'Anthropic': {'label': 'Anthropic', 'color': '#5b21b6'},
-    'OpenAI':    {'label': 'OpenAI',    'color': '#0a7387'},
-    'Google':    {'label': 'Google',    'color': '#c0399e'},
-    'Meta':      {'label': 'Meta',      'color': '#2d7fc4'},
-    'Others':    {'label': 'Others',    'color': '#8f5a14'},
-    'All':       {'label': 'All families', 'color': '#315d50'},
+    'OpenAI':            {'label': 'OpenAI',            'color': '#10A37F'},
+    'Anthropic':         {'label': 'Anthropic',         'color': '#D97757'},
+    'Google':            {'label': 'Google',            'color': '#7b1fa2'},
+    'xAI':               {'label': 'SpaceXAI',          'color': '#111111'},   # xAI, now part of SpaceX
+    'Meta':              {'label': 'Meta',              'color': '#42a5f5'},
+    'DeepSeek':          {'label': 'DeepSeek',          'color': '#3f51e0'},
+    'Z.ai':              {'label': 'Z.ai',              'color': '#96650b'},
+    'Moonshot':          {'label': 'Moonshot',          'color': '#9ab832'},
+    'StepFun':           {'label': 'StepFun',           'color': '#01c4b8'},   # the figures' #01f4e6, darkened to read as text
+    'Cognition':         {'label': 'Cognition',         'color': '#d94a7b'},
+    'Undisclosed':       {'label': 'Undisclosed',       'color': '#a8a29e'},
+    'Thinking Machines': {'label': 'Thinking Machines', 'color': '#686868'},
+    'All':               {'label': 'All families',      'color': '#315d50'},
 }
-FAMILY_ORDER = ['OpenAI', 'Anthropic', 'Google', 'Meta', 'Others']
+FAMILY_ORDER = [f for f in FAMILIES if f != 'All']
+
+# Names as the leaderboard's bar figure writes them (product name; effort shown separately).
+NAMES = {
+    'claude-opus-5-5': 'Claude Opus 5.5', 'claude-fable-5-1': 'Claude Fable 5.1', 'claude-fable-5': 'Claude Fable 5',
+    'claude-opus-5': 'Claude Opus 5', 'claude-sonnet-5': 'Claude Sonnet 5', 'claude-haiku-4-5': 'Claude Haiku 4.5',
+    'gpt-6-astra': 'GPT‑6 Astra', 'gpt-6-sol': 'GPT‑6 Sol', 'gpt-5.6-sol': 'GPT‑5.6 Sol', 'gpt-5.6-luna': 'GPT‑5.6 Luna',
+    'gpt-5.6-terra': 'GPT‑5.6 Terra',
+    'gemini-3.8-flash': 'Gemini 3.8 Flash', 'gemini-3.7-flash': 'Gemini 3.7 Flash', 'gemini-3.5-flash': 'Gemini 3.5 Flash',
+    'gemini-3.1-pro': 'Gemini 3.1 Pro',
+    'muse-spark-1.3': 'Muse Spark 1.3', 'muse-spark-1.2': 'Muse Spark 1.2', 'muse-spark-1.1': 'Muse Spark 1.1',
+    'grok-4.7': 'Grok 4.7', 'grok-4.6': 'Grok 4.6', 'grok-4.5': 'Grok 4.5',
+    'kimi-k3': 'Kimi K3', 'glm-5.3-flash': 'GLM‑5.3 Flash', 'glm-5.3-flashx': 'GLM‑5.3 FlashX',
+    'deepseek-v4.1-flash:wafer': 'DeepSeek V4.1 Flash', 'swe-2': 'SWE‑2', 'step-5-preview': 'Step 5 Preview',
+    'union-alpha': 'Union Alpha', 'space-bunny-alpha': 'Space Bunny Alpha', 'inkling:free': 'Inkling',
+}
 
 def display_name(label):
-    """'claude-fable-5-1 (max)' -> ('Claude Fable 5.1', 'max')."""
-    m = re.match(r'^(.*?)(?:\s*\((\w+)\))?$', label.strip())
-    base, effort = m.group(1), m.group(2) or 'none'
-    base = base.split('/')[-1]
-    names = {
-        'claude-fable-5-1': 'Claude Fable 5.1', 'claude-fable-5': 'Claude Fable 5', 'claude-opus-5': 'Claude Opus 5',
-        'claude-sonnet-5': 'Claude Sonnet 5', 'claude-haiku-4-5': 'Claude Haiku 4.5',
-        'gpt-5.6-sol': 'GPT‑5.6 Sol', 'gpt-5.6-luna': 'GPT‑5.6 Luna', 'gpt-5.6-terra': 'GPT‑5.6 Terra', 'gpt-6-astra': 'GPT‑6 Astra',
-        'gemini-3.8-flash': 'Gemini 3.8 Flash', 'gemini-3.7-flash': 'Gemini 3.7 Flash', 'gemini-3.5-flash': 'Gemini 3.5 Flash', 'gemini-3.1-pro': 'Gemini 3.1 Pro',
-        'muse-spark-1.3': 'Muse Spark 1.3', 'muse-spark-1.2': 'Muse Spark 1.2', 'muse-spark-1.1': 'Muse Spark 1.1',
-        'kimi-k3': 'Kimi K3', 'glm-5.3-flash': 'GLM 5.3 Flash', 'grok-4.6': 'Grok 4.6',
-        'inkling:free · Claude Code': 'Inkling (free) · Claude Code',
-    }
-    return names.get(base, base), effort, base
+    """'claude-fable-5-1 (max)' -> ('Claude Fable 5.1', 'max', 'claude-fable-5-1');
+    'z-ai/glm-5.3-flashx (max) · Claude Code' -> ('GLM‑5.3 FlashX', 'max', 'glm-5.3-flashx')."""
+    s = label.strip().split(' · ')[0]                  # the harness suffix is not part of the model
+    m = re.match(r'^(.*?)(?:\s*\((\w+)\))?$', s)
+    base, effort = m.group(1).split('/')[-1], m.group(2) or 'none'
+    return NAMES.get(base, base), effort, base
 
 # Public launch dates, from the announcements (see README for sources). The board carries none.
 RELEASE = {
@@ -76,12 +94,19 @@ RELEASE = {
     'kimi-k3': '2026-07-16', 'claude-opus-5': '2026-07-24', 'muse-spark-1.2': '2026-08-05', 'grok-4.6': '2026-08-12',
     'gemini-3.7-flash': '2026-08-13', 'glm-5.3-flash': '2026-08-26', 'claude-fable-5-1': '2026-09-01',
     'gemini-3.8-flash': '2026-09-02', 'muse-spark-1.3': '2026-09-02', 'gpt-6-astra': '2026-09-03',
-    'inkling:free · Claude Code': '2026-07-15',
+    'inkling:free': '2026-07-15',
+    # 2026-09-23: vendor announcements, each cross-checked against OpenRouter's catalogue date
+    'grok-4.5': '2026-07-08', 'deepseek-v4.1-flash:wafer': '2026-09-10', 'swe-2': '2026-09-10',
+    'union-alpha': '2026-09-16',          # stealth: the day OpenRouter listed it (revealed 09-17 as Unbiased's Pareto)
+    'glm-5.3-flashx': '2026-09-18', 'step-5-preview': '2026-09-20', 'grok-4.7': '2026-09-21',
+    'claude-opus-5-5': '2026-09-22', 'gpt-6-sol': '2026-09-22',
+    'space-bunny-alpha': '2026-09-23',    # stealth: listed on OpenRouter that day, maker undisclosed
 }
-EFFORT_RANK = {'low': 0, 'none': 1, 'high': 1, 'max': 2, 'ultra': 3}
+EFFORT_RANK = {'low': 0, 'none': 1, 'high': 1, 'thinking': 2, 'max': 2, 'xhigh': 2, 'ultra': 3}
 # Left off the page: Claude Haiku 4.5 (Oct 2025) sits eight months before everything else and
-# stretched the time axis into empty space.
-EXCLUDE = {'claude-haiku-4-5'}
+# stretched the time axis into empty space; Gemini 3.1 Pro (Feb 2026) would do the same, and has
+# run only 2 of the 12 buildings.
+EXCLUDE = {'claude-haiku-4-5', 'gemini-3.1-pro'}
 
 def data_uri(path, mime):
     return 'data:%s;base64,%s' % (mime, base64.b64encode(open(path, 'rb').read()).decode())
@@ -99,7 +124,7 @@ by_base = collections.defaultdict(list)
 for row in board['rows']:
     name, effort, key = display_name(row['label'])
     by_base[key].append((row, name, effort))
-EFFORT_LABEL = {'none': 'default effort', 'high': 'high effort', 'max': 'max effort', 'low': 'low effort', 'ultra': 'ultra effort'}
+EFFORT_LABEL = {'none': 'default effort', 'high': 'high effort', 'max': 'max effort', 'low': 'low effort', 'ultra': 'ultra effort', 'xhigh': 'xhigh effort', 'thinking': 'thinking'}
 models = []; series_to_model = {}; series_effort = {}
 for key, variants in by_base.items():
     if key in EXCLUDE: continue
@@ -107,11 +132,11 @@ for key, variants in by_base.items():
         row, name, effort = t; cov = len(covered[row['series']] & page_sites)
         return (cov >= 5, EFFORT_RANK.get(effort, 1), cov, row['values']['cells'])
     row, name, effort = max(variants, key=rank)      # the variant whose board figures stand for the model
-    v = row['values']; fam = FAMILY.get(row['org'], 'Others')
+    v = row['values']; fam = ORG_OF.get(key) or FAMILY[row['org']]
     same = same_series.get(row['series'])
     models.append({
         'id': key, 'label': row['label'], 'name': name, 'base': name,
-        'family': fam, 'org': row['org'], 'effort': effort, 'effortLabel': EFFORT_LABEL.get(effort, effort), 'date': RELEASE.get(key),
+        'family': fam, 'org': FAMILIES[fam]['label'], 'effort': effort, 'effortLabel': EFFORT_LABEL.get(effort, effort), 'date': RELEASE.get(key),
         'tags': [t['text'] for t in row.get('tags', [])],
         'variants': [{'series': r['series'], 'label': r['label'], 'effort': e, 'cells': r['values']['cells']} for r, _, e in sorted(variants, key=lambda t: -EFFORT_RANK.get(t[2], 1))],
         'board': {k: v.get(k) for k in ('overall', 'f', 'geometry', 'appearance', 'cost', 'minutes', 'turns', 'place', 'takes', 'cells')},
@@ -191,16 +216,19 @@ DATA = {
 
 # ---- the Enactra pitch blocks --------------------------------------------------------
 # Blocks lifted from the Enactra pitch page by extract_enactra.py, then edited here: the Task
-# Format case (Johanneskyrkan, GPT-6 Astra), the static leaderboard with its cost/score
-# frontier plot and the evaluation breakdown. They keep their own markup, CSS and scripts, so every interaction
-# survives; the CSS is scoped under `.ea` by the extractor so it cannot reach this page's
-# own styles, and the markup is wrapped in that class here.
+# Format case (Johanneskyrkan, GPT-6 Astra) and the leaderboard (bar chart, Pareto frontier,
+# table). They keep their own markup, CSS and scripts; the CSS is scoped under `.ea` by the
+# extractor so it cannot reach this page's own styles, and the markup is wrapped in that class here.
 EA = 'data/enactra'
 ea = {n: open('%s/%s.html' % (EA, n), encoding='utf-8').read() for n in
-      ('flagship', 'case', 'leaderboard', 'evaluation')}
+      ('flagship', 'case', 'leaderboard')}
+# The leaderboard's bar chart and Pareto frontier are inline SVG (hoverable, see plot.js), generated
+# outside this repo -- see README -- and dropped in at their markers.
+for fig in ('bar', 'pareto'):
+    ea['leaderboard'] = ea['leaderboard'].replace('<!--FIG:%s-->' % fig, open('%s/fig_%s.svg' % (EA, fig), encoding='utf-8').read())
 ea_css = open(EA + '/style.css', encoding='utf-8').read()
 ea_board_json = open(EA + '/board.json', encoding='utf-8').read()
-ea_js = '\n'.join(open('%s/%s.js' % (EA, n), encoding='utf-8').read() for n in ('thumbs', 'board'))
+ea_js = '\n'.join(open('%s/%s.js' % (EA, n), encoding='utf-8').read() for n in ('thumbs', 'board', 'plot'))
 
 # BuildingBench styles bare elements — table, th, td, td:nth-child(4), img, a, h1-h3, p.
 # Those rules reach inside the pitch blocks and restyle them (the leaderboard's fourth
@@ -252,7 +280,7 @@ def ea_rewrite(text, inline):
 
 def ea_html(inline):
     pitch = ('<div class="ea"><div class="container">' + ea['flagship']
-             + '<div class="flagship-shell">' + ea['case'] + ea['leaderboard'] + ea['evaluation']
+             + '<div class="flagship-shell">' + ea['case'] + ea['leaderboard']
              + '</div></div></div>')
     return ea_rewrite(pitch, inline)
 

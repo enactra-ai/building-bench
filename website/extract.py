@@ -168,8 +168,12 @@ astra_runs = [r for r in astra['runs'] if r['site'] in page_sites and r['status'
 by_cell = {}
 for r in astra_runs:
     key = (r['site'], r['effort']); by_cell.setdefault(key, []).append(r)
-picks = [p for p in picks if not p['series'].startswith('gpt6')]
+# The ledger now carries the astra runs too, rescored with today's weighting (the manifest's scores
+# are as filed), so the manifest only fills cells the ledger lacks. Other gpt6* series (GPT-6 Sol) are
+# the ledger's alone.
+have = {(p['site'], p['series']) for p in picks}
 for (site, effort), lst in by_cell.items():
+    if (site, 'gpt6astra' + effort) in have: continue
     lst.sort(key=lambda r: r['scores']['overall']); r = lst[(len(lst) - 1) // 2]
     series = 'gpt6astra' + effort
     if series not in series_ok: print('  astra effort not on the board:', series); continue
@@ -221,7 +225,9 @@ json.dump({'snapshot': snapshot, 'sameSet': same_set, 'runsScored': runs_scored,
 
 # ---- raw submissions into the cache ---------------------------------------------
 def fetch_glb(p):
+    if p['site'] not in CLEAN_SITES: return False          # the page shows the license-clean twelve only
     out = 'cache/glb/%s.glb' % p['run'].replace('+', '_')
+    if os.path.exists('cache/slim/%s.glb.gz' % p['run'].replace('+', '_')): return False
     if os.path.exists(out) and os.path.getsize(out) > 0: return False
     open(out, 'wb').write(get(p['glb'].replace('../', ''), True)); return True
 with cf.ThreadPoolExecutor(6) as ex:

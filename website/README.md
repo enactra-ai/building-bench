@@ -53,11 +53,16 @@ only downloads glbs it does not already have.
 
 ## What the page shows, and the choices behind it
 
-- **Models**: every row the board ranks (`rows`, 36 at the last snapshot), reduced to **one row per
+- **Models**: every row the board ranks (`rows`, 49 at the 2026-09-23 snapshot), reduced to **one row per
   model at its highest reasoning effort** that ran at least five of the page's buildings (so
   "Kimi K3 (max)", which never ran them, does not hide the Kimi K3 that did). The other efforts
-  stay on the board. Claude Haiku 4.5 is left off (`EXCLUDE` in `build.py`): released eight months
-  before everything else, it stretched the time axis into empty space. GPT‑6 Astra is included even though it has run only 2 of the 11 buildings.
+  stay on the board. Claude Haiku 4.5 and Gemini 3.1 Pro are left off (`EXCLUDE` in `build.py`):
+  released months before everything else, they stretch the time axis into empty space (and Gemini
+  3.1 Pro has run only 2 of the 12 buildings). Names follow the leaderboard's bar figure (`NAMES`).
+- **Families**: one per company, in the leaderboard figures' palette (`FAMILIES`): OpenAI,
+  Anthropic, Google, SpaceXAI (xAI's Grok; the board says "xAI"), Meta, DeepSeek, Z.ai, Moonshot,
+  StepFun, Cognition, Undisclosed (the stealth models) and Thinking Machines. `ORG_OF` fixes the
+  rows the board files under "Unplaced" (Claude Opus 5.5, Step 5 Preview).
 - **Chart**: score against **model release date**, one family curve per organisation with an
   arrow from each release to the next. Outputs are drawn large (124 px, 100 px with every family
   shown), so they are laid out near their true point and, when they had to move aside, tethered
@@ -68,15 +73,24 @@ only downloads glbs it does not already have.
   Muse Spark 1.1 2026‑07‑09 · Inkling 2026‑07‑15 · Kimi K3 2026‑07‑16 · Claude Opus 5 2026‑07‑24 ·
   Muse Spark 1.2 2026‑08‑05 · Grok 4.6 2026‑08‑12 · Gemini 3.7 Flash 2026‑08‑13 · GLM‑5.3 Flash
   2026‑08‑26 · Claude Fable 5.1 2026‑09‑01 · Gemini 3.8 Flash 2026‑09‑02 · Muse Spark 1.3
-  2026‑09‑02 · GPT‑6 Astra 2026‑09‑03. A model missing from the table is kept in the table view
+  2026‑09‑02 · GPT‑6 Astra 2026‑09‑03 · Grok 4.5 2026‑07‑08 · DeepSeek V4.1 Flash 2026‑09‑10 ·
+  SWE‑2 2026‑09‑10 · Union Alpha 2026‑09‑16 (stealth: the day OpenRouter listed it) · GLM‑5.3 FlashX
+  2026‑09‑18 · Step 5 Preview 2026‑09‑20 · Grok 4.7 2026‑09‑21 · Claude Opus 5.5 2026‑09‑22 ·
+  GPT‑6 Sol 2026‑09‑22 · Space Bunny Alpha 2026‑09‑23 (stealth, OpenRouter listing). The last ten
+  were looked up 2026‑09‑23 against the vendors' announcements and OpenRouter's catalogue dates.
+  A model missing from the table is kept in the table view
   and left off the chart, and the chart says how many.
 - **Buildings**: the board's **license-clean release set only** — 12 CC BY 4.0 cases (five from the
   Helsinki 3D city model, seven from the City of Melbourne 2020 photomesh), run with enhanced PNG
   inputs by every model family. They have no render pages on the board, so `extract.py` takes their
   runs from the ledger, their glTFs from `bench-runs/<run>/submission/`, their photographs from the
   Choose page (`validated/shot/<site>/orbit_000/photo.jpg`) and their names as the board has them.
-- **GPT‑6 Astra** cells come from the board's astra page (`astra.html` → `astra/manifest.json`), the
-  source of record for that model; only its **ultra** runs are loaded.
+- **GPT‑6 Astra** cells come from the runs ledger like every other model's (rescored with today's
+  weighting); the board's astra page (`astra/manifest.json`, scores as filed) only fills a cell the
+  ledger lacks. It used to replace the ledger — and every `gpt6*` series with it, GPT‑6 Sol included.
+- **Cache**: `cache/glb` (raw, ~1.3 GB) is best kept off the root disk; on ds-serv12 it is a symlink
+  to `/data/zhiting/bb-website-cache/glb`. `extract.py` fetches glbs for the page's twelve buildings
+  only, and skips any run already in `cache/slim`.
 - **Scopes**: *This building* (one run per model) and *License-clean board · 12 buildings* (that
   board's own per-model figures, where GPT‑6 Astra ranks first).
 - **Case score** = one run per model × building: the *median* run by overall where a
@@ -131,8 +145,7 @@ from the Enactra pitch page and then edited here, in this order —
 |---|---|---|
 | 1 | Header, hero, featured reconstruction | BuildingBench |
 | 2 | Task Format — Johanneskyrkan, GPT-6 Astra, end to end | Enactra, edited |
-| 3 | Leaderboard — bar figure, Pareto frontier, then the sortable table | Enactra, edited |
-| 4 | Evaluation breakdown | Enactra |
+| 3 | Leaderboard — bar figure, Pareto frontier (both live SVG), then the Overall table | Enactra, edited |
 | 5 | The explorer ("Visualization" in the header) — building strip, chart, inspector, table | BuildingBench |
 
 **The blocks in `data/enactra/` are now hand-edited** (2026-09 polish): the Geisel flagship became
@@ -143,20 +156,25 @@ name it), and the news strip, the methodology fold and the "Explore the results"
 removed. **Re-running `extract_enactra.py` overwrites those edits** — reapply them if you do.
 
 The Task Format scores are the **current grader's** (`results/reference_runs.jsonl` on `main`:
-Astra on Johanneskyrkan 0.879), shown as three categories, each the plain mean of its columns —
-Geometry = silhouette, outline, plan, height; Surface = precision, recall, F; Appearance = colour,
-structure, materials. The explorer below still reads the 2026-09-09 board snapshot (older grader,
-0.814 for the same run) until `extract.py` is re-run.
+Astra on Johanneskyrkan 0.879), shown as three categories only, each the plain mean of its columns
+(Geometry = silhouette, outline, plan, height 0.865; Surface = precision, recall, F 0.631;
+Appearance = colour, structure, materials 0.963) — the columns themselves are not shown — with the
+85%-agreement-with-experts badge. The explorer reads the same grader since the 2026-09-23 refresh.
 
-**The Leaderboard** (second polish, 2026-09-23) is two static figures and the table, all from the
+**The Leaderboard** (third polish, 2026-09-23) is two live figures and the table, all from the
 board's same-set view snapshotted 2026-09-22 (24 rows, 12 license-clean buildings):
-`assets/buildingbench_bar.svg` (the GPT-6 Sol bar figure without its arrows, SWE-2 included,
-Inkling left off) and `assets/buildingbench_pareto.png` (the Pareto frontier as a still, SWE-2 in
-the $0 lane at the board's estimated price). Their generators, edited for this page, live on
-ds-serv12 at `/data/zhiting/buildingbench-site-figures/` (README there). `data/enactra/board.json`
-is that snapshot's `rowsSame`, with four orgs set to the company the figures draw them in
-(Opus 5.5 → Anthropic, Step 5 → StepFun, DeepSeek, Cognition) and each series' table dot in the
-figures' company colour. The old interactive frontier plot (`plot.js`) is gone.
+`data/enactra/fig_bar.svg` (the bar figure, SWE-2 included, Inkling left off) and
+`data/enactra/fig_pareto.svg` (the Pareto frontier, SWE-2 in the $0 lane at the board's estimated
+price). `build.py` inlines them at `<!--FIG:bar-->` / `<!--FIG:pareto-->` in `leaderboard.html`;
+every bar and dot is a `g.node` with its figures in `data-tip`, and `plot.js` shows them on hover or
+focus and dims the rest. No title, description or Enactra lockup — the page has those. The fonts
+they embed are named `BB Inter`, `BB Plex Mono`, `BB Noto Sans`, because an @font-face in inline SVG
+is global and would otherwise restyle the page's own text. Their generators live on ds-serv12 at
+`/data/zhiting/buildingbench-site-figures/` (`bar/build_site.py`, `pareto/pareto_svg.py`; README
+there). `data/enactra/board.json` is that snapshot's `rowsSame`, Overall columns only, with the bar
+figure's names, "Surface" for Surface F, the company the figures draw each row in (Opus 5.5 →
+Anthropic, Step 5 → StepFun, DeepSeek, Cognition, xAI → SpaceXAI) and each series' table dot in
+that company's colour. The Evaluation breakdown block and the table's folds are gone.
 
 `extract_enactra.py` lifts the Enactra half out of that page's **split** copy and writes it to
 `data/enactra/`; `build.py` injects it at the `<!--ENACTRA:pitch-->` marker in

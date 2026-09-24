@@ -8,12 +8,12 @@ sys.path.insert(0, HERE)
 from slimglb import slim
 from geomslim import parse, slim_geometry, pack
 force = '--force' in sys.argv
-picks = json.load(open('data/picks.json'))
+picks = [p for p in json.load(open('data/picks.json')) if p['site'].endswith('_enhanced_v1')]   # the page's buildings
 os.makedirs('cache/slim', exist_ok=True)
 def work(p):
     name = p['run'].replace('+', '_'); src = 'cache/glb/%s.glb' % name; dst = 'cache/slim/%s.glb.gz' % name
+    if os.path.exists(dst) and not force: return (name, os.path.getsize(src) if os.path.exists(src) else 0, os.path.getsize(dst))
     if not os.path.exists(src): return (name, 'MISSING raw', 0)
-    if os.path.exists(dst) and not force: return (name, os.path.getsize(src), os.path.getsize(dst))
     try:
         b = slim(src, None, 512, 80)
         j, binc = parse(b); j, binc = slim_geometry(j, binc); b = pack(j, binc)

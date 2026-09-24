@@ -80,7 +80,7 @@ function renderCaseStrip(){
   const root=$('#caseStrip'),scroll=root.scrollLeft;
   const query=state.search.trim().toLowerCase();
   const list=buildings.filter(b=>(b.name+' '+b.short).toLowerCase().includes(query));
-  $('#caseCount').textContent=query?`${list.length} of ${buildings.length} buildings`:`${buildings.length} buildings · license-clean set · every model family ran them`;
+  $('#caseCount').textContent=query?`${list.length} of ${buildings.length} buildings`:'';
   root.replaceChildren();
   if(!list.length){root.innerHTML='<span class="case-empty">No matching buildings. Try another name.</span>';return;}
   const groups={shared:`Shared set · ${buildings.filter(b=>b.group==='shared').length}`,clean:`License-clean set · ${buildings.filter(b=>b.group==='clean').length}`};
@@ -225,13 +225,13 @@ function renderChart(){
   });
   chartGeometry={width:w,height:h,positions:nodes};
   const undated=models.filter(m=>(state.family==='All'||m.family===state.family)&&valueFor(m)!=null&&!m.date).length;
-  $('#chartContext').textContent=(state.scope==='case'?`${currentBuilding().name} · ${currentBuilding().group==='clean'?'license-clean set':'shared set'} · one submitted run per model, at the highest reasoning effort that ran it`:state.scope==='clean'?`License-clean board · every model over the same 12 CC BY 4.0 buildings · 3D examples: ${currentBuilding().name}`:`All-results board, each model over the buildings it has run · 3D examples: ${currentBuilding().name}`)+(undated?` · ${undated} without a release date`:'')+(absent.length?` · ${absent.length} not run here: ${absent.map(m=>m.name).join(', ')}`:'');
+  $('#chartContext').textContent=(state.scope==='case'?`${currentBuilding().name}`:state.scope==='clean'?`License-clean board · every model over the same 12 CC BY 4.0 buildings · 3D examples: ${currentBuilding().name}`:`All-results board, each model over the buildings it has run · 3D examples: ${currentBuilding().name}`)+(undated?` · ${undated} without a release date`:'')+(absent.length?` · ${absent.length} not run here: ${absent.map(m=>m.name).join(', ')}`:'');
   $('#chartHint').textContent=(all&&chart.scrollWidth>$('#chartScroll').clientWidth?`${list.length} models · Scroll horizontally for the full timeline`:`${list.length} models · ${innerWidth<=940?'Tap':'Click'} a 3D output to inspect`)+' · dotted tether = output moved aside from its point';
   $('#chart').setAttribute('aria-label',`${state.scope==='mean'?'Board overall':'Case score'} against model release date. ${currentBuilding().name} submissions.`);
 }
 function showTooltip(m,x,y,w,h){
   const tip=$('#chartTooltip'),r=resultFor(m.id);
-  tip.innerHTML=`<b>${escapeHTML(m.name)}</b><span>${escapeHTML(m.org)} · ${escapeHTML(effortLabelOf(m))} · released ${escapeHTML(formatDay(m.date))}</span><span>${scopeName()} ${formatScore(valueFor(m))} · ${usd(valueFor(m,'cost'))} · ${formatMinutes(valueFor(m,'minutes'))}</span>${state.scope==='case'&&r?`<span>Surface F ${formatScore(r.surfaceF)} · ${r.nruns>1?`median of ${r.nruns} runs`:'1 run'}</span>`:state.scope==='clean'?`<span>Over ${m.clean.cells} buildings · F ${formatScore(m.clean.f)}</span>`:`<span>Over ${m.board.cells} buildings · F ${formatScore(m.board.f)}</span>`}`;
+  tip.innerHTML=`<b>${escapeHTML(m.name)}</b><span>${escapeHTML(m.org)} · ${escapeHTML(effortLabelOf(m))} · released ${escapeHTML(formatDay(m.date))}</span><span>${scopeName()} ${formatScore(valueFor(m))} · ${usd(valueFor(m,'cost'))} · ${formatMinutes(valueFor(m,'minutes'))}</span>${state.scope==='case'&&r?`<span>${r.nruns>1?`Median of ${r.nruns} runs`:'1 run'}</span>`:state.scope==='clean'?`<span>Over ${m.clean.cells} buildings · F ${formatScore(m.clean.f)}</span>`:`<span>Over ${m.board.cells} buildings · F ${formatScore(m.board.f)}</span>`}`;
   tip.style.left=clamp(x-82,10,w-208)+'px';tip.style.top=(y>135?y-132:Math.min(h-90,y+76))+'px';tip.classList.add('visible');
 }
 function renderSelection(){
@@ -247,7 +247,7 @@ function renderInspector(){
   $('#selectedScore').textContent=formatScore(r?.score);$('#selectedCost').textContent=usd(r?.costUSD);$('#selectedDate').textContent=formatMonth(m.date);
   $('#selectedCanvas').setAttribute('aria-label',`${b.name}, ${m.name}: the submitted glTF. Drag or use arrow keys to rotate.`);
   selectedViewer=mountOutput($('#selectedCanvas'),b,m,{rotationX:.37,rotationY:chartCamera.rotationY,centerX:.5});
-  $('#inspectorNote').textContent=r?`${runNote(r)} · surface F ${formatScore(r.surfaceF)}`:runNote(r);
+  $('#inspectorNote').textContent=runNote(r);
   $('#aggregateNote').hidden=state.scope==='case';$('#aggregateNote').textContent=state.scope==='clean'?`Chart: ${formatScore(m.clean?.overall)} on the license-clean board (${m.clean?.cells||0} buildings). Above: this building’s run.`:`Chart: ${formatScore(m.board.overall)} on the all-results board across its ${m.board.cells} buildings. Above: this building’s run.`;
   $('#comparePrevious').innerHTML=`<span>${previous?'Compare with '+escapeHTML(previous.name):'Compare with another model'}</span><span aria-hidden="true">↗</span>`;
   $('#mobileInspect').textContent='Inspect '+m.name+' ↗';
@@ -280,7 +280,7 @@ function openOutput(mode='selected',compareId=null){
   $('#viewerDialogEyebrow').textContent=compare?'SIDE-BY-SIDE COMPARISON':'OUTPUT INSPECTION';$('#viewerDialogTitle').textContent=b.name;
   const options=models.filter(n=>n.id!==m.id&&resultFor(n.id,b.id)).map(n=>`<option value="${n.id}" ${other?.id===n.id?'selected':''}>${escapeHTML(n.name)}</option>`).join('');
   const controls=compare?`<div class="comparison-controls"><label>Compare with <select id="compareModel" aria-label="Choose the comparison model">${options}</select></label><span class="linked-badge"><i aria-hidden="true"></i>Linked cameras</span></div>`:`<div class="comparison-controls"><span>Selected building · one submission</span><button class="text-button" id="startCompare">Compare submissions ↗</button></div>`;
-  $('#viewerDialogBody').innerHTML=controls+`<div class="output-layout"><div class="dialog-reference-panel"><img src="${escapeHTML(b.image)}" alt="${escapeHTML(b.name)} as the 3D tiles have it"><div><h3>The building itself</h3><p>${escapeHTML(b.name)}<br>${escapeHTML(b.source)}, the same case for every output.<br>Drag either model to inspect.</p></div></div><div class="dialog-outputs" style="--columns:${dialogModels.length}">${dialogModels.map(n=>{const r=resultFor(n.id,b.id);return `<div class="dialog-output"><div class="dialog-output-head"><h3>${escapeHTML(n.name)}</h3><b>${formatScore(r?.score)}</b></div><p>Case score · surface F ${formatScore(r?.surfaceF)} · ${escapeHTML(n.org)} · ${escapeHTML(r?r.effortLabel:n.effortLabel)} · released ${escapeHTML(formatDay(n.date))}</p><canvas data-model="${n.id}" tabindex="0" aria-label="${escapeHTML(n.name)} submission, drag or use arrow keys to rotate"></canvas><small>${usd(r?.costUSD)} / run · ${escapeHTML(runNote(r))}</small></div>`;}).join('')}</div></div>`;
+  $('#viewerDialogBody').innerHTML=controls+`<div class="output-layout"><div class="dialog-reference-panel"><img src="${escapeHTML(b.image)}" alt="${escapeHTML(b.name)} as the 3D tiles have it"><div><h3>The building itself</h3><p>${escapeHTML(b.name)}<br>${escapeHTML(b.source)}, the same case for every output.<br>Drag either model to inspect.</p></div></div><div class="dialog-outputs" style="--columns:${dialogModels.length}">${dialogModels.map(n=>{const r=resultFor(n.id,b.id);return `<div class="dialog-output"><div class="dialog-output-head"><h3>${escapeHTML(n.name)}</h3><b>${formatScore(r?.score)}</b></div><p>Case score · ${escapeHTML(n.org)} · ${escapeHTML(r?r.effortLabel:n.effortLabel)} · released ${escapeHTML(formatDay(n.date))}</p><canvas data-model="${n.id}" tabindex="0" aria-label="${escapeHTML(n.name)} submission, drag or use arrow keys to rotate"></canvas><small>${usd(r?.costUSD)} / run · ${escapeHTML(runNote(r))}</small></div>`;}).join('')}</div></div>`;
   if(!compare)$('.dialog-reference-panel p').innerHTML=`${escapeHTML(b.name)}<br>${escapeHTML(b.source)} at the benchmark cameras.<br>Drag or use arrow keys to rotate.`;
   $('#viewerDialogNote').textContent=`Submitted glTF · board snapshot ${DATA.snapshot}`;$('#dialogReset').hidden=false;$('#dialogMotion').hidden=false;
   $('#viewerDialog').showModal();
@@ -291,13 +291,9 @@ function openOutput(mode='selected',compareId=null){
 }
 function initFeatured(){
   const b=buildingById(FEATURED.buildingId),m=modelById(FEATURED.modelId),r=resultFor(m.id,b.id);$('#heroReferenceImg').src=b.image;
-  $('#featuredPill').textContent=m.name;$('#featuredNote').textContent=`Submitted glTF · overall ${formatScore(r?.score)} on this building · released ${formatDay(m.date)}`;
+  $('#featuredPill').textContent=m.name;$('#featuredNote').textContent=`Overall ${formatScore(r?.score)} on this building · released ${formatDay(m.date)}`;
   $('.featured-footer strong').textContent=b.name;
   featuredViewer=mountOutput($('#featuredCanvas'),b,m,{rotationX:.42,rotationY:-.7,centerX:.5,zoom:.97,speed:.09});
-}
-function initSnapshot(){
-  $('#snapshotLabel').textContent=`Snapshot ${DATA.snapshot}`;
-  $('#dataNote').textContent=`Scores and costs are the Enactra bench/building board’s, snapshot ${DATA.snapshot}. License-clean board: ${DATA.cleanBoard.runsScored.toLocaleString()} runs over ${DATA.cleanBoard.buildings} CC BY 4.0 buildings, ${DATA.cleanBoard.modelsRanked} models. All results: ${DATA.runsScored.toLocaleString()} runs, ${DATA.modelsRanked} models. Every mesh is the glTF the agent submitted.`;
 }
 
 let toastTimer;
@@ -356,6 +352,6 @@ window.addEventListener('hashchange',()=>{if(readHash())setSelection({}, {writeH
 let resizeTimer;window.addEventListener('resize',()=>{clearTimeout(resizeTimer);resizeTimer=setTimeout(renderChart,140);});
 window.addEventListener('keydown',e=>{if(e.key==='Escape')$('#chartTooltip').classList.remove('visible');});
 window.BuildingBench={getState:()=>({...state}),getData:()=>DATA,select:setSelection,exportFigure};
-initSnapshot();
+
 const deepLinked=readHash();initFeatured();setSelection({}, {announce:false,writeHash:deepLinked});
 if(deepLinked)requestAnimationFrame(()=>$('#benchmark').scrollIntoView({behavior:'instant'}));

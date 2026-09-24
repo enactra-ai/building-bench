@@ -1,5 +1,5 @@
 {
- "snapshot": "2026-09-09",
+ "snapshot": "2026-09-23",
  "sameSet": [
   "allegiant_stadium",
   "aon_center_chicago",
@@ -13,8 +13,8 @@
   "twa_flight_center",
   "udvar_hazy"
  ],
- "runsScored": 1826,
- "modelsRanked": 35,
+ "runsScored": 2192,
+ "modelsRanked": 49,
  "rig": {
   "schema": "city_bench.building_light/1",
   "sun_azimuth_deg": 135.0,
@@ -42,186 +42,340 @@
   "reach_m": 400.0
  },
  "cleanBoard": {
-  "runsScored": 202,
-  "modelsRanked": 15,
+  "runsScored": 532,
+  "modelsRanked": 29,
   "buildings": 12,
   "rows": {
-   "gpt6astraultra": {
-    "label": "gpt-6-astra (ultra)",
-    "overall": 0.7959,
-    "f": 0.6322,
-    "geometry": 0.8406,
-    "appearance": 0.7914,
-    "cost": 7.108274,
-    "minutes": 33.36,
+   "claudeopus55max": {
+    "label": "claude-opus-5-5 (max)",
+    "overall": 0.868,
+    "f": 0.6413,
+    "geometry": 0.8448,
+    "appearance": 0.963,
+    "cost": 45.4675335,
+    "minutes": 159.17,
     "cells": 12,
     "place": 1
+   },
+   "gpt6astraultra": {
+    "label": "gpt-6-astra (ultra)",
+    "overall": 0.8428,
+    "f": 0.5571,
+    "geometry": 0.8367,
+    "appearance": 0.9116,
+    "cost": 7.045719,
+    "minutes": 31.77,
+    "cells": 12,
+    "place": 2
    },
    "fable51max": {
     "label": "claude-fable-5-1 (max)",
-    "overall": 0.7761,
-    "f": 0.4668,
-    "geometry": 0.8188,
-    "appearance": 0.7996,
-    "cost": 33.147137,
-    "minutes": 64.74,
+    "overall": 0.8136,
+    "f": 0.4019,
+    "geometry": 0.8289,
+    "appearance": 0.9193,
+    "cost": 32.975917124999995,
+    "minutes": 63.96,
     "cells": 12,
-    "place": 1
+    "place": 2
+   },
+   "grok47xhigh": {
+    "label": "grok-4.7 (xhigh)",
+    "overall": 0.7833,
+    "f": 0.4006,
+    "geometry": 0.8068,
+    "appearance": 0.887,
+    "cost": 11.422699999999999,
+    "minutes": 36.81,
+    "cells": 12,
+    "place": 3
    },
    "fable": {
     "label": "claude-fable-5 (high)",
-    "overall": 0.764,
-    "f": 0.4988,
-    "geometry": 0.8759,
-    "appearance": 0.6499,
-    "cost": 40.358902,
-    "minutes": 54.9,
+    "overall": 0.7737,
+    "f": 0.3849,
+    "geometry": 0.857,
+    "appearance": 0.7383,
+    "cost": 29.095726999999997,
+    "minutes": 41.88,
     "cells": 2,
-    "place": 3
+    "place": 4
    },
    "fablemax": {
     "label": "claude-fable-5 (max)",
-    "overall": 0.7291,
-    "f": 0.4172,
-    "geometry": 0.7965,
-    "appearance": 0.7087,
-    "cost": 39.979621,
-    "minutes": 71.58,
-    "cells": 12,
-    "place": 3
-   },
-   "gpt56solmax": {
-    "label": "gpt-5.6-sol (max)",
-    "overall": 0.7134,
-    "f": 0.4063,
-    "geometry": 0.8093,
-    "appearance": 0.6887,
-    "cost": 8.034888800000001,
-    "minutes": 45.78,
-    "cells": 12,
-    "place": 3
-   },
-   "opusmax": {
-    "label": "claude-opus-5 (max)",
-    "overall": 0.7081,
-    "f": 0.3643,
-    "geometry": 0.7491,
-    "appearance": 0.7449,
-    "cost": 46.46919600000001,
-    "minutes": 93.75,
+    "overall": 0.7555,
+    "f": 0.3835,
+    "geometry": 0.8034,
+    "appearance": 0.8165,
+    "cost": 39.641364,
+    "minutes": 67.98,
     "cells": 12,
     "place": 4
    },
-   "musespark13max": {
-    "label": "muse-spark-1.3 (max)",
-    "overall": 0.6726,
-    "f": 0.3072,
-    "geometry": 0.7153,
-    "appearance": 0.6637,
-    "cost": 5.9479841,
-    "minutes": 66.81,
+   "opusmax": {
+    "label": "claude-opus-5 (max)",
+    "overall": 0.7448,
+    "f": 0.3042,
+    "geometry": 0.7729,
+    "appearance": 0.8218,
+    "cost": 46.3759445,
+    "minutes": 92.58,
+    "cells": 12,
+    "place": 5
+   },
+   "gpt56solmax": {
+    "label": "gpt-5.6-sol (max)",
+    "overall": 0.7388,
+    "f": 0.311,
+    "geometry": 0.7935,
+    "appearance": 0.7528,
+    "cost": 7.5439884,
+    "minutes": 43.82,
+    "cells": 12,
+    "place": 5
+   },
+   "unionalphaclaudecode": {
+    "label": "stealth/union-alpha (max) \u00b7 Claude Code",
+    "overall": 0.7307,
+    "f": 0.3469,
+    "geometry": 0.7703,
+    "appearance": 0.8375,
+    "cost": 3.7573204999999996,
+    "minutes": 30.24,
+    "cells": 12,
+    "place": 5
+   },
+   "deepseekv41flashclaudecode": {
+    "label": "deepseek/deepseek-v4.1-flash:wafer (max) \u00b7 Claude Code",
+    "overall": 0.7288,
+    "f": 0.2561,
+    "geometry": 0.7494,
+    "appearance": 0.9001,
+    "cost": 2.3317245,
+    "minutes": 114.13,
+    "cells": 12,
+    "place": 5
+   },
+   "gpt6solultra": {
+    "label": "gpt-6-sol (ultra)",
+    "overall": 0.698,
+    "f": 0.2485,
+    "geometry": 0.7376,
+    "appearance": 0.8203,
+    "cost": 1.9185364999999999,
+    "minutes": 19.09,
+    "cells": 12,
+    "place": 5
+   },
+   "deepseekv41flash": {
+    "label": "deepseek/deepseek-v4.1-flash:wafer",
+    "overall": 0.6964,
+    "f": 0.2547,
+    "geometry": 0.6922,
+    "appearance": 0.9217,
+    "cost": null,
+    "minutes": 69.72,
+    "cells": 1,
+    "place": 5
+   },
+   "gpt6solmax": {
+    "label": "gpt-6-sol (max)",
+    "overall": 0.6962,
+    "f": 0.2472,
+    "geometry": 0.7274,
+    "appearance": 0.8262,
+    "cost": 1.8870635,
+    "minutes": 20.75,
+    "cells": 12,
+    "place": 5
+   },
+   "grok46xhigh": {
+    "label": "grok-4.6 (xhigh)",
+    "overall": 0.695,
+    "f": 0.3464,
+    "geometry": 0.7637,
+    "appearance": 0.6975,
+    "cost": 10.59285,
+    "minutes": 53.34,
     "cells": 12,
     "place": 5
    },
    "gpt56terramax": {
     "label": "gpt-5.6-terra (max)",
-    "overall": 0.6595,
-    "f": 0.2489,
-    "geometry": 0.7395,
-    "appearance": 0.6235,
-    "cost": 4.3129308,
-    "minutes": 55.73,
-    "cells": 12,
-    "place": 6
-   },
-   "fablelow": {
-    "label": "claude-fable-5 (low)",
-    "overall": 0.6178,
-    "f": 0.2138,
-    "geometry": 0.6842,
-    "appearance": 0.6378,
-    "cost": 4.949040000000001,
-    "minutes": 8.22,
-    "cells": 3,
-    "place": 6
-   },
-   "gpt56lunamax": {
-    "label": "gpt-5.6-luna (max)",
-    "overall": 0.5815,
-    "f": 0.1334,
-    "geometry": 0.6173,
-    "appearance": 0.6074,
-    "cost": 0.45786316,
-    "minutes": 64.0,
-    "cells": 12,
-    "place": 9
-   },
-   "gemini38flash": {
-    "label": "gemini-3.8-flash (high)",
-    "overall": 0.5724,
-    "f": 0.2597,
-    "geometry": 0.6556,
-    "appearance": 0.5498,
-    "cost": 3.425589,
-    "minutes": 45.68,
-    "cells": 12,
-    "place": 9
-   },
-   "gemini": {
-    "label": "gemini-3.1-pro (high)",
-    "overall": 0.546,
-    "f": 0.1528,
-    "geometry": 0.6915,
-    "appearance": 0.5927,
-    "cost": 1.6162406,
-    "minutes": 18.5,
-    "cells": 1,
-    "place": 9
-   },
-   "sonnetmax": {
-    "label": "claude-sonnet-5 (max)",
-    "overall": 0.541,
-    "f": 0.1459,
-    "geometry": 0.5105,
-    "appearance": 0.5845,
-    "cost": 15.043141400000009,
-    "minutes": 60.77,
+    "overall": 0.6848,
+    "f": 0.2778,
+    "geometry": 0.7602,
+    "appearance": 0.6918,
+    "cost": 4.2589282,
+    "minutes": 53.03,
     "cells": 12,
     "place": 10
    },
-   "inklingfreeclaudecode": {
-    "label": "thinkingmachines/inkling:free \u00b7 Claude Code",
-    "overall": 0.3052,
-    "f": 0.0594,
-    "geometry": 0.2747,
-    "appearance": 0.3563,
-    "cost": 0.0,
-    "minutes": 4.49,
+   "musespark13max": {
+    "label": "muse-spark-1.3 (max)",
+    "overall": 0.6823,
+    "f": 0.2361,
+    "geometry": 0.7424,
+    "appearance": 0.7884,
+    "cost": 5.8897540500000005,
+    "minutes": 60.05,
     "cells": 12,
-    "place": 13
+    "place": 10
+   },
+   "zaiglm53flashxclaudecode": {
+    "label": "z-ai/glm-5.3-flashx (max) \u00b7 Claude Code",
+    "overall": 0.6799,
+    "f": 0.2871,
+    "geometry": 0.7561,
+    "appearance": 0.7124,
+    "cost": 2.325387,
+    "minutes": 80.5,
+    "cells": 12,
+    "place": 10
+   },
+   "swe2maxdevin": {
+    "label": "cognition/swe-2 (max)",
+    "overall": 0.6734,
+    "f": 0.2755,
+    "geometry": 0.7522,
+    "appearance": 0.7152,
+    "cost": 0.0,
+    "minutes": 247.49,
+    "cells": 12,
+    "place": 10
+   },
+   "fablelow": {
+    "label": "claude-fable-5 (low)",
+    "overall": 0.6569,
+    "f": 0.1544,
+    "geometry": 0.711,
+    "appearance": 0.7259,
+    "cost": 4.949040000000001,
+    "minutes": 8.22,
+    "cells": 3,
+    "place": 10
+   },
+   "gpt56lunamax": {
+    "label": "gpt-5.6-luna (max)",
+    "overall": 0.6156,
+    "f": 0.1678,
+    "geometry": 0.6822,
+    "appearance": 0.6703,
+    "cost": 0.45029904,
+    "minutes": 62.74,
+    "cells": 12,
+    "place": 17
+   },
+   "stealthspacebunnyalphaclaudecode": {
+    "label": "stealth/space-bunny-alpha (max) \u00b7 Claude Code",
+    "overall": 0.5558,
+    "f": 0.1978,
+    "geometry": 0.5952,
+    "appearance": 0.6339,
+    "cost": 0.0,
+    "minutes": 114.94,
+    "cells": 12,
+    "place": 17
+   },
+   "gemini38flash": {
+    "label": "gemini-3.8-flash (high)",
+    "overall": 0.5476,
+    "f": 0.2453,
+    "geometry": 0.6358,
+    "appearance": 0.5448,
+    "cost": 3.330324675,
+    "minutes": 39.51,
+    "cells": 12,
+    "place": 17
+   },
+   "sonnetmax": {
+    "label": "claude-sonnet-5 (max)",
+    "overall": 0.5436,
+    "f": 0.192,
+    "geometry": 0.6115,
+    "appearance": 0.6383,
+    "cost": 15.032763100000004,
+    "minutes": 60.73,
+    "cells": 12,
+    "place": 19
+   },
+   "kimik3max": {
+    "label": "kimi-k3 (thinking)",
+    "overall": 0.5403,
+    "f": 0.2382,
+    "geometry": 0.6726,
+    "appearance": 0.5183,
+    "cost": 5.844977500000001,
+    "minutes": 125.14,
+    "cells": 12,
+    "place": 19
+   },
+   "gemini": {
+    "label": "gemini-3.1-pro (high)",
+    "overall": 0.4178,
+    "f": 0.126,
+    "geometry": 0.5701,
+    "appearance": 0.4831,
+    "cost": 1.5500243999999999,
+    "minutes": 16.75,
+    "cells": 2,
+    "place": 19
+   },
+   "step5previewclaudecode": {
+    "label": "step-5-preview (max) \u00b7 Claude Code",
+    "overall": 0.3391,
+    "f": 0.0787,
+    "geometry": 0.4083,
+    "appearance": 0.4056,
+    "cost": 16.58585,
+    "minutes": 427.17,
+    "cells": 12,
+    "place": 24
+   },
+   "glm53flashmax": {
+    "label": "glm-5.3-flash (max)",
+    "overall": 0.3302,
+    "f": 0.1319,
+    "geometry": 0.3751,
+    "appearance": 0.3831,
+    "cost": 0.21804560249999994,
+    "minutes": 100.71,
+    "cells": 12,
+    "place": 24
    },
    "haiku": {
     "label": "claude-haiku-4-5",
-    "overall": 0.2826,
-    "f": 0.0413,
-    "geometry": 0.2597,
-    "appearance": 0.2939,
-    "cost": 0.5560415000000001,
-    "minutes": 13.02,
+    "overall": 0.2668,
+    "f": 0.0723,
+    "geometry": 0.407,
+    "appearance": 0.1791,
+    "cost": 0.5243465500000001,
+    "minutes": 10.85,
     "cells": 12,
-    "place": 13
+    "place": 25
+   },
+   "inklingfreeclaudecode": {
+    "label": "thinkingmachines/inkling:free \u00b7 Claude Code",
+    "overall": 0.2581,
+    "f": 0.0672,
+    "geometry": 0.3399,
+    "appearance": 0.3309,
+    "cost": 0.0,
+    "minutes": 4.31,
+    "cells": 12,
+    "place": 25
    }
   }
  },
  "sites": {
   "geisel": {
    "union": true,
-   "n": 125,
+   "n": 131,
    "source": "Google 3D Tiles"
   },
   "flatiron": {
    "union": true,
-   "n": 121,
+   "n": 128,
    "source": "Google 3D Tiles"
   },
   "allegiant_stadium": {
@@ -272,73 +426,73 @@
   "helsinki_122886734_enhanced_v1": {
    "union": false,
    "clean": true,
-   "n": 14,
+   "n": 43,
    "source": "Helsinki 3D city model"
   },
   "helsinki_122954081_enhanced_v1": {
    "union": false,
    "clean": true,
-   "n": 13,
+   "n": 41,
    "source": "Helsinki 3D city model"
   },
   "helsinki_123901485_enhanced_v1": {
    "union": false,
    "clean": true,
-   "n": 14,
+   "n": 44,
    "source": "Helsinki 3D city model"
   },
   "helsinki_8033120_enhanced_v1": {
    "union": false,
    "clean": true,
-   "n": 13,
+   "n": 41,
    "source": "Helsinki 3D city model"
   },
   "helsinki_cathedral_enhanced_v1": {
    "union": false,
    "clean": true,
-   "n": 15,
+   "n": 46,
    "source": "Helsinki 3D city model"
   },
   "melbourne_155809136_enhanced_v1": {
    "union": false,
    "clean": true,
-   "n": 13,
+   "n": 42,
    "source": "City of Melbourne 2020 photomesh"
   },
   "melbourne_22820458_enhanced_v1": {
    "union": false,
    "clean": true,
-   "n": 13,
+   "n": 42,
    "source": "City of Melbourne 2020 photomesh"
   },
   "melbourne_25422768_enhanced_v1": {
    "union": false,
    "clean": true,
-   "n": 13,
+   "n": 44,
    "source": "City of Melbourne 2020 photomesh"
   },
   "melbourne_296368687_enhanced_v1": {
    "union": false,
    "clean": true,
-   "n": 14,
+   "n": 44,
    "source": "City of Melbourne 2020 photomesh"
   },
   "melbourne_33106429_enhanced_v1": {
    "union": false,
    "clean": true,
-   "n": 13,
+   "n": 42,
    "source": "City of Melbourne 2020 photomesh"
   },
   "melbourne_45461060_enhanced_v1": {
    "union": false,
    "clean": true,
-   "n": 13,
+   "n": 42,
    "source": "City of Melbourne 2020 photomesh"
   },
   "melbourne_4817059_enhanced_v1": {
    "union": false,
    "clean": true,
-   "n": 14,
+   "n": 43,
    "source": "City of Melbourne 2020 photomesh"
   }
  }

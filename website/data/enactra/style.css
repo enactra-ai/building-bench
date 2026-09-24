@@ -1649,10 +1649,35 @@
 /* Leaderboard rows in the figures' company colours (bar + Pareto), one variable per series. */
 .ea{--series-claudeopus55max:#D97757;--series-gpt6astraultra:#10A37F;--series-fable51max:#D97757;--series-grok47xhigh:#111111;--series-fablemax:#D97757;--series-opusmax:#D97757;--series-gpt56solmax:#10A37F;--series-unionalphaclaudecode:#a8a29e;--series-deepseekv41flashclaudecode:#3f51e0;--series-gpt6solultra:#10A37F;--series-gpt6solmax:#10A37F;--series-grok46xhigh:#111111;--series-gpt56terramax:#10A37F;--series-musespark13max:#42a5f5;--series-zaiglm53flashxclaudecode:#96650b;--series-swe2maxdevin:#d94a7b;--series-gpt56lunamax:#10A37F;--series-gemini38flash:#7b1fa2;--series-sonnetmax:#D97757;--series-kimik3max:#9ab832;--series-step5previewclaudecode:#01f4e6;--series-glm53flashmax:#96650b;--series-haiku:#D97757;--series-inklingfreeclaudecode:#686868;}
 
-/* The leaderboard's two figures: the bar chart, then the Pareto frontier. On a phone they keep a
-   legible width and scroll sideways rather than shrinking their labels to nothing. */
-.ea .lb-figure{ margin: 0 0 18px; padding: 10px; border: 1px solid var(--line); border-radius: 14px; background: #fff; }
-.ea .lb-figure-scroll{ overflow-x: auto; -webkit-overflow-scrolling: touch; }
-.ea .lb-figure img{ display: block; width: 100%; height: auto; }
-@media (max-width: 760px){ .ea .lb-figure-bar img{ min-width: 720px; } .ea .lb-figure-pareto img{ min-width: 680px; } }
-.ea .lb-figure-pareto{ padding: 0; border: 0; background: none; }   /* the still carries its own card */
+/* The leaderboard's two figures, as live SVG: the bar chart, then the Pareto frontier. Hover or
+   focus a bar or a dot for its figures (plot.js); the others dim. On a phone they keep a legible
+   width and scroll sideways rather than shrinking their names to nothing. */
+.ea .lbf{ position: relative; margin: 0 0 18px; padding: 16px 10px 10px; border: 1px solid var(--line); border-radius: 14px; background: #fff; }
+.ea .lbf-scroll{ overflow-x: auto; -webkit-overflow-scrolling: touch; }
+.ea .lbf-svg{ display: block; width: 100%; height: auto; overflow: visible; }
+.ea .lbf .node{ cursor: pointer; outline: none; transition: opacity .15s; }
+.ea .lbf .node.dim{ opacity: .28; }
+.ea .lbf .node:focus-visible{ opacity: 1; }
+.ea .lbf .node:focus-visible path, .ea .lbf .node:focus-visible .chip{ stroke: #2b3531; stroke-width: 2; }
+.ea .lbf .hit{ fill: transparent; }
+.ea .lbf-pareto .grid{ stroke: #e6e3da; stroke-width: 1; }
+.ea .lbf-pareto .wall{ stroke: #c8c4b7; stroke-width: 1; }
+.ea .lbf-pareto .tick{ fill: #9aa19b; }
+.ea .lbf-pareto .axis{ fill: #7d857f; }
+.ea .lbf-pareto .front, .ea .lbf-pareto .halo{ fill: none; stroke: #2b3531; stroke-linejoin: round; stroke-linecap: round; }
+.ea .lbf-pareto .halo{ opacity: .13; }
+.ea .lbf-pareto .ring{ fill: none; stroke: #2b3531; }
+.ea .lbf-pareto .name{ paint-order: stroke fill; stroke: #fff; stroke-linejoin: round; }
+.ea .lbf-pareto .node.hot .name{ font-weight: 700; }
+.ea .lbf-cap{ margin: 8px 12px 2px; color: var(--muted); font-size: 12.5px; line-height: 1.6; }
+.ea .lbf-cap b{ color: var(--text); }
+@media (max-width: 760px){ .ea .lbf-svg{ min-width: 720px; } }
+/* The human-agreement badge in the Evaluation panel: it wraps inside the panel rather than widening the
+   panel's single grid column past its edge. */
+.ea .score-card{ grid-template-columns: minmax(0, 1fr); }
+.ea .eval-verify{ justify-self: start; max-width: 100%; font-size: 12px; line-height: 1.4; padding: 8px 12px; }
+.ea .eval-verify .verify-tip{ right: auto; left: 0; }
+.ea .eval-verify .verify-tip::before{ right: auto; left: 26px; }
+.ea .eval-verify{ display: block; border-radius: 14px; }
+.ea .eval-verify::before{ display: inline-grid; vertical-align: -3px; margin-right: 7px; }
+.ea .panel.score-card .eval-verify{ white-space: normal; }

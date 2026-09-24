@@ -5,20 +5,22 @@
     </div>
   </div>
 
-  <figure class="lb-figure lb-figure-bar">
-    <div class="lb-figure-scroll"><img src="/assets/buildingbench_bar.svg" width="1200" height="600" loading="lazy" alt="BuildingBench bar chart: overall score out of 100 for 23 models on the same 12 buildings, highest first — Claude Opus 5.5 (max) 87, GPT-6 Astra (ultra) 84, Claude Fable 5.1 (max) 81, Grok 4.7 (xhigh) 78, and down to Claude Haiku 4.5 at 27; SWE-2 (max) scores 67." /></div>
-  </figure>
-  <figure class="lb-figure lb-figure-pareto">
-    <div class="lb-figure-scroll"><img src="/assets/buildingbench_pareto.png" width="2400" height="1350" loading="lazy" alt="BuildingBench Pareto frontier: score against the median cost of one run, on a log axis with dearer runs on the left. The frontier runs from Claude Opus 5.5 (max) through GPT-6 Astra (ultra), Union Alpha, DeepSeek V4.1 Flash and the two GPT-6 Sol settings to SWE-2 (max), whose price is the board's estimate of $0.00." /></div>
-  </figure>
+  <div class="lbf lbf-bar" data-plot>
+    <div class="lbf-scroll"><!--FIG:bar--></div>
+    <div class="lb-tip" role="status"></div>
+  </div>
+  <div class="lbf lbf-pareto" data-plot>
+    <div class="lbf-scroll"><!--FIG:pareto--></div>
+    <div class="lb-tip" role="status"></div>
+    <p class="lbf-cap"><b>Solid:</b> the frontier &mdash; nothing cheaper scores higher. One dot per model, at the effort it was run at. SWE-2&rsquo;s price is the board&rsquo;s estimate of $0.00.</p>
+  </div>
 
   <section data-board="boardData">
     <div class="lb-toolbar">
-      <div class="lb-tracks" role="tablist" aria-label="Columns"><button role="tab" data-track="overall" aria-selected="true">Overall</button><button role="tab" data-track="geometry" aria-selected="false">Geometry</button><button role="tab" data-track="appearance" aria-selected="false">Appearance</button><button role="tab" data-track="effort" aria-selected="false">Cost &amp; effort</button></div>
       <label class="lb-search"><span aria-hidden="true">⌕</span><input type="search" placeholder="Search models" aria-label="Search models"></label>
     </div>
     <div class="lb-facets">
-      <span class="k">Family</span><button class="lb-chip" data-facet="family" data-value="Anthropic" aria-pressed="false">Anthropic</button><button class="lb-chip" data-facet="family" data-value="Cognition" aria-pressed="false">Cognition</button><button class="lb-chip" data-facet="family" data-value="DeepSeek" aria-pressed="false">DeepSeek</button><button class="lb-chip" data-facet="family" data-value="Google" aria-pressed="false">Google</button><button class="lb-chip" data-facet="family" data-value="Meta" aria-pressed="false">Meta</button><button class="lb-chip" data-facet="family" data-value="Moonshot AI" aria-pressed="false">Moonshot AI</button><button class="lb-chip" data-facet="family" data-value="OpenAI" aria-pressed="false">OpenAI</button><button class="lb-chip" data-facet="family" data-value="StepFun" aria-pressed="false">StepFun</button><button class="lb-chip" data-facet="family" data-value="Thinking Machines" aria-pressed="false">Thinking Machines</button><button class="lb-chip" data-facet="family" data-value="Undisclosed" aria-pressed="false">Undisclosed</button><button class="lb-chip" data-facet="family" data-value="xAI" aria-pressed="false">xAI</button><button class="lb-chip" data-facet="family" data-value="Z.ai" aria-pressed="false">Z.ai</button><span class="k">Effort</span><button class="lb-chip" data-facet="effort" data-value="ultra" aria-pressed="false">ultra</button><button class="lb-chip" data-facet="effort" data-value="max" aria-pressed="false">max</button><button class="lb-chip" data-facet="effort" data-value="xhigh" aria-pressed="false">xhigh</button><button class="lb-chip" data-facet="effort" data-value="high" aria-pressed="false">high</button><button class="lb-chip" data-facet="effort" data-value="thinking" aria-pressed="false">thinking</button><button class="lb-chip" data-facet="effort" data-value="none" aria-pressed="false">not set</button>
+      <span class="k">Family</span><button class="lb-chip" data-facet="family" data-value="Anthropic" aria-pressed="false">Anthropic</button><button class="lb-chip" data-facet="family" data-value="Cognition" aria-pressed="false">Cognition</button><button class="lb-chip" data-facet="family" data-value="DeepSeek" aria-pressed="false">DeepSeek</button><button class="lb-chip" data-facet="family" data-value="Google" aria-pressed="false">Google</button><button class="lb-chip" data-facet="family" data-value="Meta" aria-pressed="false">Meta</button><button class="lb-chip" data-facet="family" data-value="Moonshot AI" aria-pressed="false">Moonshot AI</button><button class="lb-chip" data-facet="family" data-value="OpenAI" aria-pressed="false">OpenAI</button><button class="lb-chip" data-facet="family" data-value="StepFun" aria-pressed="false">StepFun</button><button class="lb-chip" data-facet="family" data-value="Thinking Machines" aria-pressed="false">Thinking Machines</button><button class="lb-chip" data-facet="family" data-value="Undisclosed" aria-pressed="false">Undisclosed</button><button class="lb-chip" data-facet="family" data-value="SpaceXAI" aria-pressed="false">SpaceXAI</button><button class="lb-chip" data-facet="family" data-value="Z.ai" aria-pressed="false">Z.ai</button><span class="k">Effort</span><button class="lb-chip" data-facet="effort" data-value="ultra" aria-pressed="false">ultra</button><button class="lb-chip" data-facet="effort" data-value="max" aria-pressed="false">max</button><button class="lb-chip" data-facet="effort" data-value="xhigh" aria-pressed="false">xhigh</button><button class="lb-chip" data-facet="effort" data-value="high" aria-pressed="false">high</button><button class="lb-chip" data-facet="effort" data-value="thinking" aria-pressed="false">thinking</button><button class="lb-chip" data-facet="effort" data-value="none" aria-pressed="false">not set</button>
       <button class="lb-chip clear" type="button" data-facet-clear>Clear</button>
     </div>
     <div class="table-wrap">
@@ -29,9 +31,5 @@
       <span class="count"></span>
       <button class="lb-more" type="button" hidden></button>
     </div>
-    <details class="fold">
-      <summary>How the ranking is measured</summary>
-      <div>One number per model: the mean of its <b>overall</b> over <b>the same 12 license-clean buildings</b> (CC BY 4.0, from the Helsinki 3D city model and the City of Melbourne 2020 photomesh), one run per building, so every row is measured on identical cases and the rows are directly comparable. The bar chart shows that number out of 100. <b>The &plusmn; is that model&rsquo;s own standard error</b>: the deviation of its score from one building to the next, over the root of twelve. <b>Cost / run</b> is the median of what one run cost, as the agent&rsquo;s CLI reported it; rows tagged <b>est. price</b> are priced from their recorded tokens at the published list prices instead, and SWE-2&rsquo;s estimate is $0.00, which is why it sits in a lane of its own on the Pareto frontier. <b>frontier</b> marks the rows on that frontier: nothing cheaper scores higher. The # column is the position in the current sort, nothing more &mdash; neighbouring rows are often closer than their &plusmn; can separate. Board snapshot 2026-09-22.</div>
-    </details>
   </section>
 </div>

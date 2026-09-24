@@ -173,6 +173,26 @@
 },
 {
 "site": "geisel",
+"series": "gpt6astraultra",
+"run": "geisel-blind-gpt-6-astra-ultra-20260904T123005",
+"overall": 0.572,
+"surface_f": 0.49,
+"chamfer_m": 0.6847,
+"height_m": 40.15,
+"triangles": 11438,
+"glb": "../bench-runs/geisel-blind-gpt-6-astra-ultra-20260904T123005/submission/building.glb",
+"page": "../cell/geisel-blind-gpt-6-astra-ultra.html",
+"cost": null,
+"turns": 41.0,
+"nruns": 1,
+"allruns": [
+0.572
+],
+"ran": "2026-09-04",
+"minutes": 20.75
+},
+{
+"site": "geisel",
 "series": "sonnetmax",
 "run": "geisel-blind-sonnetmax-20260825T041009+6c09653a",
 "overall": 0.544,
@@ -290,6 +310,26 @@
 ],
 "ran": "2026-09-01",
 "minutes": 24.33
+},
+{
+"site": "geisel",
+"series": "gpt6astramax",
+"run": "geisel-blind-gpt-6-astra-max-20260907T130438",
+"overall": 0.543,
+"surface_f": 0.53,
+"chamfer_m": 0.6137,
+"height_m": 40.05,
+"triangles": 20090,
+"glb": "../bench-runs/geisel-blind-gpt-6-astra-max-20260907T130438/submission/building.glb",
+"page": "../cell/geisel-blind-gpt-6-astra-max.html",
+"cost": 10.21,
+"turns": 54.0,
+"nruns": 1,
+"allruns": [
+0.543
+],
+"ran": "2026-09-07",
+"minutes": 49.9
 },
 {
 "site": "geisel",
@@ -589,23 +629,63 @@
 },
 {
 "site": "geisel",
-"series": "grok46max",
-"run": "geisel-blind-grok46max-20260903T130344",
-"overall": 0.465,
-"surface_f": 0.177,
-"chamfer_m": 1.4953,
-"height_m": 39.4,
-"triangles": 2867,
-"glb": "../bench-runs/geisel-blind-grok46max-20260903T130344/submission/building.glb",
-"page": "../cell/geisel-blind-grok46max.html",
+"series": "grok46xhigh",
+"run": "geisel-blind-grok46xhigh-20260915T010455",
+"overall": 0.698,
+"surface_f": 0.246,
+"chamfer_m": 1.6995,
+"height_m": 36.6,
+"triangles": 3418,
+"glb": "../bench-runs/geisel-blind-grok46xhigh-20260915T010455/submission/building.glb",
+"page": "../cell/geisel-blind-grok46xhigh.html",
 "cost": null,
 "turns": null,
 "nruns": 1,
 "allruns": [
-0.465
+0.698
 ],
-"ran": "2026-09-03",
-"minutes": 67.67
+"ran": "2026-09-15",
+"minutes": 38.97
+},
+{
+"site": "geisel",
+"series": "grok45high",
+"run": "geisel-blind-grok45high-20260914T221924",
+"overall": 0.632,
+"surface_f": 0.22,
+"chamfer_m": 1.5362,
+"height_m": 36.8,
+"triangles": 5340,
+"glb": "../bench-runs/geisel-blind-grok45high-20260914T221924/submission/building.glb",
+"page": "../cell/geisel-blind-grok45high.html",
+"cost": null,
+"turns": null,
+"nruns": 1,
+"allruns": [
+0.632
+],
+"ran": "2026-09-14",
+"minutes": 32.7
+},
+{
+"site": "geisel",
+"series": "deepseekv41flashclaudecode",
+"run": "geisel-blind-deepseek-v41-flash-claude-code-20260911T173712",
+"overall": 0.759,
+"surface_f": 0.145,
+"chamfer_m": 2.9326,
+"height_m": 30.1,
+"triangles": 3708,
+"glb": "../bench-runs/geisel-blind-deepseek-v41-flash-claude-code-20260911T173712/submission/building.glb",
+"page": "../cell/geisel-blind-deepseek-v41-flash-claude-code.html",
+"cost": 0.0,
+"turns": 575.0,
+"nruns": 1,
+"allruns": [
+0.759
+],
+"ran": "2026-09-11",
+"minutes": 217.3
 },
 {
 "site": "geisel",
@@ -626,6 +706,26 @@
 ],
 "ran": "2026-09-02",
 "minutes": 25.17
+},
+{
+"site": "geisel",
+"series": "deepseekv41flash",
+"run": "geisel-blind-deepseek-v41-flash-20260911T114654",
+"overall": 0.599,
+"surface_f": 0.051,
+"chamfer_m": 3.6672,
+"height_m": 33.5,
+"triangles": 16640,
+"glb": "../bench-runs/geisel-blind-deepseek-v41-flash-20260911T114654/submission/building.glb",
+"page": "../cell/geisel-blind-deepseek-v41-flash.html",
+"cost": 0.36,
+"turns": 191.0,
+"nruns": 1,
+"allruns": [
+0.599
+],
+"ran": "2026-09-11",
+"minutes": 43.55
 },
 {
 "site": "flatiron",
@@ -686,6 +786,26 @@
 ],
 "ran": "2026-09-02",
 "minutes": 40.58
+},
+{
+"site": "flatiron",
+"series": "gpt6astraultra",
+"run": "flatiron-blind-gpt-6-astra-ultra-20260906T124102",
+"overall": 0.786,
+"surface_f": 0.432,
+"chamfer_m": 0.7324,
+"height_m": 93.8,
+"triangles": 14651,
+"glb": "../bench-runs/flatiron-blind-gpt-6-astra-ultra-20260906T124102/submission/building.glb",
+"page": "../cell/flatiron-blind-gpt-6-astra-ultra.html",
+"cost": 7.27,
+"turns": 51.0,
+"nruns": 1,
+"allruns": [
+0.786
+],
+"ran": "2026-09-06",
+"minutes": 28.53
 },
 {
 "site": "flatiron",
@@ -1231,6 +1351,86 @@
 ],
 "ran": "2026-08-26",
 "minutes": null
+},
+{
+"site": "flatiron",
+"series": "deepseekv41flash",
+"run": "flatiron-blind-deepseek-v41-flash-20260911T115323",
+"overall": 0.673,
+"surface_f": 0.34,
+"chamfer_m": 0.9993,
+"height_m": 86.0,
+"triangles": 458,
+"glb": "../bench-runs/flatiron-blind-deepseek-v41-flash-20260911T115323/submission/building.glb",
+"page": "../cell/flatiron-blind-deepseek-v41-flash.html",
+"cost": 0.2,
+"turns": 134.0,
+"nruns": 1,
+"allruns": [
+0.673
+],
+"ran": "2026-09-11",
+"minutes": 50.15
+},
+{
+"site": "flatiron",
+"series": "deepseekv41flashclaudecode",
+"run": "flatiron-blind-deepseek-v41-flash-claude-code-20260911T155948",
+"overall": 0.778,
+"surface_f": 0.264,
+"chamfer_m": 1.0829,
+"height_m": 88.0,
+"triangles": 458,
+"glb": "../bench-runs/flatiron-blind-deepseek-v41-flash-claude-code-20260911T155948/submission/building.glb",
+"page": "../cell/flatiron-blind-deepseek-v41-flash-claude-code.html",
+"cost": 0.0,
+"turns": 283.0,
+"nruns": 1,
+"allruns": [
+0.778
+],
+"ran": "2026-09-11",
+"minutes": 119.98
+},
+{
+"site": "flatiron",
+"series": "grok46xhigh",
+"run": "flatiron-blind-grok46xhigh-20260914T231829",
+"overall": 0.77,
+"surface_f": 0.261,
+"chamfer_m": 1.0844,
+"height_m": 89.55,
+"triangles": 3264,
+"glb": "../bench-runs/flatiron-blind-grok46xhigh-20260914T231829/submission/building.glb",
+"page": "../cell/flatiron-blind-grok46xhigh.html",
+"cost": null,
+"turns": null,
+"nruns": 1,
+"allruns": [
+0.77
+],
+"ran": "2026-09-14",
+"minutes": 58.15
+},
+{
+"site": "flatiron",
+"series": "grok45high",
+"run": "flatiron-blind-grok45high-20260915T002334",
+"overall": 0.653,
+"surface_f": 0.083,
+"chamfer_m": 1.4208,
+"height_m": 93.6,
+"triangles": 11414,
+"glb": "../bench-runs/flatiron-blind-grok45high-20260915T002334/submission/building.glb",
+"page": "../cell/flatiron-blind-grok45high.html",
+"cost": null,
+"turns": null,
+"nruns": 1,
+"allruns": [
+0.653
+],
+"ran": "2026-09-15",
+"minutes": 64.17
 },
 {
 "site": "allegiant_stadium",
@@ -5041,7 +5241,7 @@
 "turns": 16.0,
 "nruns": 7,
 "allruns": [
-0.136,
+0.23,
 0.264,
 0.302,
 0.341,
@@ -5816,6 +6016,228 @@
 },
 {
 "site": "helsinki_122886734_enhanced_v1",
+"series": "stealthspacebunnyalphaclaudecode",
+"run": "helsinki_122886734_enhanced_v1-blind-stealth-space-bunny-alpha-claude-code-20260923T181708",
+"overall": 0.783,
+"surface_f": 0.268,
+"chamfer_m": null,
+"height_m": null,
+"triangles": null,
+"glb": "../bench-runs/helsinki_122886734_enhanced_v1-blind-stealth-space-bunny-alpha-claude-code-20260923T181708/submission/building.glb",
+"page": null,
+"cost": 0.0,
+"turns": 1484.0,
+"nruns": 1,
+"allruns": [
+0.783
+],
+"ran": "2026-09-23",
+"minutes": 346.08
+},
+{
+"site": "helsinki_122886734_enhanced_v1",
+"series": "claudeopus55max",
+"run": "helsinki_122886734_enhanced_v1-blind-claude-opus-5-5-max-20260922T162609",
+"overall": 0.882,
+"surface_f": 0.799,
+"chamfer_m": null,
+"height_m": null,
+"triangles": null,
+"glb": "../bench-runs/helsinki_122886734_enhanced_v1-blind-claude-opus-5-5-max-20260922T162609/submission/building.glb",
+"page": null,
+"cost": 48.78,
+"turns": 487.0,
+"nruns": 1,
+"allruns": [
+0.882
+],
+"ran": "2026-09-22",
+"minutes": 160.7
+},
+{
+"site": "helsinki_122886734_enhanced_v1",
+"series": "gpt6solmax",
+"run": "helsinki_122886734_enhanced_v1-blind-gpt-6-sol-max-20260922T193117",
+"overall": 0.652,
+"surface_f": 0.33,
+"chamfer_m": null,
+"height_m": null,
+"triangles": null,
+"glb": "../bench-runs/helsinki_122886734_enhanced_v1-blind-gpt-6-sol-max-20260922T193117/submission/building.glb",
+"page": null,
+"cost": 1.76,
+"turns": 1.0,
+"nruns": 1,
+"allruns": [
+0.652
+],
+"ran": "2026-09-22",
+"minutes": 20.33
+},
+{
+"site": "helsinki_122886734_enhanced_v1",
+"series": "gpt6solultra",
+"run": "helsinki_122886734_enhanced_v1-blind-gpt-6-sol-ultra-20260922T183655",
+"overall": 0.735,
+"surface_f": 0.2,
+"chamfer_m": null,
+"height_m": null,
+"triangles": null,
+"glb": "../bench-runs/helsinki_122886734_enhanced_v1-blind-gpt-6-sol-ultra-20260922T183655/submission/building.glb",
+"page": null,
+"cost": 2.05,
+"turns": 1.0,
+"nruns": 1,
+"allruns": [
+0.735
+],
+"ran": "2026-09-22",
+"minutes": 24.45
+},
+{
+"site": "helsinki_122886734_enhanced_v1",
+"series": "swe2maxdevin",
+"run": "helsinki_122886734_enhanced_v1-blind-swe-2-max-devin-20260922T151322",
+"overall": 0.673,
+"surface_f": 0.266,
+"chamfer_m": null,
+"height_m": null,
+"triangles": null,
+"glb": "../bench-runs/helsinki_122886734_enhanced_v1-blind-swe-2-max-devin-20260922T151322/submission/building.glb",
+"page": null,
+"cost": 0.0,
+"turns": 832.0,
+"nruns": 1,
+"allruns": [
+0.673
+],
+"ran": "2026-09-22",
+"minutes": 260.63
+},
+{
+"site": "helsinki_122886734_enhanced_v1",
+"series": "grok47xhigh",
+"run": "helsinki_122886734_enhanced_v1-blind-grok47xhigh-20260921T164933",
+"overall": 0.826,
+"surface_f": 0.493,
+"chamfer_m": null,
+"height_m": null,
+"triangles": null,
+"glb": "../bench-runs/helsinki_122886734_enhanced_v1-blind-grok47xhigh-20260921T164933/submission/building.glb",
+"page": null,
+"cost": 11.53,
+"turns": 79.0,
+"nruns": 1,
+"allruns": [
+0.826
+],
+"ran": "2026-09-21",
+"minutes": 36.82
+},
+{
+"site": "helsinki_122886734_enhanced_v1",
+"series": "step5previewclaudecode",
+"run": "helsinki_122886734_enhanced_v1-blind-step-5-preview-claude-code-20260921T040442",
+"overall": 0.295,
+"surface_f": 0.051,
+"chamfer_m": null,
+"height_m": null,
+"triangles": null,
+"glb": "../bench-runs/helsinki_122886734_enhanced_v1-blind-step-5-preview-claude-code-20260921T040442/submission/building.glb",
+"page": null,
+"cost": 18.5,
+"turns": 1606.0,
+"nruns": 1,
+"allruns": [
+0.295
+],
+"ran": "2026-09-21",
+"minutes": 436.6
+},
+{
+"site": "helsinki_122886734_enhanced_v1",
+"series": "zaiglm53flashxclaudecode",
+"run": "helsinki_122886734_enhanced_v1-blind-z-ai-glm-5.3-flashx-claude-code-20260919T231723",
+"overall": 0.762,
+"surface_f": 0.445,
+"chamfer_m": null,
+"height_m": null,
+"triangles": null,
+"glb": "../bench-runs/helsinki_122886734_enhanced_v1-blind-z-ai-glm-5.3-flashx-claude-code-20260919T231723/submission/building.glb",
+"page": null,
+"cost": 1.66,
+"turns": 212.0,
+"nruns": 1,
+"allruns": [
+0.762
+],
+"ran": "2026-09-19",
+"minutes": 52.22
+},
+{
+"site": "helsinki_122886734_enhanced_v1",
+"series": "unionalphaclaudecode",
+"run": "helsinki_122886734_enhanced_v1-blind-union-alpha-claude-code-20260916T210853",
+"overall": 0.878,
+"surface_f": 0.425,
+"chamfer_m": null,
+"height_m": null,
+"triangles": null,
+"glb": "../bench-runs/helsinki_122886734_enhanced_v1-blind-union-alpha-claude-code-20260916T210853/submission/building.glb",
+"page": null,
+"cost": 5.32,
+"turns": 86.0,
+"nruns": 1,
+"allruns": [
+0.878
+],
+"ran": "2026-09-16",
+"minutes": 43.87
+},
+{
+"site": "helsinki_122886734_enhanced_v1",
+"series": "grok46xhigh",
+"run": "helsinki_122886734_enhanced_v1-blind-grok46xhigh-20260914T094635+3de25e20",
+"overall": 0.558,
+"surface_f": 0.281,
+"chamfer_m": null,
+"height_m": null,
+"triangles": null,
+"glb": "../bench-runs/helsinki_122886734_enhanced_v1-blind-grok46xhigh-20260914T094635/submission/building.glb",
+"page": null,
+"cost": 12.67,
+"turns": 65.0,
+"nruns": 2,
+"allruns": [
+0.558,
+0.562
+],
+"ran": "2026-09-14",
+"minutes": 61.2
+},
+{
+"site": "helsinki_122886734_enhanced_v1",
+"series": "deepseekv41flashclaudecode",
+"run": "helsinki_122886734_enhanced_v1-blind-deepseek-v41-flash-claude-code-20260912T042652",
+"overall": 0.72,
+"surface_f": 0.345,
+"chamfer_m": null,
+"height_m": null,
+"triangles": null,
+"glb": "../bench-runs/helsinki_122886734_enhanced_v1-blind-deepseek-v41-flash-claude-code-20260912T042652/submission/building.glb",
+"page": null,
+"cost": 2.63,
+"turns": 340.0,
+"nruns": 2,
+"allruns": [
+0.72,
+0.76
+],
+"ran": "2026-09-12",
+"minutes": 92.57
+},
+{
+"site": "helsinki_122886734_enhanced_v1",
 "series": "inklingfreeclaudecode",
 "run": "helsinki_122886734_enhanced_v1-blind-inkling-free-claude-code-20260906T134953+scored-output",
 "overall": 0.383,
@@ -5827,9 +6249,10 @@
 "page": null,
 "cost": 0.0,
 "turns": 40.0,
-"nruns": 1,
+"nruns": 2,
 "allruns": [
-0.383
+0.383,
+0.39
 ],
 "ran": "2026-09-06",
 "minutes": 4.1
@@ -5837,9 +6260,9 @@
 {
 "site": "helsinki_122886734_enhanced_v1",
 "series": "fablemax",
-"run": "helsinki_122886734_enhanced_v1-blind-fablemax-20260906T085341",
-"overall": 0.704,
-"surface_f": 0.412,
+"run": "helsinki_122886734_enhanced_v1-blind-fablemax-20260906T085341+3de25e20",
+"overall": 0.681,
+"surface_f": 0.322,
 "chamfer_m": null,
 "height_m": null,
 "triangles": null,
@@ -5847,8 +6270,9 @@
 "page": null,
 "cost": 36.49,
 "turns": 134.0,
-"nruns": 1,
+"nruns": 2,
 "allruns": [
+0.681,
 0.704
 ],
 "ran": "2026-09-06",
@@ -5857,9 +6281,9 @@
 {
 "site": "helsinki_122886734_enhanced_v1",
 "series": "sonnetmax",
-"run": "helsinki_122886734_enhanced_v1-blind-sonnetmax-20260906T051052",
-"overall": 0.383,
-"surface_f": 0.043,
+"run": "helsinki_122886734_enhanced_v1-blind-sonnetmax-20260906T051052+3de25e20",
+"overall": 0.356,
+"surface_f": 0.061,
 "chamfer_m": null,
 "height_m": null,
 "triangles": null,
@@ -5867,8 +6291,9 @@
 "page": null,
 "cost": 15.2,
 "turns": 230.0,
-"nruns": 1,
+"nruns": 2,
 "allruns": [
+0.356,
 0.383
 ],
 "ran": "2026-09-06",
@@ -5887,9 +6312,10 @@
 "page": null,
 "cost": 0.34,
 "turns": 64.0,
-"nruns": 1,
+"nruns": 2,
 "allruns": [
-0.498
+0.498,
+0.549
 ],
 "ran": "2026-09-06",
 "minutes": 41.57
@@ -5907,9 +6333,10 @@
 "page": null,
 "cost": 4.41,
 "turns": 84.0,
-"nruns": 1,
+"nruns": 2,
 "allruns": [
-0.623
+0.623,
+0.727
 ],
 "ran": "2026-09-06",
 "minutes": 36.18
@@ -5927,9 +6354,10 @@
 "page": null,
 "cost": 5.94,
 "turns": 55.0,
-"nruns": 1,
+"nruns": 2,
 "allruns": [
-0.677
+0.677,
+0.784
 ],
 "ran": "2026-09-06",
 "minutes": 33.6
@@ -5937,9 +6365,9 @@
 {
 "site": "helsinki_122886734_enhanced_v1",
 "series": "haiku",
-"run": "helsinki_122886734_enhanced_v1-blind-haiku-20260906T024650",
-"overall": 0.393,
-"surface_f": 0.045,
+"run": "helsinki_122886734_enhanced_v1-blind-haiku-20260906T024650+3de25e20",
+"overall": 0.314,
+"surface_f": 0.118,
 "chamfer_m": null,
 "height_m": null,
 "triangles": null,
@@ -5947,8 +6375,9 @@
 "page": null,
 "cost": 0.46,
 "turns": 58.0,
-"nruns": 1,
+"nruns": 2,
 "allruns": [
+0.314,
 0.393
 ],
 "ran": "2026-09-06",
@@ -5956,23 +6385,24 @@
 },
 {
 "site": "helsinki_122886734_enhanced_v1",
-"series": "gemini38flash",
-"run": "helsinki_122886734_enhanced_v1-blind-gemini38flash-20260905T011746+aggregate-db38bd2f8840",
-"overall": 0.605,
-"surface_f": 0.492,
+"series": "kimik3max",
+"run": "helsinki_122886734_enhanced_v1-blind-kimi-k3-max-20260905T164751",
+"overall": 0.571,
+"surface_f": 0.391,
 "chamfer_m": null,
 "height_m": null,
 "triangles": null,
-"glb": "../bench-runs/helsinki_122886734_enhanced_v1-blind-gemini38flash-20260905T011746/submission/building.glb",
+"glb": "../bench-runs/helsinki_122886734_enhanced_v1-blind-kimi-k3-max-20260905T164751/submission/building.glb",
 "page": null,
-"cost": 2.24,
-"turns": null,
-"nruns": 1,
+"cost": 3.34,
+"turns": 70.0,
+"nruns": 2,
 "allruns": [
-0.605
+0.571,
+0.587
 ],
 "ran": "2026-09-05",
-"minutes": 15.65
+"minutes": 78.83
 },
 {
 "site": "helsinki_122886734_enhanced_v1",
@@ -5987,33 +6417,34 @@
 "page": null,
 "cost": 36.65,
 "turns": 196.0,
-"nruns": 1,
+"nruns": 2,
 "allruns": [
-0.728
+0.728,
+0.81
 ],
 "ran": "2026-09-05",
 "minutes": 85.0
 },
 {
 "site": "helsinki_122886734_enhanced_v1",
-"series": "musespark13max",
-"run": "helsinki_122886734_enhanced_v1-blind-musespark13max-20260905T000508+cost",
-"overall": 0.592,
-"surface_f": 0.147,
+"series": "gemini38flash",
+"run": "helsinki_122886734_enhanced_v1-blind-gemini38flash-20260905T011746+aggregate-db38bd2f8840",
+"overall": 0.605,
+"surface_f": 0.492,
 "chamfer_m": null,
 "height_m": null,
 "triangles": null,
-"glb": "../bench-runs/helsinki_122886734_enhanced_v1-blind-musespark13max-20260905T000508/submission/building.glb",
+"glb": "../bench-runs/helsinki_122886734_enhanced_v1-blind-gemini38flash-20260905T011746/submission/building.glb",
 "page": null,
-"cost": 9.44,
-"turns": 426.0,
+"cost": 2.24,
+"turns": null,
 "nruns": 2,
 "allruns": [
-0.592,
-0.592
+0.605,
+0.703
 ],
 "ran": "2026-09-05",
-"minutes": 95.38
+"minutes": 15.65
 },
 {
 "site": "helsinki_122886734_enhanced_v1",
@@ -6028,9 +6459,10 @@
 "page": null,
 "cost": 28.67,
 "turns": 141.0,
-"nruns": 1,
+"nruns": 2,
 "allruns": [
-0.624
+0.624,
+0.854
 ],
 "ran": "2026-09-05",
 "minutes": 42.85
@@ -6048,19 +6480,285 @@
 "page": null,
 "cost": 3.37,
 "turns": 35.0,
-"nruns": 1,
+"nruns": 2,
 "allruns": [
-0.571
+0.571,
+0.703
 ],
 "ran": "2026-09-05",
 "minutes": 6.03
 },
 {
+"site": "helsinki_122886734_enhanced_v1",
+"series": "musespark13max",
+"run": "helsinki_122886734_enhanced_v1-blind-musespark13max-20260905T000508+cost",
+"overall": 0.592,
+"surface_f": 0.147,
+"chamfer_m": null,
+"height_m": null,
+"triangles": null,
+"glb": "../bench-runs/helsinki_122886734_enhanced_v1-blind-musespark13max-20260905T000508/submission/building.glb",
+"page": null,
+"cost": 9.44,
+"turns": 426.0,
+"nruns": 3,
+"allruns": [
+0.576,
+0.592,
+0.592
+],
+"ran": "2026-09-05",
+"minutes": 95.38
+},
+{
+"site": "helsinki_122886734_enhanced_v1",
+"series": "gpt6astraultra",
+"run": "helsinki_122886734_enhanced_v1-blind-gpt-6-astra-ultra-20260904T222324",
+"overall": 0.728,
+"surface_f": 0.726,
+"chamfer_m": null,
+"height_m": null,
+"triangles": null,
+"glb": "../bench-runs/helsinki_122886734_enhanced_v1-blind-gpt-6-astra-ultra-20260904T222324/submission/building.glb",
+"page": null,
+"cost": 7.15,
+"turns": 45.0,
+"nruns": 2,
+"allruns": [
+0.728,
+0.845
+],
+"ran": "2026-09-04",
+"minutes": 27.38
+},
+{
+"site": "helsinki_122954081_enhanced_v1",
+"series": "stealthspacebunnyalphaclaudecode",
+"run": "helsinki_122954081_enhanced_v1-blind-stealth-space-bunny-alpha-claude-code-20260923T181708",
+"overall": 0.596,
+"surface_f": 0.26,
+"chamfer_m": null,
+"height_m": null,
+"triangles": null,
+"glb": "../bench-runs/helsinki_122954081_enhanced_v1-blind-stealth-space-bunny-alpha-claude-code-20260923T181708/submission/building.glb",
+"page": null,
+"cost": 0.0,
+"turns": 662.0,
+"nruns": 1,
+"allruns": [
+0.596
+],
+"ran": "2026-09-23",
+"minutes": 126.4
+},
+{
+"site": "helsinki_122954081_enhanced_v1",
+"series": "claudeopus55max",
+"run": "helsinki_122954081_enhanced_v1-blind-claude-opus-5-5-max-20260922T162609",
+"overall": 0.85,
+"surface_f": 0.818,
+"chamfer_m": null,
+"height_m": null,
+"triangles": null,
+"glb": "../bench-runs/helsinki_122954081_enhanced_v1-blind-claude-opus-5-5-max-20260922T162609/submission/building.glb",
+"page": null,
+"cost": 43.81,
+"turns": 450.0,
+"nruns": 1,
+"allruns": [
+0.85
+],
+"ran": "2026-09-22",
+"minutes": 130.17
+},
+{
+"site": "helsinki_122954081_enhanced_v1",
+"series": "gpt6solmax",
+"run": "helsinki_122954081_enhanced_v1-blind-gpt-6-sol-max-20260922T193118",
+"overall": 0.74,
+"surface_f": 0.278,
+"chamfer_m": null,
+"height_m": null,
+"triangles": null,
+"glb": "../bench-runs/helsinki_122954081_enhanced_v1-blind-gpt-6-sol-max-20260922T193118/submission/building.glb",
+"page": null,
+"cost": 2.95,
+"turns": 1.0,
+"nruns": 1,
+"allruns": [
+0.74
+],
+"ran": "2026-09-22",
+"minutes": 23.87
+},
+{
+"site": "helsinki_122954081_enhanced_v1",
+"series": "gpt6solultra",
+"run": "helsinki_122954081_enhanced_v1-blind-gpt-6-sol-ultra-20260922T183656",
+"overall": 0.709,
+"surface_f": 0.144,
+"chamfer_m": null,
+"height_m": null,
+"triangles": null,
+"glb": "../bench-runs/helsinki_122954081_enhanced_v1-blind-gpt-6-sol-ultra-20260922T183656/submission/building.glb",
+"page": null,
+"cost": 2.04,
+"turns": 1.0,
+"nruns": 1,
+"allruns": [
+0.709
+],
+"ran": "2026-09-22",
+"minutes": 23.22
+},
+{
+"site": "helsinki_122954081_enhanced_v1",
+"series": "swe2maxdevin",
+"run": "helsinki_122954081_enhanced_v1-blind-swe-2-max-devin-20260922T144502",
+"overall": 0.717,
+"surface_f": 0.236,
+"chamfer_m": null,
+"height_m": null,
+"triangles": null,
+"glb": "../bench-runs/helsinki_122954081_enhanced_v1-blind-swe-2-max-devin-20260922T144502/submission/building.glb",
+"page": null,
+"cost": 0.0,
+"turns": 985.0,
+"nruns": 1,
+"allruns": [
+0.717
+],
+"ran": "2026-09-22",
+"minutes": 279.73
+},
+{
+"site": "helsinki_122954081_enhanced_v1",
+"series": "grok47xhigh",
+"run": "helsinki_122954081_enhanced_v1-blind-grok47xhigh-20260921T161135",
+"overall": 0.821,
+"surface_f": 0.384,
+"chamfer_m": null,
+"height_m": null,
+"triangles": null,
+"glb": "../bench-runs/helsinki_122954081_enhanced_v1-blind-grok47xhigh-20260921T161135/submission/building.glb",
+"page": null,
+"cost": 14.18,
+"turns": 81.0,
+"nruns": 1,
+"allruns": [
+0.821
+],
+"ran": "2026-09-21",
+"minutes": 36.38
+},
+{
+"site": "helsinki_122954081_enhanced_v1",
+"series": "step5previewclaudecode",
+"run": "helsinki_122954081_enhanced_v1-blind-step-5-preview-claude-code-20260921T040444",
+"overall": 0.315,
+"surface_f": 0.074,
+"chamfer_m": null,
+"height_m": null,
+"triangles": null,
+"glb": "../bench-runs/helsinki_122954081_enhanced_v1-blind-step-5-preview-claude-code-20260921T040444/submission/building.glb",
+"page": null,
+"cost": 16.89,
+"turns": 1314.0,
+"nruns": 1,
+"allruns": [
+0.315
+],
+"ran": "2026-09-21",
+"minutes": 426.13
+},
+{
+"site": "helsinki_122954081_enhanced_v1",
+"series": "zaiglm53flashxclaudecode",
+"run": "helsinki_122954081_enhanced_v1-blind-z-ai-glm-5.3-flashx-claude-code-20260919T151620",
+"overall": 0.795,
+"surface_f": 0.382,
+"chamfer_m": null,
+"height_m": null,
+"triangles": null,
+"glb": "../bench-runs/helsinki_122954081_enhanced_v1-blind-z-ai-glm-5.3-flashx-claude-code-20260919T151620/submission/building.glb",
+"page": null,
+"cost": 1.85,
+"turns": 234.0,
+"nruns": 1,
+"allruns": [
+0.795
+],
+"ran": "2026-09-19",
+"minutes": 64.2
+},
+{
+"site": "helsinki_122954081_enhanced_v1",
+"series": "unionalphaclaudecode",
+"run": "helsinki_122954081_enhanced_v1-blind-union-alpha-claude-code-20260916T210853",
+"overall": 0.72,
+"surface_f": 0.364,
+"chamfer_m": null,
+"height_m": null,
+"triangles": null,
+"glb": "../bench-runs/helsinki_122954081_enhanced_v1-blind-union-alpha-claude-code-20260916T210853/submission/building.glb",
+"page": null,
+"cost": 3.41,
+"turns": 59.0,
+"nruns": 1,
+"allruns": [
+0.72
+],
+"ran": "2026-09-16",
+"minutes": 24.48
+},
+{
+"site": "helsinki_122954081_enhanced_v1",
+"series": "grok46xhigh",
+"run": "helsinki_122954081_enhanced_v1-blind-grok46xhigh-20260914T094635+3de25e20",
+"overall": 0.513,
+"surface_f": 0.2,
+"chamfer_m": null,
+"height_m": null,
+"triangles": null,
+"glb": "../bench-runs/helsinki_122954081_enhanced_v1-blind-grok46xhigh-20260914T094635/submission/building.glb",
+"page": null,
+"cost": 13.53,
+"turns": 71.0,
+"nruns": 2,
+"allruns": [
+0.513,
+0.599
+],
+"ran": "2026-09-14",
+"minutes": 40.33
+},
+{
+"site": "helsinki_122954081_enhanced_v1",
+"series": "deepseekv41flashclaudecode",
+"run": "helsinki_122954081_enhanced_v1-blind-deepseek-v41-flash-claude-code-20260912T042652+3de25e20",
+"overall": 0.739,
+"surface_f": 0.212,
+"chamfer_m": null,
+"height_m": null,
+"triangles": null,
+"glb": "../bench-runs/helsinki_122954081_enhanced_v1-blind-deepseek-v41-flash-claude-code-20260912T042652/submission/building.glb",
+"page": null,
+"cost": 3.21,
+"turns": 413.0,
+"nruns": 2,
+"allruns": [
+0.739,
+0.762
+],
+"ran": "2026-09-12",
+"minutes": 171.23
+},
+{
 "site": "helsinki_122954081_enhanced_v1",
 "series": "inklingfreeclaudecode",
-"run": "helsinki_122954081_enhanced_v1-blind-inkling-free-claude-code-20260906T134927+scored-output",
-"overall": 0.373,
-"surface_f": 0.068,
+"run": "helsinki_122954081_enhanced_v1-blind-inkling-free-claude-code-20260906T134927+scored-output+3de25e20",
+"overall": 0.209,
+"surface_f": 0.064,
 "chamfer_m": null,
 "height_m": null,
 "triangles": null,
@@ -6068,8 +6766,9 @@
 "page": null,
 "cost": 0.0,
 "turns": 39.0,
-"nruns": 1,
+"nruns": 2,
 "allruns": [
+0.209,
 0.373
 ],
 "ran": "2026-09-06",
@@ -6088,9 +6787,10 @@
 "page": null,
 "cost": 16.09,
 "turns": 221.0,
-"nruns": 1,
+"nruns": 2,
 "allruns": [
-0.521
+0.521,
+0.579
 ],
 "ran": "2026-09-06",
 "minutes": 60.68
@@ -6108,9 +6808,10 @@
 "page": null,
 "cost": 3.65,
 "turns": 65.0,
-"nruns": 1,
+"nruns": 2,
 "allruns": [
-0.635
+0.635,
+0.66
 ],
 "ran": "2026-09-06",
 "minutes": 63.42
@@ -6118,9 +6819,9 @@
 {
 "site": "helsinki_122954081_enhanced_v1",
 "series": "gpt56lunamax",
-"run": "helsinki_122954081_enhanced_v1-blind-gpt-5.6-luna-max-20260906T021346",
-"overall": 0.676,
-"surface_f": 0.267,
+"run": "helsinki_122954081_enhanced_v1-blind-gpt-5.6-luna-max-20260906T021346+3de25e20",
+"overall": 0.672,
+"surface_f": 0.196,
 "chamfer_m": null,
 "height_m": null,
 "triangles": null,
@@ -6128,8 +6829,9 @@
 "page": null,
 "cost": 0.46,
 "turns": 89.0,
-"nruns": 1,
+"nruns": 2,
 "allruns": [
+0.672,
 0.676
 ],
 "ran": "2026-09-06",
@@ -6148,9 +6850,10 @@
 "page": null,
 "cost": 8.03,
 "turns": 80.0,
-"nruns": 1,
+"nruns": 2,
 "allruns": [
-0.631
+0.631,
+0.736
 ],
 "ran": "2026-09-06",
 "minutes": 47.78
@@ -6158,9 +6861,9 @@
 {
 "site": "helsinki_122954081_enhanced_v1",
 "series": "haiku",
-"run": "helsinki_122954081_enhanced_v1-blind-haiku-20260906T005223",
-"overall": 0.36,
-"surface_f": 0.079,
+"run": "helsinki_122954081_enhanced_v1-blind-haiku-20260906T005223+3de25e20",
+"overall": 0.357,
+"surface_f": 0.105,
 "chamfer_m": null,
 "height_m": null,
 "triangles": null,
@@ -6168,12 +6871,34 @@
 "page": null,
 "cost": 0.49,
 "turns": 61.0,
-"nruns": 1,
+"nruns": 2,
 "allruns": [
+0.357,
 0.36
 ],
 "ran": "2026-09-06",
 "minutes": 7.48
+},
+{
+"site": "helsinki_122954081_enhanced_v1",
+"series": "kimik3max",
+"run": "helsinki_122954081_enhanced_v1-blind-kimi-k3-max-20260905T203852+3de25e20",
+"overall": 0.416,
+"surface_f": 0.145,
+"chamfer_m": null,
+"height_m": null,
+"triangles": null,
+"glb": "../bench-runs/helsinki_122954081_enhanced_v1-blind-kimi-k3-max-20260905T203852/submission/building.glb",
+"page": null,
+"cost": 10.46,
+"turns": 192.0,
+"nruns": 2,
+"allruns": [
+0.416,
+0.433
+],
+"ran": "2026-09-05",
+"minutes": 309.6
 },
 {
 "site": "helsinki_122954081_enhanced_v1",
@@ -6188,9 +6913,10 @@
 "page": null,
 "cost": 73.46,
 "turns": 205.0,
-"nruns": 1,
+"nruns": 2,
 "allruns": [
-0.755
+0.755,
+0.779
 ],
 "ran": "2026-09-05",
 "minutes": 78.0
@@ -6198,9 +6924,9 @@
 {
 "site": "helsinki_122954081_enhanced_v1",
 "series": "fable51max",
-"run": "helsinki_122954081_enhanced_v1-blind-fable51max-20260905T084218",
-"overall": 0.806,
-"surface_f": 0.756,
+"run": "helsinki_122954081_enhanced_v1-blind-fable51max-20260905T084218+3de25e20",
+"overall": 0.781,
+"surface_f": 0.314,
 "chamfer_m": null,
 "height_m": null,
 "triangles": null,
@@ -6208,8 +6934,9 @@
 "page": null,
 "cost": 32.8,
 "turns": 174.0,
-"nruns": 1,
+"nruns": 2,
 "allruns": [
+0.781,
 0.806
 ],
 "ran": "2026-09-05",
@@ -6228,9 +6955,10 @@
 "page": null,
 "cost": 69.73,
 "turns": 334.0,
-"nruns": 1,
+"nruns": 2,
 "allruns": [
-0.585
+0.585,
+0.651
 ],
 "ran": "2026-09-05",
 "minutes": 113.65
@@ -6248,9 +6976,10 @@
 "page": null,
 "cost": 2.79,
 "turns": null,
-"nruns": 1,
+"nruns": 2,
 "allruns": [
-0.574
+0.574,
+0.6
 ],
 "ran": "2026-09-04",
 "minutes": 67.55
@@ -6258,7 +6987,7 @@
 {
 "site": "helsinki_122954081_enhanced_v1",
 "series": "musespark13max",
-"run": "helsinki_122954081_enhanced_v1-blind-musespark13max-20260904T222904+cost",
+"run": "helsinki_122954081_enhanced_v1-blind-musespark13max-20260904T222904",
 "overall": 0.597,
 "surface_f": 0.294,
 "chamfer_m": null,
@@ -6268,20 +6997,264 @@
 "page": null,
 "cost": 2.6,
 "turns": 216.0,
-"nruns": 2,
+"nruns": 3,
 "allruns": [
 0.597,
-0.597
+0.597,
+0.611
 ],
 "ran": "2026-09-04",
 "minutes": 38.58
 },
 {
+"site": "helsinki_122954081_enhanced_v1",
+"series": "gpt6astraultra",
+"run": "helsinki_122954081_enhanced_v1-blind-gpt-6-astra-ultra-20260904T221911",
+"overall": 0.808,
+"surface_f": 0.732,
+"chamfer_m": null,
+"height_m": null,
+"triangles": null,
+"glb": "../bench-runs/helsinki_122954081_enhanced_v1-blind-gpt-6-astra-ultra-20260904T221911/submission/building.glb",
+"page": null,
+"cost": 8.41,
+"turns": 53.0,
+"nruns": 2,
+"allruns": [
+0.808,
+0.845
+],
+"ran": "2026-09-04",
+"minutes": 36.57
+},
+{
+"site": "helsinki_123901485_enhanced_v1",
+"series": "stealthspacebunnyalphaclaudecode",
+"run": "helsinki_123901485_enhanced_v1-blind-stealth-space-bunny-alpha-claude-code-20260923T181708",
+"overall": 0.593,
+"surface_f": 0.19,
+"chamfer_m": null,
+"height_m": null,
+"triangles": null,
+"glb": "../bench-runs/helsinki_123901485_enhanced_v1-blind-stealth-space-bunny-alpha-claude-code-20260923T181708/submission/building.glb",
+"page": null,
+"cost": 0.0,
+"turns": 173.0,
+"nruns": 1,
+"allruns": [
+0.593
+],
+"ran": "2026-09-23",
+"minutes": 31.07
+},
+{
+"site": "helsinki_123901485_enhanced_v1",
+"series": "claudeopus55max",
+"run": "helsinki_123901485_enhanced_v1-blind-claude-opus-5-5-max-20260922T162609",
+"overall": 0.897,
+"surface_f": 0.699,
+"chamfer_m": null,
+"height_m": null,
+"triangles": null,
+"glb": "../bench-runs/helsinki_123901485_enhanced_v1-blind-claude-opus-5-5-max-20260922T162609/submission/building.glb",
+"page": null,
+"cost": 44.72,
+"turns": 406.0,
+"nruns": 1,
+"allruns": [
+0.897
+],
+"ran": "2026-09-22",
+"minutes": 164.38
+},
+{
+"site": "helsinki_123901485_enhanced_v1",
+"series": "gpt6solmax",
+"run": "helsinki_123901485_enhanced_v1-blind-gpt-6-sol-max-20260922T193119",
+"overall": 0.745,
+"surface_f": 0.318,
+"chamfer_m": null,
+"height_m": null,
+"triangles": null,
+"glb": "../bench-runs/helsinki_123901485_enhanced_v1-blind-gpt-6-sol-max-20260922T193119/submission/building.glb",
+"page": null,
+"cost": 1.46,
+"turns": 1.0,
+"nruns": 1,
+"allruns": [
+0.745
+],
+"ran": "2026-09-22",
+"minutes": 18.32
+},
+{
+"site": "helsinki_123901485_enhanced_v1",
+"series": "gpt6solultra",
+"run": "helsinki_123901485_enhanced_v1-blind-gpt-6-sol-ultra-20260922T183657",
+"overall": 0.739,
+"surface_f": 0.398,
+"chamfer_m": null,
+"height_m": null,
+"triangles": null,
+"glb": "../bench-runs/helsinki_123901485_enhanced_v1-blind-gpt-6-sol-ultra-20260922T183657/submission/building.glb",
+"page": null,
+"cost": 1.63,
+"turns": 1.0,
+"nruns": 1,
+"allruns": [
+0.739
+],
+"ran": "2026-09-22",
+"minutes": 17.23
+},
+{
+"site": "helsinki_123901485_enhanced_v1",
+"series": "swe2maxdevin",
+"run": "helsinki_123901485_enhanced_v1-blind-swe-2-max-devin-20260922T130145",
+"overall": 0.663,
+"surface_f": 0.354,
+"chamfer_m": null,
+"height_m": null,
+"triangles": null,
+"glb": "../bench-runs/helsinki_123901485_enhanced_v1-blind-swe-2-max-devin-20260922T130145/submission/building.glb",
+"page": null,
+"cost": 0.0,
+"turns": 731.0,
+"nruns": 1,
+"allruns": [
+0.663
+],
+"ran": "2026-09-22",
+"minutes": 234.27
+},
+{
+"site": "helsinki_123901485_enhanced_v1",
+"series": "grok47xhigh",
+"run": "helsinki_123901485_enhanced_v1-blind-grok47xhigh-20260921T161135",
+"overall": 0.683,
+"surface_f": 0.283,
+"chamfer_m": null,
+"height_m": null,
+"triangles": null,
+"glb": "../bench-runs/helsinki_123901485_enhanced_v1-blind-grok47xhigh-20260921T161135/submission/building.glb",
+"page": null,
+"cost": 14.65,
+"turns": 91.0,
+"nruns": 1,
+"allruns": [
+0.683
+],
+"ran": "2026-09-21",
+"minutes": 36.73
+},
+{
+"site": "helsinki_123901485_enhanced_v1",
+"series": "step5previewclaudecode",
+"run": "helsinki_123901485_enhanced_v1-blind-step-5-preview-claude-code-20260920T223257",
+"overall": 0.389,
+"surface_f": 0.077,
+"chamfer_m": null,
+"height_m": null,
+"triangles": null,
+"glb": "../bench-runs/helsinki_123901485_enhanced_v1-blind-step-5-preview-claude-code-20260920T223257/submission/building.glb",
+"page": null,
+"cost": 6.67,
+"turns": 572.0,
+"nruns": 1,
+"allruns": [
+0.389
+],
+"ran": "2026-09-20",
+"minutes": 188.68
+},
+{
+"site": "helsinki_123901485_enhanced_v1",
+"series": "zaiglm53flashxclaudecode",
+"run": "helsinki_123901485_enhanced_v1-blind-z-ai-glm-5.3-flashx-claude-code-20260919T231723",
+"overall": 0.689,
+"surface_f": 0.229,
+"chamfer_m": null,
+"height_m": null,
+"triangles": null,
+"glb": "../bench-runs/helsinki_123901485_enhanced_v1-blind-z-ai-glm-5.3-flashx-claude-code-20260919T231723/submission/building.glb",
+"page": null,
+"cost": 2.28,
+"turns": 260.0,
+"nruns": 1,
+"allruns": [
+0.689
+],
+"ran": "2026-09-19",
+"minutes": 67.67
+},
+{
+"site": "helsinki_123901485_enhanced_v1",
+"series": "unionalphaclaudecode",
+"run": "helsinki_123901485_enhanced_v1-blind-union-alpha-claude-code-20260916T221026",
+"overall": 0.758,
+"surface_f": 0.458,
+"chamfer_m": null,
+"height_m": null,
+"triangles": null,
+"glb": "../bench-runs/helsinki_123901485_enhanced_v1-blind-union-alpha-claude-code-20260916T221026/submission/building.glb",
+"page": null,
+"cost": 2.34,
+"turns": 68.0,
+"nruns": 1,
+"allruns": [
+0.758
+],
+"ran": "2026-09-16",
+"minutes": 26.73
+},
+{
+"site": "helsinki_123901485_enhanced_v1",
+"series": "grok46xhigh",
+"run": "helsinki_123901485_enhanced_v1-blind-grok46xhigh-20260914T094635+3de25e20",
+"overall": 0.666,
+"surface_f": 0.284,
+"chamfer_m": null,
+"height_m": null,
+"triangles": null,
+"glb": "../bench-runs/helsinki_123901485_enhanced_v1-blind-grok46xhigh-20260914T094635/submission/building.glb",
+"page": null,
+"cost": 16.53,
+"turns": 72.0,
+"nruns": 2,
+"allruns": [
+0.666,
+0.764
+],
+"ran": "2026-09-14",
+"minutes": 66.27
+},
+{
+"site": "helsinki_123901485_enhanced_v1",
+"series": "deepseekv41flashclaudecode",
+"run": "helsinki_123901485_enhanced_v1-blind-deepseek-v41-flash-claude-code-20260912T042652",
+"overall": 0.775,
+"surface_f": 0.181,
+"chamfer_m": null,
+"height_m": null,
+"triangles": null,
+"glb": "../bench-runs/helsinki_123901485_enhanced_v1-blind-deepseek-v41-flash-claude-code-20260912T042652/submission/building.glb",
+"page": null,
+"cost": 5.65,
+"turns": 435.0,
+"nruns": 2,
+"allruns": [
+0.775,
+0.778
+],
+"ran": "2026-09-12",
+"minutes": 193.57
+},
+{
 "site": "helsinki_123901485_enhanced_v1",
 "series": "inklingfreeclaudecode",
-"run": "helsinki_123901485_enhanced_v1-blind-inkling-free-claude-code-20260906T135258",
-"overall": 0.424,
-"surface_f": 0.133,
+"run": "helsinki_123901485_enhanced_v1-blind-inkling-free-claude-code-20260906T135258+3de25e20",
+"overall": 0.408,
+"surface_f": 0.068,
 "chamfer_m": null,
 "height_m": null,
 "triangles": null,
@@ -6289,8 +7262,9 @@
 "page": null,
 "cost": 0.0,
 "turns": 96.0,
-"nruns": 1,
+"nruns": 2,
 "allruns": [
+0.408,
 0.424
 ],
 "ran": "2026-09-06",
@@ -6299,9 +7273,9 @@
 {
 "site": "helsinki_123901485_enhanced_v1",
 "series": "sonnetmax",
-"run": "helsinki_123901485_enhanced_v1-blind-sonnetmax-20260906T101702",
-"overall": 0.558,
-"surface_f": 0.213,
+"run": "helsinki_123901485_enhanced_v1-blind-sonnetmax-20260906T101702+3de25e20",
+"overall": 0.508,
+"surface_f": 0.197,
 "chamfer_m": null,
 "height_m": null,
 "triangles": null,
@@ -6309,8 +7283,9 @@
 "page": null,
 "cost": 15.7,
 "turns": 240.0,
-"nruns": 1,
+"nruns": 2,
 "allruns": [
+0.508,
 0.558
 ],
 "ran": "2026-09-06",
@@ -6319,9 +7294,9 @@
 {
 "site": "helsinki_123901485_enhanced_v1",
 "series": "haiku",
-"run": "helsinki_123901485_enhanced_v1-blind-haiku-20260906T033409",
-"overall": 0.334,
-"surface_f": 0.063,
+"run": "helsinki_123901485_enhanced_v1-blind-haiku-20260906T033409+3de25e20",
+"overall": 0.279,
+"surface_f": 0.124,
 "chamfer_m": null,
 "height_m": null,
 "triangles": null,
@@ -6329,8 +7304,9 @@
 "page": null,
 "cost": 0.61,
 "turns": 69.0,
-"nruns": 1,
+"nruns": 2,
 "allruns": [
+0.279,
 0.334
 ],
 "ran": "2026-09-06",
@@ -6349,9 +7325,10 @@
 "page": null,
 "cost": 0.38,
 "turns": 64.0,
-"nruns": 1,
+"nruns": 2,
 "allruns": [
-0.661
+0.661,
+0.688
 ],
 "ran": "2026-09-06",
 "minutes": 61.47
@@ -6369,9 +7346,10 @@
 "page": null,
 "cost": 28.12,
 "turns": 108.0,
-"nruns": 1,
+"nruns": 2,
 "allruns": [
-0.734
+0.734,
+0.748
 ],
 "ran": "2026-09-06",
 "minutes": 71.57
@@ -6389,9 +7367,10 @@
 "page": null,
 "cost": 2.25,
 "turns": 42.0,
-"nruns": 1,
+"nruns": 2,
 "allruns": [
-0.649
+0.649,
+0.664
 ],
 "ran": "2026-09-06",
 "minutes": 20.97
@@ -6409,12 +7388,34 @@
 "page": null,
 "cost": 11.02,
 "turns": 116.0,
-"nruns": 1,
+"nruns": 2,
 "allruns": [
-0.715
+0.715,
+0.746
 ],
 "ran": "2026-09-06",
 "minutes": 67.53
+},
+{
+"site": "helsinki_123901485_enhanced_v1",
+"series": "kimik3max",
+"run": "helsinki_123901485_enhanced_v1-blind-kimi-k3-max-20260905T221241+3de25e20",
+"overall": 0.484,
+"surface_f": 0.22,
+"chamfer_m": null,
+"height_m": null,
+"triangles": null,
+"glb": "../bench-runs/helsinki_123901485_enhanced_v1-blind-kimi-k3-max-20260905T221241/submission/building.glb",
+"page": null,
+"cost": 2.08,
+"turns": 48.0,
+"nruns": 2,
+"allruns": [
+0.484,
+0.489
+],
+"ran": "2026-09-05",
+"minutes": 34.93
 },
 {
 "site": "helsinki_123901485_enhanced_v1",
@@ -6429,17 +7430,81 @@
 "page": null,
 "cost": 48.74,
 "turns": 256.0,
-"nruns": 1,
+"nruns": 2,
 "allruns": [
-0.73
+0.73,
+0.733
 ],
 "ran": "2026-09-05",
 "minutes": 91.42
 },
 {
 "site": "helsinki_123901485_enhanced_v1",
+"series": "gpt6astraultra",
+"run": "helsinki_123901485_enhanced_v1-blind-gpt-6-astra-ultra-20260905T053213",
+"overall": 0.814,
+"surface_f": 0.63,
+"chamfer_m": null,
+"height_m": null,
+"triangles": null,
+"glb": "../bench-runs/helsinki_123901485_enhanced_v1-blind-gpt-6-astra-ultra-20260905T053213/submission/building.glb",
+"page": null,
+"cost": 6.54,
+"turns": 42.0,
+"nruns": 2,
+"allruns": [
+0.814,
+0.879
+],
+"ran": "2026-09-05",
+"minutes": 33.35
+},
+{
+"site": "helsinki_123901485_enhanced_v1",
+"series": "glm53flashmax",
+"run": "helsinki_123901485_enhanced_v1-blind-glm-5.3-flash-max-20260905T124709+3de25e20",
+"overall": 0.722,
+"surface_f": 0.406,
+"chamfer_m": null,
+"height_m": null,
+"triangles": null,
+"glb": "../bench-runs/helsinki_123901485_enhanced_v1-blind-glm-5.3-flash-max-20260905T124709/submission/building.glb",
+"page": null,
+"cost": 0.42,
+"turns": 132.0,
+"nruns": 2,
+"allruns": [
+0.722,
+0.73
+],
+"ran": "2026-09-05",
+"minutes": 155.25
+},
+{
+"site": "helsinki_123901485_enhanced_v1",
+"series": "fable",
+"run": "helsinki_123901485_enhanced_v1-blind-fable-20260905T012338+3de25e20",
+"overall": 0.783,
+"surface_f": 0.381,
+"chamfer_m": null,
+"height_m": null,
+"triangles": null,
+"glb": "../bench-runs/helsinki_123901485_enhanced_v1-blind-fable-20260905T012338/submission/building.glb",
+"page": null,
+"cost": 17.83,
+"turns": 88.0,
+"nruns": 2,
+"allruns": [
+0.783,
+0.786
+],
+"ran": "2026-09-05",
+"minutes": 28.85
+},
+{
+"site": "helsinki_123901485_enhanced_v1",
 "series": "musespark13max",
-"run": "helsinki_123901485_enhanced_v1-blind-musespark13max-20260904T235404+cost",
+"run": "helsinki_123901485_enhanced_v1-blind-musespark13max-20260904T235404",
 "overall": 0.748,
 "surface_f": 0.349,
 "chamfer_m": null,
@@ -6449,53 +7514,14 @@
 "page": null,
 "cost": 11.05,
 "turns": 642.0,
-"nruns": 2,
+"nruns": 3,
 "allruns": [
 0.748,
-0.748
+0.748,
+0.773
 ],
 "ran": "2026-09-04",
 "minutes": 123.35
-},
-{
-"site": "helsinki_123901485_enhanced_v1",
-"series": "gemini38flash",
-"run": "helsinki_123901485_enhanced_v1-blind-gemini38flash-20260904T224355+aggregate-9800ae7ea3c1",
-"overall": 0.718,
-"surface_f": 0.429,
-"chamfer_m": null,
-"height_m": null,
-"triangles": null,
-"glb": "../bench-runs/helsinki_123901485_enhanced_v1-blind-gemini38flash-20260904T224355/submission/building.glb",
-"page": null,
-"cost": 2.42,
-"turns": null,
-"nruns": 1,
-"allruns": [
-0.718
-],
-"ran": "2026-09-04",
-"minutes": 17.5
-},
-{
-"site": "helsinki_123901485_enhanced_v1",
-"series": "fable",
-"run": "helsinki_123901485_enhanced_v1-blind-fable-20260905T012338",
-"overall": 0.786,
-"surface_f": 0.469,
-"chamfer_m": null,
-"height_m": null,
-"triangles": null,
-"glb": "../bench-runs/helsinki_123901485_enhanced_v1-blind-fable-20260905T012338/submission/building.glb",
-"page": null,
-"cost": 17.83,
-"turns": 88.0,
-"nruns": 1,
-"allruns": [
-0.786
-],
-"ran": "2026-09-05",
-"minutes": 28.85
 },
 {
 "site": "helsinki_123901485_enhanced_v1",
@@ -6510,12 +7536,256 @@
 "page": null,
 "cost": 32.12,
 "turns": 192.0,
-"nruns": 1,
+"nruns": 2,
 "allruns": [
-0.853
+0.853,
+0.854
 ],
 "ran": "2026-09-04",
 "minutes": 58.98
+},
+{
+"site": "helsinki_123901485_enhanced_v1",
+"series": "gemini38flash",
+"run": "helsinki_123901485_enhanced_v1-blind-gemini38flash-20260904T224355+aggregate-9800ae7ea3c1",
+"overall": 0.718,
+"surface_f": 0.429,
+"chamfer_m": null,
+"height_m": null,
+"triangles": null,
+"glb": "../bench-runs/helsinki_123901485_enhanced_v1-blind-gemini38flash-20260904T224355/submission/building.glb",
+"page": null,
+"cost": 2.42,
+"turns": null,
+"nruns": 2,
+"allruns": [
+0.718,
+0.73
+],
+"ran": "2026-09-04",
+"minutes": 17.5
+},
+{
+"site": "helsinki_8033120_enhanced_v1",
+"series": "stealthspacebunnyalphaclaudecode",
+"run": "helsinki_8033120_enhanced_v1-blind-stealth-space-bunny-alpha-claude-code-20260923T181708",
+"overall": 0.717,
+"surface_f": 0.432,
+"chamfer_m": null,
+"height_m": null,
+"triangles": null,
+"glb": "../bench-runs/helsinki_8033120_enhanced_v1-blind-stealth-space-bunny-alpha-claude-code-20260923T181708/submission/building.glb",
+"page": null,
+"cost": 0.0,
+"turns": 551.0,
+"nruns": 1,
+"allruns": [
+0.717
+],
+"ran": "2026-09-23",
+"minutes": 104.47
+},
+{
+"site": "helsinki_8033120_enhanced_v1",
+"series": "claudeopus55max",
+"run": "helsinki_8033120_enhanced_v1-blind-claude-opus-5-5-max-20260922T220121",
+"overall": 0.825,
+"surface_f": 0.753,
+"chamfer_m": null,
+"height_m": null,
+"triangles": null,
+"glb": "../bench-runs/helsinki_8033120_enhanced_v1-blind-claude-opus-5-5-max-20260922T220121/submission/building.glb",
+"page": null,
+"cost": 47.36,
+"turns": 426.0,
+"nruns": 1,
+"allruns": [
+0.825
+],
+"ran": "2026-09-22",
+"minutes": 35.28
+},
+{
+"site": "helsinki_8033120_enhanced_v1",
+"series": "gpt6solmax",
+"run": "helsinki_8033120_enhanced_v1-blind-gpt-6-sol-max-20260922T193120",
+"overall": 0.686,
+"surface_f": 0.341,
+"chamfer_m": null,
+"height_m": null,
+"triangles": null,
+"glb": "../bench-runs/helsinki_8033120_enhanced_v1-blind-gpt-6-sol-max-20260922T193120/submission/building.glb",
+"page": null,
+"cost": 1.9,
+"turns": 1.0,
+"nruns": 1,
+"allruns": [
+0.686
+],
+"ran": "2026-09-22",
+"minutes": 22.68
+},
+{
+"site": "helsinki_8033120_enhanced_v1",
+"series": "gpt6solultra",
+"run": "helsinki_8033120_enhanced_v1-blind-gpt-6-sol-ultra-20260922T183658",
+"overall": 0.72,
+"surface_f": 0.402,
+"chamfer_m": null,
+"height_m": null,
+"triangles": null,
+"glb": "../bench-runs/helsinki_8033120_enhanced_v1-blind-gpt-6-sol-ultra-20260922T183658/submission/building.glb",
+"page": null,
+"cost": 1.44,
+"turns": 1.0,
+"nruns": 1,
+"allruns": [
+0.72
+],
+"ran": "2026-09-22",
+"minutes": 18.57
+},
+{
+"site": "helsinki_8033120_enhanced_v1",
+"series": "swe2maxdevin",
+"run": "helsinki_8033120_enhanced_v1-blind-swe-2-max-devin-20260922T133612",
+"overall": 0.626,
+"surface_f": 0.231,
+"chamfer_m": null,
+"height_m": null,
+"triangles": null,
+"glb": "../bench-runs/helsinki_8033120_enhanced_v1-blind-swe-2-max-devin-20260922T133612/submission/building.glb",
+"page": null,
+"cost": 0.0,
+"turns": 581.0,
+"nruns": 1,
+"allruns": [
+0.626
+],
+"ran": "2026-09-22",
+"minutes": 158.97
+},
+{
+"site": "helsinki_8033120_enhanced_v1",
+"series": "grok47xhigh",
+"run": "helsinki_8033120_enhanced_v1-blind-grok47xhigh-20260921T161135",
+"overall": 0.69,
+"surface_f": 0.188,
+"chamfer_m": null,
+"height_m": null,
+"triangles": null,
+"glb": "../bench-runs/helsinki_8033120_enhanced_v1-blind-grok47xhigh-20260921T161135/submission/building.glb",
+"page": null,
+"cost": 11.32,
+"turns": 84.0,
+"nruns": 1,
+"allruns": [
+0.69
+],
+"ran": "2026-09-21",
+"minutes": 35.68
+},
+{
+"site": "helsinki_8033120_enhanced_v1",
+"series": "step5previewclaudecode",
+"run": "helsinki_8033120_enhanced_v1-blind-step-5-preview-claude-code-20260921T040444",
+"overall": 0.0,
+"surface_f": null,
+"chamfer_m": null,
+"height_m": null,
+"triangles": null,
+"glb": "../bench-runs/helsinki_8033120_enhanced_v1-blind-step-5-preview-claude-code-20260921T040444/submission/building.glb",
+"page": null,
+"cost": 16.29,
+"turns": 1489.0,
+"nruns": 1,
+"allruns": [
+0.0
+],
+"ran": "2026-09-21",
+"minutes": 426.45
+},
+{
+"site": "helsinki_8033120_enhanced_v1",
+"series": "zaiglm53flashxclaudecode",
+"run": "helsinki_8033120_enhanced_v1-blind-z-ai-glm-5.3-flashx-claude-code-20260919T231723",
+"overall": 0.521,
+"surface_f": 0.235,
+"chamfer_m": null,
+"height_m": null,
+"triangles": null,
+"glb": "../bench-runs/helsinki_8033120_enhanced_v1-blind-z-ai-glm-5.3-flashx-claude-code-20260919T231723/submission/building.glb",
+"page": null,
+"cost": 2.5,
+"turns": 266.0,
+"nruns": 1,
+"allruns": [
+0.521
+],
+"ran": "2026-09-19",
+"minutes": 84.25
+},
+{
+"site": "helsinki_8033120_enhanced_v1",
+"series": "unionalphaclaudecode",
+"run": "helsinki_8033120_enhanced_v1-blind-union-alpha-claude-code-20260916T210853",
+"overall": 0.769,
+"surface_f": 0.373,
+"chamfer_m": null,
+"height_m": null,
+"triangles": null,
+"glb": "../bench-runs/helsinki_8033120_enhanced_v1-blind-union-alpha-claude-code-20260916T210853/submission/building.glb",
+"page": null,
+"cost": 6.4,
+"turns": 124.0,
+"nruns": 1,
+"allruns": [
+0.769
+],
+"ran": "2026-09-16",
+"minutes": 53.88
+},
+{
+"site": "helsinki_8033120_enhanced_v1",
+"series": "grok46xhigh",
+"run": "helsinki_8033120_enhanced_v1-blind-grok46xhigh-20260914T094635+3de25e20",
+"overall": 0.65,
+"surface_f": 0.231,
+"chamfer_m": null,
+"height_m": null,
+"triangles": null,
+"glb": "../bench-runs/helsinki_8033120_enhanced_v1-blind-grok46xhigh-20260914T094635/submission/building.glb",
+"page": null,
+"cost": 7.98,
+"turns": 58.0,
+"nruns": 2,
+"allruns": [
+0.65,
+0.683
+],
+"ran": "2026-09-14",
+"minutes": 65.1
+},
+{
+"site": "helsinki_8033120_enhanced_v1",
+"series": "deepseekv41flashclaudecode",
+"run": "helsinki_8033120_enhanced_v1-blind-deepseek-v41-flash-claude-code-20260912T042652+3de25e20",
+"overall": 0.549,
+"surface_f": 0.151,
+"chamfer_m": null,
+"height_m": null,
+"triangles": null,
+"glb": "../bench-runs/helsinki_8033120_enhanced_v1-blind-deepseek-v41-flash-claude-code-20260912T042652/submission/building.glb",
+"page": null,
+"cost": 4.56,
+"turns": 339.0,
+"nruns": 2,
+"allruns": [
+0.549,
+0.566
+],
+"ran": "2026-09-12",
+"minutes": 202.2
 },
 {
 "site": "helsinki_8033120_enhanced_v1",
@@ -6530,9 +7800,10 @@
 "page": null,
 "cost": 0.0,
 "turns": 46.0,
-"nruns": 1,
+"nruns": 2,
 "allruns": [
-0.0
+0.0,
+0.216
 ],
 "ran": "2026-09-06",
 "minutes": 4.12
@@ -6550,9 +7821,10 @@
 "page": null,
 "cost": 15.02,
 "turns": 210.0,
-"nruns": 1,
+"nruns": 2,
 "allruns": [
-0.568
+0.568,
+0.658
 ],
 "ran": "2026-09-06",
 "minutes": 60.77
@@ -6560,9 +7832,9 @@
 {
 "site": "helsinki_8033120_enhanced_v1",
 "series": "haiku",
-"run": "helsinki_8033120_enhanced_v1-blind-haiku-20260906T024851",
-"overall": 0.333,
-"surface_f": 0.0,
+"run": "helsinki_8033120_enhanced_v1-blind-haiku-20260906T024851+3de25e20",
+"overall": 0.254,
+"surface_f": 0.034,
 "chamfer_m": null,
 "height_m": null,
 "triangles": null,
@@ -6570,8 +7842,9 @@
 "page": null,
 "cost": 0.62,
 "turns": 70.0,
-"nruns": 1,
+"nruns": 2,
 "allruns": [
+0.254,
 0.333
 ],
 "ran": "2026-09-06",
@@ -6590,9 +7863,10 @@
 "page": null,
 "cost": 55.39,
 "turns": 160.0,
-"nruns": 1,
+"nruns": 2,
 "allruns": [
-0.623
+0.623,
+0.664
 ],
 "ran": "2026-09-06",
 "minutes": 72.05
@@ -6610,9 +7884,10 @@
 "page": null,
 "cost": 0.19,
 "turns": 47.0,
-"nruns": 1,
+"nruns": 2,
 "allruns": [
-0.497
+0.497,
+0.578
 ],
 "ran": "2026-09-06",
 "minutes": 25.58
@@ -6630,9 +7905,10 @@
 "page": null,
 "cost": 1.21,
 "turns": 20.0,
-"nruns": 1,
+"nruns": 2,
 "allruns": [
-0.523
+0.523,
+0.541
 ],
 "ran": "2026-09-06",
 "minutes": 19.28
@@ -6650,52 +7926,13 @@
 "page": null,
 "cost": 12.42,
 "turns": 121.0,
-"nruns": 1,
+"nruns": 2,
 "allruns": [
-0.581
+0.581,
+0.619
 ],
 "ran": "2026-09-05",
 "minutes": 75.93
-},
-{
-"site": "helsinki_8033120_enhanced_v1",
-"series": "opusmax",
-"run": "helsinki_8033120_enhanced_v1-blind-opusmax-20260905T064125",
-"overall": 0.626,
-"surface_f": 0.426,
-"chamfer_m": null,
-"height_m": null,
-"triangles": null,
-"glb": "../bench-runs/helsinki_8033120_enhanced_v1-blind-opusmax-20260905T064125/submission/building.glb",
-"page": null,
-"cost": 33.98,
-"turns": 193.0,
-"nruns": 1,
-"allruns": [
-0.626
-],
-"ran": "2026-09-05",
-"minutes": 68.52
-},
-{
-"site": "helsinki_8033120_enhanced_v1",
-"series": "gemini38flash",
-"run": "helsinki_8033120_enhanced_v1-blind-gemini38flash-20260904T222502+aggregate-db31d2dded68",
-"overall": 0.564,
-"surface_f": 0.111,
-"chamfer_m": null,
-"height_m": null,
-"triangles": null,
-"glb": "../bench-runs/helsinki_8033120_enhanced_v1-blind-gemini38flash-20260904T222502/submission/building.glb",
-"page": null,
-"cost": 2.59,
-"turns": null,
-"nruns": 1,
-"allruns": [
-0.564
-],
-"ran": "2026-09-04",
-"minutes": 29.35
 },
 {
 "site": "helsinki_8033120_enhanced_v1",
@@ -6710,12 +7947,55 @@
 "page": null,
 "cost": 61.03,
 "turns": 244.0,
-"nruns": 1,
+"nruns": 2,
 "allruns": [
-0.7
+0.7,
+0.702
 ],
 "ran": "2026-09-05",
 "minutes": 78.75
+},
+{
+"site": "helsinki_8033120_enhanced_v1",
+"series": "kimik3max",
+"run": "helsinki_8033120_enhanced_v1-blind-kimi-k3-max-20260905T071203",
+"overall": 0.435,
+"surface_f": 0.043,
+"chamfer_m": null,
+"height_m": null,
+"triangles": null,
+"glb": "../bench-runs/helsinki_8033120_enhanced_v1-blind-kimi-k3-max-20260905T071203/submission/building.glb",
+"page": null,
+"cost": 7.86,
+"turns": 210.0,
+"nruns": 2,
+"allruns": [
+0.435,
+0.457
+],
+"ran": "2026-09-05",
+"minutes": 197.17
+},
+{
+"site": "helsinki_8033120_enhanced_v1",
+"series": "opusmax",
+"run": "helsinki_8033120_enhanced_v1-blind-opusmax-20260905T064125",
+"overall": 0.626,
+"surface_f": 0.426,
+"chamfer_m": null,
+"height_m": null,
+"triangles": null,
+"glb": "../bench-runs/helsinki_8033120_enhanced_v1-blind-opusmax-20260905T064125/submission/building.glb",
+"page": null,
+"cost": 33.98,
+"turns": 193.0,
+"nruns": 2,
+"allruns": [
+0.626,
+0.682
+],
+"ran": "2026-09-05",
+"minutes": 68.52
 },
 {
 "site": "helsinki_8033120_enhanced_v1",
@@ -6730,13 +8010,299 @@
 "page": null,
 "cost": 6.54,
 "turns": 365.0,
-"nruns": 2,
+"nruns": 3,
 "allruns": [
+0.613,
 0.694,
 0.694
 ],
 "ran": "2026-09-04",
 "minutes": 71.37
+},
+{
+"site": "helsinki_8033120_enhanced_v1",
+"series": "gemini38flash",
+"run": "helsinki_8033120_enhanced_v1-blind-gemini38flash-20260904T222502+3de25e20",
+"overall": 0.561,
+"surface_f": 0.162,
+"chamfer_m": null,
+"height_m": null,
+"triangles": null,
+"glb": "../bench-runs/helsinki_8033120_enhanced_v1-blind-gemini38flash-20260904T222502/submission/building.glb",
+"page": null,
+"cost": 2.59,
+"turns": null,
+"nruns": 2,
+"allruns": [
+0.561,
+0.564
+],
+"ran": "2026-09-04",
+"minutes": 29.35
+},
+{
+"site": "helsinki_8033120_enhanced_v1",
+"series": "gpt6astraultra",
+"run": "helsinki_8033120_enhanced_v1-blind-gpt-6-astra-ultra-20260904T214127",
+"overall": 0.804,
+"surface_f": 0.634,
+"chamfer_m": null,
+"height_m": null,
+"triangles": null,
+"glb": "../bench-runs/helsinki_8033120_enhanced_v1-blind-gpt-6-astra-ultra-20260904T214127/submission/building.glb",
+"page": null,
+"cost": 8.7,
+"turns": 40.0,
+"nruns": 2,
+"allruns": [
+0.804,
+0.841
+],
+"ran": "2026-09-04",
+"minutes": 29.67
+},
+{
+"site": "helsinki_cathedral_enhanced_v1",
+"series": "stealthspacebunnyalphaclaudecode",
+"run": "helsinki_cathedral_enhanced_v1-blind-stealth-space-bunny-alpha-claude-code-20260923T181708",
+"overall": 0.696,
+"surface_f": 0.208,
+"chamfer_m": null,
+"height_m": null,
+"triangles": null,
+"glb": "../bench-runs/helsinki_cathedral_enhanced_v1-blind-stealth-space-bunny-alpha-claude-code-20260923T181708/submission/building.glb",
+"page": null,
+"cost": 0.0,
+"turns": 495.0,
+"nruns": 1,
+"allruns": [
+0.696
+],
+"ran": "2026-09-23",
+"minutes": 110.12
+},
+{
+"site": "helsinki_cathedral_enhanced_v1",
+"series": "claudeopus55max",
+"run": "helsinki_cathedral_enhanced_v1-blind-claude-opus-5-5-max-20260922T220123",
+"overall": 0.917,
+"surface_f": 0.728,
+"chamfer_m": null,
+"height_m": null,
+"triangles": null,
+"glb": "../bench-runs/helsinki_cathedral_enhanced_v1-blind-claude-opus-5-5-max-20260922T220123/submission/building.glb",
+"page": null,
+"cost": 35.56,
+"turns": 332.0,
+"nruns": 1,
+"allruns": [
+0.917
+],
+"ran": "2026-09-22",
+"minutes": 10.43
+},
+{
+"site": "helsinki_cathedral_enhanced_v1",
+"series": "gpt6solmax",
+"run": "helsinki_cathedral_enhanced_v1-blind-gpt-6-sol-max-20260922T193121",
+"overall": 0.79,
+"surface_f": 0.341,
+"chamfer_m": null,
+"height_m": null,
+"triangles": null,
+"glb": "../bench-runs/helsinki_cathedral_enhanced_v1-blind-gpt-6-sol-max-20260922T193121/submission/building.glb",
+"page": null,
+"cost": 1.22,
+"turns": 1.0,
+"nruns": 1,
+"allruns": [
+0.79
+],
+"ran": "2026-09-22",
+"minutes": 16.67
+},
+{
+"site": "helsinki_cathedral_enhanced_v1",
+"series": "gpt6solultra",
+"run": "helsinki_cathedral_enhanced_v1-blind-gpt-6-sol-ultra-20260922T183659",
+"overall": 0.775,
+"surface_f": 0.27,
+"chamfer_m": null,
+"height_m": null,
+"triangles": null,
+"glb": "../bench-runs/helsinki_cathedral_enhanced_v1-blind-gpt-6-sol-ultra-20260922T183659/submission/building.glb",
+"page": null,
+"cost": 1.34,
+"turns": 1.0,
+"nruns": 1,
+"allruns": [
+0.775
+],
+"ran": "2026-09-22",
+"minutes": 14.08
+},
+{
+"site": "helsinki_cathedral_enhanced_v1",
+"series": "swe2maxdevin",
+"run": "helsinki_cathedral_enhanced_v1-blind-swe-2-max-devin-20260922T154943",
+"overall": 0.759,
+"surface_f": 0.218,
+"chamfer_m": null,
+"height_m": null,
+"triangles": null,
+"glb": "../bench-runs/helsinki_cathedral_enhanced_v1-blind-swe-2-max-devin-20260922T154943/submission/building.glb",
+"page": null,
+"cost": 0.0,
+"turns": 687.0,
+"nruns": 1,
+"allruns": [
+0.759
+],
+"ran": "2026-09-22",
+"minutes": 258.52
+},
+{
+"site": "helsinki_cathedral_enhanced_v1",
+"series": "grok47xhigh",
+"run": "helsinki_cathedral_enhanced_v1-blind-grok47xhigh-20260921T161135",
+"overall": 0.87,
+"surface_f": 0.557,
+"chamfer_m": null,
+"height_m": null,
+"triangles": null,
+"glb": "../bench-runs/helsinki_cathedral_enhanced_v1-blind-grok47xhigh-20260921T161135/submission/building.glb",
+"page": null,
+"cost": 6.89,
+"turns": 52.0,
+"nruns": 1,
+"allruns": [
+0.87
+],
+"ran": "2026-09-21",
+"minutes": 32.9
+},
+{
+"site": "helsinki_cathedral_enhanced_v1",
+"series": "step5previewclaudecode",
+"run": "helsinki_cathedral_enhanced_v1-blind-step-5-preview-claude-code-20260921T040445",
+"overall": 0.394,
+"surface_f": 0.093,
+"chamfer_m": null,
+"height_m": null,
+"triangles": null,
+"glb": "../bench-runs/helsinki_cathedral_enhanced_v1-blind-step-5-preview-claude-code-20260921T040445/submission/building.glb",
+"page": null,
+"cost": 17.2,
+"turns": 1538.0,
+"nruns": 1,
+"allruns": [
+0.394
+],
+"ran": "2026-09-21",
+"minutes": 426.02
+},
+{
+"site": "helsinki_cathedral_enhanced_v1",
+"series": "zaiglm53flashxclaudecode",
+"run": "helsinki_cathedral_enhanced_v1-blind-z-ai-glm-5.3-flashx-claude-code-20260919T042001",
+"overall": 0.572,
+"surface_f": 0.118,
+"chamfer_m": null,
+"height_m": null,
+"triangles": null,
+"glb": "../bench-runs/helsinki_cathedral_enhanced_v1-blind-z-ai-glm-5.3-flashx-claude-code-20260919T042001/submission/building.glb",
+"page": null,
+"cost": 2.49,
+"turns": 282.0,
+"nruns": 1,
+"allruns": [
+0.572
+],
+"ran": "2026-09-19",
+"minutes": 82.97
+},
+{
+"site": "helsinki_cathedral_enhanced_v1",
+"series": "unionalphaclaudecode",
+"run": "helsinki_cathedral_enhanced_v1-blind-union-alpha-claude-code-20260916T210853",
+"overall": 0.467,
+"surface_f": 0.114,
+"chamfer_m": null,
+"height_m": null,
+"triangles": null,
+"glb": "../bench-runs/helsinki_cathedral_enhanced_v1-blind-union-alpha-claude-code-20260916T210853/submission/building.glb",
+"page": null,
+"cost": 5.62,
+"turns": 74.0,
+"nruns": 1,
+"allruns": [
+0.467
+],
+"ran": "2026-09-16",
+"minutes": 48.08
+},
+{
+"site": "helsinki_cathedral_enhanced_v1",
+"series": "grok46xhigh",
+"run": "helsinki_cathedral_enhanced_v1-blind-grok46xhigh-20260914T065546",
+"overall": 0.738,
+"surface_f": 0.209,
+"chamfer_m": null,
+"height_m": null,
+"triangles": null,
+"glb": "../bench-runs/helsinki_cathedral_enhanced_v1-blind-grok46xhigh-20260914T065546/submission/building.glb",
+"page": null,
+"cost": 11.55,
+"turns": 62.0,
+"nruns": 2,
+"allruns": [
+0.738,
+0.742
+],
+"ran": "2026-09-14",
+"minutes": 38.93
+},
+{
+"site": "helsinki_cathedral_enhanced_v1",
+"series": "deepseekv41flashclaudecode",
+"run": "helsinki_cathedral_enhanced_v1-blind-deepseek-v41-flash-claude-code-20260912T015302",
+"overall": 0.666,
+"surface_f": 0.321,
+"chamfer_m": null,
+"height_m": null,
+"triangles": null,
+"glb": "../bench-runs/helsinki_cathedral_enhanced_v1-blind-deepseek-v41-flash-claude-code-20260912T015302/submission/building.glb",
+"page": null,
+"cost": 3.15,
+"turns": 469.0,
+"nruns": 2,
+"allruns": [
+0.666,
+0.748
+],
+"ran": "2026-09-12",
+"minutes": 122.08
+},
+{
+"site": "helsinki_cathedral_enhanced_v1",
+"series": "gpt56solmax",
+"run": "helsinki_cathedral_enhanced_v1-blind-gpt-5.6-sol-max-20260910T082830",
+"overall": 0.701,
+"surface_f": 0.29,
+"chamfer_m": null,
+"height_m": null,
+"triangles": null,
+"glb": "../bench-runs/helsinki_cathedral_enhanced_v1-blind-gpt-5.6-sol-max-20260910T082830/submission/building.glb",
+"page": null,
+"cost": 5.72,
+"turns": 53.0,
+"nruns": 2,
+"allruns": [
+0.701,
+0.72
+],
+"ran": "2026-09-10",
+"minutes": 49.42
 },
 {
 "site": "helsinki_cathedral_enhanced_v1",
@@ -6751,9 +8317,10 @@
 "page": null,
 "cost": 0.0,
 "turns": 47.0,
-"nruns": 1,
+"nruns": 2,
 "allruns": [
-0.464
+0.464,
+0.487
 ],
 "ran": "2026-09-06",
 "minutes": 3.87
@@ -6771,32 +8338,13 @@
 "page": null,
 "cost": 0.53,
 "turns": 107.0,
-"nruns": 1,
+"nruns": 2,
 "allruns": [
-0.664
+0.664,
+0.708
 ],
 "ran": "2026-09-06",
 "minutes": 58.48
-},
-{
-"site": "helsinki_cathedral_enhanced_v1",
-"series": "gpt56solmax",
-"run": "helsinki_cathedral_enhanced_v1-blind-gpt-5.6-sol-max-20260906T004928",
-"overall": 0.972,
-"surface_f": 0.996,
-"chamfer_m": null,
-"height_m": null,
-"triangles": null,
-"glb": "../bench-runs/helsinki_cathedral_enhanced_v1-blind-gpt-5.6-sol-max-20260906T004928/submission/building.glb",
-"page": null,
-"cost": 8.68,
-"turns": 101.0,
-"nruns": 1,
-"allruns": [
-0.972
-],
-"ran": "2026-09-06",
-"minutes": 45.78
 },
 {
 "site": "helsinki_cathedral_enhanced_v1",
@@ -6811,9 +8359,10 @@
 "page": null,
 "cost": 39.98,
 "turns": 142.0,
-"nruns": 1,
+"nruns": 2,
 "allruns": [
-0.677
+0.677,
+0.701
 ],
 "ran": "2026-09-06",
 "minutes": 80.45
@@ -6831,9 +8380,10 @@
 "page": null,
 "cost": 0.56,
 "turns": 73.0,
-"nruns": 1,
+"nruns": 2,
 "allruns": [
-0.473
+0.473,
+0.476
 ],
 "ran": "2026-09-05",
 "minutes": 15.77
@@ -6851,9 +8401,10 @@
 "page": null,
 "cost": 9.13,
 "turns": 161.0,
-"nruns": 1,
+"nruns": 2,
 "allruns": [
-0.606
+0.606,
+0.647
 ],
 "ran": "2026-09-05",
 "minutes": 53.2
@@ -6871,53 +8422,55 @@
 "page": null,
 "cost": 4.5,
 "turns": 83.0,
-"nruns": 1,
+"nruns": 2,
 "allruns": [
-0.64
+0.64,
+0.727
 ],
 "ran": "2026-09-05",
 "minutes": 50.32
 },
 {
 "site": "helsinki_cathedral_enhanced_v1",
-"series": "gemini38flash",
-"run": "helsinki_cathedral_enhanced_v1-blind-gemini38flash-20260905T010046+aggregate-4c39874929c3",
-"overall": 0.664,
-"surface_f": 0.315,
+"series": "kimik3max",
+"run": "helsinki_cathedral_enhanced_v1-blind-kimi-k3-max-20260905T194313",
+"overall": 0.626,
+"surface_f": 0.12,
 "chamfer_m": null,
 "height_m": null,
 "triangles": null,
-"glb": "../bench-runs/helsinki_cathedral_enhanced_v1-blind-gemini38flash-20260905T010046/submission/building.glb",
+"glb": "../bench-runs/helsinki_cathedral_enhanced_v1-blind-kimi-k3-max-20260905T194313/submission/building.glb",
 "page": null,
-"cost": 3.45,
-"turns": null,
-"nruns": 1,
+"cost": 9.58,
+"turns": 238.0,
+"nruns": 2,
 "allruns": [
-0.664
+0.626,
+0.68
 ],
 "ran": "2026-09-05",
-"minutes": 53.38
+"minutes": 253.45
 },
 {
 "site": "helsinki_cathedral_enhanced_v1",
-"series": "musespark13max",
-"run": "helsinki_cathedral_enhanced_v1-blind-musespark13max-20260905T030314+cost",
-"overall": 0.661,
-"surface_f": 0.206,
+"series": "glm53flashmax",
+"run": "helsinki_cathedral_enhanced_v1-blind-glm-5.3-flash-max-20260905T164911+3de25e20",
+"overall": 0.592,
+"surface_f": 0.155,
 "chamfer_m": null,
 "height_m": null,
 "triangles": null,
-"glb": "../bench-runs/helsinki_cathedral_enhanced_v1-blind-musespark13max-20260905T030314/submission/building.glb",
+"glb": "../bench-runs/helsinki_cathedral_enhanced_v1-blind-glm-5.3-flash-max-20260905T164911/submission/building.glb",
 "page": null,
-"cost": 4.97,
-"turns": 328.0,
+"cost": 0.13,
+"turns": 57.0,
 "nruns": 2,
 "allruns": [
-0.661,
-0.661
+0.592,
+0.631
 ],
 "ran": "2026-09-05",
-"minutes": 40.07
+"minutes": 87.42
 },
 {
 "site": "helsinki_cathedral_enhanced_v1",
@@ -6932,39 +8485,84 @@
 "page": null,
 "cost": 42.4,
 "turns": 198.0,
-"nruns": 1,
+"nruns": 2,
 "allruns": [
-0.749
+0.749,
+0.815
 ],
 "ran": "2026-09-05",
 "minutes": 90.77
 },
 {
 "site": "helsinki_cathedral_enhanced_v1",
-"series": "gemini",
-"run": "helsinki_cathedral_enhanced_v1-blind-gemini-20260904T201411+aggregate-28664be5f8ec",
-"overall": 0.546,
-"surface_f": 0.153,
+"series": "gpt6astraultra",
+"run": "helsinki_cathedral_enhanced_v1-blind-gpt-6-astra-ultra-20260905T084221",
+"overall": 0.78,
+"surface_f": 0.671,
 "chamfer_m": null,
 "height_m": null,
 "triangles": null,
-"glb": "../bench-runs/helsinki_cathedral_enhanced_v1-blind-gemini-20260904T201411/submission/building.glb",
+"glb": "../bench-runs/helsinki_cathedral_enhanced_v1-blind-gpt-6-astra-ultra-20260905T084221/submission/building.glb",
 "page": null,
-"cost": 1.62,
-"turns": null,
-"nruns": 1,
+"cost": 4.99,
+"turns": 35.0,
+"nruns": 2,
 "allruns": [
-0.546
+0.78,
+0.86
 ],
-"ran": "2026-09-04",
-"minutes": 14.98
+"ran": "2026-09-05",
+"minutes": 24.78
+},
+{
+"site": "helsinki_cathedral_enhanced_v1",
+"series": "musespark13max",
+"run": "helsinki_cathedral_enhanced_v1-blind-musespark13max-20260905T030314",
+"overall": 0.661,
+"surface_f": 0.206,
+"chamfer_m": null,
+"height_m": null,
+"triangles": null,
+"glb": "../bench-runs/helsinki_cathedral_enhanced_v1-blind-musespark13max-20260905T030314/submission/building.glb",
+"page": null,
+"cost": 4.97,
+"turns": 328.0,
+"nruns": 3,
+"allruns": [
+0.661,
+0.661,
+0.722
+],
+"ran": "2026-09-05",
+"minutes": 40.07
+},
+{
+"site": "helsinki_cathedral_enhanced_v1",
+"series": "gemini38flash",
+"run": "helsinki_cathedral_enhanced_v1-blind-gemini38flash-20260905T010046+3de25e20",
+"overall": 0.661,
+"surface_f": 0.274,
+"chamfer_m": null,
+"height_m": null,
+"triangles": null,
+"glb": "../bench-runs/helsinki_cathedral_enhanced_v1-blind-gemini38flash-20260905T010046/submission/building.glb",
+"page": null,
+"cost": 3.45,
+"turns": null,
+"nruns": 2,
+"allruns": [
+0.661,
+0.664
+],
+"ran": "2026-09-05",
+"minutes": 53.38
 },
 {
 "site": "helsinki_cathedral_enhanced_v1",
 "series": "fablelow",
-"run": "helsinki_cathedral_enhanced_v1-blind-fablelow-20260905T002822",
-"overall": 0.64,
-"surface_f": 0.169,
+"run": "helsinki_cathedral_enhanced_v1-blind-fablelow-20260905T002822+3de25e20",
+"overall": 0.597,
+"surface_f": 0.134,
 "chamfer_m": null,
 "height_m": null,
 "triangles": null,
@@ -6972,8 +8570,9 @@
 "page": null,
 "cost": 4.95,
 "turns": 51.0,
-"nruns": 1,
+"nruns": 2,
 "allruns": [
+0.597,
 0.64
 ],
 "ran": "2026-09-05",
@@ -6992,12 +8591,298 @@
 "page": null,
 "cost": 23.08,
 "turns": 112.0,
-"nruns": 1,
+"nruns": 2,
 "allruns": [
-0.744
+0.744,
+0.773
 ],
 "ran": "2026-09-04",
 "minutes": 45.25
+},
+{
+"site": "helsinki_cathedral_enhanced_v1",
+"series": "gemini",
+"run": "helsinki_cathedral_enhanced_v1-blind-gemini-20260904T201411+aggregate-28664be5f8ec",
+"overall": 0.546,
+"surface_f": 0.153,
+"chamfer_m": null,
+"height_m": null,
+"triangles": null,
+"glb": "../bench-runs/helsinki_cathedral_enhanced_v1-blind-gemini-20260904T201411/submission/building.glb",
+"page": null,
+"cost": 1.62,
+"turns": null,
+"nruns": 2,
+"allruns": [
+0.546,
+0.608
+],
+"ran": "2026-09-04",
+"minutes": 14.98
+},
+{
+"site": "melbourne_155809136_enhanced_v1",
+"series": "stealthspacebunnyalphaclaudecode",
+"run": "melbourne_155809136_enhanced_v1-blind-stealth-space-bunny-alpha-claude-code-20260923T181708",
+"overall": 0.633,
+"surface_f": 0.185,
+"chamfer_m": null,
+"height_m": null,
+"triangles": null,
+"glb": "../bench-runs/melbourne_155809136_enhanced_v1-blind-stealth-space-bunny-alpha-claude-code-20260923T181708/submission/building.glb",
+"page": null,
+"cost": 0.0,
+"turns": 158.0,
+"nruns": 1,
+"allruns": [
+0.633
+],
+"ran": "2026-09-23",
+"minutes": 29.6
+},
+{
+"site": "melbourne_155809136_enhanced_v1",
+"series": "claudeopus55max",
+"run": "melbourne_155809136_enhanced_v1-blind-claude-opus-5-5-max-20260922T220126",
+"overall": 0.916,
+"surface_f": 0.875,
+"chamfer_m": null,
+"height_m": null,
+"triangles": null,
+"glb": "../bench-runs/melbourne_155809136_enhanced_v1-blind-claude-opus-5-5-max-20260922T220126/submission/building.glb",
+"page": null,
+"cost": 46.21,
+"turns": 440.0,
+"nruns": 1,
+"allruns": [
+0.916
+],
+"ran": "2026-09-22",
+"minutes": 26.88
+},
+{
+"site": "melbourne_155809136_enhanced_v1",
+"series": "gpt6solmax",
+"run": "melbourne_155809136_enhanced_v1-blind-gpt-6-sol-max-20260922T193122",
+"overall": 0.726,
+"surface_f": 0.141,
+"chamfer_m": null,
+"height_m": null,
+"triangles": null,
+"glb": "../bench-runs/melbourne_155809136_enhanced_v1-blind-gpt-6-sol-max-20260922T193122/submission/building.glb",
+"page": null,
+"cost": 1.88,
+"turns": 1.0,
+"nruns": 1,
+"allruns": [
+0.726
+],
+"ran": "2026-09-22",
+"minutes": 17.28
+},
+{
+"site": "melbourne_155809136_enhanced_v1",
+"series": "gpt6solultra",
+"run": "melbourne_155809136_enhanced_v1-blind-gpt-6-sol-ultra-20260922T183700",
+"overall": 0.72,
+"surface_f": 0.239,
+"chamfer_m": null,
+"height_m": null,
+"triangles": null,
+"glb": "../bench-runs/melbourne_155809136_enhanced_v1-blind-gpt-6-sol-ultra-20260922T183700/submission/building.glb",
+"page": null,
+"cost": 1.6,
+"turns": 1.0,
+"nruns": 1,
+"allruns": [
+0.72
+],
+"ran": "2026-09-22",
+"minutes": 18.3
+},
+{
+"site": "melbourne_155809136_enhanced_v1",
+"series": "swe2maxdevin",
+"run": "melbourne_155809136_enhanced_v1-blind-swe-2-max-devin-20260922T154541",
+"overall": 0.736,
+"surface_f": 0.425,
+"chamfer_m": null,
+"height_m": null,
+"triangles": null,
+"glb": "../bench-runs/melbourne_155809136_enhanced_v1-blind-swe-2-max-devin-20260922T154541/submission/building.glb",
+"page": null,
+"cost": 0.0,
+"turns": 1038.0,
+"nruns": 1,
+"allruns": [
+0.736
+],
+"ran": "2026-09-22",
+"minutes": 300.72
+},
+{
+"site": "melbourne_155809136_enhanced_v1",
+"series": "grok47xhigh",
+"run": "melbourne_155809136_enhanced_v1-blind-grok47xhigh-20260921T173225",
+"overall": 0.725,
+"surface_f": 0.29,
+"chamfer_m": null,
+"height_m": null,
+"triangles": null,
+"glb": "../bench-runs/melbourne_155809136_enhanced_v1-blind-grok47xhigh-20260921T173225/submission/building.glb",
+"page": null,
+"cost": 11.84,
+"turns": 84.0,
+"nruns": 1,
+"allruns": [
+0.725
+],
+"ran": "2026-09-21",
+"minutes": 44.25
+},
+{
+"site": "melbourne_155809136_enhanced_v1",
+"series": "step5previewclaudecode",
+"run": "melbourne_155809136_enhanced_v1-blind-step-5-preview-claude-code-20260921T040446",
+"overall": 0.423,
+"surface_f": 0.088,
+"chamfer_m": null,
+"height_m": null,
+"triangles": null,
+"glb": "../bench-runs/melbourne_155809136_enhanced_v1-blind-step-5-preview-claude-code-20260921T040446/submission/building.glb",
+"page": null,
+"cost": 16.91,
+"turns": 1270.0,
+"nruns": 1,
+"allruns": [
+0.423
+],
+"ran": "2026-09-21",
+"minutes": 426.58
+},
+{
+"site": "melbourne_155809136_enhanced_v1",
+"series": "zaiglm53flashxclaudecode",
+"run": "melbourne_155809136_enhanced_v1-blind-z-ai-glm-5.3-flashx-claude-code-20260919T042001",
+"overall": 0.784,
+"surface_f": 0.329,
+"chamfer_m": null,
+"height_m": null,
+"triangles": null,
+"glb": "../bench-runs/melbourne_155809136_enhanced_v1-blind-z-ai-glm-5.3-flashx-claude-code-20260919T042001/submission/building.glb",
+"page": null,
+"cost": 2.32,
+"turns": 280.0,
+"nruns": 1,
+"allruns": [
+0.784
+],
+"ran": "2026-09-19",
+"minutes": 87.18
+},
+{
+"site": "melbourne_155809136_enhanced_v1",
+"series": "unionalphaclaudecode",
+"run": "melbourne_155809136_enhanced_v1-blind-union-alpha-claude-code-20260916T210853",
+"overall": 0.793,
+"surface_f": 0.466,
+"chamfer_m": null,
+"height_m": null,
+"triangles": null,
+"glb": "../bench-runs/melbourne_155809136_enhanced_v1-blind-union-alpha-claude-code-20260916T210853/submission/building.glb",
+"page": null,
+"cost": 3.2,
+"turns": 1.0,
+"nruns": 1,
+"allruns": [
+0.793
+],
+"ran": "2026-09-16",
+"minutes": 25.57
+},
+{
+"site": "melbourne_155809136_enhanced_v1",
+"series": "grok46xhigh",
+"run": "melbourne_155809136_enhanced_v1-blind-grok46xhigh-20260914T105357",
+"overall": 0.742,
+"surface_f": 0.308,
+"chamfer_m": null,
+"height_m": null,
+"triangles": null,
+"glb": "../bench-runs/melbourne_155809136_enhanced_v1-blind-grok46xhigh-20260914T105357/submission/building.glb",
+"page": null,
+"cost": 9.66,
+"turns": 54.0,
+"nruns": 2,
+"allruns": [
+0.742,
+0.75
+],
+"ran": "2026-09-14",
+"minutes": 36.53
+},
+{
+"site": "melbourne_155809136_enhanced_v1",
+"series": "deepseekv41flashclaudecode",
+"run": "melbourne_155809136_enhanced_v1-blind-deepseek-v41-flash-claude-code-20260912T042652",
+"overall": 0.715,
+"surface_f": 0.217,
+"chamfer_m": null,
+"height_m": null,
+"triangles": null,
+"glb": "../bench-runs/melbourne_155809136_enhanced_v1-blind-deepseek-v41-flash-claude-code-20260912T042652/submission/building.glb",
+"page": null,
+"cost": 1.47,
+"turns": 418.0,
+"nruns": 2,
+"allruns": [
+0.715,
+0.733
+],
+"ran": "2026-09-12",
+"minutes": 146.7
+},
+{
+"site": "melbourne_155809136_enhanced_v1",
+"series": "inklingfreeclaudecode",
+"run": "melbourne_155809136_enhanced_v1-blind-inkling-free-claude-code-20260906T135013+3de25e20",
+"overall": 0.366,
+"surface_f": 0.085,
+"chamfer_m": null,
+"height_m": null,
+"triangles": null,
+"glb": "../bench-runs/melbourne_155809136_enhanced_v1-blind-inkling-free-claude-code-20260906T135013/submission/building.glb",
+"page": null,
+"cost": 0.0,
+"turns": 59.0,
+"nruns": 2,
+"allruns": [
+0.366,
+0.518
+],
+"ran": "2026-09-06",
+"minutes": 4.48
+},
+{
+"site": "melbourne_155809136_enhanced_v1",
+"series": "sonnetmax",
+"run": "melbourne_155809136_enhanced_v1-blind-sonnetmax-20260906T101827+3de25e20",
+"overall": 0.672,
+"surface_f": 0.467,
+"chamfer_m": null,
+"height_m": null,
+"triangles": null,
+"glb": "../bench-runs/melbourne_155809136_enhanced_v1-blind-sonnetmax-20260906T101827/submission/building.glb",
+"page": null,
+"cost": 20.54,
+"turns": 297.0,
+"nruns": 2,
+"allruns": [
+0.672,
+0.674
+],
+"ran": "2026-09-06",
+"minutes": 67.65
 },
 {
 "site": "melbourne_155809136_enhanced_v1",
@@ -7012,52 +8897,13 @@
 "page": null,
 "cost": 37.33,
 "turns": 131.0,
-"nruns": 1,
+"nruns": 2,
 "allruns": [
-0.746
+0.746,
+0.774
 ],
 "ran": "2026-09-06",
 "minutes": 53.17
-},
-{
-"site": "melbourne_155809136_enhanced_v1",
-"series": "inklingfreeclaudecode",
-"run": "melbourne_155809136_enhanced_v1-blind-inkling-free-claude-code-20260906T135013",
-"overall": 0.518,
-"surface_f": 0.098,
-"chamfer_m": null,
-"height_m": null,
-"triangles": null,
-"glb": "../bench-runs/melbourne_155809136_enhanced_v1-blind-inkling-free-claude-code-20260906T135013/submission/building.glb",
-"page": null,
-"cost": 0.0,
-"turns": 59.0,
-"nruns": 1,
-"allruns": [
-0.518
-],
-"ran": "2026-09-06",
-"minutes": 4.48
-},
-{
-"site": "melbourne_155809136_enhanced_v1",
-"series": "sonnetmax",
-"run": "melbourne_155809136_enhanced_v1-blind-sonnetmax-20260906T101827",
-"overall": 0.674,
-"surface_f": 0.464,
-"chamfer_m": null,
-"height_m": null,
-"triangles": null,
-"glb": "../bench-runs/melbourne_155809136_enhanced_v1-blind-sonnetmax-20260906T101827/submission/building.glb",
-"page": null,
-"cost": 20.54,
-"turns": 297.0,
-"nruns": 1,
-"allruns": [
-0.674
-],
-"ran": "2026-09-06",
-"minutes": 67.65
 },
 {
 "site": "melbourne_155809136_enhanced_v1",
@@ -7072,9 +8918,10 @@
 "page": null,
 "cost": 0.59,
 "turns": 119.0,
-"nruns": 1,
+"nruns": 2,
 "allruns": [
-0.657
+0.657,
+0.725
 ],
 "ran": "2026-09-06",
 "minutes": 88.12
@@ -7082,8 +8929,8 @@
 {
 "site": "melbourne_155809136_enhanced_v1",
 "series": "gpt56terramax",
-"run": "melbourne_155809136_enhanced_v1-blind-gpt-5.6-terra-max-20260906T065036",
-"overall": 0.731,
+"run": "melbourne_155809136_enhanced_v1-blind-gpt-5.6-terra-max-20260906T065036+3de25e20",
+"overall": 0.714,
 "surface_f": 0.247,
 "chamfer_m": null,
 "height_m": null,
@@ -7092,8 +8939,9 @@
 "page": null,
 "cost": 2.7,
 "turns": 50.0,
-"nruns": 1,
+"nruns": 2,
 "allruns": [
+0.714,
 0.731
 ],
 "ran": "2026-09-06",
@@ -7112,9 +8960,10 @@
 "page": null,
 "cost": 6.67,
 "turns": 67.0,
-"nruns": 1,
+"nruns": 2,
 "allruns": [
-0.74
+0.74,
+0.812
 ],
 "ran": "2026-09-06",
 "minutes": 38.13
@@ -7122,9 +8971,9 @@
 {
 "site": "melbourne_155809136_enhanced_v1",
 "series": "haiku",
-"run": "melbourne_155809136_enhanced_v1-blind-haiku-20260906T030407",
-"overall": 0.319,
-"surface_f": 0.025,
+"run": "melbourne_155809136_enhanced_v1-blind-haiku-20260906T030407+3de25e20",
+"overall": 0.286,
+"surface_f": 0.111,
 "chamfer_m": null,
 "height_m": null,
 "triangles": null,
@@ -7132,32 +8981,13 @@
 "page": null,
 "cost": 0.4,
 "turns": 53.0,
-"nruns": 1,
+"nruns": 2,
 "allruns": [
+0.286,
 0.319
 ],
 "ran": "2026-09-06",
 "minutes": 13.0
-},
-{
-"site": "melbourne_155809136_enhanced_v1",
-"series": "gemini38flash",
-"run": "melbourne_155809136_enhanced_v1-blind-gemini38flash-20260904T235002+aggregate-97bd4e9e4ce7",
-"overall": 0.6,
-"surface_f": 0.294,
-"chamfer_m": null,
-"height_m": null,
-"triangles": null,
-"glb": "../bench-runs/melbourne_155809136_enhanced_v1-blind-gemini38flash-20260904T235002/submission/building.glb",
-"page": null,
-"cost": 3.24,
-"turns": null,
-"nruns": 1,
-"allruns": [
-0.6
-],
-"ran": "2026-09-04",
-"minutes": 45.67
 },
 {
 "site": "melbourne_155809136_enhanced_v1",
@@ -7172,17 +9002,60 @@
 "page": null,
 "cost": 41.65,
 "turns": 253.0,
-"nruns": 1,
+"nruns": 2,
 "allruns": [
-0.761
+0.761,
+0.795
 ],
 "ran": "2026-09-05",
 "minutes": 82.65
 },
 {
 "site": "melbourne_155809136_enhanced_v1",
+"series": "fable51max",
+"run": "melbourne_155809136_enhanced_v1-blind-fable51max-20260905T070058+3de25e20",
+"overall": 0.817,
+"surface_f": 0.363,
+"chamfer_m": null,
+"height_m": null,
+"triangles": null,
+"glb": "../bench-runs/melbourne_155809136_enhanced_v1-blind-fable51max-20260905T070058/submission/building.glb",
+"page": null,
+"cost": 22.21,
+"turns": 124.0,
+"nruns": 2,
+"allruns": [
+0.817,
+0.817
+],
+"ran": "2026-09-05",
+"minutes": 42.48
+},
+{
+"site": "melbourne_155809136_enhanced_v1",
+"series": "glm53flashmax",
+"run": "melbourne_155809136_enhanced_v1-blind-glm-5.3-flash-max-20260905T144426+3de25e20",
+"overall": 0.563,
+"surface_f": 0.185,
+"chamfer_m": null,
+"height_m": null,
+"triangles": null,
+"glb": "../bench-runs/melbourne_155809136_enhanced_v1-blind-glm-5.3-flash-max-20260905T144426/submission/building.glb",
+"page": null,
+"cost": 0.52,
+"turns": 169.0,
+"nruns": 2,
+"allruns": [
+0.563,
+0.581
+],
+"ran": "2026-09-05",
+"minutes": 116.53
+},
+{
+"site": "melbourne_155809136_enhanced_v1",
 "series": "musespark13max",
-"run": "melbourne_155809136_enhanced_v1-blind-musespark13max-20260905T001606+cost",
+"run": "melbourne_155809136_enhanced_v1-blind-musespark13max-20260905T001606",
 "overall": 0.715,
 "surface_f": 0.221,
 "chamfer_m": null,
@@ -7192,33 +9065,341 @@
 "page": null,
 "cost": 5.77,
 "turns": 399.0,
-"nruns": 2,
+"nruns": 3,
 "allruns": [
 0.715,
-0.715
+0.715,
+0.767
 ],
 "ran": "2026-09-05",
 "minutes": 66.8
 },
 {
 "site": "melbourne_155809136_enhanced_v1",
-"series": "fable51max",
-"run": "melbourne_155809136_enhanced_v1-blind-fable51max-20260905T070058",
-"overall": 0.817,
-"surface_f": 0.361,
+"series": "kimik3max",
+"run": "melbourne_155809136_enhanced_v1-blind-kimi-k3-max-20260905T000432+3de25e20",
+"overall": 0.583,
+"surface_f": 0.309,
 "chamfer_m": null,
 "height_m": null,
 "triangles": null,
-"glb": "../bench-runs/melbourne_155809136_enhanced_v1-blind-fable51max-20260905T070058/submission/building.glb",
+"glb": "../bench-runs/melbourne_155809136_enhanced_v1-blind-kimi-k3-max-20260905T000432/submission/building.glb",
 "page": null,
-"cost": 22.21,
-"turns": 124.0,
-"nruns": 1,
+"cost": 3.12,
+"turns": 112.0,
+"nruns": 2,
 "allruns": [
-0.817
+0.583,
+0.633
 ],
 "ran": "2026-09-05",
-"minutes": 42.48
+"minutes": 58.97
+},
+{
+"site": "melbourne_155809136_enhanced_v1",
+"series": "gemini38flash",
+"run": "melbourne_155809136_enhanced_v1-blind-gemini38flash-20260904T235002+aggregate-97bd4e9e4ce7",
+"overall": 0.6,
+"surface_f": 0.294,
+"chamfer_m": null,
+"height_m": null,
+"triangles": null,
+"glb": "../bench-runs/melbourne_155809136_enhanced_v1-blind-gemini38flash-20260904T235002/submission/building.glb",
+"page": null,
+"cost": 3.24,
+"turns": null,
+"nruns": 2,
+"allruns": [
+0.6,
+0.602
+],
+"ran": "2026-09-04",
+"minutes": 45.67
+},
+{
+"site": "melbourne_155809136_enhanced_v1",
+"series": "gpt6astraultra",
+"run": "melbourne_155809136_enhanced_v1-blind-gpt-6-astra-ultra-20260904T223209",
+"overall": 0.842,
+"surface_f": 0.745,
+"chamfer_m": null,
+"height_m": null,
+"triangles": null,
+"glb": "../bench-runs/melbourne_155809136_enhanced_v1-blind-gpt-6-astra-ultra-20260904T223209/submission/building.glb",
+"page": null,
+"cost": 7.11,
+"turns": 50.0,
+"nruns": 2,
+"allruns": [
+0.842,
+0.919
+],
+"ran": "2026-09-04",
+"minutes": 33.8
+},
+{
+"site": "melbourne_22820458_enhanced_v1",
+"series": "stealthspacebunnyalphaclaudecode",
+"run": "melbourne_22820458_enhanced_v1-blind-stealth-space-bunny-alpha-claude-code-20260923T181708",
+"overall": 0.503,
+"surface_f": 0.256,
+"chamfer_m": null,
+"height_m": null,
+"triangles": null,
+"glb": "../bench-runs/melbourne_22820458_enhanced_v1-blind-stealth-space-bunny-alpha-claude-code-20260923T181708/submission/building.glb",
+"page": null,
+"cost": 0.0,
+"turns": 977.0,
+"nruns": 1,
+"allruns": [
+0.503
+],
+"ran": "2026-09-23",
+"minutes": 205.23
+},
+{
+"site": "melbourne_22820458_enhanced_v1",
+"series": "claudeopus55max",
+"run": "melbourne_22820458_enhanced_v1-blind-claude-opus-5-5-max-20260922T220128",
+"overall": 0.844,
+"surface_f": 0.42,
+"chamfer_m": null,
+"height_m": null,
+"triangles": null,
+"glb": "../bench-runs/melbourne_22820458_enhanced_v1-blind-claude-opus-5-5-max-20260922T220128/submission/building.glb",
+"page": null,
+"cost": 58.44,
+"turns": 503.0,
+"nruns": 1,
+"allruns": [
+0.844
+],
+"ran": "2026-09-22",
+"minutes": 212.15
+},
+{
+"site": "melbourne_22820458_enhanced_v1",
+"series": "gpt6solmax",
+"run": "melbourne_22820458_enhanced_v1-blind-gpt-6-sol-max-20260922T193123",
+"overall": 0.709,
+"surface_f": 0.23,
+"chamfer_m": null,
+"height_m": null,
+"triangles": null,
+"glb": "../bench-runs/melbourne_22820458_enhanced_v1-blind-gpt-6-sol-max-20260922T193123/submission/building.glb",
+"page": null,
+"cost": 2.68,
+"turns": 1.0,
+"nruns": 1,
+"allruns": [
+0.709
+],
+"ran": "2026-09-22",
+"minutes": 23.0
+},
+{
+"site": "melbourne_22820458_enhanced_v1",
+"series": "gpt6solultra",
+"run": "melbourne_22820458_enhanced_v1-blind-gpt-6-sol-ultra-20260922T183701",
+"overall": 0.761,
+"surface_f": 0.279,
+"chamfer_m": null,
+"height_m": null,
+"triangles": null,
+"glb": "../bench-runs/melbourne_22820458_enhanced_v1-blind-gpt-6-sol-ultra-20260922T183701/submission/building.glb",
+"page": null,
+"cost": 1.79,
+"turns": 1.0,
+"nruns": 1,
+"allruns": [
+0.761
+],
+"ran": "2026-09-22",
+"minutes": 17.52
+},
+{
+"site": "melbourne_22820458_enhanced_v1",
+"series": "swe2maxdevin",
+"run": "melbourne_22820458_enhanced_v1-blind-swe-2-max-devin-20260922T134016",
+"overall": 0.753,
+"surface_f": 0.304,
+"chamfer_m": null,
+"height_m": null,
+"triangles": null,
+"glb": "../bench-runs/melbourne_22820458_enhanced_v1-blind-swe-2-max-devin-20260922T134016/submission/building.glb",
+"page": null,
+"cost": 0.0,
+"turns": 642.0,
+"nruns": 1,
+"allruns": [
+0.753
+],
+"ran": "2026-09-22",
+"minutes": 247.52
+},
+{
+"site": "melbourne_22820458_enhanced_v1",
+"series": "grok47xhigh",
+"run": "melbourne_22820458_enhanced_v1-blind-grok47xhigh-20260921T173225",
+"overall": 0.845,
+"surface_f": 0.636,
+"chamfer_m": null,
+"height_m": null,
+"triangles": null,
+"glb": "../bench-runs/melbourne_22820458_enhanced_v1-blind-grok47xhigh-20260921T173225/submission/building.glb",
+"page": null,
+"cost": 10.1,
+"turns": 71.0,
+"nruns": 1,
+"allruns": [
+0.845
+],
+"ran": "2026-09-21",
+"minutes": 38.48
+},
+{
+"site": "melbourne_22820458_enhanced_v1",
+"series": "step5previewclaudecode",
+"run": "melbourne_22820458_enhanced_v1-blind-step-5-preview-claude-code-20260921T040447",
+"overall": 0.398,
+"surface_f": 0.087,
+"chamfer_m": null,
+"height_m": null,
+"triangles": null,
+"glb": "../bench-runs/melbourne_22820458_enhanced_v1-blind-step-5-preview-claude-code-20260921T040447/submission/building.glb",
+"page": null,
+"cost": 14.96,
+"turns": 1285.0,
+"nruns": 1,
+"allruns": [
+0.398
+],
+"ran": "2026-09-21",
+"minutes": 427.1
+},
+{
+"site": "melbourne_22820458_enhanced_v1",
+"series": "zaiglm53flashxclaudecode",
+"run": "melbourne_22820458_enhanced_v1-blind-z-ai-glm-5.3-flashx-claude-code-20260919T042001",
+"overall": 0.606,
+"surface_f": 0.173,
+"chamfer_m": null,
+"height_m": null,
+"triangles": null,
+"glb": "../bench-runs/melbourne_22820458_enhanced_v1-blind-z-ai-glm-5.3-flashx-claude-code-20260919T042001/submission/building.glb",
+"page": null,
+"cost": 3.02,
+"turns": 394.0,
+"nruns": 1,
+"allruns": [
+0.606
+],
+"ran": "2026-09-19",
+"minutes": 79.25
+},
+{
+"site": "melbourne_22820458_enhanced_v1",
+"series": "unionalphaclaudecode",
+"run": "melbourne_22820458_enhanced_v1-blind-union-alpha-claude-code-20260916T221026",
+"overall": 0.768,
+"surface_f": 0.337,
+"chamfer_m": null,
+"height_m": null,
+"triangles": null,
+"glb": "../bench-runs/melbourne_22820458_enhanced_v1-blind-union-alpha-claude-code-20260916T221026/submission/building.glb",
+"page": null,
+"cost": 2.86,
+"turns": 69.0,
+"nruns": 1,
+"allruns": [
+0.768
+],
+"ran": "2026-09-16",
+"minutes": 22.22
+},
+{
+"site": "melbourne_22820458_enhanced_v1",
+"series": "grok46xhigh",
+"run": "melbourne_22820458_enhanced_v1-blind-grok46xhigh-20260914T121941",
+"overall": 0.852,
+"surface_f": 0.534,
+"chamfer_m": null,
+"height_m": null,
+"triangles": null,
+"glb": "../bench-runs/melbourne_22820458_enhanced_v1-blind-grok46xhigh-20260914T121941/submission/building.glb",
+"page": null,
+"cost": 8.8,
+"turns": 60.0,
+"nruns": 2,
+"allruns": [
+0.852,
+0.882
+],
+"ran": "2026-09-14",
+"minutes": 34.22
+},
+{
+"site": "melbourne_22820458_enhanced_v1",
+"series": "deepseekv41flashclaudecode",
+"run": "melbourne_22820458_enhanced_v1-blind-deepseek-v41-flash-claude-code-20260912T060033+3de25e20",
+"overall": 0.827,
+"surface_f": 0.349,
+"chamfer_m": null,
+"height_m": null,
+"triangles": null,
+"glb": "../bench-runs/melbourne_22820458_enhanced_v1-blind-deepseek-v41-flash-claude-code-20260912T060033/submission/building.glb",
+"page": null,
+"cost": 2.38,
+"turns": 436.0,
+"nruns": 2,
+"allruns": [
+0.827,
+0.833
+],
+"ran": "2026-09-12",
+"minutes": 163.97
+},
+{
+"site": "melbourne_22820458_enhanced_v1",
+"series": "inklingfreeclaudecode",
+"run": "melbourne_22820458_enhanced_v1-blind-inkling-free-claude-code-20260906T134929+scored-output+3de25e20",
+"overall": 0.26,
+"surface_f": 0.071,
+"chamfer_m": null,
+"height_m": null,
+"triangles": null,
+"glb": "../bench-runs/melbourne_22820458_enhanced_v1-blind-inkling-free-claude-code-20260906T134929/submission/building.glb",
+"page": null,
+"cost": 0.0,
+"turns": 42.0,
+"nruns": 2,
+"allruns": [
+0.26,
+0.379
+],
+"ran": "2026-09-06",
+"minutes": 3.83
+},
+{
+"site": "melbourne_22820458_enhanced_v1",
+"series": "sonnetmax",
+"run": "melbourne_22820458_enhanced_v1-blind-sonnetmax-20260906T100228+3de25e20",
+"overall": 0.578,
+"surface_f": 0.15,
+"chamfer_m": null,
+"height_m": null,
+"triangles": null,
+"glb": "../bench-runs/melbourne_22820458_enhanced_v1-blind-sonnetmax-20260906T100228/submission/building.glb",
+"page": null,
+"cost": 12.74,
+"turns": 199.0,
+"nruns": 2,
+"allruns": [
+0.578,
+0.615
+],
+"ran": "2026-09-06",
+"minutes": 51.07
 },
 {
 "site": "melbourne_22820458_enhanced_v1",
@@ -7233,52 +9414,13 @@
 "page": null,
 "cost": 38.53,
 "turns": 138.0,
-"nruns": 1,
+"nruns": 2,
 "allruns": [
-0.604
+0.604,
+0.654
 ],
 "ran": "2026-09-06",
 "minutes": 51.13
-},
-{
-"site": "melbourne_22820458_enhanced_v1",
-"series": "inklingfreeclaudecode",
-"run": "melbourne_22820458_enhanced_v1-blind-inkling-free-claude-code-20260906T134929+scored-output",
-"overall": 0.379,
-"surface_f": 0.018,
-"chamfer_m": null,
-"height_m": null,
-"triangles": null,
-"glb": "../bench-runs/melbourne_22820458_enhanced_v1-blind-inkling-free-claude-code-20260906T134929/submission/building.glb",
-"page": null,
-"cost": 0.0,
-"turns": 42.0,
-"nruns": 1,
-"allruns": [
-0.379
-],
-"ran": "2026-09-06",
-"minutes": 3.83
-},
-{
-"site": "melbourne_22820458_enhanced_v1",
-"series": "sonnetmax",
-"run": "melbourne_22820458_enhanced_v1-blind-sonnetmax-20260906T100228",
-"overall": 0.615,
-"surface_f": 0.151,
-"chamfer_m": null,
-"height_m": null,
-"triangles": null,
-"glb": "../bench-runs/melbourne_22820458_enhanced_v1-blind-sonnetmax-20260906T100228/submission/building.glb",
-"page": null,
-"cost": 12.74,
-"turns": 199.0,
-"nruns": 1,
-"allruns": [
-0.615
-],
-"ran": "2026-09-06",
-"minutes": 51.07
 },
 {
 "site": "melbourne_22820458_enhanced_v1",
@@ -7293,9 +9435,10 @@
 "page": null,
 "cost": 0.4,
 "turns": 47.0,
-"nruns": 1,
+"nruns": 2,
 "allruns": [
-0.487
+0.487,
+0.493
 ],
 "ran": "2026-09-06",
 "minutes": 4.7
@@ -7313,9 +9456,10 @@
 "page": null,
 "cost": 0.28,
 "turns": 60.0,
-"nruns": 1,
+"nruns": 2,
 "allruns": [
-0.57
+0.57,
+0.643
 ],
 "ran": "2026-09-06",
 "minutes": 37.65
@@ -7323,9 +9467,9 @@
 {
 "site": "melbourne_22820458_enhanced_v1",
 "series": "gpt56terramax",
-"run": "melbourne_22820458_enhanced_v1-blind-gpt-5.6-terra-max-20260906T063243",
+"run": "melbourne_22820458_enhanced_v1-blind-gpt-5.6-terra-max-20260906T063243+3de25e20",
 "overall": 0.751,
-"surface_f": 0.368,
+"surface_f": 0.358,
 "chamfer_m": null,
 "height_m": null,
 "triangles": null,
@@ -7333,8 +9477,9 @@
 "page": null,
 "cost": 4.31,
 "turns": 67.0,
-"nruns": 1,
+"nruns": 2,
 "allruns": [
+0.751,
 0.751
 ],
 "ran": "2026-09-06",
@@ -7343,9 +9488,9 @@
 {
 "site": "melbourne_22820458_enhanced_v1",
 "series": "gpt56solmax",
-"run": "melbourne_22820458_enhanced_v1-blind-gpt-5.6-sol-max-20260906T031816",
-"overall": 0.744,
-"surface_f": 0.255,
+"run": "melbourne_22820458_enhanced_v1-blind-gpt-5.6-sol-max-20260906T031816+3de25e20",
+"overall": 0.738,
+"surface_f": 0.252,
 "chamfer_m": null,
 "height_m": null,
 "triangles": null,
@@ -7353,8 +9498,9 @@
 "page": null,
 "cost": 7.49,
 "turns": 79.0,
-"nruns": 1,
+"nruns": 2,
 "allruns": [
+0.738,
 0.744
 ],
 "ran": "2026-09-06",
@@ -7363,9 +9509,9 @@
 {
 "site": "melbourne_22820458_enhanced_v1",
 "series": "fable51max",
-"run": "melbourne_22820458_enhanced_v1-blind-fable51max-20260905T175357",
-"overall": 0.794,
-"surface_f": 0.323,
+"run": "melbourne_22820458_enhanced_v1-blind-fable51max-20260905T175357+3de25e20",
+"overall": 0.785,
+"surface_f": 0.326,
 "chamfer_m": null,
 "height_m": null,
 "triangles": null,
@@ -7373,12 +9519,55 @@
 "page": null,
 "cost": 68.42,
 "turns": 310.0,
-"nruns": 1,
+"nruns": 2,
 "allruns": [
+0.785,
 0.794
 ],
 "ran": "2026-09-05",
 "minutes": 89.57
+},
+{
+"site": "melbourne_22820458_enhanced_v1",
+"series": "glm53flashmax",
+"run": "melbourne_22820458_enhanced_v1-blind-glm-5.3-flash-max-20260905T175217+3de25e20",
+"overall": 0.566,
+"surface_f": 0.169,
+"chamfer_m": null,
+"height_m": null,
+"triangles": null,
+"glb": "../bench-runs/melbourne_22820458_enhanced_v1-blind-glm-5.3-flash-max-20260905T175217/submission/building.glb",
+"page": null,
+"cost": 0.33,
+"turns": 148.0,
+"nruns": 2,
+"allruns": [
+0.566,
+0.573
+],
+"ran": "2026-09-05",
+"minutes": 79.9
+},
+{
+"site": "melbourne_22820458_enhanced_v1",
+"series": "kimik3max",
+"run": "melbourne_22820458_enhanced_v1-blind-kimi-k3-max-20260905T172608",
+"overall": 0.649,
+"surface_f": 0.255,
+"chamfer_m": null,
+"height_m": null,
+"triangles": null,
+"glb": "../bench-runs/melbourne_22820458_enhanced_v1-blind-kimi-k3-max-20260905T172608/submission/building.glb",
+"page": null,
+"cost": 2.97,
+"turns": 76.0,
+"nruns": 2,
+"allruns": [
+0.649,
+0.696
+],
+"ran": "2026-09-05",
+"minutes": 53.73
 },
 {
 "site": "melbourne_22820458_enhanced_v1",
@@ -7393,9 +9582,10 @@
 "page": null,
 "cost": 46.47,
 "turns": 248.0,
-"nruns": 1,
+"nruns": 2,
 "allruns": [
-0.724
+0.724,
+0.788
 ],
 "ran": "2026-09-05",
 "minutes": 95.77
@@ -7403,7 +9593,7 @@
 {
 "site": "melbourne_22820458_enhanced_v1",
 "series": "musespark13max",
-"run": "melbourne_22820458_enhanced_v1-blind-musespark13max-20260905T005437+cost",
+"run": "melbourne_22820458_enhanced_v1-blind-musespark13max-20260905T005437",
 "overall": 0.747,
 "surface_f": 0.336,
 "chamfer_m": null,
@@ -7413,20 +9603,42 @@
 "page": null,
 "cost": 4.36,
 "turns": 299.0,
-"nruns": 2,
+"nruns": 3,
 "allruns": [
 0.747,
-0.747
+0.747,
+0.764
 ],
 "ran": "2026-09-05",
 "minutes": 48.53
 },
 {
 "site": "melbourne_22820458_enhanced_v1",
+"series": "gpt6astraultra",
+"run": "melbourne_22820458_enhanced_v1-blind-gpt-6-astra-ultra-20260904T223123",
+"overall": 0.819,
+"surface_f": 0.466,
+"chamfer_m": null,
+"height_m": null,
+"triangles": null,
+"glb": "../bench-runs/melbourne_22820458_enhanced_v1-blind-gpt-6-astra-ultra-20260904T223123/submission/building.glb",
+"page": null,
+"cost": 8.32,
+"turns": 51.0,
+"nruns": 2,
+"allruns": [
+0.819,
+0.835
+],
+"ran": "2026-09-04",
+"minutes": 35.18
+},
+{
+"site": "melbourne_22820458_enhanced_v1",
 "series": "gemini38flash",
-"run": "melbourne_22820458_enhanced_v1-blind-gemini38flash-20260904T222734+aggregate-2aff63a117ba",
-"overall": 0.766,
-"surface_f": 0.269,
+"run": "melbourne_22820458_enhanced_v1-blind-gemini38flash-20260904T222734+3de25e20",
+"overall": 0.441,
+"surface_f": 0.272,
 "chamfer_m": null,
 "height_m": null,
 "triangles": null,
@@ -7434,8 +9646,9 @@
 "page": null,
 "cost": 3.63,
 "turns": null,
-"nruns": 1,
+"nruns": 2,
 "allruns": [
+0.441,
 0.766
 ],
 "ran": "2026-09-04",
@@ -7443,10 +9656,253 @@
 },
 {
 "site": "melbourne_25422768_enhanced_v1",
+"series": "stealthspacebunnyalphaclaudecode",
+"run": "melbourne_25422768_enhanced_v1-blind-stealth-space-bunny-alpha-claude-code-20260923T181708",
+"overall": 0.476,
+"surface_f": 0.184,
+"chamfer_m": null,
+"height_m": null,
+"triangles": null,
+"glb": "../bench-runs/melbourne_25422768_enhanced_v1-blind-stealth-space-bunny-alpha-claude-code-20260923T181708/submission/building.glb",
+"page": null,
+"cost": 0.0,
+"turns": 1372.0,
+"nruns": 1,
+"allruns": [
+0.476
+],
+"ran": "2026-09-23",
+"minutes": 286.5
+},
+{
+"site": "melbourne_25422768_enhanced_v1",
+"series": "claudeopus55max",
+"run": "melbourne_25422768_enhanced_v1-blind-claude-opus-5-5-max-20260922T220130",
+"overall": 0.85,
+"surface_f": 0.707,
+"chamfer_m": null,
+"height_m": null,
+"triangles": null,
+"glb": "../bench-runs/melbourne_25422768_enhanced_v1-blind-claude-opus-5-5-max-20260922T220130/submission/building.glb",
+"page": null,
+"cost": 59.1,
+"turns": 483.0,
+"nruns": 1,
+"allruns": [
+0.85
+],
+"ran": "2026-09-22",
+"minutes": 123.38
+},
+{
+"site": "melbourne_25422768_enhanced_v1",
+"series": "gpt6solmax",
+"run": "melbourne_25422768_enhanced_v1-blind-gpt-6-sol-max-20260922T193124",
+"overall": 0.705,
+"surface_f": 0.265,
+"chamfer_m": null,
+"height_m": null,
+"triangles": null,
+"glb": "../bench-runs/melbourne_25422768_enhanced_v1-blind-gpt-6-sol-max-20260922T193124/submission/building.glb",
+"page": null,
+"cost": 1.48,
+"turns": 1.0,
+"nruns": 1,
+"allruns": [
+0.705
+],
+"ran": "2026-09-22",
+"minutes": 16.72
+},
+{
+"site": "melbourne_25422768_enhanced_v1",
+"series": "gpt6solultra",
+"run": "melbourne_25422768_enhanced_v1-blind-gpt-6-sol-ultra-20260922T183702",
+"overall": 0.683,
+"surface_f": 0.285,
+"chamfer_m": null,
+"height_m": null,
+"triangles": null,
+"glb": "../bench-runs/melbourne_25422768_enhanced_v1-blind-gpt-6-sol-ultra-20260922T183702/submission/building.glb",
+"page": null,
+"cost": 1.77,
+"turns": 1.0,
+"nruns": 1,
+"allruns": [
+0.683
+],
+"ran": "2026-09-22",
+"minutes": 19.22
+},
+{
+"site": "melbourne_25422768_enhanced_v1",
+"series": "swe2maxdevin",
+"run": "melbourne_25422768_enhanced_v1-blind-swe-2-max-devin-20260922T130146",
+"overall": 0.414,
+"surface_f": 0.123,
+"chamfer_m": null,
+"height_m": null,
+"triangles": null,
+"glb": "../bench-runs/melbourne_25422768_enhanced_v1-blind-swe-2-max-devin-20260922T130146/submission/building.glb",
+"page": null,
+"cost": 0.0,
+"turns": 658.0,
+"nruns": 1,
+"allruns": [
+0.414
+],
+"ran": "2026-09-22",
+"minutes": 204.37
+},
+{
+"site": "melbourne_25422768_enhanced_v1",
+"series": "grok47xhigh",
+"run": "melbourne_25422768_enhanced_v1-blind-grok47xhigh-20260921T173225",
+"overall": 0.769,
+"surface_f": 0.321,
+"chamfer_m": null,
+"height_m": null,
+"triangles": null,
+"glb": "../bench-runs/melbourne_25422768_enhanced_v1-blind-grok47xhigh-20260921T173225/submission/building.glb",
+"page": null,
+"cost": 11.82,
+"turns": 78.0,
+"nruns": 1,
+"allruns": [
+0.769
+],
+"ran": "2026-09-21",
+"minutes": 41.5
+},
+{
+"site": "melbourne_25422768_enhanced_v1",
+"series": "step5previewclaudecode",
+"run": "melbourne_25422768_enhanced_v1-blind-step-5-preview-claude-code-20260921T040449",
+"overall": 0.348,
+"surface_f": 0.046,
+"chamfer_m": null,
+"height_m": null,
+"triangles": null,
+"glb": "../bench-runs/melbourne_25422768_enhanced_v1-blind-step-5-preview-claude-code-20260921T040449/submission/building.glb",
+"page": null,
+"cost": 14.27,
+"turns": 962.0,
+"nruns": 1,
+"allruns": [
+0.348
+],
+"ran": "2026-09-21",
+"minutes": 430.45
+},
+{
+"site": "melbourne_25422768_enhanced_v1",
+"series": "zaiglm53flashxclaudecode",
+"run": "melbourne_25422768_enhanced_v1-blind-z-ai-glm-5.3-flashx-claude-code-20260919T042001",
+"overall": 0.732,
+"surface_f": 0.251,
+"chamfer_m": null,
+"height_m": null,
+"triangles": null,
+"glb": "../bench-runs/melbourne_25422768_enhanced_v1-blind-z-ai-glm-5.3-flashx-claude-code-20260919T042001/submission/building.glb",
+"page": null,
+"cost": 2.33,
+"turns": 280.0,
+"nruns": 1,
+"allruns": [
+0.732
+],
+"ran": "2026-09-19",
+"minutes": 77.92
+},
+{
+"site": "melbourne_25422768_enhanced_v1",
+"series": "unionalphaclaudecode",
+"run": "melbourne_25422768_enhanced_v1-blind-union-alpha-claude-code-20260916T221026",
+"overall": 0.785,
+"surface_f": 0.561,
+"chamfer_m": null,
+"height_m": null,
+"triangles": null,
+"glb": "../bench-runs/melbourne_25422768_enhanced_v1-blind-union-alpha-claude-code-20260916T221026/submission/building.glb",
+"page": null,
+"cost": 4.1,
+"turns": 96.0,
+"nruns": 1,
+"allruns": [
+0.785
+],
+"ran": "2026-09-16",
+"minutes": 32.77
+},
+{
+"site": "melbourne_25422768_enhanced_v1",
+"series": "grok46xhigh",
+"run": "melbourne_25422768_enhanced_v1-blind-grok46xhigh-20260914T121941",
+"overall": 0.586,
+"surface_f": 0.217,
+"chamfer_m": null,
+"height_m": null,
+"triangles": null,
+"glb": "../bench-runs/melbourne_25422768_enhanced_v1-blind-grok46xhigh-20260914T121941/submission/building.glb",
+"page": null,
+"cost": 8.72,
+"turns": 59.0,
+"nruns": 2,
+"allruns": [
+0.586,
+0.61
+],
+"ran": "2026-09-14",
+"minutes": 31.78
+},
+{
+"site": "melbourne_25422768_enhanced_v1",
+"series": "deepseekv41flashclaudecode",
+"run": "melbourne_25422768_enhanced_v1-blind-deepseek-v41-flash-claude-code-20260912T015302+3de25e20",
+"overall": 0.622,
+"surface_f": 0.193,
+"chamfer_m": null,
+"height_m": null,
+"triangles": null,
+"glb": "../bench-runs/melbourne_25422768_enhanced_v1-blind-deepseek-v41-flash-claude-code-20260912T015302/submission/building.glb",
+"page": null,
+"cost": 2.29,
+"turns": 330.0,
+"nruns": 2,
+"allruns": [
+0.622,
+0.663
+],
+"ran": "2026-09-12",
+"minutes": 95.65
+},
+{
+"site": "melbourne_25422768_enhanced_v1",
+"series": "deepseekv41flash",
+"run": "melbourne_25422768_enhanced_v1-blind-deepseek-v41-flash-20260911T180154+3de25e20",
+"overall": 0.696,
+"surface_f": 0.255,
+"chamfer_m": null,
+"height_m": null,
+"triangles": null,
+"glb": "../bench-runs/melbourne_25422768_enhanced_v1-blind-deepseek-v41-flash-20260911T180154/submission/building.glb",
+"page": null,
+"cost": null,
+"turns": null,
+"nruns": 2,
+"allruns": [
+0.696,
+0.771
+],
+"ran": "2026-09-11",
+"minutes": 69.72
+},
+{
+"site": "melbourne_25422768_enhanced_v1",
 "series": "inklingfreeclaudecode",
-"run": "melbourne_25422768_enhanced_v1-blind-inkling-free-claude-code-20260906T120555",
-"overall": 0.324,
-"surface_f": 0.032,
+"run": "melbourne_25422768_enhanced_v1-blind-inkling-free-claude-code-20260906T120555+3de25e20",
+"overall": 0.297,
+"surface_f": 0.141,
 "chamfer_m": null,
 "height_m": null,
 "triangles": null,
@@ -7454,8 +9910,9 @@
 "page": null,
 "cost": 0.0,
 "turns": 68.0,
-"nruns": 1,
+"nruns": 2,
 "allruns": [
+0.297,
 0.324
 ],
 "ran": "2026-09-06",
@@ -7464,9 +9921,9 @@
 {
 "site": "melbourne_25422768_enhanced_v1",
 "series": "sonnetmax",
-"run": "melbourne_25422768_enhanced_v1-blind-sonnetmax-20260906T100950",
-"overall": 0.567,
-"surface_f": 0.11,
+"run": "melbourne_25422768_enhanced_v1-blind-sonnetmax-20260906T100950+3de25e20",
+"overall": 0.536,
+"surface_f": 0.135,
 "chamfer_m": null,
 "height_m": null,
 "triangles": null,
@@ -7474,8 +9931,9 @@
 "page": null,
 "cost": 12.41,
 "turns": 197.0,
-"nruns": 1,
+"nruns": 2,
 "allruns": [
+0.536,
 0.567
 ],
 "ran": "2026-09-06",
@@ -7494,9 +9952,10 @@
 "page": null,
 "cost": 47.05,
 "turns": 158.0,
-"nruns": 1,
+"nruns": 2,
 "allruns": [
-0.761
+0.761,
+0.796
 ],
 "ran": "2026-09-06",
 "minutes": 91.55
@@ -7514,9 +9973,10 @@
 "page": null,
 "cost": 7.55,
 "turns": 124.0,
-"nruns": 1,
+"nruns": 2,
 "allruns": [
-0.738
+0.738,
+0.77
 ],
 "ran": "2026-09-06",
 "minutes": 98.4
@@ -7524,9 +9984,9 @@
 {
 "site": "melbourne_25422768_enhanced_v1",
 "series": "gpt56lunamax",
-"run": "melbourne_25422768_enhanced_v1-blind-gpt-5.6-luna-max-20260906T043244",
-"overall": 0.521,
-"surface_f": 0.133,
+"run": "melbourne_25422768_enhanced_v1-blind-gpt-5.6-luna-max-20260906T043244+3de25e20",
+"overall": 0.5,
+"surface_f": 0.149,
 "chamfer_m": null,
 "height_m": null,
 "triangles": null,
@@ -7534,8 +9994,9 @@
 "page": null,
 "cost": 0.62,
 "turns": 106.0,
-"nruns": 1,
+"nruns": 2,
 "allruns": [
+0.5,
 0.521
 ],
 "ran": "2026-09-06",
@@ -7544,9 +10005,9 @@
 {
 "site": "melbourne_25422768_enhanced_v1",
 "series": "haiku",
-"run": "melbourne_25422768_enhanced_v1-blind-haiku-20260906T030550",
-"overall": 0.414,
-"surface_f": 0.039,
+"run": "melbourne_25422768_enhanced_v1-blind-haiku-20260906T030550+3de25e20",
+"overall": 0.395,
+"surface_f": 0.037,
 "chamfer_m": null,
 "height_m": null,
 "triangles": null,
@@ -7554,8 +10015,9 @@
 "page": null,
 "cost": 0.58,
 "turns": 73.0,
-"nruns": 1,
+"nruns": 2,
 "allruns": [
+0.395,
 0.414
 ],
 "ran": "2026-09-06",
@@ -7574,32 +10036,55 @@
 "page": null,
 "cost": 7.6,
 "turns": 99.0,
-"nruns": 1,
+"nruns": 2,
 "allruns": [
-0.679
+0.679,
+0.706
 ],
 "ran": "2026-09-06",
 "minutes": 42.4
 },
 {
 "site": "melbourne_25422768_enhanced_v1",
-"series": "gemini38flash",
-"run": "melbourne_25422768_enhanced_v1-blind-gemini38flash-20260905T022101+aggregate-499498d3b8e2",
-"overall": 0.459,
-"surface_f": 0.112,
+"series": "kimik3max",
+"run": "melbourne_25422768_enhanced_v1-blind-kimi-k3-max-20260905T185702+3de25e20",
+"overall": 0.402,
+"surface_f": 0.137,
 "chamfer_m": null,
 "height_m": null,
 "triangles": null,
-"glb": "../bench-runs/melbourne_25422768_enhanced_v1-blind-gemini38flash-20260905T022101/submission/building.glb",
+"glb": "../bench-runs/melbourne_25422768_enhanced_v1-blind-kimi-k3-max-20260905T185702/submission/building.glb",
 "page": null,
-"cost": 4.62,
-"turns": null,
-"nruns": 1,
+"cost": 5.65,
+"turns": 145.0,
+"nruns": 2,
 "allruns": [
-0.459
+0.402,
+0.479
 ],
 "ran": "2026-09-05",
-"minutes": 62.52
+"minutes": 144.53
+},
+{
+"site": "melbourne_25422768_enhanced_v1",
+"series": "glm53flashmax",
+"run": "melbourne_25422768_enhanced_v1-blind-glm-5.3-flash-max-20260905T182511+3de25e20",
+"overall": 0.208,
+"surface_f": 0.028,
+"chamfer_m": null,
+"height_m": null,
+"triangles": null,
+"glb": "../bench-runs/melbourne_25422768_enhanced_v1-blind-glm-5.3-flash-max-20260905T182511/submission/building.glb",
+"page": null,
+"cost": 0.29,
+"turns": 144.0,
+"nruns": 2,
+"allruns": [
+0.208,
+0.474
+],
+"ran": "2026-09-05",
+"minutes": 113.27
 },
 {
 "site": "melbourne_25422768_enhanced_v1",
@@ -7614,9 +10099,10 @@
 "page": null,
 "cost": 33.18,
 "turns": 213.0,
-"nruns": 1,
+"nruns": 2,
 "allruns": [
-0.82
+0.82,
+0.842
 ],
 "ran": "2026-09-05",
 "minutes": 66.43
@@ -7624,9 +10110,9 @@
 {
 "site": "melbourne_25422768_enhanced_v1",
 "series": "opusmax",
-"run": "melbourne_25422768_enhanced_v1-blind-opusmax-20260905T100714",
-"overall": 0.731,
-"surface_f": 0.369,
+"run": "melbourne_25422768_enhanced_v1-blind-opusmax-20260905T100714+3de25e20",
+"overall": 0.729,
+"surface_f": 0.372,
 "chamfer_m": null,
 "height_m": null,
 "triangles": null,
@@ -7634,12 +10120,55 @@
 "page": null,
 "cost": 59.09,
 "turns": 286.0,
-"nruns": 1,
+"nruns": 2,
 "allruns": [
+0.729,
 0.731
 ],
 "ran": "2026-09-05",
 "minutes": 93.75
+},
+{
+"site": "melbourne_25422768_enhanced_v1",
+"series": "gpt6astraultra",
+"run": "melbourne_25422768_enhanced_v1-blind-gpt-6-astra-ultra-20260905T084221+3de25e20",
+"overall": 0.748,
+"surface_f": 0.477,
+"chamfer_m": null,
+"height_m": null,
+"triangles": null,
+"glb": "../bench-runs/melbourne_25422768_enhanced_v1-blind-gpt-6-astra-ultra-20260905T084221/submission/building.glb",
+"page": null,
+"cost": 6.98,
+"turns": 41.0,
+"nruns": 2,
+"allruns": [
+0.748,
+0.769
+],
+"ran": "2026-09-05",
+"minutes": 30.12
+},
+{
+"site": "melbourne_25422768_enhanced_v1",
+"series": "gemini38flash",
+"run": "melbourne_25422768_enhanced_v1-blind-gemini38flash-20260905T022101+3de25e20",
+"overall": 0.387,
+"surface_f": 0.16,
+"chamfer_m": null,
+"height_m": null,
+"triangles": null,
+"glb": "../bench-runs/melbourne_25422768_enhanced_v1-blind-gemini38flash-20260905T022101/submission/building.glb",
+"page": null,
+"cost": 4.62,
+"turns": null,
+"nruns": 2,
+"allruns": [
+0.387,
+0.459
+],
+"ran": "2026-09-05",
+"minutes": 62.52
 },
 {
 "site": "melbourne_25422768_enhanced_v1",
@@ -7654,13 +10183,299 @@
 "page": null,
 "cost": 6.13,
 "turns": 364.0,
-"nruns": 2,
+"nruns": 3,
 "allruns": [
+0.553,
 0.587,
 0.587
 ],
 "ran": "2026-09-04",
 "minutes": 95.23
+},
+{
+"site": "melbourne_296368687_enhanced_v1",
+"series": "stealthspacebunnyalphaclaudecode",
+"run": "melbourne_296368687_enhanced_v1-blind-stealth-space-bunny-alpha-claude-code-20260923T181708",
+"overall": 0.599,
+"surface_f": 0.232,
+"chamfer_m": null,
+"height_m": null,
+"triangles": null,
+"glb": "../bench-runs/melbourne_296368687_enhanced_v1-blind-stealth-space-bunny-alpha-claude-code-20260923T181708/submission/building.glb",
+"page": null,
+"cost": 0.0,
+"turns": 450.0,
+"nruns": 1,
+"allruns": [
+0.599
+],
+"ran": "2026-09-23",
+"minutes": 119.75
+},
+{
+"site": "melbourne_296368687_enhanced_v1",
+"series": "claudeopus55max",
+"run": "melbourne_296368687_enhanced_v1-blind-claude-opus-5-5-max-20260922T220132",
+"overall": 0.855,
+"surface_f": 0.342,
+"chamfer_m": null,
+"height_m": null,
+"triangles": null,
+"glb": "../bench-runs/melbourne_296368687_enhanced_v1-blind-claude-opus-5-5-max-20260922T220132/submission/building.glb",
+"page": null,
+"cost": 24.63,
+"turns": 241.0,
+"nruns": 1,
+"allruns": [
+0.855
+],
+"ran": "2026-09-22",
+"minutes": 39.23
+},
+{
+"site": "melbourne_296368687_enhanced_v1",
+"series": "gpt6solmax",
+"run": "melbourne_296368687_enhanced_v1-blind-gpt-6-sol-max-20260922T193125",
+"overall": 0.582,
+"surface_f": 0.171,
+"chamfer_m": null,
+"height_m": null,
+"triangles": null,
+"glb": "../bench-runs/melbourne_296368687_enhanced_v1-blind-gpt-6-sol-max-20260922T193125/submission/building.glb",
+"page": null,
+"cost": 3.09,
+"turns": 1.0,
+"nruns": 1,
+"allruns": [
+0.582
+],
+"ran": "2026-09-22",
+"minutes": 44.62
+},
+{
+"site": "melbourne_296368687_enhanced_v1",
+"series": "gpt6solultra",
+"run": "melbourne_296368687_enhanced_v1-blind-gpt-6-sol-ultra-20260922T183703",
+"overall": 0.568,
+"surface_f": 0.294,
+"chamfer_m": null,
+"height_m": null,
+"triangles": null,
+"glb": "../bench-runs/melbourne_296368687_enhanced_v1-blind-gpt-6-sol-ultra-20260922T183703/submission/building.glb",
+"page": null,
+"cost": 2.42,
+"turns": 1.0,
+"nruns": 1,
+"allruns": [
+0.568
+],
+"ran": "2026-09-22",
+"minutes": 26.95
+},
+{
+"site": "melbourne_296368687_enhanced_v1",
+"series": "swe2maxdevin",
+"run": "melbourne_296368687_enhanced_v1-blind-swe-2-max-devin-20260922T140635",
+"overall": 0.809,
+"surface_f": 0.405,
+"chamfer_m": null,
+"height_m": null,
+"triangles": null,
+"glb": "../bench-runs/melbourne_296368687_enhanced_v1-blind-swe-2-max-devin-20260922T140635/submission/building.glb",
+"page": null,
+"cost": 0.0,
+"turns": 670.0,
+"nruns": 1,
+"allruns": [
+0.809
+],
+"ran": "2026-09-22",
+"minutes": 250.43
+},
+{
+"site": "melbourne_296368687_enhanced_v1",
+"series": "grok47xhigh",
+"run": "melbourne_296368687_enhanced_v1-blind-grok47xhigh-20260921T173225",
+"overall": 0.758,
+"surface_f": 0.555,
+"chamfer_m": null,
+"height_m": null,
+"triangles": null,
+"glb": "../bench-runs/melbourne_296368687_enhanced_v1-blind-grok47xhigh-20260921T173225/submission/building.glb",
+"page": null,
+"cost": 6.45,
+"turns": 78.0,
+"nruns": 1,
+"allruns": [
+0.758
+],
+"ran": "2026-09-21",
+"minutes": 32.62
+},
+{
+"site": "melbourne_296368687_enhanced_v1",
+"series": "step5previewclaudecode",
+"run": "melbourne_296368687_enhanced_v1-blind-step-5-preview-claude-code-20260921T040449",
+"overall": 0.391,
+"surface_f": 0.078,
+"chamfer_m": null,
+"height_m": null,
+"triangles": null,
+"glb": "../bench-runs/melbourne_296368687_enhanced_v1-blind-step-5-preview-claude-code-20260921T040449/submission/building.glb",
+"page": null,
+"cost": 12.28,
+"turns": 801.0,
+"nruns": 1,
+"allruns": [
+0.391
+],
+"ran": "2026-09-21",
+"minutes": 428.57
+},
+{
+"site": "melbourne_296368687_enhanced_v1",
+"series": "zaiglm53flashxclaudecode",
+"run": "melbourne_296368687_enhanced_v1-blind-z-ai-glm-5.3-flashx-claude-code-20260919T231723",
+"overall": 0.706,
+"surface_f": 0.317,
+"chamfer_m": null,
+"height_m": null,
+"triangles": null,
+"glb": "../bench-runs/melbourne_296368687_enhanced_v1-blind-z-ai-glm-5.3-flashx-claude-code-20260919T231723/submission/building.glb",
+"page": null,
+"cost": 3.08,
+"turns": 345.0,
+"nruns": 1,
+"allruns": [
+0.706
+],
+"ran": "2026-09-19",
+"minutes": 95.63
+},
+{
+"site": "melbourne_296368687_enhanced_v1",
+"series": "unionalphaclaudecode",
+"run": "melbourne_296368687_enhanced_v1-blind-union-alpha-claude-code-20260916T210853",
+"overall": 0.642,
+"surface_f": 0.276,
+"chamfer_m": null,
+"height_m": null,
+"triangles": null,
+"glb": "../bench-runs/melbourne_296368687_enhanced_v1-blind-union-alpha-claude-code-20260916T210853/submission/building.glb",
+"page": null,
+"cost": 4.43,
+"turns": 89.0,
+"nruns": 1,
+"allruns": [
+0.642
+],
+"ran": "2026-09-16",
+"minutes": 27.58
+},
+{
+"site": "melbourne_296368687_enhanced_v1",
+"series": "grok46xhigh",
+"run": "melbourne_296368687_enhanced_v1-blind-grok46xhigh-20260914T121941+3de25e20",
+"overall": 0.727,
+"surface_f": 0.485,
+"chamfer_m": null,
+"height_m": null,
+"triangles": null,
+"glb": "../bench-runs/melbourne_296368687_enhanced_v1-blind-grok46xhigh-20260914T121941/submission/building.glb",
+"page": null,
+"cost": 10.63,
+"turns": 60.0,
+"nruns": 2,
+"allruns": [
+0.727,
+0.728
+],
+"ran": "2026-09-14",
+"minutes": 49.18
+},
+{
+"site": "melbourne_296368687_enhanced_v1",
+"series": "deepseekv41flashclaudecode",
+"run": "melbourne_296368687_enhanced_v1-blind-deepseek-v41-flash-claude-code-20260912T065413",
+"overall": 0.621,
+"surface_f": 0.085,
+"chamfer_m": null,
+"height_m": null,
+"triangles": null,
+"glb": "../bench-runs/melbourne_296368687_enhanced_v1-blind-deepseek-v41-flash-claude-code-20260912T065413/submission/building.glb",
+"page": null,
+"cost": 1.07,
+"turns": 338.0,
+"nruns": 2,
+"allruns": [
+0.621,
+0.668
+],
+"ran": "2026-09-12",
+"minutes": 106.17
+},
+{
+"site": "melbourne_296368687_enhanced_v1",
+"series": "gpt56solmax",
+"run": "melbourne_296368687_enhanced_v1-blind-gpt-5.6-sol-max-20260910T082835",
+"overall": 0.736,
+"surface_f": 0.508,
+"chamfer_m": null,
+"height_m": null,
+"triangles": null,
+"glb": "../bench-runs/melbourne_296368687_enhanced_v1-blind-gpt-5.6-sol-max-20260910T082835/submission/building.glb",
+"page": null,
+"cost": 5.06,
+"turns": 46.0,
+"nruns": 2,
+"allruns": [
+0.736,
+0.779
+],
+"ran": "2026-09-10",
+"minutes": 41.72
+},
+{
+"site": "melbourne_296368687_enhanced_v1",
+"series": "inklingfreeclaudecode",
+"run": "melbourne_296368687_enhanced_v1-blind-inkling-free-claude-code-20260906T134930+scored-output+3de25e20",
+"overall": 0.258,
+"surface_f": 0.099,
+"chamfer_m": null,
+"height_m": null,
+"triangles": null,
+"glb": "../bench-runs/melbourne_296368687_enhanced_v1-blind-inkling-free-claude-code-20260906T134930/submission/building.glb",
+"page": null,
+"cost": 0.0,
+"turns": 47.0,
+"nruns": 2,
+"allruns": [
+0.258,
+0.309
+],
+"ran": "2026-09-06",
+"minutes": 3.6
+},
+{
+"site": "melbourne_296368687_enhanced_v1",
+"series": "sonnetmax",
+"run": "melbourne_296368687_enhanced_v1-blind-sonnetmax-20260906T102036+3de25e20",
+"overall": 0.528,
+"surface_f": 0.167,
+"chamfer_m": null,
+"height_m": null,
+"triangles": null,
+"glb": "../bench-runs/melbourne_296368687_enhanced_v1-blind-sonnetmax-20260906T102036/submission/building.glb",
+"page": null,
+"cost": 15.04,
+"turns": 186.0,
+"nruns": 2,
+"allruns": [
+0.528,
+0.539
+],
+"ran": "2026-09-06",
+"minutes": 69.57
 },
 {
 "site": "melbourne_296368687_enhanced_v1",
@@ -7675,52 +10490,13 @@
 "page": null,
 "cost": 26.82,
 "turns": 109.0,
-"nruns": 1,
+"nruns": 2,
 "allruns": [
-0.794
+0.794,
+0.84
 ],
 "ran": "2026-09-06",
 "minutes": 52.9
-},
-{
-"site": "melbourne_296368687_enhanced_v1",
-"series": "inklingfreeclaudecode",
-"run": "melbourne_296368687_enhanced_v1-blind-inkling-free-claude-code-20260906T134930+scored-output",
-"overall": 0.309,
-"surface_f": 0.071,
-"chamfer_m": null,
-"height_m": null,
-"triangles": null,
-"glb": "../bench-runs/melbourne_296368687_enhanced_v1-blind-inkling-free-claude-code-20260906T134930/submission/building.glb",
-"page": null,
-"cost": 0.0,
-"turns": 47.0,
-"nruns": 1,
-"allruns": [
-0.309
-],
-"ran": "2026-09-06",
-"minutes": 3.6
-},
-{
-"site": "melbourne_296368687_enhanced_v1",
-"series": "sonnetmax",
-"run": "melbourne_296368687_enhanced_v1-blind-sonnetmax-20260906T102036",
-"overall": 0.539,
-"surface_f": 0.104,
-"chamfer_m": null,
-"height_m": null,
-"triangles": null,
-"glb": "../bench-runs/melbourne_296368687_enhanced_v1-blind-sonnetmax-20260906T102036/submission/building.glb",
-"page": null,
-"cost": 15.04,
-"turns": 186.0,
-"nruns": 1,
-"allruns": [
-0.539
-],
-"ran": "2026-09-06",
-"minutes": 69.57
 },
 {
 "site": "melbourne_296368687_enhanced_v1",
@@ -7735,9 +10511,10 @@
 "page": null,
 "cost": 0.44,
 "turns": 94.0,
-"nruns": 1,
+"nruns": 2,
 "allruns": [
-0.547
+0.547,
+0.579
 ],
 "ran": "2026-09-06",
 "minutes": 63.98
@@ -7745,9 +10522,9 @@
 {
 "site": "melbourne_296368687_enhanced_v1",
 "series": "gpt56terramax",
-"run": "melbourne_296368687_enhanced_v1-blind-gpt-5.6-terra-max-20260906T051736",
-"overall": 0.638,
-"surface_f": 0.164,
+"run": "melbourne_296368687_enhanced_v1-blind-gpt-5.6-terra-max-20260906T051736+3de25e20",
+"overall": 0.535,
+"surface_f": 0.171,
 "chamfer_m": null,
 "height_m": null,
 "triangles": null,
@@ -7755,32 +10532,13 @@
 "page": null,
 "cost": 3.98,
 "turns": 63.0,
-"nruns": 1,
+"nruns": 2,
 "allruns": [
+0.535,
 0.638
 ],
 "ran": "2026-09-06",
 "minutes": 59.17
-},
-{
-"site": "melbourne_296368687_enhanced_v1",
-"series": "gpt56solmax",
-"run": "melbourne_296368687_enhanced_v1-blind-gpt-5.6-sol-max-20260906T034737",
-"overall": 0.699,
-"surface_f": 0.481,
-"chamfer_m": null,
-"height_m": null,
-"triangles": null,
-"glb": "../bench-runs/melbourne_296368687_enhanced_v1-blind-gpt-5.6-sol-max-20260906T034737/submission/building.glb",
-"page": null,
-"cost": null,
-"turns": 189.0,
-"nruns": 1,
-"allruns": [
-0.699
-],
-"ran": "2026-09-06",
-"minutes": 67.93
 },
 {
 "site": "melbourne_296368687_enhanced_v1",
@@ -7795,52 +10553,55 @@
 "page": null,
 "cost": 0.56,
 "turns": 75.0,
-"nruns": 1,
+"nruns": 2,
 "allruns": [
-0.0
+0.0,
+0.175
 ],
 "ran": "2026-09-06",
 "minutes": 18.17
 },
 {
 "site": "melbourne_296368687_enhanced_v1",
-"series": "gemini38flash",
-"run": "melbourne_296368687_enhanced_v1-blind-gemini38flash-20260905T010557+aggregate-1529ae203bcb",
-"overall": 0.601,
-"surface_f": 0.441,
+"series": "kimik3max",
+"run": "melbourne_296368687_enhanced_v1-blind-kimi-k3-max-20260905T221239",
+"overall": 0.68,
+"surface_f": 0.439,
 "chamfer_m": null,
 "height_m": null,
 "triangles": null,
-"glb": "../bench-runs/melbourne_296368687_enhanced_v1-blind-gemini38flash-20260905T010557/submission/building.glb",
+"glb": "../bench-runs/melbourne_296368687_enhanced_v1-blind-kimi-k3-max-20260905T221239/submission/building.glb",
 "page": null,
-"cost": 3.5,
-"turns": null,
-"nruns": 1,
+"cost": 13.32,
+"turns": 244.0,
+"nruns": 2,
 "allruns": [
-0.601
+0.68,
+0.729
 ],
 "ran": "2026-09-05",
-"minutes": 74.65
+"minutes": 338.63
 },
 {
 "site": "melbourne_296368687_enhanced_v1",
-"series": "fable",
-"run": "melbourne_296368687_enhanced_v1-blind-fable-20260905T145030",
-"overall": 0.742,
-"surface_f": 0.528,
+"series": "glm53flashmax",
+"run": "melbourne_296368687_enhanced_v1-blind-glm-5.3-flash-max-20260905T185034",
+"overall": 0.536,
+"surface_f": 0.124,
 "chamfer_m": null,
 "height_m": null,
 "triangles": null,
-"glb": "../bench-runs/melbourne_296368687_enhanced_v1-blind-fable-20260905T145030/submission/building.glb",
+"glb": "../bench-runs/melbourne_296368687_enhanced_v1-blind-glm-5.3-flash-max-20260905T185034/submission/building.glb",
 "page": null,
-"cost": 40.36,
-"turns": 161.0,
-"nruns": 1,
+"cost": 0.55,
+"turns": 173.0,
+"nruns": 2,
 "allruns": [
-0.742
+0.536,
+0.578
 ],
 "ran": "2026-09-05",
-"minutes": 54.88
+"minutes": 138.1
 },
 {
 "site": "melbourne_296368687_enhanced_v1",
@@ -7855,33 +10616,34 @@
 "page": null,
 "cost": 34.52,
 "turns": 179.0,
-"nruns": 1,
+"nruns": 2,
 "allruns": [
-0.604
+0.604,
+0.641
 ],
 "ran": "2026-09-05",
 "minutes": 88.5
 },
 {
 "site": "melbourne_296368687_enhanced_v1",
-"series": "musespark13max",
-"run": "melbourne_296368687_enhanced_v1-blind-musespark13max-20260905T005425+cost",
-"overall": 0.627,
-"surface_f": 0.47,
+"series": "fable",
+"run": "melbourne_296368687_enhanced_v1-blind-fable-20260905T145030",
+"overall": 0.742,
+"surface_f": 0.528,
 "chamfer_m": null,
 "height_m": null,
 "triangles": null,
-"glb": "../bench-runs/melbourne_296368687_enhanced_v1-blind-musespark13max-20260905T005425/submission/building.glb",
+"glb": "../bench-runs/melbourne_296368687_enhanced_v1-blind-fable-20260905T145030/submission/building.glb",
 "page": null,
-"cost": 5.83,
-"turns": 316.0,
+"cost": 40.36,
+"turns": 161.0,
 "nruns": 2,
 "allruns": [
-0.627,
-0.627
+0.742,
+0.765
 ],
 "ran": "2026-09-05",
-"minutes": 53.28
+"minutes": 54.88
 },
 {
 "site": "melbourne_296368687_enhanced_v1",
@@ -7896,19 +10658,306 @@
 "page": null,
 "cost": 21.2,
 "turns": 130.0,
-"nruns": 1,
+"nruns": 2,
 "allruns": [
-0.808
+0.808,
+0.826
 ],
 "ran": "2026-09-05",
 "minutes": 63.17
 },
 {
+"site": "melbourne_296368687_enhanced_v1",
+"series": "gemini38flash",
+"run": "melbourne_296368687_enhanced_v1-blind-gemini38flash-20260905T010557+3de25e20",
+"overall": 0.595,
+"surface_f": 0.199,
+"chamfer_m": null,
+"height_m": null,
+"triangles": null,
+"glb": "../bench-runs/melbourne_296368687_enhanced_v1-blind-gemini38flash-20260905T010557/submission/building.glb",
+"page": null,
+"cost": 3.5,
+"turns": null,
+"nruns": 2,
+"allruns": [
+0.595,
+0.601
+],
+"ran": "2026-09-05",
+"minutes": 74.65
+},
+{
+"site": "melbourne_296368687_enhanced_v1",
+"series": "musespark13max",
+"run": "melbourne_296368687_enhanced_v1-blind-musespark13max-20260905T005425",
+"overall": 0.627,
+"surface_f": 0.47,
+"chamfer_m": null,
+"height_m": null,
+"triangles": null,
+"glb": "../bench-runs/melbourne_296368687_enhanced_v1-blind-musespark13max-20260905T005425/submission/building.glb",
+"page": null,
+"cost": 5.83,
+"turns": 316.0,
+"nruns": 3,
+"allruns": [
+0.627,
+0.627,
+0.631
+],
+"ran": "2026-09-05",
+"minutes": 53.28
+},
+{
+"site": "melbourne_296368687_enhanced_v1",
+"series": "gpt6astraultra",
+"run": "melbourne_296368687_enhanced_v1-blind-gpt-6-astra-ultra-20260904T225725",
+"overall": 0.804,
+"surface_f": 0.609,
+"chamfer_m": null,
+"height_m": null,
+"triangles": null,
+"glb": "../bench-runs/melbourne_296368687_enhanced_v1-blind-gpt-6-astra-ultra-20260904T225725/submission/building.glb",
+"page": null,
+"cost": 8.16,
+"turns": 52.0,
+"nruns": 2,
+"allruns": [
+0.804,
+0.876
+],
+"ran": "2026-09-04",
+"minutes": 36.55
+},
+{
+"site": "melbourne_33106429_enhanced_v1",
+"series": "stealthspacebunnyalphaclaudecode",
+"run": "melbourne_33106429_enhanced_v1-blind-stealth-space-bunny-alpha-claude-code-20260923T181708",
+"overall": 0.604,
+"surface_f": 0.089,
+"chamfer_m": null,
+"height_m": null,
+"triangles": null,
+"glb": "../bench-runs/melbourne_33106429_enhanced_v1-blind-stealth-space-bunny-alpha-claude-code-20260923T181708/submission/building.glb",
+"page": null,
+"cost": 0.0,
+"turns": 932.0,
+"nruns": 1,
+"allruns": [
+0.604
+],
+"ran": "2026-09-23",
+"minutes": 197.23
+},
+{
+"site": "melbourne_33106429_enhanced_v1",
+"series": "claudeopus55max",
+"run": "melbourne_33106429_enhanced_v1-blind-claude-opus-5-5-max-20260922T220134",
+"overall": 0.809,
+"surface_f": 0.344,
+"chamfer_m": null,
+"height_m": null,
+"triangles": null,
+"glb": "../bench-runs/melbourne_33106429_enhanced_v1-blind-claude-opus-5-5-max-20260922T220134/submission/building.glb",
+"page": null,
+"cost": 29.84,
+"turns": 303.0,
+"nruns": 1,
+"allruns": [
+0.809
+],
+"ran": "2026-09-22",
+"minutes": 49.33
+},
+{
+"site": "melbourne_33106429_enhanced_v1",
+"series": "gpt6solmax",
+"run": "melbourne_33106429_enhanced_v1-blind-gpt-6-sol-max-20260922T193126",
+"overall": 0.725,
+"surface_f": 0.263,
+"chamfer_m": null,
+"height_m": null,
+"triangles": null,
+"glb": "../bench-runs/melbourne_33106429_enhanced_v1-blind-gpt-6-sol-max-20260922T193126/submission/building.glb",
+"page": null,
+"cost": 1.34,
+"turns": 1.0,
+"nruns": 1,
+"allruns": [
+0.725
+],
+"ran": "2026-09-22",
+"minutes": 13.02
+},
+{
+"site": "melbourne_33106429_enhanced_v1",
+"series": "gpt6solultra",
+"run": "melbourne_33106429_enhanced_v1-blind-gpt-6-sol-ultra-20260922T183704",
+"overall": 0.721,
+"surface_f": 0.264,
+"chamfer_m": null,
+"height_m": null,
+"triangles": null,
+"glb": "../bench-runs/melbourne_33106429_enhanced_v1-blind-gpt-6-sol-ultra-20260922T183704/submission/building.glb",
+"page": null,
+"cost": 2.3,
+"turns": 1.0,
+"nruns": 1,
+"allruns": [
+0.721
+],
+"ran": "2026-09-22",
+"minutes": 18.97
+},
+{
+"site": "melbourne_33106429_enhanced_v1",
+"series": "swe2maxdevin",
+"run": "melbourne_33106429_enhanced_v1-blind-swe-2-max-devin-20260922T145108",
+"overall": 0.635,
+"surface_f": 0.281,
+"chamfer_m": null,
+"height_m": null,
+"triangles": null,
+"glb": "../bench-runs/melbourne_33106429_enhanced_v1-blind-swe-2-max-devin-20260922T145108/submission/building.glb",
+"page": null,
+"cost": 0.0,
+"turns": 591.0,
+"nruns": 1,
+"allruns": [
+0.635
+],
+"ran": "2026-09-22",
+"minutes": 241.67
+},
+{
+"site": "melbourne_33106429_enhanced_v1",
+"series": "grok47xhigh",
+"run": "melbourne_33106429_enhanced_v1-blind-grok47xhigh-20260921T164933",
+"overall": 0.755,
+"surface_f": 0.309,
+"chamfer_m": null,
+"height_m": null,
+"triangles": null,
+"glb": "../bench-runs/melbourne_33106429_enhanced_v1-blind-grok47xhigh-20260921T164933/submission/building.glb",
+"page": null,
+"cost": 8.55,
+"turns": 89.0,
+"nruns": 1,
+"allruns": [
+0.755
+],
+"ran": "2026-09-21",
+"minutes": 40.13
+},
+{
+"site": "melbourne_33106429_enhanced_v1",
+"series": "step5previewclaudecode",
+"run": "melbourne_33106429_enhanced_v1-blind-step-5-preview-claude-code-20260921T040451",
+"overall": 0.36,
+"surface_f": 0.115,
+"chamfer_m": null,
+"height_m": null,
+"triangles": null,
+"glb": "../bench-runs/melbourne_33106429_enhanced_v1-blind-step-5-preview-claude-code-20260921T040451/submission/building.glb",
+"page": null,
+"cost": 15.31,
+"turns": 1270.0,
+"nruns": 1,
+"allruns": [
+0.36
+],
+"ran": "2026-09-21",
+"minutes": 427.22
+},
+{
+"site": "melbourne_33106429_enhanced_v1",
+"series": "zaiglm53flashxclaudecode",
+"run": "melbourne_33106429_enhanced_v1-blind-z-ai-glm-5.3-flashx-claude-code-20260919T231723",
+"overall": 0.489,
+"surface_f": 0.088,
+"chamfer_m": null,
+"height_m": null,
+"triangles": null,
+"glb": "../bench-runs/melbourne_33106429_enhanced_v1-blind-z-ai-glm-5.3-flashx-claude-code-20260919T231723/submission/building.glb",
+"page": null,
+"cost": 2.97,
+"turns": 362.0,
+"nruns": 1,
+"allruns": [
+0.489
+],
+"ran": "2026-09-19",
+"minutes": 99.72
+},
+{
+"site": "melbourne_33106429_enhanced_v1",
+"series": "unionalphaclaudecode",
+"run": "melbourne_33106429_enhanced_v1-blind-union-alpha-claude-code-20260916T225527",
+"overall": 0.625,
+"surface_f": 0.154,
+"chamfer_m": null,
+"height_m": null,
+"triangles": null,
+"glb": "../bench-runs/melbourne_33106429_enhanced_v1-blind-union-alpha-claude-code-20260916T225527/submission/building.glb",
+"page": null,
+"cost": 2.17,
+"turns": 76.0,
+"nruns": 1,
+"allruns": [
+0.625
+],
+"ran": "2026-09-16",
+"minutes": 29.25
+},
+{
+"site": "melbourne_33106429_enhanced_v1",
+"series": "grok46xhigh",
+"run": "melbourne_33106429_enhanced_v1-blind-grok46xhigh-20260914T105357",
+"overall": 0.713,
+"surface_f": 0.259,
+"chamfer_m": null,
+"height_m": null,
+"triangles": null,
+"glb": "../bench-runs/melbourne_33106429_enhanced_v1-blind-grok46xhigh-20260914T105357/submission/building.glb",
+"page": null,
+"cost": 7.19,
+"turns": 47.0,
+"nruns": 2,
+"allruns": [
+0.713,
+0.768
+],
+"ran": "2026-09-14",
+"minutes": 23.18
+},
+{
+"site": "melbourne_33106429_enhanced_v1",
+"series": "deepseekv41flashclaudecode",
+"run": "melbourne_33106429_enhanced_v1-blind-deepseek-v41-flash-claude-code-20260912T071913",
+"overall": 0.723,
+"surface_f": 0.209,
+"chamfer_m": null,
+"height_m": null,
+"triangles": null,
+"glb": "../bench-runs/melbourne_33106429_enhanced_v1-blind-deepseek-v41-flash-claude-code-20260912T071913/submission/building.glb",
+"page": null,
+"cost": 1.3,
+"turns": 185.0,
+"nruns": 2,
+"allruns": [
+0.723,
+0.755
+],
+"ran": "2026-09-12",
+"minutes": 58.32
+},
+{
 "site": "melbourne_33106429_enhanced_v1",
 "series": "inklingfreeclaudecode",
-"run": "melbourne_33106429_enhanced_v1-blind-inkling-free-claude-code-20260906T135122",
-"overall": 0.392,
-"surface_f": 0.042,
+"run": "melbourne_33106429_enhanced_v1-blind-inkling-free-claude-code-20260906T135122+3de25e20",
+"overall": 0.248,
+"surface_f": 0.051,
 "chamfer_m": null,
 "height_m": null,
 "triangles": null,
@@ -7916,8 +10965,9 @@
 "page": null,
 "cost": 0.0,
 "turns": 73.0,
-"nruns": 1,
+"nruns": 2,
 "allruns": [
+0.248,
 0.392
 ],
 "ran": "2026-09-06",
@@ -7926,9 +10976,9 @@
 {
 "site": "melbourne_33106429_enhanced_v1",
 "series": "fablemax",
-"run": "melbourne_33106429_enhanced_v1-blind-fablemax-20260906T101529",
+"run": "melbourne_33106429_enhanced_v1-blind-fablemax-20260906T101529+3de25e20",
 "overall": 0.735,
-"surface_f": 0.359,
+"surface_f": 0.36,
 "chamfer_m": null,
 "height_m": null,
 "triangles": null,
@@ -7936,8 +10986,9 @@
 "page": null,
 "cost": 39.3,
 "turns": 145.0,
-"nruns": 1,
+"nruns": 2,
 "allruns": [
+0.735,
 0.735
 ],
 "ran": "2026-09-06",
@@ -7956,9 +11007,10 @@
 "page": null,
 "cost": 8.55,
 "turns": 154.0,
-"nruns": 1,
+"nruns": 2,
 "allruns": [
-0.449
+0.449,
+0.531
 ],
 "ran": "2026-09-06",
 "minutes": 42.3
@@ -7966,9 +11018,9 @@
 {
 "site": "melbourne_33106429_enhanced_v1",
 "series": "gpt56lunamax",
-"run": "melbourne_33106429_enhanced_v1-blind-gpt-5.6-luna-max-20260906T062327",
-"overall": 0.5,
-"surface_f": 0.047,
+"run": "melbourne_33106429_enhanced_v1-blind-gpt-5.6-luna-max-20260906T062327+3de25e20",
+"overall": 0.499,
+"surface_f": 0.088,
 "chamfer_m": null,
 "height_m": null,
 "triangles": null,
@@ -7976,8 +11028,9 @@
 "page": null,
 "cost": 0.71,
 "turns": 132.0,
-"nruns": 1,
+"nruns": 2,
 "allruns": [
+0.499,
 0.5
 ],
 "ran": "2026-09-06",
@@ -7996,9 +11049,10 @@
 "page": null,
 "cost": 6.62,
 "turns": 114.0,
-"nruns": 1,
+"nruns": 2,
 "allruns": [
-0.595
+0.595,
+0.686
 ],
 "ran": "2026-09-06",
 "minutes": 83.67
@@ -8016,9 +11070,10 @@
 "page": null,
 "cost": 7.23,
 "turns": 74.0,
-"nruns": 1,
+"nruns": 2,
 "allruns": [
-0.69
+0.69,
+0.734
 ],
 "ran": "2026-09-06",
 "minutes": 36.95
@@ -8036,9 +11091,10 @@
 "page": null,
 "cost": 0.46,
 "turns": 56.0,
-"nruns": 1,
+"nruns": 2,
 "allruns": [
-0.0
+0.0,
+0.191
 ],
 "ran": "2026-09-06",
 "minutes": 6.17
@@ -8046,7 +11102,7 @@
 {
 "site": "melbourne_33106429_enhanced_v1",
 "series": "musespark13max",
-"run": "melbourne_33106429_enhanced_v1-blind-musespark13max-20260905T182134+cost",
+"run": "melbourne_33106429_enhanced_v1-blind-musespark13max-20260905T182134",
 "overall": 0.659,
 "surface_f": 0.275,
 "chamfer_m": null,
@@ -8056,20 +11112,63 @@
 "page": null,
 "cost": 12.2,
 "turns": 672.0,
-"nruns": 2,
+"nruns": 3,
 "allruns": [
 0.659,
-0.659
+0.659,
+0.775
 ],
 "ran": "2026-09-05",
 "minutes": 107.53
 },
 {
 "site": "melbourne_33106429_enhanced_v1",
+"series": "gpt6astraultra",
+"run": "melbourne_33106429_enhanced_v1-blind-gpt-6-astra-ultra-20260905T061336+3de25e20",
+"overall": 0.756,
+"surface_f": 0.23,
+"chamfer_m": null,
+"height_m": null,
+"triangles": null,
+"glb": "../bench-runs/melbourne_33106429_enhanced_v1-blind-gpt-6-astra-ultra-20260905T061336/submission/building.glb",
+"page": null,
+"cost": 5.85,
+"turns": 31.0,
+"nruns": 2,
+"allruns": [
+0.756,
+0.783
+],
+"ran": "2026-09-05",
+"minutes": 40.38
+},
+{
+"site": "melbourne_33106429_enhanced_v1",
+"series": "kimik3max",
+"run": "melbourne_33106429_enhanced_v1-blind-kimi-k3-max-20260905T092643+3de25e20",
+"overall": 0.313,
+"surface_f": 0.084,
+"chamfer_m": null,
+"height_m": null,
+"triangles": null,
+"glb": "../bench-runs/melbourne_33106429_enhanced_v1-blind-kimi-k3-max-20260905T092643/submission/building.glb",
+"page": null,
+"cost": 6.04,
+"turns": 159.0,
+"nruns": 2,
+"allruns": [
+0.313,
+0.408
+],
+"ran": "2026-09-05",
+"minutes": 105.73
+},
+{
+"site": "melbourne_33106429_enhanced_v1",
 "series": "opusmax",
-"run": "melbourne_33106429_enhanced_v1-blind-opusmax-20260905T074022",
-"overall": 0.675,
-"surface_f": 0.21,
+"run": "melbourne_33106429_enhanced_v1-blind-opusmax-20260905T074022+3de25e20",
+"overall": 0.669,
+"surface_f": 0.166,
 "chamfer_m": null,
 "height_m": null,
 "triangles": null,
@@ -8077,8 +11176,9 @@
 "page": null,
 "cost": 46.28,
 "turns": 225.0,
-"nruns": 1,
+"nruns": 2,
 "allruns": [
+0.669,
 0.675
 ],
 "ran": "2026-09-05",
@@ -8087,9 +11187,9 @@
 {
 "site": "melbourne_33106429_enhanced_v1",
 "series": "gemini38flash",
-"run": "melbourne_33106429_enhanced_v1-blind-gemini38flash-20260904T231008+aggregate-86a5e573a465",
-"overall": 0.543,
-"surface_f": 0.11,
+"run": "melbourne_33106429_enhanced_v1-blind-gemini38flash-20260904T231008+3de25e20",
+"overall": 0.485,
+"surface_f": 0.171,
 "chamfer_m": null,
 "height_m": null,
 "triangles": null,
@@ -8097,8 +11197,9 @@
 "page": null,
 "cost": 2.38,
 "turns": null,
-"nruns": 1,
+"nruns": 2,
 "allruns": [
+0.485,
 0.543
 ],
 "ran": "2026-09-04",
@@ -8117,12 +11218,255 @@
 "page": null,
 "cost": 49.26,
 "turns": 206.0,
-"nruns": 1,
+"nruns": 2,
 "allruns": [
-0.67
+0.67,
+0.76
 ],
 "ran": "2026-09-04",
 "minutes": 91.35
+},
+{
+"site": "melbourne_33106429_enhanced_v1",
+"series": "gemini",
+"run": "melbourne_33106429_enhanced_v1-blind-gemini-20260904T212902+3de25e20",
+"overall": 0.227,
+"surface_f": 0.06,
+"chamfer_m": null,
+"height_m": null,
+"triangles": null,
+"glb": "../bench-runs/melbourne_33106429_enhanced_v1-blind-gemini-20260904T212902/submission/building.glb",
+"page": null,
+"cost": 1.48,
+"turns": null,
+"nruns": 1,
+"allruns": [
+0.227
+],
+"ran": "2026-09-04",
+"minutes": 18.5
+},
+{
+"site": "melbourne_45461060_enhanced_v1",
+"series": "stealthspacebunnyalphaclaudecode",
+"run": "melbourne_45461060_enhanced_v1-blind-stealth-space-bunny-alpha-claude-code-20260923T181708",
+"overall": 0.543,
+"surface_f": 0.148,
+"chamfer_m": null,
+"height_m": null,
+"triangles": null,
+"glb": "../bench-runs/melbourne_45461060_enhanced_v1-blind-stealth-space-bunny-alpha-claude-code-20260923T181708/submission/building.glb",
+"page": null,
+"cost": 0.0,
+"turns": 317.0,
+"nruns": 1,
+"allruns": [
+0.543
+],
+"ran": "2026-09-23",
+"minutes": 69.4
+},
+{
+"site": "melbourne_45461060_enhanced_v1",
+"series": "claudeopus55max",
+"run": "melbourne_45461060_enhanced_v1-blind-claude-opus-5-5-max-20260922T220136",
+"overall": 0.889,
+"surface_f": 0.784,
+"chamfer_m": null,
+"height_m": null,
+"triangles": null,
+"glb": "../bench-runs/melbourne_45461060_enhanced_v1-blind-claude-opus-5-5-max-20260922T220136/submission/building.glb",
+"page": null,
+"cost": 58.07,
+"turns": 462.0,
+"nruns": 1,
+"allruns": [
+0.889
+],
+"ran": "2026-09-22",
+"minutes": 86.9
+},
+{
+"site": "melbourne_45461060_enhanced_v1",
+"series": "gpt6solmax",
+"run": "melbourne_45461060_enhanced_v1-blind-gpt-6-sol-max-20260922T193127",
+"overall": 0.53,
+"surface_f": 0.067,
+"chamfer_m": null,
+"height_m": null,
+"triangles": null,
+"glb": "../bench-runs/melbourne_45461060_enhanced_v1-blind-gpt-6-sol-max-20260922T193127/submission/building.glb",
+"page": null,
+"cost": 5.4,
+"turns": 1.0,
+"nruns": 1,
+"allruns": [
+0.53
+],
+"ran": "2026-09-22",
+"minutes": 47.83
+},
+{
+"site": "melbourne_45461060_enhanced_v1",
+"series": "gpt6solultra",
+"run": "melbourne_45461060_enhanced_v1-blind-gpt-6-sol-ultra-20260922T183705",
+"overall": 0.515,
+"surface_f": 0.065,
+"chamfer_m": null,
+"height_m": null,
+"triangles": null,
+"glb": "../bench-runs/melbourne_45461060_enhanced_v1-blind-gpt-6-sol-ultra-20260922T183705/submission/building.glb",
+"page": null,
+"cost": 2.71,
+"turns": 1.0,
+"nruns": 1,
+"allruns": [
+0.515
+],
+"ran": "2026-09-22",
+"minutes": 23.03
+},
+{
+"site": "melbourne_45461060_enhanced_v1",
+"series": "swe2maxdevin",
+"run": "melbourne_45461060_enhanced_v1-blind-swe-2-max-devin-20260922T153336",
+"overall": 0.559,
+"surface_f": 0.153,
+"chamfer_m": null,
+"height_m": null,
+"triangles": null,
+"glb": "../bench-runs/melbourne_45461060_enhanced_v1-blind-swe-2-max-devin-20260922T153336/submission/building.glb",
+"page": null,
+"cost": 0.0,
+"turns": 641.0,
+"nruns": 1,
+"allruns": [
+0.559
+],
+"ran": "2026-09-22",
+"minutes": 233.2
+},
+{
+"site": "melbourne_45461060_enhanced_v1",
+"series": "grok47xhigh",
+"run": "melbourne_45461060_enhanced_v1-blind-grok47xhigh-20260921T164933",
+"overall": 0.796,
+"surface_f": 0.4,
+"chamfer_m": null,
+"height_m": null,
+"triangles": null,
+"glb": "../bench-runs/melbourne_45461060_enhanced_v1-blind-grok47xhigh-20260921T164933/submission/building.glb",
+"page": null,
+"cost": 8.31,
+"turns": 69.0,
+"nruns": 1,
+"allruns": [
+0.796
+],
+"ran": "2026-09-21",
+"minutes": 36.8
+},
+{
+"site": "melbourne_45461060_enhanced_v1",
+"series": "step5previewclaudecode",
+"run": "melbourne_45461060_enhanced_v1-blind-step-5-preview-claude-code-20260921T040451",
+"overall": 0.462,
+"surface_f": 0.182,
+"chamfer_m": null,
+"height_m": null,
+"triangles": null,
+"glb": "../bench-runs/melbourne_45461060_enhanced_v1-blind-step-5-preview-claude-code-20260921T040451/submission/building.glb",
+"page": null,
+"cost": 19.12,
+"turns": 1598.0,
+"nruns": 1,
+"allruns": [
+0.462
+],
+"ran": "2026-09-21",
+"minutes": 689.28
+},
+{
+"site": "melbourne_45461060_enhanced_v1",
+"series": "zaiglm53flashxclaudecode",
+"run": "melbourne_45461060_enhanced_v1-blind-z-ai-glm-5.3-flashx-claude-code-20260919T151620",
+"overall": 0.786,
+"surface_f": 0.562,
+"chamfer_m": null,
+"height_m": null,
+"triangles": null,
+"glb": "../bench-runs/melbourne_45461060_enhanced_v1-blind-z-ai-glm-5.3-flashx-claude-code-20260919T151620/submission/building.glb",
+"page": null,
+"cost": 2.17,
+"turns": 256.0,
+"nruns": 1,
+"allruns": [
+0.786
+],
+"ran": "2026-09-19",
+"minutes": 81.73
+},
+{
+"site": "melbourne_45461060_enhanced_v1",
+"series": "unionalphaclaudecode",
+"run": "melbourne_45461060_enhanced_v1-blind-union-alpha-claude-code-20260916T210853",
+"overall": 0.746,
+"surface_f": 0.211,
+"chamfer_m": null,
+"height_m": null,
+"triangles": null,
+"glb": "../bench-runs/melbourne_45461060_enhanced_v1-blind-union-alpha-claude-code-20260916T210853/submission/building.glb",
+"page": null,
+"cost": 5.15,
+"turns": 81.0,
+"nruns": 1,
+"allruns": [
+0.746
+],
+"ran": "2026-09-16",
+"minutes": 31.22
+},
+{
+"site": "melbourne_45461060_enhanced_v1",
+"series": "grok46xhigh",
+"run": "melbourne_45461060_enhanced_v1-blind-grok46xhigh-20260914T105357",
+"overall": 0.674,
+"surface_f": 0.23,
+"chamfer_m": null,
+"height_m": null,
+"triangles": null,
+"glb": "../bench-runs/melbourne_45461060_enhanced_v1-blind-grok46xhigh-20260914T105357/submission/building.glb",
+"page": null,
+"cost": 19.04,
+"turns": 99.0,
+"nruns": 2,
+"allruns": [
+0.674,
+0.715
+],
+"ran": "2026-09-14",
+"minutes": 39.13
+},
+{
+"site": "melbourne_45461060_enhanced_v1",
+"series": "deepseekv41flashclaudecode",
+"run": "melbourne_45461060_enhanced_v1-blind-deepseek-v41-flash-claude-code-20260912T074132",
+"overall": 0.769,
+"surface_f": 0.356,
+"chamfer_m": null,
+"height_m": null,
+"triangles": null,
+"glb": "../bench-runs/melbourne_45461060_enhanced_v1-blind-deepseek-v41-flash-claude-code-20260912T074132/submission/building.glb",
+"page": null,
+"cost": 2.15,
+"turns": 276.0,
+"nruns": 2,
+"allruns": [
+0.769,
+0.787
+],
+"ran": "2026-09-12",
+"minutes": 64.53
 },
 {
 "site": "melbourne_45461060_enhanced_v1",
@@ -8137,9 +11481,10 @@
 "page": null,
 "cost": 0.0,
 "turns": 86.0,
-"nruns": 1,
+"nruns": 2,
 "allruns": [
-0.0
+0.0,
+0.186
 ],
 "ran": "2026-09-06",
 "minutes": 6.72
@@ -8147,9 +11492,9 @@
 {
 "site": "melbourne_45461060_enhanced_v1",
 "series": "sonnetmax",
-"run": "melbourne_45461060_enhanced_v1-blind-sonnetmax-20260906T101323",
-"overall": 0.451,
-"surface_f": 0.073,
+"run": "melbourne_45461060_enhanced_v1-blind-sonnetmax-20260906T101323+3de25e20",
+"overall": 0.319,
+"surface_f": 0.154,
 "chamfer_m": null,
 "height_m": null,
 "triangles": null,
@@ -8157,8 +11502,9 @@
 "page": null,
 "cost": 21.57,
 "turns": 286.0,
-"nruns": 1,
+"nruns": 2,
 "allruns": [
+0.319,
 0.451
 ],
 "ran": "2026-09-06",
@@ -8177,9 +11523,10 @@
 "page": null,
 "cost": 0.49,
 "turns": 65.0,
-"nruns": 1,
+"nruns": 2,
 "allruns": [
-0.0
+0.0,
+0.175
 ],
 "ran": "2026-09-06",
 "minutes": 6.18
@@ -8197,9 +11544,10 @@
 "page": null,
 "cost": 0.82,
 "turns": 149.0,
-"nruns": 1,
+"nruns": 2,
 "allruns": [
-0.585
+0.585,
+0.606
 ],
 "ran": "2026-09-06",
 "minutes": 86.23
@@ -8217,9 +11565,10 @@
 "page": null,
 "cost": 4.2,
 "turns": 97.0,
-"nruns": 1,
+"nruns": 2,
 "allruns": [
-0.764
+0.764,
+0.784
 ],
 "ran": "2026-09-06",
 "minutes": 55.72
@@ -8237,9 +11586,10 @@
 "page": null,
 "cost": 13.37,
 "turns": 125.0,
-"nruns": 1,
+"nruns": 2,
 "allruns": [
-0.743
+0.743,
+0.797
 ],
 "ran": "2026-09-06",
 "minutes": 73.75
@@ -8257,12 +11607,55 @@
 "page": null,
 "cost": 4.89,
 "turns": null,
-"nruns": 1,
+"nruns": 2,
 "allruns": [
-0.0
+0.0,
+0.831
 ],
 "ran": "2026-09-05",
 "minutes": 54.8
+},
+{
+"site": "melbourne_45461060_enhanced_v1",
+"series": "kimik3max",
+"run": "melbourne_45461060_enhanced_v1-blind-kimi-k3-max-20260905T174309+3de25e20",
+"overall": 0.588,
+"surface_f": 0.399,
+"chamfer_m": null,
+"height_m": null,
+"triangles": null,
+"glb": "../bench-runs/melbourne_45461060_enhanced_v1-blind-kimi-k3-max-20260905T174309/submission/building.glb",
+"page": null,
+"cost": 4.18,
+"turns": 113.0,
+"nruns": 2,
+"allruns": [
+0.588,
+0.594
+],
+"ran": "2026-09-05",
+"minutes": 68.8
+},
+{
+"site": "melbourne_45461060_enhanced_v1",
+"series": "glm53flashmax",
+"run": "melbourne_45461060_enhanced_v1-blind-glm-5.3-flash-max-20260905T173902",
+"overall": 0.651,
+"surface_f": 0.413,
+"chamfer_m": null,
+"height_m": null,
+"triangles": null,
+"glb": "../bench-runs/melbourne_45461060_enhanced_v1-blind-glm-5.3-flash-max-20260905T173902/submission/building.glb",
+"page": null,
+"cost": 0.32,
+"turns": 133.0,
+"nruns": 2,
+"allruns": [
+0.651,
+0.733
+],
+"ran": "2026-09-05",
+"minutes": 94.42
 },
 {
 "site": "melbourne_45461060_enhanced_v1",
@@ -8277,9 +11670,10 @@
 "page": null,
 "cost": 50.95,
 "turns": 177.0,
-"nruns": 1,
+"nruns": 2,
 "allruns": [
-0.862
+0.862,
+0.917
 ],
 "ran": "2026-09-05",
 "minutes": 73.72
@@ -8287,9 +11681,9 @@
 {
 "site": "melbourne_45461060_enhanced_v1",
 "series": "opusmax",
-"run": "melbourne_45461060_enhanced_v1-blind-opusmax-20260905T121840",
-"overall": 0.886,
-"surface_f": 0.67,
+"run": "melbourne_45461060_enhanced_v1-blind-opusmax-20260905T121840+3de25e20",
+"overall": 0.872,
+"surface_f": 0.405,
 "chamfer_m": null,
 "height_m": null,
 "triangles": null,
@@ -8297,12 +11691,34 @@
 "page": null,
 "cost": 64.52,
 "turns": 310.0,
-"nruns": 1,
+"nruns": 2,
 "allruns": [
+0.872,
 0.886
 ],
 "ran": "2026-09-05",
 "minutes": 130.27
+},
+{
+"site": "melbourne_45461060_enhanced_v1",
+"series": "gpt6astraultra",
+"run": "melbourne_45461060_enhanced_v1-blind-gpt-6-astra-ultra-20260905T084221",
+"overall": 0.807,
+"surface_f": 0.538,
+"chamfer_m": null,
+"height_m": null,
+"triangles": null,
+"glb": "../bench-runs/melbourne_45461060_enhanced_v1-blind-gpt-6-astra-ultra-20260905T084221/submission/building.glb",
+"page": null,
+"cost": 5.02,
+"turns": 32.0,
+"nruns": 2,
+"allruns": [
+0.807,
+0.828
+],
+"ran": "2026-09-05",
+"minutes": 23.87
 },
 {
 "site": "melbourne_45461060_enhanced_v1",
@@ -8317,8 +11733,9 @@
 "page": null,
 "cost": 5.95,
 "turns": 329.0,
-"nruns": 2,
+"nruns": 3,
 "allruns": [
+0.735,
 0.777,
 0.777
 ],
@@ -8338,19 +11755,242 @@
 "page": null,
 "cost": 33.15,
 "turns": 207.0,
-"nruns": 1,
+"nruns": 2,
 "allruns": [
-0.796
+0.796,
+0.841
 ],
 "ran": "2026-09-05",
 "minutes": 53.95
 },
 {
 "site": "melbourne_4817059_enhanced_v1",
+"series": "stealthspacebunnyalphaclaudecode",
+"run": "melbourne_4817059_enhanced_v1-blind-stealth-space-bunny-alpha-claude-code-20260923T181708",
+"overall": 0.429,
+"surface_f": 0.178,
+"chamfer_m": null,
+"height_m": null,
+"triangles": null,
+"glb": "../bench-runs/melbourne_4817059_enhanced_v1-blind-stealth-space-bunny-alpha-claude-code-20260923T181708/submission/building.glb",
+"page": null,
+"cost": 0.0,
+"turns": 307.0,
+"nruns": 1,
+"allruns": [
+0.429
+],
+"ran": "2026-09-23",
+"minutes": 63.75
+},
+{
+"site": "melbourne_4817059_enhanced_v1",
+"series": "claudeopus55max",
+"run": "melbourne_4817059_enhanced_v1-blind-claude-opus-5-5-max-20260922T220138",
+"overall": 0.881,
+"surface_f": 0.425,
+"chamfer_m": null,
+"height_m": null,
+"triangles": null,
+"glb": "../bench-runs/melbourne_4817059_enhanced_v1-blind-claude-opus-5-5-max-20260922T220138/submission/building.glb",
+"page": null,
+"cost": 31.12,
+"turns": 332.0,
+"nruns": 1,
+"allruns": [
+0.881
+],
+"ran": "2026-09-22",
+"minutes": 76.15
+},
+{
+"site": "melbourne_4817059_enhanced_v1",
+"series": "gpt6solmax",
+"run": "melbourne_4817059_enhanced_v1-blind-gpt-6-sol-max-20260922T193128",
+"overall": 0.764,
+"surface_f": 0.219,
+"chamfer_m": null,
+"height_m": null,
+"triangles": null,
+"glb": "../bench-runs/melbourne_4817059_enhanced_v1-blind-gpt-6-sol-max-20260922T193128/submission/building.glb",
+"page": null,
+"cost": 2.04,
+"turns": 1.0,
+"nruns": 1,
+"allruns": [
+0.764
+],
+"ran": "2026-09-22",
+"minutes": 21.17
+},
+{
+"site": "melbourne_4817059_enhanced_v1",
+"series": "gpt6solultra",
+"run": "melbourne_4817059_enhanced_v1-blind-gpt-6-sol-ultra-20260922T183706",
+"overall": 0.73,
+"surface_f": 0.143,
+"chamfer_m": null,
+"height_m": null,
+"triangles": null,
+"glb": "../bench-runs/melbourne_4817059_enhanced_v1-blind-gpt-6-sol-ultra-20260922T183706/submission/building.glb",
+"page": null,
+"cost": 2.13,
+"turns": 1.0,
+"nruns": 1,
+"allruns": [
+0.73
+],
+"ran": "2026-09-22",
+"minutes": 19.43
+},
+{
+"site": "melbourne_4817059_enhanced_v1",
+"series": "swe2maxdevin",
+"run": "melbourne_4817059_enhanced_v1-blind-swe-2-max-devin-20260922T155144",
+"overall": 0.735,
+"surface_f": 0.311,
+"chamfer_m": null,
+"height_m": null,
+"triangles": null,
+"glb": "../bench-runs/melbourne_4817059_enhanced_v1-blind-swe-2-max-devin-20260922T155144/submission/building.glb",
+"page": null,
+"cost": 0.0,
+"turns": 622.0,
+"nruns": 1,
+"allruns": [
+0.735
+],
+"ran": "2026-09-22",
+"minutes": 247.45
+},
+{
+"site": "melbourne_4817059_enhanced_v1",
+"series": "grok47xhigh",
+"run": "melbourne_4817059_enhanced_v1-blind-grok47xhigh-20260921T164933",
+"overall": 0.862,
+"surface_f": 0.392,
+"chamfer_m": null,
+"height_m": null,
+"triangles": null,
+"glb": "../bench-runs/melbourne_4817059_enhanced_v1-blind-grok47xhigh-20260921T164933/submission/building.glb",
+"page": null,
+"cost": 13.44,
+"turns": 76.0,
+"nruns": 1,
+"allruns": [
+0.862
+],
+"ran": "2026-09-21",
+"minutes": 41.38
+},
+{
+"site": "melbourne_4817059_enhanced_v1",
+"series": "step5previewclaudecode",
+"run": "melbourne_4817059_enhanced_v1-blind-step-5-preview-claude-code-20260921T040453",
+"overall": 0.292,
+"surface_f": 0.052,
+"chamfer_m": null,
+"height_m": null,
+"triangles": null,
+"glb": "../bench-runs/melbourne_4817059_enhanced_v1-blind-step-5-preview-claude-code-20260921T040453/submission/building.glb",
+"page": null,
+"cost": 18.26,
+"turns": 1446.0,
+"nruns": 1,
+"allruns": [
+0.292
+],
+"ran": "2026-09-21",
+"minutes": 429.95
+},
+{
+"site": "melbourne_4817059_enhanced_v1",
+"series": "zaiglm53flashxclaudecode",
+"run": "melbourne_4817059_enhanced_v1-blind-z-ai-glm-5.3-flashx-claude-code-20260919T042001",
+"overall": 0.716,
+"surface_f": 0.316,
+"chamfer_m": null,
+"height_m": null,
+"triangles": null,
+"glb": "../bench-runs/melbourne_4817059_enhanced_v1-blind-z-ai-glm-5.3-flashx-claude-code-20260919T042001/submission/building.glb",
+"page": null,
+"cost": 1.76,
+"turns": 224.0,
+"nruns": 1,
+"allruns": [
+0.716
+],
+"ran": "2026-09-19",
+"minutes": 45.37
+},
+{
+"site": "melbourne_4817059_enhanced_v1",
+"series": "unionalphaclaudecode",
+"run": "melbourne_4817059_enhanced_v1-blind-union-alpha-claude-code-20260916T221026",
+"overall": 0.819,
+"surface_f": 0.425,
+"chamfer_m": null,
+"height_m": null,
+"triangles": null,
+"glb": "../bench-runs/melbourne_4817059_enhanced_v1-blind-union-alpha-claude-code-20260916T221026/submission/building.glb",
+"page": null,
+"cost": 2.57,
+"turns": 74.0,
+"nruns": 1,
+"allruns": [
+0.819
+],
+"ran": "2026-09-16",
+"minutes": 31.35
+},
+{
+"site": "melbourne_4817059_enhanced_v1",
+"series": "grok46xhigh",
+"run": "melbourne_4817059_enhanced_v1-blind-grok46xhigh-20260914T105357",
+"overall": 0.726,
+"surface_f": 0.28,
+"chamfer_m": null,
+"height_m": null,
+"triangles": null,
+"glb": "../bench-runs/melbourne_4817059_enhanced_v1-blind-grok46xhigh-20260914T105357/submission/building.glb",
+"page": null,
+"cost": 10.55,
+"turns": 56.0,
+"nruns": 2,
+"allruns": [
+0.726,
+0.758
+],
+"ran": "2026-09-14",
+"minutes": 36.23
+},
+{
+"site": "melbourne_4817059_enhanced_v1",
+"series": "deepseekv41flashclaudecode",
+"run": "melbourne_4817059_enhanced_v1-blind-deepseek-v41-flash-claude-code-20260912T074955",
+"overall": 0.643,
+"surface_f": 0.171,
+"chamfer_m": null,
+"height_m": null,
+"triangles": null,
+"glb": "../bench-runs/melbourne_4817059_enhanced_v1-blind-deepseek-v41-flash-claude-code-20260912T074955/submission/building.glb",
+"page": null,
+"cost": 1.87,
+"turns": 242.0,
+"nruns": 2,
+"allruns": [
+0.643,
+0.779
+],
+"ran": "2026-09-12",
+"minutes": 54.92
+},
+{
+"site": "melbourne_4817059_enhanced_v1",
 "series": "inklingfreeclaudecode",
-"run": "melbourne_4817059_enhanced_v1-blind-inkling-free-claude-code-20260906T135325",
-"overall": 0.47,
-"surface_f": 0.125,
+"run": "melbourne_4817059_enhanced_v1-blind-inkling-free-claude-code-20260906T135325+3de25e20",
+"overall": 0.385,
+"surface_f": 0.059,
 "chamfer_m": null,
 "height_m": null,
 "triangles": null,
@@ -8358,8 +11998,9 @@
 "page": null,
 "cost": 0.0,
 "turns": 78.0,
-"nruns": 1,
+"nruns": 2,
 "allruns": [
+0.385,
 0.47
 ],
 "ran": "2026-09-06",
@@ -8378,9 +12019,10 @@
 "page": null,
 "cost": 44.8,
 "turns": 136.0,
-"nruns": 1,
+"nruns": 2,
 "allruns": [
-0.753
+0.753,
+0.775
 ],
 "ran": "2026-09-06",
 "minutes": 62.75
@@ -8398,9 +12040,10 @@
 "page": null,
 "cost": 14.56,
 "turns": 205.0,
-"nruns": 1,
+"nruns": 2,
 "allruns": [
-0.563
+0.563,
+0.612
 ],
 "ran": "2026-09-06",
 "minutes": 59.5
@@ -8418,9 +12061,10 @@
 "page": null,
 "cost": 0.35,
 "turns": 54.0,
-"nruns": 1,
+"nruns": 2,
 "allruns": [
-0.601
+0.601,
+0.64
 ],
 "ran": "2026-09-06",
 "minutes": 40.63
@@ -8438,9 +12082,10 @@
 "page": null,
 "cost": 5.26,
 "turns": 98.0,
-"nruns": 1,
+"nruns": 2,
 "allruns": [
-0.628
+0.628,
+0.66
 ],
 "ran": "2026-09-06",
 "minutes": 66.55
@@ -8458,9 +12103,10 @@
 "page": null,
 "cost": 0.63,
 "turns": 84.0,
-"nruns": 1,
+"nruns": 2,
 "allruns": [
-0.277
+0.277,
+0.348
 ],
 "ran": "2026-09-06",
 "minutes": 14.73
@@ -8478,53 +12124,34 @@
 "page": null,
 "cost": 8.26,
 "turns": 88.0,
-"nruns": 1,
+"nruns": 2,
 "allruns": [
-0.69
+0.69,
+0.694
 ],
 "ran": "2026-09-06",
 "minutes": 45.23
 },
 {
 "site": "melbourne_4817059_enhanced_v1",
-"series": "musespark13max",
-"run": "melbourne_4817059_enhanced_v1-blind-musespark13max-20260905T172026+cost",
-"overall": 0.668,
-"surface_f": 0.167,
+"series": "kimik3max",
+"run": "melbourne_4817059_enhanced_v1-blind-kimi-k3-max-20260905T191035",
+"overall": 0.52,
+"surface_f": 0.092,
 "chamfer_m": null,
 "height_m": null,
 "triangles": null,
-"glb": "../bench-runs/melbourne_4817059_enhanced_v1-blind-musespark13max-20260905T172026/submission/building.glb",
+"glb": "../bench-runs/melbourne_4817059_enhanced_v1-blind-kimi-k3-max-20260905T191035/submission/building.glb",
 "page": null,
-"cost": 5.21,
-"turns": 302.0,
+"cost": 10.22,
+"turns": 253.0,
 "nruns": 2,
 "allruns": [
-0.668,
-0.668
+0.52,
+0.549
 ],
 "ran": "2026-09-05",
-"minutes": 46.38
-},
-{
-"site": "melbourne_4817059_enhanced_v1",
-"series": "gemini38flash",
-"run": "melbourne_4817059_enhanced_v1-blind-gemini38flash-20260904T234443+aggregate-36faa429bf22",
-"overall": 0.775,
-"surface_f": 0.358,
-"chamfer_m": null,
-"height_m": null,
-"triangles": null,
-"glb": "../bench-runs/melbourne_4817059_enhanced_v1-blind-gemini38flash-20260904T234443/submission/building.glb",
-"page": null,
-"cost": 3.43,
-"turns": null,
-"nruns": 1,
-"allruns": [
-0.775
-],
-"ran": "2026-09-04",
-"minutes": 33.33
+"minutes": 221.48
 },
 {
 "site": "melbourne_4817059_enhanced_v1",
@@ -8539,12 +12166,56 @@
 "page": null,
 "cost": 67.27,
 "turns": 321.0,
-"nruns": 1,
+"nruns": 2,
 "allruns": [
-0.698
+0.698,
+0.751
 ],
 "ran": "2026-09-05",
 "minutes": 103.62
+},
+{
+"site": "melbourne_4817059_enhanced_v1",
+"series": "musespark13max",
+"run": "melbourne_4817059_enhanced_v1-blind-musespark13max-20260905T172026+cost",
+"overall": 0.668,
+"surface_f": 0.167,
+"chamfer_m": null,
+"height_m": null,
+"triangles": null,
+"glb": "../bench-runs/melbourne_4817059_enhanced_v1-blind-musespark13max-20260905T172026/submission/building.glb",
+"page": null,
+"cost": 5.21,
+"turns": 302.0,
+"nruns": 3,
+"allruns": [
+0.668,
+0.668,
+0.668
+],
+"ran": "2026-09-05",
+"minutes": 46.38
+},
+{
+"site": "melbourne_4817059_enhanced_v1",
+"series": "gpt6astraultra",
+"run": "melbourne_4817059_enhanced_v1-blind-gpt-6-astra-ultra-20260905T064448",
+"overall": 0.795,
+"surface_f": 0.587,
+"chamfer_m": null,
+"height_m": null,
+"triangles": null,
+"glb": "../bench-runs/melbourne_4817059_enhanced_v1-blind-gpt-6-astra-ultra-20260905T064448/submission/building.glb",
+"page": null,
+"cost": 5.83,
+"turns": 36.0,
+"nruns": 2,
+"allruns": [
+0.795,
+0.883
+],
+"ran": "2026-09-05",
+"minutes": 30.17
 },
 {
 "site": "melbourne_4817059_enhanced_v1",
@@ -8559,9 +12230,10 @@
 "page": null,
 "cost": 39.17,
 "turns": 248.0,
-"nruns": 1,
+"nruns": 2,
 "allruns": [
-0.881
+0.881,
+0.925
 ],
 "ran": "2026-09-05",
 "minutes": 71.9
@@ -8579,305 +12251,33 @@
 "page": null,
 "cost": 10.36,
 "turns": 70.0,
-"nruns": 1,
+"nruns": 2,
 "allruns": [
-0.642
+0.642,
+0.67
 ],
 "ran": "2026-09-05",
 "minutes": 17.02
 },
 {
-"site": "flatiron",
-"series": "gpt6astraultra",
-"run": "flatiron-blind-gpt-6-astra-ultra-20260906T124102",
-"overall": 0.79596,
-"surface_f": 0.43204,
-"chamfer_m": 0.7324,
-"height_m": 93.8,
-"triangles": 14651,
-"glb": "../bench-runs/flatiron-blind-gpt-6-astra-ultra-20260906T124102/submission/building.glb",
-"page": "cell/flatiron-blind-gpt-6-astra-ultra.html",
-"cost": 7.266828,
-"turns": 51,
-"nruns": 1,
-"allruns": [
-0.79596
-],
-"ran": "2026-09-06",
-"minutes": 28.55,
-"source": "astra.html"
-},
-{
-"site": "geisel",
-"series": "gpt6astraultra",
-"run": "geisel-blind-gpt-6-astra-ultra-20260904T123005",
-"overall": 0.62405,
-"surface_f": 0.48987,
-"chamfer_m": 0.6847,
-"height_m": 40.15,
-"triangles": 11438,
-"glb": "../bench-runs/geisel-blind-gpt-6-astra-ultra-20260904T123005/submission/building.glb",
-"page": "cell/geisel-blind-gpt-6-astra-ultra.html",
-"cost": null,
-"turns": 41,
-"nruns": 1,
-"allruns": [
-0.62405
-],
-"ran": "2026-09-04",
-"minutes": 20.75,
-"source": "astra.html"
-},
-{
-"site": "helsinki_122886734_enhanced_v1",
-"series": "gpt6astraultra",
-"run": "helsinki_122886734_enhanced_v1-blind-gpt-6-astra-ultra-20260904T222324",
-"overall": 0.72782,
-"surface_f": 0.72608,
-"chamfer_m": 0.5625,
-"height_m": 25.45,
-"triangles": 5874,
-"glb": "../bench-runs/helsinki_122886734_enhanced_v1-blind-gpt-6-astra-ultra-20260904T222324/submission/building.glb",
-"page": "",
-"cost": 7.148518,
-"turns": 45,
-"nruns": 1,
-"allruns": [
-0.72782
-],
-"ran": "2026-09-04",
-"minutes": 27.39,
-"source": "astra.html"
-},
-{
-"site": "helsinki_122954081_enhanced_v1",
-"series": "gpt6astraultra",
-"run": "helsinki_122954081_enhanced_v1-blind-gpt-6-astra-ultra-20260904T221911",
-"overall": 0.80771,
-"surface_f": 0.73155,
-"chamfer_m": 0.4197,
-"height_m": 15.05,
-"triangles": 2618,
-"glb": "../bench-runs/helsinki_122954081_enhanced_v1-blind-gpt-6-astra-ultra-20260904T221911/submission/building.glb",
-"page": "",
-"cost": 8.41019,
-"turns": 53,
-"nruns": 1,
-"allruns": [
-0.80771
-],
-"ran": "2026-09-04",
-"minutes": 36.57,
-"source": "astra.html"
-},
-{
-"site": "helsinki_123901485_enhanced_v1",
-"series": "gpt6astraultra",
-"run": "helsinki_123901485_enhanced_v1-blind-gpt-6-astra-ultra-20260905T053213",
-"overall": 0.81396,
-"surface_f": 0.62985,
-"chamfer_m": 0.6123,
-"height_m": 74.05,
-"triangles": 7324,
-"glb": "../bench-runs/helsinki_123901485_enhanced_v1-blind-gpt-6-astra-ultra-20260905T053213/submission/building.glb",
-"page": "",
-"cost": 6.53563,
-"turns": 42,
-"nruns": 1,
-"allruns": [
-0.81396
-],
-"ran": "2026-09-05",
-"minutes": 33.36,
-"source": "astra.html"
-},
-{
-"site": "helsinki_8033120_enhanced_v1",
-"series": "gpt6astraultra",
-"run": "helsinki_8033120_enhanced_v1-blind-gpt-6-astra-ultra-20260904T214127",
-"overall": 0.80412,
-"surface_f": 0.63408,
-"chamfer_m": 0.6351,
-"height_m": 24.69,
-"triangles": 23103,
-"glb": "../bench-runs/helsinki_8033120_enhanced_v1-blind-gpt-6-astra-ultra-20260904T214127/submission/building.glb",
-"page": "",
-"cost": 8.695186,
-"turns": 40,
-"nruns": 1,
-"allruns": [
-0.80412
-],
-"ran": "2026-09-04",
-"minutes": 29.67,
-"source": "astra.html"
-},
-{
-"site": "helsinki_cathedral_enhanced_v1",
-"series": "gpt6astraultra",
-"run": "helsinki_cathedral_enhanced_v1-blind-gpt-6-astra-ultra-20260905T084221",
-"overall": 0.77957,
-"surface_f": 0.67145,
-"chamfer_m": 0.4996,
-"height_m": 57.65,
-"triangles": 138846,
-"glb": "../bench-runs/helsinki_cathedral_enhanced_v1-blind-gpt-6-astra-ultra-20260905T084221/submission/building.glb",
-"page": "",
-"cost": 4.991648,
-"turns": 35,
-"nruns": 1,
-"allruns": [
-0.77957
-],
-"ran": "2026-09-05",
-"minutes": 24.8,
-"source": "astra.html"
-},
-{
-"site": "melbourne_155809136_enhanced_v1",
-"series": "gpt6astraultra",
-"run": "melbourne_155809136_enhanced_v1-blind-gpt-6-astra-ultra-20260904T223209",
-"overall": 0.84168,
-"surface_f": 0.74473,
-"chamfer_m": 1.0909,
-"height_m": 96.6,
-"triangles": 246804,
-"glb": "../bench-runs/melbourne_155809136_enhanced_v1-blind-gpt-6-astra-ultra-20260904T223209/submission/building.glb",
-"page": "",
-"cost": 7.108274,
-"turns": 50,
-"nruns": 1,
-"allruns": [
-0.84168
-],
-"ran": "2026-09-04",
-"minutes": 33.81,
-"source": "astra.html"
-},
-{
-"site": "melbourne_22820458_enhanced_v1",
-"series": "gpt6astraultra",
-"run": "melbourne_22820458_enhanced_v1-blind-gpt-6-astra-ultra-20260904T223123",
-"overall": 0.8191,
-"surface_f": 0.46627,
-"chamfer_m": 1.7994,
-"height_m": 46.65,
-"triangles": 3655,
-"glb": "../bench-runs/melbourne_22820458_enhanced_v1-blind-gpt-6-astra-ultra-20260904T223123/submission/building.glb",
-"page": "",
-"cost": 8.321086,
-"turns": 51,
-"nruns": 1,
-"allruns": [
-0.8191
-],
-"ran": "2026-09-04",
-"minutes": 35.18,
-"source": "astra.html"
-},
-{
-"site": "melbourne_25422768_enhanced_v1",
-"series": "gpt6astraultra",
-"run": "melbourne_25422768_enhanced_v1-blind-gpt-6-astra-ultra-20260905T084221",
-"overall": 0.76878,
-"surface_f": 0.54073,
-"chamfer_m": 1.5852,
-"height_m": 54.65,
-"triangles": 7324,
-"glb": "../bench-runs/melbourne_25422768_enhanced_v1-blind-gpt-6-astra-ultra-20260905T084221/submission/building.glb",
-"page": "",
-"cost": 6.983164,
-"turns": 41,
-"nruns": 1,
-"allruns": [
-0.76878
-],
-"ran": "2026-09-05",
-"minutes": 30.12,
-"source": "astra.html"
-},
-{
-"site": "melbourne_296368687_enhanced_v1",
-"series": "gpt6astraultra",
-"run": "melbourne_296368687_enhanced_v1-blind-gpt-6-astra-ultra-20260904T225725",
-"overall": 0.80383,
-"surface_f": 0.60861,
-"chamfer_m": 0.9654,
-"height_m": 123.6,
-"triangles": 38082,
-"glb": "../bench-runs/melbourne_296368687_enhanced_v1-blind-gpt-6-astra-ultra-20260904T225725/submission/building.glb",
-"page": "",
-"cost": 8.163742,
-"turns": 52,
-"nruns": 1,
-"allruns": [
-0.80383
-],
-"ran": "2026-09-04",
-"minutes": 36.56,
-"source": "astra.html"
-},
-{
-"site": "melbourne_33106429_enhanced_v1",
-"series": "gpt6astraultra",
-"run": "melbourne_33106429_enhanced_v1-blind-gpt-6-astra-ultra-20260905T061336",
-"overall": 0.78287,
-"surface_f": 0.70764,
-"chamfer_m": 1.6545,
-"height_m": 52.36,
-"triangles": 31496,
-"glb": "../bench-runs/melbourne_33106429_enhanced_v1-blind-gpt-6-astra-ultra-20260905T061336/submission/building.glb",
-"page": "",
-"cost": 5.84832,
-"turns": 31,
-"nruns": 1,
-"allruns": [
-0.78287
-],
-"ran": "2026-09-05",
-"minutes": 40.39,
-"source": "astra.html"
-},
-{
-"site": "melbourne_45461060_enhanced_v1",
-"series": "gpt6astraultra",
-"run": "melbourne_45461060_enhanced_v1-blind-gpt-6-astra-ultra-20260905T084221",
-"overall": 0.80651,
-"surface_f": 0.53808,
-"chamfer_m": 0.8845,
-"height_m": 14.30623,
-"triangles": 636,
-"glb": "../bench-runs/melbourne_45461060_enhanced_v1-blind-gpt-6-astra-ultra-20260905T084221/submission/building.glb",
-"page": "",
-"cost": 5.020028,
-"turns": 32,
-"nruns": 1,
-"allruns": [
-0.80651
-],
-"ran": "2026-09-05",
-"minutes": 23.87,
-"source": "astra.html"
-},
-{
 "site": "melbourne_4817059_enhanced_v1",
-"series": "gpt6astraultra",
-"run": "melbourne_4817059_enhanced_v1-blind-gpt-6-astra-ultra-20260905T064448",
-"overall": 0.79484,
-"surface_f": 0.58693,
-"chamfer_m": 1.2398,
-"height_m": 69.2,
-"triangles": 79397,
-"glb": "../bench-runs/melbourne_4817059_enhanced_v1-blind-gpt-6-astra-ultra-20260905T064448/submission/building.glb",
-"page": "",
-"cost": 5.833004,
-"turns": 36,
-"nruns": 1,
+"series": "gemini38flash",
+"run": "melbourne_4817059_enhanced_v1-blind-gemini38flash-20260904T234443+aggregate-36faa429bf22",
+"overall": 0.775,
+"surface_f": 0.358,
+"chamfer_m": null,
+"height_m": null,
+"triangles": null,
+"glb": "../bench-runs/melbourne_4817059_enhanced_v1-blind-gemini38flash-20260904T234443/submission/building.glb",
+"page": null,
+"cost": 3.43,
+"turns": null,
+"nruns": 2,
 "allruns": [
-0.79484
+0.775,
+0.807
 ],
-"ran": "2026-09-05",
-"minutes": 30.18,
-"source": "astra.html"
+"ran": "2026-09-04",
+"minutes": 33.33
 }
 ]

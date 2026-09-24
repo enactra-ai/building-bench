@@ -63,6 +63,11 @@ dialog{border:1px solid #c9d9c3;border-radius:13px;padding:0;background:#fff;col
 @media(min-width:651px){.brand-by{font-size:12px}}
 @media(max-width:1180px){.brand-by{display:none}}
 @media(max-width:650px){.brand-home{gap:7px}}
+/* Building cards: the name takes the whole width beside the thumbnail, wraps (breaking a long
+   single word like "Pikkuparlamentti" rather than spilling out of the card) and stops at three lines. */
+.case-card{min-width:150px}
+.case-card .case-name{max-width:none;min-width:0;flex:1 1 auto;line-height:1.2;overflow-wrap:anywhere;hyphens:auto;display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:3;overflow:hidden}
+@media(min-width:651px){.case-card .case-name{font-size:11px}}
 </style>
 </head>
 <body>
@@ -70,7 +75,6 @@ dialog{border:1px solid #c9d9c3;border-radius:13px;padding:0;background:#fff;col
 <header class="site-header">
   <div class="brand"><a class="brand-home" href="#top" aria-label="BuildingBench home"><svg viewBox="0 0 30 32" fill="none" aria-hidden="true"><path d="M15 2 27 9v14l-12 7L3 23V9L15 2Z M3 9l12 7 12-7 M15 16v14 M9 5.5l12 7v14 M21 5.5l-12 7v14" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg><span>BuildingBench</span></a><a class="brand-by" href="https://enactra.ai/">by Enactra</a></div>
   <nav aria-label="Main navigation"><a href="#top" class="nav-active">Benchmark</a><a href="#benchmark">Visualization</a><a href="https://enactra.ai/blog/">Blog</a><a href="mailto:contact@enactra.ai?subject=BuildingBench%20collaboration">Get in touch <span aria-hidden="true">↗</span></a></nav>
-  <span class="preview-label"><i></i><span id="snapshotLabel">Snapshot</span></span>
 </header>
 <main id="top">
   <section class="intro" aria-labelledby="pageTitle">
@@ -94,7 +98,7 @@ dialog{border:1px solid #c9d9c3;border-radius:13px;padding:0;background:#fff;col
 
   <section class="explorer" id="benchmark" aria-labelledby="explorerTitle">
     <div class="explorer-heading">
-      <div><h2 id="explorerTitle">Model progress, building by building.</h2><p>Choose a building. Follow a family through its releases. Click an output to inspect it.</p></div>
+      <div><h2 id="explorerTitle">Visualizing model progress</h2><p>Choose a building. Follow a family through its releases. Click an output to inspect it.</p></div>
       <div class="explorer-actions">
         <button class="light-button" id="shareView" title="Share the current chart and selection"><svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M10 13V2m0 0L6 6m4-4 4 4M4 10v7h12v-7" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Share</span></button>
       </div>
@@ -122,10 +126,9 @@ dialog{border:1px solid #c9d9c3;border-radius:13px;padding:0;background:#fff;col
       </aside>
     </div>
     <details class="results-table" id="resultsDetails"><summary><span><strong>Results table</strong><span id="tableSummary"></span></span><span class="disclosure-arrow" aria-hidden="true">⌄</span></summary><div class="table-content"><div class="table-caption"><span id="tableCaption"></span><button class="text-button" id="exportCSV">Export CSV ↓</button></div><div class="table-scroll"><table><thead><tr><th>Model</th><th>Family</th><th>Effort</th><th>Released</th><th id="scoreTableHead">Case score</th><th id="costTableHead">Cost / run</th><th id="minutesTableHead">Minutes / run</th><th>Output</th></tr></thead><tbody id="resultsBody"></tbody></table></div></div></details>
-    <div class="data-disclosure"><span class="info-icon" aria-hidden="true">i</span><p><strong>Measured results.</strong> <span id="dataNote">Scores and costs come from the Enactra bench/building board. Every mesh is the glTF the agent submitted.</span></p></div>
   </section>
 
-  <footer class="site-footer"><div><strong>BuildingBench</strong><span>A benchmark for reconstructing buildings in 3D.</span></div><p>Working on multimodal models? <a href="mailto:contact@enactra.ai?subject=BuildingBench%20evaluation%20collaboration">Collaborate with Enactra <span aria-hidden="true">↗</span></a></p></footer>
+  <footer class="site-footer"><div><strong>BuildingBench</strong></div><p>Working on multimodal models? <a href="mailto:contact@enactra.ai?subject=BuildingBench%20evaluation%20collaboration">Collaborate with Enactra <span aria-hidden="true">↗</span></a></p></footer>
 </main>
 <dialog id="viewerDialog" class="viewer-dialog" aria-labelledby="viewerDialogTitle"><div class="dialog-header"><div><span class="eyebrow" id="viewerDialogEyebrow">OUTPUT INSPECTION</span><h2 id="viewerDialogTitle">—</h2></div><button class="icon-button close-dialog" aria-label="Close viewer">×</button></div><div id="viewerDialogBody"></div><div class="dialog-footer"><span id="viewerDialogNote">Submitted glTF</span><div class="dialog-view-controls"><button class="text-button" id="dialogMotion">Pause rotation</button><button class="text-button" id="dialogReset">Reset view ↺</button></div></div></dialog>
 <dialog id="shareDialog" class="share-dialog" aria-labelledby="shareTitle"><div class="dialog-header"><div><span class="eyebrow">SHARE THE EVIDENCE</span><h2 id="shareTitle">Share this view</h2></div><button class="icon-button close-dialog" aria-label="Close share dialog">×</button></div><div class="share-body"><p id="shareDescription"></p><label for="shareURL">Link to this building, model and chart</label><div class="copy-row"><input id="shareURL" readonly><button class="primary-button" id="copyURL">Copy link</button></div><p id="shareLocalNote" class="share-note"></p><button class="light-button" id="exportFigure">Save chart as PNG ↓</button><p class="share-note">The exported figure names the board snapshot it was drawn from.</p></div></dialog>
