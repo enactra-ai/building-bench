@@ -1642,4 +1642,17 @@
 .ea .task-md code, .ea .task-md pre{ font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; font-size: 10.5px; background: var(--surface-soft); border-radius: 5px; }
 .ea .task-md code{ padding: 1px 4px; }
 .ea .task-md pre{ margin: 0 0 8px; padding: 7px 9px; white-space: pre-wrap; overflow-wrap: anywhere; color: var(--text); }
-.ea .input-credit{ margin: 8px 0 0; color: var(--muted); font-size: 10px; line-height: 1.45; }
+.ea .metric-parts{ grid-column: 1 / -1; margin-top: -3px; color: var(--muted); font-size: 11px; line-height: 1.4; }
+.ea .feature-run-strip + .validity-row{ margin-top: 8px; }
+.ea .feature-viewer-wrap .viewer-hint{ transform: none; }   /* a later rule moved it to left:10px but kept the centring shift */
+
+/* Leaderboard rows in the figures' company colours (bar + Pareto), one variable per series. */
+.ea{--series-claudeopus55max:#D97757;--series-gpt6astraultra:#10A37F;--series-fable51max:#D97757;--series-grok47xhigh:#111111;--series-fablemax:#D97757;--series-opusmax:#D97757;--series-gpt56solmax:#10A37F;--series-unionalphaclaudecode:#a8a29e;--series-deepseekv41flashclaudecode:#3f51e0;--series-gpt6solultra:#10A37F;--series-gpt6solmax:#10A37F;--series-grok46xhigh:#111111;--series-gpt56terramax:#10A37F;--series-musespark13max:#42a5f5;--series-zaiglm53flashxclaudecode:#96650b;--series-swe2maxdevin:#d94a7b;--series-gpt56lunamax:#10A37F;--series-gemini38flash:#7b1fa2;--series-sonnetmax:#D97757;--series-kimik3max:#9ab832;--series-step5previewclaudecode:#01f4e6;--series-glm53flashmax:#96650b;--series-haiku:#D97757;--series-inklingfreeclaudecode:#686868;}
+
+/* The leaderboard's two figures: the bar chart, then the Pareto frontier. On a phone they keep a
+   legible width and scroll sideways rather than shrinking their labels to nothing. */
+.ea .lb-figure{ margin: 0 0 18px; padding: 10px; border: 1px solid var(--line); border-radius: 14px; background: #fff; }
+.ea .lb-figure-scroll{ overflow-x: auto; -webkit-overflow-scrolling: touch; }
+.ea .lb-figure img{ display: block; width: 100%; height: auto; }
+@media (max-width: 760px){ .ea .lb-figure-bar img{ min-width: 720px; } .ea .lb-figure-pareto img{ min-width: 680px; } }
+.ea .lb-figure-pareto{ padding: 0; border: 0; background: none; }   /* the still carries its own card */

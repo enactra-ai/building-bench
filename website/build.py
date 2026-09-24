@@ -200,7 +200,7 @@ ea = {n: open('%s/%s.html' % (EA, n), encoding='utf-8').read() for n in
       ('flagship', 'case', 'leaderboard', 'evaluation')}
 ea_css = open(EA + '/style.css', encoding='utf-8').read()
 ea_board_json = open(EA + '/board.json', encoding='utf-8').read()
-ea_js = '\n'.join(open('%s/%s.js' % (EA, n), encoding='utf-8').read() for n in ('thumbs', 'board', 'plot'))
+ea_js = '\n'.join(open('%s/%s.js' % (EA, n), encoding='utf-8').read() for n in ('thumbs', 'board'))
 
 # BuildingBench styles bare elements — table, th, td, td:nth-child(4), img, a, h1-h3, p.
 # Those rules reach inside the pitch blocks and restyle them (the leaderboard's fourth

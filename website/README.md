@@ -131,7 +131,7 @@ from the Enactra pitch page and then edited here, in this order —
 |---|---|---|
 | 1 | Header, hero, featured reconstruction | BuildingBench |
 | 2 | Task Format — Johanneskyrkan, GPT-6 Astra, end to end | Enactra, edited |
-| 3 | Leaderboard + cost/score frontier plot | Enactra |
+| 3 | Leaderboard — bar figure, Pareto frontier, then the sortable table | Enactra, edited |
 | 4 | Evaluation breakdown | Enactra |
 | 5 | The explorer ("Visualization" in the header) — building strip, chart, inspector, table | BuildingBench |
 
@@ -141,6 +141,22 @@ the full `TASK.md` in an expandable block, the GPT-6 Astra ultra run's scores fr
 astra manifest), every blind/standard-tier mention is gone (the page has one tier and does not
 name it), and the news strip, the methodology fold and the "Explore the results" button were
 removed. **Re-running `extract_enactra.py` overwrites those edits** — reapply them if you do.
+
+The Task Format scores are the **current grader's** (`results/reference_runs.jsonl` on `main`:
+Astra on Johanneskyrkan 0.879), shown as three categories, each the plain mean of its columns —
+Geometry = silhouette, outline, plan, height; Surface = precision, recall, F; Appearance = colour,
+structure, materials. The explorer below still reads the 2026-09-09 board snapshot (older grader,
+0.814 for the same run) until `extract.py` is re-run.
+
+**The Leaderboard** (second polish, 2026-09-23) is two static figures and the table, all from the
+board's same-set view snapshotted 2026-09-22 (24 rows, 12 license-clean buildings):
+`assets/buildingbench_bar.svg` (the GPT-6 Sol bar figure without its arrows, SWE-2 included,
+Inkling left off) and `assets/buildingbench_pareto.png` (the Pareto frontier as a still, SWE-2 in
+the $0 lane at the board's estimated price). Their generators, edited for this page, live on
+ds-serv12 at `/data/zhiting/buildingbench-site-figures/` (README there). `data/enactra/board.json`
+is that snapshot's `rowsSame`, with four orgs set to the company the figures draw them in
+(Opus 5.5 → Anthropic, Step 5 → StepFun, DeepSeek, Cognition) and each series' table dot in the
+figures' company colour. The old interactive frontier plot (`plot.js`) is gone.
 
 `extract_enactra.py` lifts the Enactra half out of that page's **split** copy and writes it to
 `data/enactra/`; `build.py` injects it at the `<!--ENACTRA:pitch-->` marker in

@@ -27,15 +27,13 @@
     </div>
     <div class="input-evidence-note">
       <span><strong>Given:</strong> 4 photographs, exact camera poses, and the ground origin.</span>
-      <span><strong>Withheld:</strong> the footprint, building height, and 4 evaluation views.</span>
     </div>
-    <p class="input-credit">Photographs: renders of the Helsinki 3D city model / Helsingin kaupunki, CC BY 4.0.</p>
   </article>
 
   <article class="panel">
     <div class="panel-head">
-      <strong>Agent reconstruction</strong>
-      <span>GPT‑6 Astra · executable glTF</span>
+      <strong>Agent output (GLB)</strong>
+      <span>GPT‑6 Astra</span>
     </div>
     <div class="feature-viewer-wrap">
       <canvas class="feature-model-viewer" id="eaCaseCanvas" tabindex="0" aria-label="Interactive GPT-6 Astra reconstruction of Johanneskyrkan"></canvas>
@@ -46,43 +44,36 @@
       <div class="run-fact"><strong>33.4 min</strong><span>wall clock</span></div>
       <div class="run-fact"><strong>$6.54</strong><span>run cost</span></div>
     </div>
+    <div class="validity-row">
+      <strong>Valid executable output</strong><br />
+      7,324 triangles · 39.4 MB self-contained GLB with textures, roughness and normal maps
+    </div>
   </article>
 
   <article class="panel score-card">
     <div class="panel-head">
       <strong>Evaluation</strong>
-      <span>GPT‑6 Astra</span>
     </div>
     <div class="overall-score">
       <small>Overall score</small>
-      <strong>0.814</strong>
-    </div>
-
-    <div class="metric">
-      <span>Silhouette</span><strong>0.893</strong>
-      <div class="metric-track"><div class="metric-fill" style="--value: 89.3%"></div></div>
+      <strong>0.879</strong>
     </div>
     <div class="metric">
-      <span>Height</span><strong>0.998</strong>
-      <div class="metric-track"><div class="metric-fill" style="--value: 99.8%"></div></div>
+      <span>Geometry</span><strong>0.865</strong>
+      <div class="metric-track"><div class="metric-fill" style="--value: 86.5%"></div></div>
+      <small class="metric-parts">Silhouette 0.890 · Outline 0.761 · Plan 0.813 · Height 0.998</small>
     </div>
     <div class="metric">
-      <span>Structure</span><strong>0.907</strong>
-      <div class="metric-track"><div class="metric-fill" style="--value: 90.7%"></div></div>
+      <span>Surface</span><strong>0.631</strong>
+      <div class="metric-track"><div class="metric-fill" style="--value: 63.1%"></div></div>
+      <small class="metric-parts">Precision 0.664 · Recall 0.600 · F-score 0.630</small>
     </div>
     <div class="metric">
-      <span>Surface F</span><strong>0.630</strong>
-      <div class="metric-track"><div class="metric-fill" style="--value: 63%"></div></div>
+      <span>Appearance</span><strong>0.963</strong>
+      <div class="metric-track"><div class="metric-fill" style="--value: 96.3%"></div></div>
+      <small class="metric-parts">Colour 0.980 · Structure 0.910 · Materials 1.000</small>
     </div>
-    <div class="metric">
-      <span>Colour</span><strong>0.633</strong>
-      <div class="metric-track"><div class="metric-fill" style="--value: 63.3%"></div></div>
-    </div>
-    <p class="eval-caption">Overall, height, structure and colour are normalized benchmark scores. Silhouette and Surface F are raw measurements; Surface F is taken at 0.63 m, this building’s ground-truth sampling.</p>
-    <div class="validity-row">
-      <strong>Valid executable output</strong><br />
-      7,324 triangles · 39.4 MB self-contained glTF with textures, roughness and normal maps
-    </div>
+    <p class="eval-caption">Each category is the average of the columns listed under it, from 0 to 1 where 1 is perfect. Surface is measured at 0.63 m, this building’s ground-truth sampling.</p>
   </article>
 </div>
   <details class="task-full task-full-wide" id="taskFull">
@@ -113,4 +104,4 @@ site.json         the ground origin, and nothing else. The height is not given; 
     <p>Both are thin wrappers over <code>bench/building/</code>, which is here for you to import: <code>glb.write(...)</code> will produce a conforming file from vertex and face arrays with normals, UVs and materials if you would rather not write the container yourself, and <code>raster.render(...)</code> is the renderer <code>./preview</code> uses. Note that <code>./preview</code> shows <b>unlit base colour</b> — it is a check of the geometry, not a picture of the lit model.</p>
     </div>
   </details>
-<p class="case-takeaway"><strong>What this reveals:</strong> From four photographs, with no footprint and no height, Astra recovers Johanneskyrkan’s twin spires, massing and façade structure, and gets the height almost exactly, for $6.54 in 33 minutes. Surface agreement and colour stay far lower. The benchmark turns that visible gap into a precise training signal.</p>
+<p class="case-takeaway"><strong>What this reveals:</strong> From four photographs, with no footprint and no height given, Astra gets Johanneskyrkan’s appearance (0.963) and geometry (0.865) close to the real building — twin spires, massing, height, façade structure and materials — for $6.54 in 33 minutes. Surface is where it falls short (0.631): roughly a third of the surface is more than 0.63 m from where it should be. The benchmark turns that gap into a precise quantitative signal.</p>
