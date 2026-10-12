@@ -59,9 +59,14 @@ to `EDITIONS` in `publish.sh` to publish it too).
 - **Try it without publishing**: `BB_DRY_RUN=1 ./publish.sh` builds and prints the commit
   message it would write.
 - **Stop it**: comment out the line in `crontab -e` on ds-serv12 (as koe).
-- **Credentials**: the two checkouts push with deploy keys, set per checkout in
-  `core.sshCommand` — `~/.ssh/bb_site_building_bench` (write on this repo) and
-  `~/.ssh/bb_site_webpage` (write on `enactra-ai/webpage`).
+- **Credentials**: the organisation has deploy keys turned off, so both checkouts push over HTTPS
+  with one fine-grained personal access token — resource owner enactra-ai, only
+  `building-bench` and `webpage`, *Contents: read and write* — kept in
+  `~/.config/bb-site/git-credentials` (mode 600) and named per checkout in `credential.helper`.
+  **It expires** (a year at most); when it does, every run logs `FAILED: git -C …/webpage fetch`
+  and the site stops updating. Renew it and paste the new one the same way:
+  `ssh -t ds-serv12.ucsd.edu 'read -rsp "token: " T; echo; printf "https://KoeYe:%s@github.com\n" "$T" > ~/.config/bb-site/git-credentials; chmod 600 ~/.config/bb-site/git-credentials'`
+- **Log**: `/data/koe/bb-site/publish.log` — one line per run, the step's output when one fails.
 
 ## Rebuild for a new board snapshot
 

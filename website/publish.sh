@@ -23,6 +23,7 @@ BRANCH=${BB_BRANCH:-website}
 # buildingbench-evolution/ on the live site is a 2026-09-09 build, left as it is on purpose.
 EDITIONS=(buildingbench)
 BOT=(-c user.name="BuildingBench auto-publish" -c user.email="${BB_GIT_EMAIL:-koe@ds-serv12.ucsd.edu}")
+export GIT_TERMINAL_PROMPT=0           # no token: fail, rather than wait for a password nobody types
 STEPLOG=$(mktemp); trap 'rm -f "$STEPLOG"' EXIT
 
 log() { echo "[$(date '+%F %T')] $*"; }
