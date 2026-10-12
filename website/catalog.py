@@ -48,12 +48,16 @@ RELEASE = {
 COMPANY_OF_ORG = {
     'Anthropic': 'Anthropic', 'OpenAI': 'OpenAI', 'Google': 'Google', 'Meta': 'Meta', 'xAI': 'xAI',
     'deepseek': 'DeepSeek', 'Z.ai': 'Z.ai', 'Moonshot AI': 'Moonshot', 'cognition': 'Cognition',
-    'Undisclosed': 'Undisclosed', 'Thinking Machines': 'Thinking Machines',
+    'Undisclosed': 'Undisclosed', 'Thinking Machines': 'Thinking Machines', 'mistralai': 'Mistral AI',
 }
-# Rows the board files under "Unplaced", by model id.
+# Rows the board files under "Unplaced", by model id; failing that, by the family the id names.
 ORG_OF = {'claude-opus-5-5': 'Anthropic', 'step-5-preview': 'StepFun'}
+MAKER_OF_PREFIX = {'claude-': 'Anthropic', 'gpt-': 'OpenAI', 'gemini-': 'Google', 'grok-': 'xAI'}
 # How a company is written where the page names it: xAI is part of SpaceX now.
 COMPANY_LABEL = {'xAI': 'SpaceXAI'}
+# Written in capitals when a name is spelled from a model id, and joined to a version
+# that follows by a no-break hyphen, as in NAMES: 'gpt-6.1-sol' -> 'GPT‑6.1 Sol'.
+ACRONYMS = {'gpt': 'GPT', 'glm': 'GLM', 'swe': 'SWE'}
 
 def parse(label):
     """'z-ai/glm-5.3-flashx (max) · Claude Code' -> ('glm-5.3-flashx', 'max');
@@ -64,27 +68,45 @@ def parse(label):
 
 
 def name(model):
-    """Product name for a model id; one the table lacks is spelled from its id ('qwen-4-max' -> 'Qwen 4 Max')."""
+    """Product name for a model id. One the table lacks is spelled from its id: version digits the
+    id splits with hyphens are joined with points, so 'claude-sonnet-5-5' -> 'Claude Sonnet 5.5'."""
     if model in NAMES:
         return NAMES[model]
-    return ' '.join(w[:1].upper() + w[1:] for w in model.split(':')[0].split('-'))
+    words = []
+    for w in model.split(':')[0].split('-'):
+        if w.isdigit() and words and words[-1].replace('.', '').isdigit():
+            words[-1] += '.' + w
+        else:
+            words.append(w)
+    out = ''
+    for i, w in enumerate(words):
+        sep = '' if i == 0 else '‑' if words[i - 1] in ACRONYMS and w[:1].isdigit() else ' '
+        out += sep + ACRONYMS.get(w, w[:1].upper() + w[1:])
+    return out
 
 
-def company(model, org):
-    """The company a model is drawn in, from its id and the board's organisation for its row."""
+def _maker(model, org):
     if model in ORG_OF:
         return ORG_OF[model]
     if org in COMPANY_OF_ORG:
         return COMPANY_OF_ORG[org]
-    return org if org and org != 'Unplaced' else 'Undisclosed'
+    return next((c for p, c in MAKER_OF_PREFIX.items() if model.startswith(p)), None)
+
+
+def company(model, org):
+    """The company a model is drawn in, from its id and the board's organisation for its row."""
+    c = _maker(model, org)
+    if c:
+        return c
+    return org[:1].upper() + org[1:] if org and org != 'Unplaced' else 'Undisclosed'
 
 
 def missing(model, org):
     """What the tables above lack for a model the page shows: [] when it is fully described."""
     out = []
     if model not in NAMES:
-        out.append('name')
-    if model not in ORG_OF and org not in COMPANY_OF_ORG:
+        out.append('name (shown as %r)' % name(model))
+    if not _maker(model, org):
         out.append('company (the board says %r)' % org)
     if model not in RELEASE:
         out.append('release date')
