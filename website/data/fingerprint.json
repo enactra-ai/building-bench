@@ -1,10 +1,12 @@
 {
- "fingerprint": "25d0ce99a0d2b39b8a0a921f155569e05099be77ca3bc739de0092f35029e5e2",
- "snapshot": "2026-09-23",
+ "fingerprint": "18ecc183b360ca27673ae68cfc32c33de5f2e824c287cf9a8535f440c79ff95f",
+ "snapshot": "2026-10-12",
  "buildings": 12,
- "results": 271,
+ "results": 328,
  "models": [
   "Claude Opus 5.5 (max)",
+  "GPT‑6.1 Sol (max)",
+  "Claude Sonnet 5.5 (max)",
   "GPT‑6 Astra (ultra)",
   "Grok 4.7 (xhigh)",
   "Claude Fable 5.1 (max)",
@@ -16,7 +18,9 @@
   "GPT‑6 Sol (ultra)",
   "GPT‑5.6 Sol (max)",
   "GLM‑5.3 FlashX (max)",
+  "Ember‑1 (max)",
   "SWE‑2 (max)",
+  "Claude Haiku 5.5 (max)",
   "Muse Spark 1.3 (max)",
   "GPT‑5.6 Terra (max)",
   "Gemini 3.8 Flash (high)",
@@ -24,6 +28,7 @@
   "Space Bunny Alpha (max)",
   "Claude Sonnet 5 (max)",
   "Kimi K3 (thinking)",
+  "Mistral Large 4 (max)",
   "Step 5 Preview (max)",
   "GLM‑5.3 Flash (max)",
   "Inkling"

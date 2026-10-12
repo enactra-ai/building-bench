@@ -6016,6 +6016,106 @@
 },
 {
 "site": "helsinki_122886734_enhanced_v1",
+"series": "mistralaimistrallarge40claudecode",
+"run": "helsinki_122886734_enhanced_v1-blind-mistralai-mistral-large-4-0-claude-code-20261008T050704",
+"overall": 0.742,
+"surface_f": 0.489,
+"chamfer_m": null,
+"height_m": null,
+"triangles": null,
+"glb": "../bench-runs/helsinki_122886734_enhanced_v1-blind-mistralai-mistral-large-4-0-claude-code-20261008T050704/submission/building.glb",
+"page": null,
+"cost": 51.4,
+"turns": 608.0,
+"nruns": 1,
+"allruns": [
+0.742
+],
+"ran": "2026-10-08",
+"minutes": 1419.63
+},
+{
+"site": "helsinki_122886734_enhanced_v1",
+"series": "claudehaiku55max",
+"run": "helsinki_122886734_enhanced_v1-blind-claude-haiku-5-5-max-20261007T221340",
+"overall": 0.737,
+"surface_f": 0.31,
+"chamfer_m": null,
+"height_m": null,
+"triangles": null,
+"glb": "../bench-runs/helsinki_122886734_enhanced_v1-blind-claude-haiku-5-5-max-20261007T221340/submission/building.glb",
+"page": null,
+"cost": 0.89,
+"turns": 106.0,
+"nruns": 1,
+"allruns": [
+0.737
+],
+"ran": "2026-10-07",
+"minutes": 26.47
+},
+{
+"site": "helsinki_122886734_enhanced_v1",
+"series": "gpt61solmax",
+"run": "helsinki_122886734_enhanced_v1-blind-gpt-6.1-sol-max-20260929T182137",
+"overall": 0.891,
+"surface_f": 0.461,
+"chamfer_m": null,
+"height_m": null,
+"triangles": null,
+"glb": "../bench-runs/helsinki_122886734_enhanced_v1-blind-gpt-6.1-sol-max-20260929T182137/submission/building.glb",
+"page": null,
+"cost": 1.48,
+"turns": 1.0,
+"nruns": 1,
+"allruns": [
+0.891
+],
+"ran": "2026-09-29",
+"minutes": 37.08
+},
+{
+"site": "helsinki_122886734_enhanced_v1",
+"series": "claudesonnet55max",
+"run": "helsinki_122886734_enhanced_v1-blind-claude-sonnet-5-5-max-20260928T182621",
+"overall": 0.713,
+"surface_f": 0.401,
+"chamfer_m": null,
+"height_m": null,
+"triangles": null,
+"glb": "../bench-runs/helsinki_122886734_enhanced_v1-blind-claude-sonnet-5-5-max-20260928T182621/submission/building.glb",
+"page": null,
+"cost": 39.99,
+"turns": 955.0,
+"nruns": 1,
+"allruns": [
+0.713
+],
+"ran": "2026-09-28",
+"minutes": 233.68
+},
+{
+"site": "helsinki_122886734_enhanced_v1",
+"series": "fireworksember1claudecode",
+"run": "helsinki_122886734_enhanced_v1-blind-fireworks-ember-1-claude-code-20260928T204238",
+"overall": 0.793,
+"surface_f": 0.371,
+"chamfer_m": null,
+"height_m": null,
+"triangles": null,
+"glb": "../bench-runs/helsinki_122886734_enhanced_v1-blind-fireworks-ember-1-claude-code-20260928T204238/submission/building.glb",
+"page": null,
+"cost": 12.92,
+"turns": 252.0,
+"nruns": 1,
+"allruns": [
+0.793
+],
+"ran": "2026-09-28",
+"minutes": 118.23
+},
+{
+"site": "helsinki_122886734_enhanced_v1",
 "series": "stealthspacebunnyalphaclaudecode",
 "run": "helsinki_122886734_enhanced_v1-blind-stealth-space-bunny-alpha-claude-code-20260923T181708",
 "overall": 0.783,
@@ -6533,6 +6633,106 @@
 },
 {
 "site": "helsinki_122954081_enhanced_v1",
+"series": "mistralaimistrallarge40claudecode",
+"run": "helsinki_122954081_enhanced_v1-blind-mistralai-mistral-large-4-0-claude-code-20261007T221951",
+"overall": 0.657,
+"surface_f": 0.218,
+"chamfer_m": null,
+"height_m": null,
+"triangles": null,
+"glb": "../bench-runs/helsinki_122954081_enhanced_v1-blind-mistralai-mistral-large-4-0-claude-code-20261007T221951/submission/building.glb",
+"page": null,
+"cost": 52.01,
+"turns": 656.0,
+"nruns": 1,
+"allruns": [
+0.657
+],
+"ran": "2026-10-07",
+"minutes": 1050.07
+},
+{
+"site": "helsinki_122954081_enhanced_v1",
+"series": "claudehaiku55max",
+"run": "helsinki_122954081_enhanced_v1-blind-claude-haiku-5-5-max-20261007T221340",
+"overall": 0.569,
+"surface_f": 0.193,
+"chamfer_m": null,
+"height_m": null,
+"triangles": null,
+"glb": "../bench-runs/helsinki_122954081_enhanced_v1-blind-claude-haiku-5-5-max-20261007T221340/submission/building.glb",
+"page": null,
+"cost": 1.09,
+"turns": 113.0,
+"nruns": 1,
+"allruns": [
+0.569
+],
+"ran": "2026-10-07",
+"minutes": 26.97
+},
+{
+"site": "helsinki_122954081_enhanced_v1",
+"series": "gpt61solmax",
+"run": "helsinki_122954081_enhanced_v1-blind-gpt-6.1-sol-max-20260929T182137",
+"overall": 0.805,
+"surface_f": 0.621,
+"chamfer_m": null,
+"height_m": null,
+"triangles": null,
+"glb": "../bench-runs/helsinki_122954081_enhanced_v1-blind-gpt-6.1-sol-max-20260929T182137/submission/building.glb",
+"page": null,
+"cost": 1.46,
+"turns": 1.0,
+"nruns": 1,
+"allruns": [
+0.805
+],
+"ran": "2026-09-29",
+"minutes": 39.73
+},
+{
+"site": "helsinki_122954081_enhanced_v1",
+"series": "claudesonnet55max",
+"run": "helsinki_122954081_enhanced_v1-blind-claude-sonnet-5-5-max-20260928T182621",
+"overall": 0.795,
+"surface_f": 0.428,
+"chamfer_m": null,
+"height_m": null,
+"triangles": null,
+"glb": "../bench-runs/helsinki_122954081_enhanced_v1-blind-claude-sonnet-5-5-max-20260928T182621/submission/building.glb",
+"page": null,
+"cost": 28.88,
+"turns": 555.0,
+"nruns": 1,
+"allruns": [
+0.795
+],
+"ran": "2026-09-28",
+"minutes": 191.22
+},
+{
+"site": "helsinki_122954081_enhanced_v1",
+"series": "fireworksember1claudecode",
+"run": "helsinki_122954081_enhanced_v1-blind-fireworks-ember-1-claude-code-20260928T204238",
+"overall": 0.551,
+"surface_f": 0.225,
+"chamfer_m": null,
+"height_m": null,
+"triangles": null,
+"glb": "../bench-runs/helsinki_122954081_enhanced_v1-blind-fireworks-ember-1-claude-code-20260928T204238/submission/building.glb",
+"page": null,
+"cost": 9.93,
+"turns": 223.0,
+"nruns": 1,
+"allruns": [
+0.551
+],
+"ran": "2026-09-28",
+"minutes": 78.88
+},
+{
+"site": "helsinki_122954081_enhanced_v1",
 "series": "stealthspacebunnyalphaclaudecode",
 "run": "helsinki_122954081_enhanced_v1-blind-stealth-space-bunny-alpha-claude-code-20260923T181708",
 "overall": 0.596,
@@ -7026,6 +7226,106 @@
 ],
 "ran": "2026-09-04",
 "minutes": 36.57
+},
+{
+"site": "helsinki_123901485_enhanced_v1",
+"series": "mistralaimistrallarge40claudecode",
+"run": "helsinki_123901485_enhanced_v1-blind-mistralai-mistral-large-4-0-claude-code-20261007T221951",
+"overall": 0.698,
+"surface_f": 0.371,
+"chamfer_m": null,
+"height_m": null,
+"triangles": null,
+"glb": "../bench-runs/helsinki_123901485_enhanced_v1-blind-mistralai-mistral-large-4-0-claude-code-20261007T221951/submission/building.glb",
+"page": null,
+"cost": 36.72,
+"turns": 433.0,
+"nruns": 1,
+"allruns": [
+0.698
+],
+"ran": "2026-10-07",
+"minutes": 718.97
+},
+{
+"site": "helsinki_123901485_enhanced_v1",
+"series": "claudehaiku55max",
+"run": "helsinki_123901485_enhanced_v1-blind-claude-haiku-5-5-max-20261007T221340",
+"overall": 0.638,
+"surface_f": 0.365,
+"chamfer_m": null,
+"height_m": null,
+"triangles": null,
+"glb": "../bench-runs/helsinki_123901485_enhanced_v1-blind-claude-haiku-5-5-max-20261007T221340/submission/building.glb",
+"page": null,
+"cost": 1.38,
+"turns": 134.0,
+"nruns": 1,
+"allruns": [
+0.638
+],
+"ran": "2026-10-07",
+"minutes": 34.38
+},
+{
+"site": "helsinki_123901485_enhanced_v1",
+"series": "claudesonnet55max",
+"run": "helsinki_123901485_enhanced_v1-blind-claude-sonnet-5-5-max-20260929T204208",
+"overall": 0.874,
+"surface_f": 0.714,
+"chamfer_m": null,
+"height_m": null,
+"triangles": null,
+"glb": "../bench-runs/helsinki_123901485_enhanced_v1-blind-claude-sonnet-5-5-max-20260929T204208/submission/building.glb",
+"page": null,
+"cost": 55.7,
+"turns": 1129.0,
+"nruns": 1,
+"allruns": [
+0.874
+],
+"ran": "2026-09-29",
+"minutes": 445.58
+},
+{
+"site": "helsinki_123901485_enhanced_v1",
+"series": "gpt61solmax",
+"run": "helsinki_123901485_enhanced_v1-blind-gpt-6.1-sol-max-20260929T182137",
+"overall": 0.883,
+"surface_f": 0.569,
+"chamfer_m": null,
+"height_m": null,
+"triangles": null,
+"glb": "../bench-runs/helsinki_123901485_enhanced_v1-blind-gpt-6.1-sol-max-20260929T182137/submission/building.glb",
+"page": null,
+"cost": 1.69,
+"turns": 1.0,
+"nruns": 1,
+"allruns": [
+0.883
+],
+"ran": "2026-09-29",
+"minutes": 42.17
+},
+{
+"site": "helsinki_123901485_enhanced_v1",
+"series": "fireworksember1claudecode",
+"run": "helsinki_123901485_enhanced_v1-blind-fireworks-ember-1-claude-code-20260928T204238",
+"overall": 0.689,
+"surface_f": 0.312,
+"chamfer_m": null,
+"height_m": null,
+"triangles": null,
+"glb": "../bench-runs/helsinki_123901485_enhanced_v1-blind-fireworks-ember-1-claude-code-20260928T204238/submission/building.glb",
+"page": null,
+"cost": 12.1,
+"turns": 246.0,
+"nruns": 1,
+"allruns": [
+0.689
+],
+"ran": "2026-09-28",
+"minutes": 87.65
 },
 {
 "site": "helsinki_123901485_enhanced_v1",
@@ -7567,6 +7867,86 @@
 },
 {
 "site": "helsinki_8033120_enhanced_v1",
+"series": "claudehaiku55max",
+"run": "helsinki_8033120_enhanced_v1-blind-claude-haiku-5-5-max-20261007T224913",
+"overall": 0.701,
+"surface_f": 0.183,
+"chamfer_m": null,
+"height_m": null,
+"triangles": null,
+"glb": "../bench-runs/helsinki_8033120_enhanced_v1-blind-claude-haiku-5-5-max-20261007T224913/submission/building.glb",
+"page": null,
+"cost": 1.52,
+"turns": 163.0,
+"nruns": 1,
+"allruns": [
+0.701
+],
+"ran": "2026-10-07",
+"minutes": 48.27
+},
+{
+"site": "helsinki_8033120_enhanced_v1",
+"series": "gpt61solmax",
+"run": "helsinki_8033120_enhanced_v1-blind-gpt-6.1-sol-max-20260929T182137",
+"overall": 0.831,
+"surface_f": 0.488,
+"chamfer_m": null,
+"height_m": null,
+"triangles": null,
+"glb": "../bench-runs/helsinki_8033120_enhanced_v1-blind-gpt-6.1-sol-max-20260929T182137/submission/building.glb",
+"page": null,
+"cost": 2.09,
+"turns": 1.0,
+"nruns": 1,
+"allruns": [
+0.831
+],
+"ran": "2026-09-29",
+"minutes": 55.33
+},
+{
+"site": "helsinki_8033120_enhanced_v1",
+"series": "claudesonnet55max",
+"run": "helsinki_8033120_enhanced_v1-blind-claude-sonnet-5-5-max-20260928T224309",
+"overall": 0.766,
+"surface_f": 0.387,
+"chamfer_m": null,
+"height_m": null,
+"triangles": null,
+"glb": "../bench-runs/helsinki_8033120_enhanced_v1-blind-claude-sonnet-5-5-max-20260928T224309/submission/building.glb",
+"page": null,
+"cost": 42.71,
+"turns": 941.0,
+"nruns": 1,
+"allruns": [
+0.766
+],
+"ran": "2026-09-28",
+"minutes": 239.35
+},
+{
+"site": "helsinki_8033120_enhanced_v1",
+"series": "fireworksember1claudecode",
+"run": "helsinki_8033120_enhanced_v1-blind-fireworks-ember-1-claude-code-20260928T204238",
+"overall": 0.57,
+"surface_f": 0.285,
+"chamfer_m": null,
+"height_m": null,
+"triangles": null,
+"glb": "../bench-runs/helsinki_8033120_enhanced_v1-blind-fireworks-ember-1-claude-code-20260928T204238/submission/building.glb",
+"page": null,
+"cost": 7.67,
+"turns": 173.0,
+"nruns": 1,
+"allruns": [
+0.57
+],
+"ran": "2026-09-28",
+"minutes": 76.1
+},
+{
+"site": "helsinki_8033120_enhanced_v1",
 "series": "stealthspacebunnyalphaclaudecode",
 "run": "helsinki_8033120_enhanced_v1-blind-stealth-space-bunny-alpha-claude-code-20260923T181708",
 "overall": 0.717,
@@ -8060,6 +8440,86 @@
 ],
 "ran": "2026-09-04",
 "minutes": 29.67
+},
+{
+"site": "helsinki_cathedral_enhanced_v1",
+"series": "claudehaiku55max",
+"run": "helsinki_cathedral_enhanced_v1-blind-claude-haiku-5-5-max-20261007T224913",
+"overall": 0.795,
+"surface_f": 0.274,
+"chamfer_m": null,
+"height_m": null,
+"triangles": null,
+"glb": "../bench-runs/helsinki_cathedral_enhanced_v1-blind-claude-haiku-5-5-max-20261007T224913/submission/building.glb",
+"page": null,
+"cost": 1.75,
+"turns": 107.0,
+"nruns": 1,
+"allruns": [
+0.795
+],
+"ran": "2026-10-07",
+"minutes": 56.93
+},
+{
+"site": "helsinki_cathedral_enhanced_v1",
+"series": "gpt61solmax",
+"run": "helsinki_cathedral_enhanced_v1-blind-gpt-6.1-sol-max-20260929T182137",
+"overall": 0.889,
+"surface_f": 0.557,
+"chamfer_m": null,
+"height_m": null,
+"triangles": null,
+"glb": "../bench-runs/helsinki_cathedral_enhanced_v1-blind-gpt-6.1-sol-max-20260929T182137/submission/building.glb",
+"page": null,
+"cost": 2.43,
+"turns": 1.0,
+"nruns": 1,
+"allruns": [
+0.889
+],
+"ran": "2026-09-29",
+"minutes": 68.73
+},
+{
+"site": "helsinki_cathedral_enhanced_v1",
+"series": "claudesonnet55max",
+"run": "helsinki_cathedral_enhanced_v1-blind-claude-sonnet-5-5-max-20260928T224309",
+"overall": 0.841,
+"surface_f": 0.336,
+"chamfer_m": null,
+"height_m": null,
+"triangles": null,
+"glb": "../bench-runs/helsinki_cathedral_enhanced_v1-blind-claude-sonnet-5-5-max-20260928T224309/submission/building.glb",
+"page": null,
+"cost": 9.75,
+"turns": 212.0,
+"nruns": 1,
+"allruns": [
+0.841
+],
+"ran": "2026-09-28",
+"minutes": 58.48
+},
+{
+"site": "helsinki_cathedral_enhanced_v1",
+"series": "fireworksember1claudecode",
+"run": "helsinki_cathedral_enhanced_v1-blind-fireworks-ember-1-claude-code-20260928T204238",
+"overall": 0.739,
+"surface_f": 0.23,
+"chamfer_m": null,
+"height_m": null,
+"triangles": null,
+"glb": "../bench-runs/helsinki_cathedral_enhanced_v1-blind-fireworks-ember-1-claude-code-20260928T204238/submission/building.glb",
+"page": null,
+"cost": 5.35,
+"turns": 114.0,
+"nruns": 1,
+"allruns": [
+0.739
+],
+"ran": "2026-09-28",
+"minutes": 57.13
 },
 {
 "site": "helsinki_cathedral_enhanced_v1",
@@ -8622,6 +9082,106 @@
 },
 {
 "site": "melbourne_155809136_enhanced_v1",
+"series": "mistralaimistrallarge40claudecode",
+"run": "melbourne_155809136_enhanced_v1-blind-mistralai-mistral-large-4-0-claude-code-20261008T092713",
+"overall": 0.52,
+"surface_f": 0.283,
+"chamfer_m": null,
+"height_m": null,
+"triangles": null,
+"glb": "../bench-runs/melbourne_155809136_enhanced_v1-blind-mistralai-mistral-large-4-0-claude-code-20261008T092713/submission/building.glb",
+"page": null,
+"cost": 19.13,
+"turns": 214.0,
+"nruns": 1,
+"allruns": [
+0.52
+],
+"ran": "2026-10-08",
+"minutes": 1116.73
+},
+{
+"site": "melbourne_155809136_enhanced_v1",
+"series": "claudehaiku55max",
+"run": "melbourne_155809136_enhanced_v1-blind-claude-haiku-5-5-max-20261007T224913",
+"overall": 0.624,
+"surface_f": 0.201,
+"chamfer_m": null,
+"height_m": null,
+"triangles": null,
+"glb": "../bench-runs/melbourne_155809136_enhanced_v1-blind-claude-haiku-5-5-max-20261007T224913/submission/building.glb",
+"page": null,
+"cost": 0.89,
+"turns": 96.0,
+"nruns": 1,
+"allruns": [
+0.624
+],
+"ran": "2026-10-07",
+"minutes": 24.83
+},
+{
+"site": "melbourne_155809136_enhanced_v1",
+"series": "gpt61solmax",
+"run": "melbourne_155809136_enhanced_v1-blind-gpt-6.1-sol-max-20260929T182137",
+"overall": 0.912,
+"surface_f": 0.76,
+"chamfer_m": null,
+"height_m": null,
+"triangles": null,
+"glb": "../bench-runs/melbourne_155809136_enhanced_v1-blind-gpt-6.1-sol-max-20260929T182137/submission/building.glb",
+"page": null,
+"cost": 1.7,
+"turns": 1.0,
+"nruns": 1,
+"allruns": [
+0.912
+],
+"ran": "2026-09-29",
+"minutes": 43.93
+},
+{
+"site": "melbourne_155809136_enhanced_v1",
+"series": "claudesonnet55max",
+"run": "melbourne_155809136_enhanced_v1-blind-claude-sonnet-5-5-max-20260928T224309",
+"overall": 0.877,
+"surface_f": 0.772,
+"chamfer_m": null,
+"height_m": null,
+"triangles": null,
+"glb": "../bench-runs/melbourne_155809136_enhanced_v1-blind-claude-sonnet-5-5-max-20260928T224309/submission/building.glb",
+"page": null,
+"cost": 134.16,
+"turns": 672.0,
+"nruns": 1,
+"allruns": [
+0.877
+],
+"ran": "2026-09-28",
+"minutes": 214.37
+},
+{
+"site": "melbourne_155809136_enhanced_v1",
+"series": "fireworksember1claudecode",
+"run": "melbourne_155809136_enhanced_v1-blind-fireworks-ember-1-claude-code-20260928T204238",
+"overall": 0.676,
+"surface_f": 0.398,
+"chamfer_m": null,
+"height_m": null,
+"triangles": null,
+"glb": "../bench-runs/melbourne_155809136_enhanced_v1-blind-fireworks-ember-1-claude-code-20260928T204238/submission/building.glb",
+"page": null,
+"cost": 8.38,
+"turns": 203.0,
+"nruns": 1,
+"allruns": [
+0.676
+],
+"ran": "2026-09-28",
+"minutes": 72.7
+},
+{
+"site": "melbourne_155809136_enhanced_v1",
 "series": "stealthspacebunnyalphaclaudecode",
 "run": "melbourne_155809136_enhanced_v1-blind-stealth-space-bunny-alpha-claude-code-20260923T181708",
 "overall": 0.633,
@@ -9139,6 +9699,106 @@
 },
 {
 "site": "melbourne_22820458_enhanced_v1",
+"series": "mistralaimistrallarge40claudecode",
+"run": "melbourne_22820458_enhanced_v1-blind-mistralai-mistral-large-4-0-claude-code-20261007T221951",
+"overall": 0.686,
+"surface_f": 0.342,
+"chamfer_m": null,
+"height_m": null,
+"triangles": null,
+"glb": "../bench-runs/melbourne_22820458_enhanced_v1-blind-mistralai-mistral-large-4-0-claude-code-20261007T221951/submission/building.glb",
+"page": null,
+"cost": 42.78,
+"turns": 524.0,
+"nruns": 1,
+"allruns": [
+0.686
+],
+"ran": "2026-10-07",
+"minutes": 658.2
+},
+{
+"site": "melbourne_22820458_enhanced_v1",
+"series": "claudehaiku55max",
+"run": "melbourne_22820458_enhanced_v1-blind-claude-haiku-5-5-max-20261007T234725",
+"overall": 0.723,
+"surface_f": 0.233,
+"chamfer_m": null,
+"height_m": null,
+"triangles": null,
+"glb": "../bench-runs/melbourne_22820458_enhanced_v1-blind-claude-haiku-5-5-max-20261007T234725/submission/building.glb",
+"page": null,
+"cost": 1.29,
+"turns": 149.0,
+"nruns": 1,
+"allruns": [
+0.723
+],
+"ran": "2026-10-07",
+"minutes": 37.85
+},
+{
+"site": "melbourne_22820458_enhanced_v1",
+"series": "gpt61solmax",
+"run": "melbourne_22820458_enhanced_v1-blind-gpt-6.1-sol-max-20260929T204208",
+"overall": 0.808,
+"surface_f": 0.372,
+"chamfer_m": null,
+"height_m": null,
+"triangles": null,
+"glb": "../bench-runs/melbourne_22820458_enhanced_v1-blind-gpt-6.1-sol-max-20260929T204208/submission/building.glb",
+"page": null,
+"cost": 1.88,
+"turns": 1.0,
+"nruns": 1,
+"allruns": [
+0.808
+],
+"ran": "2026-09-29",
+"minutes": 46.48
+},
+{
+"site": "melbourne_22820458_enhanced_v1",
+"series": "claudesonnet55max",
+"run": "melbourne_22820458_enhanced_v1-blind-claude-sonnet-5-5-max-20260928T234850",
+"overall": 0.822,
+"surface_f": 0.396,
+"chamfer_m": null,
+"height_m": null,
+"triangles": null,
+"glb": "../bench-runs/melbourne_22820458_enhanced_v1-blind-claude-sonnet-5-5-max-20260928T234850/submission/building.glb",
+"page": null,
+"cost": 11.06,
+"turns": 182.0,
+"nruns": 1,
+"allruns": [
+0.822
+],
+"ran": "2026-09-28",
+"minutes": 76.12
+},
+{
+"site": "melbourne_22820458_enhanced_v1",
+"series": "fireworksember1claudecode",
+"run": "melbourne_22820458_enhanced_v1-blind-fireworks-ember-1-claude-code-20260928T204238",
+"overall": 0.687,
+"surface_f": 0.225,
+"chamfer_m": null,
+"height_m": null,
+"triangles": null,
+"glb": "../bench-runs/melbourne_22820458_enhanced_v1-blind-fireworks-ember-1-claude-code-20260928T204238/submission/building.glb",
+"page": null,
+"cost": 11.65,
+"turns": 249.0,
+"nruns": 1,
+"allruns": [
+0.687
+],
+"ran": "2026-09-28",
+"minutes": 102.57
+},
+{
+"site": "melbourne_22820458_enhanced_v1",
 "series": "stealthspacebunnyalphaclaudecode",
 "run": "melbourne_22820458_enhanced_v1-blind-stealth-space-bunny-alpha-claude-code-20260923T181708",
 "overall": 0.503,
@@ -9653,6 +10313,106 @@
 ],
 "ran": "2026-09-04",
 "minutes": 32.13
+},
+{
+"site": "melbourne_25422768_enhanced_v1",
+"series": "mistralaimistrallarge40claudecode",
+"run": "melbourne_25422768_enhanced_v1-blind-mistralai-mistral-large-4-0-claude-code-20261007T221951",
+"overall": 0.805,
+"surface_f": 0.352,
+"chamfer_m": null,
+"height_m": null,
+"triangles": null,
+"glb": "../bench-runs/melbourne_25422768_enhanced_v1-blind-mistralai-mistral-large-4-0-claude-code-20261007T221951/submission/building.glb",
+"page": null,
+"cost": 60.5,
+"turns": 744.0,
+"nruns": 1,
+"allruns": [
+0.805
+],
+"ran": "2026-10-07",
+"minutes": 989.48
+},
+{
+"site": "melbourne_25422768_enhanced_v1",
+"series": "claudehaiku55max",
+"run": "melbourne_25422768_enhanced_v1-blind-claude-haiku-5-5-max-20261007T234725",
+"overall": 0.711,
+"surface_f": 0.136,
+"chamfer_m": null,
+"height_m": null,
+"triangles": null,
+"glb": "../bench-runs/melbourne_25422768_enhanced_v1-blind-claude-haiku-5-5-max-20261007T234725/submission/building.glb",
+"page": null,
+"cost": 1.65,
+"turns": 148.0,
+"nruns": 1,
+"allruns": [
+0.711
+],
+"ran": "2026-10-07",
+"minutes": 48.28
+},
+{
+"site": "melbourne_25422768_enhanced_v1",
+"series": "claudesonnet55max",
+"run": "melbourne_25422768_enhanced_v1-blind-claude-sonnet-5-5-max-20260929T204208",
+"overall": 0.743,
+"surface_f": 0.605,
+"chamfer_m": null,
+"height_m": null,
+"triangles": null,
+"glb": "../bench-runs/melbourne_25422768_enhanced_v1-blind-claude-sonnet-5-5-max-20260929T204208/submission/building.glb",
+"page": null,
+"cost": 77.48,
+"turns": 674.0,
+"nruns": 1,
+"allruns": [
+0.743
+],
+"ran": "2026-09-29",
+"minutes": 275.62
+},
+{
+"site": "melbourne_25422768_enhanced_v1",
+"series": "gpt61solmax",
+"run": "melbourne_25422768_enhanced_v1-blind-gpt-6.1-sol-max-20260929T204208",
+"overall": 0.837,
+"surface_f": 0.569,
+"chamfer_m": null,
+"height_m": null,
+"triangles": null,
+"glb": "../bench-runs/melbourne_25422768_enhanced_v1-blind-gpt-6.1-sol-max-20260929T204208/submission/building.glb",
+"page": null,
+"cost": 1.86,
+"turns": 1.0,
+"nruns": 1,
+"allruns": [
+0.837
+],
+"ran": "2026-09-29",
+"minutes": 56.52
+},
+{
+"site": "melbourne_25422768_enhanced_v1",
+"series": "fireworksember1claudecode",
+"run": "melbourne_25422768_enhanced_v1-blind-fireworks-ember-1-claude-code-20260928T204238",
+"overall": 0.744,
+"surface_f": 0.357,
+"chamfer_m": null,
+"height_m": null,
+"triangles": null,
+"glb": "../bench-runs/melbourne_25422768_enhanced_v1-blind-fireworks-ember-1-claude-code-20260928T204238/submission/building.glb",
+"page": null,
+"cost": 9.85,
+"turns": 207.0,
+"nruns": 1,
+"allruns": [
+0.744
+],
+"ran": "2026-09-28",
+"minutes": 82.97
 },
 {
 "site": "melbourne_25422768_enhanced_v1",
@@ -10194,6 +10954,86 @@
 },
 {
 "site": "melbourne_296368687_enhanced_v1",
+"series": "claudehaiku55max",
+"run": "melbourne_296368687_enhanced_v1-blind-claude-haiku-5-5-max-20261007T234725",
+"overall": 0.583,
+"surface_f": 0.208,
+"chamfer_m": null,
+"height_m": null,
+"triangles": null,
+"glb": "../bench-runs/melbourne_296368687_enhanced_v1-blind-claude-haiku-5-5-max-20261007T234725/submission/building.glb",
+"page": null,
+"cost": 0.7,
+"turns": 82.0,
+"nruns": 1,
+"allruns": [
+0.583
+],
+"ran": "2026-10-07",
+"minutes": 19.17
+},
+{
+"site": "melbourne_296368687_enhanced_v1",
+"series": "claudesonnet55max",
+"run": "melbourne_296368687_enhanced_v1-blind-claude-sonnet-5-5-max-20260929T204208",
+"overall": 0.887,
+"surface_f": 0.716,
+"chamfer_m": null,
+"height_m": null,
+"triangles": null,
+"glb": "../bench-runs/melbourne_296368687_enhanced_v1-blind-claude-sonnet-5-5-max-20260929T204208/submission/building.glb",
+"page": null,
+"cost": 83.27,
+"turns": 1640.0,
+"nruns": 1,
+"allruns": [
+0.887
+],
+"ran": "2026-09-29",
+"minutes": 674.85
+},
+{
+"site": "melbourne_296368687_enhanced_v1",
+"series": "gpt61solmax",
+"run": "melbourne_296368687_enhanced_v1-blind-gpt-6.1-sol-max-20260929T193536",
+"overall": 0.827,
+"surface_f": 0.507,
+"chamfer_m": null,
+"height_m": null,
+"triangles": null,
+"glb": "../bench-runs/melbourne_296368687_enhanced_v1-blind-gpt-6.1-sol-max-20260929T193536/submission/building.glb",
+"page": null,
+"cost": 1.45,
+"turns": 1.0,
+"nruns": 1,
+"allruns": [
+0.827
+],
+"ran": "2026-09-29",
+"minutes": 36.17
+},
+{
+"site": "melbourne_296368687_enhanced_v1",
+"series": "fireworksember1claudecode",
+"run": "melbourne_296368687_enhanced_v1-blind-fireworks-ember-1-claude-code-20260928T204238",
+"overall": 0.558,
+"surface_f": 0.173,
+"chamfer_m": null,
+"height_m": null,
+"triangles": null,
+"glb": "../bench-runs/melbourne_296368687_enhanced_v1-blind-fireworks-ember-1-claude-code-20260928T204238/submission/building.glb",
+"page": null,
+"cost": 9.04,
+"turns": 224.0,
+"nruns": 1,
+"allruns": [
+0.558
+],
+"ran": "2026-09-28",
+"minutes": 75.13
+},
+{
+"site": "melbourne_296368687_enhanced_v1",
 "series": "stealthspacebunnyalphaclaudecode",
 "run": "melbourne_296368687_enhanced_v1-blind-stealth-space-bunny-alpha-claude-code-20260923T181708",
 "overall": 0.599,
@@ -10732,6 +11572,106 @@
 },
 {
 "site": "melbourne_33106429_enhanced_v1",
+"series": "mistralaimistrallarge40claudecode",
+"run": "melbourne_33106429_enhanced_v1-blind-mistralai-mistral-large-4-0-claude-code-20261007T221951",
+"overall": 0.627,
+"surface_f": 0.27,
+"chamfer_m": null,
+"height_m": null,
+"triangles": null,
+"glb": "../bench-runs/melbourne_33106429_enhanced_v1-blind-mistralai-mistral-large-4-0-claude-code-20261007T221951/submission/building.glb",
+"page": null,
+"cost": 15.8,
+"turns": 194.0,
+"nruns": 1,
+"allruns": [
+0.627
+],
+"ran": "2026-10-07",
+"minutes": 423.25
+},
+{
+"site": "melbourne_33106429_enhanced_v1",
+"series": "claudehaiku55max",
+"run": "melbourne_33106429_enhanced_v1-blind-claude-haiku-5-5-max-20261008T023141",
+"overall": 0.635,
+"surface_f": 0.176,
+"chamfer_m": null,
+"height_m": null,
+"triangles": null,
+"glb": "../bench-runs/melbourne_33106429_enhanced_v1-blind-claude-haiku-5-5-max-20261008T023141/submission/building.glb",
+"page": null,
+"cost": 1.75,
+"turns": 154.0,
+"nruns": 1,
+"allruns": [
+0.635
+],
+"ran": "2026-10-08",
+"minutes": 50.3
+},
+{
+"site": "melbourne_33106429_enhanced_v1",
+"series": "gpt61solmax",
+"run": "melbourne_33106429_enhanced_v1-blind-gpt-6.1-sol-max-20260929T204208",
+"overall": 0.769,
+"surface_f": 0.322,
+"chamfer_m": null,
+"height_m": null,
+"triangles": null,
+"glb": "../bench-runs/melbourne_33106429_enhanced_v1-blind-gpt-6.1-sol-max-20260929T204208/submission/building.glb",
+"page": null,
+"cost": 2.14,
+"turns": 1.0,
+"nruns": 1,
+"allruns": [
+0.769
+],
+"ran": "2026-09-29",
+"minutes": 58.62
+},
+{
+"site": "melbourne_33106429_enhanced_v1",
+"series": "claudesonnet55max",
+"run": "melbourne_33106429_enhanced_v1-blind-claude-sonnet-5-5-max-20260929T025707",
+"overall": 0.791,
+"surface_f": 0.306,
+"chamfer_m": null,
+"height_m": null,
+"triangles": null,
+"glb": "../bench-runs/melbourne_33106429_enhanced_v1-blind-claude-sonnet-5-5-max-20260929T025707/submission/building.glb",
+"page": null,
+"cost": 48.64,
+"turns": 1042.0,
+"nruns": 1,
+"allruns": [
+0.791
+],
+"ran": "2026-09-29",
+"minutes": 361.08
+},
+{
+"site": "melbourne_33106429_enhanced_v1",
+"series": "fireworksember1claudecode",
+"run": "melbourne_33106429_enhanced_v1-blind-fireworks-ember-1-claude-code-20260928T204238",
+"overall": 0.706,
+"surface_f": 0.366,
+"chamfer_m": null,
+"height_m": null,
+"triangles": null,
+"glb": "../bench-runs/melbourne_33106429_enhanced_v1-blind-fireworks-ember-1-claude-code-20260928T204238/submission/building.glb",
+"page": null,
+"cost": 8.6,
+"turns": 200.0,
+"nruns": 1,
+"allruns": [
+0.706
+],
+"ran": "2026-09-28",
+"minutes": 71.92
+},
+{
+"site": "melbourne_33106429_enhanced_v1",
 "series": "stealthspacebunnyalphaclaudecode",
 "run": "melbourne_33106429_enhanced_v1-blind-stealth-space-bunny-alpha-claude-code-20260923T181708",
 "overall": 0.604,
@@ -11245,6 +12185,106 @@
 ],
 "ran": "2026-09-04",
 "minutes": 18.5
+},
+{
+"site": "melbourne_45461060_enhanced_v1",
+"series": "mistralaimistrallarge40claudecode",
+"run": "melbourne_45461060_enhanced_v1-blind-mistralai-mistral-large-4-0-claude-code-20261008T150227",
+"overall": 0.893,
+"surface_f": 0.768,
+"chamfer_m": null,
+"height_m": null,
+"triangles": null,
+"glb": "../bench-runs/melbourne_45461060_enhanced_v1-blind-mistralai-mistral-large-4-0-claude-code-20261008T150227/submission/building.glb",
+"page": null,
+"cost": 48.68,
+"turns": 596.0,
+"nruns": 1,
+"allruns": [
+0.893
+],
+"ran": "2026-10-08",
+"minutes": 1297.45
+},
+{
+"site": "melbourne_45461060_enhanced_v1",
+"series": "claudehaiku55max",
+"run": "melbourne_45461060_enhanced_v1-blind-claude-haiku-5-5-max-20261008T003712",
+"overall": 0.66,
+"surface_f": 0.248,
+"chamfer_m": null,
+"height_m": null,
+"triangles": null,
+"glb": "../bench-runs/melbourne_45461060_enhanced_v1-blind-claude-haiku-5-5-max-20261008T003712/submission/building.glb",
+"page": null,
+"cost": 1.18,
+"turns": 113.0,
+"nruns": 1,
+"allruns": [
+0.66
+],
+"ran": "2026-10-08",
+"minutes": 33.55
+},
+{
+"site": "melbourne_45461060_enhanced_v1",
+"series": "gpt61solmax",
+"run": "melbourne_45461060_enhanced_v1-blind-gpt-6.1-sol-max-20260929T193536",
+"overall": 0.842,
+"surface_f": 0.406,
+"chamfer_m": null,
+"height_m": null,
+"triangles": null,
+"glb": "../bench-runs/melbourne_45461060_enhanced_v1-blind-gpt-6.1-sol-max-20260929T193536/submission/building.glb",
+"page": null,
+"cost": 1.35,
+"turns": 1.0,
+"nruns": 1,
+"allruns": [
+0.842
+],
+"ran": "2026-09-29",
+"minutes": 42.55
+},
+{
+"site": "melbourne_45461060_enhanced_v1",
+"series": "claudesonnet55max",
+"run": "melbourne_45461060_enhanced_v1-blind-claude-sonnet-5-5-max-20260928T234850",
+"overall": 0.874,
+"surface_f": 0.744,
+"chamfer_m": null,
+"height_m": null,
+"triangles": null,
+"glb": "../bench-runs/melbourne_45461060_enhanced_v1-blind-claude-sonnet-5-5-max-20260928T234850/submission/building.glb",
+"page": null,
+"cost": 33.29,
+"turns": 739.0,
+"nruns": 1,
+"allruns": [
+0.874
+],
+"ran": "2026-09-28",
+"minutes": 186.95
+},
+{
+"site": "melbourne_45461060_enhanced_v1",
+"series": "fireworksember1claudecode",
+"run": "melbourne_45461060_enhanced_v1-blind-fireworks-ember-1-claude-code-20260928T204238",
+"overall": 0.77,
+"surface_f": 0.438,
+"chamfer_m": null,
+"height_m": null,
+"triangles": null,
+"glb": "../bench-runs/melbourne_45461060_enhanced_v1-blind-fireworks-ember-1-claude-code-20260928T204238/submission/building.glb",
+"page": null,
+"cost": 13.47,
+"turns": 298.0,
+"nruns": 1,
+"allruns": [
+0.77
+],
+"ran": "2026-09-28",
+"minutes": 98.73
 },
 {
 "site": "melbourne_45461060_enhanced_v1",
@@ -11762,6 +12802,106 @@
 ],
 "ran": "2026-09-05",
 "minutes": 53.95
+},
+{
+"site": "melbourne_4817059_enhanced_v1",
+"series": "mistralaimistrallarge40claudecode",
+"run": "melbourne_4817059_enhanced_v1-blind-mistralai-mistral-large-4-0-claude-code-20261008T001752",
+"overall": 0.609,
+"surface_f": 0.175,
+"chamfer_m": null,
+"height_m": null,
+"triangles": null,
+"glb": "../bench-runs/melbourne_4817059_enhanced_v1-blind-mistralai-mistral-large-4-0-claude-code-20261008T001752/submission/building.glb",
+"page": null,
+"cost": 29.69,
+"turns": 405.0,
+"nruns": 1,
+"allruns": [
+0.609
+],
+"ran": "2026-10-08",
+"minutes": 523.53
+},
+{
+"site": "melbourne_4817059_enhanced_v1",
+"series": "claudehaiku55max",
+"run": "melbourne_4817059_enhanced_v1-blind-claude-haiku-5-5-max-20261008T003712",
+"overall": 0.682,
+"surface_f": 0.229,
+"chamfer_m": null,
+"height_m": null,
+"triangles": null,
+"glb": "../bench-runs/melbourne_4817059_enhanced_v1-blind-claude-haiku-5-5-max-20261008T003712/submission/building.glb",
+"page": null,
+"cost": 2.14,
+"turns": 185.0,
+"nruns": 1,
+"allruns": [
+0.682
+],
+"ran": "2026-10-08",
+"minutes": 53.93
+},
+{
+"site": "melbourne_4817059_enhanced_v1",
+"series": "gpt61solmax",
+"run": "melbourne_4817059_enhanced_v1-blind-gpt-6.1-sol-max-20260929T193536",
+"overall": 0.913,
+"surface_f": 0.535,
+"chamfer_m": null,
+"height_m": null,
+"triangles": null,
+"glb": "../bench-runs/melbourne_4817059_enhanced_v1-blind-gpt-6.1-sol-max-20260929T193536/submission/building.glb",
+"page": null,
+"cost": 1.48,
+"turns": 1.0,
+"nruns": 1,
+"allruns": [
+0.913
+],
+"ran": "2026-09-29",
+"minutes": 39.73
+},
+{
+"site": "melbourne_4817059_enhanced_v1",
+"series": "claudesonnet55max",
+"run": "melbourne_4817059_enhanced_v1-blind-claude-sonnet-5-5-max-20260929T025707",
+"overall": 0.87,
+"surface_f": 0.392,
+"chamfer_m": null,
+"height_m": null,
+"triangles": null,
+"glb": "../bench-runs/melbourne_4817059_enhanced_v1-blind-claude-sonnet-5-5-max-20260929T025707/submission/building.glb",
+"page": null,
+"cost": 60.55,
+"turns": 1421.0,
+"nruns": 1,
+"allruns": [
+0.87
+],
+"ran": "2026-09-29",
+"minutes": 455.37
+},
+{
+"site": "melbourne_4817059_enhanced_v1",
+"series": "fireworksember1claudecode",
+"run": "melbourne_4817059_enhanced_v1-blind-fireworks-ember-1-claude-code-20260928T204238",
+"overall": 0.665,
+"surface_f": 0.365,
+"chamfer_m": null,
+"height_m": null,
+"triangles": null,
+"glb": "../bench-runs/melbourne_4817059_enhanced_v1-blind-fireworks-ember-1-claude-code-20260928T204238/submission/building.glb",
+"page": null,
+"cost": 8.31,
+"turns": 190.0,
+"nruns": 1,
+"allruns": [
+0.665
+],
+"ran": "2026-09-28",
+"minutes": 63.6
 },
 {
 "site": "melbourne_4817059_enhanced_v1",

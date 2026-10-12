@@ -260,6 +260,54 @@
    }
   },
   {
+   "label": "gpt-6.1-sol (max)",
+   "sub": "OpenAI",
+   "org": "OpenAI",
+   "series": "gpt61solmax",
+   "values": {
+    "overall": 0.8506,
+    "cost": 1.6960125000000001,
+    "cells": 12,
+    "ran": 12,
+    "f": 0.5139,
+    "geometry": 0.8374,
+    "appearance": 0.9259,
+    "silhouette": 0.8699,
+    "outline": 0.6712,
+    "plan": 0.8386,
+    "height": 0.9597,
+    "colour": 0.985,
+    "structure": 0.8472,
+    "materials": 0.9864,
+    "precision": 0.5284,
+    "recall": 0.5014,
+    "triangles": 44485.5,
+    "turns": 1.0,
+    "minutes": 43.24,
+    "common": 0.8506,
+    "takes": 12,
+    "place": 2
+   },
+   "band": {
+    "overall": 0.0134
+   },
+   "optimal": true,
+   "tags": [
+    {
+     "text": "est. price",
+     "kind": "warn"
+    },
+    {
+     "text": "frontier",
+     "kind": ""
+    }
+   ],
+   "facets": {
+    "family": "OpenAI",
+    "effort": "max"
+   }
+  },
+  {
    "label": "gpt-6-astra (ultra)",
    "sub": "OpenAI",
    "org": "OpenAI",
@@ -292,16 +340,55 @@
    "band": {
     "overall": 0.0143
    },
-   "optimal": true,
-   "tags": [
-    {
-     "text": "frontier",
-     "kind": ""
-    }
-   ],
+   "optimal": false,
+   "tags": [],
    "facets": {
     "family": "OpenAI",
     "effort": "ultra"
+   }
+  },
+  {
+   "label": "claude-sonnet-5-5 (max)",
+   "sub": "Unplaced",
+   "org": "Unplaced",
+   "series": "claudesonnet55max",
+   "values": {
+    "overall": 0.821,
+    "cost": 45.67458849999996,
+    "cells": 12,
+    "ran": 12,
+    "f": 0.5164,
+    "geometry": 0.812,
+    "appearance": 0.9526,
+    "silhouette": 0.8645,
+    "outline": 0.6774,
+    "plan": 0.8306,
+    "height": 0.8094,
+    "colour": 0.9986,
+    "structure": 0.8912,
+    "materials": 0.989,
+    "precision": 0.5408,
+    "recall": 0.4987,
+    "triangles": 2109.1667,
+    "turns": 840.0,
+    "minutes": 236.53,
+    "common": 0.821,
+    "takes": 12,
+    "place": 2
+   },
+   "band": {
+    "overall": 0.017
+   },
+   "optimal": false,
+   "tags": [
+    {
+     "text": "est. price",
+     "kind": "warn"
+    }
+   ],
+   "facets": {
+    "family": "Unplaced",
+    "effort": "max"
    }
   },
   {
@@ -332,7 +419,7 @@
     "minutes": 63.96,
     "common": 0.8136,
     "takes": 12,
-    "place": 2
+    "place": 3
    },
    "band": {
     "overall": 0.0166
@@ -371,7 +458,7 @@
     "minutes": 36.81,
     "common": 0.7833,
     "takes": 12,
-    "place": 3
+    "place": 4
    },
    "band": {
     "overall": 0.0184
@@ -415,7 +502,7 @@
     "turns": 124.5,
     "minutes": 41.88,
     "takes": 2,
-    "place": 4
+    "place": 6
    },
    "band": {
     "overall": 0.0088
@@ -455,7 +542,7 @@
     "minutes": 67.98,
     "common": 0.7555,
     "takes": 12,
-    "place": 4
+    "place": 6
    },
    "band": {
     "overall": 0.022
@@ -495,7 +582,7 @@
     "minutes": 92.58,
     "common": 0.7448,
     "takes": 12,
-    "place": 5
+    "place": 7
    },
    "band": {
     "overall": 0.0212
@@ -535,7 +622,7 @@
     "minutes": 43.82,
     "common": 0.7388,
     "takes": 12,
-    "place": 5
+    "place": 7
    },
    "band": {
     "overall": 0.0152
@@ -575,20 +662,16 @@
     "minutes": 30.24,
     "common": 0.7307,
     "takes": 12,
-    "place": 5
+    "place": 7
    },
    "band": {
     "overall": 0.0312
    },
-   "optimal": true,
+   "optimal": false,
    "tags": [
     {
      "text": "est. price",
      "kind": "warn"
-    },
-    {
-     "text": "frontier",
-     "kind": ""
     }
    ],
    "facets": {
@@ -624,20 +707,16 @@
     "minutes": 114.13,
     "common": 0.7288,
     "takes": 12,
-    "place": 5
+    "place": 7
    },
    "band": {
     "overall": 0.0226
    },
-   "optimal": true,
+   "optimal": false,
    "tags": [
     {
      "text": "est. price",
      "kind": "warn"
-    },
-    {
-     "text": "frontier",
-     "kind": ""
     }
    ],
    "facets": {
@@ -672,20 +751,16 @@
     "minutes": 19.09,
     "common": 0.698,
     "takes": 12,
-    "place": 5
+    "place": 7
    },
    "band": {
     "overall": 0.0224
    },
-   "optimal": true,
+   "optimal": false,
    "tags": [
     {
      "text": "est. price",
      "kind": "warn"
-    },
-    {
-     "text": "frontier",
-     "kind": ""
     }
    ],
    "facets": {
@@ -719,7 +794,7 @@
     "triangles": 10360.0,
     "minutes": 69.72,
     "takes": 1,
-    "place": 5
+    "place": 7
    },
    "band": {},
    "optimal": false,
@@ -756,20 +831,16 @@
     "minutes": 20.75,
     "common": 0.6962,
     "takes": 12,
-    "place": 5
+    "place": 7
    },
    "band": {
     "overall": 0.0218
    },
-   "optimal": true,
+   "optimal": false,
    "tags": [
     {
      "text": "est. price",
      "kind": "warn"
-    },
-    {
-     "text": "frontier",
-     "kind": ""
     }
    ],
    "facets": {
@@ -805,7 +876,7 @@
     "minutes": 53.34,
     "common": 0.695,
     "takes": 12,
-    "place": 5
+    "place": 7
    },
    "band": {
     "overall": 0.0293
@@ -850,7 +921,7 @@
     "minutes": 53.03,
     "common": 0.6848,
     "takes": 12,
-    "place": 10
+    "place": 12
    },
    "band": {
     "overall": 0.0232
@@ -890,7 +961,7 @@
     "minutes": 60.05,
     "common": 0.6823,
     "takes": 12,
-    "place": 10
+    "place": 12
    },
    "band": {
     "overall": 0.024
@@ -929,7 +1000,7 @@
     "minutes": 80.5,
     "common": 0.6799,
     "takes": 12,
-    "place": 10
+    "place": 12
    },
    "band": {
     "overall": 0.0309
@@ -943,6 +1014,50 @@
    ],
    "facets": {
     "family": "Z.ai",
+    "effort": "max"
+   }
+  },
+  {
+   "label": "fireworks/ember-1 (max) \u00b7 Claude Code",
+   "sub": "fireworks",
+   "org": "fireworks",
+   "series": "fireworksember1claudecode",
+   "values": {
+    "overall": 0.679,
+    "cost": 9.444563500000001,
+    "cells": 12,
+    "ran": 12,
+    "f": 0.3122,
+    "geometry": 0.7471,
+    "appearance": 0.7234,
+    "silhouette": 0.8035,
+    "outline": 0.5139,
+    "plan": 0.7614,
+    "height": 0.8702,
+    "colour": 0.793,
+    "structure": 0.6306,
+    "materials": 0.9851,
+    "precision": 0.3283,
+    "recall": 0.2999,
+    "triangles": 2075.3333,
+    "turns": 215.0,
+    "minutes": 77.5,
+    "common": 0.679,
+    "takes": 12,
+    "place": 12
+   },
+   "band": {
+    "overall": 0.0235
+   },
+   "optimal": false,
+   "tags": [
+    {
+     "text": "est. price",
+     "kind": "warn"
+    }
+   ],
+   "facets": {
+    "family": "fireworks",
     "effort": "max"
    }
   },
@@ -973,7 +1088,7 @@
     "minutes": 247.49,
     "common": 0.6734,
     "takes": 12,
-    "place": 10
+    "place": 12
    },
    "band": {
     "overall": 0.0309
@@ -991,6 +1106,50 @@
    ],
    "facets": {
     "family": "cognition",
+    "effort": "max"
+   }
+  },
+  {
+   "label": "claude-haiku-5-5 (max)",
+   "sub": "Unplaced",
+   "org": "Unplaced",
+   "series": "claudehaiku55max",
+   "values": {
+    "overall": 0.6714,
+    "cost": 1.3368134999999999,
+    "cells": 12,
+    "ran": 12,
+    "f": 0.2296,
+    "geometry": 0.7311,
+    "appearance": 0.7693,
+    "silhouette": 0.8084,
+    "outline": 0.5036,
+    "plan": 0.7492,
+    "height": 0.7784,
+    "colour": 0.83,
+    "structure": 0.6885,
+    "materials": 0.9003,
+    "precision": 0.2423,
+    "recall": 0.2195,
+    "triangles": 5441.25,
+    "turns": 123.5,
+    "minutes": 36.12,
+    "common": 0.6714,
+    "takes": 12,
+    "place": 12
+   },
+   "band": {
+    "overall": 0.0191
+   },
+   "optimal": false,
+   "tags": [
+    {
+     "text": "est. price",
+     "kind": "warn"
+    }
+   ],
+   "facets": {
+    "family": "Unplaced",
     "effort": "max"
    }
   },
@@ -1021,7 +1180,7 @@
     "turns": 51.0,
     "minutes": 8.22,
     "takes": 3,
-    "place": 10
+    "place": 12
    },
    "band": {
     "overall": 0.0314
@@ -1061,7 +1220,7 @@
     "minutes": 62.74,
     "common": 0.6156,
     "takes": 12,
-    "place": 17
+    "place": 19
    },
    "band": {
     "overall": 0.0221
@@ -1100,7 +1259,7 @@
     "minutes": 114.94,
     "common": 0.5558,
     "takes": 12,
-    "place": 17
+    "place": 19
    },
    "band": {
     "overall": 0.0578
@@ -1143,7 +1302,7 @@
     "minutes": 39.51,
     "common": 0.5476,
     "takes": 12,
-    "place": 17
+    "place": 19
    },
    "band": {
     "overall": 0.0607
@@ -1183,7 +1342,7 @@
     "minutes": 60.73,
     "common": 0.5436,
     "takes": 12,
-    "place": 19
+    "place": 23
    },
    "band": {
     "overall": 0.032
@@ -1223,7 +1382,7 @@
     "minutes": 125.14,
     "common": 0.5403,
     "takes": 12,
-    "place": 19
+    "place": 23
    },
    "band": {
     "overall": 0.0371
@@ -1238,6 +1397,49 @@
    "facets": {
     "family": "Moonshot AI",
     "effort": "thinking"
+   }
+  },
+  {
+   "label": "mistralai/mistral-large-4-0 (max) \u00b7 Claude Code",
+   "sub": "mistralai",
+   "org": "mistralai",
+   "series": "mistralaimistrallarge40claudecode",
+   "values": {
+    "overall": 0.5197,
+    "cost": 33.208745,
+    "cells": 12,
+    "ran": 12,
+    "f": 0.2723,
+    "geometry": 0.5668,
+    "appearance": 0.4978,
+    "silhouette": 0.611,
+    "outline": 0.4408,
+    "plan": 0.6151,
+    "height": 0.5379,
+    "colour": 0.5593,
+    "structure": 0.4158,
+    "materials": 0.6765,
+    "precision": 0.2748,
+    "recall": 0.2716,
+    "turns": 419.0,
+    "minutes": 688.59,
+    "common": 0.5197,
+    "takes": 12,
+    "place": 23
+   },
+   "band": {
+    "overall": 0.0945
+   },
+   "optimal": false,
+   "tags": [
+    {
+     "text": "est. price",
+     "kind": "warn"
+    }
+   ],
+   "facets": {
+    "family": "mistralai",
+    "effort": "max"
    }
   },
   {
@@ -1266,7 +1468,7 @@
     "triangles": 3588.0,
     "minutes": 16.75,
     "takes": 2,
-    "place": 19
+    "place": 23
    },
    "band": {
     "overall": 0.1903
@@ -1304,7 +1506,7 @@
     "minutes": 427.17,
     "common": 0.3391,
     "takes": 12,
-    "place": 24
+    "place": 29
    },
    "band": {
     "overall": 0.0342
@@ -1347,7 +1549,7 @@
     "minutes": 100.71,
     "common": 0.3302,
     "takes": 12,
-    "place": 24
+    "place": 29
    },
    "band": {
     "overall": 0.0919
@@ -1386,7 +1588,7 @@
     "minutes": 10.85,
     "common": 0.2668,
     "takes": 12,
-    "place": 25
+    "place": 30
    },
    "band": {
     "overall": 0.0509
@@ -1425,7 +1627,7 @@
     "minutes": 4.31,
     "common": 0.2581,
     "takes": 12,
-    "place": 25
+    "place": 30
    },
    "band": {
     "overall": 0.0493
@@ -1488,6 +1690,54 @@
    }
   },
   {
+   "label": "gpt-6.1-sol (max)",
+   "sub": "OpenAI",
+   "org": "OpenAI",
+   "series": "gpt61solmax",
+   "values": {
+    "overall": 0.8506,
+    "cost": 1.6960125000000001,
+    "cells": 12,
+    "ran": 12,
+    "f": 0.5139,
+    "geometry": 0.8374,
+    "appearance": 0.9259,
+    "silhouette": 0.8699,
+    "outline": 0.6712,
+    "plan": 0.8386,
+    "height": 0.9597,
+    "colour": 0.985,
+    "structure": 0.8472,
+    "materials": 0.9864,
+    "precision": 0.5284,
+    "recall": 0.5014,
+    "triangles": 44485.5,
+    "turns": 1.0,
+    "minutes": 43.24,
+    "common": 0.8506,
+    "takes": 12,
+    "place": 2
+   },
+   "band": {
+    "overall": 0.0134
+   },
+   "optimal": true,
+   "tags": [
+    {
+     "text": "est. price",
+     "kind": "warn"
+    },
+    {
+     "text": "frontier",
+     "kind": ""
+    }
+   ],
+   "facets": {
+    "family": "OpenAI",
+    "effort": "max"
+   }
+  },
+  {
    "label": "gpt-6-astra (ultra)",
    "sub": "OpenAI",
    "org": "OpenAI",
@@ -1520,16 +1770,55 @@
    "band": {
     "overall": 0.0143
    },
-   "optimal": true,
-   "tags": [
-    {
-     "text": "frontier",
-     "kind": ""
-    }
-   ],
+   "optimal": false,
+   "tags": [],
    "facets": {
     "family": "OpenAI",
     "effort": "ultra"
+   }
+  },
+  {
+   "label": "claude-sonnet-5-5 (max)",
+   "sub": "Unplaced",
+   "org": "Unplaced",
+   "series": "claudesonnet55max",
+   "values": {
+    "overall": 0.821,
+    "cost": 45.67458849999996,
+    "cells": 12,
+    "ran": 12,
+    "f": 0.5164,
+    "geometry": 0.812,
+    "appearance": 0.9526,
+    "silhouette": 0.8645,
+    "outline": 0.6774,
+    "plan": 0.8306,
+    "height": 0.8094,
+    "colour": 0.9986,
+    "structure": 0.8912,
+    "materials": 0.989,
+    "precision": 0.5408,
+    "recall": 0.4987,
+    "triangles": 2109.1667,
+    "turns": 840.0,
+    "minutes": 236.53,
+    "common": 0.821,
+    "takes": 12,
+    "place": 2
+   },
+   "band": {
+    "overall": 0.017
+   },
+   "optimal": false,
+   "tags": [
+    {
+     "text": "est. price",
+     "kind": "warn"
+    }
+   ],
+   "facets": {
+    "family": "Unplaced",
+    "effort": "max"
    }
   },
   {
@@ -1560,7 +1849,7 @@
     "minutes": 63.96,
     "common": 0.8136,
     "takes": 12,
-    "place": 2
+    "place": 3
    },
    "band": {
     "overall": 0.0166
@@ -1599,7 +1888,7 @@
     "minutes": 36.81,
     "common": 0.7833,
     "takes": 12,
-    "place": 3
+    "place": 4
    },
    "band": {
     "overall": 0.0184
@@ -1644,7 +1933,7 @@
     "minutes": 67.98,
     "common": 0.7555,
     "takes": 12,
-    "place": 4
+    "place": 6
    },
    "band": {
     "overall": 0.022
@@ -1684,7 +1973,7 @@
     "minutes": 92.58,
     "common": 0.7448,
     "takes": 12,
-    "place": 5
+    "place": 7
    },
    "band": {
     "overall": 0.0212
@@ -1724,7 +2013,7 @@
     "minutes": 43.82,
     "common": 0.7388,
     "takes": 12,
-    "place": 5
+    "place": 7
    },
    "band": {
     "overall": 0.0152
@@ -1764,20 +2053,16 @@
     "minutes": 30.24,
     "common": 0.7307,
     "takes": 12,
-    "place": 5
+    "place": 7
    },
    "band": {
     "overall": 0.0312
    },
-   "optimal": true,
+   "optimal": false,
    "tags": [
     {
      "text": "est. price",
      "kind": "warn"
-    },
-    {
-     "text": "frontier",
-     "kind": ""
     }
    ],
    "facets": {
@@ -1813,20 +2098,16 @@
     "minutes": 114.13,
     "common": 0.7288,
     "takes": 12,
-    "place": 5
+    "place": 7
    },
    "band": {
     "overall": 0.0226
    },
-   "optimal": true,
+   "optimal": false,
    "tags": [
     {
      "text": "est. price",
      "kind": "warn"
-    },
-    {
-     "text": "frontier",
-     "kind": ""
     }
    ],
    "facets": {
@@ -1861,20 +2142,16 @@
     "minutes": 19.09,
     "common": 0.698,
     "takes": 12,
-    "place": 5
+    "place": 7
    },
    "band": {
     "overall": 0.0224
    },
-   "optimal": true,
+   "optimal": false,
    "tags": [
     {
      "text": "est. price",
      "kind": "warn"
-    },
-    {
-     "text": "frontier",
-     "kind": ""
     }
    ],
    "facets": {
@@ -1909,20 +2186,16 @@
     "minutes": 20.75,
     "common": 0.6962,
     "takes": 12,
-    "place": 5
+    "place": 7
    },
    "band": {
     "overall": 0.0218
    },
-   "optimal": true,
+   "optimal": false,
    "tags": [
     {
      "text": "est. price",
      "kind": "warn"
-    },
-    {
-     "text": "frontier",
-     "kind": ""
     }
    ],
    "facets": {
@@ -1958,7 +2231,7 @@
     "minutes": 53.34,
     "common": 0.695,
     "takes": 12,
-    "place": 5
+    "place": 7
    },
    "band": {
     "overall": 0.0293
@@ -2003,7 +2276,7 @@
     "minutes": 53.03,
     "common": 0.6848,
     "takes": 12,
-    "place": 10
+    "place": 12
    },
    "band": {
     "overall": 0.0232
@@ -2043,7 +2316,7 @@
     "minutes": 60.05,
     "common": 0.6823,
     "takes": 12,
-    "place": 10
+    "place": 12
    },
    "band": {
     "overall": 0.024
@@ -2082,7 +2355,7 @@
     "minutes": 80.5,
     "common": 0.6799,
     "takes": 12,
-    "place": 10
+    "place": 12
    },
    "band": {
     "overall": 0.0309
@@ -2096,6 +2369,50 @@
    ],
    "facets": {
     "family": "Z.ai",
+    "effort": "max"
+   }
+  },
+  {
+   "label": "fireworks/ember-1 (max) \u00b7 Claude Code",
+   "sub": "fireworks",
+   "org": "fireworks",
+   "series": "fireworksember1claudecode",
+   "values": {
+    "overall": 0.679,
+    "cost": 9.444563500000001,
+    "cells": 12,
+    "ran": 12,
+    "f": 0.3122,
+    "geometry": 0.7471,
+    "appearance": 0.7234,
+    "silhouette": 0.8035,
+    "outline": 0.5139,
+    "plan": 0.7614,
+    "height": 0.8702,
+    "colour": 0.793,
+    "structure": 0.6306,
+    "materials": 0.9851,
+    "precision": 0.3283,
+    "recall": 0.2999,
+    "triangles": 2075.3333,
+    "turns": 215.0,
+    "minutes": 77.5,
+    "common": 0.679,
+    "takes": 12,
+    "place": 12
+   },
+   "band": {
+    "overall": 0.0235
+   },
+   "optimal": false,
+   "tags": [
+    {
+     "text": "est. price",
+     "kind": "warn"
+    }
+   ],
+   "facets": {
+    "family": "fireworks",
     "effort": "max"
    }
   },
@@ -2126,7 +2443,7 @@
     "minutes": 247.49,
     "common": 0.6734,
     "takes": 12,
-    "place": 10
+    "place": 12
    },
    "band": {
     "overall": 0.0309
@@ -2144,6 +2461,50 @@
    ],
    "facets": {
     "family": "cognition",
+    "effort": "max"
+   }
+  },
+  {
+   "label": "claude-haiku-5-5 (max)",
+   "sub": "Unplaced",
+   "org": "Unplaced",
+   "series": "claudehaiku55max",
+   "values": {
+    "overall": 0.6714,
+    "cost": 1.3368134999999999,
+    "cells": 12,
+    "ran": 12,
+    "f": 0.2296,
+    "geometry": 0.7311,
+    "appearance": 0.7693,
+    "silhouette": 0.8084,
+    "outline": 0.5036,
+    "plan": 0.7492,
+    "height": 0.7784,
+    "colour": 0.83,
+    "structure": 0.6885,
+    "materials": 0.9003,
+    "precision": 0.2423,
+    "recall": 0.2195,
+    "triangles": 5441.25,
+    "turns": 123.5,
+    "minutes": 36.12,
+    "common": 0.6714,
+    "takes": 12,
+    "place": 12
+   },
+   "band": {
+    "overall": 0.0191
+   },
+   "optimal": false,
+   "tags": [
+    {
+     "text": "est. price",
+     "kind": "warn"
+    }
+   ],
+   "facets": {
+    "family": "Unplaced",
     "effort": "max"
    }
   },
@@ -2175,7 +2536,7 @@
     "minutes": 62.74,
     "common": 0.6156,
     "takes": 12,
-    "place": 17
+    "place": 19
    },
    "band": {
     "overall": 0.0221
@@ -2214,7 +2575,7 @@
     "minutes": 114.94,
     "common": 0.5558,
     "takes": 12,
-    "place": 17
+    "place": 19
    },
    "band": {
     "overall": 0.0578
@@ -2257,7 +2618,7 @@
     "minutes": 39.51,
     "common": 0.5476,
     "takes": 12,
-    "place": 17
+    "place": 19
    },
    "band": {
     "overall": 0.0607
@@ -2297,7 +2658,7 @@
     "minutes": 60.73,
     "common": 0.5436,
     "takes": 12,
-    "place": 19
+    "place": 23
    },
    "band": {
     "overall": 0.032
@@ -2337,7 +2698,7 @@
     "minutes": 125.14,
     "common": 0.5403,
     "takes": 12,
-    "place": 19
+    "place": 23
    },
    "band": {
     "overall": 0.0371
@@ -2352,6 +2713,49 @@
    "facets": {
     "family": "Moonshot AI",
     "effort": "thinking"
+   }
+  },
+  {
+   "label": "mistralai/mistral-large-4-0 (max) \u00b7 Claude Code",
+   "sub": "mistralai",
+   "org": "mistralai",
+   "series": "mistralaimistrallarge40claudecode",
+   "values": {
+    "overall": 0.5197,
+    "cost": 33.208745,
+    "cells": 12,
+    "ran": 12,
+    "f": 0.2723,
+    "geometry": 0.5668,
+    "appearance": 0.4978,
+    "silhouette": 0.611,
+    "outline": 0.4408,
+    "plan": 0.6151,
+    "height": 0.5379,
+    "colour": 0.5593,
+    "structure": 0.4158,
+    "materials": 0.6765,
+    "precision": 0.2748,
+    "recall": 0.2716,
+    "turns": 419.0,
+    "minutes": 688.59,
+    "common": 0.5197,
+    "takes": 12,
+    "place": 23
+   },
+   "band": {
+    "overall": 0.0945
+   },
+   "optimal": false,
+   "tags": [
+    {
+     "text": "est. price",
+     "kind": "warn"
+    }
+   ],
+   "facets": {
+    "family": "mistralai",
+    "effort": "max"
    }
   },
   {
@@ -2380,7 +2784,7 @@
     "minutes": 427.17,
     "common": 0.3391,
     "takes": 12,
-    "place": 24
+    "place": 29
    },
    "band": {
     "overall": 0.0342
@@ -2423,7 +2827,7 @@
     "minutes": 100.71,
     "common": 0.3302,
     "takes": 12,
-    "place": 24
+    "place": 29
    },
    "band": {
     "overall": 0.0919
@@ -2462,7 +2866,7 @@
     "minutes": 10.85,
     "common": 0.2668,
     "takes": 12,
-    "place": 25
+    "place": 30
    },
    "band": {
     "overall": 0.0509
@@ -2501,7 +2905,7 @@
     "minutes": 4.31,
     "common": 0.2581,
     "takes": 12,
-    "place": 25
+    "place": 30
    },
    "band": {
     "overall": 0.0493

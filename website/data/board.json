@@ -259,6 +259,96 @@
    }
   },
   {
+   "label": "gpt-6.1-sol (max)",
+   "sub": "OpenAI",
+   "org": "OpenAI",
+   "series": "gpt61solmax",
+   "values": {
+    "overall": 0.8506,
+    "cost": 1.6960125000000001,
+    "cells": 12,
+    "ran": 12,
+    "f": 0.5139,
+    "geometry": 0.8374,
+    "appearance": 0.9259,
+    "silhouette": 0.8699,
+    "outline": 0.6712,
+    "plan": 0.8386,
+    "height": 0.9597,
+    "colour": 0.985,
+    "structure": 0.8472,
+    "materials": 0.9864,
+    "precision": 0.5284,
+    "recall": 0.5014,
+    "triangles": 44485.5,
+    "turns": 1.0,
+    "minutes": 43.24,
+    "takes": 12,
+    "place": 2
+   },
+   "band": {
+    "overall": 0.0134
+   },
+   "optimal": true,
+   "tags": [
+    {
+     "text": "est. price",
+     "kind": "warn"
+    },
+    {
+     "text": "frontier",
+     "kind": ""
+    }
+   ],
+   "facets": {
+    "family": "OpenAI",
+    "effort": "max"
+   }
+  },
+  {
+   "label": "claude-sonnet-5-5 (max)",
+   "sub": "Unplaced",
+   "org": "Unplaced",
+   "series": "claudesonnet55max",
+   "values": {
+    "overall": 0.821,
+    "cost": 45.67458849999996,
+    "cells": 12,
+    "ran": 12,
+    "f": 0.5164,
+    "geometry": 0.812,
+    "appearance": 0.9526,
+    "silhouette": 0.8645,
+    "outline": 0.6774,
+    "plan": 0.8306,
+    "height": 0.8094,
+    "colour": 0.9986,
+    "structure": 0.8912,
+    "materials": 0.989,
+    "precision": 0.5408,
+    "recall": 0.4987,
+    "triangles": 2109.1667,
+    "turns": 840.0,
+    "minutes": 236.53,
+    "takes": 12,
+    "place": 2
+   },
+   "band": {
+    "overall": 0.017
+   },
+   "optimal": false,
+   "tags": [
+    {
+     "text": "est. price",
+     "kind": "warn"
+    }
+   ],
+   "facets": {
+    "family": "Unplaced",
+    "effort": "max"
+   }
+  },
+  {
    "label": "gpt-6-astra (ultra)",
    "sub": "OpenAI",
    "org": "OpenAI",
@@ -291,13 +381,8 @@
    "band": {
     "overall": 0.0198
    },
-   "optimal": true,
-   "tags": [
-    {
-     "text": "frontier",
-     "kind": ""
-    }
-   ],
+   "optimal": false,
+   "tags": [],
    "facets": {
     "family": "OpenAI",
     "effort": "ultra"
@@ -329,7 +414,7 @@
     "turns": 78.5,
     "minutes": 36.81,
     "takes": 12,
-    "place": 3
+    "place": 4
    },
    "band": {
     "overall": 0.0184
@@ -374,7 +459,7 @@
     "minutes": 58.83,
     "common": 0.8025,
     "takes": 31,
-    "place": 3
+    "place": 4
    },
    "band": {
     "overall": 0.0154
@@ -413,7 +498,7 @@
     "turns": 52.0,
     "minutes": 36.82,
     "takes": 3,
-    "place": 3
+    "place": 4
    },
    "band": {
     "overall": 0.1035
@@ -453,7 +538,7 @@
     "minutes": 94.6,
     "common": 0.7951,
     "takes": 33,
-    "place": 4
+    "place": 6
    },
    "band": {
     "overall": 0.0204
@@ -492,20 +577,16 @@
     "turns": 75.0,
     "minutes": 30.24,
     "takes": 12,
-    "place": 4
+    "place": 6
    },
    "band": {
     "overall": 0.0312
    },
-   "optimal": true,
+   "optimal": false,
    "tags": [
     {
      "text": "est. price",
      "kind": "warn"
-    },
-    {
-     "text": "frontier",
-     "kind": ""
     }
    ],
    "facets": {
@@ -540,20 +621,16 @@
     "turns": 339.5,
     "minutes": 114.13,
     "takes": 12,
-    "place": 5
+    "place": 7
    },
    "band": {
     "overall": 0.0226
    },
-   "optimal": true,
+   "optimal": false,
    "tags": [
     {
      "text": "est. price",
      "kind": "warn"
-    },
-    {
-     "text": "frontier",
-     "kind": ""
     }
    ],
    "facets": {
@@ -589,7 +666,7 @@
     "minutes": 63.08,
     "common": 0.617,
     "takes": 28,
-    "place": 5
+    "place": 7
    },
    "band": {
     "overall": 0.0208
@@ -628,7 +705,7 @@
     "turns": 295.0,
     "minutes": 28.17,
     "takes": 2,
-    "place": 5
+    "place": 7
    },
    "band": {
     "overall": 0.003
@@ -669,7 +746,7 @@
     "repeat_sd": 0.0505,
     "common": 0.7781,
     "takes": 21,
-    "place": 5
+    "place": 7
    },
    "band": {
     "overall": 0.0255
@@ -709,7 +786,7 @@
     "minutes": 30.06,
     "common": 0.7046,
     "takes": 18,
-    "place": 5
+    "place": 7
    },
    "band": {
     "overall": 0.0214
@@ -749,7 +826,7 @@
     "minutes": 53.34,
     "common": 0.7344,
     "takes": 14,
-    "place": 5
+    "place": 7
    },
    "band": {
     "overall": 0.0255
@@ -792,20 +869,16 @@
     "turns": 1.0,
     "minutes": 19.09,
     "takes": 12,
-    "place": 5
+    "place": 7
    },
    "band": {
     "overall": 0.0224
    },
-   "optimal": true,
+   "optimal": false,
    "tags": [
     {
      "text": "est. price",
      "kind": "warn"
-    },
-    {
-     "text": "frontier",
-     "kind": ""
     }
    ],
    "facets": {
@@ -839,20 +912,16 @@
     "turns": 1.0,
     "minutes": 20.75,
     "takes": 12,
-    "place": 5
+    "place": 7
    },
    "band": {
     "overall": 0.0218
    },
-   "optimal": true,
+   "optimal": false,
    "tags": [
     {
      "text": "est. price",
      "kind": "warn"
-    },
-    {
-     "text": "frontier",
-     "kind": ""
     }
    ],
    "facets": {
@@ -889,7 +958,7 @@
     "repeat_sd": 0.0133,
     "common": 0.6368,
     "takes": 41,
-    "place": 5
+    "place": 7
    },
    "band": {
     "overall": 0.0153
@@ -927,7 +996,7 @@
     "turns": 273.0,
     "minutes": 80.5,
     "takes": 12,
-    "place": 9
+    "place": 11
    },
    "band": {
     "overall": 0.0309
@@ -941,6 +1010,49 @@
    ],
    "facets": {
     "family": "Z.ai",
+    "effort": "max"
+   }
+  },
+  {
+   "label": "fireworks/ember-1 (max) \u00b7 Claude Code",
+   "sub": "fireworks",
+   "org": "fireworks",
+   "series": "fireworksember1claudecode",
+   "values": {
+    "overall": 0.679,
+    "cost": 9.444563500000001,
+    "cells": 12,
+    "ran": 12,
+    "f": 0.3122,
+    "geometry": 0.7471,
+    "appearance": 0.7234,
+    "silhouette": 0.8035,
+    "outline": 0.5139,
+    "plan": 0.7614,
+    "height": 0.8702,
+    "colour": 0.793,
+    "structure": 0.6306,
+    "materials": 0.9851,
+    "precision": 0.3283,
+    "recall": 0.2999,
+    "triangles": 2075.3333,
+    "turns": 215.0,
+    "minutes": 77.5,
+    "takes": 12,
+    "place": 12
+   },
+   "band": {
+    "overall": 0.0235
+   },
+   "optimal": false,
+   "tags": [
+    {
+     "text": "est. price",
+     "kind": "warn"
+    }
+   ],
+   "facets": {
+    "family": "fireworks",
     "effort": "max"
    }
   },
@@ -970,7 +1082,7 @@
     "turns": 664.0,
     "minutes": 247.49,
     "takes": 12,
-    "place": 9
+    "place": 12
    },
    "band": {
     "overall": 0.0309
@@ -988,6 +1100,49 @@
    ],
    "facets": {
     "family": "cognition",
+    "effort": "max"
+   }
+  },
+  {
+   "label": "claude-haiku-5-5 (max)",
+   "sub": "Unplaced",
+   "org": "Unplaced",
+   "series": "claudehaiku55max",
+   "values": {
+    "overall": 0.6714,
+    "cost": 1.3368134999999999,
+    "cells": 12,
+    "ran": 12,
+    "f": 0.2296,
+    "geometry": 0.7311,
+    "appearance": 0.7693,
+    "silhouette": 0.8084,
+    "outline": 0.5036,
+    "plan": 0.7492,
+    "height": 0.7784,
+    "colour": 0.83,
+    "structure": 0.6885,
+    "materials": 0.9003,
+    "precision": 0.2423,
+    "recall": 0.2195,
+    "triangles": 5441.25,
+    "turns": 123.5,
+    "minutes": 36.12,
+    "takes": 12,
+    "place": 12
+   },
+   "band": {
+    "overall": 0.0191
+   },
+   "optimal": false,
+   "tags": [
+    {
+     "text": "est. price",
+     "kind": "warn"
+    }
+   ],
+   "facets": {
+    "family": "Unplaced",
     "effort": "max"
    }
   },
@@ -1020,7 +1175,7 @@
     "repeat_sd": 0.0334,
     "common": 0.6072,
     "takes": 24,
-    "place": 9
+    "place": 12
    },
    "band": {
     "overall": 0.0302
@@ -1060,7 +1215,7 @@
     "minutes": 49.2,
     "common": 0.5574,
     "takes": 16,
-    "place": 11
+    "place": 13
    },
    "band": {
     "overall": 0.0249
@@ -1100,7 +1255,7 @@
     "minutes": 50.15,
     "common": 0.6361,
     "takes": 3,
-    "place": 11
+    "place": 13
    },
    "band": {
     "overall": 0.0292
@@ -1140,7 +1295,7 @@
     "minutes": 21.96,
     "common": 0.7283,
     "takes": 31,
-    "place": 11
+    "place": 13
    },
    "band": {
     "overall": 0.0215
@@ -1178,7 +1333,7 @@
     "triangles": 6144.0,
     "minutes": 10.55,
     "takes": 1,
-    "place": 11
+    "place": 13
    },
    "band": {},
    "optimal": false,
@@ -1216,7 +1371,7 @@
     "minutes": 9.32,
     "common": 0.6395,
     "takes": 7,
-    "place": 11
+    "place": 13
    },
    "band": {
     "overall": 0.0273
@@ -1255,7 +1410,7 @@
     "minutes": 48.44,
     "common": 0.6427,
     "takes": 2,
-    "place": 11
+    "place": 13
    },
    "band": {
     "overall": 0.0105
@@ -1295,7 +1450,7 @@
     "minutes": 36.11,
     "common": 0.6095,
     "takes": 38,
-    "place": 13
+    "place": 15
    },
    "band": {
     "overall": 0.019
@@ -1334,7 +1489,7 @@
     "repeat_sd": 0.0409,
     "common": 0.6135,
     "takes": 33,
-    "place": 16
+    "place": 19
    },
    "band": {
     "overall": 0.0283
@@ -1373,7 +1528,7 @@
     "minutes": 26.1,
     "common": 0.622,
     "takes": 20,
-    "place": 16
+    "place": 19
    },
    "band": {
     "overall": 0.0361
@@ -1419,7 +1574,7 @@
     "repeat_sd": 0.0782,
     "common": 0.5131,
     "takes": 129,
-    "place": 16
+    "place": 19
    },
    "band": {
     "overall": 0.0186
@@ -1459,7 +1614,7 @@
     "minutes": 46.87,
     "common": 0.4628,
     "takes": 38,
-    "place": 23
+    "place": 25
    },
    "band": {
     "overall": 0.0159
@@ -1497,7 +1652,7 @@
     "turns": 523.0,
     "minutes": 114.94,
     "takes": 12,
-    "place": 23
+    "place": 25
    },
    "band": {
     "overall": 0.0578
@@ -1542,7 +1697,7 @@
     "repeat_sd": 0.0612,
     "common": 0.5509,
     "takes": 75,
-    "place": 23
+    "place": 25
    },
    "band": {
     "overall": 0.0261
@@ -1587,7 +1742,7 @@
     "minutes": 58.1,
     "common": 0.5973,
     "takes": 31,
-    "place": 23
+    "place": 26
    },
    "band": {
     "overall": 0.0207
@@ -1626,7 +1781,7 @@
     "turns": 152.0,
     "minutes": 125.14,
     "takes": 12,
-    "place": 23
+    "place": 26
    },
    "band": {
     "overall": 0.0371
@@ -1670,7 +1825,7 @@
     "turns": 174.0,
     "minutes": 15.35,
     "takes": 1,
-    "place": 23
+    "place": 26
    },
    "band": {},
    "optimal": false,
@@ -1678,6 +1833,48 @@
    "facets": {
     "family": "Meta",
     "effort": "ultra"
+   }
+  },
+  {
+   "label": "mistralai/mistral-large-4-0 (max) \u00b7 Claude Code",
+   "sub": "mistralai",
+   "org": "mistralai",
+   "series": "mistralaimistrallarge40claudecode",
+   "values": {
+    "overall": 0.5197,
+    "cost": 33.208745,
+    "cells": 12,
+    "ran": 12,
+    "f": 0.2723,
+    "geometry": 0.5668,
+    "appearance": 0.4978,
+    "silhouette": 0.611,
+    "outline": 0.4408,
+    "plan": 0.6151,
+    "height": 0.5379,
+    "colour": 0.5593,
+    "structure": 0.4158,
+    "materials": 0.6765,
+    "precision": 0.2748,
+    "recall": 0.2716,
+    "turns": 419.0,
+    "minutes": 688.59,
+    "takes": 12,
+    "place": 26
+   },
+   "band": {
+    "overall": 0.0945
+   },
+   "optimal": false,
+   "tags": [
+    {
+     "text": "est. price",
+     "kind": "warn"
+    }
+   ],
+   "facets": {
+    "family": "mistralai",
+    "effort": "max"
    }
   },
   {
@@ -1708,7 +1905,7 @@
     "minutes": 5.08,
     "common": 0.5971,
     "takes": 9,
-    "place": 23
+    "place": 26
    },
    "band": {
     "overall": 0.0348
@@ -1749,7 +1946,7 @@
     "repeat_sd": 0.0892,
     "common": 0.4887,
     "takes": 121,
-    "place": 23
+    "place": 26
    },
    "band": {
     "overall": 0.0157
@@ -1787,7 +1984,7 @@
     "minutes": 9.12,
     "common": 0.549,
     "takes": 11,
-    "place": 23
+    "place": 26
    },
    "band": {
     "overall": 0.0618
@@ -1826,7 +2023,7 @@
     "minutes": 17.85,
     "common": 0.472,
     "takes": 20,
-    "place": 23
+    "place": 26
    },
    "band": {
     "overall": 0.0421
@@ -1872,7 +2069,7 @@
     "repeat_sd": 0.0839,
     "common": 0.4144,
     "takes": 117,
-    "place": 23
+    "place": 26
    },
    "band": {
     "overall": 0.0164
@@ -1912,7 +2109,7 @@
     "repeat_sd": 0.0167,
     "common": 0.5454,
     "takes": 19,
-    "place": 23
+    "place": 26
    },
    "band": {
     "overall": 0.0439
@@ -1957,7 +2154,7 @@
     "repeat_sd": 0.099,
     "common": 0.3339,
     "takes": 67,
-    "place": 29
+    "place": 32
    },
    "band": {
     "overall": 0.0239
@@ -2001,7 +2198,7 @@
     "minutes": 53.99,
     "common": 0.3517,
     "takes": 23,
-    "place": 29
+    "place": 32
    },
    "band": {
     "overall": 0.0315
@@ -2042,7 +2239,7 @@
     "repeat_sd": 0.198,
     "common": 0.3918,
     "takes": 8,
-    "place": 29
+    "place": 32
    },
    "band": {
     "overall": 0.077
@@ -2079,7 +2276,7 @@
     "turns": 1299.5,
     "minutes": 427.17,
     "takes": 12,
-    "place": 29
+    "place": 32
    },
    "band": {
     "overall": 0.0342
@@ -2121,7 +2318,7 @@
     "turns": 109.5,
     "minutes": 100.71,
     "takes": 12,
-    "place": 29
+    "place": 32
    },
    "band": {
     "overall": 0.0919
@@ -2160,7 +2357,7 @@
     "minutes": 5.73,
     "common": 0.322,
     "takes": 18,
-    "place": 33
+    "place": 38
    },
    "band": {
     "overall": 0.0446
@@ -2200,7 +2397,7 @@
     "repeat_sd": 0.0754,
     "common": 0.2305,
     "takes": 20,
-    "place": 40
+    "place": 45
    },
    "band": {
     "overall": 0.0395
@@ -2239,7 +2436,7 @@
     "repeat_sd": 0.2416,
     "common": 0.1983,
     "takes": 72,
-    "place": 40
+    "place": 45
    },
    "band": {
     "overall": 0.0415
