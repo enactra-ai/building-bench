@@ -8,7 +8,9 @@ lockup (the page supplies those), and every dot a focusable node carrying its fi
 for the page's tooltip script (the node structure of the board's own plot: g.node[.opt] > .ring,
 .chip, text).
 
-    python3 pareto_svg.py OUT.svg
+    BB_BOARD_JSON=../../data/clean_board.json python3 pareto_svg.py OUT.svg
+
+(leaderboard.py runs it so; see models.py for where the board is read from.)
 """
 import base64
 import html
@@ -22,7 +24,7 @@ import cairo
 HERE = os.path.dirname(os.path.abspath(__file__))
 sys.path.insert(0, HERE)
 import render as R                                        # noqa: E402
-from models import MODELS, COMPANY, DISPLAY, frontier     # noqa: E402
+from models import MODELS, COMPANY, DISPLAY, BOARD, frontier     # noqa: E402
 
 W, H = 1200, 560
 FONT = "BB Noto Sans"            # named apart, so the page's own text keeps its font
@@ -39,7 +41,7 @@ def esc(s):
 
 
 def board_rows():
-    d = json.load(open(os.path.join(HERE, "boardData.json")))
+    d = json.load(open(BOARD))
     return {r["label"]: r for r in d["rowsSame"]}
 
 

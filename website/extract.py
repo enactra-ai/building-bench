@@ -11,8 +11,8 @@ Produces
   data/meta.json          snapshot date, shared set, run/model counts, light rig, per-site source and counts
   data/img/               gthumb_<site>.jpg and ref_<site>_orbit_045.jpg
 Raw submissions are cached in cache/glb/<run>.glb (see slim_all.py for the page-sized versions)."""
-import json, os, re, html, sys, subprocess, concurrent.futures as cf
-B = 'http://ds-serv12.ucsd.edu:8870/'
+import json, os, re, html, sys, subprocess, hashlib, concurrent.futures as cf
+B = os.environ.get('BB_BOARD', 'http://ds-serv12.ucsd.edu:8870/')
 HERE = os.path.dirname(os.path.abspath(__file__)); os.chdir(HERE)
 os.makedirs('data/img', exist_ok=True); os.makedirs('cache/glb', exist_ok=True)
 SITES = ['geisel', 'flatiron', 'allegiant_stadium', 'epcot_sphere', 'beinecke', 'lax_theme', 'aon_center_chicago', 'one_liberty_plaza', 'salk_institute', 'twa_flight_center', 'udvar_hazy']  # the board's shared set
@@ -183,9 +183,15 @@ for (site, effort), lst in by_cell.items():
                       glb='../' + r['glb'], page=r.get('cell'), cost=r.get('cost_usd'), turns=r.get('turns'), nruns=len(lst), allruns=[x['scores']['overall'] for x in lst],
                       ran='%s-%s-%s' % (ts[:4], ts[4:6], ts[6:8]), minutes=round((r.get('seconds') or 0) / 60, 2) or None, source='astra.html'))
 print('astra page: %d gpt-6-astra runs, %d on this page' % (len(astra['runs']), len(astra_runs)))
-json.dump(picks, open('data/picks.json', 'w'), indent=0)
 
 # ---- minutes per run: the ledger does not carry them, the trajectory page does ----
+# A run's wall clock does not change, so the previous picks.json is the cache: read it before
+# this run's picks replace it.
+try:
+    cached = {p['run']: p.get('minutes') for p in json.load(open('data/picks.json')) if p.get('minutes')}
+except Exception:
+    cached = {}
+json.dump(picks, open('data/picks.json', 'w'), indent=0)
 def minutes_for(p):
     """'82m 27s wall clock' on the run's trajectory page."""
     try:
@@ -197,11 +203,7 @@ def minutes_for(p):
     secs = 0
     for n, u in re.findall(r'(\d+)([hms])', m.group(1)): secs += int(n) * {'h': 3600, 'm': 60, 's': 1}[u]
     return round(secs / 60, 2) or None
-try:
-    cached = {p['run']: p.get('minutes') for p in json.load(open('data/picks.json')) if p.get('minutes')}
-except Exception:
-    cached = {}
-todo = [p for p in picks if p['run'] not in cached and not p.get('minutes')]
+todo =[p for p in picks if p['run'] not in cached and not p.get('minutes')]
 with cf.ThreadPoolExecutor(8) as ex:
     for p, mins in zip(todo, ex.map(minutes_for, todo)): p['minutes'] = mins
 for p in picks:
@@ -228,6 +230,7 @@ def fetch_glb(p):
     if p['site'] not in CLEAN_SITES: return False          # the page shows the license-clean twelve only
     out = 'cache/glb/%s.glb' % p['run'].replace('+', '_')
     if os.path.exists('cache/slim/%s.glb.gz' % p['run'].replace('+', '_')): return False
+    if os.path.exists('buildingbench/assets/%s.glb.gz' % hashlib.sha1(p['run'].encode()).hexdigest()[:12]): return False   # slim_all.py reuses it
     if os.path.exists(out) and os.path.getsize(out) > 0: return False
     open(out, 'wb').write(get(p['glb'].replace('../', ''), True)); return True
 with cf.ThreadPoolExecutor(6) as ex:

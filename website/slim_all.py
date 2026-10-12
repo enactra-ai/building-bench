@@ -1,8 +1,10 @@
 #!/usr/bin/env python3
 """Turn every picked submission in cache/glb into a page-sized cache/slim/<run>.glb.gz:
 textures at most 512 px (JPEG q80 where opaque), tangents dropped, vertices welded, floats rounded.
-Idempotent: an existing output is kept unless --force."""
-import json, os, sys, gzip, time, concurrent.futures as cf
+Idempotent: an existing output is kept unless --force. A run the committed page already carries
+(buildingbench/assets/<key>.glb.gz) is taken from there, so a fresh checkout rebuilds the page
+byte for byte without the raw glbs."""
+import json, os, sys, gzip, time, shutil, hashlib, concurrent.futures as cf
 HERE = os.path.dirname(os.path.abspath(__file__)); os.chdir(HERE)
 sys.path.insert(0, HERE)
 from slimglb import slim
@@ -13,13 +15,16 @@ os.makedirs('cache/slim', exist_ok=True)
 def work(p):
     name = p['run'].replace('+', '_'); src = 'cache/glb/%s.glb' % name; dst = 'cache/slim/%s.glb.gz' % name
     if os.path.exists(dst) and not force: return (name, os.path.getsize(src) if os.path.exists(src) else 0, os.path.getsize(dst))
+    published = 'buildingbench/assets/%s.glb.gz' % hashlib.sha1(p['run'].encode()).hexdigest()[:12]
+    if os.path.exists(published) and not force:
+        shutil.copyfile(published, dst); return (name, 0, os.path.getsize(dst))
     if not os.path.exists(src): return (name, 'MISSING raw', 0)
     try:
         b = slim(src, None, 512, 80)
         j, binc = parse(b); j, binc = slim_geometry(j, binc); b = pack(j, binc)
     except Exception as e:
         return (name, 'ERR ' + repr(e), 0)
-    g = gzip.compress(b, 9); open(dst, 'wb').write(g)
+    g = gzip.compress(b, 9, mtime=0); open(dst, 'wb').write(g)   # no timestamp: the same glb gives the same bytes
     return (name, os.path.getsize(src), len(g))
 t = time.time()
 with cf.ThreadPoolExecutor(4) as ex: res = list(ex.map(work, picks))

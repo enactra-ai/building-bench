@@ -1,19 +1,26 @@
-"""The 12-building same-set board (license clean, blind tier), 2026-09-22 snapshot (with Opus 5.5),
-for the Pareto frontier animation of the GPT-6 Sol arrivals.
+"""The 12-building same-set board (license clean, blind tier) for the Pareto frontier.
 
-From `rowsSame` in the embedded boardData of http://ds-serv12.ucsd.edu:8870/license-clean.html
-(saved as boardData.json).  Stage 0 is the opening board; GPT-6 Sol (Max) arrives
-at stage 1, GPT-6 Sol (Ultra) at stage 2 and Claude Opus 5.5 (Max) at stage 3 (the
-board files it under "Unplaced"; it is Claude, so Anthropic's colour).  Left out:
-  thinkingmachines/inkling:free · Claude Code -- removed from the Pareto figures at the user's request
-  cognition/swe-2 (max) -- its cost is an estimated $0.00 -- no real price to place it by
+From `rowsSame` in the embedded boardData of http://ds-serv12.ucsd.edu:8870/license-clean.html,
+read from $BB_BOARD_JSON (leaderboard.py points it at extract.py's data/clean_board.json), else
+from boardData.json beside this file.  Names and companies come from website/catalog.py, so a
+model new to the board is placed without editing this file.  Left out:
+  inkling:free -- removed from the Pareto figures at the user's request
+  any row the board has no price for -- there is no x to place it at
 
 Website edition (enactra.ai/buildingbench, 2026-09-23): a standing board, not the
-arrivals story -- every row is stage 0 (no "+ arrival" list, no boxed names) -- and
-SWE-2 is back at the user's request, in the $0 lane of its own that axis_domain()
-opens for a free row.  At $0 it sits on the frontier, as it does on the board's own
-chart.
+arrivals story of the video this was forked from -- every row is stage 0 (no "+ arrival"
+list, no boxed names) -- and SWE-2 is back at the user's request, in the $0 lane of its
+own that axis_domain() opens for a free row.  At $0 it sits on the frontier, as it does
+on the board's own chart.
 """
+import json
+import os
+import sys
+
+sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", ".."))
+import catalog                                            # noqa: E402
+
+BOARD = os.environ.get("BB_BOARD_JSON") or os.path.join(os.path.dirname(os.path.abspath(__file__)), "boardData.json")
 
 # One colour per company -- the bar figure's palette (bar-gpt6/build.py COLOUR), so
 # the two figures agree: Grok is black here too.
@@ -30,64 +37,40 @@ COMPANY = {
     "Undisclosed": "#a8a29e",
     "Cognition":   "#d94a7b",   # the bar figure's rose for Devin
 }
+NEW_COMPANY = "#a8a29e"         # a company new to the board, until it is given a colour above
+
+EXCLUDE = {"inkling:free"}
+
+# Names here are shorter than the bar figure's: no "Claude", efforts capitalised.
+EFFORT = {"xhigh": "xHigh"}
+SHORT = {"deepseek-v4.1-flash:wafer": "DeepSeek v4.1 Flash"}
+
+
+def short_name(label):
+    model, effort = catalog.parse(label)
+    name = SHORT.get(model) or catalog.name(model).replace("‑", "-")
+    if name.startswith("Claude "):
+        name = name[len("Claude "):]
+    return name + (" (%s)" % EFFORT.get(effort, effort.capitalize()) if effort else "")
+
 
 # key (the board's label), cost ($ per run, estimated where the board says so), overall score, company, stage
-MODELS = [
-    ('claude-opus-5-5 (max)', 45.4675335, 0.868, 'Anthropic', 0),
-    ('gpt-6-astra (ultra)', 7.045719, 0.8428, 'OpenAI', 0),
-    ('claude-fable-5-1 (max)', 32.975917124999995, 0.8136, 'Anthropic', 0),
-    ('grok-4.7 (xhigh)', 11.422699999999999, 0.7833, 'xAI', 0),
-    ('claude-fable-5 (max)', 39.641364, 0.7555, 'Anthropic', 0),
-    ('claude-opus-5 (max)', 46.3759445, 0.7448, 'Anthropic', 0),
-    ('gpt-5.6-sol (max)', 7.5439884, 0.7388, 'OpenAI', 0),
-    ('stealth/union-alpha (max) · Claude Code', 3.7573204999999996, 0.7307, 'Undisclosed', 0),
-    ('deepseek/deepseek-v4.1-flash:wafer (max) · Claude Code', 2.3317245, 0.7288, 'DeepSeek', 0),
-    ('gpt-6-sol (ultra)', 1.9185364999999999, 0.698, 'OpenAI', 0),
-    ('gpt-6-sol (max)', 1.8870635, 0.6962, 'OpenAI', 0),
-    ('grok-4.6 (xhigh)', 10.59285, 0.695, 'xAI', 0),
-    ('gpt-5.6-terra (max)', 4.2589282, 0.6848, 'OpenAI', 0),
-    ('muse-spark-1.3 (max)', 5.8897540500000005, 0.6823, 'Meta', 0),
-    ('z-ai/glm-5.3-flashx (max) · Claude Code', 2.325387, 0.6799, 'Z.ai', 0),
-    ('cognition/swe-2 (max)', 0.0, 0.6734, 'Cognition', 0),
-    ('gpt-5.6-luna (max)', 0.45029904, 0.6156, 'OpenAI', 0),
-    ('gemini-3.8-flash (high)', 3.330324675, 0.5476, 'Google', 0),
-    ('claude-sonnet-5 (max)', 15.032763100000004, 0.5436, 'Anthropic', 0),
-    ('kimi-k3 (thinking)', 5.844977500000001, 0.5403, 'Moonshot', 0),
-    ('step-5-preview (max) · Claude Code', 16.58585, 0.3391, 'StepFun', 0),
-    ('glm-5.3-flash (max)', 0.21804560249999994, 0.3302, 'Z.ai', 0),
-    ('claude-haiku-4-5', 0.5243465500000001, 0.2668, 'Anthropic', 0),
-]
+MODELS, DISPLAY = [], {}
+for _r in json.load(open(BOARD))["rowsSame"]:
+    _model = catalog.parse(_r["label"])[0]
+    if _model in EXCLUDE:
+        continue
+    if _r["values"].get("cost") is None:
+        print("pareto: no price on the board for %s; left off" % _r["label"], file=sys.stderr)
+        continue
+    MODELS.append((_r["label"], _r["values"]["cost"], _r["values"]["overall"], catalog.company(_model, _r["org"]), 0))
+    DISPLAY[_r["label"]] = short_name(_r["label"])
+    COMPANY.setdefault(MODELS[-1][3], NEW_COMPANY)
 
 
 def colour(org):
     return COMPANY[org]
 
-
-DISPLAY = {
-    'claude-opus-5-5 (max)': 'Opus 5.5 (Max)',
-    'gpt-6-astra (ultra)': 'GPT-6 Astra (Ultra)',
-    'claude-fable-5-1 (max)': 'Fable 5.1 (Max)',
-    'grok-4.7 (xhigh)': 'Grok 4.7 (xHigh)',
-    'claude-fable-5 (max)': 'Fable 5 (Max)',
-    'claude-opus-5 (max)': 'Opus 5 (Max)',
-    'gpt-5.6-sol (max)': 'GPT-5.6 Sol (Max)',
-    'stealth/union-alpha (max) · Claude Code': 'Union Alpha (Max)',
-    'deepseek/deepseek-v4.1-flash:wafer (max) · Claude Code': 'DeepSeek v4.1 Flash (Max)',
-    'gpt-6-sol (ultra)': 'GPT-6 Sol (Ultra)',
-    'gpt-6-sol (max)': 'GPT-6 Sol (Max)',
-    'grok-4.6 (xhigh)': 'Grok 4.6 (xHigh)',
-    'gpt-5.6-terra (max)': 'GPT-5.6 Terra (Max)',
-    'muse-spark-1.3 (max)': 'Muse Spark 1.3 (Max)',
-    'z-ai/glm-5.3-flashx (max) · Claude Code': 'GLM-5.3 FlashX (Max)',
-    'gpt-5.6-luna (max)': 'GPT-5.6 Luna (Max)',
-    'gemini-3.8-flash (high)': 'Gemini 3.8 Flash (High)',
-    'claude-sonnet-5 (max)': 'Sonnet 5 (Max)',
-    'kimi-k3 (thinking)': 'Kimi K3 (Thinking)',
-    'step-5-preview (max) · Claude Code': 'Step 5 Preview (Max)',
-    'glm-5.3-flash (max)': 'GLM-5.3 Flash (Max)',
-    'claude-haiku-4-5': 'Haiku 4.5',
-    'cognition/swe-2 (max)': 'SWE-2 (Max)',
-}
 
 # Where a name should look for room first (see the Pareto video's models.py).
 PREFER = {

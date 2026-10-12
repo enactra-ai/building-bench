@@ -2,7 +2,13 @@
 """BuildingBench bar figure, website edition: the chart alone (no title, description or Enactra
 lockup), every bar a hoverable node for the page's tooltip script.  Forked from build.py.
 
-The original docstring follows.
+    python3 build_site.py --board ../../data/clean_board.json --out ../../data/enactra/fig_bar.svg
+
+leaderboard.py runs it on the board extract.py fetched. Names and companies come from
+website/catalog.py, so a model new to the board is drawn without editing this file; a company
+with no colour here is drawn grey and without a logo until it gets one (COLOUR, LOGO).
+
+The original docstring follows; --refresh and the Grok 4.7 page are gone (extract.py fetches).
 
 BuildingBench bar figure (GPT-6 Sol edition), in the style of Artificial Analysis's index charts.
 
@@ -29,53 +35,47 @@ renders it to PNG (2x), PDF and a standalone SVG.
 
 import argparse
 import base64
+import glob
 import json
 import os
 import re
+import shutil
 import subprocess
 import sys
-import urllib.request
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 OUT = os.path.join(HERE, "out")
-CHROME = "/data/zhiting/.cache/ms-playwright/chromium-1124/chrome-linux/chrome"
-BOARD_URL = "http://ds-serv12.ucsd.edu:8870/license-clean.html"
-GROK47_URL = "http://ds-serv12.ucsd.edu:8870/renders/model-grok47xhigh.html"
+sys.path.insert(0, os.path.join(HERE, "..", ".."))
+import catalog                                            # noqa: E402
 
 W, H = 1200, 368             # CSS px: the plot and its names, nothing above or below
 
+
+def chrome():
+    """Headless Chromium: $BB_CHROME, else the newest Playwright download, else one on PATH."""
+    if os.environ.get("BB_CHROME"):
+        return os.environ["BB_CHROME"]
+    found = sorted(glob.glob(os.path.expanduser("~/.cache/ms-playwright/chromium-*/chrome-linux/chrome")),
+                   key=lambda p: int(re.search(r"chromium-(\d+)", p).group(1)))
+    if found:
+        return found[-1]
+    for name in ("chromium", "chromium-browser", "google-chrome"):
+        if shutil.which(name):
+            return shutil.which(name)
+    sys.exit("no headless Chromium: set BB_CHROME, or `python3 -m playwright install chromium`")
+
+
 # ---- who is who ---------------------------------------------------------------
-# Leaderboard label -> (name as the reference writes it, company).  Names follow
-# the reference: product name, then the reasoning effort in lower case.  The
-# " · Claude Code" harness suffix on some board labels is not shown, as the
-# reference shows no harness.
-MODELS = {
-    "gpt-6-astra (ultra)":                                    ("GPT-6 Astra (ultra)", "OpenAI"),
-    "claude-fable-5-1 (max)":                                 ("Claude Fable 5.1 (max)", "Anthropic"),
-    "claude-fable-5 (max)":                                   ("Claude Fable 5 (max)", "Anthropic"),
-    "claude-opus-5 (max)":                                    ("Claude Opus 5 (max)", "Anthropic"),
-    "gpt-5.6-sol (max)":                                      ("GPT-5.6 Sol (max)", "OpenAI"),
-    "stealth/union-alpha (max) · Claude Code":                ("Union Alpha (max)", "Undisclosed"),
-    "deepseek/deepseek-v4.1-flash:wafer (max) · Claude Code": ("DeepSeek V4.1 Flash (max)", "DeepSeek"),
-    "grok-4.6 (xhigh)":                                       ("Grok 4.6 (xhigh)", "xAI"),
-    "gpt-5.6-terra (max)":                                    ("GPT-5.6 Terra (max)", "OpenAI"),
-    "muse-spark-1.3 (max)":                                   ("Muse Spark 1.3 (max)", "Meta"),
-    "z-ai/glm-5.3-flashx (max) · Claude Code":                ("GLM-5.3 FlashX (max)", "Z.ai"),
-    "gpt-5.6-luna (max)":                                     ("GPT-5.6 Luna (max)", "OpenAI"),
-    "gemini-3.8-flash (high)":                                ("Gemini 3.8 Flash (high)", "Google"),
-    "claude-sonnet-5 (max)":                                  ("Claude Sonnet 5 (max)", "Anthropic"),
-    "kimi-k3 (thinking)":                                     ("Kimi K3 (thinking)", "Moonshot"),
-    "step-5-preview (max) · Claude Code":                     ("Step 5 Preview (max)", "StepFun"),
-    "glm-5.3-flash (max)":                                    ("GLM-5.3 Flash (max)", "Z.ai"),
-    "claude-haiku-4-5":                                       ("Claude Haiku 4.5", "Anthropic"),
-    "thinkingmachines/inkling:free · Claude Code":            ("Inkling", "Thinking Machines"),
-    "grok-4.7 (xhigh)":                                       ("Grok 4.7 (xhigh)", "xAI"),
-    "gpt-6-sol (ultra)":                                      ("GPT-6 Sol (ultra)", "OpenAI"),
-    "gpt-6-sol (max)":                                        ("GPT-6 Sol (max)", "OpenAI"),
-    "cognition/swe-2 (max)":                                  ("SWE-2 (max)", "Cognition"),
-    # the board files it under "Unplaced"; it is Claude
-    "claude-opus-5-5 (max)":                                  ("Claude Opus 5.5 (max)", "Anthropic"),
-}
+# Names follow the reference: product name, then the reasoning effort in lower case.
+# The " · Claude Code" harness suffix on some board labels is not shown, as the
+# reference shows no harness.  Both come from catalog.py.
+def who(row):
+    """Board row -> (name as the reference writes it, company)."""
+    model, effort = catalog.parse(row["label"])
+    name = catalog.name(model).replace("‑", "-")       # the explorer's no-break hyphens, as plain ones
+    return name + (" (%s)" % effort if effort else ""), catalog.company(model, row["org"])
+
+
 # The website edition (enactra.ai/buildingbench): a standing leaderboard, so no
 # arrows from predecessors and no model set in bold as new.
 ARROWS = []
@@ -104,6 +104,7 @@ COLOUR = {
     # (blue: Meta, indigo: DeepSeek, teal-green: OpenAI): an unused rose
     "Cognition":         "#d94a7b",
 }
+NEW_COMPANY = "#a8a29e"      # a company new to the board, until it is given a colour above
 
 # Logo under each bar.  lobehub icon set (@lobehub/icons-static-svg 1.95.1).
 # `tile` puts a white glyph on a coloured tile, as the reference does for Grok,
@@ -139,53 +140,32 @@ def value_ink(bar):
 
 
 # ---- data ---------------------------------------------------------------------
-def fetch(url):
-    return urllib.request.urlopen(url, timeout=60).read().decode()
-
-
-def board_rows(refresh):
-    path = os.path.join(HERE, "data", "boardData.json")
-    if refresh:
-        h = fetch(BOARD_URL)
-        s = h.index('id="boardData">') + len('id="boardData">')
-        json.dump(json.loads(h[s:h.index("</script>", s)]), open(path, "w"), indent=1)
+# The leaderboard's "Same set only (12 buildings)" view: `rowsSame` in the license-clean
+# board's embedded boardData (extract.py saves it as data/clean_board.json).
+def board_rows(path):
     d = json.load(open(path))
     assert d["sameSetSize"] == 12, d["sameSetSize"]
     return d["rowsSame"]
 
 
-def grok47(refresh):
-    path = os.path.join(HERE, "data", "grok47xhigh.json")
-    if refresh:
-        h = fetch(GROK47_URL)
-        g = json.loads(re.search(r'id="gallery-data"[^>]*>(.*?)</script>', h, re.S).group(1))
-        cells = [{k: c[k] for k in ("site", "overall", "run")} for c in g["cells"].values()]
-        json.dump({"source": GROK47_URL, "cells": cells}, open(path, "w"), indent=1)
-    cells = json.load(open(path))["cells"]
-    assert len({c["site"] for c in cells}) == 12, "Grok 4.7 has not finished all 12 buildings"
-    return sum(c["overall"] for c in cells) / len(cells)
-
-
-# Board rows left off the bar figure.  The website edition keeps SWE-2 (user, 2026-09-23);
+# Models left off the bar figure.  The website edition keeps SWE-2 (user, 2026-09-23);
 # Inkling stays off.
-EXCLUDE = {"thinkingmachines/inkling:free · Claude Code"}
+EXCLUDE = {"inkling:free"}
 
 
-def bars(refresh):
+def bars(path):
     out = []
-    for r in board_rows(refresh):
-        if r["label"] in EXCLUDE:
+    for r in board_rows(path):
+        if catalog.parse(r["label"])[0] in EXCLUDE:
             continue
-        if r["label"] not in MODELS:
-            sys.exit("new model on the board, add it to MODELS: %r" % r["label"])
-        name, org = MODELS[r["label"]]
+        name, org = who(r)
         v = r["values"]
         tags = [x["text"] for x in r.get("tags", [])]
         out.append({"name": name, "org": org, "score": v["overall"], "se": (r.get("band") or {}).get("overall"),
                     "cost": v.get("cost"), "est": "est. price" in tags, "effort": r["facets"].get("effort")})
     out.sort(key=lambda b: -b["score"])
     for b in out:
-        b["colour"] = COLOUR[b["org"]]
+        b["colour"] = COLOUR.get(b["org"], NEW_COMPANY)
         b["ink"] = value_ink(b["colour"])
         b["label"] = "%d" % round(b["score"] * 100 + 1e-9)
         b["new"] = b["name"] in NEW
@@ -346,7 +326,9 @@ function draw() {
 
     // logo
     const L = LOGOS[d.org], s = G.logo, lx = cx - s / 2, ly = G.base + G.logoGap;
-    if (L.wordmark) {
+    if (!L) {
+      // a company with no LOGO entry yet: the slot under its bar stays empty
+    } else if (L.wordmark) {
       L.wordmark.forEach((w, k) => {
         const tw = el("text", {x: cx, y: ly + 7.5 + k * 6.2, "text-anchor": "middle", "font-family": SANS,
                                "font-weight": 500, "font-size": 5.2, "letter-spacing": 0.35, fill: "#4a4a4a"}, node);
@@ -397,7 +379,7 @@ def page(data):
 
 def render(html_path):
     base = os.path.join(OUT, "site_bar")
-    common = [CHROME, "--headless", "--no-sandbox", "--disable-gpu", "--hide-scrollbars",
+    common = [chrome(), "--headless", "--no-sandbox", "--disable-gpu", "--hide-scrollbars",
               "--virtual-time-budget=8000", "--window-size=%d,%d" % (W, H)]
     url = "file://" + html_path
     subprocess.run(common + ["--force-device-scale-factor=2", "--screenshot=" + base + ".png", url],
@@ -415,15 +397,19 @@ def render(html_path):
 
 def main():
     ap = argparse.ArgumentParser()
-    ap.add_argument("--refresh", action="store_true", help="fetch the board and the Grok 4.7 page first")
+    ap.add_argument("--board", default=os.path.join(HERE, "data", "boardData.json"),
+                    help="the license-clean board's boardData JSON (default: data/boardData.json)")
+    ap.add_argument("--out", help="also copy the SVG here")
     a = ap.parse_args()
     os.makedirs(OUT, exist_ok=True)
-    data = bars(a.refresh)
+    data = bars(a.board)
     json.dump(data, open(os.path.join(OUT, "site_bars.json"), "w"), indent=1)
     html_path = os.path.join(OUT, "site_chart.html")
     open(html_path, "w").write(page(data))
     for f in render(html_path):
         print("%-60s %8d bytes" % (f, os.path.getsize(f)))
+    if a.out:
+        shutil.copyfile(os.path.join(OUT, "site_bar.svg"), a.out)
     for d in data:
         print("  %-26s %-18s %.4f  %s  %s%s" % (d["name"], d["org"], d["score"], d["label"].rjust(3),
                                                d["colour"], "   <- new" if d.get("new") else ""))

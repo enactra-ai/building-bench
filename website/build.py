@@ -2,7 +2,12 @@
 """Assemble the BuildingBench demo page from the board data and the slimmed submissions.
 
     python3 build.py            # writes out/buildingbench-demo.html (self-contained, opens from disk)
-                                #    and out/deploy/{index.html,assets/} (split copy for static hosting)
+                                #    and buildingbench{,-evolution}/{index.html,assets/} (for static hosting)
+    python3 build.py --no-demo  # the two hostable editions only (what publish.sh deploys)
+
+Also writes data/fingerprint.json: a hash of everything the page shows except the snapshot date,
+the counts it shows, and what catalog.py lacks for the models on it. publish.sh deploys only
+when the hash changes.
 
 Inputs (all under this folder):
   template.html      the page's head, CSS and HTML (derived from the design prototype)
@@ -18,6 +23,7 @@ Inputs (all under this folder):
 import base64, json, os, re, shutil, hashlib, sys
 HERE = os.path.dirname(os.path.abspath(__file__))
 os.chdir(HERE)
+import catalog
 
 board = json.load(open('data/board.json'))
 picks = json.load(open('data/picks.json'))
@@ -40,12 +46,7 @@ SITES = [  # id, board site, display name, strip name
 ]
 GROUP = lambda site: 'clean' if site.endswith('_enhanced_v1') else 'shared'
 # One family per company, in the leaderboard figures' palette (bar + Pareto), so a model wears
-# the same colour everywhere on the page. The board files a few rows under "Unplaced" or in lower
-# case; ORG_OF fixes those by model.
-FAMILY = {'Anthropic': 'Anthropic', 'OpenAI': 'OpenAI', 'Google': 'Google', 'Meta': 'Meta', 'xAI': 'xAI',
-          'deepseek': 'DeepSeek', 'Z.ai': 'Z.ai', 'Moonshot AI': 'Moonshot', 'cognition': 'Cognition',
-          'Undisclosed': 'Undisclosed', 'Thinking Machines': 'Thinking Machines'}
-ORG_OF = {'claude-opus-5-5': 'Anthropic', 'step-5-preview': 'StepFun'}
+# the same colour everywhere on the page. Which company a board row belongs to is catalog.py's.
 FAMILIES = {
     'OpenAI':            {'label': 'OpenAI',            'color': '#10A37F'},
     'Anthropic':         {'label': 'Anthropic',         'color': '#D97757'},
@@ -62,46 +63,15 @@ FAMILIES = {
     'All':               {'label': 'All families',      'color': '#315d50'},
 }
 FAMILY_ORDER = [f for f in FAMILIES if f != 'All']
-
-# Names as the leaderboard's bar figure writes them (product name; effort shown separately).
-NAMES = {
-    'claude-opus-5-5': 'Claude Opus 5.5', 'claude-fable-5-1': 'Claude Fable 5.1', 'claude-fable-5': 'Claude Fable 5',
-    'claude-opus-5': 'Claude Opus 5', 'claude-sonnet-5': 'Claude Sonnet 5', 'claude-haiku-4-5': 'Claude Haiku 4.5',
-    'gpt-6-astra': 'GPT‑6 Astra', 'gpt-6-sol': 'GPT‑6 Sol', 'gpt-5.6-sol': 'GPT‑5.6 Sol', 'gpt-5.6-luna': 'GPT‑5.6 Luna',
-    'gpt-5.6-terra': 'GPT‑5.6 Terra',
-    'gemini-3.8-flash': 'Gemini 3.8 Flash', 'gemini-3.7-flash': 'Gemini 3.7 Flash', 'gemini-3.5-flash': 'Gemini 3.5 Flash',
-    'gemini-3.1-pro': 'Gemini 3.1 Pro',
-    'muse-spark-1.3': 'Muse Spark 1.3', 'muse-spark-1.2': 'Muse Spark 1.2', 'muse-spark-1.1': 'Muse Spark 1.1',
-    'grok-4.7': 'Grok 4.7', 'grok-4.6': 'Grok 4.6', 'grok-4.5': 'Grok 4.5',
-    'kimi-k3': 'Kimi K3', 'glm-5.3-flash': 'GLM‑5.3 Flash', 'glm-5.3-flashx': 'GLM‑5.3 FlashX',
-    'deepseek-v4.1-flash:wafer': 'DeepSeek V4.1 Flash', 'swe-2': 'SWE‑2', 'step-5-preview': 'Step 5 Preview',
-    'union-alpha': 'Union Alpha', 'space-bunny-alpha': 'Space Bunny Alpha', 'inkling:free': 'Inkling',
-}
+NEW_FAMILY_COLOR = '#8a8f98'   # a company with no colour of its own yet (add it to FAMILIES)
 
 def display_name(label):
     """'claude-fable-5-1 (max)' -> ('Claude Fable 5.1', 'max', 'claude-fable-5-1');
     'z-ai/glm-5.3-flashx (max) · Claude Code' -> ('GLM‑5.3 FlashX', 'max', 'glm-5.3-flashx')."""
-    s = label.strip().split(' · ')[0]                  # the harness suffix is not part of the model
-    m = re.match(r'^(.*?)(?:\s*\((\w+)\))?$', s)
-    base, effort = m.group(1).split('/')[-1], m.group(2) or 'none'
-    return NAMES.get(base, base), effort, base
+    base, effort = catalog.parse(label)
+    return catalog.name(base), effort or 'none', base
 
-# Public launch dates, from the announcements (see README for sources). The board carries none.
-RELEASE = {
-    'claude-haiku-4-5': '2025-10-15', 'gemini-3.1-pro': '2026-02-19', 'gemini-3.5-flash': '2026-05-19',
-    'claude-fable-5': '2026-06-09', 'claude-sonnet-5': '2026-06-30',
-    'gpt-5.6-sol': '2026-07-09', 'gpt-5.6-terra': '2026-07-09', 'gpt-5.6-luna': '2026-07-09', 'muse-spark-1.1': '2026-07-09',
-    'kimi-k3': '2026-07-16', 'claude-opus-5': '2026-07-24', 'muse-spark-1.2': '2026-08-05', 'grok-4.6': '2026-08-12',
-    'gemini-3.7-flash': '2026-08-13', 'glm-5.3-flash': '2026-08-26', 'claude-fable-5-1': '2026-09-01',
-    'gemini-3.8-flash': '2026-09-02', 'muse-spark-1.3': '2026-09-02', 'gpt-6-astra': '2026-09-03',
-    'inkling:free': '2026-07-15',
-    # 2026-09-23: vendor announcements, each cross-checked against OpenRouter's catalogue date
-    'grok-4.5': '2026-07-08', 'deepseek-v4.1-flash:wafer': '2026-09-10', 'swe-2': '2026-09-10',
-    'union-alpha': '2026-09-16',          # stealth: the day OpenRouter listed it (revealed 09-17 as Unbiased's Pareto)
-    'glm-5.3-flashx': '2026-09-18', 'step-5-preview': '2026-09-20', 'grok-4.7': '2026-09-21',
-    'claude-opus-5-5': '2026-09-22', 'gpt-6-sol': '2026-09-22',
-    'space-bunny-alpha': '2026-09-23',    # stealth: listed on OpenRouter that day, maker undisclosed
-}
+RELEASE = catalog.RELEASE
 EFFORT_RANK = {'low': 0, 'none': 1, 'high': 1, 'thinking': 2, 'max': 2, 'xhigh': 2, 'ultra': 3}
 # Left off the page: Claude Haiku 4.5 (Oct 2025) sits eight months before everything else and
 # stretched the time axis into empty space; Gemini 3.1 Pro (Feb 2026) would do the same, and has
@@ -132,7 +102,9 @@ for key, variants in by_base.items():
         row, name, effort = t; cov = len(covered[row['series']] & page_sites)
         return (cov >= 5, EFFORT_RANK.get(effort, 1), cov, row['values']['cells'])
     row, name, effort = max(variants, key=rank)      # the variant whose board figures stand for the model
-    v = row['values']; fam = ORG_OF.get(key) or FAMILY[row['org']]
+    v = row['values']; fam = catalog.company(key, row['org'])
+    if fam not in FAMILIES:
+        FAMILIES[fam] = {'label': fam, 'color': NEW_FAMILY_COLOR}; FAMILY_ORDER.append(fam)
     same = same_series.get(row['series'])
     models.append({
         'id': key, 'label': row['label'], 'name': name, 'base': name,
@@ -199,6 +171,10 @@ for (mid, site), (_, p) in best.items():
 # Only models that actually ran the page's buildings.
 ran = {r['modelId'] for r in results}
 models = [m for m in models if m['id'] in ran]
+FAMILY_ORDER = [f for f in FAMILY_ORDER if FAMILIES[f]['color'] != NEW_FAMILY_COLOR or any(m['family'] == f for m in models)]
+board_org = {display_name(r['label'])[2]: r['org'] for r in board['rows']}
+incomplete = {m['id']: catalog.missing(m['id'], board_org.get(m['id'])) for m in models}
+incomplete = {k: v for k, v in incomplete.items() if v}
 if missing:
     print('WARNING: %d picked runs have no slimmed asset:' % len(missing), *missing[:5], sep='\n  ')
 
@@ -267,7 +243,15 @@ MIME = {'.jpg': 'image/jpeg', '.jpeg': 'image/jpeg', '.png': 'image/png', '.webp
 # The Task Format case is GPT-6 Astra on Johanneskyrkan, a run the explorer already carries, so
 # its viewer reuses that submission's slimmed asset rather than shipping a second copy.
 EA_CASE_RUN = 'helsinki_123901485_enhanced_v1-blind-gpt-6-astra-ultra-20260905T053213'
-EA_CASE_KEY = next(r['assetKey'] for r in results if r['runId'] == EA_CASE_RUN)
+EA_CASE_KEY = hashlib.sha1(EA_CASE_RUN.encode()).hexdigest()[:12]
+# The Task Format block quotes this run's scores, so it keeps this run's model even when a later
+# run on Johanneskyrkan becomes the explorer's median pick and the run drops out of `results`.
+if EA_CASE_KEY not in assets:
+    src = 'cache/slim/%s.glb.gz' % EA_CASE_RUN.replace('+', '_')
+    if not os.path.exists(src) and os.path.exists('buildingbench/assets/%s.glb.gz' % EA_CASE_KEY):
+        shutil.copyfile('buildingbench/assets/%s.glb.gz' % EA_CASE_KEY, src)
+    assert os.path.exists(src), 'the Task Format run has no slimmed asset: ' + EA_CASE_RUN
+    assets[EA_CASE_KEY] = src
 
 ea_files = sorted(f for f in os.listdir(EA + '/assets') if not f.endswith('.gz'))
 def ea_rewrite(text, inline):
@@ -327,12 +311,13 @@ def page(asset_src, inline, pitch_blocks=True):
 SITES = {'buildingbench': True, 'buildingbench-evolution': False}   # folder -> carries the pitch blocks
 
 # 1. the self-contained release page: opens from disk, no server, no CDN
-os.makedirs('out', exist_ok=True)
-inline = {k: base64.b64encode(open(v, 'rb').read()).decode() for k, v in assets.items()}
-html = page(inline, True)
-open('out/buildingbench-demo.html', 'w').write(html)
-print('out/buildingbench-demo.html  %.1f MB  (%d submissions, %d models, %d buildings)' % (
-    len(html) / 1e6, len(results), len(models), len(buildings)))
+if '--no-demo' not in sys.argv:
+    os.makedirs('out', exist_ok=True)
+    inline = {k: base64.b64encode(open(v, 'rb').read()).decode() for k, v in assets.items()}
+    html = page(inline, True)
+    open('out/buildingbench-demo.html', 'w').write(html)
+    print('out/buildingbench-demo.html  %.1f MB  (%d submissions, %d models, %d buildings)' % (
+        len(html) / 1e6, len(results), len(models), len(buildings)))
 
 # 2. the two hostable editions, each index.html + assets/ and nothing else
 for folder, pitch_blocks in SITES.items():
@@ -351,3 +336,19 @@ for folder, pitch_blocks in SITES.items():
     print('%-26s %.1f MB + %d assets (%.1f MB)' % (
         folder + '/index.html', len(out) / 1e6, len(os.listdir(adir)),
         sum(os.path.getsize(os.path.join(adir, f)) for f in os.listdir(adir)) / 1e6))
+
+# 3. what publish.sh compares: both editions as built, less what changes without the page changing --
+# the snapshot date, and the board-wide run and model counts DATA carries but the page never shows.
+# An asset is named by its run, so the pages pin the submissions; the pitch media are hashed as files.
+DATA = dict(DATA, snapshot='', runsScored=None, modelsRanked=None, cleanBoard=None)
+ea_board_json = re.sub(r'"snapshot":\s*"[^"]*"', '"snapshot": ""', ea_board_json)
+h = hashlib.sha256()
+for folder, pitch_blocks in SITES.items():
+    h.update(page({k: 'assets/%s.glb.gz' % k for k in sorted(assets)}, False, pitch_blocks).encode())
+for name in ea_files:
+    h.update(name.encode() + open('%s/assets/%s' % (EA, name), 'rb').read())
+json.dump({'fingerprint': h.hexdigest(), 'snapshot': meta['snapshot'], 'buildings': len(buildings), 'results': len(results),
+           'models': [m['name'] + ('' if m['effort'] == 'none' else ' (%s)' % m['effort']) for m in models],
+           'incomplete': incomplete}, open('data/fingerprint.json', 'w'), indent=1, ensure_ascii=False)
+for mid, what in incomplete.items():
+    print('WARNING: catalog.py has no %s for %s' % (', '.join(what), mid))
