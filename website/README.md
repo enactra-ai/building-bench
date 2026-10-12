@@ -21,23 +21,47 @@ submissions, scores — is identical between them.
 ## Deploying
 
 The site is served by the `enactra.ai` Cloudflare Worker, which builds itself from a
-**different repository**: `DeepWorld101/webpage` (private), branch `main`. That Worker
-deploys on every push there; nothing in *this* repo is wired to hosting.
+**different repository**: `DeepWorld101/webpage` (private), branch `main`, and deploys on
+every push there.
 
-So a change here reaches the public site in two steps:
+**enactra.ai/buildingbench/ updates itself.** Every ten minutes (at :05, :15, … five minutes
+after the board's own rebuild), cron on ds-serv12 runs `publish.sh` in a checkout kept for it:
 
-```bash
-python3 build.py                                    # 1. rebuild both editions from source
-cp -R buildingbench buildingbench-evolution ../../webpage/   # 2. copy the built folders into a
-cd ../../webpage && git add -A && git commit && git push origin main   #    checkout of DeepWorld101/webpage
+```
+5-55/10 * * * *  /data/koe/bb-site/building-bench/website/publish.sh >> /data/koe/bb-site/publish.log 2>&1
 ```
 
-About a minute after the push, enactra.ai/buildingbench/ and /buildingbench-evolution/ serve
-the new build. Commit the rebuilt `buildingbench/` and `buildingbench-evolution/` here too, so
-this repo always holds exactly what is live (the build is deterministic, so a clean rebuild
-leaves `git status` clean).
+1. resets `/data/koe/bb-site/building-bench` to `origin/website`;
+2. `extract.py` → `slim_all.py` → `leaderboard.py` → `build.py --no-demo` (about two minutes);
+3. compares `data/fingerprint.json` with the committed one. It hashes everything the page shows
+   except the snapshot date, so a new model, a new run, a moved score or cost is a change, and
+   the date ticking over is not. No change: one "no change" line in the log, nothing else;
+4. refuses to publish a page that lost buildings, more than two models or a tenth of its
+   submissions (what a board outage looks like), or that carries `/cdn-cgi/`;
+5. commits the page and its data here as "BuildingBench auto-publish", copies `buildingbench/`
+   into `/data/koe/bb-site/webpage` and pushes that to `DeepWorld101/webpage` `main` — about a
+   minute later it is live — then pushes the commit here to `website`.
 
-Do not hand-edit `index.html` in either repo: the next `build.py` overwrites it.
+So `website` always holds exactly what is live (the build is deterministic, so a clean rebuild
+leaves `git status` clean), and its log is the site's publishing history. Only `buildingbench/`
+is published: the live `/buildingbench-evolution/` is a 2026-09-09 build, kept as it is (add it
+to `EDITIONS` in `publish.sh` to publish it too).
+
+- **To change the page**, push to `website`; the next run builds from it and publishes if the page
+  changed. Do not edit the cron checkout (every run resets it) or hand-edit `index.html` in either
+  repo (the next build overwrites it).
+- **A model new to the board** is published at once, under a name spelled from its id and in its
+  board organisation's company (`catalog.py`). The publish commit lists what `catalog.py` lacks
+  for it — usually the release date, without which it stays off the explorer's time axis. Add
+  it to `catalog.py` and push. A new *company* is drawn grey until it gets a colour: `FAMILIES`
+  in `build.py`, `COLOUR`/`LOGO` in `figures/bar/build_site.py`, `COMPANY` in
+  `figures/pareto/models.py`.
+- **Try it without publishing**: `BB_DRY_RUN=1 ./publish.sh` builds and prints the commit
+  message it would write.
+- **Stop it**: comment out the line in `crontab -e` on ds-serv12 (as koe).
+- **Credentials**: the two checkouts push with deploy keys, set per checkout in
+  `core.sshCommand` — `~/.ssh/bb_site_building_bench` (write on this repo) and
+  `~/.ssh/bb_site_webpage` (write on `DeepWorld101/webpage`).
 
 ## Rebuild for a new board snapshot
 
@@ -45,6 +69,7 @@ Do not hand-edit `index.html` in either repo: the next `build.py` overwrites it.
 python3 extract.py          # board JSON, runs ledger, render pages, thumbnails, per-run minutes → data/; raw glbs → cache/glb
 python3 slim_all.py         # page-sized copies → cache/slim (textures ≤512 px JPEG, tangents dropped, vertices welded, floats rounded)
 python3 extract_enactra.py  # the four Enactra pitch blocks → data/enactra/ (only when the pitch page changes)
+python3 leaderboard.py      # the Leaderboard block's table and figures from data/clean_board.json → data/enactra/
 python3 build.py            # assembles both outputs from template.html + engine.js + app.js + three-bundle.js + data/enactra/
 ```
 
@@ -58,16 +83,19 @@ only downloads glbs it does not already have.
   "Kimi K3 (max)", which never ran them, does not hide the Kimi K3 that did). The other efforts
   stay on the board. Claude Haiku 4.5 and Gemini 3.1 Pro are left off (`EXCLUDE` in `build.py`):
   released months before everything else, they stretch the time axis into empty space (and Gemini
-  3.1 Pro has run only 2 of the 12 buildings). Names follow the leaderboard's bar figure (`NAMES`).
-- **Families**: one per company, in the leaderboard figures' palette (`FAMILIES`): OpenAI,
-  Anthropic, Google, SpaceXAI (xAI's Grok; the board says "xAI"), Meta, DeepSeek, Z.ai, Moonshot,
-  StepFun, Cognition, Undisclosed (the stealth models) and Thinking Machines. `ORG_OF` fixes the
-  rows the board files under "Unplaced" (Claude Opus 5.5, Step 5 Preview).
+  3.1 Pro has run only 2 of the 12 buildings). Names follow the leaderboard's bar figure (`NAMES`
+  in `catalog.py`; a model it lacks gets a name spelled from its id).
+- **Families**: one per company, in the leaderboard figures' palette (`FAMILIES` in `build.py`):
+  OpenAI, Anthropic, Google, SpaceXAI (xAI's Grok; the board says "xAI"), Meta, DeepSeek, Z.ai,
+  Moonshot, StepFun, Cognition, Undisclosed (the stealth models) and Thinking Machines; a company
+  not listed is drawn grey. Which company a row is is `catalog.py`'s: `ORG_OF` fixes the rows the
+  board files under "Unplaced" (Claude Opus 5.5, Step 5 Preview), and a `claude-`/`gpt-`/
+  `gemini-`/`grok-` row it files there goes to that model's maker.
 - **Chart**: score against **model release date**, one family curve per organisation with an
   arrow from each release to the next. Outputs are drawn large (124 px, 100 px with every family
   shown), so they are laid out near their true point and, when they had to move aside, tethered
   to it by a dotted line with a dot at the true point. Price and month sit under each output.
-- **Release dates** are the public launch dates, kept in the `RELEASE` table in `build.py`:
+- **Release dates** are the public launch dates, kept in the `RELEASE` table in `catalog.py`:
   Claude Haiku 4.5 2025‑10‑15 · Gemini 3.1 Pro 2026‑02‑19 · Gemini 3.5 Flash 2026‑05‑19 ·
   Claude Fable 5 2026‑06‑09 · Claude Sonnet 5 2026‑06‑30 · GPT‑5.6 Sol/Terra/Luna 2026‑07‑09 ·
   Muse Spark 1.1 2026‑07‑09 · Inkling 2026‑07‑15 · Kimi K3 2026‑07‑16 · Claude Opus 5 2026‑07‑24 ·
@@ -77,7 +105,9 @@ only downloads glbs it does not already have.
   SWE‑2 2026‑09‑10 · Union Alpha 2026‑09‑16 (stealth: the day OpenRouter listed it) · GLM‑5.3 FlashX
   2026‑09‑18 · Step 5 Preview 2026‑09‑20 · Grok 4.7 2026‑09‑21 · Claude Opus 5.5 2026‑09‑22 ·
   GPT‑6 Sol 2026‑09‑22 · Space Bunny Alpha 2026‑09‑23 (stealth, OpenRouter listing). The last ten
-  were looked up 2026‑09‑23 against the vendors' announcements and OpenRouter's catalogue dates.
+  were looked up 2026‑09‑23 against the vendors' announcements and OpenRouter's catalogue dates;
+  Ember‑1 2026‑09‑23 · Claude Sonnet 5.5 2026‑09‑28 · GPT‑6.1 Sol 2026‑09‑29 · Mistral Large 4
+  2026‑10‑06 · Claude Haiku 5.5 2026‑10‑07 the same way on 2026‑10‑12.
   A model missing from the table is kept in the table view
   and left off the chart, and the chart says how many.
 - **Buildings**: the board's **license-clean release set only** — 12 CC BY 4.0 cases (five from the
@@ -88,9 +118,10 @@ only downloads glbs it does not already have.
 - **GPT‑6 Astra** cells come from the runs ledger like every other model's (rescored with today's
   weighting); the board's astra page (`astra/manifest.json`, scores as filed) only fills a cell the
   ledger lacks. It used to replace the ledger — and every `gpt6*` series with it, GPT‑6 Sol included.
-- **Cache**: `cache/glb` (raw, ~1.3 GB) is best kept off the root disk; on ds-serv12 it is a symlink
-  to `/data/zhiting/bb-website-cache/glb`. `extract.py` fetches glbs for the page's twelve buildings
-  only, and skips any run already in `cache/slim`.
+- **Cache**: `cache/glb` (raw, ~1.3 GB) is best kept off the root disk; in the cron checkout it
+  is under `/data`. `extract.py` fetches glbs for the page's twelve buildings only, and skips any
+  run already in `cache/slim` or already on the committed page — `slim_all.py` copies those from
+  `buildingbench/assets/`, so a fresh checkout downloads only the runs that are new.
 - **Scopes**: *This building* (one run per model) and *License-clean board · 12 buildings* (that
   board's own per-model figures, where GPT‑6 Astra ranks first).
 - **Case score** = one run per model × building: the *median* run by overall where a
@@ -162,16 +193,21 @@ Appearance = colour, structure, materials 0.963) — the columns themselves are 
 85%-agreement-with-experts badge. The explorer reads the same grader since the 2026-09-23 refresh.
 
 **The Leaderboard** (third polish, 2026-09-23) is two live figures and the table, all from the
-board's same-set view snapshotted 2026-09-22 (24 rows, 12 license-clean buildings):
+board's same-set view (`rowsSame` of the license-clean board, 12 buildings), rebuilt from the
+live board by `leaderboard.py` on every publish:
 `data/enactra/fig_bar.svg` (the bar figure, SWE-2 included, Inkling left off) and
 `data/enactra/fig_pareto.svg` (the Pareto frontier, SWE-2 in the $0 lane at the board's estimated
 price). `build.py` inlines them at `<!--FIG:bar-->` / `<!--FIG:pareto-->` in `leaderboard.html`;
 every bar and dot is a `g.node` with its figures in `data-tip`, and `plot.js` shows them on hover or
 focus and dims the rest. No title, description or Enactra lockup — the page has those. The fonts
 they embed are named `BB Inter`, `BB Plex Mono`, `BB Noto Sans`, because an @font-face in inline SVG
-is global and would otherwise restyle the page's own text. Their generators live on ds-serv12 at
-`/data/zhiting/buildingbench-site-figures/` (`bar/build_site.py`, `pareto/pareto_svg.py`; README
-there). `data/enactra/board.json` is that snapshot's `rowsSame`, Overall columns only, with the bar
+is global and would otherwise restyle the page's own text. Their generators are
+`figures/bar/build_site.py` (headless Chromium lays out the names: `$BB_CHROME`, else the newest
+Playwright download) and `figures/pareto/pareto_svg.py` (pycairo, Noto Sans), copied on
+2026-10-12 from `/data/zhiting/buildingbench-site-figures/` on ds-serv12 and changed to read the
+board they are given rather than a frozen snapshot or a hand-copied model list; from the
+2026-09-22 snapshot they still draw the committed figures byte for byte.
+`data/enactra/board.json` is `rowsSame`, Overall columns only, with the bar
 figure's names, "Surface" for Surface F, the company the figures draw each row in (Opus 5.5 →
 Anthropic, Step 5 → StepFun, DeepSeek, Cognition, xAI → SpaceXAI) and each series' table dot in
 that company's colour. The Evaluation breakdown block and the table's folds are gone.
@@ -230,3 +266,7 @@ Things that took a try to get right, and will bite again if the pieces are rebui
 - `slimglb.py`, `geomslim.py`, `glbinfo.py` — the re-encoders and an inspector for what makes a glb heavy
 - `extract_enactra.py` — lifts the pitch blocks, their scripts and their CSS into `data/enactra/`
 - `data/enactra/` — the extracted markup, scoped CSS, board JSON, scripts and media
+- `catalog.py` — each model's name, company and release date, shared by the explorer and the figures
+- `leaderboard.py`, `figures/` — the Leaderboard block's table and its two figures, from the board
+- `publish.sh` — the cron job: rebuild from the board, publish when the page changed (*Deploying*)
+- `data/fingerprint.json` — what was last published: its hash, snapshot, models and what `catalog.py` lacks

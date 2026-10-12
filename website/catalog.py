@@ -24,6 +24,8 @@ NAMES = {
     'kimi-k3': 'Kimi K3', 'glm-5.3-flash': 'GLM‑5.3 Flash', 'glm-5.3-flashx': 'GLM‑5.3 FlashX',
     'deepseek-v4.1-flash:wafer': 'DeepSeek V4.1 Flash', 'swe-2': 'SWE‑2', 'step-5-preview': 'Step 5 Preview',
     'union-alpha': 'Union Alpha', 'space-bunny-alpha': 'Space Bunny Alpha', 'inkling:free': 'Inkling',
+    'gpt-6.1-sol': 'GPT‑6.1 Sol', 'claude-sonnet-5-5': 'Claude Sonnet 5.5', 'claude-haiku-5-5': 'Claude Haiku 5.5',
+    'ember-1': 'Ember‑1', 'mistral-large-4-0': 'Mistral Large 4',
 }
 
 # Public launch dates, from the announcements (see README for sources). The board carries none.
@@ -41,6 +43,10 @@ RELEASE = {
     'glm-5.3-flashx': '2026-09-18', 'step-5-preview': '2026-09-20', 'grok-4.7': '2026-09-21',
     'claude-opus-5-5': '2026-09-22', 'gpt-6-sol': '2026-09-22',
     'space-bunny-alpha': '2026-09-23',    # stealth: listed on OpenRouter that day, maker undisclosed
+    # 2026-10-12: vendor announcements, each matching OpenRouter's catalogue date
+    'ember-1': '2026-09-23',              # Fireworks' post-trained Kimi K3; OpenRouter 09-24 00:07 UTC
+    'claude-sonnet-5-5': '2026-09-28', 'gpt-6.1-sol': '2026-09-29', 'mistral-large-4-0': '2026-10-06',
+    'claude-haiku-5-5': '2026-10-07',
 }
 
 # One company per model, in the leaderboard figures' palette. The board's organisation, as it
@@ -49,6 +55,7 @@ COMPANY_OF_ORG = {
     'Anthropic': 'Anthropic', 'OpenAI': 'OpenAI', 'Google': 'Google', 'Meta': 'Meta', 'xAI': 'xAI',
     'deepseek': 'DeepSeek', 'Z.ai': 'Z.ai', 'Moonshot AI': 'Moonshot', 'cognition': 'Cognition',
     'Undisclosed': 'Undisclosed', 'Thinking Machines': 'Thinking Machines', 'mistralai': 'Mistral AI',
+    'fireworks': 'Fireworks AI',
 }
 # Rows the board files under "Unplaced", by model id; failing that, by the family the id names.
 ORG_OF = {'claude-opus-5-5': 'Anthropic', 'step-5-preview': 'StepFun'}
