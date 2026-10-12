@@ -21,7 +21,7 @@ submissions, scores — is identical between them.
 ## Deploying
 
 The site is served by the `enactra.ai` Cloudflare Worker, which builds itself from a
-**different repository**: `DeepWorld101/webpage` (private), branch `main`, and deploys on
+**different repository**: `enactra-ai/webpage` (private; formerly `DeepWorld101/webpage`), branch `main`, and deploys on
 every push there.
 
 **enactra.ai/buildingbench/ updates itself.** Every ten minutes (at :05, :15, … five minutes
@@ -39,7 +39,7 @@ after the board's own rebuild), cron on ds-serv12 runs `publish.sh` in a checkou
 4. refuses to publish a page that lost buildings, more than two models or a tenth of its
    submissions (what a board outage looks like), or that carries `/cdn-cgi/`;
 5. commits the page and its data here as "BuildingBench auto-publish", copies `buildingbench/`
-   into `/data/koe/bb-site/webpage` and pushes that to `DeepWorld101/webpage` `main` — about a
+   into `/data/koe/bb-site/webpage` and pushes that to `enactra-ai/webpage` `main` — about a
    minute later it is live — then pushes the commit here to `website`.
 
 So `website` always holds exactly what is live (the build is deterministic, so a clean rebuild
@@ -61,7 +61,7 @@ to `EDITIONS` in `publish.sh` to publish it too).
 - **Stop it**: comment out the line in `crontab -e` on ds-serv12 (as koe).
 - **Credentials**: the two checkouts push with deploy keys, set per checkout in
   `core.sshCommand` — `~/.ssh/bb_site_building_bench` (write on this repo) and
-  `~/.ssh/bb_site_webpage` (write on `DeepWorld101/webpage`).
+  `~/.ssh/bb_site_webpage` (write on `enactra-ai/webpage`).
 
 ## Rebuild for a new board snapshot
 
