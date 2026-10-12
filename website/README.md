@@ -59,13 +59,14 @@ to `EDITIONS` in `publish.sh` to publish it too).
 - **Try it without publishing**: `BB_DRY_RUN=1 ./publish.sh` builds and prints the commit
   message it would write.
 - **Stop it**: comment out the line in `crontab -e` on ds-serv12 (as koe).
-- **Credentials**: the organisation has deploy keys turned off, so both checkouts push over HTTPS
-  with one fine-grained personal access token — resource owner enactra-ai, only
-  `building-bench` and `webpage`, *Contents: read and write* — kept in
+- **Credentials**: the organisation has deploy keys turned off and a fine-grained token scoped to
+  it was not granted access, so both checkouts push over HTTPS with KoeYe's **classic** personal
+  access token (`repo` scope — every repository that account can reach), kept in
   `~/.config/bb-site/git-credentials` (mode 600) and named per checkout in `credential.helper`.
-  **It expires** (a year at most); when it does, every run logs `FAILED: git -C …/webpage fetch`
-  and the site stops updating. Renew it and paste the new one the same way:
-  `ssh -t ds-serv12.ucsd.edu 'read -rsp "token: " T; echo; printf "https://KoeYe:%s@github.com\n" "$T" > ~/.config/bb-site/git-credentials; chmod 600 ~/.config/bb-site/git-credentials'`
+  If an organisation owner turns deploy keys on, two keys (one per repository) would narrow that.
+  **If the token expires or is revoked**, every run logs `FAILED: git -C …/webpage fetch` and the
+  site stops updating. Paste a new one with `ssh -t ds-serv12.ucsd.edu /data/koe/bb-site/save-token.sh`
+  (it prompts without echoing, saves, and checks the webpage repository answers).
 - **Log**: `/data/koe/bb-site/publish.log` — one line per run, the step's output when one fails.
 
 ## Rebuild for a new board snapshot
