@@ -32,6 +32,18 @@ PRICING_NOTE = (
     "Meta published Muse Spark card, shared by versions 1.1-1.3 as of "
     "2026-08-25; effort-specific price not separately published"
 )
+# Priced by the model each request names, so a Muse Wonder lane is not costed
+# at the Spark card. Anything not listed keeps the Spark rates above.
+RATES_BY_MODEL = {
+    "muse-wonder-1.0": {"input": 4.00, "cached_input": 0.20, "output": 20.00},
+}
+PRICING_NOTE_BY_MODEL = {
+    "muse-wonder-1.0": (
+        "Muse Wonder 1.0 launch card as listed 2026-10-12: $4.00 input, "
+        "$0.20 cached input, $20.00 output per million; effort-specific "
+        "price not separately published"
+    ),
+}
 IMAGE_GUARD_LIMIT = 14_000_000
 IMAGE_GUARD_TARGET = 12_000_000
 IMAGE_OMITTED = (
@@ -214,16 +226,17 @@ def normalized_tokens(usage: dict[str, Any] | None) -> dict[str, int] | None:
     }
 
 
-def estimated_cost(tokens: dict[str, int] | None) -> float | None:
+def estimated_cost(tokens: dict[str, int] | None, model: str = "") -> float | None:
     if not tokens:
         return None
+    rates = RATES_BY_MODEL.get(model, RATES)
     cached = tokens["cached_input_tokens"]
     uncached = max(tokens["input_tokens"] - cached, 0)
     return round(
         (
-            uncached * RATES["input"]
-            + cached * RATES["cached_input"]
-            + tokens["output_tokens"] * RATES["output"]
+            uncached * rates["input"]
+            + cached * rates["cached_input"]
+            + tokens["output_tokens"] * rates["output"]
         )
         / 1_000_000,
         9,
@@ -400,9 +413,9 @@ def make_handler(state: State):
                         "response_bytes": len(response),
                         "usage": usage,
                         "tokens": tokens,
-                        "cost_usd": estimated_cost(tokens),
-                        "pricing_usd_per_million": RATES,
-                        "pricing_note": PRICING_NOTE,
+                        "cost_usd": estimated_cost(tokens, model),
+                        "pricing_usd_per_million": RATES_BY_MODEL.get(model, RATES),
+                        "pricing_note": PRICING_NOTE_BY_MODEL.get(model, PRICING_NOTE),
                     }
                 )
                 if upstream.status >= 400:

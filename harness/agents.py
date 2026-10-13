@@ -180,6 +180,16 @@ CONFIGS = {c.name: c for c in (
                   "one binary you name, so name the versioned one: given the "
                   "shim alone the agent dies in seconds with \"installed "
                   "binary is missing\".",)),
+    # Muse Wonder's catalogue entry lists `max`, and Muse Code 1.4.6 takes
+    # `--reasoning-effort max` itself, so nothing is rewritten on the way: the
+    # meter logged every root request as max -> max.
+    Config("muse-wonder-1.0-max", "Muse Wonder 1.0 (max)", "muse", "muse-wonder-1.0",
+           "max",
+           notes=("Run with Muse Code 1.4.6, the first build that lists the "
+                  "model, on a metered Meta API key. Name the versioned "
+                  "`muse-bin-*`, as for Muse Spark.",
+                  "Priced by the meter at the model's launch card: $4.00 input, "
+                  "$0.20 cached input, $20.00 output per million tokens.")),
     # xAI's own model catalogue (GET /v1/models on the CLI's proxy) lists
     # grok-4.6's reasoning efforts as low, medium, high (the default) and
     # xhigh, "Highest effort and reasoning level"; the CLI rejects
