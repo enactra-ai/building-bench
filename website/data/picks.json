@@ -6016,6 +6016,26 @@
 },
 {
 "site": "helsinki_122886734_enhanced_v1",
+"series": "musewonder10max",
+"run": "helsinki_122886734_enhanced_v1-blind-muse-wonder-1.0-max-20261012T235622",
+"overall": 0.816,
+"surface_f": 0.615,
+"chamfer_m": null,
+"height_m": null,
+"triangles": null,
+"glb": "../bench-runs/helsinki_122886734_enhanced_v1-blind-muse-wonder-1.0-max-20261012T235622/submission/building.glb",
+"page": null,
+"cost": 12.74,
+"turns": null,
+"nruns": 1,
+"allruns": [
+0.816
+],
+"ran": "2026-10-12",
+"minutes": 40.93
+},
+{
+"site": "helsinki_122886734_enhanced_v1",
 "series": "mistralaimistrallarge40claudecode",
 "run": "helsinki_122886734_enhanced_v1-blind-mistralai-mistral-large-4-0-claude-code-20261008T050704",
 "overall": 0.742,
@@ -6633,6 +6653,26 @@
 },
 {
 "site": "helsinki_122954081_enhanced_v1",
+"series": "musewonder10max",
+"run": "helsinki_122954081_enhanced_v1-blind-muse-wonder-1.0-max-20261012T235622",
+"overall": 0.726,
+"surface_f": 0.407,
+"chamfer_m": null,
+"height_m": null,
+"triangles": null,
+"glb": "../bench-runs/helsinki_122954081_enhanced_v1-blind-muse-wonder-1.0-max-20261012T235622/submission/building.glb",
+"page": null,
+"cost": 9.45,
+"turns": null,
+"nruns": 1,
+"allruns": [
+0.726
+],
+"ran": "2026-10-12",
+"minutes": 35.25
+},
+{
+"site": "helsinki_122954081_enhanced_v1",
 "series": "mistralaimistrallarge40claudecode",
 "run": "helsinki_122954081_enhanced_v1-blind-mistralai-mistral-large-4-0-claude-code-20261007T221951",
 "overall": 0.657,
@@ -7226,6 +7266,26 @@
 ],
 "ran": "2026-09-04",
 "minutes": 36.57
+},
+{
+"site": "helsinki_123901485_enhanced_v1",
+"series": "musewonder10max",
+"run": "helsinki_123901485_enhanced_v1-blind-muse-wonder-1.0-max-20261012T235622",
+"overall": 0.697,
+"surface_f": 0.27,
+"chamfer_m": null,
+"height_m": null,
+"triangles": null,
+"glb": "../bench-runs/helsinki_123901485_enhanced_v1-blind-muse-wonder-1.0-max-20261012T235622/submission/building.glb",
+"page": null,
+"cost": 6.33,
+"turns": null,
+"nruns": 1,
+"allruns": [
+0.697
+],
+"ran": "2026-10-12",
+"minutes": 25.7
 },
 {
 "site": "helsinki_123901485_enhanced_v1",
@@ -7867,6 +7927,26 @@
 },
 {
 "site": "helsinki_8033120_enhanced_v1",
+"series": "musewonder10max",
+"run": "helsinki_8033120_enhanced_v1-blind-muse-wonder-1.0-max-20261012T235622",
+"overall": 0.651,
+"surface_f": 0.286,
+"chamfer_m": null,
+"height_m": null,
+"triangles": null,
+"glb": "../bench-runs/helsinki_8033120_enhanced_v1-blind-muse-wonder-1.0-max-20261012T235622/submission/building.glb",
+"page": null,
+"cost": 4.3,
+"turns": null,
+"nruns": 1,
+"allruns": [
+0.651
+],
+"ran": "2026-10-12",
+"minutes": 21.87
+},
+{
+"site": "helsinki_8033120_enhanced_v1",
 "series": "claudehaiku55max",
 "run": "helsinki_8033120_enhanced_v1-blind-claude-haiku-5-5-max-20261007T224913",
 "overall": 0.701,
@@ -8440,6 +8520,26 @@
 ],
 "ran": "2026-09-04",
 "minutes": 29.67
+},
+{
+"site": "helsinki_cathedral_enhanced_v1",
+"series": "musewonder10max",
+"run": "helsinki_cathedral_enhanced_v1-blind-muse-wonder-1.0-max-20261012T235622",
+"overall": 0.699,
+"surface_f": 0.195,
+"chamfer_m": null,
+"height_m": null,
+"triangles": null,
+"glb": "../bench-runs/helsinki_cathedral_enhanced_v1-blind-muse-wonder-1.0-max-20261012T235622/submission/building.glb",
+"page": null,
+"cost": 2.32,
+"turns": null,
+"nruns": 1,
+"allruns": [
+0.699
+],
+"ran": "2026-10-12",
+"minutes": 7.9
 },
 {
 "site": "helsinki_cathedral_enhanced_v1",
@@ -9082,6 +9182,26 @@
 },
 {
 "site": "melbourne_155809136_enhanced_v1",
+"series": "musewonder10max",
+"run": "melbourne_155809136_enhanced_v1-blind-muse-wonder-1.0-max-20261012T235622",
+"overall": 0.776,
+"surface_f": 0.348,
+"chamfer_m": null,
+"height_m": null,
+"triangles": null,
+"glb": "../bench-runs/melbourne_155809136_enhanced_v1-blind-muse-wonder-1.0-max-20261012T235622/submission/building.glb",
+"page": null,
+"cost": 7.58,
+"turns": null,
+"nruns": 1,
+"allruns": [
+0.776
+],
+"ran": "2026-10-12",
+"minutes": 31.05
+},
+{
+"site": "melbourne_155809136_enhanced_v1",
 "series": "mistralaimistrallarge40claudecode",
 "run": "melbourne_155809136_enhanced_v1-blind-mistralai-mistral-large-4-0-claude-code-20261008T092713",
 "overall": 0.52,
@@ -9699,6 +9819,26 @@
 },
 {
 "site": "melbourne_22820458_enhanced_v1",
+"series": "musewonder10max",
+"run": "melbourne_22820458_enhanced_v1-blind-muse-wonder-1.0-max-20261013T003718",
+"overall": 0.662,
+"surface_f": 0.202,
+"chamfer_m": null,
+"height_m": null,
+"triangles": null,
+"glb": "../bench-runs/melbourne_22820458_enhanced_v1-blind-muse-wonder-1.0-max-20261013T003718/submission/building.glb",
+"page": null,
+"cost": 5.89,
+"turns": null,
+"nruns": 1,
+"allruns": [
+0.662
+],
+"ran": "2026-10-13",
+"minutes": 34.57
+},
+{
+"site": "melbourne_22820458_enhanced_v1",
 "series": "mistralaimistrallarge40claudecode",
 "run": "melbourne_22820458_enhanced_v1-blind-mistralai-mistral-large-4-0-claude-code-20261007T221951",
 "overall": 0.686,
@@ -10313,6 +10453,26 @@
 ],
 "ran": "2026-09-04",
 "minutes": 32.13
+},
+{
+"site": "melbourne_25422768_enhanced_v1",
+"series": "musewonder10max",
+"run": "melbourne_25422768_enhanced_v1-blind-muse-wonder-1.0-max-20261013T003718",
+"overall": 0.683,
+"surface_f": 0.29,
+"chamfer_m": null,
+"height_m": null,
+"triangles": null,
+"glb": "../bench-runs/melbourne_25422768_enhanced_v1-blind-muse-wonder-1.0-max-20261013T003718/submission/building.glb",
+"page": null,
+"cost": 4.97,
+"turns": null,
+"nruns": 1,
+"allruns": [
+0.683
+],
+"ran": "2026-10-13",
+"minutes": 21.78
 },
 {
 "site": "melbourne_25422768_enhanced_v1",
@@ -10954,6 +11114,26 @@
 },
 {
 "site": "melbourne_296368687_enhanced_v1",
+"series": "musewonder10max",
+"run": "melbourne_296368687_enhanced_v1-blind-muse-wonder-1.0-max-20261013T003718",
+"overall": 0.701,
+"surface_f": 0.185,
+"chamfer_m": null,
+"height_m": null,
+"triangles": null,
+"glb": "../bench-runs/melbourne_296368687_enhanced_v1-blind-muse-wonder-1.0-max-20261013T003718/submission/building.glb",
+"page": null,
+"cost": 13.63,
+"turns": null,
+"nruns": 1,
+"allruns": [
+0.701
+],
+"ran": "2026-10-13",
+"minutes": 44.93
+},
+{
+"site": "melbourne_296368687_enhanced_v1",
 "series": "claudehaiku55max",
 "run": "melbourne_296368687_enhanced_v1-blind-claude-haiku-5-5-max-20261007T234725",
 "overall": 0.583,
@@ -11569,6 +11749,26 @@
 ],
 "ran": "2026-09-04",
 "minutes": 36.55
+},
+{
+"site": "melbourne_33106429_enhanced_v1",
+"series": "musewonder10max",
+"run": "melbourne_33106429_enhanced_v1-blind-muse-wonder-1.0-max-20261013T003718",
+"overall": 0.614,
+"surface_f": 0.212,
+"chamfer_m": null,
+"height_m": null,
+"triangles": null,
+"glb": "../bench-runs/melbourne_33106429_enhanced_v1-blind-muse-wonder-1.0-max-20261013T003718/submission/building.glb",
+"page": null,
+"cost": 7.86,
+"turns": null,
+"nruns": 1,
+"allruns": [
+0.614
+],
+"ran": "2026-10-13",
+"minutes": 37.57
 },
 {
 "site": "melbourne_33106429_enhanced_v1",
@@ -12188,6 +12388,26 @@
 },
 {
 "site": "melbourne_45461060_enhanced_v1",
+"series": "musewonder10max",
+"run": "melbourne_45461060_enhanced_v1-blind-muse-wonder-1.0-max-20261013T003718",
+"overall": 0.668,
+"surface_f": 0.279,
+"chamfer_m": null,
+"height_m": null,
+"triangles": null,
+"glb": "../bench-runs/melbourne_45461060_enhanced_v1-blind-muse-wonder-1.0-max-20261013T003718/submission/building.glb",
+"page": null,
+"cost": 15.13,
+"turns": null,
+"nruns": 1,
+"allruns": [
+0.668
+],
+"ran": "2026-10-13",
+"minutes": 62.65
+},
+{
+"site": "melbourne_45461060_enhanced_v1",
 "series": "mistralaimistrallarge40claudecode",
 "run": "melbourne_45461060_enhanced_v1-blind-mistralai-mistral-large-4-0-claude-code-20261008T150227",
 "overall": 0.893,
@@ -12802,6 +13022,26 @@
 ],
 "ran": "2026-09-05",
 "minutes": 53.95
+},
+{
+"site": "melbourne_4817059_enhanced_v1",
+"series": "musewonder10max",
+"run": "melbourne_4817059_enhanced_v1-blind-muse-wonder-1.0-max-20261013T003718",
+"overall": 0.738,
+"surface_f": 0.231,
+"chamfer_m": null,
+"height_m": null,
+"triangles": null,
+"glb": "../bench-runs/melbourne_4817059_enhanced_v1-blind-muse-wonder-1.0-max-20261013T003718/submission/building.glb",
+"page": null,
+"cost": 11.91,
+"turns": null,
+"nruns": 1,
+"allruns": [
+0.738
+],
+"ran": "2026-10-13",
+"minutes": 47.23
 },
 {
 "site": "melbourne_4817059_enhanced_v1",

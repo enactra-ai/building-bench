@@ -1,8 +1,8 @@
 {
- "fingerprint": "18ecc183b360ca27673ae68cfc32c33de5f2e824c287cf9a8535f440c79ff95f",
+ "fingerprint": "88915228613b65cce203b5a0dbc0a190e6ff5774adc373c45be21f83ab478a6a",
  "snapshot": "2026-10-12",
  "buildings": 12,
- "results": 328,
+ "results": 340,
  "models": [
   "Claude Opus 5.5 (max)",
   "GPT‑6.1 Sol (max)",
@@ -14,6 +14,7 @@
   "Union Alpha (max)",
   "DeepSeek V4.1 Flash (max)",
   "Claude Fable 5 (max)",
+  "Muse Wonder 1.0 (max)",
   "Grok 4.6 (xhigh)",
   "GPT‑6 Sol (ultra)",
   "GPT‑5.6 Sol (max)",
@@ -33,5 +34,11 @@
   "GLM‑5.3 Flash (max)",
   "Inkling"
  ],
- "incomplete": {}
+ "incomplete": {
+  "muse-wonder-1.0": [
+   "name (shown as 'Muse Wonder 1.0')",
+   "company (the board says 'Unplaced')",
+   "release date"
+  ]
+ }
 }

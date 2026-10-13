@@ -13,8 +13,8 @@
   "twa_flight_center",
   "udvar_hazy"
  ],
- "runsScored": 2252,
- "modelsRanked": 54,
+ "runsScored": 2264,
+ "modelsRanked": 55,
  "rig": {
   "schema": "city_bench.building_light/1",
   "sun_azimuth_deg": 135.0,
@@ -42,8 +42,8 @@
   "reach_m": 400.0
  },
  "cleanBoard": {
-  "runsScored": 592,
-  "modelsRanked": 34,
+  "runsScored": 604,
+  "modelsRanked": 35,
   "buildings": 12,
   "rows": {
    "claudeopus55max": {
@@ -178,6 +178,17 @@
     "cells": 12,
     "place": 7
    },
+   "musewonder10max": {
+    "label": "muse-wonder-1.0 (max)",
+    "overall": 0.7026,
+    "f": 0.2934,
+    "geometry": 0.7616,
+    "appearance": 0.7552,
+    "cost": 7.718234,
+    "minutes": 34.92,
+    "cells": 12,
+    "place": 9
+   },
    "gpt6solultra": {
     "label": "gpt-6-sol (ultra)",
     "overall": 0.698,
@@ -187,7 +198,7 @@
     "cost": 1.9185364999999999,
     "minutes": 19.09,
     "cells": 12,
-    "place": 7
+    "place": 9
    },
    "deepseekv41flash": {
     "label": "deepseek/deepseek-v4.1-flash:wafer",
@@ -198,7 +209,7 @@
     "cost": null,
     "minutes": 69.72,
     "cells": 1,
-    "place": 7
+    "place": 9
    },
    "gpt6solmax": {
     "label": "gpt-6-sol (max)",
@@ -209,7 +220,7 @@
     "cost": 1.8870635,
     "minutes": 20.75,
     "cells": 12,
-    "place": 7
+    "place": 9
    },
    "grok46xhigh": {
     "label": "grok-4.6 (xhigh)",
@@ -220,7 +231,7 @@
     "cost": 10.59285,
     "minutes": 53.34,
     "cells": 12,
-    "place": 7
+    "place": 9
    },
    "gpt56terramax": {
     "label": "gpt-5.6-terra (max)",
@@ -308,7 +319,7 @@
     "cost": 0.45029904,
     "minutes": 62.74,
     "cells": 12,
-    "place": 19
+    "place": 20
    },
    "stealthspacebunnyalphaclaudecode": {
     "label": "stealth/space-bunny-alpha (max) \u00b7 Claude Code",
@@ -319,7 +330,7 @@
     "cost": 0.0,
     "minutes": 114.94,
     "cells": 12,
-    "place": 19
+    "place": 20
    },
    "gemini38flash": {
     "label": "gemini-3.8-flash (high)",
@@ -330,7 +341,7 @@
     "cost": 3.330324675,
     "minutes": 39.51,
     "cells": 12,
-    "place": 19
+    "place": 20
    },
    "sonnetmax": {
     "label": "claude-sonnet-5 (max)",
@@ -341,7 +352,7 @@
     "cost": 15.032763100000004,
     "minutes": 60.73,
     "cells": 12,
-    "place": 23
+    "place": 24
    },
    "kimik3max": {
     "label": "kimi-k3 (thinking)",
@@ -352,7 +363,7 @@
     "cost": 5.844977500000001,
     "minutes": 125.14,
     "cells": 12,
-    "place": 23
+    "place": 24
    },
    "mistralaimistrallarge40claudecode": {
     "label": "mistralai/mistral-large-4-0 (max) \u00b7 Claude Code",
@@ -363,7 +374,7 @@
     "cost": 33.208745,
     "minutes": 688.59,
     "cells": 12,
-    "place": 23
+    "place": 24
    },
    "gemini": {
     "label": "gemini-3.1-pro (high)",
@@ -374,7 +385,7 @@
     "cost": 1.5500243999999999,
     "minutes": 16.75,
     "cells": 2,
-    "place": 23
+    "place": 24
    },
    "step5previewclaudecode": {
     "label": "step-5-preview (max) \u00b7 Claude Code",
@@ -385,7 +396,7 @@
     "cost": 16.58585,
     "minutes": 427.17,
     "cells": 12,
-    "place": 29
+    "place": 30
    },
    "glm53flashmax": {
     "label": "glm-5.3-flash (max)",
@@ -396,7 +407,7 @@
     "cost": 0.21804560249999994,
     "minutes": 100.71,
     "cells": 12,
-    "place": 29
+    "place": 30
    },
    "haiku": {
     "label": "claude-haiku-4-5",
@@ -407,7 +418,7 @@
     "cost": 0.5243465500000001,
     "minutes": 10.85,
     "cells": 12,
-    "place": 30
+    "place": 31
    },
    "inklingfreeclaudecode": {
     "label": "thinkingmachines/inkling:free \u00b7 Claude Code",
@@ -418,7 +429,7 @@
     "cost": 0.0,
     "minutes": 4.31,
     "cells": 12,
-    "place": 30
+    "place": 31
    }
   }
  },
@@ -481,73 +492,73 @@
   "helsinki_122886734_enhanced_v1": {
    "union": false,
    "clean": true,
-   "n": 48,
+   "n": 49,
    "source": "Helsinki 3D city model"
   },
   "helsinki_122954081_enhanced_v1": {
    "union": false,
    "clean": true,
-   "n": 46,
+   "n": 47,
    "source": "Helsinki 3D city model"
   },
   "helsinki_123901485_enhanced_v1": {
    "union": false,
    "clean": true,
-   "n": 49,
+   "n": 50,
    "source": "Helsinki 3D city model"
   },
   "helsinki_8033120_enhanced_v1": {
    "union": false,
    "clean": true,
-   "n": 46,
+   "n": 47,
    "source": "Helsinki 3D city model"
   },
   "helsinki_cathedral_enhanced_v1": {
    "union": false,
    "clean": true,
-   "n": 51,
+   "n": 52,
    "source": "Helsinki 3D city model"
   },
   "melbourne_155809136_enhanced_v1": {
    "union": false,
    "clean": true,
-   "n": 47,
+   "n": 48,
    "source": "City of Melbourne 2020 photomesh"
   },
   "melbourne_22820458_enhanced_v1": {
    "union": false,
    "clean": true,
-   "n": 47,
+   "n": 48,
    "source": "City of Melbourne 2020 photomesh"
   },
   "melbourne_25422768_enhanced_v1": {
    "union": false,
    "clean": true,
-   "n": 49,
+   "n": 50,
    "source": "City of Melbourne 2020 photomesh"
   },
   "melbourne_296368687_enhanced_v1": {
    "union": false,
    "clean": true,
-   "n": 49,
+   "n": 50,
    "source": "City of Melbourne 2020 photomesh"
   },
   "melbourne_33106429_enhanced_v1": {
    "union": false,
    "clean": true,
-   "n": 47,
+   "n": 48,
    "source": "City of Melbourne 2020 photomesh"
   },
   "melbourne_45461060_enhanced_v1": {
    "union": false,
    "clean": true,
-   "n": 47,
+   "n": 48,
    "source": "City of Melbourne 2020 photomesh"
   },
   "melbourne_4817059_enhanced_v1": {
    "union": false,
    "clean": true,
-   "n": 48,
+   "n": 49,
    "source": "City of Melbourne 2020 photomesh"
   }
  }
