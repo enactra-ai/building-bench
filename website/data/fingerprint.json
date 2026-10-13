@@ -1,5 +1,5 @@
 {
- "fingerprint": "88915228613b65cce203b5a0dbc0a190e6ff5774adc373c45be21f83ab478a6a",
+ "fingerprint": "2175a5560c7dd40754ac39444fa9ba49bb7fd44e91ba2fa9719118cd553f51e7",
  "snapshot": "2026-10-12",
  "buildings": 12,
  "results": 340,
@@ -34,11 +34,5 @@
   "GLM‑5.3 Flash (max)",
   "Inkling"
  ],
- "incomplete": {
-  "muse-wonder-1.0": [
-   "name (shown as 'Muse Wonder 1.0')",
-   "company (the board says 'Unplaced')",
-   "release date"
-  ]
- }
+ "incomplete": {}
 }
