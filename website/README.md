@@ -96,7 +96,7 @@ only downloads glbs it does not already have.
   Moonshot, StepFun, Cognition, Undisclosed (the stealth models) and Thinking Machines; a company
   not listed is drawn grey. Which company a row is is `catalog.py`'s: `ORG_OF` fixes the rows the
   board files under "Unplaced" (Claude Opus 5.5, Step 5 Preview), and a `claude-`/`gpt-`/
-  `gemini-`/`grok-` row it files there goes to that model's maker.
+  `gemini-`/`grok-`/`muse-` row it files there goes to that model's maker (Muse is Meta's).
 - **Chart**: score against **model release date**, one family curve per organisation with an
   arrow from each release to the next. Outputs are drawn large (124 px, 100 px with every family
   shown), so they are laid out near their true point and, when they had to move aside, tethered
@@ -113,7 +113,8 @@ only downloads glbs it does not already have.
   GPT‑6 Sol 2026‑09‑22 · Space Bunny Alpha 2026‑09‑23 (stealth, OpenRouter listing). The last ten
   were looked up 2026‑09‑23 against the vendors' announcements and OpenRouter's catalogue dates;
   Ember‑1 2026‑09‑23 · Claude Sonnet 5.5 2026‑09‑28 · GPT‑6.1 Sol 2026‑09‑29 · Mistral Large 4
-  2026‑10‑06 · Claude Haiku 5.5 2026‑10‑07 the same way on 2026‑10‑12.
+  2026‑10‑06 · Claude Haiku 5.5 2026‑10‑07 the same way on 2026‑10‑12; Muse Wonder 1.0 2026‑10‑12
+  (Meta's announcement, API id `muse-wonder-1.0`) the same way.
   A model missing from the table is kept in the table view
   and left off the chart, and the chart says how many.
 - **Buildings**: the board's **license-clean release set only** — 12 CC BY 4.0 cases (five from the

@@ -25,7 +25,7 @@ NAMES = {
     'deepseek-v4.1-flash:wafer': 'DeepSeek V4.1 Flash', 'swe-2': 'SWE‑2', 'step-5-preview': 'Step 5 Preview',
     'union-alpha': 'Union Alpha', 'space-bunny-alpha': 'Space Bunny Alpha', 'inkling:free': 'Inkling',
     'gpt-6.1-sol': 'GPT‑6.1 Sol', 'claude-sonnet-5-5': 'Claude Sonnet 5.5', 'claude-haiku-5-5': 'Claude Haiku 5.5',
-    'ember-1': 'Ember‑1', 'mistral-large-4-0': 'Mistral Large 4',
+    'ember-1': 'Ember‑1', 'mistral-large-4-0': 'Mistral Large 4', 'muse-wonder-1.0': 'Muse Wonder 1.0',
 }
 
 # Public launch dates, from the announcements (see README for sources). The board carries none.
@@ -47,6 +47,7 @@ RELEASE = {
     'ember-1': '2026-09-23',              # Fireworks' post-trained Kimi K3; OpenRouter 09-24 00:07 UTC
     'claude-sonnet-5-5': '2026-09-28', 'gpt-6.1-sol': '2026-09-29', 'mistral-large-4-0': '2026-10-06',
     'claude-haiku-5-5': '2026-10-07',
+    'muse-wonder-1.0': '2026-10-12',      # Meta Superintelligence Labs' announcement; API id muse-wonder-1.0
 }
 
 # One company per model, in the leaderboard figures' palette. The board's organisation, as it
@@ -59,7 +60,8 @@ COMPANY_OF_ORG = {
 }
 # Rows the board files under "Unplaced", by model id; failing that, by the family the id names.
 ORG_OF = {'claude-opus-5-5': 'Anthropic', 'step-5-preview': 'StepFun'}
-MAKER_OF_PREFIX = {'claude-': 'Anthropic', 'gpt-': 'OpenAI', 'gemini-': 'Google', 'grok-': 'xAI'}
+MAKER_OF_PREFIX = {'claude-': 'Anthropic', 'gpt-': 'OpenAI', 'gemini-': 'Google', 'grok-': 'xAI',
+                   'muse-': 'Meta'}
 # How a company is written where the page names it: xAI is part of SpaceX now.
 COMPANY_LABEL = {'xAI': 'SpaceXAI'}
 # Written in capitals when a name is spelled from a model id, and joined to a version
