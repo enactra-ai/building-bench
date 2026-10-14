@@ -108,7 +108,7 @@ for key, variants in by_base.items():
     same = same_series.get(row['series'])
     models.append({
         'id': key, 'label': row['label'], 'name': name, 'base': name,
-        'family': fam, 'org': FAMILIES[fam]['label'], 'effort': effort, 'effortLabel': EFFORT_LABEL.get(effort, effort), 'date': RELEASE.get(key),
+        'family': fam, 'org': FAMILIES[fam]['label'], 'effort': effort, 'effortLabel': EFFORT_LABEL.get(effort, effort), 'date': catalog.release(key),
         'tags': [t['text'] for t in row.get('tags', [])],
         'variants': [{'series': r['series'], 'label': r['label'], 'effort': e, 'cells': r['values']['cells']} for r, _, e in sorted(variants, key=lambda t: -EFFORT_RANK.get(t[2], 1))],
         'board': {k: v.get(k) for k in ('overall', 'f', 'geometry', 'appearance', 'cost', 'minutes', 'turns', 'place', 'takes', 'cells')},
@@ -175,6 +175,11 @@ FAMILY_ORDER = [f for f in FAMILY_ORDER if FAMILIES[f]['color'] != NEW_FAMILY_CO
 board_org = {display_name(r['label'])[2]: r['org'] for r in board['rows']}
 incomplete = {m['id']: catalog.missing(m['id'], board_org.get(m['id'])) for m in models}
 incomplete = {k: v for k, v in incomplete.items() if v}
+# A model catalog.py has no date for is dated by the day OpenRouter listed it (catalog.release);
+# record those dates with the page, so they stay put, and name them in the publish commit.
+catalog.save_openrouter_record([m['id'] for m in models])
+dated = catalog.dated_by_openrouter([m['id'] for m in models])
+RELEASE = dict(RELEASE, **dated)
 if missing:
     print('WARNING: %d picked runs have no slimmed asset:' % len(missing), *missing[:5], sep='\n  ')
 
@@ -349,6 +354,6 @@ for name in ea_files:
     h.update(name.encode() + open('%s/assets/%s' % (EA, name), 'rb').read())
 json.dump({'fingerprint': h.hexdigest(), 'snapshot': meta['snapshot'], 'buildings': len(buildings), 'results': len(results),
            'models': [m['name'] + ('' if m['effort'] == 'none' else ' (%s)' % m['effort']) for m in models],
-           'incomplete': incomplete}, open('data/fingerprint.json', 'w'), indent=1, ensure_ascii=False)
+           'incomplete': incomplete, 'dated': dated}, open('data/fingerprint.json', 'w'), indent=1, ensure_ascii=False)
 for mid, what in incomplete.items():
     print('WARNING: catalog.py has no %s for %s' % (', '.join(what), mid))

@@ -5,11 +5,19 @@ is named in one place. The board labels a row by model id, then an optional reas
 harness: 'claude-opus-5-5 (max)', 'deepseek/deepseek-v4.1-flash:wafer (max) · Claude Code'.
 
 A model the tables below do not know is still published -- under a name made from its id, in its
-board organisation's company (grey if that company has no colour yet) -- and one with no release
-date stays off the explorer's time axis. build.py writes what is missing for the models it shows
-to data/fingerprint.json, and publish.sh puts that list in its commit message.
+board organisation's company (grey if that company has no colour yet) -- and with the day
+OpenRouter listed it as its release date (see release()), so it joins the explorer's time axis
+without an edit here. Only a model OpenRouter does not list either stays off that axis. build.py
+writes what is still missing for the models it shows to data/fingerprint.json, and publish.sh puts
+that list, and the dates it took from OpenRouter, in its commit message.
 """
+import datetime
+import json
+import os
 import re
+import time
+import urllib.request
+import zoneinfo
 
 # Names as the leaderboard's bar figure writes them (product name; effort shown separately).
 NAMES = {
@@ -30,6 +38,7 @@ NAMES = {
 }
 
 # Public launch dates, from the announcements (see README for sources). The board carries none.
+# A model missing here is dated from OpenRouter's catalogue instead: see release().
 RELEASE = {
     'claude-haiku-4-5': '2025-10-15', 'gemini-3.1-pro': '2026-02-19', 'gemini-3.5-flash': '2026-05-19',
     'claude-fable-5': '2026-06-09', 'claude-sonnet-5': '2026-06-30',
@@ -107,20 +116,146 @@ def _maker(model, org):
 
 
 def company(model, org):
-    """The company a model is drawn in, from its id and the board's organisation for its row."""
+    """The company a model is drawn in, from its id and the board's organisation for its row; for a
+    row the board leaves unplaced, the maker OpenRouter lists it under."""
     c = _maker(model, org)
     if c:
         return c
-    return org[:1].upper() + org[1:] if org and org != 'Unplaced' else 'Undisclosed'
+    if org and org != 'Unplaced':
+        return org[:1].upper() + org[1:]
+    return openrouter_company(model) or 'Undisclosed'
 
 
 def missing(model, org):
-    """What the tables above lack for a model the page shows: [] when it is fully described."""
+    """What the page could not find for a model it shows: [] when it is fully described."""
     out = []
     if model not in NAMES:
         out.append('name (shown as %r)' % name(model))
-    if not _maker(model, org):
+    if not _maker(model, org) and not openrouter_company(model):
         out.append('company (the board says %r)' % org)
-    if model not in RELEASE:
-        out.append('release date')
+    if not release(model):
+        out.append('release date (OpenRouter does not list it either)')
     return out
+
+
+# ---- OpenRouter's catalogue: dates (and makers) the tables above lack ------------------------------
+# A model new to the board should not wait on an edit here to join the explorer's time axis. Without
+# a RELEASE entry its date is the day OpenRouter listed it, in Pacific time like the dates above
+# (each of those was cross-checked against this catalogue). A date taken so is recorded in
+# data/release_openrouter.json, committed with the page, so it never moves, even if OpenRouter later
+# drops the model. The live catalogue is read at most hourly into cache/; a failed read uses that copy.
+OPENROUTER_URL = 'https://openrouter.ai/api/v1/models'
+_HERE = os.path.dirname(os.path.abspath(__file__))
+OPENROUTER_CACHE = os.path.join(_HERE, 'cache', 'openrouter_models.json')
+OPENROUTER_RECORD = os.path.join(_HERE, 'data', 'release_openrouter.json')
+OPENROUTER_MAX_AGE = 3600
+PACIFIC = zoneinfo.ZoneInfo('America/Los_Angeles')
+# OpenRouter's vendor prefix -> company, for a row the board files under "Unplaced". Its own stealth
+# listings ("openrouter/...") stay Undisclosed.
+VENDOR_COMPANY = {
+    'anthropic': 'Anthropic', 'openai': 'OpenAI', 'google': 'Google', 'meta-llama': 'Meta', 'meta': 'Meta',
+    'x-ai': 'xAI', 'deepseek': 'DeepSeek', 'z-ai': 'Z.ai', 'moonshotai': 'Moonshot', 'mistralai': 'Mistral AI',
+    'stepfun-ai': 'StepFun', 'stepfun': 'StepFun', 'fireworks': 'Fireworks AI', 'cognition': 'Cognition',
+    'thinking-machines': 'Thinking Machines', 'thinkingmachines': 'Thinking Machines',
+}
+
+
+def _key(model_id):
+    """One spelling for the board's ids and OpenRouter's: vendor and ':variant' dropped, versions
+    with points, a trailing '.0' dropped. 'claude-opus-5-5' and 'anthropic/claude-opus-5.5' ->
+    'claude-opus-5.5'; 'deepseek-v4.1-flash:wafer' -> 'deepseek-v4.1-flash'."""
+    s = model_id.lower().split('/')[-1].split(':')[0]
+    s = re.sub(r'(?<=\d)-(?=\d)', '.', s)
+    return re.sub(r'(?<=\d)\.0\b', '', s)
+
+
+def _load(path):
+    try:
+        with open(path) as f:
+            return json.load(f)
+    except (OSError, ValueError):
+        return None
+
+
+_catalogue = None
+
+
+def _openrouter_catalogue():
+    """{key: {'id', 'created'}}: the earliest listing of each model OpenRouter has ever shown here."""
+    global _catalogue
+    if _catalogue is not None:
+        return _catalogue
+    cache = _load(OPENROUTER_CACHE) or {'fetched': 0, 'models': {}}
+    if time.time() - cache.get('fetched', 0) > OPENROUTER_MAX_AGE:
+        try:
+            req = urllib.request.Request(OPENROUTER_URL, headers={'User-Agent': 'buildingbench-site'})
+            with urllib.request.urlopen(req, timeout=20) as r:
+                live = json.load(r)['data']
+            for m in live:                               # a union: a model OpenRouter drops keeps its date
+                if m.get('created'):
+                    old = cache['models'].get(m['id'])
+                    cache['models'][m['id']] = min(old, m['created']) if old else m['created']
+            cache['fetched'] = time.time()
+            os.makedirs(os.path.dirname(OPENROUTER_CACHE), exist_ok=True)
+            with open(OPENROUTER_CACHE + '.tmp', 'w') as f:
+                json.dump(cache, f)
+            os.replace(OPENROUTER_CACHE + '.tmp', OPENROUTER_CACHE)
+        except Exception as e:                           # offline: the last copy will do
+            print('catalog: OpenRouter catalogue not read (%s); using the copy from %s' % (
+                e, time.strftime('%Y-%m-%d %H:%M', time.localtime(cache.get('fetched', 0)))))
+    _catalogue = {}
+    for mid, created in cache['models'].items():
+        k = _key(mid)
+        if k not in _catalogue or created < _catalogue[k]['created']:
+            _catalogue[k] = {'id': mid, 'created': created}
+    return _catalogue
+
+
+def openrouter(model):
+    """OpenRouter's earliest listing of a board model id, or None."""
+    return _openrouter_catalogue().get(_key(model))
+
+
+def openrouter_company(model):
+    hit = openrouter(model)
+    return VENDOR_COMPANY.get(hit['id'].split('/')[0]) if hit else None
+
+
+_record = None
+_taken = {}
+
+
+def release(model):
+    """The model's release date: RELEASE, else the date recorded from OpenRouter, else the day
+    OpenRouter listed it (then recorded by save_openrouter_record()), else None."""
+    global _record
+    if model in RELEASE:
+        return RELEASE[model]
+    if _record is None:
+        _record = _load(OPENROUTER_RECORD) or {}
+    if model in _record:
+        return _record[model]['date']
+    hit = openrouter(model)
+    if not hit:
+        return None
+    listed = datetime.datetime.fromtimestamp(hit['created'], datetime.timezone.utc)
+    _taken[model] = {'date': listed.astimezone(PACIFIC).date().isoformat(), 'openrouter': hit['id'],
+                     'listed': listed.strftime('%Y-%m-%d %H:%M UTC')}
+    return _taken[model]['date']
+
+
+def dated_by_openrouter(models):
+    """{model: date} for those of `models` whose date came from OpenRouter rather than RELEASE."""
+    return {m: release(m) for m in models if m not in RELEASE and release(m)}
+
+
+def save_openrouter_record(models):
+    """Record the OpenRouter dates of `models` (the ones the page shows) that are not recorded yet."""
+    rec = _load(OPENROUTER_RECORD) or {}
+    new = {m: _taken[m] for m in models if m in _taken and m not in rec}
+    if new:
+        rec.update(new)
+        with open(OPENROUTER_RECORD, 'w') as f:
+            json.dump(dict(sorted(rec.items())), f, indent=1)
+            f.write('\n')
+    return new
