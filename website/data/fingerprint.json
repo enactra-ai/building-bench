@@ -1,6 +1,6 @@
 {
- "fingerprint": "d9c86d844b0258a7c2013efe215c73473bd74505a8f9b7377cae13ff0c11cb02",
- "snapshot": "2026-10-13",
+ "fingerprint": "7c76f0129585e1297e04b1182dc6deafb84491c6a62359689da879e8707b2b2b",
+ "snapshot": "2026-10-14",
  "buildings": 12,
  "results": 352,
  "models": [
@@ -35,10 +35,5 @@
   "GLM‑5.3 Flash (max)",
   "Inkling"
  ],
- "incomplete": {
-  "gemini-4-argon": [
-   "name (shown as 'Gemini 4 Argon')",
-   "release date"
-  ]
- }
+ "incomplete": {}
 }
