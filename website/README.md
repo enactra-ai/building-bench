@@ -50,12 +50,13 @@ to `EDITIONS` in `publish.sh` to publish it too).
 - **To change the page**, push to `website`; the next run builds from it and publishes if the page
   changed. Do not edit the cron checkout (every run resets it) or hand-edit `index.html` in either
   repo (the next build overwrites it).
-- **A model new to the board** is published at once, under a name spelled from its id and in its
-  board organisation's company (`catalog.py`), dated by the day OpenRouter listed it, so it joins
-  the explorer's time axis with no edit (`release()` in `catalog.py`; the date is recorded in
-  `data/release_openrouter.json` and named in the publish commit). Only a model OpenRouter does
-  not list either stays off that axis; the publish commit lists what is still missing. A
-  `RELEASE` entry in `catalog.py` (the public launch date) always wins over OpenRouter's. A new *company* is drawn grey until it gets a colour: `FAMILIES`
+- **A model new to the board** is published at once with nothing filled in by hand: a name spelled
+  from its id, its board organisation's company (else the maker OpenRouter lists it under, else
+  Undisclosed), and as its release date the day OpenRouter listed it, else the day it first
+  appears on the page (`release()` in `catalog.py`). The date is recorded in
+  `data/release_auto.json`, committed with the page, so it never moves; the publish commit names
+  the dates and defaults it used. The `RELEASE` table in `catalog.py` keeps the hand-checked launch
+  dates of the models placed before 2026-10-14; nothing is added to it any more. A new *company* is drawn grey until it gets a colour: `FAMILIES`
   in `build.py`, `COLOUR`/`LOGO` in `figures/bar/build_site.py`, `COMPANY` in
   `figures/pareto/models.py`.
 - **Try it without publishing**: `BB_DRY_RUN=1 ./publish.sh` builds and prints the commit
@@ -103,9 +104,10 @@ only downloads glbs it does not already have.
   arrow from each release to the next. Outputs are drawn large (124 px, 100 px with every family
   shown), so they are laid out near their true point and, when they had to move aside, tethered
   to it by a dotted line with a dot at the true point. Price and month sit under each output.
-- **Release dates** are the public launch dates, kept in the `RELEASE` table in `catalog.py`; a model
-  not in it gets the day OpenRouter listed it (Pacific time), which matched 27 of the 32 dates below
-  when checked on 2026-10-14 (the other 5 by 1–18 days, mostly later):
+- **Release dates**: for a model placed since 2026-10-14, the day OpenRouter listed it (Pacific
+  time), else its first day on the page, set automatically. OpenRouter's day matched 27 of the 32
+  hand-checked public launch dates below when compared on 2026-10-14 (the other 5 by 1–18 days,
+  mostly later). Those, kept in the `RELEASE` table in `catalog.py`:
   Claude Haiku 4.5 2025‑10‑15 · Gemini 3.1 Pro 2026‑02‑19 · Gemini 3.5 Flash 2026‑05‑19 ·
   Claude Fable 5 2026‑06‑09 · Claude Sonnet 5 2026‑06‑30 · GPT‑5.6 Sol/Terra/Luna 2026‑07‑09 ·
   Muse Spark 1.1 2026‑07‑09 · Inkling 2026‑07‑15 · Kimi K3 2026‑07‑16 · Claude Opus 5 2026‑07‑24 ·

@@ -175,11 +175,12 @@ FAMILY_ORDER = [f for f in FAMILY_ORDER if FAMILIES[f]['color'] != NEW_FAMILY_CO
 board_org = {display_name(r['label'])[2]: r['org'] for r in board['rows']}
 incomplete = {m['id']: catalog.missing(m['id'], board_org.get(m['id'])) for m in models}
 incomplete = {k: v for k, v in incomplete.items() if v}
-# A model catalog.py has no date for is dated by the day OpenRouter listed it (catalog.release);
-# record those dates with the page, so they stay put, and name them in the publish commit.
-catalog.save_openrouter_record([m['id'] for m in models])
-dated = catalog.dated_by_openrouter([m['id'] for m in models])
-RELEASE = dict(RELEASE, **dated)
+# A model catalog.py has no date for is dated automatically (catalog.release: OpenRouter's listing
+# day, else its first day on the page); record those dates with the page, so they stay put, and
+# name them in the publish commit.
+catalog.save_auto_record([m['id'] for m in models])
+dated = catalog.auto_dated([m['id'] for m in models])
+RELEASE = dict(RELEASE, **{m['id']: m['date'] for m in models if m['id'] in dated})
 if missing:
     print('WARNING: %d picked runs have no slimmed asset:' % len(missing), *missing[:5], sep='\n  ')
 

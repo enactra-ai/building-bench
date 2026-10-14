@@ -74,11 +74,11 @@ if not added and not gone: print("Same models; scores, runs or costs moved.")
 dated = {m: d for m, d in new.get("dated", {}).items() if m not in old.get("dated", {})}
 if dated:
     print()
-    print("Release dates from the day OpenRouter listed the model (catalog.py has none):")
+    print("Release dates set automatically (catalog.py has none):")
     for m, d in dated.items(): print("  %s: %s" % (m, d))
 if new["incomplete"]:
     print()
-    print("Still missing for models now on the page (add them to website/catalog.py):")
+    print("Drawn with defaults (nothing to do):")
     for m, what in new["incomplete"].items(): print("  %s: %s" % (m, ", ".join(what)))
 print()
 print("Built by website/publish.sh from the board at ds-serv12:8870.")

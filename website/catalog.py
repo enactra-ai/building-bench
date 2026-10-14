@@ -4,12 +4,12 @@ Shared by build.py (the explorer) and leaderboard.py with the figures under figu
 is named in one place. The board labels a row by model id, then an optional reasoning effort and
 harness: 'claude-opus-5-5 (max)', 'deepseek/deepseek-v4.1-flash:wafer (max) · Claude Code'.
 
-A model the tables below do not know is still published -- under a name made from its id, in its
-board organisation's company (grey if that company has no colour yet) -- and with the day
-OpenRouter listed it as its release date (see release()), so it joins the explorer's time axis
-without an edit here. Only a model OpenRouter does not list either stays off that axis. build.py
-writes what is still missing for the models it shows to data/fingerprint.json, and publish.sh puts
-that list, and the dates it took from OpenRouter, in its commit message.
+Nothing here needs filling in by hand for a new model. One the tables below do not know is
+published at once with defaults: a name made from its id, its board organisation's company (else
+the maker OpenRouter lists it under, else Undisclosed; grey if that company has no colour yet),
+and as its release date the day OpenRouter listed it, else the day it first appears on the page
+(see release()). build.py writes which defaults it used for the models it shows to
+data/fingerprint.json, and publish.sh puts them in its commit message.
 """
 import datetime
 import json
@@ -37,8 +37,8 @@ NAMES = {
     'gemini-4-argon': 'Gemini 4 Argon',
 }
 
-# Public launch dates, from the announcements (see README for sources). The board carries none.
-# A model missing here is dated from OpenRouter's catalogue instead: see release().
+# Public launch dates, from the announcements (see README for sources), for the models placed by hand
+# before 2026-10-14. Nothing is added here any more: a model missing here is dated by release().
 RELEASE = {
     'claude-haiku-4-5': '2025-10-15', 'gemini-3.1-pro': '2026-02-19', 'gemini-3.5-flash': '2026-05-19',
     'claude-fable-5': '2026-06-09', 'claude-sonnet-5': '2026-06-30',
@@ -127,27 +127,27 @@ def company(model, org):
 
 
 def missing(model, org):
-    """What the page could not find for a model it shows: [] when it is fully described."""
+    """The defaults a model the page shows is drawn with, for the publish commit: [] when the tables
+    above or OpenRouter describe it. (Its release date always has a value: see release().)"""
     out = []
     if model not in NAMES:
-        out.append('name (shown as %r)' % name(model))
+        out.append('name spelled from its id (%r)' % name(model))
     if not _maker(model, org) and not openrouter_company(model):
-        out.append('company (the board says %r)' % org)
-    if not release(model):
-        out.append('release date (OpenRouter does not list it either)')
+        out.append('company %r (the board says %r)' % (company(model, org), org))
     return out
 
 
-# ---- OpenRouter's catalogue: dates (and makers) the tables above lack ------------------------------
-# A model new to the board should not wait on an edit here to join the explorer's time axis. Without
-# a RELEASE entry its date is the day OpenRouter listed it, in Pacific time like the dates above
-# (each of those was cross-checked against this catalogue). A date taken so is recorded in
-# data/release_openrouter.json, committed with the page, so it never moves, even if OpenRouter later
-# drops the model. The live catalogue is read at most hourly into cache/; a failed read uses that copy.
+# ---- release dates (and makers) without a hand-kept entry -----------------------------------------------
+# A model new to the board must not wait on an edit here to join the explorer's time axis. Without a
+# RELEASE entry its date is the day OpenRouter listed it, in Pacific time like the dates above (27 of
+# the 32 of those that OpenRouter lists fell on that same day); a model OpenRouter does not list is
+# dated by the day it first appears on the page. A date set so is recorded in data/release_auto.json,
+# committed with the page, so it never moves afterwards. The live catalogue is read at most hourly
+# into cache/; a failed read uses that copy.
 OPENROUTER_URL = 'https://openrouter.ai/api/v1/models'
 _HERE = os.path.dirname(os.path.abspath(__file__))
 OPENROUTER_CACHE = os.path.join(_HERE, 'cache', 'openrouter_models.json')
-OPENROUTER_RECORD = os.path.join(_HERE, 'data', 'release_openrouter.json')
+AUTO_RECORD = os.path.join(_HERE, 'data', 'release_auto.json')
 OPENROUTER_MAX_AGE = 3600
 PACIFIC = zoneinfo.ZoneInfo('America/Los_Angeles')
 # OpenRouter's vendor prefix -> company, for a row the board files under "Unplaced". Its own stealth
@@ -225,37 +225,44 @@ _record = None
 _taken = {}
 
 
-def release(model):
-    """The model's release date: RELEASE, else the date recorded from OpenRouter, else the day
-    OpenRouter listed it (then recorded by save_openrouter_record()), else None."""
+def _auto(model):
+    """The recorded automatic date of a model, else a new one: OpenRouter's listing day, else today."""
     global _record
-    if model in RELEASE:
-        return RELEASE[model]
     if _record is None:
-        _record = _load(OPENROUTER_RECORD) or {}
+        _record = _load(AUTO_RECORD) or {}
     if model in _record:
-        return _record[model]['date']
-    hit = openrouter(model)
-    if not hit:
-        return None
-    listed = datetime.datetime.fromtimestamp(hit['created'], datetime.timezone.utc)
-    _taken[model] = {'date': listed.astimezone(PACIFIC).date().isoformat(), 'openrouter': hit['id'],
-                     'listed': listed.strftime('%Y-%m-%d %H:%M UTC')}
-    return _taken[model]['date']
+        return _record[model]
+    if model not in _taken:
+        hit = openrouter(model)
+        if hit:
+            listed = datetime.datetime.fromtimestamp(hit['created'], datetime.timezone.utc)
+            _taken[model] = {'date': listed.astimezone(PACIFIC).date().isoformat(), 'source': 'OpenRouter listing',
+                             'openrouter': hit['id'], 'listed': listed.strftime('%Y-%m-%d %H:%M UTC')}
+        else:
+            _taken[model] = {'date': datetime.datetime.now(PACIFIC).date().isoformat(),
+                             'source': 'first day on the page'}
+    return _taken[model]
 
 
-def dated_by_openrouter(models):
-    """{model: date} for those of `models` whose date came from OpenRouter rather than RELEASE."""
-    return {m: release(m) for m in models if m not in RELEASE and release(m)}
+def release(model):
+    """The model's release date, never None: RELEASE, else its recorded automatic date, else the day
+    OpenRouter listed it, else today -- the day it first appears on the page. A new automatic date
+    is recorded by save_auto_record() when the page that shows it is built."""
+    return RELEASE[model] if model in RELEASE else _auto(model)['date']
 
 
-def save_openrouter_record(models):
-    """Record the OpenRouter dates of `models` (the ones the page shows) that are not recorded yet."""
-    rec = _load(OPENROUTER_RECORD) or {}
-    new = {m: _taken[m] for m in models if m in _taken and m not in rec}
+def auto_dated(models):
+    """{model: 'date (how)'} for those of `models` dated automatically rather than from RELEASE."""
+    return {m: '%s (%s)' % (_auto(m)['date'], _auto(m)['source']) for m in models if m not in RELEASE}
+
+
+def save_auto_record(models):
+    """Record the automatic dates of `models` (the ones the page shows) that are not recorded yet."""
+    rec = _load(AUTO_RECORD) or {}
+    new = {m: _auto(m) for m in models if m not in RELEASE and m not in rec}
     if new:
         rec.update(new)
-        with open(OPENROUTER_RECORD, 'w') as f:
+        with open(AUTO_RECORD, 'w') as f:
             json.dump(dict(sorted(rec.items())), f, indent=1)
             f.write('\n')
     return new
