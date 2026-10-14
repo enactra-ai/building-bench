@@ -26,6 +26,7 @@ NAMES = {
     'union-alpha': 'Union Alpha', 'space-bunny-alpha': 'Space Bunny Alpha', 'inkling:free': 'Inkling',
     'gpt-6.1-sol': 'GPT‑6.1 Sol', 'claude-sonnet-5-5': 'Claude Sonnet 5.5', 'claude-haiku-5-5': 'Claude Haiku 5.5',
     'ember-1': 'Ember‑1', 'mistral-large-4-0': 'Mistral Large 4', 'muse-wonder-1.0': 'Muse Wonder 1.0',
+    'gemini-4-argon': 'Gemini 4 Argon',
 }
 
 # Public launch dates, from the announcements (see README for sources). The board carries none.
@@ -48,6 +49,9 @@ RELEASE = {
     'claude-sonnet-5-5': '2026-09-28', 'gpt-6.1-sol': '2026-09-29', 'mistral-large-4-0': '2026-10-06',
     'claude-haiku-5-5': '2026-10-07',
     'muse-wonder-1.0': '2026-10-12',      # Meta Superintelligence Labs' announcement; API id muse-wonder-1.0
+    # 2026-10-14: Google announced Argon on 09-30 for cyber-defense partners only; the public launch is
+    # 10-13, when it reached OpenRouter (16:04 UTC) and Antigravity
+    'gemini-4-argon': '2026-10-13',
 }
 
 # One company per model, in the leaderboard figures' palette. The board's organisation, as it
