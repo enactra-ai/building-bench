@@ -432,6 +432,50 @@
    }
   },
   {
+   "label": "gemini-4-argon (high)",
+   "sub": "Google",
+   "org": "Google",
+   "series": "gemini4argonhigh",
+   "values": {
+    "overall": 0.8116,
+    "cost": 6.5156,
+    "cells": 12,
+    "ran": 12,
+    "f": 0.4569,
+    "geometry": 0.8197,
+    "appearance": 0.9408,
+    "silhouette": 0.8611,
+    "outline": 0.6575,
+    "plan": 0.8357,
+    "height": 0.8904,
+    "colour": 0.9937,
+    "structure": 0.8704,
+    "materials": 1.0,
+    "precision": 0.4833,
+    "recall": 0.4349,
+    "triangles": 3064.3333,
+    "turns": 207.0,
+    "minutes": 90.78,
+    "common": 0.8116,
+    "takes": 12,
+    "place": 4
+   },
+   "band": {
+    "overall": 0.0193
+   },
+   "optimal": false,
+   "tags": [
+    {
+     "text": "est. price",
+     "kind": "warn"
+    }
+   ],
+   "facets": {
+    "family": "Google",
+    "effort": "high"
+   }
+  },
+  {
    "label": "grok-4.7 (xhigh)",
    "sub": "xAI",
    "org": "xAI",
@@ -542,7 +586,7 @@
     "minutes": 67.98,
     "common": 0.7555,
     "takes": 12,
-    "place": 6
+    "place": 7
    },
    "band": {
     "overall": 0.022
@@ -582,7 +626,7 @@
     "minutes": 92.58,
     "common": 0.7448,
     "takes": 12,
-    "place": 7
+    "place": 8
    },
    "band": {
     "overall": 0.0212
@@ -622,7 +666,7 @@
     "minutes": 43.82,
     "common": 0.7388,
     "takes": 12,
-    "place": 7
+    "place": 8
    },
    "band": {
     "overall": 0.0152
@@ -662,7 +706,7 @@
     "minutes": 30.24,
     "common": 0.7307,
     "takes": 12,
-    "place": 7
+    "place": 8
    },
    "band": {
     "overall": 0.0312
@@ -707,7 +751,7 @@
     "minutes": 114.13,
     "common": 0.7288,
     "takes": 12,
-    "place": 7
+    "place": 8
    },
    "band": {
     "overall": 0.0226
@@ -750,7 +794,7 @@
     "minutes": 34.92,
     "common": 0.7026,
     "takes": 12,
-    "place": 9
+    "place": 10
    },
    "band": {
     "overall": 0.016
@@ -794,7 +838,7 @@
     "minutes": 19.09,
     "common": 0.698,
     "takes": 12,
-    "place": 9
+    "place": 10
    },
    "band": {
     "overall": 0.0224
@@ -837,7 +881,7 @@
     "triangles": 10360.0,
     "minutes": 69.72,
     "takes": 1,
-    "place": 9
+    "place": 10
    },
    "band": {},
    "optimal": false,
@@ -874,7 +918,7 @@
     "minutes": 20.75,
     "common": 0.6962,
     "takes": 12,
-    "place": 9
+    "place": 10
    },
    "band": {
     "overall": 0.0218
@@ -919,7 +963,7 @@
     "minutes": 53.34,
     "common": 0.695,
     "takes": 12,
-    "place": 9
+    "place": 10
    },
    "band": {
     "overall": 0.0293
@@ -964,7 +1008,7 @@
     "minutes": 53.03,
     "common": 0.6848,
     "takes": 12,
-    "place": 12
+    "place": 13
    },
    "band": {
     "overall": 0.0232
@@ -1004,7 +1048,7 @@
     "minutes": 60.05,
     "common": 0.6823,
     "takes": 12,
-    "place": 12
+    "place": 13
    },
    "band": {
     "overall": 0.024
@@ -1043,7 +1087,7 @@
     "minutes": 80.5,
     "common": 0.6799,
     "takes": 12,
-    "place": 12
+    "place": 13
    },
    "band": {
     "overall": 0.0309
@@ -1087,7 +1131,7 @@
     "minutes": 77.5,
     "common": 0.679,
     "takes": 12,
-    "place": 12
+    "place": 13
    },
    "band": {
     "overall": 0.0235
@@ -1131,7 +1175,7 @@
     "minutes": 247.49,
     "common": 0.6734,
     "takes": 12,
-    "place": 12
+    "place": 13
    },
    "band": {
     "overall": 0.0309
@@ -1179,7 +1223,7 @@
     "minutes": 36.12,
     "common": 0.6714,
     "takes": 12,
-    "place": 12
+    "place": 13
    },
    "band": {
     "overall": 0.0191
@@ -1223,7 +1267,7 @@
     "turns": 51.0,
     "minutes": 8.22,
     "takes": 3,
-    "place": 12
+    "place": 13
    },
    "band": {
     "overall": 0.0314
@@ -1263,7 +1307,7 @@
     "minutes": 62.74,
     "common": 0.6156,
     "takes": 12,
-    "place": 20
+    "place": 21
    },
    "band": {
     "overall": 0.0221
@@ -1302,7 +1346,7 @@
     "minutes": 114.94,
     "common": 0.5558,
     "takes": 12,
-    "place": 20
+    "place": 21
    },
    "band": {
     "overall": 0.0578
@@ -1345,7 +1389,7 @@
     "minutes": 39.51,
     "common": 0.5476,
     "takes": 12,
-    "place": 20
+    "place": 21
    },
    "band": {
     "overall": 0.0607
@@ -1385,7 +1429,7 @@
     "minutes": 60.73,
     "common": 0.5436,
     "takes": 12,
-    "place": 24
+    "place": 25
    },
    "band": {
     "overall": 0.032
@@ -1425,7 +1469,7 @@
     "minutes": 125.14,
     "common": 0.5403,
     "takes": 12,
-    "place": 24
+    "place": 25
    },
    "band": {
     "overall": 0.0371
@@ -1468,7 +1512,7 @@
     "minutes": 688.59,
     "common": 0.5197,
     "takes": 12,
-    "place": 24
+    "place": 25
    },
    "band": {
     "overall": 0.0945
@@ -1511,7 +1555,7 @@
     "triangles": 3588.0,
     "minutes": 16.75,
     "takes": 2,
-    "place": 24
+    "place": 25
    },
    "band": {
     "overall": 0.1903
@@ -1549,7 +1593,7 @@
     "minutes": 427.17,
     "common": 0.3391,
     "takes": 12,
-    "place": 30
+    "place": 31
    },
    "band": {
     "overall": 0.0342
@@ -1592,7 +1636,7 @@
     "minutes": 100.71,
     "common": 0.3302,
     "takes": 12,
-    "place": 30
+    "place": 31
    },
    "band": {
     "overall": 0.0919
@@ -1631,7 +1675,7 @@
     "minutes": 10.85,
     "common": 0.2668,
     "takes": 12,
-    "place": 31
+    "place": 32
    },
    "band": {
     "overall": 0.0509
@@ -1670,7 +1714,7 @@
     "minutes": 4.31,
     "common": 0.2581,
     "takes": 12,
-    "place": 31
+    "place": 32
    },
    "band": {
     "overall": 0.0493
@@ -1905,6 +1949,50 @@
    }
   },
   {
+   "label": "gemini-4-argon (high)",
+   "sub": "Google",
+   "org": "Google",
+   "series": "gemini4argonhigh",
+   "values": {
+    "overall": 0.8116,
+    "cost": 6.5156,
+    "cells": 12,
+    "ran": 12,
+    "f": 0.4569,
+    "geometry": 0.8197,
+    "appearance": 0.9408,
+    "silhouette": 0.8611,
+    "outline": 0.6575,
+    "plan": 0.8357,
+    "height": 0.8904,
+    "colour": 0.9937,
+    "structure": 0.8704,
+    "materials": 1.0,
+    "precision": 0.4833,
+    "recall": 0.4349,
+    "triangles": 3064.3333,
+    "turns": 207.0,
+    "minutes": 90.78,
+    "common": 0.8116,
+    "takes": 12,
+    "place": 4
+   },
+   "band": {
+    "overall": 0.0193
+   },
+   "optimal": false,
+   "tags": [
+    {
+     "text": "est. price",
+     "kind": "warn"
+    }
+   ],
+   "facets": {
+    "family": "Google",
+    "effort": "high"
+   }
+  },
+  {
    "label": "grok-4.7 (xhigh)",
    "sub": "xAI",
    "org": "xAI",
@@ -1976,7 +2064,7 @@
     "minutes": 67.98,
     "common": 0.7555,
     "takes": 12,
-    "place": 6
+    "place": 7
    },
    "band": {
     "overall": 0.022
@@ -2016,7 +2104,7 @@
     "minutes": 92.58,
     "common": 0.7448,
     "takes": 12,
-    "place": 7
+    "place": 8
    },
    "band": {
     "overall": 0.0212
@@ -2056,7 +2144,7 @@
     "minutes": 43.82,
     "common": 0.7388,
     "takes": 12,
-    "place": 7
+    "place": 8
    },
    "band": {
     "overall": 0.0152
@@ -2096,7 +2184,7 @@
     "minutes": 30.24,
     "common": 0.7307,
     "takes": 12,
-    "place": 7
+    "place": 8
    },
    "band": {
     "overall": 0.0312
@@ -2141,7 +2229,7 @@
     "minutes": 114.13,
     "common": 0.7288,
     "takes": 12,
-    "place": 7
+    "place": 8
    },
    "band": {
     "overall": 0.0226
@@ -2184,7 +2272,7 @@
     "minutes": 34.92,
     "common": 0.7026,
     "takes": 12,
-    "place": 9
+    "place": 10
    },
    "band": {
     "overall": 0.016
@@ -2228,7 +2316,7 @@
     "minutes": 19.09,
     "common": 0.698,
     "takes": 12,
-    "place": 9
+    "place": 10
    },
    "band": {
     "overall": 0.0224
@@ -2272,7 +2360,7 @@
     "minutes": 20.75,
     "common": 0.6962,
     "takes": 12,
-    "place": 9
+    "place": 10
    },
    "band": {
     "overall": 0.0218
@@ -2317,7 +2405,7 @@
     "minutes": 53.34,
     "common": 0.695,
     "takes": 12,
-    "place": 9
+    "place": 10
    },
    "band": {
     "overall": 0.0293
@@ -2362,7 +2450,7 @@
     "minutes": 53.03,
     "common": 0.6848,
     "takes": 12,
-    "place": 12
+    "place": 13
    },
    "band": {
     "overall": 0.0232
@@ -2402,7 +2490,7 @@
     "minutes": 60.05,
     "common": 0.6823,
     "takes": 12,
-    "place": 12
+    "place": 13
    },
    "band": {
     "overall": 0.024
@@ -2441,7 +2529,7 @@
     "minutes": 80.5,
     "common": 0.6799,
     "takes": 12,
-    "place": 12
+    "place": 13
    },
    "band": {
     "overall": 0.0309
@@ -2485,7 +2573,7 @@
     "minutes": 77.5,
     "common": 0.679,
     "takes": 12,
-    "place": 12
+    "place": 13
    },
    "band": {
     "overall": 0.0235
@@ -2529,7 +2617,7 @@
     "minutes": 247.49,
     "common": 0.6734,
     "takes": 12,
-    "place": 12
+    "place": 13
    },
    "band": {
     "overall": 0.0309
@@ -2577,7 +2665,7 @@
     "minutes": 36.12,
     "common": 0.6714,
     "takes": 12,
-    "place": 12
+    "place": 13
    },
    "band": {
     "overall": 0.0191
@@ -2622,7 +2710,7 @@
     "minutes": 62.74,
     "common": 0.6156,
     "takes": 12,
-    "place": 20
+    "place": 21
    },
    "band": {
     "overall": 0.0221
@@ -2661,7 +2749,7 @@
     "minutes": 114.94,
     "common": 0.5558,
     "takes": 12,
-    "place": 20
+    "place": 21
    },
    "band": {
     "overall": 0.0578
@@ -2704,7 +2792,7 @@
     "minutes": 39.51,
     "common": 0.5476,
     "takes": 12,
-    "place": 20
+    "place": 21
    },
    "band": {
     "overall": 0.0607
@@ -2744,7 +2832,7 @@
     "minutes": 60.73,
     "common": 0.5436,
     "takes": 12,
-    "place": 24
+    "place": 25
    },
    "band": {
     "overall": 0.032
@@ -2784,7 +2872,7 @@
     "minutes": 125.14,
     "common": 0.5403,
     "takes": 12,
-    "place": 24
+    "place": 25
    },
    "band": {
     "overall": 0.0371
@@ -2827,7 +2915,7 @@
     "minutes": 688.59,
     "common": 0.5197,
     "takes": 12,
-    "place": 24
+    "place": 25
    },
    "band": {
     "overall": 0.0945
@@ -2870,7 +2958,7 @@
     "minutes": 427.17,
     "common": 0.3391,
     "takes": 12,
-    "place": 30
+    "place": 31
    },
    "band": {
     "overall": 0.0342
@@ -2913,7 +3001,7 @@
     "minutes": 100.71,
     "common": 0.3302,
     "takes": 12,
-    "place": 30
+    "place": 31
    },
    "band": {
     "overall": 0.0919
@@ -2952,7 +3040,7 @@
     "minutes": 10.85,
     "common": 0.2668,
     "takes": 12,
-    "place": 31
+    "place": 32
    },
    "band": {
     "overall": 0.0509
@@ -2991,7 +3079,7 @@
     "minutes": 4.31,
     "common": 0.2581,
     "takes": 12,
-    "place": 31
+    "place": 32
    },
    "band": {
     "overall": 0.0493

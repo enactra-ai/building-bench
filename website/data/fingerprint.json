@@ -1,13 +1,14 @@
 {
- "fingerprint": "2175a5560c7dd40754ac39444fa9ba49bb7fd44e91ba2fa9719118cd553f51e7",
- "snapshot": "2026-10-12",
+ "fingerprint": "d9c86d844b0258a7c2013efe215c73473bd74505a8f9b7377cae13ff0c11cb02",
+ "snapshot": "2026-10-13",
  "buildings": 12,
- "results": 340,
+ "results": 352,
  "models": [
   "Claude Opus 5.5 (max)",
   "GPT‑6.1 Sol (max)",
   "Claude Sonnet 5.5 (max)",
   "GPT‑6 Astra (ultra)",
+  "Gemini 4 Argon (high)",
   "Grok 4.7 (xhigh)",
   "Claude Fable 5.1 (max)",
   "Claude Opus 5 (max)",
@@ -34,5 +35,10 @@
   "GLM‑5.3 Flash (max)",
   "Inkling"
  ],
- "incomplete": {}
+ "incomplete": {
+  "gemini-4-argon": [
+   "name (shown as 'Gemini 4 Argon')",
+   "release date"
+  ]
+ }
 }
