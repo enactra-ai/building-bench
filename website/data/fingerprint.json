@@ -1,8 +1,8 @@
 {
- "fingerprint": "903989d9757c56fcfc95024193764671be3018510c848aae68c743ef37e6d5e8",
+ "fingerprint": "4c5042c810338a124455fb19e21936c0abea73b7a86e1bb77aa437147d4a4ae9",
  "snapshot": "2026-10-15",
  "buildings": 12,
- "results": 357,
+ "results": 364,
  "models": [
   "Claude Opus 5.5 (max)",
   "GPT‑6.1 Sol (max)",

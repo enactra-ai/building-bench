@@ -42,7 +42,7 @@
   "reach_m": 400.0
  },
  "cleanBoard": {
-  "runsScored": 621,
+  "runsScored": 628,
   "modelsRanked": 37,
   "buildings": 12,
   "rows": {
@@ -399,15 +399,15 @@
     "place": 25
    },
    "nvidianemotron35supervlfreeclaudecode": {
-    "label": "nvidia/nemotron-3.5-super-vl:free (max) \u00b7 Claude Code",
-    "overall": 0.3592,
-    "f": 0.0775,
-    "geometry": 0.4692,
-    "appearance": 0.3012,
-    "cost": 0.0,
-    "minutes": 13.94,
-    "cells": 5,
-    "place": 27
+    "label": "nvidia/nemotron-3.5-super-vl (max) \u00b7 Claude Code",
+    "overall": 0.3778,
+    "f": 0.0906,
+    "geometry": 0.4787,
+    "appearance": 0.3399,
+    "cost": 0.7568904999999999,
+    "minutes": 36.13,
+    "cells": 12,
+    "place": 30
    },
    "step5previewclaudecode": {
     "label": "step-5-preview (max) \u00b7 Claude Code",
@@ -514,7 +514,7 @@
   "helsinki_122886734_enhanced_v1": {
    "union": false,
    "clean": true,
-   "n": 50,
+   "n": 51,
    "source": "Helsinki 3D city model"
   },
   "helsinki_122954081_enhanced_v1": {
@@ -526,7 +526,7 @@
   "helsinki_123901485_enhanced_v1": {
    "union": false,
    "clean": true,
-   "n": 51,
+   "n": 52,
    "source": "Helsinki 3D city model"
   },
   "helsinki_8033120_enhanced_v1": {
@@ -550,25 +550,25 @@
   "melbourne_22820458_enhanced_v1": {
    "union": false,
    "clean": true,
-   "n": 49,
+   "n": 50,
    "source": "City of Melbourne 2020 photomesh"
   },
   "melbourne_25422768_enhanced_v1": {
    "union": false,
    "clean": true,
-   "n": 51,
+   "n": 52,
    "source": "City of Melbourne 2020 photomesh"
   },
   "melbourne_296368687_enhanced_v1": {
    "union": false,
    "clean": true,
-   "n": 51,
+   "n": 52,
    "source": "City of Melbourne 2020 photomesh"
   },
   "melbourne_33106429_enhanced_v1": {
    "union": false,
    "clean": true,
-   "n": 49,
+   "n": 50,
    "source": "City of Melbourne 2020 photomesh"
   },
   "melbourne_45461060_enhanced_v1": {
@@ -580,7 +580,7 @@
   "melbourne_4817059_enhanced_v1": {
    "union": false,
    "clean": true,
-   "n": 50,
+   "n": 51,
    "source": "City of Melbourne 2020 photomesh"
   }
  }
