@@ -1,5 +1,5 @@
 {
- "snapshot": "2026-10-14",
+ "snapshot": "2026-10-15",
  "sameSet": [
   "allegiant_stadium",
   "aon_center_chicago",
@@ -13,8 +13,8 @@
   "twa_flight_center",
   "udvar_hazy"
  ],
- "runsScored": 2276,
- "modelsRanked": 56,
+ "runsScored": 2281,
+ "modelsRanked": 57,
  "rig": {
   "schema": "city_bench.building_light/1",
   "sun_azimuth_deg": 135.0,
@@ -42,8 +42,8 @@
   "reach_m": 400.0
  },
  "cleanBoard": {
-  "runsScored": 616,
-  "modelsRanked": 36,
+  "runsScored": 621,
+  "modelsRanked": 37,
   "buildings": 12,
   "rows": {
    "claudeopus55max": {
@@ -398,6 +398,17 @@
     "cells": 2,
     "place": 25
    },
+   "nvidianemotron35supervlfreeclaudecode": {
+    "label": "nvidia/nemotron-3.5-super-vl:free (max) \u00b7 Claude Code",
+    "overall": 0.3592,
+    "f": 0.0775,
+    "geometry": 0.4692,
+    "appearance": 0.3012,
+    "cost": 0.0,
+    "minutes": 13.94,
+    "cells": 5,
+    "place": 27
+   },
    "step5previewclaudecode": {
     "label": "step-5-preview (max) \u00b7 Claude Code",
     "overall": 0.3391,
@@ -509,7 +520,7 @@
   "helsinki_122954081_enhanced_v1": {
    "union": false,
    "clean": true,
-   "n": 48,
+   "n": 49,
    "source": "Helsinki 3D city model"
   },
   "helsinki_123901485_enhanced_v1": {
@@ -521,19 +532,19 @@
   "helsinki_8033120_enhanced_v1": {
    "union": false,
    "clean": true,
-   "n": 48,
+   "n": 49,
    "source": "Helsinki 3D city model"
   },
   "helsinki_cathedral_enhanced_v1": {
    "union": false,
    "clean": true,
-   "n": 53,
+   "n": 54,
    "source": "Helsinki 3D city model"
   },
   "melbourne_155809136_enhanced_v1": {
    "union": false,
    "clean": true,
-   "n": 49,
+   "n": 50,
    "source": "City of Melbourne 2020 photomesh"
   },
   "melbourne_22820458_enhanced_v1": {
@@ -563,7 +574,7 @@
   "melbourne_45461060_enhanced_v1": {
    "union": false,
    "clean": true,
-   "n": 49,
+   "n": 50,
    "source": "City of Melbourne 2020 photomesh"
   },
   "melbourne_4817059_enhanced_v1": {

@@ -1568,6 +1568,49 @@
    }
   },
   {
+   "label": "nvidia/nemotron-3.5-super-vl:free (max) \u00b7 Claude Code",
+   "sub": "nvidia",
+   "org": "nvidia",
+   "series": "nvidianemotron35supervlfreeclaudecode",
+   "values": {
+    "overall": 0.3592,
+    "cost": 0.0,
+    "cells": 5,
+    "ran": 5,
+    "f": 0.0775,
+    "geometry": 0.4692,
+    "appearance": 0.3012,
+    "silhouette": 0.5269,
+    "outline": 0.2848,
+    "plan": 0.5042,
+    "height": 0.4949,
+    "colour": 0.158,
+    "structure": 0.4921,
+    "materials": 0.83,
+    "precision": 0.0967,
+    "recall": 0.0691,
+    "triangles": 1148.6,
+    "turns": 129.0,
+    "minutes": 13.94,
+    "takes": 5,
+    "place": 27
+   },
+   "band": {
+    "overall": 0.057
+   },
+   "optimal": false,
+   "tags": [
+    {
+     "text": "est. price",
+     "kind": "warn"
+    }
+   ],
+   "facets": {
+    "family": "nvidia",
+    "effort": "max"
+   }
+  },
+  {
    "label": "step-5-preview (max) \u00b7 Claude Code",
    "sub": "Unplaced",
    "org": "Unplaced",

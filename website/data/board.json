@@ -236,6 +236,7 @@
     "triangles": 17703.4167,
     "turns": 433.0,
     "minutes": 159.17,
+    "common": 0.917,
     "takes": 12,
     "place": 1
    },
@@ -283,6 +284,7 @@
     "triangles": 44485.5,
     "turns": 1.0,
     "minutes": 43.24,
+    "common": 0.8888,
     "takes": 12,
     "place": 2
    },
@@ -330,6 +332,7 @@
     "triangles": 2109.1667,
     "turns": 840.0,
     "minutes": 236.53,
+    "common": 0.8406,
     "takes": 12,
     "place": 2
    },
@@ -374,7 +377,7 @@
     "triangles": 40953.8824,
     "turns": 42.0,
     "minutes": 30.12,
-    "common": 0.5724,
+    "common": 0.8599,
     "takes": 17,
     "place": 2
    },
@@ -413,6 +416,7 @@
     "triangles": 3064.3333,
     "turns": 207.0,
     "minutes": 90.78,
+    "common": 0.8693,
     "takes": 12,
     "place": 4
    },
@@ -456,6 +460,7 @@
     "triangles": 3741.0,
     "turns": 78.5,
     "minutes": 36.81,
+    "common": 0.8701,
     "takes": 12,
     "place": 4
    },
@@ -500,7 +505,7 @@
     "triangles": 6425.3871,
     "turns": 174.0,
     "minutes": 58.83,
-    "common": 0.7748,
+    "common": 0.7733,
     "takes": 31,
     "place": 4
    },
@@ -540,7 +545,6 @@
     "triangles": 72552.0,
     "turns": 52.0,
     "minutes": 36.82,
-    "common": 0.5431,
     "takes": 3,
     "place": 4
    },
@@ -580,7 +584,7 @@
     "triangles": 14001.3939,
     "turns": 231.0,
     "minutes": 94.6,
-    "common": 0.7533,
+    "common": 0.8154,
     "takes": 33,
     "place": 7
    },
@@ -620,6 +624,7 @@
     "triangles": 10489.4167,
     "turns": 75.0,
     "minutes": 30.24,
+    "common": 0.4668,
     "takes": 12,
     "place": 7
    },
@@ -664,6 +669,7 @@
     "triangles": 7102.5,
     "turns": 339.5,
     "minutes": 114.13,
+    "common": 0.7485,
     "takes": 12,
     "place": 8
    },
@@ -708,7 +714,7 @@
     "triangles": 6752.2857,
     "turns": 145.0,
     "minutes": 63.08,
-    "common": 0.5112,
+    "common": 0.7013,
     "takes": 28,
     "place": 8
    },
@@ -788,7 +794,6 @@
     "turns": 165.0,
     "minutes": 64.59,
     "repeat_sd": 0.0505,
-    "common": 0.7177,
     "takes": 21,
     "place": 8
    },
@@ -828,7 +833,6 @@
     "triangles": 8781.8889,
     "turns": 119.5,
     "minutes": 30.06,
-    "common": 0.702,
     "takes": 18,
     "place": 8
    },
@@ -866,6 +870,7 @@
     "recall": 0.2921,
     "triangles": 1526.3333,
     "minutes": 34.92,
+    "common": 0.6992,
     "takes": 12,
     "place": 10
    },
@@ -910,7 +915,7 @@
     "triangles": 4916.7143,
     "turns": 60.0,
     "minutes": 53.34,
-    "common": 0.6983,
+    "common": 0.7418,
     "takes": 14,
     "place": 10
    },
@@ -954,6 +959,7 @@
     "triangles": 6775.3333,
     "turns": 1.0,
     "minutes": 19.09,
+    "common": 0.7753,
     "takes": 12,
     "place": 10
    },
@@ -997,6 +1003,7 @@
     "triangles": 6611.5833,
     "turns": 1.0,
     "minutes": 20.75,
+    "common": 0.7899,
     "takes": 12,
     "place": 10
    },
@@ -1042,7 +1049,7 @@
     "turns": 64.0,
     "minutes": 38.35,
     "repeat_sd": 0.0133,
-    "common": 0.5425,
+    "common": 0.7196,
     "takes": 41,
     "place": 10
    },
@@ -1081,6 +1088,7 @@
     "triangles": 3755.5,
     "turns": 273.0,
     "minutes": 80.5,
+    "common": 0.5718,
     "takes": 12,
     "place": 12
    },
@@ -1124,6 +1132,7 @@
     "triangles": 2075.3333,
     "turns": 215.0,
     "minutes": 77.5,
+    "common": 0.7391,
     "takes": 12,
     "place": 13
    },
@@ -1167,6 +1176,7 @@
     "triangles": 2447.5833,
     "turns": 664.0,
     "minutes": 247.49,
+    "common": 0.7592,
     "takes": 12,
     "place": 13
    },
@@ -1214,6 +1224,7 @@
     "triangles": 5441.25,
     "turns": 123.5,
     "minutes": 36.12,
+    "common": 0.7952,
     "takes": 12,
     "place": 13
    },
@@ -1259,7 +1270,6 @@
     "turns": 88.5,
     "minutes": 29.26,
     "repeat_sd": 0.0334,
-    "common": 0.5549,
     "takes": 24,
     "place": 13
    },
@@ -1299,7 +1309,7 @@
     "triangles": 2646.75,
     "turns": 337.5,
     "minutes": 49.2,
-    "common": 0.4522,
+    "common": 0.7222,
     "takes": 16,
     "place": 14
    },
@@ -1339,7 +1349,6 @@
     "triangles": 9152.6667,
     "turns": 162.5,
     "minutes": 50.15,
-    "common": 0.5994,
     "takes": 3,
     "place": 14
    },
@@ -1379,7 +1388,6 @@
     "triangles": 9549.4839,
     "turns": 88.0,
     "minutes": 21.96,
-    "common": 0.67,
     "takes": 31,
     "place": 14
    },
@@ -1455,7 +1463,7 @@
     "triangles": 3771.4286,
     "turns": 57.0,
     "minutes": 9.32,
-    "common": 0.5858,
+    "common": 0.597,
     "takes": 7,
     "place": 14
    },
@@ -1494,7 +1502,6 @@
     "recall": 0.1797,
     "triangles": 8377.0,
     "minutes": 48.44,
-    "common": 0.6322,
     "takes": 2,
     "place": 14
    },
@@ -1534,7 +1541,7 @@
     "triangles": 5337.5526,
     "turns": 53.5,
     "minutes": 36.11,
-    "common": 0.5224,
+    "common": 0.7266,
     "takes": 38,
     "place": 16
    },
@@ -1573,7 +1580,7 @@
     "triangles": 6810.7812,
     "minutes": 36.54,
     "repeat_sd": 0.0409,
-    "common": 0.4994,
+    "common": 0.6614,
     "takes": 33,
     "place": 21
    },
@@ -1612,7 +1619,6 @@
     "triangles": 2378.6,
     "turns": 247.5,
     "minutes": 26.1,
-    "common": 0.5586,
     "takes": 20,
     "place": 21
    },
@@ -1658,7 +1664,6 @@
     "turns": 24.0,
     "minutes": 11.79,
     "repeat_sd": 0.0782,
-    "common": 0.5262,
     "takes": 129,
     "place": 21
    },
@@ -1698,7 +1703,7 @@
     "triangles": 6367.9737,
     "turns": 75.5,
     "minutes": 46.87,
-    "common": 0.5057,
+    "common": 0.7083,
     "takes": 38,
     "place": 27
    },
@@ -1737,6 +1742,7 @@
     "triangles": 7270.5,
     "turns": 523.0,
     "minutes": 114.94,
+    "common": 0.6956,
     "takes": 12,
     "place": 27
    },
@@ -1781,7 +1787,6 @@
     "triangles": 17733.2085,
     "minutes": 23.65,
     "repeat_sd": 0.0612,
-    "common": 0.4756,
     "takes": 75,
     "place": 27
    },
@@ -1826,7 +1831,7 @@
     "triangles": 8006.6452,
     "turns": 197.0,
     "minutes": 58.1,
-    "common": 0.5438,
+    "common": 0.6474,
     "takes": 31,
     "place": 28
    },
@@ -1866,6 +1871,7 @@
     "triangles": 7240.5833,
     "turns": 152.0,
     "minutes": 125.14,
+    "common": 0.6799,
     "takes": 12,
     "place": 28
    },
@@ -1945,6 +1951,7 @@
     "recall": 0.2716,
     "turns": 419.0,
     "minutes": 688.59,
+    "common": 0.0,
     "takes": 12,
     "place": 28
    },
@@ -1989,7 +1996,6 @@
     "triangles": 2035.1111,
     "turns": 33.0,
     "minutes": 5.08,
-    "common": 0.6096,
     "takes": 9,
     "place": 28
    },
@@ -2030,7 +2036,6 @@
     "turns": 18.0,
     "minutes": 6.63,
     "repeat_sd": 0.0892,
-    "common": 0.4973,
     "takes": 121,
     "place": 28
    },
@@ -2068,7 +2073,6 @@
     "recall": 0.2286,
     "turns": 68.0,
     "minutes": 9.12,
-    "common": 0.4728,
     "takes": 11,
     "place": 28
    },
@@ -2107,7 +2111,6 @@
     "triangles": 4737.45,
     "turns": 214.0,
     "minutes": 17.85,
-    "common": 0.4775,
     "takes": 20,
     "place": 28
    },
@@ -2153,7 +2156,6 @@
     "turns": 24.0,
     "minutes": 10.9,
     "repeat_sd": 0.0839,
-    "common": 0.4509,
     "takes": 117,
     "place": 28
    },
@@ -2193,7 +2195,6 @@
     "turns": 245.0,
     "minutes": 24.77,
     "repeat_sd": 0.0167,
-    "common": 0.5604,
     "takes": 19,
     "place": 28
    },
@@ -2238,7 +2239,7 @@
     "triangles": 2258.823,
     "minutes": 14.56,
     "repeat_sd": 0.099,
-    "common": 0.3154,
+    "common": 0.6081,
     "takes": 67,
     "place": 33
    },
@@ -2282,7 +2283,6 @@
     "triangles": 1916.4348,
     "turns": 150.0,
     "minutes": 53.99,
-    "common": 0.4317,
     "takes": 23,
     "place": 33
    },
@@ -2323,7 +2323,6 @@
     "turns": 83.0,
     "minutes": 24.35,
     "repeat_sd": 0.198,
-    "common": 0.2282,
     "takes": 8,
     "place": 33
    },
@@ -2335,6 +2334,50 @@
    "facets": {
     "family": "Anthropic",
     "effort": "high"
+   }
+  },
+  {
+   "label": "nvidia/nemotron-3.5-super-vl:free (max) \u00b7 Claude Code",
+   "sub": "nvidia",
+   "org": "nvidia",
+   "series": "nvidianemotron35supervlfreeclaudecode",
+   "values": {
+    "overall": 0.3592,
+    "cost": 0.0,
+    "cells": 5,
+    "ran": 5,
+    "f": 0.0775,
+    "geometry": 0.4692,
+    "appearance": 0.3012,
+    "silhouette": 0.5269,
+    "outline": 0.2848,
+    "plan": 0.5042,
+    "height": 0.4949,
+    "colour": 0.158,
+    "structure": 0.4921,
+    "materials": 0.83,
+    "precision": 0.0967,
+    "recall": 0.0691,
+    "triangles": 1148.6,
+    "turns": 129.0,
+    "minutes": 13.94,
+    "common": 0.4496,
+    "takes": 5,
+    "place": 33
+   },
+   "band": {
+    "overall": 0.057
+   },
+   "optimal": false,
+   "tags": [
+    {
+     "text": "est. price",
+     "kind": "warn"
+    }
+   ],
+   "facets": {
+    "family": "nvidia",
+    "effort": "max"
    }
   },
   {
@@ -2361,6 +2404,7 @@
     "recall": 0.0787,
     "turns": 1299.5,
     "minutes": 427.17,
+    "common": 0.3945,
     "takes": 12,
     "place": 33
    },
@@ -2403,6 +2447,7 @@
     "recall": 0.1243,
     "turns": 109.5,
     "minutes": 100.71,
+    "common": 0.5923,
     "takes": 12,
     "place": 33
    },
@@ -2441,9 +2486,9 @@
     "triangles": 344.4444,
     "turns": 63.0,
     "minutes": 5.73,
-    "common": 0.3806,
+    "common": 0.4867,
     "takes": 18,
-    "place": 40
+    "place": 41
    },
    "band": {
     "overall": 0.0446
@@ -2481,7 +2526,7 @@
     "turns": 59.5,
     "minutes": 8.15,
     "repeat_sd": 0.0754,
-    "common": 0.219,
+    "common": 0.476,
     "takes": 20,
     "place": 47
    },
@@ -2520,7 +2565,6 @@
     "turns": 87.0,
     "minutes": 79.21,
     "repeat_sd": 0.2416,
-    "common": 0.2334,
     "takes": 72,
     "place": 47
    },

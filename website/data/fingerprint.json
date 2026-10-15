@@ -1,8 +1,8 @@
 {
- "fingerprint": "7c76f0129585e1297e04b1182dc6deafb84491c6a62359689da879e8707b2b2b",
- "snapshot": "2026-10-14",
+ "fingerprint": "903989d9757c56fcfc95024193764671be3018510c848aae68c743ef37e6d5e8",
+ "snapshot": "2026-10-15",
  "buildings": 12,
- "results": 352,
+ "results": 357,
  "models": [
   "Claude Opus 5.5 (max)",
   "GPT‑6.1 Sol (max)",
@@ -31,9 +31,18 @@
   "Claude Sonnet 5 (max)",
   "Kimi K3 (thinking)",
   "Mistral Large 4 (max)",
+  "Nemotron 3.5 Super Vl (max)",
   "Step 5 Preview (max)",
   "GLM‑5.3 Flash (max)",
   "Inkling"
  ],
- "incomplete": {}
+ "incomplete": {
+  "nemotron-3.5-super-vl:free": [
+   "name spelled from its id ('Nemotron 3.5 Super Vl')",
+   "company 'Nvidia' (the board says 'nvidia')"
+  ]
+ },
+ "dated": {
+  "nemotron-3.5-super-vl:free": "2026-10-15 (OpenRouter listing)"
+ }
 }

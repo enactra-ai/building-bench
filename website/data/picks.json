@@ -6673,6 +6673,26 @@
 },
 {
 "site": "helsinki_122954081_enhanced_v1",
+"series": "nvidianemotron35supervlfreeclaudecode",
+"run": "helsinki_122954081_enhanced_v1-blind-nvidia-nemotron-3.5-super-vl-free-claude-code-20261015T154906",
+"overall": 0.149,
+"surface_f": 0.042,
+"chamfer_m": null,
+"height_m": null,
+"triangles": null,
+"glb": "../bench-runs/helsinki_122954081_enhanced_v1-blind-nvidia-nemotron-3.5-super-vl-free-claude-code-20261015T154906/submission/building.glb",
+"page": null,
+"cost": 0.0,
+"turns": 147.0,
+"nruns": 1,
+"allruns": [
+0.149
+],
+"ran": "2026-10-15",
+"minutes": 23.68
+},
+{
+"site": "helsinki_122954081_enhanced_v1",
 "series": "gemini4argonhigh",
 "run": "helsinki_122954081_enhanced_v1-blind-gemini-4-argon-high-20261013T205342",
 "overall": 0.756,
@@ -7987,6 +8007,26 @@
 },
 {
 "site": "helsinki_8033120_enhanced_v1",
+"series": "nvidianemotron35supervlfreeclaudecode",
+"run": "helsinki_8033120_enhanced_v1-blind-nvidia-nemotron-3.5-super-vl-free-claude-code-20261015T154906",
+"overall": 0.43,
+"surface_f": 0.091,
+"chamfer_m": null,
+"height_m": null,
+"triangles": null,
+"glb": "../bench-runs/helsinki_8033120_enhanced_v1-blind-nvidia-nemotron-3.5-super-vl-free-claude-code-20261015T154906/submission/building.glb",
+"page": null,
+"cost": 0.0,
+"turns": 88.0,
+"nruns": 1,
+"allruns": [
+0.43
+],
+"ran": "2026-10-15",
+"minutes": 11.92
+},
+{
+"site": "helsinki_8033120_enhanced_v1",
 "series": "gemini4argonhigh",
 "run": "helsinki_8033120_enhanced_v1-blind-gemini-4-argon-high-20261013T212213",
 "overall": 0.736,
@@ -8600,6 +8640,26 @@
 ],
 "ran": "2026-09-04",
 "minutes": 29.67
+},
+{
+"site": "helsinki_cathedral_enhanced_v1",
+"series": "nvidianemotron35supervlfreeclaudecode",
+"run": "helsinki_cathedral_enhanced_v1-blind-nvidia-nemotron-3.5-super-vl-free-claude-code-20261015T154906",
+"overall": 0.45,
+"surface_f": 0.062,
+"chamfer_m": null,
+"height_m": null,
+"triangles": null,
+"glb": "../bench-runs/helsinki_cathedral_enhanced_v1-blind-nvidia-nemotron-3.5-super-vl-free-claude-code-20261015T154906/submission/building.glb",
+"page": null,
+"cost": 0.0,
+"turns": 130.0,
+"nruns": 1,
+"allruns": [
+0.45
+],
+"ran": "2026-10-15",
+"minutes": 17.63
 },
 {
 "site": "helsinki_cathedral_enhanced_v1",
@@ -9279,6 +9339,26 @@
 ],
 "ran": "2026-09-04",
 "minutes": 14.98
+},
+{
+"site": "melbourne_155809136_enhanced_v1",
+"series": "nvidianemotron35supervlfreeclaudecode",
+"run": "melbourne_155809136_enhanced_v1-blind-nvidia-nemotron-3.5-super-vl-free-claude-code-20261015T154906",
+"overall": 0.44,
+"surface_f": 0.085,
+"chamfer_m": null,
+"height_m": null,
+"triangles": null,
+"glb": "../bench-runs/melbourne_155809136_enhanced_v1-blind-nvidia-nemotron-3.5-super-vl-free-claude-code-20261015T154906/submission/building.glb",
+"page": null,
+"cost": 0.0,
+"turns": 93.0,
+"nruns": 1,
+"allruns": [
+0.44
+],
+"ran": "2026-10-15",
+"minutes": 11.07
 },
 {
 "site": "melbourne_155809136_enhanced_v1",
@@ -12585,6 +12665,26 @@
 ],
 "ran": "2026-09-04",
 "minutes": 18.5
+},
+{
+"site": "melbourne_45461060_enhanced_v1",
+"series": "nvidianemotron35supervlfreeclaudecode",
+"run": "melbourne_45461060_enhanced_v1-blind-nvidia-nemotron-3.5-super-vl-free-claude-code-20261015T154906",
+"overall": 0.328,
+"surface_f": 0.107,
+"chamfer_m": null,
+"height_m": null,
+"triangles": null,
+"glb": "../bench-runs/melbourne_45461060_enhanced_v1-blind-nvidia-nemotron-3.5-super-vl-free-claude-code-20261015T154906/submission/building.glb",
+"page": null,
+"cost": 0.0,
+"turns": 129.0,
+"nruns": 1,
+"allruns": [
+0.328
+],
+"ran": "2026-10-15",
+"minutes": 13.93
 },
 {
 "site": "melbourne_45461060_enhanced_v1",
