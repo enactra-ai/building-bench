@@ -1,4 +1,10 @@
 {
+ "nemotron-3.5-super-vl": {
+  "date": "2026-10-15",
+  "source": "OpenRouter listing",
+  "openrouter": "nvidia/nemotron-3.5-super-vl",
+  "listed": "2026-10-15 15:04 UTC"
+ },
  "nemotron-3.5-super-vl:free": {
   "date": "2026-10-15",
   "source": "OpenRouter listing",
