@@ -90,10 +90,15 @@ def parse(label):
 
 
 def name(model):
-    """Product name for a model id. One the table lacks is spelled from its id: version digits the
-    id splits with hyphens are joined with points, so 'claude-sonnet-5-5' -> 'Claude Sonnet 5.5'."""
+    """Product name for a model id. One the table lacks takes OpenRouter's name for it, less the maker
+    ('NVIDIA: Nemotron 3.5 Super VL' -> 'Nemotron 3.5 Super VL'); one OpenRouter does not list either
+    is spelled from its id: version digits the id splits with hyphens are joined with points, so
+    'claude-sonnet-5-5' -> 'Claude Sonnet 5.5'."""
     if model in NAMES:
         return NAMES[model]
+    listed = openrouter_name(model)
+    if listed:
+        return listed
     words = []
     for w in model.split(':')[0].split('-'):
         if w.isdigit() and words and words[-1].replace('.', '').isdigit():
@@ -116,14 +121,12 @@ def _maker(model, org):
 
 
 def company(model, org):
-    """The company a model is drawn in, from its id and the board's organisation for its row; for a
-    row the board leaves unplaced, the maker OpenRouter lists it under."""
-    c = _maker(model, org)
+    """The company a model is drawn in: from its id and the board's organisation for its row, else the
+    maker OpenRouter lists it under (as OpenRouter writes it: 'NVIDIA', not the board's 'nvidia')."""
+    c = _maker(model, org) or openrouter_company(model)
     if c:
         return c
-    if org and org != 'Unplaced':
-        return org[:1].upper() + org[1:]
-    return openrouter_company(model) or 'Undisclosed'
+    return org[:1].upper() + org[1:] if org and org != 'Unplaced' else 'Undisclosed'
 
 
 def missing(model, org):
@@ -131,7 +134,7 @@ def missing(model, org):
     above or OpenRouter describe it. (Its release date always has a value: see release().)"""
     out = []
     if model not in NAMES:
-        out.append('name spelled from its id (%r)' % name(model))
+        out.append('name %s (%r)' % ('from OpenRouter' if openrouter_name(model) else 'spelled from its id', name(model)))
     if not _maker(model, org) and not openrouter_company(model):
         out.append('company %r (the board says %r)' % (company(model, org), org))
     return out
@@ -186,7 +189,7 @@ def _openrouter_catalogue():
     if _catalogue is not None:
         return _catalogue
     cache = _load(OPENROUTER_CACHE) or {'fetched': 0, 'models': {}}
-    if time.time() - cache.get('fetched', 0) > OPENROUTER_MAX_AGE:
+    if time.time() - cache.get('fetched', 0) > OPENROUTER_MAX_AGE or 'names' not in cache:
         try:
             req = urllib.request.Request(OPENROUTER_URL, headers={'User-Agent': 'buildingbench-site'})
             with urllib.request.urlopen(req, timeout=20) as r:
@@ -195,6 +198,7 @@ def _openrouter_catalogue():
                 if m.get('created'):
                     old = cache['models'].get(m['id'])
                     cache['models'][m['id']] = min(old, m['created']) if old else m['created']
+                    cache.setdefault('names', {})[m['id']] = m.get('name')
             cache['fetched'] = time.time()
             os.makedirs(os.path.dirname(OPENROUTER_CACHE), exist_ok=True)
             with open(OPENROUTER_CACHE + '.tmp', 'w') as f:
@@ -207,7 +211,7 @@ def _openrouter_catalogue():
     for mid, created in cache['models'].items():
         k = _key(mid)
         if k not in _catalogue or created < _catalogue[k]['created']:
-            _catalogue[k] = {'id': mid, 'created': created}
+            _catalogue[k] = {'id': mid, 'created': created, 'name': cache.get('names', {}).get(mid)}
     return _catalogue
 
 
@@ -217,8 +221,29 @@ def openrouter(model):
 
 
 def openrouter_company(model):
+    """The maker OpenRouter lists a model under: VENDOR_COMPANY's spelling for a vendor it names, else
+    the maker as OpenRouter's own name for the model writes it ('NVIDIA: ...'). None for its own
+    stealth listings (openrouter/...) and for a model it does not list."""
     hit = openrouter(model)
-    return VENDOR_COMPANY.get(hit['id'].split('/')[0]) if hit else None
+    if not hit:
+        return None
+    vendor = hit['id'].split('/')[0]
+    if vendor in VENDOR_COMPANY:
+        return VENDOR_COMPANY[vendor]
+    if vendor != 'openrouter' and ':' in (hit.get('name') or ''):
+        return hit['name'].split(':', 1)[0].strip() or None
+    return None
+
+
+def openrouter_name(model):
+    """OpenRouter's name for a model, less its maker and a '(free)': 'NVIDIA: Nemotron 3.5 Super VL
+    (free)' -> 'Nemotron 3.5 Super VL'; a version after letters gets NAMES' no-break hyphen ('GPT‑6')."""
+    hit = openrouter(model)
+    if not hit or not hit.get('name'):
+        return None
+    n = hit['name'].split(':', 1)[1].strip() if ':' in hit['name'] else hit['name'].strip()
+    n = re.sub(r'\s*\(free\)$', '', n, flags=re.I)
+    return re.sub(r'(?<=[A-Za-z])-(?=\d)', '‑', n) or None
 
 
 _record = None
