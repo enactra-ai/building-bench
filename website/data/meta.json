@@ -1,5 +1,5 @@
 {
- "snapshot": "2026-10-15",
+ "snapshot": "2026-10-16",
  "sameSet": [
   "allegiant_stadium",
   "aon_center_chicago",
@@ -13,8 +13,8 @@
   "twa_flight_center",
   "udvar_hazy"
  ],
- "runsScored": 2288,
- "modelsRanked": 57,
+ "runsScored": 2299,
+ "modelsRanked": 58,
  "rig": {
   "schema": "city_bench.building_light/1",
   "sun_azimuth_deg": 135.0,
@@ -42,8 +42,8 @@
   "reach_m": 400.0
  },
  "cleanBoard": {
-  "runsScored": 628,
-  "modelsRanked": 37,
+  "runsScored": 639,
+  "modelsRanked": 38,
   "buildings": 12,
   "rows": {
    "claudeopus55max": {
@@ -332,6 +332,17 @@
     "cells": 12,
     "place": 21
    },
+   "metamusesparkopenclaudecode": {
+    "label": "meta/muse-spark-open (max) \u00b7 Claude Code",
+    "overall": 0.5575,
+    "f": 0.2861,
+    "geometry": 0.6115,
+    "appearance": 0.5745,
+    "cost": 8.395758,
+    "minutes": 75.44,
+    "cells": 11,
+    "place": 24
+   },
    "stealthspacebunnyalphaclaudecode": {
     "label": "stealth/space-bunny-alpha (max) \u00b7 Claude Code",
     "overall": 0.5558,
@@ -341,7 +352,7 @@
     "cost": 0.0,
     "minutes": 114.94,
     "cells": 12,
-    "place": 21
+    "place": 24
    },
    "gemini38flash": {
     "label": "gemini-3.8-flash (high)",
@@ -352,7 +363,7 @@
     "cost": 3.330324675,
     "minutes": 39.51,
     "cells": 12,
-    "place": 21
+    "place": 24
    },
    "sonnetmax": {
     "label": "claude-sonnet-5 (max)",
@@ -407,7 +418,7 @@
     "cost": 0.7568904999999999,
     "minutes": 36.13,
     "cells": 12,
-    "place": 30
+    "place": 31
    },
    "step5previewclaudecode": {
     "label": "step-5-preview (max) \u00b7 Claude Code",
@@ -418,7 +429,7 @@
     "cost": 16.58585,
     "minutes": 427.17,
     "cells": 12,
-    "place": 31
+    "place": 32
    },
    "glm53flashmax": {
     "label": "glm-5.3-flash (max)",
@@ -429,7 +440,7 @@
     "cost": 0.21804560249999994,
     "minutes": 100.71,
     "cells": 12,
-    "place": 31
+    "place": 32
    },
    "haiku": {
     "label": "claude-haiku-4-5",
@@ -440,7 +451,7 @@
     "cost": 0.5243465500000001,
     "minutes": 10.85,
     "cells": 12,
-    "place": 32
+    "place": 33
    },
    "inklingfreeclaudecode": {
     "label": "thinkingmachines/inkling:free \u00b7 Claude Code",
@@ -451,7 +462,7 @@
     "cost": 0.0,
     "minutes": 4.31,
     "cells": 12,
-    "place": 32
+    "place": 33
    }
   }
  },
@@ -514,67 +525,67 @@
   "helsinki_122886734_enhanced_v1": {
    "union": false,
    "clean": true,
-   "n": 51,
+   "n": 52,
    "source": "Helsinki 3D city model"
   },
   "helsinki_122954081_enhanced_v1": {
    "union": false,
    "clean": true,
-   "n": 49,
+   "n": 50,
    "source": "Helsinki 3D city model"
   },
   "helsinki_123901485_enhanced_v1": {
    "union": false,
    "clean": true,
-   "n": 52,
+   "n": 53,
    "source": "Helsinki 3D city model"
   },
   "helsinki_8033120_enhanced_v1": {
    "union": false,
    "clean": true,
-   "n": 49,
+   "n": 50,
    "source": "Helsinki 3D city model"
   },
   "helsinki_cathedral_enhanced_v1": {
    "union": false,
    "clean": true,
-   "n": 54,
+   "n": 55,
    "source": "Helsinki 3D city model"
   },
   "melbourne_155809136_enhanced_v1": {
    "union": false,
    "clean": true,
-   "n": 50,
+   "n": 51,
    "source": "City of Melbourne 2020 photomesh"
   },
   "melbourne_22820458_enhanced_v1": {
    "union": false,
    "clean": true,
-   "n": 50,
+   "n": 51,
    "source": "City of Melbourne 2020 photomesh"
   },
   "melbourne_25422768_enhanced_v1": {
    "union": false,
    "clean": true,
-   "n": 52,
+   "n": 53,
    "source": "City of Melbourne 2020 photomesh"
   },
   "melbourne_296368687_enhanced_v1": {
    "union": false,
    "clean": true,
-   "n": 52,
+   "n": 53,
    "source": "City of Melbourne 2020 photomesh"
   },
   "melbourne_33106429_enhanced_v1": {
    "union": false,
    "clean": true,
-   "n": 50,
+   "n": 51,
    "source": "City of Melbourne 2020 photomesh"
   },
   "melbourne_45461060_enhanced_v1": {
    "union": false,
    "clean": true,
-   "n": 50,
+   "n": 51,
    "source": "City of Melbourne 2020 photomesh"
   },
   "melbourne_4817059_enhanced_v1": {

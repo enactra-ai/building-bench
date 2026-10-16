@@ -6016,6 +6016,26 @@
 },
 {
 "site": "helsinki_122886734_enhanced_v1",
+"series": "metamusesparkopenclaudecode",
+"run": "helsinki_122886734_enhanced_v1-blind-meta-muse-spark-open-claude-code-20261016T061328",
+"overall": 0.441,
+"surface_f": 0.34,
+"chamfer_m": null,
+"height_m": null,
+"triangles": null,
+"glb": "../bench-runs/helsinki_122886734_enhanced_v1-blind-meta-muse-spark-open-claude-code-20261016T061328/submission/building.glb",
+"page": null,
+"cost": 8.96,
+"turns": 112.0,
+"nruns": 1,
+"allruns": [
+0.441
+],
+"ran": "2026-10-16",
+"minutes": 71.23
+},
+{
+"site": "helsinki_122886734_enhanced_v1",
 "series": "nvidianemotron35supervlfreeclaudecode",
 "run": "helsinki_122886734_enhanced_v1-blind-nvidia-nemotron-3.5-super-vl-free-claude-code-20261015T183554",
 "overall": 0.382,
@@ -6693,6 +6713,26 @@
 },
 {
 "site": "helsinki_122954081_enhanced_v1",
+"series": "metamusesparkopenclaudecode",
+"run": "helsinki_122954081_enhanced_v1-blind-meta-muse-spark-open-claude-code-20261016T061328",
+"overall": 0.58,
+"surface_f": 0.279,
+"chamfer_m": null,
+"height_m": null,
+"triangles": null,
+"glb": "../bench-runs/helsinki_122954081_enhanced_v1-blind-meta-muse-spark-open-claude-code-20261016T061328/submission/building.glb",
+"page": null,
+"cost": 5.44,
+"turns": 98.0,
+"nruns": 1,
+"allruns": [
+0.58
+],
+"ran": "2026-10-16",
+"minutes": 74.68
+},
+{
+"site": "helsinki_122954081_enhanced_v1",
 "series": "nvidianemotron35supervlfreeclaudecode",
 "run": "helsinki_122954081_enhanced_v1-blind-nvidia-nemotron-3.5-super-vl-free-claude-code-20261015T154906",
 "overall": 0.149,
@@ -7346,6 +7386,26 @@
 ],
 "ran": "2026-09-04",
 "minutes": 36.57
+},
+{
+"site": "helsinki_123901485_enhanced_v1",
+"series": "metamusesparkopenclaudecode",
+"run": "helsinki_123901485_enhanced_v1-blind-meta-muse-spark-open-claude-code-20261016T061328",
+"overall": 0.485,
+"surface_f": 0.26,
+"chamfer_m": null,
+"height_m": null,
+"triangles": null,
+"glb": "../bench-runs/helsinki_123901485_enhanced_v1-blind-meta-muse-spark-open-claude-code-20261016T061328/submission/building.glb",
+"page": null,
+"cost": 6.56,
+"turns": 92.0,
+"nruns": 1,
+"allruns": [
+0.485
+],
+"ran": "2026-10-16",
+"minutes": 39.9
 },
 {
 "site": "helsinki_123901485_enhanced_v1",
@@ -8047,6 +8107,26 @@
 },
 {
 "site": "helsinki_8033120_enhanced_v1",
+"series": "metamusesparkopenclaudecode",
+"run": "helsinki_8033120_enhanced_v1-blind-meta-muse-spark-open-claude-code-20261016T061328",
+"overall": 0.323,
+"surface_f": 0.16,
+"chamfer_m": null,
+"height_m": null,
+"triangles": null,
+"glb": "../bench-runs/helsinki_8033120_enhanced_v1-blind-meta-muse-spark-open-claude-code-20261016T061328/submission/building.glb",
+"page": null,
+"cost": 9.53,
+"turns": 130.0,
+"nruns": 1,
+"allruns": [
+0.323
+],
+"ran": "2026-10-16",
+"minutes": 81.78
+},
+{
+"site": "helsinki_8033120_enhanced_v1",
 "series": "nvidianemotron35supervlfreeclaudecode",
 "run": "helsinki_8033120_enhanced_v1-blind-nvidia-nemotron-3.5-super-vl-free-claude-code-20261015T154906",
 "overall": 0.43,
@@ -8680,6 +8760,26 @@
 ],
 "ran": "2026-09-04",
 "minutes": 29.67
+},
+{
+"site": "helsinki_cathedral_enhanced_v1",
+"series": "metamusesparkopenclaudecode",
+"run": "helsinki_cathedral_enhanced_v1-blind-meta-muse-spark-open-claude-code-20261016T061328",
+"overall": 0.597,
+"surface_f": 0.208,
+"chamfer_m": null,
+"height_m": null,
+"triangles": null,
+"glb": "../bench-runs/helsinki_cathedral_enhanced_v1-blind-meta-muse-spark-open-claude-code-20261016T061328/submission/building.glb",
+"page": null,
+"cost": 6.83,
+"turns": 92.0,
+"nruns": 1,
+"allruns": [
+0.597
+],
+"ran": "2026-10-16",
+"minutes": 77.57
 },
 {
 "site": "helsinki_cathedral_enhanced_v1",
@@ -9382,6 +9482,26 @@
 },
 {
 "site": "melbourne_155809136_enhanced_v1",
+"series": "metamusesparkopenclaudecode",
+"run": "melbourne_155809136_enhanced_v1-blind-meta-muse-spark-open-claude-code-20261016T061328",
+"overall": 0.698,
+"surface_f": 0.264,
+"chamfer_m": null,
+"height_m": null,
+"triangles": null,
+"glb": "../bench-runs/melbourne_155809136_enhanced_v1-blind-meta-muse-spark-open-claude-code-20261016T061328/submission/building.glb",
+"page": null,
+"cost": 5.26,
+"turns": 79.0,
+"nruns": 1,
+"allruns": [
+0.698
+],
+"ran": "2026-10-16",
+"minutes": 91.4
+},
+{
+"site": "melbourne_155809136_enhanced_v1",
 "series": "nvidianemotron35supervlfreeclaudecode",
 "run": "melbourne_155809136_enhanced_v1-blind-nvidia-nemotron-3.5-super-vl-free-claude-code-20261015T154906",
 "overall": 0.44,
@@ -10059,6 +10179,26 @@
 },
 {
 "site": "melbourne_22820458_enhanced_v1",
+"series": "metamusesparkopenclaudecode",
+"run": "melbourne_22820458_enhanced_v1-blind-meta-muse-spark-open-claude-code-20261016T061328",
+"overall": 0.718,
+"surface_f": 0.362,
+"chamfer_m": null,
+"height_m": null,
+"triangles": null,
+"glb": "../bench-runs/melbourne_22820458_enhanced_v1-blind-meta-muse-spark-open-claude-code-20261016T061328/submission/building.glb",
+"page": null,
+"cost": 10.63,
+"turns": 120.0,
+"nruns": 1,
+"allruns": [
+0.718
+],
+"ran": "2026-10-16",
+"minutes": 83.72
+},
+{
+"site": "melbourne_22820458_enhanced_v1",
 "series": "nvidianemotron35supervlfreeclaudecode",
 "run": "melbourne_22820458_enhanced_v1-blind-nvidia-nemotron-3.5-super-vl-free-claude-code-20261015T183554",
 "overall": 0.383,
@@ -10733,6 +10873,26 @@
 ],
 "ran": "2026-09-04",
 "minutes": 32.13
+},
+{
+"site": "melbourne_25422768_enhanced_v1",
+"series": "metamusesparkopenclaudecode",
+"run": "melbourne_25422768_enhanced_v1-blind-meta-muse-spark-open-claude-code-20261016T061328",
+"overall": 0.509,
+"surface_f": 0.265,
+"chamfer_m": null,
+"height_m": null,
+"triangles": null,
+"glb": "../bench-runs/melbourne_25422768_enhanced_v1-blind-meta-muse-spark-open-claude-code-20261016T061328/submission/building.glb",
+"page": null,
+"cost": 8.88,
+"turns": 141.0,
+"nruns": 1,
+"allruns": [
+0.509
+],
+"ran": "2026-10-16",
+"minutes": 75.43
 },
 {
 "site": "melbourne_25422768_enhanced_v1",
@@ -11434,6 +11594,26 @@
 },
 {
 "site": "melbourne_296368687_enhanced_v1",
+"series": "metamusesparkopenclaudecode",
+"run": "melbourne_296368687_enhanced_v1-blind-meta-muse-spark-open-claude-code-20261016T061328",
+"overall": 0.594,
+"surface_f": 0.287,
+"chamfer_m": null,
+"height_m": null,
+"triangles": null,
+"glb": "../bench-runs/melbourne_296368687_enhanced_v1-blind-meta-muse-spark-open-claude-code-20261016T061328/submission/building.glb",
+"page": null,
+"cost": 6.87,
+"turns": 98.0,
+"nruns": 1,
+"allruns": [
+0.594
+],
+"ran": "2026-10-16",
+"minutes": 89.07
+},
+{
+"site": "melbourne_296368687_enhanced_v1",
 "series": "nvidianemotron35supervlfreeclaudecode",
 "run": "melbourne_296368687_enhanced_v1-blind-nvidia-nemotron-3.5-super-vl-free-claude-code-20261015T183554",
 "overall": 0.416,
@@ -12112,6 +12292,26 @@
 },
 {
 "site": "melbourne_33106429_enhanced_v1",
+"series": "metamusesparkopenclaudecode",
+"run": "melbourne_33106429_enhanced_v1-blind-meta-muse-spark-open-claude-code-20261016T061328",
+"overall": 0.706,
+"surface_f": 0.262,
+"chamfer_m": null,
+"height_m": null,
+"triangles": null,
+"glb": "../bench-runs/melbourne_33106429_enhanced_v1-blind-meta-muse-spark-open-claude-code-20261016T061328/submission/building.glb",
+"page": null,
+"cost": 8.78,
+"turns": 107.0,
+"nruns": 1,
+"allruns": [
+0.706
+],
+"ran": "2026-10-16",
+"minutes": 71.22
+},
+{
+"site": "melbourne_33106429_enhanced_v1",
 "series": "nvidianemotron35supervlfreeclaudecode",
 "run": "melbourne_33106429_enhanced_v1-blind-nvidia-nemotron-3.5-super-vl-free-claude-code-20261015T183554",
 "overall": 0.528,
@@ -12785,6 +12985,26 @@
 ],
 "ran": "2026-09-04",
 "minutes": 18.5
+},
+{
+"site": "melbourne_45461060_enhanced_v1",
+"series": "metamusesparkopenclaudecode",
+"run": "melbourne_45461060_enhanced_v1-blind-meta-muse-spark-open-claude-code-20261016T061328",
+"overall": 0.482,
+"surface_f": 0.46,
+"chamfer_m": null,
+"height_m": null,
+"triangles": null,
+"glb": "../bench-runs/melbourne_45461060_enhanced_v1-blind-meta-muse-spark-open-claude-code-20261016T061328/submission/building.glb",
+"page": null,
+"cost": 8.4,
+"turns": 115.0,
+"nruns": 1,
+"allruns": [
+0.482
+],
+"ran": "2026-10-16",
+"minutes": 73.92
 },
 {
 "site": "melbourne_45461060_enhanced_v1",

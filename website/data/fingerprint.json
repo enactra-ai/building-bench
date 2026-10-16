@@ -1,8 +1,8 @@
 {
- "fingerprint": "36a2c11c780e348d31c6c85eca3f6ee586c0014cb2e6c292d2ed3d9b4f08db98",
- "snapshot": "2026-10-15",
+ "fingerprint": "b2251c677c3a7d2133e3f96627e05850a2236ecccb57e19faf3332a546c538d9",
+ "snapshot": "2026-10-16",
  "buildings": 12,
- "results": 364,
+ "results": 375,
  "models": [
   "Claude Opus 5.5 (max)",
   "GPT‑6.1 Sol (max)",
@@ -27,6 +27,7 @@
   "GPT‑5.6 Terra (max)",
   "Gemini 3.8 Flash (high)",
   "GPT‑5.6 Luna (max)",
+  "Muse Spark Open (max)",
   "Space Bunny Alpha (max)",
   "Claude Sonnet 5 (max)",
   "Kimi K3 (thinking)",
@@ -37,11 +38,15 @@
   "Inkling"
  ],
  "incomplete": {
+  "muse-spark-open": [
+   "name from OpenRouter ('Muse Spark Open')"
+  ],
   "nemotron-3.5-super-vl": [
    "name from OpenRouter ('Nemotron 3.5 Super VL')"
   ]
  },
  "dated": {
+  "muse-spark-open": "2026-10-15 (OpenRouter listing)",
   "nemotron-3.5-super-vl": "2026-10-15 (OpenRouter listing)"
  }
 }

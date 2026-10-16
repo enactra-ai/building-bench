@@ -1320,6 +1320,49 @@
    }
   },
   {
+   "label": "meta/muse-spark-open (max) \u00b7 Claude Code",
+   "sub": "meta",
+   "org": "meta",
+   "series": "metamusesparkopenclaudecode",
+   "values": {
+    "overall": 0.5575,
+    "cost": 8.395758,
+    "cells": 11,
+    "ran": 11,
+    "f": 0.2861,
+    "geometry": 0.6115,
+    "appearance": 0.5745,
+    "silhouette": 0.6702,
+    "outline": 0.5057,
+    "plan": 0.5562,
+    "height": 0.6504,
+    "colour": 0.6078,
+    "structure": 0.5301,
+    "materials": 0.9124,
+    "precision": 0.3095,
+    "recall": 0.2743,
+    "triangles": 461.1818,
+    "turns": 107.0,
+    "minutes": 75.44,
+    "takes": 11,
+    "place": 24
+   },
+   "band": {
+    "overall": 0.0373
+   },
+   "optimal": false,
+   "tags": [
+    {
+     "text": "est. price",
+     "kind": "warn"
+    }
+   ],
+   "facets": {
+    "family": "meta",
+    "effort": "max"
+   }
+  },
+  {
    "label": "stealth/space-bunny-alpha (max) \u00b7 Claude Code",
    "sub": "Undisclosed",
    "org": "Undisclosed",
@@ -1346,7 +1389,7 @@
     "minutes": 114.94,
     "common": 0.5558,
     "takes": 12,
-    "place": 21
+    "place": 24
    },
    "band": {
     "overall": 0.0578
@@ -1389,7 +1432,7 @@
     "minutes": 39.51,
     "common": 0.5476,
     "takes": 12,
-    "place": 21
+    "place": 24
    },
    "band": {
     "overall": 0.0607
@@ -1594,7 +1637,7 @@
     "minutes": 36.13,
     "common": 0.3778,
     "takes": 12,
-    "place": 30
+    "place": 31
    },
    "band": {
     "overall": 0.0272
@@ -1637,7 +1680,7 @@
     "minutes": 427.17,
     "common": 0.3391,
     "takes": 12,
-    "place": 31
+    "place": 32
    },
    "band": {
     "overall": 0.0342
@@ -1680,7 +1723,7 @@
     "minutes": 100.71,
     "common": 0.3302,
     "takes": 12,
-    "place": 31
+    "place": 32
    },
    "band": {
     "overall": 0.0919
@@ -1719,7 +1762,7 @@
     "minutes": 10.85,
     "common": 0.2668,
     "takes": 12,
-    "place": 32
+    "place": 33
    },
    "band": {
     "overall": 0.0509
@@ -1758,7 +1801,7 @@
     "minutes": 4.31,
     "common": 0.2581,
     "takes": 12,
-    "place": 32
+    "place": 33
    },
    "band": {
     "overall": 0.0493
@@ -2793,7 +2836,7 @@
     "minutes": 114.94,
     "common": 0.5558,
     "takes": 12,
-    "place": 21
+    "place": 24
    },
    "band": {
     "overall": 0.0578
@@ -2836,7 +2879,7 @@
     "minutes": 39.51,
     "common": 0.5476,
     "takes": 12,
-    "place": 21
+    "place": 24
    },
    "band": {
     "overall": 0.0607
@@ -3003,7 +3046,7 @@
     "minutes": 36.13,
     "common": 0.3778,
     "takes": 12,
-    "place": 30
+    "place": 31
    },
    "band": {
     "overall": 0.0272
@@ -3046,7 +3089,7 @@
     "minutes": 427.17,
     "common": 0.3391,
     "takes": 12,
-    "place": 31
+    "place": 32
    },
    "band": {
     "overall": 0.0342
@@ -3089,7 +3132,7 @@
     "minutes": 100.71,
     "common": 0.3302,
     "takes": 12,
-    "place": 31
+    "place": 32
    },
    "band": {
     "overall": 0.0919
@@ -3128,7 +3171,7 @@
     "minutes": 10.85,
     "common": 0.2668,
     "takes": 12,
-    "place": 32
+    "place": 33
    },
    "band": {
     "overall": 0.0509
@@ -3167,7 +3210,7 @@
     "minutes": 4.31,
     "common": 0.2581,
     "takes": 12,
-    "place": 32
+    "place": 33
    },
    "band": {
     "overall": 0.0493
