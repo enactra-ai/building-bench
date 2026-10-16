@@ -1,8 +1,8 @@
 {
- "fingerprint": "b2251c677c3a7d2133e3f96627e05850a2236ecccb57e19faf3332a546c538d9",
+ "fingerprint": "dab514e6ff7b054d4e06dc738071ef754cdab563ec0ed5af1f84bc031b9f576c",
  "snapshot": "2026-10-16",
  "buildings": 12,
- "results": 375,
+ "results": 376,
  "models": [
   "Claude Opus 5.5 (max)",
   "GPT‑6.1 Sol (max)",
@@ -26,8 +26,8 @@
   "Muse Spark 1.3 (max)",
   "GPT‑5.6 Terra (max)",
   "Gemini 3.8 Flash (high)",
-  "GPT‑5.6 Luna (max)",
   "Muse Spark Open (max)",
+  "GPT‑5.6 Luna (max)",
   "Space Bunny Alpha (max)",
   "Claude Sonnet 5 (max)",
   "Kimi K3 (thinking)",

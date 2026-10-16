@@ -13,7 +13,7 @@
   "twa_flight_center",
   "udvar_hazy"
  ],
- "runsScored": 2299,
+ "runsScored": 2300,
  "modelsRanked": 58,
  "rig": {
   "schema": "city_bench.building_light/1",
@@ -42,7 +42,7 @@
   "reach_m": 400.0
  },
  "cleanBoard": {
-  "runsScored": 639,
+  "runsScored": 640,
   "modelsRanked": 38,
   "buildings": 12,
   "rows": {
@@ -334,13 +334,13 @@
    },
    "metamusesparkopenclaudecode": {
     "label": "meta/muse-spark-open (max) \u00b7 Claude Code",
-    "overall": 0.5575,
-    "f": 0.2861,
-    "geometry": 0.6115,
-    "appearance": 0.5745,
-    "cost": 8.395758,
-    "minutes": 75.44,
-    "cells": 11,
+    "overall": 0.5693,
+    "f": 0.2893,
+    "geometry": 0.629,
+    "appearance": 0.5759,
+    "cost": 8.586422,
+    "minutes": 76.51,
+    "cells": 12,
     "place": 24
    },
    "stealthspacebunnyalphaclaudecode": {
@@ -591,7 +591,7 @@
   "melbourne_4817059_enhanced_v1": {
    "union": false,
    "clean": true,
-   "n": 51,
+   "n": 52,
    "source": "City of Melbourne 2020 photomesh"
   }
  }

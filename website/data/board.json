@@ -1638,6 +1638,50 @@
    }
   },
   {
+   "label": "meta/muse-spark-open (max) \u00b7 Claude Code",
+   "sub": "meta",
+   "org": "meta",
+   "series": "metamusesparkopenclaudecode",
+   "values": {
+    "overall": 0.5693,
+    "cost": 8.586422,
+    "cells": 12,
+    "ran": 12,
+    "f": 0.2893,
+    "geometry": 0.629,
+    "appearance": 0.5759,
+    "silhouette": 0.6851,
+    "outline": 0.5162,
+    "plan": 0.5829,
+    "height": 0.6728,
+    "colour": 0.5981,
+    "structure": 0.5462,
+    "materials": 0.9068,
+    "precision": 0.3091,
+    "recall": 0.2804,
+    "triangles": 509.9167,
+    "turns": 109.5,
+    "minutes": 76.51,
+    "common": 0.5191,
+    "takes": 12,
+    "place": 24
+   },
+   "band": {
+    "overall": 0.036
+   },
+   "optimal": false,
+   "tags": [
+    {
+     "text": "est. price",
+     "kind": "warn"
+    }
+   ],
+   "facets": {
+    "family": "meta",
+    "effort": "max"
+   }
+  },
+  {
    "label": "gpt-5.6-sol (high)",
    "sub": "OpenAI",
    "org": "OpenAI",
@@ -1665,7 +1709,7 @@
     "minutes": 11.79,
     "repeat_sd": 0.0782,
     "takes": 129,
-    "place": 21
+    "place": 24
    },
    "band": {
     "overall": 0.0186
@@ -1714,50 +1758,6 @@
    "tags": [],
    "facets": {
     "family": "OpenAI",
-    "effort": "max"
-   }
-  },
-  {
-   "label": "meta/muse-spark-open (max) \u00b7 Claude Code",
-   "sub": "meta",
-   "org": "meta",
-   "series": "metamusesparkopenclaudecode",
-   "values": {
-    "overall": 0.5575,
-    "cost": 8.395758,
-    "cells": 11,
-    "ran": 11,
-    "f": 0.2861,
-    "geometry": 0.6115,
-    "appearance": 0.5745,
-    "silhouette": 0.6702,
-    "outline": 0.5057,
-    "plan": 0.5562,
-    "height": 0.6504,
-    "colour": 0.6078,
-    "structure": 0.5301,
-    "materials": 0.9124,
-    "precision": 0.3095,
-    "recall": 0.2743,
-    "triangles": 461.1818,
-    "turns": 107.0,
-    "minutes": 75.44,
-    "common": 0.5191,
-    "takes": 11,
-    "place": 27
-   },
-   "band": {
-    "overall": 0.0373
-   },
-   "optimal": false,
-   "tags": [
-    {
-     "text": "est. price",
-     "kind": "warn"
-    }
-   ],
-   "facets": {
-    "family": "meta",
     "effort": "max"
    }
   },

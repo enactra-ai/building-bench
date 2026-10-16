@@ -13685,6 +13685,26 @@
 },
 {
 "site": "melbourne_4817059_enhanced_v1",
+"series": "metamusesparkopenclaudecode",
+"run": "melbourne_4817059_enhanced_v1-blind-meta-muse-spark-open-claude-code-20261016T074753",
+"overall": 0.698,
+"surface_f": 0.324,
+"chamfer_m": null,
+"height_m": null,
+"triangles": null,
+"glb": "../bench-runs/melbourne_4817059_enhanced_v1-blind-meta-muse-spark-open-claude-code-20261016T074753/submission/building.glb",
+"page": null,
+"cost": 9.15,
+"turns": 125.0,
+"nruns": 1,
+"allruns": [
+0.698
+],
+"ran": "2026-10-16",
+"minutes": 97.12
+},
+{
+"site": "melbourne_4817059_enhanced_v1",
 "series": "nvidianemotron35supervlfreeclaudecode",
 "run": "melbourne_4817059_enhanced_v1-blind-nvidia-nemotron-3.5-super-vl-free-claude-code-20261015T183554",
 "overall": 0.31,
