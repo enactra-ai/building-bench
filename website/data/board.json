@@ -236,7 +236,7 @@
     "triangles": 17703.4167,
     "turns": 433.0,
     "minutes": 159.17,
-    "common": 0.8996,
+    "common": 0.868,
     "takes": 12,
     "place": 1
    },
@@ -284,7 +284,7 @@
     "triangles": 44485.5,
     "turns": 1.0,
     "minutes": 43.24,
-    "common": 0.89,
+    "common": 0.8506,
     "takes": 12,
     "place": 2
    },
@@ -332,7 +332,7 @@
     "triangles": 2109.1667,
     "turns": 840.0,
     "minutes": 236.53,
-    "common": 0.7768,
+    "common": 0.821,
     "takes": 12,
     "place": 2
    },
@@ -348,6 +348,50 @@
    ],
    "facets": {
     "family": "Unplaced",
+    "effort": "max"
+   }
+  },
+  {
+   "label": "deepseek/deepseek-v4.1-flash-1017 (max) \u00b7 Claude Code",
+   "sub": "deepseek",
+   "org": "deepseek",
+   "series": "deepseekdeepseekv41flash1017claudecode",
+   "values": {
+    "overall": 0.8188,
+    "cost": 3.01492,
+    "cells": 12,
+    "ran": 12,
+    "f": 0.4495,
+    "geometry": 0.8288,
+    "appearance": 0.9116,
+    "silhouette": 0.8669,
+    "outline": 0.6748,
+    "plan": 0.8539,
+    "height": 0.8862,
+    "colour": 0.9647,
+    "structure": 0.8408,
+    "materials": 0.9807,
+    "precision": 0.461,
+    "recall": 0.4407,
+    "triangles": 30356.8333,
+    "turns": 504.0,
+    "minutes": 155.37,
+    "common": 0.8188,
+    "takes": 12,
+    "place": 2
+   },
+   "band": {
+    "overall": 0.0165
+   },
+   "optimal": false,
+   "tags": [
+    {
+     "text": "est. price",
+     "kind": "warn"
+    }
+   ],
+   "facets": {
+    "family": "deepseek",
     "effort": "max"
    }
   },
@@ -377,7 +421,7 @@
     "triangles": 40953.8824,
     "turns": 42.0,
     "minutes": 30.12,
-    "common": 0.8525,
+    "common": 0.8428,
     "takes": 17,
     "place": 2
    },
@@ -416,7 +460,7 @@
     "triangles": 3064.3333,
     "turns": 207.0,
     "minutes": 90.78,
-    "common": 0.8226,
+    "common": 0.8116,
     "takes": 12,
     "place": 4
    },
@@ -460,7 +504,7 @@
     "triangles": 3741.0,
     "turns": 78.5,
     "minutes": 36.81,
-    "common": 0.8478,
+    "common": 0.7833,
     "takes": 12,
     "place": 4
    },
@@ -584,9 +628,9 @@
     "triangles": 14001.3939,
     "turns": 231.0,
     "minutes": 94.6,
-    "common": 0.8128,
+    "common": 0.7448,
     "takes": 33,
-    "place": 7
+    "place": 8
    },
    "band": {
     "overall": 0.0204
@@ -624,9 +668,9 @@
     "triangles": 10489.4167,
     "turns": 75.0,
     "minutes": 30.24,
-    "common": 0.6723,
+    "common": 0.7307,
     "takes": 12,
-    "place": 7
+    "place": 8
    },
    "band": {
     "overall": 0.0312
@@ -669,9 +713,9 @@
     "triangles": 7102.5,
     "turns": 339.5,
     "minutes": 114.13,
-    "common": 0.7545,
+    "common": 0.7288,
     "takes": 12,
-    "place": 8
+    "place": 9
    },
    "band": {
     "overall": 0.0226
@@ -714,9 +758,9 @@
     "triangles": 6752.2857,
     "turns": 145.0,
     "minutes": 63.08,
-    "common": 0.6913,
+    "common": 0.7555,
     "takes": 28,
-    "place": 8
+    "place": 9
    },
    "band": {
     "overall": 0.0208
@@ -755,7 +799,7 @@
     "turns": 295.0,
     "minutes": 28.17,
     "takes": 2,
-    "place": 8
+    "place": 9
    },
    "band": {
     "overall": 0.003
@@ -795,7 +839,7 @@
     "minutes": 64.59,
     "repeat_sd": 0.0505,
     "takes": 21,
-    "place": 8
+    "place": 9
    },
    "band": {
     "overall": 0.0255
@@ -834,7 +878,7 @@
     "turns": 119.5,
     "minutes": 30.06,
     "takes": 18,
-    "place": 8
+    "place": 9
    },
    "band": {
     "overall": 0.0214
@@ -870,9 +914,9 @@
     "recall": 0.2921,
     "triangles": 1526.3333,
     "minutes": 34.92,
-    "common": 0.7576,
+    "common": 0.7026,
     "takes": 12,
-    "place": 10
+    "place": 11
    },
    "band": {
     "overall": 0.016
@@ -915,9 +959,9 @@
     "triangles": 4916.7143,
     "turns": 60.0,
     "minutes": 53.34,
-    "common": 0.65,
+    "common": 0.695,
     "takes": 14,
-    "place": 10
+    "place": 11
    },
    "band": {
     "overall": 0.0255
@@ -959,9 +1003,9 @@
     "triangles": 6775.3333,
     "turns": 1.0,
     "minutes": 19.09,
-    "common": 0.7554,
+    "common": 0.698,
     "takes": 12,
-    "place": 10
+    "place": 11
    },
    "band": {
     "overall": 0.0224
@@ -1003,9 +1047,9 @@
     "triangles": 6611.5833,
     "turns": 1.0,
     "minutes": 20.75,
-    "common": 0.7207,
+    "common": 0.6962,
     "takes": 12,
-    "place": 10
+    "place": 11
    },
    "band": {
     "overall": 0.0218
@@ -1049,9 +1093,9 @@
     "turns": 64.0,
     "minutes": 38.35,
     "repeat_sd": 0.0133,
-    "common": 0.7517,
+    "common": 0.7388,
     "takes": 41,
-    "place": 10
+    "place": 11
    },
    "band": {
     "overall": 0.0153
@@ -1088,9 +1132,9 @@
     "triangles": 3755.5,
     "turns": 273.0,
     "minutes": 80.5,
-    "common": 0.6671,
+    "common": 0.6799,
     "takes": 12,
-    "place": 12
+    "place": 13
    },
    "band": {
     "overall": 0.0309
@@ -1132,9 +1176,9 @@
     "triangles": 2075.3333,
     "turns": 215.0,
     "minutes": 77.5,
-    "common": 0.766,
+    "common": 0.679,
     "takes": 12,
-    "place": 13
+    "place": 14
    },
    "band": {
     "overall": 0.0235
@@ -1176,9 +1220,9 @@
     "triangles": 2447.5833,
     "turns": 664.0,
     "minutes": 247.49,
-    "common": 0.716,
+    "common": 0.6734,
     "takes": 12,
-    "place": 13
+    "place": 14
    },
    "band": {
     "overall": 0.0309
@@ -1224,9 +1268,9 @@
     "triangles": 5441.25,
     "turns": 123.5,
     "minutes": 36.12,
-    "common": 0.7662,
+    "common": 0.6714,
     "takes": 12,
-    "place": 13
+    "place": 14
    },
    "band": {
     "overall": 0.0191
@@ -1271,7 +1315,7 @@
     "minutes": 29.26,
     "repeat_sd": 0.0334,
     "takes": 24,
-    "place": 13
+    "place": 14
    },
    "band": {
     "overall": 0.0302
@@ -1309,9 +1353,9 @@
     "triangles": 2646.75,
     "turns": 337.5,
     "minutes": 49.2,
-    "common": 0.6489,
+    "common": 0.6823,
     "takes": 16,
-    "place": 14
+    "place": 15
    },
    "band": {
     "overall": 0.0249
@@ -1350,7 +1394,7 @@
     "turns": 162.5,
     "minutes": 50.15,
     "takes": 3,
-    "place": 14
+    "place": 15
    },
    "band": {
     "overall": 0.0292
@@ -1389,7 +1433,7 @@
     "turns": 88.0,
     "minutes": 21.96,
     "takes": 31,
-    "place": 14
+    "place": 15
    },
    "band": {
     "overall": 0.0215
@@ -1427,7 +1471,7 @@
     "triangles": 6144.0,
     "minutes": 10.55,
     "takes": 1,
-    "place": 14
+    "place": 15
    },
    "band": {},
    "optimal": false,
@@ -1463,9 +1507,8 @@
     "triangles": 3771.4286,
     "turns": 57.0,
     "minutes": 9.32,
-    "common": 0.6502,
     "takes": 7,
-    "place": 14
+    "place": 15
    },
    "band": {
     "overall": 0.0273
@@ -1503,7 +1546,7 @@
     "triangles": 8377.0,
     "minutes": 48.44,
     "takes": 2,
-    "place": 14
+    "place": 15
    },
    "band": {
     "overall": 0.0105
@@ -1541,9 +1584,9 @@
     "triangles": 5337.5526,
     "turns": 53.5,
     "minutes": 36.11,
-    "common": 0.7267,
+    "common": 0.6848,
     "takes": 38,
-    "place": 16
+    "place": 17
    },
    "band": {
     "overall": 0.019
@@ -1580,9 +1623,9 @@
     "triangles": 6810.7812,
     "minutes": 36.54,
     "repeat_sd": 0.0409,
-    "common": 0.682,
+    "common": 0.5476,
     "takes": 33,
-    "place": 21
+    "place": 22
    },
    "band": {
     "overall": 0.0283
@@ -1620,7 +1663,7 @@
     "turns": 247.5,
     "minutes": 26.1,
     "takes": 20,
-    "place": 21
+    "place": 22
    },
    "band": {
     "overall": 0.0361
@@ -1662,9 +1705,9 @@
     "triangles": 509.9167,
     "turns": 109.5,
     "minutes": 76.51,
-    "common": 0.5191,
+    "common": 0.5693,
     "takes": 12,
-    "place": 24
+    "place": 25
    },
    "band": {
     "overall": 0.036
@@ -1709,7 +1752,7 @@
     "minutes": 11.79,
     "repeat_sd": 0.0782,
     "takes": 129,
-    "place": 24
+    "place": 25
    },
    "band": {
     "overall": 0.0186
@@ -1747,9 +1790,9 @@
     "triangles": 6367.9737,
     "turns": 75.5,
     "minutes": 46.87,
-    "common": 0.6285,
+    "common": 0.6156,
     "takes": 38,
-    "place": 27
+    "place": 28
    },
    "band": {
     "overall": 0.0159
@@ -1786,9 +1829,9 @@
     "triangles": 7270.5,
     "turns": 523.0,
     "minutes": 114.94,
-    "common": 0.7391,
+    "common": 0.5558,
     "takes": 12,
-    "place": 27
+    "place": 28
    },
    "band": {
     "overall": 0.0578
@@ -1832,7 +1875,7 @@
     "minutes": 23.65,
     "repeat_sd": 0.0612,
     "takes": 75,
-    "place": 27
+    "place": 28
    },
    "band": {
     "overall": 0.0261
@@ -1875,9 +1918,9 @@
     "triangles": 8006.6452,
     "turns": 197.0,
     "minutes": 58.1,
-    "common": 0.5019,
+    "common": 0.5436,
     "takes": 31,
-    "place": 28
+    "place": 29
    },
    "band": {
     "overall": 0.0207
@@ -1915,9 +1958,9 @@
     "triangles": 7240.5833,
     "turns": 152.0,
     "minutes": 125.14,
-    "common": 0.6336,
+    "common": 0.5403,
     "takes": 12,
-    "place": 28
+    "place": 29
    },
    "band": {
     "overall": 0.0371
@@ -1961,7 +2004,7 @@
     "turns": 174.0,
     "minutes": 15.35,
     "takes": 1,
-    "place": 28
+    "place": 29
    },
    "band": {},
    "optimal": false,
@@ -1995,9 +2038,9 @@
     "recall": 0.2716,
     "turns": 419.0,
     "minutes": 688.59,
-    "common": 0.3708,
+    "common": 0.5197,
     "takes": 12,
-    "place": 28
+    "place": 29
    },
    "band": {
     "overall": 0.0945
@@ -2041,7 +2084,7 @@
     "turns": 33.0,
     "minutes": 5.08,
     "takes": 9,
-    "place": 28
+    "place": 29
    },
    "band": {
     "overall": 0.0348
@@ -2081,7 +2124,7 @@
     "minutes": 6.63,
     "repeat_sd": 0.0892,
     "takes": 121,
-    "place": 28
+    "place": 29
    },
    "band": {
     "overall": 0.0157
@@ -2118,7 +2161,7 @@
     "turns": 68.0,
     "minutes": 9.12,
     "takes": 11,
-    "place": 28
+    "place": 29
    },
    "band": {
     "overall": 0.0618
@@ -2156,7 +2199,7 @@
     "turns": 214.0,
     "minutes": 17.85,
     "takes": 20,
-    "place": 28
+    "place": 29
    },
    "band": {
     "overall": 0.0421
@@ -2201,7 +2244,7 @@
     "minutes": 10.9,
     "repeat_sd": 0.0839,
     "takes": 117,
-    "place": 28
+    "place": 29
    },
    "band": {
     "overall": 0.0164
@@ -2240,7 +2283,7 @@
     "minutes": 24.77,
     "repeat_sd": 0.0167,
     "takes": 19,
-    "place": 28
+    "place": 29
    },
    "band": {
     "overall": 0.0439
@@ -2284,7 +2327,7 @@
     "minutes": 14.56,
     "repeat_sd": 0.099,
     "takes": 67,
-    "place": 33
+    "place": 34
    },
    "band": {
     "overall": 0.0239
@@ -2327,7 +2370,7 @@
     "turns": 150.0,
     "minutes": 53.99,
     "takes": 23,
-    "place": 33
+    "place": 34
    },
    "band": {
     "overall": 0.0315
@@ -2367,7 +2410,7 @@
     "minutes": 24.35,
     "repeat_sd": 0.198,
     "takes": 8,
-    "place": 33
+    "place": 34
    },
    "band": {
     "overall": 0.077
@@ -2404,9 +2447,9 @@
     "triangles": 728.4167,
     "turns": 198.5,
     "minutes": 36.13,
-    "common": 0.4157,
+    "common": 0.3778,
     "takes": 12,
-    "place": 33
+    "place": 34
    },
    "band": {
     "overall": 0.0272
@@ -2447,9 +2490,9 @@
     "recall": 0.0787,
     "turns": 1299.5,
     "minutes": 427.17,
-    "common": 0.3449,
+    "common": 0.3391,
     "takes": 12,
-    "place": 33
+    "place": 34
    },
    "band": {
     "overall": 0.0342
@@ -2490,9 +2533,9 @@
     "recall": 0.1243,
     "turns": 109.5,
     "minutes": 100.71,
-    "common": 0.2961,
+    "common": 0.3302,
     "takes": 12,
-    "place": 33
+    "place": 34
    },
    "band": {
     "overall": 0.0919
@@ -2529,9 +2572,9 @@
     "triangles": 344.4444,
     "turns": 63.0,
     "minutes": 5.73,
-    "common": 0.4384,
+    "common": 0.2581,
     "takes": 18,
-    "place": 42
+    "place": 43
    },
    "band": {
     "overall": 0.0446
@@ -2569,9 +2612,9 @@
     "turns": 59.5,
     "minutes": 8.15,
     "repeat_sd": 0.0754,
-    "common": 0.3949,
+    "common": 0.2668,
     "takes": 20,
-    "place": 48
+    "place": 49
    },
    "band": {
     "overall": 0.0395
@@ -2609,7 +2652,7 @@
     "minutes": 79.21,
     "repeat_sd": 0.2416,
     "takes": 72,
-    "place": 48
+    "place": 49
    },
    "band": {
     "overall": 0.0415

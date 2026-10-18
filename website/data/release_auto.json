@@ -1,4 +1,10 @@
 {
+ "deepseek-v4.1-flash-1017": {
+  "date": "2026-10-17",
+  "source": "OpenRouter listing",
+  "openrouter": "deepseek/deepseek-v4.1-flash-1017",
+  "listed": "2026-10-17 08:27 UTC"
+ },
  "muse-spark-open": {
   "date": "2026-10-15",
   "source": "OpenRouter listing",
