@@ -48,7 +48,8 @@ OUT = os.path.join(HERE, "out")
 sys.path.insert(0, os.path.join(HERE, "..", ".."))
 import catalog                                            # noqa: E402
 
-W, H = 1200, 368             # CSS px: the plot and its names, nothing above or below
+W, H = 1200, 480             # CSS px: the width, and the most height the names may need (the page
+                             # sets the figure's own height once it has measured them)
 
 
 def chrome():
@@ -271,8 +272,17 @@ function width(text, font) { ctx.font = font; return ctx.measureText(text).width
 // equally balanced, the tie going to the longer last line: the lines are
 // right-aligned against the logo, so the weight belongs at the end
 // ("DeepSeek / V4.1 / Flash (max)", not "... / V4.1 Flash / (max)").
-function wrap(name, font) {
-  if (width(name, font) <= G.nameOneLine) return [name];
+// How many lines a name may take without running into its neighbours'. The names are rotated, so each
+// line more moves the block sideways by nameLead, while neighbouring names sit pitch * sin(angle) apart
+// across the text: 35 bars on 1200 px leave 32 px a bar, room for one line (2026-10-17: three-line
+// names there ran together). 25 bars give two lines, 15 three, as the reference had.
+function maxLines(pitch) {
+  const across = pitch * Math.sin(Math.abs(G.nameAngle) * Math.PI / 180);
+  return Math.max(1, Math.min(3, Math.floor((across - 1) / G.nameLead)));
+}
+
+function wrap(name, font, limit) {
+  if (limit === 1 || width(name, font) <= G.nameOneLine) return [name];
   const w = name.split(" ");
   const splits = k => {
     const out = [];
@@ -281,7 +291,7 @@ function wrap(name, font) {
       out.push([w.slice(0, i), w.slice(i, j), w.slice(j)]);
     return out.map(p => p.map(x => x.join(" ")));
   };
-  for (const k of [2, 3]) {
+  for (const k of [2, 3].filter(k => k <= limit)) {
     const c = splits(k).map(lines => {
       const ws = lines.map(l => width(l, font));
       return {lines, worst: Math.max(...ws), last: ws[ws.length - 1]};
@@ -293,8 +303,34 @@ function wrap(name, font) {
   return [name];
 }
 
+// The names decide the figure's left margin and its height: with one line each, the first names run
+// left of the plot, and the longest runs furthest down. Measured, not guessed, so nothing is cut off.
+function layout() {
+  const a = Math.abs(G.nameAngle) * Math.PI / 180, n = DATA.length;
+  let left = G.left;
+  for (let pass = 0; pass < 4; pass++) {
+    const pitch = (W - left - G.right) / n, limit = maxLines(pitch);
+    let spill = 0, depth = 0;
+    DATA.forEach((d, i) => {
+      const font = `${d.new ? 700 : 400} ${G.nameSize}px ${SANS}`;
+      d.lines = wrap(d.name, font, limit);
+      const w = Math.max(...d.lines.map(l => width(l, font))), block = d.lines.length * G.nameLead;
+      const ax = left + (i + 0.5) * pitch + 3;
+      spill = Math.max(spill, w * Math.cos(a) + block / 2 * Math.sin(a) - ax + 6);
+      depth = Math.max(depth, w * Math.sin(a) + block / 2 * Math.cos(a) + 6);
+    });
+    if (spill <= 0.5) return {left, pitch, height: Math.min(H, Math.ceil(G.base + G.logoGap + G.logo + G.nameGap + depth))};
+    left += spill;
+  }
+  return {left, pitch: (W - left - G.right) / n, height: H};
+}
+
 function draw() {
   svg.innerHTML = "";
+  const L0 = layout();
+  G.left = L0.left;
+  svg.setAttribute("height", L0.height);
+  svg.setAttribute("viewBox", `0 0 ${W} ${L0.height}`);
   el("style", {}).textContent = document.getElementById("fonts").textContent;
 
   // -- grid ---------------------------------------------------------------------
@@ -317,7 +353,7 @@ function draw() {
     const cx = G.left + (i + 0.5) * pitch, x0 = cx - bwid / 2, x1 = cx + bwid / 2;
     const top = y(d.score * 100), r = Math.min(G.radius, bwid / 2);
     pos[d.name] = {cx, top, x0, x1};
-    el("rect", {x: cx - pitch / 2, y: G.top - 8, width: pitch, height: H - G.top + 8, fill: "transparent"}, node);
+    el("rect", {x: cx - pitch / 2, y: G.top - 8, width: pitch, height: L0.height - G.top + 8, fill: "transparent"}, node);
     el("path", {d: `M${x0},${G.base} V${top + r} Q${x0},${top} ${x0 + r},${top} H${x1 - r} ` +
                    `Q${x1},${top} ${x1},${top + r} V${G.base} Z`, fill: d.colour, class: "bar"}, node);
     const v = el("text", {x: cx, y: (top + G.base) / 2 + 5.4, "text-anchor": "middle",
@@ -325,10 +361,11 @@ function draw() {
     v.textContent = d.label;
 
     // logo
-    const L = LOGOS[d.org], s = G.logo, lx = cx - s / 2, ly = G.base + G.logoGap;
-    if (!L) {
-      // a company with no LOGO entry yet: the slot under its bar stays empty
-    } else if (L.wordmark) {
+    // a company with no LOGO entry yet gets its name as a wordmark (the figure kit's rule), not a blank
+    const words = d.org.toUpperCase().split(/\s+/);
+    const L = LOGOS[d.org] || {wordmark: words.length > 1 ? [words[0], words.slice(1).join(" ")] : words};
+    const s = G.logo, lx = cx - s / 2, ly = G.base + G.logoGap;
+    if (L.wordmark) {
       L.wordmark.forEach((w, k) => {
         const tw = el("text", {x: cx, y: ly + 7.5 + k * 6.2, "text-anchor": "middle", "font-family": SANS,
                                "font-weight": 500, "font-size": 5.2, "letter-spacing": 0.35, fill: "#4a4a4a"}, node);
@@ -347,10 +384,9 @@ function draw() {
       ic.innerHTML = L.inner;
     }
 
-    // name: rotated, right-aligned against the logo, wrapped
+    // name: rotated, right-aligned against the logo, wrapped as layout() decided
     const wt = d.new ? 700 : 400;
-    const font = `${wt} ${G.nameSize}px ${SANS}`;
-    const lines = wrap(d.name, font);
+    const lines = d.lines;
     const ax = cx + 3, ay = G.base + G.logoGap + G.logo + G.nameGap;
     const g = el("g", {transform: `translate(${ax},${ay}) rotate(${G.nameAngle})`}, node);
     const off = -(lines.length - 1) / 2 * G.nameLead;
