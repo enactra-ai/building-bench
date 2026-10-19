@@ -1,8 +1,8 @@
 {
- "fingerprint": "280505b3a135de4b0783ff1e66681d23380a1cb82cead0dc826554979ea25952",
- "snapshot": "2026-10-17",
+ "fingerprint": "93a90febc3a8ef1cc73c1f26dc7022e07a858cf696c337d2a2e0c77c5d2a6cb6",
+ "snapshot": "2026-10-19",
  "buildings": 12,
- "results": 388,
+ "results": 400,
  "models": [
   "Claude Opus 5.5 (max)",
   "GPT‑6.1 Sol (max)",
@@ -12,6 +12,7 @@
   "Gemini 4 Argon (high)",
   "Grok 4.7 (xhigh)",
   "Claude Fable 5.1 (max)",
+  "MiniMax M3.1 Flash (max)",
   "Claude Opus 5 (max)",
   "Union Alpha (max)",
   "DeepSeek V4.1 Flash (max)",
@@ -42,6 +43,9 @@
   "deepseek-v4.1-flash-1017": [
    "name from OpenRouter ('DeepSeek V4.1 Flash 1017')"
   ],
+  "minimax-m3.1-flash:free": [
+   "name from OpenRouter ('MiniMax M3.1 Flash')"
+  ],
   "muse-spark-open": [
    "name from OpenRouter ('Muse Spark Open')"
   ],
@@ -51,6 +55,7 @@
  },
  "dated": {
   "deepseek-v4.1-flash-1017": "2026-10-17 (OpenRouter listing)",
+  "minimax-m3.1-flash:free": "2026-10-18 (OpenRouter listing)",
   "muse-spark-open": "2026-10-15 (OpenRouter listing)",
   "nemotron-3.5-super-vl": "2026-10-15 (OpenRouter listing)"
  }

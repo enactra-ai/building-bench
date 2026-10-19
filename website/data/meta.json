@@ -1,5 +1,5 @@
 {
- "snapshot": "2026-10-17",
+ "snapshot": "2026-10-19",
  "sameSet": [
   "allegiant_stadium",
   "aon_center_chicago",
@@ -13,8 +13,8 @@
   "twa_flight_center",
   "udvar_hazy"
  ],
- "runsScored": 2312,
- "modelsRanked": 59,
+ "runsScored": 2324,
+ "modelsRanked": 60,
  "rig": {
   "schema": "city_bench.building_light/1",
   "sun_azimuth_deg": 135.0,
@@ -42,8 +42,8 @@
   "reach_m": 400.0
  },
  "cleanBoard": {
-  "runsScored": 652,
-  "modelsRanked": 39,
+  "runsScored": 664,
+  "modelsRanked": 40,
   "buildings": 12,
   "rows": {
    "claudeopus55max": {
@@ -175,6 +175,17 @@
     "appearance": 0.7528,
     "cost": 7.5439884,
     "minutes": 43.82,
+    "cells": 12,
+    "place": 9
+   },
+   "minimaxminimaxm31flashfreeclaudecode": {
+    "label": "minimax/minimax-m3.1-flash:free (max) \u00b7 Claude Code",
+    "overall": 0.7325,
+    "f": 0.3824,
+    "geometry": 0.7926,
+    "appearance": 0.7542,
+    "cost": 0.0,
+    "minutes": 180.0,
     "cells": 12,
     "place": 9
    },
@@ -341,7 +352,7 @@
     "cost": 0.45029904,
     "minutes": 62.74,
     "cells": 12,
-    "place": 22
+    "place": 23
    },
    "metamusesparkopenclaudecode": {
     "label": "meta/muse-spark-open (max) \u00b7 Claude Code",
@@ -352,7 +363,7 @@
     "cost": 8.586422,
     "minutes": 76.51,
     "cells": 12,
-    "place": 25
+    "place": 26
    },
    "stealthspacebunnyalphaclaudecode": {
     "label": "stealth/space-bunny-alpha (max) \u00b7 Claude Code",
@@ -363,7 +374,7 @@
     "cost": 0.0,
     "minutes": 114.94,
     "cells": 12,
-    "place": 25
+    "place": 26
    },
    "gemini38flash": {
     "label": "gemini-3.8-flash (high)",
@@ -374,7 +385,7 @@
     "cost": 3.330324675,
     "minutes": 39.51,
     "cells": 12,
-    "place": 25
+    "place": 26
    },
    "sonnetmax": {
     "label": "claude-sonnet-5 (max)",
@@ -385,7 +396,7 @@
     "cost": 15.032763100000004,
     "minutes": 60.73,
     "cells": 12,
-    "place": 26
+    "place": 27
    },
    "kimik3max": {
     "label": "kimi-k3 (thinking)",
@@ -396,7 +407,7 @@
     "cost": 5.844977500000001,
     "minutes": 125.14,
     "cells": 12,
-    "place": 26
+    "place": 27
    },
    "mistralaimistrallarge40claudecode": {
     "label": "mistralai/mistral-large-4-0 (max) \u00b7 Claude Code",
@@ -407,7 +418,7 @@
     "cost": 33.208745,
     "minutes": 688.59,
     "cells": 12,
-    "place": 26
+    "place": 27
    },
    "gemini": {
     "label": "gemini-3.1-pro (high)",
@@ -418,7 +429,7 @@
     "cost": 1.5500243999999999,
     "minutes": 16.75,
     "cells": 2,
-    "place": 26
+    "place": 27
    },
    "nvidianemotron35supervlfreeclaudecode": {
     "label": "nvidia/nemotron-3.5-super-vl (max) \u00b7 Claude Code",
@@ -429,7 +440,7 @@
     "cost": 0.7568904999999999,
     "minutes": 36.13,
     "cells": 12,
-    "place": 32
+    "place": 33
    },
    "step5previewclaudecode": {
     "label": "step-5-preview (max) \u00b7 Claude Code",
@@ -440,7 +451,7 @@
     "cost": 16.58585,
     "minutes": 427.17,
     "cells": 12,
-    "place": 33
+    "place": 34
    },
    "glm53flashmax": {
     "label": "glm-5.3-flash (max)",
@@ -451,7 +462,7 @@
     "cost": 0.21804560249999994,
     "minutes": 100.71,
     "cells": 12,
-    "place": 33
+    "place": 34
    },
    "haiku": {
     "label": "claude-haiku-4-5",
@@ -462,7 +473,7 @@
     "cost": 0.5243465500000001,
     "minutes": 10.85,
     "cells": 12,
-    "place": 34
+    "place": 35
    },
    "inklingfreeclaudecode": {
     "label": "thinkingmachines/inkling:free \u00b7 Claude Code",
@@ -473,7 +484,7 @@
     "cost": 0.0,
     "minutes": 4.31,
     "cells": 12,
-    "place": 34
+    "place": 35
    }
   }
  },
@@ -536,73 +547,73 @@
   "helsinki_122886734_enhanced_v1": {
    "union": false,
    "clean": true,
-   "n": 53,
+   "n": 54,
    "source": "Helsinki 3D city model"
   },
   "helsinki_122954081_enhanced_v1": {
    "union": false,
    "clean": true,
-   "n": 51,
+   "n": 52,
    "source": "Helsinki 3D city model"
   },
   "helsinki_123901485_enhanced_v1": {
    "union": false,
    "clean": true,
-   "n": 54,
+   "n": 55,
    "source": "Helsinki 3D city model"
   },
   "helsinki_8033120_enhanced_v1": {
    "union": false,
    "clean": true,
-   "n": 51,
+   "n": 52,
    "source": "Helsinki 3D city model"
   },
   "helsinki_cathedral_enhanced_v1": {
    "union": false,
    "clean": true,
-   "n": 56,
+   "n": 57,
    "source": "Helsinki 3D city model"
   },
   "melbourne_155809136_enhanced_v1": {
    "union": false,
    "clean": true,
-   "n": 52,
+   "n": 53,
    "source": "City of Melbourne 2020 photomesh"
   },
   "melbourne_22820458_enhanced_v1": {
    "union": false,
    "clean": true,
-   "n": 52,
+   "n": 53,
    "source": "City of Melbourne 2020 photomesh"
   },
   "melbourne_25422768_enhanced_v1": {
    "union": false,
    "clean": true,
-   "n": 54,
+   "n": 55,
    "source": "City of Melbourne 2020 photomesh"
   },
   "melbourne_296368687_enhanced_v1": {
    "union": false,
    "clean": true,
-   "n": 54,
+   "n": 55,
    "source": "City of Melbourne 2020 photomesh"
   },
   "melbourne_33106429_enhanced_v1": {
    "union": false,
    "clean": true,
-   "n": 52,
+   "n": 53,
    "source": "City of Melbourne 2020 photomesh"
   },
   "melbourne_45461060_enhanced_v1": {
    "union": false,
    "clean": true,
-   "n": 52,
+   "n": 53,
    "source": "City of Melbourne 2020 photomesh"
   },
   "melbourne_4817059_enhanced_v1": {
    "union": false,
    "clean": true,
-   "n": 53,
+   "n": 54,
    "source": "City of Melbourne 2020 photomesh"
   }
  }
