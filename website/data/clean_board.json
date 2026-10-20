@@ -520,6 +520,54 @@
    }
   },
   {
+   "label": "minimax/minimax-m3.1-flash:free (max) \u00b7 Claude Code",
+   "sub": "minimax",
+   "org": "minimax",
+   "series": "minimaxminimaxm31flashfreeclaudecode",
+   "values": {
+    "overall": 0.7983,
+    "cost": 0.0,
+    "cells": 12,
+    "ran": 12,
+    "f": 0.4156,
+    "geometry": 0.8076,
+    "appearance": 0.9015,
+    "silhouette": 0.8573,
+    "outline": 0.6381,
+    "plan": 0.8376,
+    "height": 0.8446,
+    "colour": 0.9706,
+    "structure": 0.8094,
+    "materials": 0.9999,
+    "precision": 0.4306,
+    "recall": 0.4032,
+    "triangles": 8630.75,
+    "turns": 4262.0,
+    "minutes": 1078.86,
+    "common": 0.7983,
+    "takes": 12,
+    "place": 4
+   },
+   "band": {
+    "overall": 0.0258
+   },
+   "optimal": true,
+   "tags": [
+    {
+     "text": "est. price",
+     "kind": "warn"
+    },
+    {
+     "text": "frontier",
+     "kind": ""
+    }
+   ],
+   "facets": {
+    "family": "minimax",
+    "effort": "max"
+   }
+  },
+  {
    "label": "grok-4.7 (xhigh)",
    "sub": "xAI",
    "org": "xAI",
@@ -590,7 +638,7 @@
     "turns": 124.5,
     "minutes": 41.88,
     "takes": 2,
-    "place": 7
+    "place": 8
    },
    "band": {
     "overall": 0.0088
@@ -670,7 +718,7 @@
     "minutes": 92.58,
     "common": 0.7448,
     "takes": 12,
-    "place": 9
+    "place": 10
    },
    "band": {
     "overall": 0.0212
@@ -710,7 +758,7 @@
     "minutes": 43.82,
     "common": 0.7388,
     "takes": 12,
-    "place": 9
+    "place": 10
    },
    "band": {
     "overall": 0.0152
@@ -719,54 +767,6 @@
    "tags": [],
    "facets": {
     "family": "OpenAI",
-    "effort": "max"
-   }
-  },
-  {
-   "label": "minimax/minimax-m3.1-flash:free (max) \u00b7 Claude Code",
-   "sub": "minimax",
-   "org": "minimax",
-   "series": "minimaxminimaxm31flashfreeclaudecode",
-   "values": {
-    "overall": 0.7325,
-    "cost": 0.0,
-    "cells": 12,
-    "ran": 12,
-    "f": 0.3824,
-    "geometry": 0.7926,
-    "appearance": 0.7542,
-    "silhouette": 0.8418,
-    "outline": 0.5884,
-    "plan": 0.8239,
-    "height": 0.8756,
-    "colour": 0.8275,
-    "structure": 0.6564,
-    "materials": 0.9808,
-    "precision": 0.3951,
-    "recall": 0.3736,
-    "triangles": 7055.75,
-    "turns": 771.5,
-    "minutes": 180.0,
-    "common": 0.7325,
-    "takes": 12,
-    "place": 9
-   },
-   "band": {
-    "overall": 0.0291
-   },
-   "optimal": true,
-   "tags": [
-    {
-     "text": "est. price",
-     "kind": "warn"
-    },
-    {
-     "text": "frontier",
-     "kind": ""
-    }
-   ],
-   "facets": {
-    "family": "minimax",
     "effort": "max"
    }
   },
@@ -798,7 +798,7 @@
     "minutes": 30.24,
     "common": 0.7307,
     "takes": 12,
-    "place": 9
+    "place": 10
    },
    "band": {
     "overall": 0.0312
@@ -843,7 +843,7 @@
     "minutes": 114.13,
     "common": 0.7288,
     "takes": 12,
-    "place": 9
+    "place": 10
    },
    "band": {
     "overall": 0.0226
@@ -886,7 +886,7 @@
     "minutes": 34.92,
     "common": 0.7026,
     "takes": 12,
-    "place": 11
+    "place": 12
    },
    "band": {
     "overall": 0.016
@@ -930,7 +930,7 @@
     "minutes": 19.09,
     "common": 0.698,
     "takes": 12,
-    "place": 11
+    "place": 12
    },
    "band": {
     "overall": 0.0224
@@ -973,7 +973,7 @@
     "triangles": 10360.0,
     "minutes": 69.72,
     "takes": 1,
-    "place": 11
+    "place": 12
    },
    "band": {},
    "optimal": false,
@@ -1010,7 +1010,7 @@
     "minutes": 20.75,
     "common": 0.6962,
     "takes": 12,
-    "place": 11
+    "place": 12
    },
    "band": {
     "overall": 0.0218
@@ -1055,7 +1055,7 @@
     "minutes": 53.34,
     "common": 0.695,
     "takes": 12,
-    "place": 11
+    "place": 12
    },
    "band": {
     "overall": 0.0293
@@ -1100,7 +1100,7 @@
     "minutes": 53.03,
     "common": 0.6848,
     "takes": 12,
-    "place": 14
+    "place": 15
    },
    "band": {
     "overall": 0.0232
@@ -1140,7 +1140,7 @@
     "minutes": 60.05,
     "common": 0.6823,
     "takes": 12,
-    "place": 14
+    "place": 15
    },
    "band": {
     "overall": 0.024
@@ -1179,7 +1179,7 @@
     "minutes": 80.5,
     "common": 0.6799,
     "takes": 12,
-    "place": 14
+    "place": 15
    },
    "band": {
     "overall": 0.0309
@@ -1223,7 +1223,7 @@
     "minutes": 77.5,
     "common": 0.679,
     "takes": 12,
-    "place": 14
+    "place": 15
    },
    "band": {
     "overall": 0.0235
@@ -1267,7 +1267,7 @@
     "minutes": 247.49,
     "common": 0.6734,
     "takes": 12,
-    "place": 14
+    "place": 15
    },
    "band": {
     "overall": 0.0309
@@ -1311,7 +1311,7 @@
     "minutes": 36.12,
     "common": 0.6714,
     "takes": 12,
-    "place": 14
+    "place": 15
    },
    "band": {
     "overall": 0.0191
@@ -1355,7 +1355,7 @@
     "turns": 51.0,
     "minutes": 8.22,
     "takes": 3,
-    "place": 14
+    "place": 15
    },
    "band": {
     "overall": 0.0314
@@ -2213,6 +2213,54 @@
    }
   },
   {
+   "label": "minimax/minimax-m3.1-flash:free (max) \u00b7 Claude Code",
+   "sub": "minimax",
+   "org": "minimax",
+   "series": "minimaxminimaxm31flashfreeclaudecode",
+   "values": {
+    "overall": 0.7983,
+    "cost": 0.0,
+    "cells": 12,
+    "ran": 12,
+    "f": 0.4156,
+    "geometry": 0.8076,
+    "appearance": 0.9015,
+    "silhouette": 0.8573,
+    "outline": 0.6381,
+    "plan": 0.8376,
+    "height": 0.8446,
+    "colour": 0.9706,
+    "structure": 0.8094,
+    "materials": 0.9999,
+    "precision": 0.4306,
+    "recall": 0.4032,
+    "triangles": 8630.75,
+    "turns": 4262.0,
+    "minutes": 1078.86,
+    "common": 0.7983,
+    "takes": 12,
+    "place": 4
+   },
+   "band": {
+    "overall": 0.0258
+   },
+   "optimal": true,
+   "tags": [
+    {
+     "text": "est. price",
+     "kind": "warn"
+    },
+    {
+     "text": "frontier",
+     "kind": ""
+    }
+   ],
+   "facets": {
+    "family": "minimax",
+    "effort": "max"
+   }
+  },
+  {
    "label": "grok-4.7 (xhigh)",
    "sub": "xAI",
    "org": "xAI",
@@ -2324,7 +2372,7 @@
     "minutes": 92.58,
     "common": 0.7448,
     "takes": 12,
-    "place": 9
+    "place": 10
    },
    "band": {
     "overall": 0.0212
@@ -2364,7 +2412,7 @@
     "minutes": 43.82,
     "common": 0.7388,
     "takes": 12,
-    "place": 9
+    "place": 10
    },
    "band": {
     "overall": 0.0152
@@ -2373,54 +2421,6 @@
    "tags": [],
    "facets": {
     "family": "OpenAI",
-    "effort": "max"
-   }
-  },
-  {
-   "label": "minimax/minimax-m3.1-flash:free (max) \u00b7 Claude Code",
-   "sub": "minimax",
-   "org": "minimax",
-   "series": "minimaxminimaxm31flashfreeclaudecode",
-   "values": {
-    "overall": 0.7325,
-    "cost": 0.0,
-    "cells": 12,
-    "ran": 12,
-    "f": 0.3824,
-    "geometry": 0.7926,
-    "appearance": 0.7542,
-    "silhouette": 0.8418,
-    "outline": 0.5884,
-    "plan": 0.8239,
-    "height": 0.8756,
-    "colour": 0.8275,
-    "structure": 0.6564,
-    "materials": 0.9808,
-    "precision": 0.3951,
-    "recall": 0.3736,
-    "triangles": 7055.75,
-    "turns": 771.5,
-    "minutes": 180.0,
-    "common": 0.7325,
-    "takes": 12,
-    "place": 9
-   },
-   "band": {
-    "overall": 0.0291
-   },
-   "optimal": true,
-   "tags": [
-    {
-     "text": "est. price",
-     "kind": "warn"
-    },
-    {
-     "text": "frontier",
-     "kind": ""
-    }
-   ],
-   "facets": {
-    "family": "minimax",
     "effort": "max"
    }
   },
@@ -2452,7 +2452,7 @@
     "minutes": 30.24,
     "common": 0.7307,
     "takes": 12,
-    "place": 9
+    "place": 10
    },
    "band": {
     "overall": 0.0312
@@ -2497,7 +2497,7 @@
     "minutes": 114.13,
     "common": 0.7288,
     "takes": 12,
-    "place": 9
+    "place": 10
    },
    "band": {
     "overall": 0.0226
@@ -2540,7 +2540,7 @@
     "minutes": 34.92,
     "common": 0.7026,
     "takes": 12,
-    "place": 11
+    "place": 12
    },
    "band": {
     "overall": 0.016
@@ -2584,7 +2584,7 @@
     "minutes": 19.09,
     "common": 0.698,
     "takes": 12,
-    "place": 11
+    "place": 12
    },
    "band": {
     "overall": 0.0224
@@ -2628,7 +2628,7 @@
     "minutes": 20.75,
     "common": 0.6962,
     "takes": 12,
-    "place": 11
+    "place": 12
    },
    "band": {
     "overall": 0.0218
@@ -2673,7 +2673,7 @@
     "minutes": 53.34,
     "common": 0.695,
     "takes": 12,
-    "place": 11
+    "place": 12
    },
    "band": {
     "overall": 0.0293
@@ -2718,7 +2718,7 @@
     "minutes": 53.03,
     "common": 0.6848,
     "takes": 12,
-    "place": 14
+    "place": 15
    },
    "band": {
     "overall": 0.0232
@@ -2758,7 +2758,7 @@
     "minutes": 60.05,
     "common": 0.6823,
     "takes": 12,
-    "place": 14
+    "place": 15
    },
    "band": {
     "overall": 0.024
@@ -2797,7 +2797,7 @@
     "minutes": 80.5,
     "common": 0.6799,
     "takes": 12,
-    "place": 14
+    "place": 15
    },
    "band": {
     "overall": 0.0309
@@ -2841,7 +2841,7 @@
     "minutes": 77.5,
     "common": 0.679,
     "takes": 12,
-    "place": 14
+    "place": 15
    },
    "band": {
     "overall": 0.0235
@@ -2885,7 +2885,7 @@
     "minutes": 247.49,
     "common": 0.6734,
     "takes": 12,
-    "place": 14
+    "place": 15
    },
    "band": {
     "overall": 0.0309
@@ -2929,7 +2929,7 @@
     "minutes": 36.12,
     "common": 0.6714,
     "takes": 12,
-    "place": 14
+    "place": 15
    },
    "band": {
     "overall": 0.0191

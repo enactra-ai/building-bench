@@ -6017,22 +6017,22 @@
 {
 "site": "helsinki_122886734_enhanced_v1",
 "series": "minimaxminimaxm31flashfreeclaudecode",
-"run": "helsinki_122886734_enhanced_v1-blind-minimax-minimax-m3.1-flash-free-claude-code-20261019T184340",
-"overall": 0.712,
-"surface_f": 0.331,
+"run": "helsinki_122886734_enhanced_v1-blind-minimax-minimax-m3.1-flash-free-claude-code-20261019T154340",
+"overall": 0.793,
+"surface_f": 0.4,
 "chamfer_m": null,
 "height_m": null,
 "triangles": null,
-"glb": "../bench-runs/helsinki_122886734_enhanced_v1-blind-minimax-minimax-m3.1-flash-free-claude-code-20261019T184340/submission/building.glb",
+"glb": "../bench-runs/helsinki_122886734_enhanced_v1-blind-minimax-minimax-m3.1-flash-free-claude-code-20261019T154340/submission/building.glb",
 "page": null,
 "cost": 0.0,
-"turns": 840.0,
+"turns": 4208.0,
 "nruns": 1,
 "allruns": [
-0.712
+0.793
 ],
 "ran": "2026-10-19",
-"minutes": 180.0
+"minutes": 1078.87
 },
 {
 "site": "helsinki_122886734_enhanced_v1",
@@ -6754,22 +6754,22 @@
 {
 "site": "helsinki_122954081_enhanced_v1",
 "series": "minimaxminimaxm31flashfreeclaudecode",
-"run": "helsinki_122954081_enhanced_v1-blind-minimax-minimax-m3.1-flash-free-claude-code-20261019T184340",
-"overall": 0.824,
-"surface_f": 0.584,
+"run": "helsinki_122954081_enhanced_v1-blind-minimax-minimax-m3.1-flash-free-claude-code-20261020T091435",
+"overall": 0.874,
+"surface_f": 0.742,
 "chamfer_m": null,
 "height_m": null,
 "triangles": null,
-"glb": "../bench-runs/helsinki_122954081_enhanced_v1-blind-minimax-minimax-m3.1-flash-free-claude-code-20261019T184340/submission/building.glb",
+"glb": "../bench-runs/helsinki_122954081_enhanced_v1-blind-minimax-minimax-m3.1-flash-free-claude-code-20261020T091435/submission/building.glb",
 "page": null,
 "cost": 0.0,
-"turns": 816.0,
+"turns": 4490.0,
 "nruns": 1,
 "allruns": [
-0.824
+0.874
 ],
-"ran": "2026-10-19",
-"minutes": 180.0
+"ran": "2026-10-20",
+"minutes": 1074.58
 },
 {
 "site": "helsinki_122954081_enhanced_v1",
@@ -7470,22 +7470,22 @@
 {
 "site": "helsinki_123901485_enhanced_v1",
 "series": "minimaxminimaxm31flashfreeclaudecode",
-"run": "helsinki_123901485_enhanced_v1-blind-minimax-minimax-m3.1-flash-free-claude-code-20261019T184340",
-"overall": 0.792,
-"surface_f": 0.358,
+"run": "helsinki_123901485_enhanced_v1-blind-minimax-minimax-m3.1-flash-free-claude-code-20261019T154340",
+"overall": 0.808,
+"surface_f": 0.344,
 "chamfer_m": null,
 "height_m": null,
 "triangles": null,
-"glb": "../bench-runs/helsinki_123901485_enhanced_v1-blind-minimax-minimax-m3.1-flash-free-claude-code-20261019T184340/submission/building.glb",
+"glb": "../bench-runs/helsinki_123901485_enhanced_v1-blind-minimax-minimax-m3.1-flash-free-claude-code-20261019T154340/submission/building.glb",
 "page": null,
 "cost": 0.0,
-"turns": 861.0,
+"turns": 4479.0,
 "nruns": 1,
 "allruns": [
-0.792
+0.808
 ],
 "ran": "2026-10-19",
-"minutes": 180.0
+"minutes": 1078.87
 },
 {
 "site": "helsinki_123901485_enhanced_v1",
@@ -8228,22 +8228,22 @@
 {
 "site": "helsinki_8033120_enhanced_v1",
 "series": "minimaxminimaxm31flashfreeclaudecode",
-"run": "helsinki_8033120_enhanced_v1-blind-minimax-minimax-m3.1-flash-free-claude-code-20261019T184340",
-"overall": 0.614,
-"surface_f": 0.543,
+"run": "helsinki_8033120_enhanced_v1-blind-minimax-minimax-m3.1-flash-free-claude-code-20261019T154340",
+"overall": 0.759,
+"surface_f": 0.46,
 "chamfer_m": null,
 "height_m": null,
 "triangles": null,
-"glb": "../bench-runs/helsinki_8033120_enhanced_v1-blind-minimax-minimax-m3.1-flash-free-claude-code-20261019T184340/submission/building.glb",
+"glb": "../bench-runs/helsinki_8033120_enhanced_v1-blind-minimax-minimax-m3.1-flash-free-claude-code-20261019T154340/submission/building.glb",
 "page": null,
 "cost": 0.0,
-"turns": 667.0,
+"turns": 3674.0,
 "nruns": 1,
 "allruns": [
-0.614
+0.759
 ],
 "ran": "2026-10-19",
-"minutes": 180.0
+"minutes": 1078.85
 },
 {
 "site": "helsinki_8033120_enhanced_v1",
@@ -8924,22 +8924,22 @@
 {
 "site": "helsinki_cathedral_enhanced_v1",
 "series": "minimaxminimaxm31flashfreeclaudecode",
-"run": "helsinki_cathedral_enhanced_v1-blind-minimax-minimax-m3.1-flash-free-claude-code-20261019T184340",
-"overall": 0.841,
-"surface_f": 0.47,
+"run": "helsinki_cathedral_enhanced_v1-blind-minimax-minimax-m3.1-flash-free-claude-code-20261019T154340",
+"overall": 0.886,
+"surface_f": 0.523,
 "chamfer_m": null,
 "height_m": null,
 "triangles": null,
-"glb": "../bench-runs/helsinki_cathedral_enhanced_v1-blind-minimax-minimax-m3.1-flash-free-claude-code-20261019T184340/submission/building.glb",
+"glb": "../bench-runs/helsinki_cathedral_enhanced_v1-blind-minimax-minimax-m3.1-flash-free-claude-code-20261019T154340/submission/building.glb",
 "page": null,
 "cost": 0.0,
-"turns": 706.0,
+"turns": 3765.0,
 "nruns": 1,
 "allruns": [
-0.841
+0.886
 ],
 "ran": "2026-10-19",
-"minutes": 180.0
+"minutes": 1078.88
 },
 {
 "site": "helsinki_cathedral_enhanced_v1",
@@ -9683,22 +9683,22 @@
 {
 "site": "melbourne_155809136_enhanced_v1",
 "series": "minimaxminimaxm31flashfreeclaudecode",
-"run": "melbourne_155809136_enhanced_v1-blind-minimax-minimax-m3.1-flash-free-claude-code-20261019T184340",
-"overall": 0.701,
-"surface_f": 0.322,
+"run": "melbourne_155809136_enhanced_v1-blind-minimax-minimax-m3.1-flash-free-claude-code-20261019T154340",
+"overall": 0.875,
+"surface_f": 0.552,
 "chamfer_m": null,
 "height_m": null,
 "triangles": null,
-"glb": "../bench-runs/melbourne_155809136_enhanced_v1-blind-minimax-minimax-m3.1-flash-free-claude-code-20261019T184340/submission/building.glb",
+"glb": "../bench-runs/melbourne_155809136_enhanced_v1-blind-minimax-minimax-m3.1-flash-free-claude-code-20261019T154340/submission/building.glb",
 "page": null,
 "cost": 0.0,
-"turns": 786.0,
+"turns": 4316.0,
 "nruns": 1,
 "allruns": [
-0.701
+0.875
 ],
 "ran": "2026-10-19",
-"minutes": 180.0
+"minutes": 1035.63
 },
 {
 "site": "melbourne_155809136_enhanced_v1",
@@ -10420,22 +10420,22 @@
 {
 "site": "melbourne_22820458_enhanced_v1",
 "series": "minimaxminimaxm31flashfreeclaudecode",
-"run": "melbourne_22820458_enhanced_v1-blind-minimax-minimax-m3.1-flash-free-claude-code-20261019T184340",
-"overall": 0.763,
-"surface_f": 0.273,
+"run": "melbourne_22820458_enhanced_v1-blind-minimax-minimax-m3.1-flash-free-claude-code-20261020T043900",
+"overall": 0.83,
+"surface_f": 0.372,
 "chamfer_m": null,
 "height_m": null,
 "triangles": null,
-"glb": "../bench-runs/melbourne_22820458_enhanced_v1-blind-minimax-minimax-m3.1-flash-free-claude-code-20261019T184340/submission/building.glb",
+"glb": "../bench-runs/melbourne_22820458_enhanced_v1-blind-minimax-minimax-m3.1-flash-free-claude-code-20261020T043900/submission/building.glb",
 "page": null,
 "cost": 0.0,
-"turns": 734.0,
+"turns": 3973.0,
 "nruns": 1,
 "allruns": [
-0.763
+0.83
 ],
-"ran": "2026-10-19",
-"minutes": 180.0
+"ran": "2026-10-20",
+"minutes": 1076.9
 },
 {
 "site": "melbourne_22820458_enhanced_v1",
@@ -11157,22 +11157,22 @@
 {
 "site": "melbourne_25422768_enhanced_v1",
 "series": "minimaxminimaxm31flashfreeclaudecode",
-"run": "melbourne_25422768_enhanced_v1-blind-minimax-minimax-m3.1-flash-free-claude-code-20261019T184340",
-"overall": 0.597,
-"surface_f": 0.312,
+"run": "melbourne_25422768_enhanced_v1-blind-minimax-minimax-m3.1-flash-free-claude-code-20261019T154340",
+"overall": 0.66,
+"surface_f": 0.268,
 "chamfer_m": null,
 "height_m": null,
 "triangles": null,
-"glb": "../bench-runs/melbourne_25422768_enhanced_v1-blind-minimax-minimax-m3.1-flash-free-claude-code-20261019T184340/submission/building.glb",
+"glb": "../bench-runs/melbourne_25422768_enhanced_v1-blind-minimax-minimax-m3.1-flash-free-claude-code-20261019T154340/submission/building.glb",
 "page": null,
 "cost": 0.0,
-"turns": 878.0,
+"turns": 4805.0,
 "nruns": 1,
 "allruns": [
-0.597
+0.66
 ],
 "ran": "2026-10-19",
-"minutes": 180.0
+"minutes": 1078.85
 },
 {
 "site": "melbourne_25422768_enhanced_v1",
@@ -11915,22 +11915,22 @@
 {
 "site": "melbourne_296368687_enhanced_v1",
 "series": "minimaxminimaxm31flashfreeclaudecode",
-"run": "melbourne_296368687_enhanced_v1-blind-minimax-minimax-m3.1-flash-free-claude-code-20261019T184340",
-"overall": 0.809,
-"surface_f": 0.322,
+"run": "melbourne_296368687_enhanced_v1-blind-minimax-minimax-m3.1-flash-free-claude-code-20261020T083252",
+"overall": 0.791,
+"surface_f": 0.319,
 "chamfer_m": null,
 "height_m": null,
 "triangles": null,
-"glb": "../bench-runs/melbourne_296368687_enhanced_v1-blind-minimax-minimax-m3.1-flash-free-claude-code-20261019T184340/submission/building.glb",
+"glb": "../bench-runs/melbourne_296368687_enhanced_v1-blind-minimax-minimax-m3.1-flash-free-claude-code-20261020T083252/submission/building.glb",
 "page": null,
 "cost": 0.0,
-"turns": 586.0,
+"turns": 3585.0,
 "nruns": 1,
 "allruns": [
-0.809
+0.791
 ],
-"ran": "2026-10-19",
-"minutes": 180.0
+"ran": "2026-10-20",
+"minutes": 1074.63
 },
 {
 "site": "melbourne_296368687_enhanced_v1",
@@ -12653,22 +12653,22 @@
 {
 "site": "melbourne_33106429_enhanced_v1",
 "series": "minimaxminimaxm31flashfreeclaudecode",
-"run": "melbourne_33106429_enhanced_v1-blind-minimax-minimax-m3.1-flash-free-claude-code-20261019T184340",
-"overall": 0.626,
-"surface_f": 0.384,
+"run": "melbourne_33106429_enhanced_v1-blind-minimax-minimax-m3.1-flash-free-claude-code-20261019T154340",
+"overall": 0.604,
+"surface_f": 0.222,
 "chamfer_m": null,
 "height_m": null,
 "triangles": null,
-"glb": "../bench-runs/melbourne_33106429_enhanced_v1-blind-minimax-minimax-m3.1-flash-free-claude-code-20261019T184340/submission/building.glb",
+"glb": "../bench-runs/melbourne_33106429_enhanced_v1-blind-minimax-minimax-m3.1-flash-free-claude-code-20261019T154340/submission/building.glb",
 "page": null,
 "cost": 0.0,
-"turns": 757.0,
+"turns": 4330.0,
 "nruns": 1,
 "allruns": [
-0.626
+0.604
 ],
 "ran": "2026-10-19",
-"minutes": 180.0
+"minutes": 1078.85
 },
 {
 "site": "melbourne_33106429_enhanced_v1",
@@ -13389,22 +13389,22 @@
 {
 "site": "melbourne_45461060_enhanced_v1",
 "series": "minimaxminimaxm31flashfreeclaudecode",
-"run": "melbourne_45461060_enhanced_v1-blind-minimax-minimax-m3.1-flash-free-claude-code-20261019T184340",
-"overall": 0.888,
-"surface_f": 0.52,
+"run": "melbourne_45461060_enhanced_v1-blind-minimax-minimax-m3.1-flash-free-claude-code-20261019T154340",
+"overall": 0.893,
+"surface_f": 0.529,
 "chamfer_m": null,
 "height_m": null,
 "triangles": null,
-"glb": "../bench-runs/melbourne_45461060_enhanced_v1-blind-minimax-minimax-m3.1-flash-free-claude-code-20261019T184340/submission/building.glb",
+"glb": "../bench-runs/melbourne_45461060_enhanced_v1-blind-minimax-minimax-m3.1-flash-free-claude-code-20261019T154340/submission/building.glb",
 "page": null,
 "cost": 0.0,
-"turns": 718.0,
+"turns": 3618.0,
 "nruns": 1,
 "allruns": [
-0.888
+0.893
 ],
 "ran": "2026-10-19",
-"minutes": 180.0
+"minutes": 1078.85
 },
 {
 "site": "melbourne_45461060_enhanced_v1",
@@ -14126,22 +14126,22 @@
 {
 "site": "melbourne_4817059_enhanced_v1",
 "series": "minimaxminimaxm31flashfreeclaudecode",
-"run": "melbourne_4817059_enhanced_v1-blind-minimax-minimax-m3.1-flash-free-claude-code-20261019T184340",
-"overall": 0.623,
-"surface_f": 0.169,
+"run": "melbourne_4817059_enhanced_v1-blind-minimax-minimax-m3.1-flash-free-claude-code-20261019T154340",
+"overall": 0.806,
+"surface_f": 0.257,
 "chamfer_m": null,
 "height_m": null,
 "triangles": null,
-"glb": "../bench-runs/melbourne_4817059_enhanced_v1-blind-minimax-minimax-m3.1-flash-free-claude-code-20261019T184340/submission/building.glb",
+"glb": "../bench-runs/melbourne_4817059_enhanced_v1-blind-minimax-minimax-m3.1-flash-free-claude-code-20261019T154340/submission/building.glb",
 "page": null,
 "cost": 0.0,
-"turns": 887.0,
+"turns": 4676.0,
 "nruns": 1,
 "allruns": [
-0.623
+0.806
 ],
 "ran": "2026-10-19",
-"minutes": 180.0
+"minutes": 1078.87
 },
 {
 "site": "melbourne_4817059_enhanced_v1",

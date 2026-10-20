@@ -1,6 +1,6 @@
 {
- "fingerprint": "93a90febc3a8ef1cc73c1f26dc7022e07a858cf696c337d2a2e0c77c5d2a6cb6",
- "snapshot": "2026-10-19",
+ "fingerprint": "25422c685d9895409eaab793389eea67f03d23dbdad1bd6195830b4677344b68",
+ "snapshot": "2026-10-20",
  "buildings": 12,
  "results": 400,
  "models": [
@@ -10,9 +10,9 @@
   "DeepSeek V4.1 Flash 1017 (max)",
   "GPT‑6 Astra (ultra)",
   "Gemini 4 Argon (high)",
+  "MiniMax M3.1 Flash (max)",
   "Grok 4.7 (xhigh)",
   "Claude Fable 5.1 (max)",
-  "MiniMax M3.1 Flash (max)",
   "Claude Opus 5 (max)",
   "Union Alpha (max)",
   "DeepSeek V4.1 Flash (max)",
