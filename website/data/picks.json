@@ -6016,6 +6016,26 @@
 },
 {
 "site": "helsinki_122886734_enhanced_v1",
+"series": "moonshotaikimik31proclaudecode",
+"run": "helsinki_122886734_enhanced_v1-blind-moonshotai-kimi-k3.1-pro-claude-code-20261023T182042",
+"overall": 0.822,
+"surface_f": 0.429,
+"chamfer_m": null,
+"height_m": null,
+"triangles": null,
+"glb": "../bench-runs/helsinki_122886734_enhanced_v1-blind-moonshotai-kimi-k3.1-pro-claude-code-20261023T182042/submission/building.glb",
+"page": null,
+"cost": 18.88,
+"turns": 1033.0,
+"nruns": 1,
+"allruns": [
+0.822
+],
+"ran": "2026-10-23",
+"minutes": 227.08
+},
+{
+"site": "helsinki_122886734_enhanced_v1",
 "series": "minimaxminimaxm31flashfreeclaudecode",
 "run": "helsinki_122886734_enhanced_v1-blind-minimax-minimax-m3.1-flash-free-claude-code-20261019T154340",
 "overall": 0.793,
@@ -6753,6 +6773,26 @@
 },
 {
 "site": "helsinki_122954081_enhanced_v1",
+"series": "moonshotaikimik31proclaudecode",
+"run": "helsinki_122954081_enhanced_v1-blind-moonshotai-kimi-k3.1-pro-claude-code-20261023T182042",
+"overall": 0.766,
+"surface_f": 0.699,
+"chamfer_m": null,
+"height_m": null,
+"triangles": null,
+"glb": "../bench-runs/helsinki_122954081_enhanced_v1-blind-moonshotai-kimi-k3.1-pro-claude-code-20261023T182042/submission/building.glb",
+"page": null,
+"cost": 12.36,
+"turns": 760.0,
+"nruns": 1,
+"allruns": [
+0.766
+],
+"ran": "2026-10-23",
+"minutes": 155.95
+},
+{
+"site": "helsinki_122954081_enhanced_v1",
 "series": "minimaxminimaxm31flashfreeclaudecode",
 "run": "helsinki_122954081_enhanced_v1-blind-minimax-minimax-m3.1-flash-free-claude-code-20261020T091435",
 "overall": 0.874,
@@ -7466,6 +7506,26 @@
 ],
 "ran": "2026-09-04",
 "minutes": 36.57
+},
+{
+"site": "helsinki_123901485_enhanced_v1",
+"series": "moonshotaikimik31proclaudecode",
+"run": "helsinki_123901485_enhanced_v1-blind-moonshotai-kimi-k3.1-pro-claude-code-20261023T182042",
+"overall": 0.869,
+"surface_f": 0.58,
+"chamfer_m": null,
+"height_m": null,
+"triangles": null,
+"glb": "../bench-runs/helsinki_123901485_enhanced_v1-blind-moonshotai-kimi-k3.1-pro-claude-code-20261023T182042/submission/building.glb",
+"page": null,
+"cost": 7.45,
+"turns": 443.0,
+"nruns": 1,
+"allruns": [
+0.869
+],
+"ran": "2026-10-23",
+"minutes": 90.92
 },
 {
 "site": "helsinki_123901485_enhanced_v1",
@@ -8227,6 +8287,26 @@
 },
 {
 "site": "helsinki_8033120_enhanced_v1",
+"series": "moonshotaikimik31proclaudecode",
+"run": "helsinki_8033120_enhanced_v1-blind-moonshotai-kimi-k3.1-pro-claude-code-20261023T182042",
+"overall": 0.785,
+"surface_f": 0.382,
+"chamfer_m": null,
+"height_m": null,
+"triangles": null,
+"glb": "../bench-runs/helsinki_8033120_enhanced_v1-blind-moonshotai-kimi-k3.1-pro-claude-code-20261023T182042/submission/building.glb",
+"page": null,
+"cost": 13.16,
+"turns": 653.0,
+"nruns": 1,
+"allruns": [
+0.785
+],
+"ran": "2026-10-23",
+"minutes": 158.62
+},
+{
+"site": "helsinki_8033120_enhanced_v1",
 "series": "minimaxminimaxm31flashfreeclaudecode",
 "run": "helsinki_8033120_enhanced_v1-blind-minimax-minimax-m3.1-flash-free-claude-code-20261019T154340",
 "overall": 0.759,
@@ -8920,6 +9000,26 @@
 ],
 "ran": "2026-09-04",
 "minutes": 29.67
+},
+{
+"site": "helsinki_cathedral_enhanced_v1",
+"series": "moonshotaikimik31proclaudecode",
+"run": "helsinki_cathedral_enhanced_v1-blind-moonshotai-kimi-k3.1-pro-claude-code-20261023T182042",
+"overall": 0.858,
+"surface_f": 0.544,
+"chamfer_m": null,
+"height_m": null,
+"triangles": null,
+"glb": "../bench-runs/helsinki_cathedral_enhanced_v1-blind-moonshotai-kimi-k3.1-pro-claude-code-20261023T182042/submission/building.glb",
+"page": null,
+"cost": 8.14,
+"turns": 347.0,
+"nruns": 1,
+"allruns": [
+0.858
+],
+"ran": "2026-10-23",
+"minutes": 97.13
 },
 {
 "site": "helsinki_cathedral_enhanced_v1",
@@ -9682,6 +9782,26 @@
 },
 {
 "site": "melbourne_155809136_enhanced_v1",
+"series": "moonshotaikimik31proclaudecode",
+"run": "melbourne_155809136_enhanced_v1-blind-moonshotai-kimi-k3.1-pro-claude-code-20261023T182042",
+"overall": 0.864,
+"surface_f": 0.561,
+"chamfer_m": null,
+"height_m": null,
+"triangles": null,
+"glb": "../bench-runs/melbourne_155809136_enhanced_v1-blind-moonshotai-kimi-k3.1-pro-claude-code-20261023T182042/submission/building.glb",
+"page": null,
+"cost": 12.56,
+"turns": 694.0,
+"nruns": 1,
+"allruns": [
+0.864
+],
+"ran": "2026-10-23",
+"minutes": 136.15
+},
+{
+"site": "melbourne_155809136_enhanced_v1",
 "series": "minimaxminimaxm31flashfreeclaudecode",
 "run": "melbourne_155809136_enhanced_v1-blind-minimax-minimax-m3.1-flash-free-claude-code-20261019T154340",
 "overall": 0.875,
@@ -10419,6 +10539,26 @@
 },
 {
 "site": "melbourne_22820458_enhanced_v1",
+"series": "moonshotaikimik31proclaudecode",
+"run": "melbourne_22820458_enhanced_v1-blind-moonshotai-kimi-k3.1-pro-claude-code-20261023T182042",
+"overall": 0.773,
+"surface_f": 0.214,
+"chamfer_m": null,
+"height_m": null,
+"triangles": null,
+"glb": "../bench-runs/melbourne_22820458_enhanced_v1-blind-moonshotai-kimi-k3.1-pro-claude-code-20261023T182042/submission/building.glb",
+"page": null,
+"cost": 14.8,
+"turns": 742.0,
+"nruns": 1,
+"allruns": [
+0.773
+],
+"ran": "2026-10-23",
+"minutes": 182.13
+},
+{
+"site": "melbourne_22820458_enhanced_v1",
 "series": "minimaxminimaxm31flashfreeclaudecode",
 "run": "melbourne_22820458_enhanced_v1-blind-minimax-minimax-m3.1-flash-free-claude-code-20261020T043900",
 "overall": 0.83,
@@ -11153,6 +11293,26 @@
 ],
 "ran": "2026-09-04",
 "minutes": 32.13
+},
+{
+"site": "melbourne_25422768_enhanced_v1",
+"series": "moonshotaikimik31proclaudecode",
+"run": "melbourne_25422768_enhanced_v1-blind-moonshotai-kimi-k3.1-pro-claude-code-20261023T182042",
+"overall": 0.696,
+"surface_f": 0.348,
+"chamfer_m": null,
+"height_m": null,
+"triangles": null,
+"glb": "../bench-runs/melbourne_25422768_enhanced_v1-blind-moonshotai-kimi-k3.1-pro-claude-code-20261023T182042/submission/building.glb",
+"page": null,
+"cost": 19.23,
+"turns": 1088.0,
+"nruns": 1,
+"allruns": [
+0.696
+],
+"ran": "2026-10-23",
+"minutes": 230.27
 },
 {
 "site": "melbourne_25422768_enhanced_v1",
@@ -11914,6 +12074,26 @@
 },
 {
 "site": "melbourne_296368687_enhanced_v1",
+"series": "moonshotaikimik31proclaudecode",
+"run": "melbourne_296368687_enhanced_v1-blind-moonshotai-kimi-k3.1-pro-claude-code-20261023T182042",
+"overall": 0.773,
+"surface_f": 0.325,
+"chamfer_m": null,
+"height_m": null,
+"triangles": null,
+"glb": "../bench-runs/melbourne_296368687_enhanced_v1-blind-moonshotai-kimi-k3.1-pro-claude-code-20261023T182042/submission/building.glb",
+"page": null,
+"cost": 6.64,
+"turns": 296.0,
+"nruns": 1,
+"allruns": [
+0.773
+],
+"ran": "2026-10-23",
+"minutes": 98.07
+},
+{
+"site": "melbourne_296368687_enhanced_v1",
 "series": "minimaxminimaxm31flashfreeclaudecode",
 "run": "melbourne_296368687_enhanced_v1-blind-minimax-minimax-m3.1-flash-free-claude-code-20261020T083252",
 "overall": 0.791,
@@ -12649,6 +12829,26 @@
 ],
 "ran": "2026-09-04",
 "minutes": 36.55
+},
+{
+"site": "melbourne_33106429_enhanced_v1",
+"series": "moonshotaikimik31proclaudecode",
+"run": "melbourne_33106429_enhanced_v1-blind-moonshotai-kimi-k3.1-pro-claude-code-20261023T182042",
+"overall": 0.792,
+"surface_f": 0.52,
+"chamfer_m": null,
+"height_m": null,
+"triangles": null,
+"glb": "../bench-runs/melbourne_33106429_enhanced_v1-blind-moonshotai-kimi-k3.1-pro-claude-code-20261023T182042/submission/building.glb",
+"page": null,
+"cost": 17.52,
+"turns": 850.0,
+"nruns": 1,
+"allruns": [
+0.792
+],
+"ran": "2026-10-23",
+"minutes": 201.43
 },
 {
 "site": "melbourne_33106429_enhanced_v1",
@@ -13388,6 +13588,26 @@
 },
 {
 "site": "melbourne_45461060_enhanced_v1",
+"series": "moonshotaikimik31proclaudecode",
+"run": "melbourne_45461060_enhanced_v1-blind-moonshotai-kimi-k3.1-pro-claude-code-20261023T182042",
+"overall": 0.908,
+"surface_f": 0.795,
+"chamfer_m": null,
+"height_m": null,
+"triangles": null,
+"glb": "../bench-runs/melbourne_45461060_enhanced_v1-blind-moonshotai-kimi-k3.1-pro-claude-code-20261023T182042/submission/building.glb",
+"page": null,
+"cost": 12.12,
+"turns": 620.0,
+"nruns": 1,
+"allruns": [
+0.908
+],
+"ran": "2026-10-23",
+"minutes": 131.6
+},
+{
+"site": "melbourne_45461060_enhanced_v1",
 "series": "minimaxminimaxm31flashfreeclaudecode",
 "run": "melbourne_45461060_enhanced_v1-blind-minimax-minimax-m3.1-flash-free-claude-code-20261019T154340",
 "overall": 0.893,
@@ -14122,6 +14342,26 @@
 ],
 "ran": "2026-09-05",
 "minutes": 53.95
+},
+{
+"site": "melbourne_4817059_enhanced_v1",
+"series": "moonshotaikimik31proclaudecode",
+"run": "melbourne_4817059_enhanced_v1-blind-moonshotai-kimi-k3.1-pro-claude-code-20261023T182042",
+"overall": 0.885,
+"surface_f": 0.527,
+"chamfer_m": null,
+"height_m": null,
+"triangles": null,
+"glb": "../bench-runs/melbourne_4817059_enhanced_v1-blind-moonshotai-kimi-k3.1-pro-claude-code-20261023T182042/submission/building.glb",
+"page": null,
+"cost": 12.6,
+"turns": 593.0,
+"nruns": 1,
+"allruns": [
+0.885
+],
+"ran": "2026-10-23",
+"minutes": 129.13
 },
 {
 "site": "melbourne_4817059_enhanced_v1",
