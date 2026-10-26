@@ -1,8 +1,8 @@
 {
- "fingerprint": "6ca2ede52344ddc33d9ecdef690c2800ebeac7d771ef205b494bc92e9ea06453",
- "snapshot": "2026-10-23",
+ "fingerprint": "1b0e732a0f0317bbb6e63b7ec107e8edfe0b07a43ffca50977c25ab5427d733b",
+ "snapshot": "2026-10-26",
  "buildings": 12,
- "results": 412,
+ "results": 424,
  "models": [
   "Claude Opus 5.5 (max)",
   "GPT‑6.1 Sol (max)",
@@ -11,6 +11,7 @@
   "Kimi K3.1 Pro (max)",
   "GPT‑6 Astra (ultra)",
   "Gemini 4 Argon (high)",
+  "GPT‑6.1 Terra (max)",
   "MiniMax M3.1 Flash (max)",
   "Grok 4.7 (xhigh)",
   "Claude Fable 5.1 (max)",
@@ -47,6 +48,9 @@
   "kimi-k3.1-pro": [
    "name from OpenRouter ('Kimi K3.1 Pro')"
   ],
+  "gpt-6.1-terra": [
+   "name from OpenRouter ('GPT‑6.1 Terra')"
+  ],
   "minimax-m3.1-flash:free": [
    "name from OpenRouter ('MiniMax M3.1 Flash')"
   ],
@@ -60,6 +64,7 @@
  "dated": {
   "deepseek-v4.1-flash-1017": "2026-10-17 (OpenRouter listing)",
   "kimi-k3.1-pro": "2026-10-23 (OpenRouter listing)",
+  "gpt-6.1-terra": "2026-10-26 (OpenRouter listing)",
   "minimax-m3.1-flash:free": "2026-10-18 (OpenRouter listing)",
   "muse-spark-open": "2026-10-15 (OpenRouter listing)",
   "nemotron-3.5-super-vl": "2026-10-15 (OpenRouter listing)"

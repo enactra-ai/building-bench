@@ -5,6 +5,12 @@
   "openrouter": "deepseek/deepseek-v4.1-flash-1017",
   "listed": "2026-10-17 08:27 UTC"
  },
+ "gpt-6.1-terra": {
+  "date": "2026-10-26",
+  "source": "OpenRouter listing",
+  "openrouter": "openai/gpt-6.1-terra",
+  "listed": "2026-10-26 18:13 UTC"
+ },
  "kimi-k3.1-pro": {
   "date": "2026-10-23",
   "source": "OpenRouter listing",

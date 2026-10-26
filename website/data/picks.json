@@ -6016,6 +6016,26 @@
 },
 {
 "site": "helsinki_122886734_enhanced_v1",
+"series": "gpt61terramax",
+"run": "helsinki_122886734_enhanced_v1-blind-gpt-6.1-terra-max-20261026T193740",
+"overall": 0.839,
+"surface_f": 0.354,
+"chamfer_m": null,
+"height_m": null,
+"triangles": null,
+"glb": "../bench-runs/helsinki_122886734_enhanced_v1-blind-gpt-6.1-terra-max-20261026T193740/submission/building.glb",
+"page": null,
+"cost": 0.81,
+"turns": 1.0,
+"nruns": 1,
+"allruns": [
+0.839
+],
+"ran": "2026-10-26",
+"minutes": 16.32
+},
+{
+"site": "helsinki_122886734_enhanced_v1",
 "series": "moonshotaikimik31proclaudecode",
 "run": "helsinki_122886734_enhanced_v1-blind-moonshotai-kimi-k3.1-pro-claude-code-20261023T182042",
 "overall": 0.822,
@@ -6773,6 +6793,26 @@
 },
 {
 "site": "helsinki_122954081_enhanced_v1",
+"series": "gpt61terramax",
+"run": "helsinki_122954081_enhanced_v1-blind-gpt-6.1-terra-max-20261026T193740",
+"overall": 0.858,
+"surface_f": 0.844,
+"chamfer_m": null,
+"height_m": null,
+"triangles": null,
+"glb": "../bench-runs/helsinki_122954081_enhanced_v1-blind-gpt-6.1-terra-max-20261026T193740/submission/building.glb",
+"page": null,
+"cost": 1.05,
+"turns": 1.0,
+"nruns": 1,
+"allruns": [
+0.858
+],
+"ran": "2026-10-26",
+"minutes": 27.52
+},
+{
+"site": "helsinki_122954081_enhanced_v1",
 "series": "moonshotaikimik31proclaudecode",
 "run": "helsinki_122954081_enhanced_v1-blind-moonshotai-kimi-k3.1-pro-claude-code-20261023T182042",
 "overall": 0.766,
@@ -7506,6 +7546,26 @@
 ],
 "ran": "2026-09-04",
 "minutes": 36.57
+},
+{
+"site": "helsinki_123901485_enhanced_v1",
+"series": "gpt61terramax",
+"run": "helsinki_123901485_enhanced_v1-blind-gpt-6.1-terra-max-20261026T193740",
+"overall": 0.858,
+"surface_f": 0.463,
+"chamfer_m": null,
+"height_m": null,
+"triangles": null,
+"glb": "../bench-runs/helsinki_123901485_enhanced_v1-blind-gpt-6.1-terra-max-20261026T193740/submission/building.glb",
+"page": null,
+"cost": 0.8,
+"turns": 1.0,
+"nruns": 1,
+"allruns": [
+0.858
+],
+"ran": "2026-10-26",
+"minutes": 10.62
 },
 {
 "site": "helsinki_123901485_enhanced_v1",
@@ -8287,6 +8347,26 @@
 },
 {
 "site": "helsinki_8033120_enhanced_v1",
+"series": "gpt61terramax",
+"run": "helsinki_8033120_enhanced_v1-blind-gpt-6.1-terra-max-20261026T193740",
+"overall": 0.744,
+"surface_f": 0.363,
+"chamfer_m": null,
+"height_m": null,
+"triangles": null,
+"glb": "../bench-runs/helsinki_8033120_enhanced_v1-blind-gpt-6.1-terra-max-20261026T193740/submission/building.glb",
+"page": null,
+"cost": 1.21,
+"turns": 1.0,
+"nruns": 1,
+"allruns": [
+0.744
+],
+"ran": "2026-10-26",
+"minutes": 28.85
+},
+{
+"site": "helsinki_8033120_enhanced_v1",
 "series": "moonshotaikimik31proclaudecode",
 "run": "helsinki_8033120_enhanced_v1-blind-moonshotai-kimi-k3.1-pro-claude-code-20261023T182042",
 "overall": 0.785,
@@ -9000,6 +9080,26 @@
 ],
 "ran": "2026-09-04",
 "minutes": 29.67
+},
+{
+"site": "helsinki_cathedral_enhanced_v1",
+"series": "gpt61terramax",
+"run": "helsinki_cathedral_enhanced_v1-blind-gpt-6.1-terra-max-20261026T193740",
+"overall": 0.822,
+"surface_f": 0.491,
+"chamfer_m": null,
+"height_m": null,
+"triangles": null,
+"glb": "../bench-runs/helsinki_cathedral_enhanced_v1-blind-gpt-6.1-terra-max-20261026T193740/submission/building.glb",
+"page": null,
+"cost": 0.98,
+"turns": 1.0,
+"nruns": 1,
+"allruns": [
+0.822
+],
+"ran": "2026-10-26",
+"minutes": 11.72
 },
 {
 "site": "helsinki_cathedral_enhanced_v1",
@@ -9782,6 +9882,26 @@
 },
 {
 "site": "melbourne_155809136_enhanced_v1",
+"series": "gpt61terramax",
+"run": "melbourne_155809136_enhanced_v1-blind-gpt-6.1-terra-max-20261026T193740",
+"overall": 0.868,
+"surface_f": 0.573,
+"chamfer_m": null,
+"height_m": null,
+"triangles": null,
+"glb": "../bench-runs/melbourne_155809136_enhanced_v1-blind-gpt-6.1-terra-max-20261026T193740/submission/building.glb",
+"page": null,
+"cost": 0.84,
+"turns": 1.0,
+"nruns": 1,
+"allruns": [
+0.868
+],
+"ran": "2026-10-26",
+"minutes": 9.83
+},
+{
+"site": "melbourne_155809136_enhanced_v1",
 "series": "moonshotaikimik31proclaudecode",
 "run": "melbourne_155809136_enhanced_v1-blind-moonshotai-kimi-k3.1-pro-claude-code-20261023T182042",
 "overall": 0.864,
@@ -10539,6 +10659,26 @@
 },
 {
 "site": "melbourne_22820458_enhanced_v1",
+"series": "gpt61terramax",
+"run": "melbourne_22820458_enhanced_v1-blind-gpt-6.1-terra-max-20261026T194841",
+"overall": 0.79,
+"surface_f": 0.334,
+"chamfer_m": null,
+"height_m": null,
+"triangles": null,
+"glb": "../bench-runs/melbourne_22820458_enhanced_v1-blind-gpt-6.1-terra-max-20261026T194841/submission/building.glb",
+"page": null,
+"cost": 0.82,
+"turns": 1.0,
+"nruns": 1,
+"allruns": [
+0.79
+],
+"ran": "2026-10-26",
+"minutes": 17.87
+},
+{
+"site": "melbourne_22820458_enhanced_v1",
 "series": "moonshotaikimik31proclaudecode",
 "run": "melbourne_22820458_enhanced_v1-blind-moonshotai-kimi-k3.1-pro-claude-code-20261023T182042",
 "overall": 0.773,
@@ -11293,6 +11433,26 @@
 ],
 "ran": "2026-09-04",
 "minutes": 32.13
+},
+{
+"site": "melbourne_25422768_enhanced_v1",
+"series": "gpt61terramax",
+"run": "melbourne_25422768_enhanced_v1-blind-gpt-6.1-terra-max-20261026T194941",
+"overall": 0.704,
+"surface_f": 0.364,
+"chamfer_m": null,
+"height_m": null,
+"triangles": null,
+"glb": "../bench-runs/melbourne_25422768_enhanced_v1-blind-gpt-6.1-terra-max-20261026T194941/submission/building.glb",
+"page": null,
+"cost": 1.29,
+"turns": 1.0,
+"nruns": 1,
+"allruns": [
+0.704
+],
+"ran": "2026-10-26",
+"minutes": 24.53
 },
 {
 "site": "melbourne_25422768_enhanced_v1",
@@ -12074,6 +12234,26 @@
 },
 {
 "site": "melbourne_296368687_enhanced_v1",
+"series": "gpt61terramax",
+"run": "melbourne_296368687_enhanced_v1-blind-gpt-6.1-terra-max-20261026T195041",
+"overall": 0.803,
+"surface_f": 0.343,
+"chamfer_m": null,
+"height_m": null,
+"triangles": null,
+"glb": "../bench-runs/melbourne_296368687_enhanced_v1-blind-gpt-6.1-terra-max-20261026T195041/submission/building.glb",
+"page": null,
+"cost": 1.04,
+"turns": 1.0,
+"nruns": 1,
+"allruns": [
+0.803
+],
+"ran": "2026-10-26",
+"minutes": 22.62
+},
+{
+"site": "melbourne_296368687_enhanced_v1",
 "series": "moonshotaikimik31proclaudecode",
 "run": "melbourne_296368687_enhanced_v1-blind-moonshotai-kimi-k3.1-pro-claude-code-20261023T182042",
 "overall": 0.773,
@@ -12829,6 +13009,26 @@
 ],
 "ran": "2026-09-04",
 "minutes": 36.55
+},
+{
+"site": "melbourne_33106429_enhanced_v1",
+"series": "gpt61terramax",
+"run": "melbourne_33106429_enhanced_v1-blind-gpt-6.1-terra-max-20261026T195501",
+"overall": 0.689,
+"surface_f": 0.227,
+"chamfer_m": null,
+"height_m": null,
+"triangles": null,
+"glb": "../bench-runs/melbourne_33106429_enhanced_v1-blind-gpt-6.1-terra-max-20261026T195501/submission/building.glb",
+"page": null,
+"cost": 0.9,
+"turns": 1.0,
+"nruns": 1,
+"allruns": [
+0.689
+],
+"ran": "2026-10-26",
+"minutes": 16.85
 },
 {
 "site": "melbourne_33106429_enhanced_v1",
@@ -13588,6 +13788,26 @@
 },
 {
 "site": "melbourne_45461060_enhanced_v1",
+"series": "gpt61terramax",
+"run": "melbourne_45461060_enhanced_v1-blind-gpt-6.1-terra-max-20261026T200602",
+"overall": 0.803,
+"surface_f": 0.391,
+"chamfer_m": null,
+"height_m": null,
+"triangles": null,
+"glb": "../bench-runs/melbourne_45461060_enhanced_v1-blind-gpt-6.1-terra-max-20261026T200602/submission/building.glb",
+"page": null,
+"cost": 1.35,
+"turns": 1.0,
+"nruns": 1,
+"allruns": [
+0.803
+],
+"ran": "2026-10-26",
+"minutes": 16.15
+},
+{
+"site": "melbourne_45461060_enhanced_v1",
 "series": "moonshotaikimik31proclaudecode",
 "run": "melbourne_45461060_enhanced_v1-blind-moonshotai-kimi-k3.1-pro-claude-code-20261023T182042",
 "overall": 0.908,
@@ -14342,6 +14562,26 @@
 ],
 "ran": "2026-09-05",
 "minutes": 53.95
+},
+{
+"site": "melbourne_4817059_enhanced_v1",
+"series": "gpt61terramax",
+"run": "melbourne_4817059_enhanced_v1-blind-gpt-6.1-terra-max-20261026T200742",
+"overall": 0.861,
+"surface_f": 0.371,
+"chamfer_m": null,
+"height_m": null,
+"triangles": null,
+"glb": "../bench-runs/melbourne_4817059_enhanced_v1-blind-gpt-6.1-terra-max-20261026T200742/submission/building.glb",
+"page": null,
+"cost": 1.35,
+"turns": 1.0,
+"nruns": 1,
+"allruns": [
+0.861
+],
+"ran": "2026-10-26",
+"minutes": 22.77
 },
 {
 "site": "melbourne_4817059_enhanced_v1",
