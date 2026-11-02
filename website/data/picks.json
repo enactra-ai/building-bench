@@ -6016,6 +6016,26 @@
 },
 {
 "site": "helsinki_122886734_enhanced_v1",
+"series": "zaiglm53flashxlegalclaudecode",
+"run": "helsinki_122886734_enhanced_v1-blind-z-ai-glm-5.3-flashx-legal-claude-code-20261102T143217",
+"overall": 0.768,
+"surface_f": 0.443,
+"chamfer_m": null,
+"height_m": null,
+"triangles": null,
+"glb": "../bench-runs/helsinki_122886734_enhanced_v1-blind-z-ai-glm-5.3-flashx-legal-claude-code-20261102T143217/submission/building.glb",
+"page": null,
+"cost": 15.58,
+"turns": 1859.0,
+"nruns": 1,
+"allruns": [
+0.768
+],
+"ran": "2026-11-02",
+"minutes": 479.87
+},
+{
+"site": "helsinki_122886734_enhanced_v1",
 "series": "gpt61terramax",
 "run": "helsinki_122886734_enhanced_v1-blind-gpt-6.1-terra-max-20261026T193740",
 "overall": 0.839,
@@ -6793,6 +6813,26 @@
 },
 {
 "site": "helsinki_122954081_enhanced_v1",
+"series": "zaiglm53flashxlegalclaudecode",
+"run": "helsinki_122954081_enhanced_v1-blind-z-ai-glm-5.3-flashx-legal-claude-code-20261102T143217",
+"overall": 0.765,
+"surface_f": 0.28,
+"chamfer_m": null,
+"height_m": null,
+"triangles": null,
+"glb": "../bench-runs/helsinki_122954081_enhanced_v1-blind-z-ai-glm-5.3-flashx-legal-claude-code-20261102T143217/submission/building.glb",
+"page": null,
+"cost": 4.94,
+"turns": 688.0,
+"nruns": 1,
+"allruns": [
+0.765
+],
+"ran": "2026-11-02",
+"minutes": 194.97
+},
+{
+"site": "helsinki_122954081_enhanced_v1",
 "series": "gpt61terramax",
 "run": "helsinki_122954081_enhanced_v1-blind-gpt-6.1-terra-max-20261026T193740",
 "overall": 0.858,
@@ -7546,6 +7586,26 @@
 ],
 "ran": "2026-09-04",
 "minutes": 36.57
+},
+{
+"site": "helsinki_123901485_enhanced_v1",
+"series": "zaiglm53flashxlegalclaudecode",
+"run": "helsinki_123901485_enhanced_v1-blind-z-ai-glm-5.3-flashx-legal-claude-code-20261102T143217",
+"overall": 0.674,
+"surface_f": 0.295,
+"chamfer_m": null,
+"height_m": null,
+"triangles": null,
+"glb": "../bench-runs/helsinki_123901485_enhanced_v1-blind-z-ai-glm-5.3-flashx-legal-claude-code-20261102T143217/submission/building.glb",
+"page": null,
+"cost": 3.72,
+"turns": 466.0,
+"nruns": 1,
+"allruns": [
+0.674
+],
+"ran": "2026-11-02",
+"minutes": 119.32
 },
 {
 "site": "helsinki_123901485_enhanced_v1",
@@ -8347,6 +8407,26 @@
 },
 {
 "site": "helsinki_8033120_enhanced_v1",
+"series": "zaiglm53flashxlegalclaudecode",
+"run": "helsinki_8033120_enhanced_v1-blind-z-ai-glm-5.3-flashx-legal-claude-code-20261102T143217",
+"overall": 0.611,
+"surface_f": 0.257,
+"chamfer_m": null,
+"height_m": null,
+"triangles": null,
+"glb": "../bench-runs/helsinki_8033120_enhanced_v1-blind-z-ai-glm-5.3-flashx-legal-claude-code-20261102T143217/submission/building.glb",
+"page": null,
+"cost": 3.14,
+"turns": 460.0,
+"nruns": 1,
+"allruns": [
+0.611
+],
+"ran": "2026-11-02",
+"minutes": 130.03
+},
+{
+"site": "helsinki_8033120_enhanced_v1",
 "series": "gpt61terramax",
 "run": "helsinki_8033120_enhanced_v1-blind-gpt-6.1-terra-max-20261026T193740",
 "overall": 0.744,
@@ -9080,6 +9160,26 @@
 ],
 "ran": "2026-09-04",
 "minutes": 29.67
+},
+{
+"site": "helsinki_cathedral_enhanced_v1",
+"series": "zaiglm53flashxlegalclaudecode",
+"run": "helsinki_cathedral_enhanced_v1-blind-z-ai-glm-5.3-flashx-legal-claude-code-20261102T143217",
+"overall": 0.73,
+"surface_f": 0.286,
+"chamfer_m": null,
+"height_m": null,
+"triangles": null,
+"glb": "../bench-runs/helsinki_cathedral_enhanced_v1-blind-z-ai-glm-5.3-flashx-legal-claude-code-20261102T143217/submission/building.glb",
+"page": null,
+"cost": 3.63,
+"turns": 438.0,
+"nruns": 1,
+"allruns": [
+0.73
+],
+"ran": "2026-11-02",
+"minutes": 141.05
 },
 {
 "site": "helsinki_cathedral_enhanced_v1",
@@ -9882,6 +9982,26 @@
 },
 {
 "site": "melbourne_155809136_enhanced_v1",
+"series": "zaiglm53flashxlegalclaudecode",
+"run": "melbourne_155809136_enhanced_v1-blind-z-ai-glm-5.3-flashx-legal-claude-code-20261102T143217",
+"overall": 0.792,
+"surface_f": 0.302,
+"chamfer_m": null,
+"height_m": null,
+"triangles": null,
+"glb": "../bench-runs/melbourne_155809136_enhanced_v1-blind-z-ai-glm-5.3-flashx-legal-claude-code-20261102T143217/submission/building.glb",
+"page": null,
+"cost": 6.6,
+"turns": 905.0,
+"nruns": 1,
+"allruns": [
+0.792
+],
+"ran": "2026-11-02",
+"minutes": 209.82
+},
+{
+"site": "melbourne_155809136_enhanced_v1",
 "series": "gpt61terramax",
 "run": "melbourne_155809136_enhanced_v1-blind-gpt-6.1-terra-max-20261026T193740",
 "overall": 0.868,
@@ -10659,6 +10779,26 @@
 },
 {
 "site": "melbourne_22820458_enhanced_v1",
+"series": "zaiglm53flashxlegalclaudecode",
+"run": "melbourne_22820458_enhanced_v1-blind-z-ai-glm-5.3-flashx-legal-claude-code-20261102T143217",
+"overall": 0.638,
+"surface_f": 0.181,
+"chamfer_m": null,
+"height_m": null,
+"triangles": null,
+"glb": "../bench-runs/melbourne_22820458_enhanced_v1-blind-z-ai-glm-5.3-flashx-legal-claude-code-20261102T143217/submission/building.glb",
+"page": null,
+"cost": 9.05,
+"turns": 1180.0,
+"nruns": 1,
+"allruns": [
+0.638
+],
+"ran": "2026-11-02",
+"minutes": 264.73
+},
+{
+"site": "melbourne_22820458_enhanced_v1",
 "series": "gpt61terramax",
 "run": "melbourne_22820458_enhanced_v1-blind-gpt-6.1-terra-max-20261026T194841",
 "overall": 0.79,
@@ -11433,6 +11573,26 @@
 ],
 "ran": "2026-09-04",
 "minutes": 32.13
+},
+{
+"site": "melbourne_25422768_enhanced_v1",
+"series": "zaiglm53flashxlegalclaudecode",
+"run": "melbourne_25422768_enhanced_v1-blind-z-ai-glm-5.3-flashx-legal-claude-code-20261102T143217",
+"overall": 0.725,
+"surface_f": 0.287,
+"chamfer_m": null,
+"height_m": null,
+"triangles": null,
+"glb": "../bench-runs/melbourne_25422768_enhanced_v1-blind-z-ai-glm-5.3-flashx-legal-claude-code-20261102T143217/submission/building.glb",
+"page": null,
+"cost": 7.38,
+"turns": 873.0,
+"nruns": 1,
+"allruns": [
+0.725
+],
+"ran": "2026-11-02",
+"minutes": 236.4
 },
 {
 "site": "melbourne_25422768_enhanced_v1",
@@ -12234,6 +12394,26 @@
 },
 {
 "site": "melbourne_296368687_enhanced_v1",
+"series": "zaiglm53flashxlegalclaudecode",
+"run": "melbourne_296368687_enhanced_v1-blind-z-ai-glm-5.3-flashx-legal-claude-code-20261102T153120",
+"overall": 0.719,
+"surface_f": 0.261,
+"chamfer_m": null,
+"height_m": null,
+"triangles": null,
+"glb": "../bench-runs/melbourne_296368687_enhanced_v1-blind-z-ai-glm-5.3-flashx-legal-claude-code-20261102T153120/submission/building.glb",
+"page": null,
+"cost": 10.02,
+"turns": 1222.0,
+"nruns": 1,
+"allruns": [
+0.719
+],
+"ran": "2026-11-02",
+"minutes": 459.45
+},
+{
+"site": "melbourne_296368687_enhanced_v1",
 "series": "gpt61terramax",
 "run": "melbourne_296368687_enhanced_v1-blind-gpt-6.1-terra-max-20261026T195041",
 "overall": 0.803,
@@ -13009,6 +13189,26 @@
 ],
 "ran": "2026-09-04",
 "minutes": 36.55
+},
+{
+"site": "melbourne_33106429_enhanced_v1",
+"series": "zaiglm53flashxlegalclaudecode",
+"run": "melbourne_33106429_enhanced_v1-blind-z-ai-glm-5.3-flashx-legal-claude-code-20261102T143217",
+"overall": 0.639,
+"surface_f": 0.178,
+"chamfer_m": null,
+"height_m": null,
+"triangles": null,
+"glb": "../bench-runs/melbourne_33106429_enhanced_v1-blind-z-ai-glm-5.3-flashx-legal-claude-code-20261102T143217/submission/building.glb",
+"page": null,
+"cost": 7.07,
+"turns": 906.0,
+"nruns": 1,
+"allruns": [
+0.639
+],
+"ran": "2026-11-02",
+"minutes": 168.12
 },
 {
 "site": "melbourne_33106429_enhanced_v1",
@@ -13788,6 +13988,26 @@
 },
 {
 "site": "melbourne_45461060_enhanced_v1",
+"series": "zaiglm53flashxlegalclaudecode",
+"run": "melbourne_45461060_enhanced_v1-blind-z-ai-glm-5.3-flashx-legal-claude-code-20261102T143217",
+"overall": 0.766,
+"surface_f": 0.489,
+"chamfer_m": null,
+"height_m": null,
+"triangles": null,
+"glb": "../bench-runs/melbourne_45461060_enhanced_v1-blind-z-ai-glm-5.3-flashx-legal-claude-code-20261102T143217/submission/building.glb",
+"page": null,
+"cost": 6.85,
+"turns": 904.0,
+"nruns": 1,
+"allruns": [
+0.766
+],
+"ran": "2026-11-02",
+"minutes": 198.63
+},
+{
+"site": "melbourne_45461060_enhanced_v1",
 "series": "gpt61terramax",
 "run": "melbourne_45461060_enhanced_v1-blind-gpt-6.1-terra-max-20261026T200602",
 "overall": 0.803,
@@ -14562,6 +14782,26 @@
 ],
 "ran": "2026-09-05",
 "minutes": 53.95
+},
+{
+"site": "melbourne_4817059_enhanced_v1",
+"series": "zaiglm53flashxlegalclaudecode",
+"run": "melbourne_4817059_enhanced_v1-blind-z-ai-glm-5.3-flashx-legal-claude-code-20261102T153420",
+"overall": 0.765,
+"surface_f": 0.306,
+"chamfer_m": null,
+"height_m": null,
+"triangles": null,
+"glb": "../bench-runs/melbourne_4817059_enhanced_v1-blind-z-ai-glm-5.3-flashx-legal-claude-code-20261102T153420/submission/building.glb",
+"page": null,
+"cost": 3.44,
+"turns": 436.0,
+"nruns": 1,
+"allruns": [
+0.765
+],
+"ran": "2026-11-02",
+"minutes": 123.8
 },
 {
 "site": "melbourne_4817059_enhanced_v1",

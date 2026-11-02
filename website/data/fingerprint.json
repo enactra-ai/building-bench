@@ -1,8 +1,8 @@
 {
- "fingerprint": "c863a7e23f8a0061108d8f89bf875e5d054ec491a8f305faaefbeab1f1416950",
+ "fingerprint": "000cdeb246b535d12b3fccaca109941c79223e271629cf10fe23959bcaaefa82",
  "snapshot": "2026-11-02",
  "buildings": 12,
- "results": 424,
+ "results": 436,
  "models": [
   "Claude Opus 5.5 (max)",
   "GPT‑6.1 Sol (max)",
@@ -19,6 +19,7 @@
   "Union Alpha (max)",
   "DeepSeek V4.1 Flash (max)",
   "Claude Fable 5 (max)",
+  "GLM 5.3 FlashX Legal (max)",
   "Muse Wonder 1.0 (max)",
   "Grok 4.6 (xhigh)",
   "GPT‑6 Sol (ultra)",
@@ -54,6 +55,9 @@
   "minimax-m3.1-flash:free": [
    "name from OpenRouter ('MiniMax M3.1 Flash')"
   ],
+  "glm-5.3-flashx-legal": [
+   "name from OpenRouter ('GLM 5.3 FlashX Legal')"
+  ],
   "muse-spark-open": [
    "name from OpenRouter ('Muse Spark Open')"
   ],
@@ -66,6 +70,7 @@
   "kimi-k3.1-pro": "2026-10-23 (OpenRouter listing)",
   "gpt-6.1-terra": "2026-10-26 (OpenRouter listing)",
   "minimax-m3.1-flash:free": "2026-10-18 (OpenRouter listing)",
+  "glm-5.3-flashx-legal": "2026-11-02 (OpenRouter listing)",
   "muse-spark-open": "2026-10-15 (OpenRouter listing)",
   "nemotron-3.5-super-vl": "2026-10-15 (OpenRouter listing)"
  }

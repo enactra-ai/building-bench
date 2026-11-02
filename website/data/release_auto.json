@@ -5,6 +5,12 @@
   "openrouter": "deepseek/deepseek-v4.1-flash-1017",
   "listed": "2026-10-17 08:27 UTC"
  },
+ "glm-5.3-flashx-legal": {
+  "date": "2026-11-02",
+  "source": "OpenRouter listing",
+  "openrouter": "z-ai/glm-5.3-flashx-legal",
+  "listed": "2026-11-02 13:29 UTC"
+ },
  "gpt-6.1-terra": {
   "date": "2026-10-26",
   "source": "OpenRouter listing",
