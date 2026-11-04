@@ -1,8 +1,8 @@
 {
- "fingerprint": "000cdeb246b535d12b3fccaca109941c79223e271629cf10fe23959bcaaefa82",
- "snapshot": "2026-11-02",
+ "fingerprint": "9c7fdc1fe7bf0db39859bb7c62ca4f6f965ae539cd7fec81b221c52c2f1a5b90",
+ "snapshot": "2026-11-04",
  "buildings": 12,
- "results": 436,
+ "results": 448,
  "models": [
   "Claude Opus 5.5 (max)",
   "GPT‑6.1 Sol (max)",
@@ -20,6 +20,7 @@
   "DeepSeek V4.1 Flash (max)",
   "Claude Fable 5 (max)",
   "GLM 5.3 FlashX Legal (max)",
+  "Tencent Hy4 Claude Code (max)",
   "Muse Wonder 1.0 (max)",
   "Grok 4.6 (xhigh)",
   "GPT‑6 Sol (ultra)",
@@ -58,6 +59,10 @@
   "glm-5.3-flashx-legal": [
    "name from OpenRouter ('GLM 5.3 FlashX Legal')"
   ],
+  "tencent-hy4-claude-code": [
+   "name spelled from its id ('Tencent Hy4 Claude Code')",
+   "company 'Tencent' (the board says 'tencent')"
+  ],
   "muse-spark-open": [
    "name from OpenRouter ('Muse Spark Open')"
   ],
@@ -71,6 +76,7 @@
   "gpt-6.1-terra": "2026-10-26 (OpenRouter listing)",
   "minimax-m3.1-flash:free": "2026-10-18 (OpenRouter listing)",
   "glm-5.3-flashx-legal": "2026-11-02 (OpenRouter listing)",
+  "tencent-hy4-claude-code": "2026-11-04 (first day on the page)",
   "muse-spark-open": "2026-10-15 (OpenRouter listing)",
   "nemotron-3.5-super-vl": "2026-10-15 (OpenRouter listing)"
  }

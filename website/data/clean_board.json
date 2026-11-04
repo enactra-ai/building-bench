@@ -997,6 +997,50 @@
    }
   },
   {
+   "label": "tencent-hy4-claude-code (max) \u00b7 Claude Code",
+   "sub": "tencent",
+   "org": "tencent",
+   "series": "tencenthy4claudecode",
+   "values": {
+    "overall": 0.7153,
+    "cost": 1.3979865,
+    "cells": 12,
+    "ran": 12,
+    "f": 0.2991,
+    "geometry": 0.7511,
+    "appearance": 0.8267,
+    "silhouette": 0.816,
+    "outline": 0.5229,
+    "plan": 0.7907,
+    "height": 0.8076,
+    "colour": 0.9047,
+    "structure": 0.7226,
+    "materials": 0.9992,
+    "precision": 0.3066,
+    "recall": 0.2966,
+    "triangles": 10609.9167,
+    "turns": 305.0,
+    "minutes": 93.28,
+    "common": 0.7153,
+    "takes": 12,
+    "place": 14
+   },
+   "band": {
+    "overall": 0.0141
+   },
+   "optimal": false,
+   "tags": [
+    {
+     "text": "est. price",
+     "kind": "warn"
+    }
+   ],
+   "facets": {
+    "family": "tencent",
+    "effort": "max"
+   }
+  },
+  {
    "label": "muse-wonder-1.0 (max)",
    "sub": "Unplaced",
    "org": "Unplaced",
@@ -1447,7 +1491,7 @@
     "minutes": 36.12,
     "common": 0.6714,
     "takes": 12,
-    "place": 17
+    "place": 18
    },
    "band": {
     "overall": 0.0191
@@ -1531,7 +1575,7 @@
     "minutes": 62.74,
     "common": 0.6156,
     "takes": 12,
-    "place": 26
+    "place": 27
    },
    "band": {
     "overall": 0.0221
@@ -1570,7 +1614,7 @@
     "minutes": 76.51,
     "common": 0.5693,
     "takes": 12,
-    "place": 29
+    "place": 30
    },
    "band": {
     "overall": 0.036
@@ -1614,7 +1658,7 @@
     "minutes": 114.94,
     "common": 0.5558,
     "takes": 12,
-    "place": 29
+    "place": 30
    },
    "band": {
     "overall": 0.0578
@@ -1657,7 +1701,7 @@
     "minutes": 39.51,
     "common": 0.5476,
     "takes": 12,
-    "place": 29
+    "place": 30
    },
    "band": {
     "overall": 0.0607
@@ -1697,7 +1741,7 @@
     "minutes": 60.73,
     "common": 0.5436,
     "takes": 12,
-    "place": 30
+    "place": 31
    },
    "band": {
     "overall": 0.032
@@ -1737,7 +1781,7 @@
     "minutes": 125.14,
     "common": 0.5403,
     "takes": 12,
-    "place": 30
+    "place": 31
    },
    "band": {
     "overall": 0.0371
@@ -1780,7 +1824,7 @@
     "minutes": 688.59,
     "common": 0.5197,
     "takes": 12,
-    "place": 30
+    "place": 31
    },
    "band": {
     "overall": 0.0945
@@ -1823,7 +1867,7 @@
     "triangles": 3588.0,
     "minutes": 16.75,
     "takes": 2,
-    "place": 30
+    "place": 31
    },
    "band": {
     "overall": 0.1903
@@ -1862,7 +1906,7 @@
     "minutes": 36.13,
     "common": 0.3778,
     "takes": 12,
-    "place": 36
+    "place": 37
    },
    "band": {
     "overall": 0.0272
@@ -1905,7 +1949,7 @@
     "minutes": 427.17,
     "common": 0.3391,
     "takes": 12,
-    "place": 37
+    "place": 38
    },
    "band": {
     "overall": 0.0342
@@ -1948,7 +1992,7 @@
     "minutes": 100.71,
     "common": 0.3302,
     "takes": 12,
-    "place": 37
+    "place": 38
    },
    "band": {
     "overall": 0.0919
@@ -1987,7 +2031,7 @@
     "minutes": 10.85,
     "common": 0.2668,
     "takes": 12,
-    "place": 38
+    "place": 39
    },
    "band": {
     "overall": 0.0509
@@ -2026,7 +2070,7 @@
     "minutes": 4.31,
     "common": 0.2581,
     "takes": 12,
-    "place": 38
+    "place": 39
    },
    "band": {
     "overall": 0.0493
@@ -2787,6 +2831,50 @@
    }
   },
   {
+   "label": "tencent-hy4-claude-code (max) \u00b7 Claude Code",
+   "sub": "tencent",
+   "org": "tencent",
+   "series": "tencenthy4claudecode",
+   "values": {
+    "overall": 0.7153,
+    "cost": 1.3979865,
+    "cells": 12,
+    "ran": 12,
+    "f": 0.2991,
+    "geometry": 0.7511,
+    "appearance": 0.8267,
+    "silhouette": 0.816,
+    "outline": 0.5229,
+    "plan": 0.7907,
+    "height": 0.8076,
+    "colour": 0.9047,
+    "structure": 0.7226,
+    "materials": 0.9992,
+    "precision": 0.3066,
+    "recall": 0.2966,
+    "triangles": 10609.9167,
+    "turns": 305.0,
+    "minutes": 93.28,
+    "common": 0.7153,
+    "takes": 12,
+    "place": 14
+   },
+   "band": {
+    "overall": 0.0141
+   },
+   "optimal": false,
+   "tags": [
+    {
+     "text": "est. price",
+     "kind": "warn"
+    }
+   ],
+   "facets": {
+    "family": "tencent",
+    "effort": "max"
+   }
+  },
+  {
    "label": "muse-wonder-1.0 (max)",
    "sub": "Unplaced",
    "org": "Unplaced",
@@ -3201,7 +3289,7 @@
     "minutes": 36.12,
     "common": 0.6714,
     "takes": 12,
-    "place": 17
+    "place": 18
    },
    "band": {
     "overall": 0.0191
@@ -3246,7 +3334,7 @@
     "minutes": 62.74,
     "common": 0.6156,
     "takes": 12,
-    "place": 26
+    "place": 27
    },
    "band": {
     "overall": 0.0221
@@ -3285,7 +3373,7 @@
     "minutes": 76.51,
     "common": 0.5693,
     "takes": 12,
-    "place": 29
+    "place": 30
    },
    "band": {
     "overall": 0.036
@@ -3329,7 +3417,7 @@
     "minutes": 114.94,
     "common": 0.5558,
     "takes": 12,
-    "place": 29
+    "place": 30
    },
    "band": {
     "overall": 0.0578
@@ -3372,7 +3460,7 @@
     "minutes": 39.51,
     "common": 0.5476,
     "takes": 12,
-    "place": 29
+    "place": 30
    },
    "band": {
     "overall": 0.0607
@@ -3412,7 +3500,7 @@
     "minutes": 60.73,
     "common": 0.5436,
     "takes": 12,
-    "place": 30
+    "place": 31
    },
    "band": {
     "overall": 0.032
@@ -3452,7 +3540,7 @@
     "minutes": 125.14,
     "common": 0.5403,
     "takes": 12,
-    "place": 30
+    "place": 31
    },
    "band": {
     "overall": 0.0371
@@ -3495,7 +3583,7 @@
     "minutes": 688.59,
     "common": 0.5197,
     "takes": 12,
-    "place": 30
+    "place": 31
    },
    "band": {
     "overall": 0.0945
@@ -3539,7 +3627,7 @@
     "minutes": 36.13,
     "common": 0.3778,
     "takes": 12,
-    "place": 36
+    "place": 37
    },
    "band": {
     "overall": 0.0272
@@ -3582,7 +3670,7 @@
     "minutes": 427.17,
     "common": 0.3391,
     "takes": 12,
-    "place": 37
+    "place": 38
    },
    "band": {
     "overall": 0.0342
@@ -3625,7 +3713,7 @@
     "minutes": 100.71,
     "common": 0.3302,
     "takes": 12,
-    "place": 37
+    "place": 38
    },
    "band": {
     "overall": 0.0919
@@ -3664,7 +3752,7 @@
     "minutes": 10.85,
     "common": 0.2668,
     "takes": 12,
-    "place": 38
+    "place": 39
    },
    "band": {
     "overall": 0.0509
@@ -3703,7 +3791,7 @@
     "minutes": 4.31,
     "common": 0.2581,
     "takes": 12,
-    "place": 38
+    "place": 39
    },
    "band": {
     "overall": 0.0493
