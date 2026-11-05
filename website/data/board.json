@@ -2029,6 +2029,49 @@
    }
   },
   {
+   "label": "stealth/crouton-alpha (max) \u00b7 Claude Code",
+   "sub": "Undisclosed",
+   "org": "Undisclosed",
+   "series": "stealthcroutonalphaclaudecode",
+   "values": {
+    "overall": 0.5578,
+    "cost": 0.0,
+    "cells": 11,
+    "ran": 11,
+    "f": 0.19,
+    "geometry": 0.6518,
+    "appearance": 0.6385,
+    "silhouette": 0.7509,
+    "outline": 0.3907,
+    "plan": 0.6941,
+    "height": 0.646,
+    "colour": 0.6719,
+    "structure": 0.5939,
+    "materials": 0.9312,
+    "precision": 0.2018,
+    "recall": 0.1859,
+    "triangles": 1365.6364,
+    "turns": 155.0,
+    "minutes": 21.47,
+    "takes": 11,
+    "place": 33
+   },
+   "band": {
+    "overall": 0.0185
+   },
+   "optimal": false,
+   "tags": [
+    {
+     "text": "est. price",
+     "kind": "warn"
+    }
+   ],
+   "facets": {
+    "family": "Undisclosed",
+    "effort": "max"
+   }
+  },
+  {
    "label": "stealth/space-bunny-alpha (max) \u00b7 Claude Code",
    "sub": "Undisclosed",
    "org": "Undisclosed",
@@ -2551,7 +2594,7 @@
     "minutes": 14.56,
     "repeat_sd": 0.099,
     "takes": 67,
-    "place": 38
+    "place": 39
    },
    "band": {
     "overall": 0.0239
@@ -2594,7 +2637,7 @@
     "turns": 150.0,
     "minutes": 53.99,
     "takes": 23,
-    "place": 38
+    "place": 39
    },
    "band": {
     "overall": 0.0315
@@ -2634,7 +2677,7 @@
     "minutes": 24.35,
     "repeat_sd": 0.198,
     "takes": 8,
-    "place": 38
+    "place": 39
    },
    "band": {
     "overall": 0.077
@@ -2673,7 +2716,7 @@
     "minutes": 36.13,
     "common": 0.3778,
     "takes": 12,
-    "place": 38
+    "place": 39
    },
    "band": {
     "overall": 0.0272
@@ -2716,7 +2759,7 @@
     "minutes": 427.17,
     "common": 0.3391,
     "takes": 12,
-    "place": 38
+    "place": 39
    },
    "band": {
     "overall": 0.0342
@@ -2759,7 +2802,7 @@
     "minutes": 100.71,
     "common": 0.3302,
     "takes": 12,
-    "place": 38
+    "place": 39
    },
    "band": {
     "overall": 0.0919
@@ -2798,7 +2841,7 @@
     "minutes": 5.73,
     "common": 0.2581,
     "takes": 18,
-    "place": 48
+    "place": 49
    },
    "band": {
     "overall": 0.0446
@@ -2838,7 +2881,7 @@
     "repeat_sd": 0.0754,
     "common": 0.2668,
     "takes": 20,
-    "place": 54
+    "place": 55
    },
    "band": {
     "overall": 0.0395
@@ -2876,7 +2919,7 @@
     "minutes": 79.21,
     "repeat_sd": 0.2416,
     "takes": 72,
-    "place": 54
+    "place": 55
    },
    "band": {
     "overall": 0.0415
