@@ -1,9 +1,10 @@
 {
- "fingerprint": "9bee4ee95235ad21ebb9a3ea73feb3d196c28bd465f469662314ce86a3e4d743",
- "snapshot": "2026-11-04",
+ "fingerprint": "91f9a3024e7740362463517ccd5761a5bb9d72b1748ceb25a4316934ff4cc0ee",
+ "snapshot": "2026-11-09",
  "buildings": 12,
- "results": 459,
+ "results": 471,
  "models": [
+  "Claude Fable 5.2 (max)",
   "Claude Opus 5.5 (max)",
   "GPT‑6.1 Sol (max)",
   "Claude Sonnet 5.5 (max)",
@@ -45,6 +46,9 @@
   "Inkling"
  ],
  "incomplete": {
+  "claude-fable-5-2": [
+   "name from OpenRouter ('Claude Fable 5.2')"
+  ],
   "deepseek-v4.1-flash-1017": [
    "name from OpenRouter ('DeepSeek V4.1 Flash 1017')"
   ],
@@ -75,6 +79,7 @@
   ]
  },
  "dated": {
+  "claude-fable-5-2": "2026-11-09 (OpenRouter listing)",
   "deepseek-v4.1-flash-1017": "2026-10-17 (OpenRouter listing)",
   "kimi-k3.1-pro": "2026-10-23 (OpenRouter listing)",
   "gpt-6.1-terra": "2026-10-26 (OpenRouter listing)",

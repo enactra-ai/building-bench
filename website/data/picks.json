@@ -6016,6 +6016,26 @@
 },
 {
 "site": "helsinki_122886734_enhanced_v1",
+"series": "claudefable52max",
+"run": "helsinki_122886734_enhanced_v1-blind-claude-fable-5-2-max-20261109T195053",
+"overall": 0.856,
+"surface_f": 0.865,
+"chamfer_m": null,
+"height_m": null,
+"triangles": null,
+"glb": "../bench-runs/helsinki_122886734_enhanced_v1-blind-claude-fable-5-2-max-20261109T195053/submission/building.glb",
+"page": null,
+"cost": 65.41,
+"turns": 334.0,
+"nruns": 1,
+"allruns": [
+0.856
+],
+"ran": "2026-11-09",
+"minutes": 143.97
+},
+{
+"site": "helsinki_122886734_enhanced_v1",
 "series": "stealthcroutonalphaclaudecode",
 "run": "helsinki_122886734_enhanced_v1-blind-stealth-crouton-alpha-claude-code-20261105T001706",
 "overall": 0.508,
@@ -6853,6 +6873,26 @@
 },
 {
 "site": "helsinki_122954081_enhanced_v1",
+"series": "claudefable52max",
+"run": "helsinki_122954081_enhanced_v1-blind-claude-fable-5-2-max-20261109T195053",
+"overall": 0.878,
+"surface_f": 0.892,
+"chamfer_m": null,
+"height_m": null,
+"triangles": null,
+"glb": "../bench-runs/helsinki_122954081_enhanced_v1-blind-claude-fable-5-2-max-20261109T195053/submission/building.glb",
+"page": null,
+"cost": 74.27,
+"turns": 360.0,
+"nruns": 1,
+"allruns": [
+0.878
+],
+"ran": "2026-11-09",
+"minutes": 156.23
+},
+{
+"site": "helsinki_122954081_enhanced_v1",
 "series": "stealthcroutonalphaclaudecode",
 "run": "helsinki_122954081_enhanced_v1-blind-stealth-crouton-alpha-claude-code-20261105T001706",
 "overall": 0.588,
@@ -7666,6 +7706,26 @@
 ],
 "ran": "2026-09-04",
 "minutes": 36.57
+},
+{
+"site": "helsinki_123901485_enhanced_v1",
+"series": "claudefable52max",
+"run": "helsinki_123901485_enhanced_v1-blind-claude-fable-5-2-max-20261109T195053",
+"overall": 0.896,
+"surface_f": 0.86,
+"chamfer_m": null,
+"height_m": null,
+"triangles": null,
+"glb": "../bench-runs/helsinki_123901485_enhanced_v1-blind-claude-fable-5-2-max-20261109T195053/submission/building.glb",
+"page": null,
+"cost": 40.49,
+"turns": 230.0,
+"nruns": 1,
+"allruns": [
+0.896
+],
+"ran": "2026-11-09",
+"minutes": 130.48
 },
 {
 "site": "helsinki_123901485_enhanced_v1",
@@ -8527,6 +8587,26 @@
 },
 {
 "site": "helsinki_8033120_enhanced_v1",
+"series": "claudefable52max",
+"run": "helsinki_8033120_enhanced_v1-blind-claude-fable-5-2-max-20261109T234651",
+"overall": 0.841,
+"surface_f": 0.85,
+"chamfer_m": null,
+"height_m": null,
+"triangles": null,
+"glb": "../bench-runs/helsinki_8033120_enhanced_v1-blind-claude-fable-5-2-max-20261109T234651/submission/building.glb",
+"page": null,
+"cost": 188.77,
+"turns": 445.0,
+"nruns": 1,
+"allruns": [
+0.841
+],
+"ran": "2026-11-09",
+"minutes": 186.25
+},
+{
+"site": "helsinki_8033120_enhanced_v1",
 "series": "stealthcroutonalphaclaudecode",
 "run": "helsinki_8033120_enhanced_v1-blind-stealth-crouton-alpha-claude-code-20261105T001706",
 "overall": 0.563,
@@ -9320,6 +9400,26 @@
 ],
 "ran": "2026-09-04",
 "minutes": 29.67
+},
+{
+"site": "helsinki_cathedral_enhanced_v1",
+"series": "claudefable52max",
+"run": "helsinki_cathedral_enhanced_v1-blind-claude-fable-5-2-max-20261109T234651",
+"overall": 0.929,
+"surface_f": 0.813,
+"chamfer_m": null,
+"height_m": null,
+"triangles": null,
+"glb": "../bench-runs/helsinki_cathedral_enhanced_v1-blind-claude-fable-5-2-max-20261109T234651/submission/building.glb",
+"page": null,
+"cost": 161.52,
+"turns": 291.0,
+"nruns": 1,
+"allruns": [
+0.929
+],
+"ran": "2026-11-09",
+"minutes": 167.93
 },
 {
 "site": "helsinki_cathedral_enhanced_v1",
@@ -10182,6 +10282,26 @@
 },
 {
 "site": "melbourne_155809136_enhanced_v1",
+"series": "claudefable52max",
+"run": "melbourne_155809136_enhanced_v1-blind-claude-fable-5-2-max-20261109T210729",
+"overall": 0.938,
+"surface_f": 0.867,
+"chamfer_m": null,
+"height_m": null,
+"triangles": null,
+"glb": "../bench-runs/melbourne_155809136_enhanced_v1-blind-claude-fable-5-2-max-20261109T210729/submission/building.glb",
+"page": null,
+"cost": 32.35,
+"turns": 200.0,
+"nruns": 1,
+"allruns": [
+0.938
+],
+"ran": "2026-11-09",
+"minutes": 93.23
+},
+{
+"site": "melbourne_155809136_enhanced_v1",
 "series": "tencenthy4claudecode",
 "run": "melbourne_155809136_enhanced_v1-blind-tencent-hy4-claude-code-20261104T112459",
 "overall": 0.711,
@@ -10996,6 +11116,26 @@
 ],
 "ran": "2026-09-04",
 "minutes": 33.8
+},
+{
+"site": "melbourne_22820458_enhanced_v1",
+"series": "claudefable52max",
+"run": "melbourne_22820458_enhanced_v1-blind-claude-fable-5-2-max-20261109T210729",
+"overall": 0.894,
+"surface_f": 0.597,
+"chamfer_m": null,
+"height_m": null,
+"triangles": null,
+"glb": "../bench-runs/melbourne_22820458_enhanced_v1-blind-claude-fable-5-2-max-20261109T210729/submission/building.glb",
+"page": null,
+"cost": 16.3,
+"turns": 61.0,
+"nruns": 1,
+"allruns": [
+0.894
+],
+"ran": "2026-11-09",
+"minutes": 70.07
 },
 {
 "site": "melbourne_22820458_enhanced_v1",
@@ -11833,6 +11973,26 @@
 ],
 "ran": "2026-09-04",
 "minutes": 32.13
+},
+{
+"site": "melbourne_25422768_enhanced_v1",
+"series": "claudefable52max",
+"run": "melbourne_25422768_enhanced_v1-blind-claude-fable-5-2-max-20261109T234651",
+"overall": 0.805,
+"surface_f": 0.804,
+"chamfer_m": null,
+"height_m": null,
+"triangles": null,
+"glb": "../bench-runs/melbourne_25422768_enhanced_v1-blind-claude-fable-5-2-max-20261109T234651/submission/building.glb",
+"page": null,
+"cost": 122.91,
+"turns": 241.0,
+"nruns": 1,
+"allruns": [
+0.805
+],
+"ran": "2026-11-09",
+"minutes": 171.77
 },
 {
 "site": "melbourne_25422768_enhanced_v1",
@@ -12694,6 +12854,26 @@
 },
 {
 "site": "melbourne_296368687_enhanced_v1",
+"series": "claudefable52max",
+"run": "melbourne_296368687_enhanced_v1-blind-claude-fable-5-2-max-20261109T234651",
+"overall": 0.866,
+"surface_f": 0.818,
+"chamfer_m": null,
+"height_m": null,
+"triangles": null,
+"glb": "../bench-runs/melbourne_296368687_enhanced_v1-blind-claude-fable-5-2-max-20261109T234651/submission/building.glb",
+"page": null,
+"cost": 171.07,
+"turns": 351.0,
+"nruns": 1,
+"allruns": [
+0.866
+],
+"ran": "2026-11-09",
+"minutes": 224.12
+},
+{
+"site": "melbourne_296368687_enhanced_v1",
 "series": "stealthcroutonalphaclaudecode",
 "run": "melbourne_296368687_enhanced_v1-blind-stealth-crouton-alpha-claude-code-20261105T001706",
 "overall": 0.544,
@@ -13529,6 +13709,26 @@
 ],
 "ran": "2026-09-04",
 "minutes": 36.55
+},
+{
+"site": "melbourne_33106429_enhanced_v1",
+"series": "claudefable52max",
+"run": "melbourne_33106429_enhanced_v1-blind-claude-fable-5-2-max-20261109T234651",
+"overall": 0.799,
+"surface_f": 0.323,
+"chamfer_m": null,
+"height_m": null,
+"triangles": null,
+"glb": "../bench-runs/melbourne_33106429_enhanced_v1-blind-claude-fable-5-2-max-20261109T234651/submission/building.glb",
+"page": null,
+"cost": 139.59,
+"turns": 244.0,
+"nruns": 1,
+"allruns": [
+0.799
+],
+"ran": "2026-11-09",
+"minutes": 129.98
 },
 {
 "site": "melbourne_33106429_enhanced_v1",
@@ -14368,6 +14568,26 @@
 },
 {
 "site": "melbourne_45461060_enhanced_v1",
+"series": "claudefable52max",
+"run": "melbourne_45461060_enhanced_v1-blind-claude-fable-5-2-max-20261109T234651",
+"overall": 0.886,
+"surface_f": 0.675,
+"chamfer_m": null,
+"height_m": null,
+"triangles": null,
+"glb": "../bench-runs/melbourne_45461060_enhanced_v1-blind-claude-fable-5-2-max-20261109T234651/submission/building.glb",
+"page": null,
+"cost": 237.24,
+"turns": 470.0,
+"nruns": 1,
+"allruns": [
+0.886
+],
+"ran": "2026-11-09",
+"minutes": 233.45
+},
+{
+"site": "melbourne_45461060_enhanced_v1",
 "series": "stealthcroutonalphaclaudecode",
 "run": "melbourne_45461060_enhanced_v1-blind-stealth-crouton-alpha-claude-code-20261105T001706",
 "overall": 0.502,
@@ -15202,6 +15422,26 @@
 ],
 "ran": "2026-09-05",
 "minutes": 53.95
+},
+{
+"site": "melbourne_4817059_enhanced_v1",
+"series": "claudefable52max",
+"run": "melbourne_4817059_enhanced_v1-blind-claude-fable-5-2-max-20261109T214433",
+"overall": 0.904,
+"surface_f": 0.415,
+"chamfer_m": null,
+"height_m": null,
+"triangles": null,
+"glb": "../bench-runs/melbourne_4817059_enhanced_v1-blind-claude-fable-5-2-max-20261109T214433/submission/building.glb",
+"page": null,
+"cost": 28.16,
+"turns": 148.0,
+"nruns": 1,
+"allruns": [
+0.904
+],
+"ran": "2026-11-09",
+"minutes": 85.82
 },
 {
 "site": "melbourne_4817059_enhanced_v1",

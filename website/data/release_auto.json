@@ -1,4 +1,10 @@
 {
+ "claude-fable-5-2": {
+  "date": "2026-11-09",
+  "source": "OpenRouter listing",
+  "openrouter": "anthropic/claude-fable-5.2",
+  "listed": "2026-11-09 19:49 UTC"
+ },
  "crouton-alpha": {
   "date": "2026-11-02",
   "source": "OpenRouter listing",
