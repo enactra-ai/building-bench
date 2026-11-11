@@ -1,0 +1,197 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Claude Fable 5.2 and Gemini 4 Carbon — BuildingBench</title>
+<meta name="description" content="Claude Fable 5.2 and Gemini 4 Carbon on BuildingBench: 3D building reconstructions from photographs, scored on the same twelve buildings.">
+<meta property="og:title" content="Claude Fable 5.2 and Gemini 4 Carbon on BuildingBench">
+<style>
+:root{--ink:#182c26;--muted:#738078;--green:#087456;--green-dark:#07513e;--green-soft:#eaf3ee;--line:#e0e7e1;--bg:#f6f8f5;--paper:#fff;--radius:16px;
+  font-family:Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;color:var(--ink);background:var(--bg);font-synthesis:none}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);-webkit-font-smoothing:antialiased}
+a{color:var(--green)}
+.wrap{max-width:1180px;margin:0 auto;padding:0 28px}
+header.top{border-bottom:1px solid var(--line);background:rgba(246,248,245,.92);position:sticky;top:0;z-index:5;backdrop-filter:blur(8px)}
+header.top .wrap{display:flex;align-items:center;justify-content:space-between;height:58px}
+.brand{display:flex;align-items:center;gap:9px;font-weight:650;font-size:15px;color:var(--ink);text-decoration:none}
+.brand svg{width:20px;height:20px}
+.back{font-size:13px;text-decoration:none;color:var(--muted)}.back:hover{color:var(--green)}
+.hero{padding:56px 0 30px}
+.eyebrow{font-size:11px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--green)}
+h1{margin:12px 0 0;font-size:clamp(30px,4.2vw,46px);line-height:1.08;letter-spacing:-.03em;font-weight:650;text-wrap:balance}
+h1 span{color:var(--green)}
+.lede{margin:16px 0 0;max-width:640px;font-size:15px;line-height:1.6;color:var(--muted)}
+.models{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;margin-top:28px}
+.mcard{background:var(--paper);border:1px solid var(--line);border-radius:var(--radius);padding:20px 22px;display:flex;flex-direction:column;gap:12px}
+.mname{display:flex;align-items:center;gap:9px;font-weight:650;font-size:16px}
+.sw{width:11px;height:11px;border-radius:3px;flex:none}
+.mname small{font-weight:500;color:var(--muted);font-size:13px}
+.mscore{display:flex;align-items:baseline;gap:12px;flex-wrap:wrap}
+.mscore b{font-size:44px;letter-spacing:-.03em;font-weight:650;font-variant-numeric:tabular-nums}
+.pill{font-size:12px;font-weight:600;color:var(--green-dark);background:var(--green-soft);border-radius:999px;padding:4px 10px}
+.mstats{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px;border-top:1px solid var(--line);padding-top:12px}
+.mstats div{font-size:11px;color:var(--muted)}.mstats b{display:block;margin-top:3px;font-size:15px;color:var(--ink);font-weight:600;font-variant-numeric:tabular-nums}
+section{padding:34px 0}
+h2{margin:0;font-size:24px;letter-spacing:-.02em;font-weight:650}
+.sub{margin:8px 0 0;color:var(--muted);font-size:14px;line-height:1.55;max-width:720px}
+.card{background:var(--paper);border:1px solid var(--line);border-radius:var(--radius);margin-top:18px}
+/* the case: photographs -> two submissions */
+.case{display:grid;grid-template-columns:minmax(0,1fr) 36px minmax(0,1fr) minmax(0,1fr);gap:14px;align-items:start;padding:20px}
+.col{display:flex;flex-direction:column;gap:9px;min-width:0}
+.lab{font-size:12px;font-weight:600;display:flex;align-items:center;gap:7px;min-height:18px}
+.lab em{font-style:normal;font-weight:500;color:var(--muted)}
+.frame{position:relative;aspect-ratio:4/3;border-radius:12px;overflow:hidden;background:#eef2ee}
+.photos img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;transition:opacity .5s}
+.photos img.on{opacity:1}
+.dots{display:flex;gap:6px;justify-content:center}
+.dots button{width:7px;height:7px;border-radius:50%;border:0;padding:0;background:#c9d3cb;cursor:pointer}
+.dots button.on{background:var(--ink)}
+.viewer canvas{position:absolute;inset:0;width:100%;height:100%;cursor:grab;touch-action:none}
+.viewer canvas:active{cursor:grabbing}
+.score{font-size:12px;color:var(--muted);font-variant-numeric:tabular-nums}.score b{color:var(--ink);font-size:15px}
+.arrow{align-self:center;justify-self:center;font-size:24px;color:var(--ink);margin-top:-8px}
+.caption{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;border-top:1px solid var(--line);padding:12px 20px;font-size:12px;color:var(--muted)}
+/* leaderboard */
+.bar{padding:18px 16px 8px;overflow-x:auto}
+.bar svg{display:block;width:100%;min-width:900px;height:auto}
+/* comparison */
+.strip{display:flex;gap:8px;overflow-x:auto;padding:16px 20px 4px}
+.strip button{flex:none;display:flex;flex-direction:column;gap:6px;align-items:flex-start;width:112px;padding:6px;border:1px solid var(--line);border-radius:12px;background:var(--paper);cursor:pointer;font:inherit;color:var(--ink);text-align:left}
+.strip button img{width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:7px}
+.strip button span{font-size:11px;line-height:1.3;font-weight:500}
+.strip button[aria-pressed="true"]{border-color:var(--green);box-shadow:0 0 0 2px var(--green-soft)}
+.cmp{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;padding:16px 20px 20px}
+.win{font-size:10px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--green-dark);background:var(--green-soft);border-radius:999px;padding:2px 7px}
+table{width:100%;border-collapse:collapse;font-size:13px}
+th{font-size:11px;font-weight:500;color:var(--muted);text-align:left;padding:10px 20px;border-bottom:1px solid var(--line)}
+td{padding:9px 20px;border-bottom:1px solid var(--line);font-variant-numeric:tabular-nums}
+tr:last-child td{border-bottom:0}
+tbody tr{cursor:pointer}tbody tr:hover,tbody tr.sel{background:#f3f8f4}
+.cellbar{display:flex;align-items:center;gap:10px}
+.cellbar i{display:block;height:6px;border-radius:3px}
+.cellbar b{font-weight:600;width:34px}
+.tablewrap{overflow-x:auto}
+footer{border-top:1px solid var(--line);margin-top:24px;padding:22px 0 40px;font-size:12px;color:var(--muted);line-height:1.6}
+:focus-visible{outline:2px solid var(--green);outline-offset:2px}
+@media(max-width:860px){
+  .models{grid-template-columns:minmax(0,1fr)}
+  .case{grid-template-columns:minmax(0,1fr) minmax(0,1fr)}
+  .case .col:first-child{grid-column:1/-1}.arrow{display:none}
+  .cmp{grid-template-columns:minmax(0,1fr) minmax(0,1fr)}.cmp .col:first-child{grid-column:1/-1}
+  .mstats{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .wrap{padding:0 16px}
+}
+@media(prefers-reduced-motion:reduce){.photos img{transition:none}}
+</style></head><body>
+<header class="top"><div class="wrap">
+  <a class="brand" href="../"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M12 2.8 3.5 7.6v8.8L12 21.2l8.5-4.8V7.6z"/><path d="M3.5 7.6 12 12.4l8.5-4.8M12 12.4v8.8"/></svg>BuildingBench</a>
+  <a class="back" href="../">← All results</a>
+</div></header>
+
+<main class="wrap">
+  <div class="hero">
+    <div class="eyebrow">New results · November 2026</div>
+    <h1>Claude Fable 5.2 and <span>Gemini 4 Carbon</span></h1>
+    <p class="lede">Each model was given four photographs of a real building and asked to rebuild it in 3D as a .glb file. Both ran the same twelve buildings in Helsinki and Melbourne, scored on geometry, surface and appearance.</p>
+    <div class="models" id="models"></div>
+  </div>
+
+  <section>
+    <h2>One building, two reconstructions</h2>
+    <p class="sub">The photographs each agent was given, and the model each one handed in. Drag either model to turn both.</p>
+    <div class="card">
+      <div class="case" id="showcase"></div>
+      <div class="caption"><span id="showcaseName"></span><span>Photographs: licensed 3D city data, CC BY 4.0</span></div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Leaderboard</h2>
+    <p class="sub">Overall score out of 100 on the same twelve buildings, highest first. Arrows run from each model's predecessor.</p>
+    <div class="card bar"><!--BAR--></div>
+  </section>
+
+  <section>
+    <h2>Building by building</h2>
+    <p class="sub">Pick a building to compare the two submissions side by side.</p>
+    <div class="card">
+      <div class="strip" id="strip" role="group" aria-label="Buildings"></div>
+      <div class="cmp" id="cmp"></div>
+      <div class="tablewrap"><table><thead><tr><th>Building</th><th id="thA"></th><th id="thB"></th></tr></thead><tbody id="rows"></tbody></table></div>
+    </div>
+  </section>
+</main>
+
+<footer><div class="wrap">
+  Board snapshot {{SNAPSHOT}}. Overall, geometry, surface and appearance are on a 0–100 scale; 0 is a bounding box at the measured height. Cost per run is an API-equivalent estimate from the run's own token counts.
+  Photographs: City of Melbourne 3D Textured Mesh (Photomesh) 2020 / City of Melbourne and the Helsinki 3D city model, CC BY 4.0. <a href="../">BuildingBench</a> · <a href="https://enactra.ai">Enactra AI</a>
+</div></footer>
+
+<script>/*DATA*/</script>
+<script src="assets/three-bundle.js"></script>
+<script src="assets/engine.js"></script>
+<script>
+(function(){
+const D=window.BB_DATA, M=D.models, B=D.buildings;
+const $=s=>document.querySelector(s);
+const esc=s=>String(s).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+const pts=v=>(v*100).toFixed(1);
+const reduced=()=>matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+// the two model cards
+$("#models").innerHTML=M.map(m=>`<article class="mcard">
+  <div class="mname"><span class="sw" style="background:${m.colour}"></span>${esc(m.name)} <small>(${m.effort})</small></div>
+  <div class="mscore"><b>${pts(m.overall)}</b><span class="pill">#${m.rank} of ${m.of}</span><span class="score">${m.gain>=0?"+":""}${m.gain.toFixed(1)} over ${esc(m.old)} (${pts(m.old_overall)})</span></div>
+  <div class="mstats"><div>Geometry<b>${pts(m.geometry)}</b></div><div>Surface<b>${pts(m.surface)}</b></div><div>Appearance<b>${pts(m.appearance)}</b></div><div>Cost / run<b>$${m.cost.toFixed(2)}</b></div></div>
+</article>`).join("");
+
+// a photograph cycler: the four views every agent was given
+function photos(host,views){
+  host.innerHTML=`<div class="frame photos">${views.map((v,i)=>`<img src="${v}" alt="Input photograph ${i+1} of 4"${i?"":' class="on"'} loading="lazy">`).join("")}</div><div class="dots">${views.map((_,i)=>`<button aria-label="Photograph ${i+1}"${i?"":' class="on"'}></button>`).join("")}</div>`;
+  const imgs=[...host.querySelectorAll("img")], dots=[...host.querySelectorAll(".dots button")];
+  let i=0,t=null;
+  const show=k=>{i=k;imgs.forEach((im,j)=>im.classList.toggle("on",j===i));dots.forEach((d,j)=>d.classList.toggle("on",j===i));};
+  const run=()=>{clearInterval(t);if(!reduced())t=setInterval(()=>show((i+1)%imgs.length),2000);};
+  dots.forEach((d,j)=>d.addEventListener("click",()=>{show(j);run();}));run();
+  return ()=>clearInterval(t);
+}
+// a model column: label, synced viewer, score
+function viewer(host,m,cell,group,best){
+  host.innerHTML=`<div class="lab"><span class="sw" style="background:${m.colour}"></span>${esc(m.name)} <em>(${m.effort})</em>${best?'<span class="win">Higher</span>':""}</div>
+  <div class="frame viewer" style="background:#f1f3f0"><canvas tabindex="0" aria-label="${esc(m.name)}'s 3D submission. Drag to orbit, scroll to zoom."></canvas></div>
+  <div class="score">Overall <b>${pts(cell.overall)}</b> · $${(cell.cost??0).toFixed(2)} · ${Math.round(cell.minutes||0)} min</div>`;
+  return new GLBViewer(host.querySelector("canvas"),{assetKey:cell.key,group});
+}
+const newGroup=()=>({rotationX:.35,rotationY:-.65,zoom:1,paused:false});
+function columns(host,b,withArrow){
+  destroyViewersWithin(host);
+  host.innerHTML=`<div class="col"><div class="lab">Input <em>· real building photos</em></div><div class="ph"></div></div>${withArrow?'<div class="arrow" aria-hidden="true">→</div>':""}<div class="col" id="${host.id}A"></div><div class="col" id="${host.id}B"></div>`;
+  const stop=photos(host.querySelector(".ph"),b.views);
+  const g=newGroup(), a=b.cells[M[0].id], c=b.cells[M[1].id];
+  viewer(host.querySelector("#"+host.id+"A"),M[0],a,g,!withArrow&&a.overall>c.overall);
+  viewer(host.querySelector("#"+host.id+"B"),M[1],c,g,!withArrow&&c.overall>a.overall);
+  return stop;
+}
+
+// 1. the showcase
+const show=B.find(b=>b.site===D.showcase);
+columns($("#showcase"),show,true);
+$("#showcaseName").textContent=`${show.name}, ${show.city} · ${M[0].name} ${pts(show.cells[M[0].id].overall)} · ${M[1].name} ${pts(show.cells[M[1].id].overall)}`;
+
+// 2. building by building
+$("#thA").innerHTML=`<span class="sw" style="display:inline-block;background:${M[0].colour};margin-right:6px"></span>${esc(M[0].name)}`;
+$("#thB").innerHTML=`<span class="sw" style="display:inline-block;background:${M[1].colour};margin-right:6px"></span>${esc(M[1].name)}`;
+const bar=(v,col)=>`<div class="cellbar"><b>${pts(v)}</b><i style="width:${Math.max(0,(v-.5)/.5*160)}px;background:${col}"></i></div>`;
+let stopCmp=null, current=null;
+function select(id){
+  const b=B.find(x=>x.id===id); if(!b||current===id)return; current=id;
+  stopCmp&&stopCmp(); stopCmp=columns($("#cmp"),b,false);
+  document.querySelectorAll("#strip button").forEach(x=>x.setAttribute("aria-pressed",String(x.dataset.id===id)));
+  document.querySelectorAll("#rows tr").forEach(x=>x.classList.toggle("sel",x.dataset.id===id));
+}
+$("#strip").innerHTML=B.map(b=>`<button data-id="${b.id}" aria-pressed="false"><img src="${b.views[0]}" alt="" loading="lazy"><span>${esc(b.short)}</span></button>`).join("");
+$("#rows").innerHTML=B.map(b=>`<tr data-id="${b.id}" tabindex="0"><td>${esc(b.name)} <span class="score">· ${b.city}</span></td><td>${bar(b.cells[M[0].id].overall,M[0].colour)}</td><td>${bar(b.cells[M[1].id].overall,M[1].colour)}</td></tr>`).join("");
+document.querySelectorAll("#strip button").forEach(x=>x.addEventListener("click",()=>select(x.dataset.id)));
+document.querySelectorAll("#rows tr").forEach(x=>{x.addEventListener("click",()=>select(x.dataset.id));x.addEventListener("keydown",e=>{if(e.key==="Enter")select(x.dataset.id);});});
+select(B[0].id);
+})();
+</script>
+</body></html>
