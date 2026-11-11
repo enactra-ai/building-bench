@@ -396,6 +396,45 @@
    }
   },
   {
+   "label": "gemini-4-carbon (high)",
+   "sub": "Google",
+   "org": "Google",
+   "series": "gemini4carbonhigh",
+   "values": {
+    "overall": 0.8238,
+    "cost": null,
+    "cells": 12,
+    "ran": 12,
+    "f": 0.5048,
+    "geometry": 0.8202,
+    "appearance": 0.8876,
+    "silhouette": 0.8608,
+    "outline": 0.664,
+    "plan": 0.8318,
+    "height": 0.8912,
+    "colour": 0.9148,
+    "structure": 0.8513,
+    "materials": 1.0,
+    "precision": 0.5318,
+    "recall": 0.4836,
+    "triangles": 12432.5833,
+    "turns": 138.5,
+    "minutes": 61.92,
+    "common": 0.8238,
+    "takes": 12,
+    "place": 4
+   },
+   "band": {
+    "overall": 0.0153
+   },
+   "optimal": false,
+   "tags": [],
+   "facets": {
+    "family": "Google",
+    "effort": "high"
+   }
+  },
+  {
    "label": "claude-sonnet-5-5 (max)",
    "sub": "Unplaced",
    "org": "Unplaced",
@@ -422,7 +461,7 @@
     "minutes": 236.53,
     "common": 0.821,
     "takes": 12,
-    "place": 3
+    "place": 4
    },
    "band": {
     "overall": 0.017
@@ -466,7 +505,7 @@
     "minutes": 155.37,
     "common": 0.8188,
     "takes": 12,
-    "place": 3
+    "place": 4
    },
    "band": {
     "overall": 0.0165
@@ -734,7 +773,7 @@
     "minutes": 36.81,
     "common": 0.7833,
     "takes": 12,
-    "place": 5
+    "place": 6
    },
    "band": {
     "overall": 0.0184
@@ -778,7 +817,7 @@
     "turns": 124.5,
     "minutes": 41.88,
     "takes": 2,
-    "place": 10
+    "place": 11
    },
    "band": {
     "overall": 0.0088
@@ -818,7 +857,7 @@
     "minutes": 67.98,
     "common": 0.7555,
     "takes": 12,
-    "place": 10
+    "place": 11
    },
    "band": {
     "overall": 0.022
@@ -858,7 +897,7 @@
     "minutes": 92.58,
     "common": 0.7448,
     "takes": 12,
-    "place": 13
+    "place": 14
    },
    "band": {
     "overall": 0.0212
@@ -898,7 +937,7 @@
     "minutes": 43.82,
     "common": 0.7388,
     "takes": 12,
-    "place": 13
+    "place": 14
    },
    "band": {
     "overall": 0.0152
@@ -938,7 +977,7 @@
     "minutes": 30.24,
     "common": 0.7307,
     "takes": 12,
-    "place": 13
+    "place": 14
    },
    "band": {
     "overall": 0.0312
@@ -983,7 +1022,7 @@
     "minutes": 114.13,
     "common": 0.7288,
     "takes": 12,
-    "place": 13
+    "place": 14
    },
    "band": {
     "overall": 0.0226
@@ -1027,7 +1066,7 @@
     "minutes": 196.8,
     "common": 0.7159,
     "takes": 12,
-    "place": 15
+    "place": 16
    },
    "band": {
     "overall": 0.0176
@@ -1071,7 +1110,7 @@
     "minutes": 93.28,
     "common": 0.7153,
     "takes": 12,
-    "place": 15
+    "place": 16
    },
    "band": {
     "overall": 0.0141
@@ -1114,7 +1153,7 @@
     "minutes": 34.92,
     "common": 0.7026,
     "takes": 12,
-    "place": 15
+    "place": 16
    },
    "band": {
     "overall": 0.016
@@ -1158,7 +1197,7 @@
     "minutes": 19.09,
     "common": 0.698,
     "takes": 12,
-    "place": 15
+    "place": 16
    },
    "band": {
     "overall": 0.0224
@@ -1201,7 +1240,7 @@
     "triangles": 10360.0,
     "minutes": 69.72,
     "takes": 1,
-    "place": 15
+    "place": 16
    },
    "band": {},
    "optimal": false,
@@ -1238,7 +1277,7 @@
     "minutes": 20.75,
     "common": 0.6962,
     "takes": 12,
-    "place": 15
+    "place": 16
    },
    "band": {
     "overall": 0.0218
@@ -1283,7 +1322,7 @@
     "minutes": 53.34,
     "common": 0.695,
     "takes": 12,
-    "place": 15
+    "place": 16
    },
    "band": {
     "overall": 0.0293
@@ -1328,7 +1367,7 @@
     "minutes": 53.03,
     "common": 0.6848,
     "takes": 12,
-    "place": 18
+    "place": 19
    },
    "band": {
     "overall": 0.0232
@@ -1368,7 +1407,7 @@
     "minutes": 60.05,
     "common": 0.6823,
     "takes": 12,
-    "place": 18
+    "place": 19
    },
    "band": {
     "overall": 0.024
@@ -1407,7 +1446,7 @@
     "minutes": 80.5,
     "common": 0.6799,
     "takes": 12,
-    "place": 18
+    "place": 19
    },
    "band": {
     "overall": 0.0309
@@ -1451,7 +1490,7 @@
     "minutes": 77.5,
     "common": 0.679,
     "takes": 12,
-    "place": 18
+    "place": 19
    },
    "band": {
     "overall": 0.0235
@@ -1495,7 +1534,7 @@
     "minutes": 247.49,
     "common": 0.6734,
     "takes": 12,
-    "place": 18
+    "place": 19
    },
    "band": {
     "overall": 0.0309
@@ -1539,7 +1578,7 @@
     "minutes": 36.12,
     "common": 0.6714,
     "takes": 12,
-    "place": 19
+    "place": 20
    },
    "band": {
     "overall": 0.0191
@@ -1583,7 +1622,7 @@
     "turns": 51.0,
     "minutes": 8.22,
     "takes": 3,
-    "place": 19
+    "place": 20
    },
    "band": {
     "overall": 0.0314
@@ -1623,7 +1662,7 @@
     "minutes": 62.74,
     "common": 0.6156,
     "takes": 12,
-    "place": 28
+    "place": 29
    },
    "band": {
     "overall": 0.0221
@@ -1662,7 +1701,7 @@
     "minutes": 76.51,
     "common": 0.5693,
     "takes": 12,
-    "place": 31
+    "place": 32
    },
    "band": {
     "overall": 0.036
@@ -1705,7 +1744,7 @@
     "turns": 155.0,
     "minutes": 21.47,
     "takes": 11,
-    "place": 32
+    "place": 33
    },
    "band": {
     "overall": 0.0185
@@ -1749,7 +1788,7 @@
     "minutes": 114.94,
     "common": 0.5558,
     "takes": 12,
-    "place": 32
+    "place": 33
    },
    "band": {
     "overall": 0.0578
@@ -1792,7 +1831,7 @@
     "minutes": 39.51,
     "common": 0.5476,
     "takes": 12,
-    "place": 32
+    "place": 33
    },
    "band": {
     "overall": 0.0607
@@ -1832,7 +1871,7 @@
     "minutes": 60.73,
     "common": 0.5436,
     "takes": 12,
-    "place": 32
+    "place": 33
    },
    "band": {
     "overall": 0.032
@@ -1872,7 +1911,7 @@
     "minutes": 125.14,
     "common": 0.5403,
     "takes": 12,
-    "place": 32
+    "place": 33
    },
    "band": {
     "overall": 0.0371
@@ -1915,7 +1954,7 @@
     "minutes": 688.59,
     "common": 0.5197,
     "takes": 12,
-    "place": 32
+    "place": 33
    },
    "band": {
     "overall": 0.0945
@@ -1958,7 +1997,7 @@
     "triangles": 3588.0,
     "minutes": 16.75,
     "takes": 2,
-    "place": 32
+    "place": 33
    },
    "band": {
     "overall": 0.1903
@@ -1997,7 +2036,7 @@
     "minutes": 36.13,
     "common": 0.3778,
     "takes": 12,
-    "place": 39
+    "place": 40
    },
    "band": {
     "overall": 0.0272
@@ -2040,7 +2079,7 @@
     "minutes": 427.17,
     "common": 0.3391,
     "takes": 12,
-    "place": 40
+    "place": 41
    },
    "band": {
     "overall": 0.0342
@@ -2083,7 +2122,7 @@
     "minutes": 100.71,
     "common": 0.3302,
     "takes": 12,
-    "place": 40
+    "place": 41
    },
    "band": {
     "overall": 0.0919
@@ -2122,7 +2161,7 @@
     "minutes": 10.85,
     "common": 0.2668,
     "takes": 12,
-    "place": 41
+    "place": 42
    },
    "band": {
     "overall": 0.0509
@@ -2161,7 +2200,7 @@
     "minutes": 4.31,
     "common": 0.2581,
     "takes": 12,
-    "place": 41
+    "place": 42
    },
    "band": {
     "overall": 0.0493
@@ -2360,6 +2399,45 @@
    }
   },
   {
+   "label": "gemini-4-carbon (high)",
+   "sub": "Google",
+   "org": "Google",
+   "series": "gemini4carbonhigh",
+   "values": {
+    "overall": 0.8238,
+    "cost": null,
+    "cells": 12,
+    "ran": 12,
+    "f": 0.5048,
+    "geometry": 0.8202,
+    "appearance": 0.8876,
+    "silhouette": 0.8608,
+    "outline": 0.664,
+    "plan": 0.8318,
+    "height": 0.8912,
+    "colour": 0.9148,
+    "structure": 0.8513,
+    "materials": 1.0,
+    "precision": 0.5318,
+    "recall": 0.4836,
+    "triangles": 12432.5833,
+    "turns": 138.5,
+    "minutes": 61.92,
+    "common": 0.8238,
+    "takes": 12,
+    "place": 4
+   },
+   "band": {
+    "overall": 0.0153
+   },
+   "optimal": false,
+   "tags": [],
+   "facets": {
+    "family": "Google",
+    "effort": "high"
+   }
+  },
+  {
    "label": "claude-sonnet-5-5 (max)",
    "sub": "Unplaced",
    "org": "Unplaced",
@@ -2386,7 +2464,7 @@
     "minutes": 236.53,
     "common": 0.821,
     "takes": 12,
-    "place": 3
+    "place": 4
    },
    "band": {
     "overall": 0.017
@@ -2430,7 +2508,7 @@
     "minutes": 155.37,
     "common": 0.8188,
     "takes": 12,
-    "place": 3
+    "place": 4
    },
    "band": {
     "overall": 0.0165
@@ -2698,7 +2776,7 @@
     "minutes": 36.81,
     "common": 0.7833,
     "takes": 12,
-    "place": 5
+    "place": 6
    },
    "band": {
     "overall": 0.0184
@@ -2743,7 +2821,7 @@
     "minutes": 67.98,
     "common": 0.7555,
     "takes": 12,
-    "place": 10
+    "place": 11
    },
    "band": {
     "overall": 0.022
@@ -2783,7 +2861,7 @@
     "minutes": 92.58,
     "common": 0.7448,
     "takes": 12,
-    "place": 13
+    "place": 14
    },
    "band": {
     "overall": 0.0212
@@ -2823,7 +2901,7 @@
     "minutes": 43.82,
     "common": 0.7388,
     "takes": 12,
-    "place": 13
+    "place": 14
    },
    "band": {
     "overall": 0.0152
@@ -2863,7 +2941,7 @@
     "minutes": 30.24,
     "common": 0.7307,
     "takes": 12,
-    "place": 13
+    "place": 14
    },
    "band": {
     "overall": 0.0312
@@ -2908,7 +2986,7 @@
     "minutes": 114.13,
     "common": 0.7288,
     "takes": 12,
-    "place": 13
+    "place": 14
    },
    "band": {
     "overall": 0.0226
@@ -2952,7 +3030,7 @@
     "minutes": 196.8,
     "common": 0.7159,
     "takes": 12,
-    "place": 15
+    "place": 16
    },
    "band": {
     "overall": 0.0176
@@ -2996,7 +3074,7 @@
     "minutes": 93.28,
     "common": 0.7153,
     "takes": 12,
-    "place": 15
+    "place": 16
    },
    "band": {
     "overall": 0.0141
@@ -3039,7 +3117,7 @@
     "minutes": 34.92,
     "common": 0.7026,
     "takes": 12,
-    "place": 15
+    "place": 16
    },
    "band": {
     "overall": 0.016
@@ -3083,7 +3161,7 @@
     "minutes": 19.09,
     "common": 0.698,
     "takes": 12,
-    "place": 15
+    "place": 16
    },
    "band": {
     "overall": 0.0224
@@ -3127,7 +3205,7 @@
     "minutes": 20.75,
     "common": 0.6962,
     "takes": 12,
-    "place": 15
+    "place": 16
    },
    "band": {
     "overall": 0.0218
@@ -3172,7 +3250,7 @@
     "minutes": 53.34,
     "common": 0.695,
     "takes": 12,
-    "place": 15
+    "place": 16
    },
    "band": {
     "overall": 0.0293
@@ -3217,7 +3295,7 @@
     "minutes": 53.03,
     "common": 0.6848,
     "takes": 12,
-    "place": 18
+    "place": 19
    },
    "band": {
     "overall": 0.0232
@@ -3257,7 +3335,7 @@
     "minutes": 60.05,
     "common": 0.6823,
     "takes": 12,
-    "place": 18
+    "place": 19
    },
    "band": {
     "overall": 0.024
@@ -3296,7 +3374,7 @@
     "minutes": 80.5,
     "common": 0.6799,
     "takes": 12,
-    "place": 18
+    "place": 19
    },
    "band": {
     "overall": 0.0309
@@ -3340,7 +3418,7 @@
     "minutes": 77.5,
     "common": 0.679,
     "takes": 12,
-    "place": 18
+    "place": 19
    },
    "band": {
     "overall": 0.0235
@@ -3384,7 +3462,7 @@
     "minutes": 247.49,
     "common": 0.6734,
     "takes": 12,
-    "place": 18
+    "place": 19
    },
    "band": {
     "overall": 0.0309
@@ -3428,7 +3506,7 @@
     "minutes": 36.12,
     "common": 0.6714,
     "takes": 12,
-    "place": 19
+    "place": 20
    },
    "band": {
     "overall": 0.0191
@@ -3473,7 +3551,7 @@
     "minutes": 62.74,
     "common": 0.6156,
     "takes": 12,
-    "place": 28
+    "place": 29
    },
    "band": {
     "overall": 0.0221
@@ -3512,7 +3590,7 @@
     "minutes": 76.51,
     "common": 0.5693,
     "takes": 12,
-    "place": 31
+    "place": 32
    },
    "band": {
     "overall": 0.036
@@ -3556,7 +3634,7 @@
     "minutes": 114.94,
     "common": 0.5558,
     "takes": 12,
-    "place": 32
+    "place": 33
    },
    "band": {
     "overall": 0.0578
@@ -3599,7 +3677,7 @@
     "minutes": 39.51,
     "common": 0.5476,
     "takes": 12,
-    "place": 32
+    "place": 33
    },
    "band": {
     "overall": 0.0607
@@ -3639,7 +3717,7 @@
     "minutes": 60.73,
     "common": 0.5436,
     "takes": 12,
-    "place": 32
+    "place": 33
    },
    "band": {
     "overall": 0.032
@@ -3679,7 +3757,7 @@
     "minutes": 125.14,
     "common": 0.5403,
     "takes": 12,
-    "place": 32
+    "place": 33
    },
    "band": {
     "overall": 0.0371
@@ -3722,7 +3800,7 @@
     "minutes": 688.59,
     "common": 0.5197,
     "takes": 12,
-    "place": 32
+    "place": 33
    },
    "band": {
     "overall": 0.0945
@@ -3766,7 +3844,7 @@
     "minutes": 36.13,
     "common": 0.3778,
     "takes": 12,
-    "place": 39
+    "place": 40
    },
    "band": {
     "overall": 0.0272
@@ -3809,7 +3887,7 @@
     "minutes": 427.17,
     "common": 0.3391,
     "takes": 12,
-    "place": 40
+    "place": 41
    },
    "band": {
     "overall": 0.0342
@@ -3852,7 +3930,7 @@
     "minutes": 100.71,
     "common": 0.3302,
     "takes": 12,
-    "place": 40
+    "place": 41
    },
    "band": {
     "overall": 0.0919
@@ -3891,7 +3969,7 @@
     "minutes": 10.85,
     "common": 0.2668,
     "takes": 12,
-    "place": 41
+    "place": 42
    },
    "band": {
     "overall": 0.0509
@@ -3930,7 +4008,7 @@
     "minutes": 4.31,
     "common": 0.2581,
     "takes": 12,
-    "place": 41
+    "place": 42
    },
    "band": {
     "overall": 0.0493

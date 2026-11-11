@@ -17,6 +17,12 @@
   "openrouter": "deepseek/deepseek-v4.1-flash-1017",
   "listed": "2026-10-17 08:27 UTC"
  },
+ "gemini-4-carbon": {
+  "date": "2026-11-10",
+  "source": "OpenRouter listing",
+  "openrouter": "google/gemini-4-carbon",
+  "listed": "2026-11-10 16:07 UTC"
+ },
  "glm-5.3-flashx-legal": {
   "date": "2026-11-02",
   "source": "OpenRouter listing",
