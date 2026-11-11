@@ -6025,7 +6025,7 @@
 "triangles": null,
 "glb": "../bench-runs/helsinki_122886734_enhanced_v1-blind-gemini-4-carbon-high-20261110T224021/submission/building.glb",
 "page": null,
-"cost": null,
+"cost": 6.14,
 "turns": 129.0,
 "nruns": 1,
 "allruns": [
@@ -6902,7 +6902,7 @@
 "triangles": null,
 "glb": "../bench-runs/helsinki_122954081_enhanced_v1-blind-gemini-4-carbon-high-20261110T224021/submission/building.glb",
 "page": null,
-"cost": null,
+"cost": 6.62,
 "turns": 164.0,
 "nruns": 1,
 "allruns": [
@@ -7758,7 +7758,7 @@
 "triangles": null,
 "glb": "../bench-runs/helsinki_123901485_enhanced_v1-blind-gemini-4-carbon-high-20261110T224021/submission/building.glb",
 "page": null,
-"cost": null,
+"cost": 6.56,
 "turns": 137.0,
 "nruns": 1,
 "allruns": [
@@ -8656,7 +8656,7 @@
 "triangles": null,
 "glb": "../bench-runs/helsinki_8033120_enhanced_v1-blind-gemini-4-carbon-high-20261110T230159/submission/building.glb",
 "page": null,
-"cost": null,
+"cost": 6.22,
 "turns": 148.0,
 "nruns": 1,
 "allruns": [
@@ -9492,7 +9492,7 @@
 "triangles": null,
 "glb": "../bench-runs/helsinki_cathedral_enhanced_v1-blind-gemini-4-carbon-high-20261110T230159/submission/building.glb",
 "page": null,
-"cost": null,
+"cost": 7.56,
 "turns": 136.0,
 "nruns": 1,
 "allruns": [
@@ -10391,7 +10391,7 @@
 "triangles": null,
 "glb": "../bench-runs/melbourne_155809136_enhanced_v1-blind-gemini-4-carbon-high-20261110T230159/submission/building.glb",
 "page": null,
-"cost": null,
+"cost": 4.87,
 "turns": 110.0,
 "nruns": 1,
 "allruns": [
@@ -11248,7 +11248,7 @@
 "triangles": null,
 "glb": "../bench-runs/melbourne_22820458_enhanced_v1-blind-gemini-4-carbon-high-20261110T230159/submission/building.glb",
 "page": null,
-"cost": null,
+"cost": 4.82,
 "turns": 120.0,
 "nruns": 1,
 "allruns": [
@@ -12125,7 +12125,7 @@
 "triangles": null,
 "glb": "../bench-runs/melbourne_25422768_enhanced_v1-blind-gemini-4-carbon-high-20261110T230159/submission/building.glb",
 "page": null,
-"cost": null,
+"cost": 4.44,
 "turns": 149.0,
 "nruns": 1,
 "allruns": [
@@ -13023,7 +13023,7 @@
 "triangles": null,
 "glb": "../bench-runs/melbourne_296368687_enhanced_v1-blind-gemini-4-carbon-high-20261110T230159/submission/building.glb",
 "page": null,
-"cost": null,
+"cost": 7.52,
 "turns": 140.0,
 "nruns": 1,
 "allruns": [
@@ -13901,7 +13901,7 @@
 "triangles": null,
 "glb": "../bench-runs/melbourne_33106429_enhanced_v1-blind-gemini-4-carbon-high-20261110T230159/submission/building.glb",
 "page": null,
-"cost": null,
+"cost": 6.48,
 "turns": 180.0,
 "nruns": 1,
 "allruns": [
@@ -14777,7 +14777,7 @@
 "triangles": null,
 "glb": "../bench-runs/melbourne_45461060_enhanced_v1-blind-gemini-4-carbon-high-20261110T230159/submission/building.glb",
 "page": null,
-"cost": null,
+"cost": 6.06,
 "turns": 129.0,
 "nruns": 1,
 "allruns": [
@@ -15654,7 +15654,7 @@
 "triangles": null,
 "glb": "../bench-runs/melbourne_4817059_enhanced_v1-blind-gemini-4-carbon-high-20261110T230159/submission/building.glb",
 "page": null,
-"cost": null,
+"cost": 8.8,
 "turns": 156.0,
 "nruns": 1,
 "allruns": [

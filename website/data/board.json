@@ -362,7 +362,7 @@
    "series": "gemini4carbonhigh",
    "values": {
     "overall": 0.8238,
-    "cost": null,
+    "cost": 6.35335,
     "cells": 12,
     "ran": 12,
     "f": 0.5048,
@@ -388,7 +388,12 @@
     "overall": 0.0153
    },
    "optimal": false,
-   "tags": [],
+   "tags": [
+    {
+     "text": "est. price",
+     "kind": "warn"
+    }
+   ],
    "facets": {
     "family": "Google",
     "effort": "high"

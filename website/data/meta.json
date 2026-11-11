@@ -1,5 +1,5 @@
 {
- "snapshot": "2026-11-10",
+ "snapshot": "2026-11-11",
  "sameSet": [
   "allegiant_stadium",
   "aon_center_chicago",
@@ -96,7 +96,7 @@
     "f": 0.5048,
     "geometry": 0.8202,
     "appearance": 0.8876,
-    "cost": null,
+    "cost": 6.35335,
     "minutes": 61.92,
     "cells": 12,
     "place": 4
