@@ -1,8 +1,8 @@
 {
- "fingerprint": "5f8c2d48986927a43439e294546ca3814efc1d2361553f53edb9f9e6fd53d544",
- "snapshot": "2026-11-11",
+ "fingerprint": "d43f5ebf5a846be89e706a56d84ac61ce36c82da64a9898c517a1e2de7c0efd4",
+ "snapshot": "2026-11-12",
  "buildings": 12,
- "results": 483,
+ "results": 495,
  "models": [
   "Claude Fable 5.2 (max)",
   "Claude Opus 5.5 (max)",
@@ -17,6 +17,7 @@
   "MiniMax M3.1 Flash (max)",
   "Grok 4.7 (xhigh)",
   "Claude Fable 5.1 (max)",
+  "Gemini 4 Hydrogen (xhigh)",
   "Claude Opus 5 (max)",
   "Union Alpha (max)",
   "DeepSeek V4.1 Flash (max)",
@@ -65,6 +66,9 @@
   "minimax-m3.1-flash:free": [
    "name from OpenRouter ('MiniMax M3.1 Flash')"
   ],
+  "gemini-4-hydrogen": [
+   "name from OpenRouter ('Gemini 4 Hydrogen')"
+  ],
   "glm-5.3-flashx-legal": [
    "name from OpenRouter ('GLM 5.3 FlashX Legal')"
   ],
@@ -89,6 +93,7 @@
   "kimi-k3.1-pro": "2026-10-23 (OpenRouter listing)",
   "gpt-6.1-terra": "2026-10-26 (OpenRouter listing)",
   "minimax-m3.1-flash:free": "2026-10-18 (OpenRouter listing)",
+  "gemini-4-hydrogen": "2026-11-12 (OpenRouter listing)",
   "glm-5.3-flashx-legal": "2026-11-02 (OpenRouter listing)",
   "tencent-hy4-claude-code": "2026-11-04 (first day on the page)",
   "muse-spark-open": "2026-10-15 (OpenRouter listing)",

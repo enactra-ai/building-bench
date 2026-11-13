@@ -23,6 +23,12 @@
   "openrouter": "google/gemini-4-carbon",
   "listed": "2026-11-10 16:07 UTC"
  },
+ "gemini-4-hydrogen": {
+  "date": "2026-11-12",
+  "source": "OpenRouter listing",
+  "openrouter": "google/gemini-4-hydrogen",
+  "listed": "2026-11-12 18:01 UTC"
+ },
  "glm-5.3-flashx-legal": {
   "date": "2026-11-02",
   "source": "OpenRouter listing",

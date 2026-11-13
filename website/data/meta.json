@@ -1,5 +1,5 @@
 {
- "snapshot": "2026-11-11",
+ "snapshot": "2026-11-12",
  "sameSet": [
   "allegiant_stadium",
   "aon_center_chicago",
@@ -13,8 +13,8 @@
   "twa_flight_center",
   "udvar_hazy"
  ],
- "runsScored": 2407,
- "modelsRanked": 67,
+ "runsScored": 2419,
+ "modelsRanked": 68,
  "rig": {
   "schema": "city_bench.building_light/1",
   "sun_azimuth_deg": 135.0,
@@ -42,8 +42,8 @@
   "reach_m": 400.0
  },
  "cleanBoard": {
-  "runsScored": 747,
-  "modelsRanked": 47,
+  "runsScored": 759,
+  "modelsRanked": 48,
   "buildings": 12,
   "rows": {
    "claudefable52max": {
@@ -211,6 +211,17 @@
     "cells": 12,
     "place": 11
    },
+   "gemini4hydrogenxhigh": {
+    "label": "gemini-4-hydrogen (xhigh)",
+    "overall": 0.7533,
+    "f": 0.3522,
+    "geometry": 0.7876,
+    "appearance": 0.7929,
+    "cost": null,
+    "minutes": 45.78,
+    "cells": 12,
+    "place": 13
+   },
    "opusmax": {
     "label": "claude-opus-5 (max)",
     "overall": 0.7448,
@@ -286,7 +297,7 @@
     "cost": 7.718234,
     "minutes": 34.92,
     "cells": 12,
-    "place": 16
+    "place": 17
    },
    "gpt6solultra": {
     "label": "gpt-6-sol (ultra)",
@@ -297,7 +308,7 @@
     "cost": 1.9185364999999999,
     "minutes": 19.09,
     "cells": 12,
-    "place": 16
+    "place": 17
    },
    "deepseekv41flash": {
     "label": "deepseek/deepseek-v4.1-flash:wafer",
@@ -308,7 +319,7 @@
     "cost": null,
     "minutes": 69.72,
     "cells": 1,
-    "place": 16
+    "place": 17
    },
    "gpt6solmax": {
     "label": "gpt-6-sol (max)",
@@ -319,7 +330,7 @@
     "cost": 1.8870635,
     "minutes": 20.75,
     "cells": 12,
-    "place": 16
+    "place": 17
    },
    "grok46xhigh": {
     "label": "grok-4.6 (xhigh)",
@@ -330,7 +341,7 @@
     "cost": 10.59285,
     "minutes": 53.34,
     "cells": 12,
-    "place": 16
+    "place": 17
    },
    "gpt56terramax": {
     "label": "gpt-5.6-terra (max)",
@@ -341,7 +352,7 @@
     "cost": 4.2589282,
     "minutes": 53.03,
     "cells": 12,
-    "place": 19
+    "place": 20
    },
    "musespark13max": {
     "label": "muse-spark-1.3 (max)",
@@ -352,7 +363,7 @@
     "cost": 5.8897540500000005,
     "minutes": 60.05,
     "cells": 12,
-    "place": 19
+    "place": 20
    },
    "zaiglm53flashxclaudecode": {
     "label": "z-ai/glm-5.3-flashx (max) \u00b7 Claude Code",
@@ -363,7 +374,7 @@
     "cost": 2.325387,
     "minutes": 80.5,
     "cells": 12,
-    "place": 19
+    "place": 20
    },
    "fireworksember1claudecode": {
     "label": "fireworks/ember-1 (max) \u00b7 Claude Code",
@@ -374,7 +385,7 @@
     "cost": 9.444563500000001,
     "minutes": 77.5,
     "cells": 12,
-    "place": 19
+    "place": 20
    },
    "swe2maxdevin": {
     "label": "cognition/swe-2 (max)",
@@ -385,7 +396,7 @@
     "cost": 0.0,
     "minutes": 247.49,
     "cells": 12,
-    "place": 19
+    "place": 20
    },
    "claudehaiku55max": {
     "label": "claude-haiku-5-5 (max)",
@@ -396,7 +407,7 @@
     "cost": 1.3368134999999999,
     "minutes": 36.12,
     "cells": 12,
-    "place": 20
+    "place": 21
    },
    "fablelow": {
     "label": "claude-fable-5 (low)",
@@ -407,7 +418,7 @@
     "cost": 4.949040000000001,
     "minutes": 8.22,
     "cells": 3,
-    "place": 20
+    "place": 21
    },
    "gpt56lunamax": {
     "label": "gpt-5.6-luna (max)",
@@ -418,7 +429,7 @@
     "cost": 0.45029904,
     "minutes": 62.74,
     "cells": 12,
-    "place": 29
+    "place": 30
    },
    "metamusesparkopenclaudecode": {
     "label": "meta/muse-spark-open (max) \u00b7 Claude Code",
@@ -429,7 +440,7 @@
     "cost": 8.586422,
     "minutes": 76.51,
     "cells": 12,
-    "place": 32
+    "place": 33
    },
    "stealthcroutonalphaclaudecode": {
     "label": "stealth/crouton-alpha (max) \u00b7 Claude Code",
@@ -440,7 +451,7 @@
     "cost": 0.0,
     "minutes": 21.47,
     "cells": 11,
-    "place": 33
+    "place": 34
    },
    "stealthspacebunnyalphaclaudecode": {
     "label": "stealth/space-bunny-alpha (max) \u00b7 Claude Code",
@@ -451,7 +462,7 @@
     "cost": 0.0,
     "minutes": 114.94,
     "cells": 12,
-    "place": 33
+    "place": 34
    },
    "gemini38flash": {
     "label": "gemini-3.8-flash (high)",
@@ -462,7 +473,7 @@
     "cost": 3.330324675,
     "minutes": 39.51,
     "cells": 12,
-    "place": 33
+    "place": 34
    },
    "sonnetmax": {
     "label": "claude-sonnet-5 (max)",
@@ -473,7 +484,7 @@
     "cost": 15.032763100000004,
     "minutes": 60.73,
     "cells": 12,
-    "place": 33
+    "place": 34
    },
    "kimik3max": {
     "label": "kimi-k3 (thinking)",
@@ -484,7 +495,7 @@
     "cost": 5.844977500000001,
     "minutes": 125.14,
     "cells": 12,
-    "place": 33
+    "place": 34
    },
    "mistralaimistrallarge40claudecode": {
     "label": "mistralai/mistral-large-4-0 (max) \u00b7 Claude Code",
@@ -495,7 +506,7 @@
     "cost": 33.208745,
     "minutes": 688.59,
     "cells": 12,
-    "place": 33
+    "place": 34
    },
    "gemini": {
     "label": "gemini-3.1-pro (high)",
@@ -506,7 +517,7 @@
     "cost": 1.5500243999999999,
     "minutes": 16.75,
     "cells": 2,
-    "place": 33
+    "place": 34
    },
    "nvidianemotron35supervlfreeclaudecode": {
     "label": "nvidia/nemotron-3.5-super-vl (max) \u00b7 Claude Code",
@@ -517,7 +528,7 @@
     "cost": 0.7568904999999999,
     "minutes": 36.13,
     "cells": 12,
-    "place": 40
+    "place": 41
    },
    "step5previewclaudecode": {
     "label": "step-5-preview (max) \u00b7 Claude Code",
@@ -528,7 +539,7 @@
     "cost": 16.58585,
     "minutes": 427.17,
     "cells": 12,
-    "place": 41
+    "place": 42
    },
    "glm53flashmax": {
     "label": "glm-5.3-flash (max)",
@@ -539,7 +550,7 @@
     "cost": 0.21804560249999994,
     "minutes": 100.71,
     "cells": 12,
-    "place": 41
+    "place": 42
    },
    "haiku": {
     "label": "claude-haiku-4-5",
@@ -550,7 +561,7 @@
     "cost": 0.5243465500000001,
     "minutes": 10.85,
     "cells": 12,
-    "place": 42
+    "place": 43
    },
    "inklingfreeclaudecode": {
     "label": "thinkingmachines/inkling:free \u00b7 Claude Code",
@@ -561,7 +572,7 @@
     "cost": 0.0,
     "minutes": 4.31,
     "cells": 12,
-    "place": 42
+    "place": 43
    }
   }
  },
@@ -624,73 +635,73 @@
   "helsinki_122886734_enhanced_v1": {
    "union": false,
    "clean": true,
-   "n": 61,
+   "n": 62,
    "source": "Helsinki 3D city model"
   },
   "helsinki_122954081_enhanced_v1": {
    "union": false,
    "clean": true,
-   "n": 59,
+   "n": 60,
    "source": "Helsinki 3D city model"
   },
   "helsinki_123901485_enhanced_v1": {
    "union": false,
    "clean": true,
-   "n": 62,
+   "n": 63,
    "source": "Helsinki 3D city model"
   },
   "helsinki_8033120_enhanced_v1": {
    "union": false,
    "clean": true,
-   "n": 59,
+   "n": 60,
    "source": "Helsinki 3D city model"
   },
   "helsinki_cathedral_enhanced_v1": {
    "union": false,
    "clean": true,
-   "n": 64,
+   "n": 65,
    "source": "Helsinki 3D city model"
   },
   "melbourne_155809136_enhanced_v1": {
    "union": false,
    "clean": true,
-   "n": 59,
+   "n": 60,
    "source": "City of Melbourne 2020 photomesh"
   },
   "melbourne_22820458_enhanced_v1": {
    "union": false,
    "clean": true,
-   "n": 60,
+   "n": 61,
    "source": "City of Melbourne 2020 photomesh"
   },
   "melbourne_25422768_enhanced_v1": {
    "union": false,
    "clean": true,
-   "n": 62,
+   "n": 63,
    "source": "City of Melbourne 2020 photomesh"
   },
   "melbourne_296368687_enhanced_v1": {
    "union": false,
    "clean": true,
-   "n": 62,
+   "n": 63,
    "source": "City of Melbourne 2020 photomesh"
   },
   "melbourne_33106429_enhanced_v1": {
    "union": false,
    "clean": true,
-   "n": 60,
+   "n": 61,
    "source": "City of Melbourne 2020 photomesh"
   },
   "melbourne_45461060_enhanced_v1": {
    "union": false,
    "clean": true,
-   "n": 60,
+   "n": 61,
    "source": "City of Melbourne 2020 photomesh"
   },
   "melbourne_4817059_enhanced_v1": {
    "union": false,
    "clean": true,
-   "n": 61,
+   "n": 62,
    "source": "City of Melbourne 2020 photomesh"
   }
  }
