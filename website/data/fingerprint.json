@@ -1,8 +1,8 @@
 {
- "fingerprint": "cf81a1844a5c6bf69e1be79bd23601935d3944340d11b40b53deff323a502750",
- "snapshot": "2026-11-12",
+ "fingerprint": "326cb76a782b073da183f378a251b1b7a9a139425aae2cd9e803ad2a6de63b07",
+ "snapshot": "2026-11-15",
  "buildings": 12,
- "results": 495,
+ "results": 507,
  "models": [
   "Claude Fable 5.2 (max)",
   "Claude Opus 5.5 (max)",
@@ -24,6 +24,7 @@
   "Claude Fable 5 (max)",
   "GLM 5.3 FlashX Legal (max)",
   "Tencent Hy4 Claude Code (max)",
+  "Qwen4 (max)",
   "Muse Wonder 1.0 (max)",
   "Grok 4.6 (xhigh)",
   "GPT‑6 Sol (ultra)",
@@ -76,6 +77,10 @@
    "name spelled from its id ('Tencent Hy4 Claude Code')",
    "company 'Tencent' (the board says 'tencent')"
   ],
+  "qwen4": [
+   "name spelled from its id ('Qwen4')",
+   "company 'Qwen' (the board says 'qwen')"
+  ],
   "muse-spark-open": [
    "name from OpenRouter ('Muse Spark Open')"
   ],
@@ -96,6 +101,7 @@
   "gemini-4-hydrogen": "2026-11-12 (OpenRouter listing)",
   "glm-5.3-flashx-legal": "2026-11-02 (OpenRouter listing)",
   "tencent-hy4-claude-code": "2026-11-04 (first day on the page)",
+  "qwen4": "2026-11-15 (first day on the page)",
   "muse-spark-open": "2026-10-15 (OpenRouter listing)",
   "crouton-alpha": "2026-11-02 (OpenRouter listing)",
   "nemotron-3.5-super-vl": "2026-10-15 (OpenRouter listing)"

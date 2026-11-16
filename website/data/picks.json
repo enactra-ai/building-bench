@@ -6016,6 +6016,26 @@
 },
 {
 "site": "helsinki_122886734_enhanced_v1",
+"series": "qwenqwen4maxclaudecode",
+"run": "helsinki_122886734_enhanced_v1-blind-qwen-qwen4-max-claude-code-20261116T043709",
+"overall": 0.856,
+"surface_f": 0.655,
+"chamfer_m": null,
+"height_m": null,
+"triangles": null,
+"glb": "../bench-runs/helsinki_122886734_enhanced_v1-blind-qwen-qwen4-max-claude-code-20261116T043709/submission/building.glb",
+"page": null,
+"cost": 2.08,
+"turns": 153.0,
+"nruns": 1,
+"allruns": [
+0.856
+],
+"ran": "2026-11-16",
+"minutes": 49.27
+},
+{
+"site": "helsinki_122886734_enhanced_v1",
 "series": "gemini4hydrogenhigh",
 "run": "helsinki_122886734_enhanced_v1-blind-gemini-4-hydrogen-high-20261113T001711",
 "overall": 0.719,
@@ -6933,6 +6953,26 @@
 },
 {
 "site": "helsinki_122954081_enhanced_v1",
+"series": "qwenqwen4maxclaudecode",
+"run": "helsinki_122954081_enhanced_v1-blind-qwen-qwen4-max-claude-code-20261116T043709",
+"overall": 0.662,
+"surface_f": 0.394,
+"chamfer_m": null,
+"height_m": null,
+"triangles": null,
+"glb": "../bench-runs/helsinki_122954081_enhanced_v1-blind-qwen-qwen4-max-claude-code-20261116T043709/submission/building.glb",
+"page": null,
+"cost": 5.2,
+"turns": 330.0,
+"nruns": 1,
+"allruns": [
+0.662
+],
+"ran": "2026-11-16",
+"minutes": 140.77
+},
+{
+"site": "helsinki_122954081_enhanced_v1",
 "series": "gemini4hydrogenhigh",
 "run": "helsinki_122954081_enhanced_v1-blind-gemini-4-hydrogen-high-20261113T001711",
 "overall": 0.794,
@@ -7826,6 +7866,26 @@
 ],
 "ran": "2026-09-04",
 "minutes": 36.57
+},
+{
+"site": "helsinki_123901485_enhanced_v1",
+"series": "qwenqwen4maxclaudecode",
+"run": "helsinki_123901485_enhanced_v1-blind-qwen-qwen4-max-claude-code-20261116T043709",
+"overall": 0.803,
+"surface_f": 0.503,
+"chamfer_m": null,
+"height_m": null,
+"triangles": null,
+"glb": "../bench-runs/helsinki_123901485_enhanced_v1-blind-qwen-qwen4-max-claude-code-20261116T043709/submission/building.glb",
+"page": null,
+"cost": 2.91,
+"turns": 199.0,
+"nruns": 1,
+"allruns": [
+0.803
+],
+"ran": "2026-11-16",
+"minutes": 65.4
 },
 {
 "site": "helsinki_123901485_enhanced_v1",
@@ -8767,6 +8827,26 @@
 },
 {
 "site": "helsinki_8033120_enhanced_v1",
+"series": "qwenqwen4maxclaudecode",
+"run": "helsinki_8033120_enhanced_v1-blind-qwen-qwen4-max-claude-code-20261116T043709",
+"overall": 0.674,
+"surface_f": 0.32,
+"chamfer_m": null,
+"height_m": null,
+"triangles": null,
+"glb": "../bench-runs/helsinki_8033120_enhanced_v1-blind-qwen-qwen4-max-claude-code-20261116T043709/submission/building.glb",
+"page": null,
+"cost": 2.78,
+"turns": 185.0,
+"nruns": 1,
+"allruns": [
+0.674
+],
+"ran": "2026-11-16",
+"minutes": 71.18
+},
+{
+"site": "helsinki_8033120_enhanced_v1",
 "series": "gemini4hydrogenhigh",
 "run": "helsinki_8033120_enhanced_v1-blind-gemini-4-hydrogen-high-20261113T003941",
 "overall": 0.619,
@@ -9640,6 +9720,26 @@
 ],
 "ran": "2026-09-04",
 "minutes": 29.67
+},
+{
+"site": "helsinki_cathedral_enhanced_v1",
+"series": "qwenqwen4maxclaudecode",
+"run": "helsinki_cathedral_enhanced_v1-blind-qwen-qwen4-max-claude-code-20261116T043709",
+"overall": 0.704,
+"surface_f": 0.12,
+"chamfer_m": null,
+"height_m": null,
+"triangles": null,
+"glb": "../bench-runs/helsinki_cathedral_enhanced_v1-blind-qwen-qwen4-max-claude-code-20261116T043709/submission/building.glb",
+"page": null,
+"cost": 1.66,
+"turns": 117.0,
+"nruns": 1,
+"allruns": [
+0.704
+],
+"ran": "2026-11-16",
+"minutes": 39.68
 },
 {
 "site": "helsinki_cathedral_enhanced_v1",
@@ -10582,6 +10682,26 @@
 },
 {
 "site": "melbourne_155809136_enhanced_v1",
+"series": "qwenqwen4maxclaudecode",
+"run": "melbourne_155809136_enhanced_v1-blind-qwen-qwen4-max-claude-code-20261116T043709",
+"overall": 0.686,
+"surface_f": 0.335,
+"chamfer_m": null,
+"height_m": null,
+"triangles": null,
+"glb": "../bench-runs/melbourne_155809136_enhanced_v1-blind-qwen-qwen4-max-claude-code-20261116T043709/submission/building.glb",
+"page": null,
+"cost": 1.58,
+"turns": 116.0,
+"nruns": 1,
+"allruns": [
+0.686
+],
+"ran": "2026-11-16",
+"minutes": 31.47
+},
+{
+"site": "melbourne_155809136_enhanced_v1",
 "series": "gemini4hydrogenhigh",
 "run": "melbourne_155809136_enhanced_v1-blind-gemini-4-hydrogen-high-20261113T004001",
 "overall": 0.83,
@@ -11476,6 +11596,26 @@
 ],
 "ran": "2026-09-04",
 "minutes": 33.8
+},
+{
+"site": "melbourne_22820458_enhanced_v1",
+"series": "qwenqwen4maxclaudecode",
+"run": "melbourne_22820458_enhanced_v1-blind-qwen-qwen4-max-claude-code-20261116T043709",
+"overall": 0.723,
+"surface_f": 0.227,
+"chamfer_m": null,
+"height_m": null,
+"triangles": null,
+"glb": "../bench-runs/melbourne_22820458_enhanced_v1-blind-qwen-qwen4-max-claude-code-20261116T043709/submission/building.glb",
+"page": null,
+"cost": 1.94,
+"turns": 138.0,
+"nruns": 1,
+"allruns": [
+0.723
+],
+"ran": "2026-11-16",
+"minutes": 44.7
 },
 {
 "site": "melbourne_22820458_enhanced_v1",
@@ -12393,6 +12533,26 @@
 ],
 "ran": "2026-09-04",
 "minutes": 32.13
+},
+{
+"site": "melbourne_25422768_enhanced_v1",
+"series": "qwenqwen4maxclaudecode",
+"run": "melbourne_25422768_enhanced_v1-blind-qwen-qwen4-max-claude-code-20261116T043709",
+"overall": 0.736,
+"surface_f": 0.222,
+"chamfer_m": null,
+"height_m": null,
+"triangles": null,
+"glb": "../bench-runs/melbourne_25422768_enhanced_v1-blind-qwen-qwen4-max-claude-code-20261116T043709/submission/building.glb",
+"page": null,
+"cost": 4.57,
+"turns": 314.0,
+"nruns": 1,
+"allruns": [
+0.736
+],
+"ran": "2026-11-16",
+"minutes": 109.35
 },
 {
 "site": "melbourne_25422768_enhanced_v1",
@@ -13334,6 +13494,26 @@
 },
 {
 "site": "melbourne_296368687_enhanced_v1",
+"series": "qwenqwen4maxclaudecode",
+"run": "melbourne_296368687_enhanced_v1-blind-qwen-qwen4-max-claude-code-20261116T043709",
+"overall": 0.776,
+"surface_f": 0.321,
+"chamfer_m": null,
+"height_m": null,
+"triangles": null,
+"glb": "../bench-runs/melbourne_296368687_enhanced_v1-blind-qwen-qwen4-max-claude-code-20261116T043709/submission/building.glb",
+"page": null,
+"cost": 2.72,
+"turns": 177.0,
+"nruns": 1,
+"allruns": [
+0.776
+],
+"ran": "2026-11-16",
+"minutes": 62.15
+},
+{
+"site": "melbourne_296368687_enhanced_v1",
 "series": "gemini4hydrogenhigh",
 "run": "melbourne_296368687_enhanced_v1-blind-gemini-4-hydrogen-high-20261113T011223",
 "overall": 0.756,
@@ -14249,6 +14429,26 @@
 ],
 "ran": "2026-09-04",
 "minutes": 36.55
+},
+{
+"site": "melbourne_33106429_enhanced_v1",
+"series": "qwenqwen4maxclaudecode",
+"run": "melbourne_33106429_enhanced_v1-blind-qwen-qwen4-max-claude-code-20261116T043709",
+"overall": 0.399,
+"surface_f": 0.1,
+"chamfer_m": null,
+"height_m": null,
+"triangles": null,
+"glb": "../bench-runs/melbourne_33106429_enhanced_v1-blind-qwen-qwen4-max-claude-code-20261116T043709/submission/building.glb",
+"page": null,
+"cost": 1.98,
+"turns": 130.0,
+"nruns": 1,
+"allruns": [
+0.399
+],
+"ran": "2026-11-16",
+"minutes": 45.23
 },
 {
 "site": "melbourne_33106429_enhanced_v1",
@@ -15168,6 +15368,26 @@
 },
 {
 "site": "melbourne_45461060_enhanced_v1",
+"series": "qwenqwen4maxclaudecode",
+"run": "melbourne_45461060_enhanced_v1-blind-qwen-qwen4-max-claude-code-20261116T043709",
+"overall": 0.718,
+"surface_f": 0.531,
+"chamfer_m": null,
+"height_m": null,
+"triangles": null,
+"glb": "../bench-runs/melbourne_45461060_enhanced_v1-blind-qwen-qwen4-max-claude-code-20261116T043709/submission/building.glb",
+"page": null,
+"cost": 2.84,
+"turns": 149.0,
+"nruns": 1,
+"allruns": [
+0.718
+],
+"ran": "2026-11-16",
+"minutes": 78.45
+},
+{
+"site": "melbourne_45461060_enhanced_v1",
 "series": "gemini4hydrogenhigh",
 "run": "melbourne_45461060_enhanced_v1-blind-gemini-4-hydrogen-high-20261113T013825",
 "overall": 0.763,
@@ -16082,6 +16302,26 @@
 ],
 "ran": "2026-09-05",
 "minutes": 53.95
+},
+{
+"site": "melbourne_4817059_enhanced_v1",
+"series": "qwenqwen4maxclaudecode",
+"run": "melbourne_4817059_enhanced_v1-blind-qwen-qwen4-max-claude-code-20261116T043709",
+"overall": 0.777,
+"surface_f": 0.241,
+"chamfer_m": null,
+"height_m": null,
+"triangles": null,
+"glb": "../bench-runs/melbourne_4817059_enhanced_v1-blind-qwen-qwen4-max-claude-code-20261116T043709/submission/building.glb",
+"page": null,
+"cost": 1.99,
+"turns": 137.0,
+"nruns": 1,
+"allruns": [
+0.777
+],
+"ran": "2026-11-16",
+"minutes": 44.87
 },
 {
 "site": "melbourne_4817059_enhanced_v1",

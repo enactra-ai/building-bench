@@ -71,6 +71,10 @@
   "openrouter": "nvidia/nemotron-3.5-super-vl",
   "listed": "2026-10-15 15:04 UTC"
  },
+ "qwen4": {
+  "date": "2026-11-15",
+  "source": "first day on the page"
+ },
  "tencent-hy4-claude-code": {
   "date": "2026-11-04",
   "source": "first day on the page"
