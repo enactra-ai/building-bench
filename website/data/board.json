@@ -802,7 +802,7 @@
    "series": "gemini4hydrogenhigh",
    "values": {
     "overall": 0.7543,
-    "cost": null,
+    "cost": 2.9215,
     "cells": 12,
     "ran": 12,
     "f": 0.3917,
@@ -828,7 +828,12 @@
     "overall": 0.0222
    },
    "optimal": false,
-   "tags": [],
+   "tags": [
+    {
+     "text": "est. price",
+     "kind": "warn"
+    }
+   ],
    "facets": {
     "family": "Google",
     "effort": "high"
@@ -841,7 +846,7 @@
    "series": "gemini4hydrogenxhigh",
    "values": {
     "overall": 0.7533,
-    "cost": null,
+    "cost": 6.72015,
     "cells": 12,
     "ran": 12,
     "f": 0.3522,
@@ -867,7 +872,12 @@
     "overall": 0.019
    },
    "optimal": false,
-   "tags": [],
+   "tags": [
+    {
+     "text": "est. price",
+     "kind": "warn"
+    }
+   ],
    "facets": {
     "family": "Google",
     "effort": "xhigh"

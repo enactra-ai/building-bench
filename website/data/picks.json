@@ -6045,7 +6045,7 @@
 "triangles": null,
 "glb": "../bench-runs/helsinki_122886734_enhanced_v1-blind-gemini-4-hydrogen-high-20261113T001711/submission/building.glb",
 "page": null,
-"cost": null,
+"cost": 2.65,
 "turns": 112.0,
 "nruns": 1,
 "allruns": [
@@ -6065,7 +6065,7 @@
 "triangles": null,
 "glb": "../bench-runs/helsinki_122886734_enhanced_v1-blind-gemini-4-hydrogen-xhigh-20261112T173054/submission/building.glb",
 "page": null,
-"cost": null,
+"cost": 9.46,
 "turns": 364.0,
 "nruns": 1,
 "allruns": [
@@ -6982,7 +6982,7 @@
 "triangles": null,
 "glb": "../bench-runs/helsinki_122954081_enhanced_v1-blind-gemini-4-hydrogen-high-20261113T001711/submission/building.glb",
 "page": null,
-"cost": null,
+"cost": 2.83,
 "turns": 118.0,
 "nruns": 1,
 "allruns": [
@@ -7002,7 +7002,7 @@
 "triangles": null,
 "glb": "../bench-runs/helsinki_122954081_enhanced_v1-blind-gemini-4-hydrogen-xhigh-20261112T173054/submission/building.glb",
 "page": null,
-"cost": null,
+"cost": 5.5,
 "turns": 205.0,
 "nruns": 1,
 "allruns": [
@@ -7898,7 +7898,7 @@
 "triangles": null,
 "glb": "../bench-runs/helsinki_123901485_enhanced_v1-blind-gemini-4-hydrogen-high-20261113T001711/submission/building.glb",
 "page": null,
-"cost": null,
+"cost": 3.02,
 "turns": 101.0,
 "nruns": 1,
 "allruns": [
@@ -7918,7 +7918,7 @@
 "triangles": null,
 "glb": "../bench-runs/helsinki_123901485_enhanced_v1-blind-gemini-4-hydrogen-xhigh-20261112T173054/submission/building.glb",
 "page": null,
-"cost": null,
+"cost": 6.28,
 "turns": 231.0,
 "nruns": 1,
 "allruns": [
@@ -8856,7 +8856,7 @@
 "triangles": null,
 "glb": "../bench-runs/helsinki_8033120_enhanced_v1-blind-gemini-4-hydrogen-high-20261113T003941/submission/building.glb",
 "page": null,
-"cost": null,
+"cost": 2.6,
 "turns": 79.0,
 "nruns": 1,
 "allruns": [
@@ -8876,7 +8876,7 @@
 "triangles": null,
 "glb": "../bench-runs/helsinki_8033120_enhanced_v1-blind-gemini-4-hydrogen-xhigh-20261112T180337/submission/building.glb",
 "page": null,
-"cost": null,
+"cost": 6.92,
 "turns": 194.0,
 "nruns": 1,
 "allruns": [
@@ -9752,7 +9752,7 @@
 "triangles": null,
 "glb": "../bench-runs/helsinki_cathedral_enhanced_v1-blind-gemini-4-hydrogen-high-20261113T004001/submission/building.glb",
 "page": null,
-"cost": null,
+"cost": 2.71,
 "turns": 118.0,
 "nruns": 1,
 "allruns": [
@@ -9772,7 +9772,7 @@
 "triangles": null,
 "glb": "../bench-runs/helsinki_cathedral_enhanced_v1-blind-gemini-4-hydrogen-xhigh-20261112T181306/submission/building.glb",
 "page": null,
-"cost": null,
+"cost": 5.56,
 "turns": 437.0,
 "nruns": 1,
 "allruns": [
@@ -10711,7 +10711,7 @@
 "triangles": null,
 "glb": "../bench-runs/melbourne_155809136_enhanced_v1-blind-gemini-4-hydrogen-high-20261113T004001/submission/building.glb",
 "page": null,
-"cost": null,
+"cost": 4.66,
 "turns": 164.0,
 "nruns": 1,
 "allruns": [
@@ -10731,7 +10731,7 @@
 "triangles": null,
 "glb": "../bench-runs/melbourne_155809136_enhanced_v1-blind-gemini-4-hydrogen-xhigh-20261112T181306/submission/building.glb",
 "page": null,
-"cost": null,
+"cost": 4.92,
 "turns": 187.0,
 "nruns": 1,
 "allruns": [
@@ -11628,7 +11628,7 @@
 "triangles": null,
 "glb": "../bench-runs/melbourne_22820458_enhanced_v1-blind-gemini-4-hydrogen-high-20261113T005902/submission/building.glb",
 "page": null,
-"cost": null,
+"cost": 4.91,
 "turns": 179.0,
 "nruns": 1,
 "allruns": [
@@ -11648,7 +11648,7 @@
 "triangles": null,
 "glb": "../bench-runs/melbourne_22820458_enhanced_v1-blind-gemini-4-hydrogen-xhigh-20261112T181306/submission/building.glb",
 "page": null,
-"cost": null,
+"cost": 5.09,
 "turns": 163.0,
 "nruns": 1,
 "allruns": [
@@ -12565,7 +12565,7 @@
 "triangles": null,
 "glb": "../bench-runs/melbourne_25422768_enhanced_v1-blind-gemini-4-hydrogen-high-20261113T010303/submission/building.glb",
 "page": null,
-"cost": null,
+"cost": 4.96,
 "turns": 187.0,
 "nruns": 1,
 "allruns": [
@@ -12585,7 +12585,7 @@
 "triangles": null,
 "glb": "../bench-runs/melbourne_25422768_enhanced_v1-blind-gemini-4-hydrogen-xhigh-20261112T211517/submission/building.glb",
 "page": null,
-"cost": null,
+"cost": 17.78,
 "turns": 554.0,
 "nruns": 1,
 "allruns": [
@@ -13523,7 +13523,7 @@
 "triangles": null,
 "glb": "../bench-runs/melbourne_296368687_enhanced_v1-blind-gemini-4-hydrogen-high-20261113T011223/submission/building.glb",
 "page": null,
-"cost": null,
+"cost": 2.4,
 "turns": 101.0,
 "nruns": 1,
 "allruns": [
@@ -13543,7 +13543,7 @@
 "triangles": null,
 "glb": "../bench-runs/melbourne_296368687_enhanced_v1-blind-gemini-4-hydrogen-xhigh-20261112T181306/submission/building.glb",
 "page": null,
-"cost": null,
+"cost": 10.53,
 "turns": 369.0,
 "nruns": 1,
 "allruns": [
@@ -14461,7 +14461,7 @@
 "triangles": null,
 "glb": "../bench-runs/melbourne_33106429_enhanced_v1-blind-gemini-4-hydrogen-high-20261113T013025/submission/building.glb",
 "page": null,
-"cost": null,
+"cost": 2.31,
 "turns": 89.0,
 "nruns": 1,
 "allruns": [
@@ -14481,7 +14481,7 @@
 "triangles": null,
 "glb": "../bench-runs/melbourne_33106429_enhanced_v1-blind-gemini-4-hydrogen-xhigh-20261112T181306/submission/building.glb",
 "page": null,
-"cost": null,
+"cost": 11.19,
 "turns": 324.0,
 "nruns": 1,
 "allruns": [
@@ -15397,7 +15397,7 @@
 "triangles": null,
 "glb": "../bench-runs/melbourne_45461060_enhanced_v1-blind-gemini-4-hydrogen-high-20261113T013825/submission/building.glb",
 "page": null,
-"cost": null,
+"cost": 3.39,
 "turns": 157.0,
 "nruns": 1,
 "allruns": [
@@ -15417,7 +15417,7 @@
 "triangles": null,
 "glb": "../bench-runs/melbourne_45461060_enhanced_v1-blind-gemini-4-hydrogen-xhigh-20261112T181306/submission/building.glb",
 "page": null,
-"cost": null,
+"cost": 6.52,
 "turns": 217.0,
 "nruns": 1,
 "allruns": [
@@ -16334,7 +16334,7 @@
 "triangles": null,
 "glb": "../bench-runs/melbourne_4817059_enhanced_v1-blind-gemini-4-hydrogen-high-20261113T014025/submission/building.glb",
 "page": null,
-"cost": null,
+"cost": 3.15,
 "turns": 138.0,
 "nruns": 1,
 "allruns": [
@@ -16354,7 +16354,7 @@
 "triangles": null,
 "glb": "../bench-runs/melbourne_4817059_enhanced_v1-blind-gemini-4-hydrogen-xhigh-20261112T181306/submission/building.glb",
 "page": null,
-"cost": null,
+"cost": 7.56,
 "turns": 261.0,
 "nruns": 1,
 "allruns": [
