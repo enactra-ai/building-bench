@@ -1,5 +1,5 @@
 {
- "snapshot": "2026-11-16",
+ "snapshot": "2026-11-17",
  "sameSet": [
   "allegiant_stadium",
   "aon_center_chicago",
@@ -13,8 +13,8 @@
   "twa_flight_center",
   "udvar_hazy"
  ],
- "runsScored": 2443,
- "modelsRanked": 70,
+ "runsScored": 2455,
+ "modelsRanked": 71,
  "rig": {
   "schema": "city_bench.building_light/1",
   "sun_azimuth_deg": 135.0,
@@ -42,10 +42,21 @@
   "reach_m": 400.0
  },
  "cleanBoard": {
-  "runsScored": 783,
-  "modelsRanked": 50,
+  "runsScored": 795,
+  "modelsRanked": 51,
   "buildings": 12,
   "rows": {
+   "gpt62solmax": {
+    "label": "gpt-6.2-sol (max)",
+    "overall": 0.8761,
+    "f": 0.6998,
+    "geometry": 0.8564,
+    "appearance": 0.9217,
+    "cost": 2.0996975,
+    "minutes": 29.27,
+    "cells": 12,
+    "place": 1
+   },
    "claudefable52max": {
     "label": "claude-fable-5-2 (max)",
     "overall": 0.8744,
@@ -88,7 +99,7 @@
     "cost": 7.045719,
     "minutes": 31.77,
     "cells": 12,
-    "place": 3
+    "place": 4
    },
    "gemini4carbonhigh": {
     "label": "gemini-4-carbon (high)",
@@ -99,7 +110,7 @@
     "cost": 6.35335,
     "minutes": 61.92,
     "cells": 12,
-    "place": 4
+    "place": 5
    },
    "claudesonnet55max": {
     "label": "claude-sonnet-5-5 (max)",
@@ -110,7 +121,7 @@
     "cost": 45.67458849999996,
     "minutes": 236.53,
     "cells": 12,
-    "place": 4
+    "place": 5
    },
    "deepseekdeepseekv41flash1017claudecode": {
     "label": "deepseek/deepseek-v4.1-flash-1017 (max) \u00b7 Claude Code",
@@ -121,7 +132,7 @@
     "cost": 3.01492,
     "minutes": 155.37,
     "cells": 12,
-    "place": 4
+    "place": 5
    },
    "moonshotaikimik31proclaudecode": {
     "label": "moonshotai/kimi-k3.1-pro (max) \u00b7 Claude Code",
@@ -132,7 +143,7 @@
     "cost": 12.5809885,
     "minutes": 146.06,
     "cells": 12,
-    "place": 4
+    "place": 5
    },
    "fable51max": {
     "label": "claude-fable-5-1 (max)",
@@ -143,7 +154,7 @@
     "cost": 32.975917124999995,
     "minutes": 63.96,
     "cells": 12,
-    "place": 4
+    "place": 5
    },
    "gemini4argonhigh": {
     "label": "gemini-4-argon (high)",
@@ -154,7 +165,7 @@
     "cost": 6.5156,
     "minutes": 90.78,
     "cells": 12,
-    "place": 5
+    "place": 6
    },
    "gpt61terramax": {
     "label": "gpt-6.1-terra (max)",
@@ -165,7 +176,7 @@
     "cost": 1.0120075,
     "minutes": 17.36,
     "cells": 12,
-    "place": 5
+    "place": 6
    },
    "minimaxminimaxm31flashfreeclaudecode": {
     "label": "minimax/minimax-m3.1-flash:free (max) \u00b7 Claude Code",
@@ -176,7 +187,7 @@
     "cost": 0.0,
     "minutes": 1078.86,
     "cells": 12,
-    "place": 5
+    "place": 6
    },
    "grok47xhigh": {
     "label": "grok-4.7 (xhigh)",
@@ -187,7 +198,7 @@
     "cost": 11.422699999999999,
     "minutes": 36.81,
     "cells": 12,
-    "place": 6
+    "place": 7
    },
    "fable": {
     "label": "claude-fable-5 (high)",
@@ -198,7 +209,7 @@
     "cost": 29.095726999999997,
     "minutes": 41.88,
     "cells": 2,
-    "place": 12
+    "place": 13
    },
    "fablemax": {
     "label": "claude-fable-5 (max)",
@@ -209,7 +220,7 @@
     "cost": 39.641364,
     "minutes": 67.98,
     "cells": 12,
-    "place": 12
+    "place": 13
    },
    "gemini4hydrogenhigh": {
     "label": "gemini-4-hydrogen (high)",
@@ -220,7 +231,7 @@
     "cost": 2.9215,
     "minutes": 21.1,
     "cells": 12,
-    "place": 12
+    "place": 13
    },
    "gemini4hydrogenxhigh": {
     "label": "gemini-4-hydrogen (xhigh)",
@@ -231,7 +242,7 @@
     "cost": 6.72015,
     "minutes": 45.78,
     "cells": 12,
-    "place": 13
+    "place": 14
    },
    "opusmax": {
     "label": "claude-opus-5 (max)",
@@ -242,7 +253,7 @@
     "cost": 46.3759445,
     "minutes": 92.58,
     "cells": 12,
-    "place": 14
+    "place": 15
    },
    "gpt56solmax": {
     "label": "gpt-5.6-sol (max)",
@@ -253,7 +264,7 @@
     "cost": 7.5439884,
     "minutes": 43.82,
     "cells": 12,
-    "place": 14
+    "place": 15
    },
    "unionalphaclaudecode": {
     "label": "stealth/union-alpha (max) \u00b7 Claude Code",
@@ -264,7 +275,7 @@
     "cost": 3.7573204999999996,
     "minutes": 30.24,
     "cells": 12,
-    "place": 14
+    "place": 15
    },
    "deepseekv41flashclaudecode": {
     "label": "deepseek/deepseek-v4.1-flash:wafer (max) \u00b7 Claude Code",
@@ -275,7 +286,7 @@
     "cost": 2.3317245,
     "minutes": 114.13,
     "cells": 12,
-    "place": 14
+    "place": 15
    },
    "zaiglm53flashxlegalclaudecode": {
     "label": "z-ai/glm-5.3-flashx-legal (max) \u00b7 Claude Code",
@@ -286,7 +297,7 @@
     "cost": 6.7276555,
     "minutes": 196.8,
     "cells": 12,
-    "place": 16
+    "place": 17
    },
    "tencenthy4claudecode": {
     "label": "tencent-hy4-claude-code (max) \u00b7 Claude Code",
@@ -297,7 +308,7 @@
     "cost": 1.3979865,
     "minutes": 93.28,
     "cells": 12,
-    "place": 16
+    "place": 17
    },
    "qwenqwen4maxclaudecode": {
     "label": "qwen/qwen4 (max) \u00b7 Claude Code",
@@ -308,7 +319,7 @@
     "cost": 2.3991025,
     "minutes": 55.72,
     "cells": 12,
-    "place": 16
+    "place": 17
    },
    "musewonder10max": {
     "label": "muse-wonder-1.0 (max)",
@@ -319,7 +330,7 @@
     "cost": 7.718234,
     "minutes": 34.92,
     "cells": 12,
-    "place": 18
+    "place": 19
    },
    "gpt6solultra": {
     "label": "gpt-6-sol (ultra)",
@@ -330,7 +341,7 @@
     "cost": 1.9185364999999999,
     "minutes": 19.09,
     "cells": 12,
-    "place": 18
+    "place": 19
    },
    "deepseekv41flash": {
     "label": "deepseek/deepseek-v4.1-flash:wafer",
@@ -341,7 +352,7 @@
     "cost": null,
     "minutes": 69.72,
     "cells": 1,
-    "place": 18
+    "place": 19
    },
    "gpt6solmax": {
     "label": "gpt-6-sol (max)",
@@ -352,7 +363,7 @@
     "cost": 1.8870635,
     "minutes": 20.75,
     "cells": 12,
-    "place": 18
+    "place": 19
    },
    "grok46xhigh": {
     "label": "grok-4.6 (xhigh)",
@@ -363,7 +374,7 @@
     "cost": 10.59285,
     "minutes": 53.34,
     "cells": 12,
-    "place": 18
+    "place": 19
    },
    "gpt56terramax": {
     "label": "gpt-5.6-terra (max)",
@@ -374,7 +385,7 @@
     "cost": 4.2589282,
     "minutes": 53.03,
     "cells": 12,
-    "place": 21
+    "place": 22
    },
    "musespark13max": {
     "label": "muse-spark-1.3 (max)",
@@ -385,7 +396,7 @@
     "cost": 5.8897540500000005,
     "minutes": 60.05,
     "cells": 12,
-    "place": 21
+    "place": 22
    },
    "zaiglm53flashxclaudecode": {
     "label": "z-ai/glm-5.3-flashx (max) \u00b7 Claude Code",
@@ -396,7 +407,7 @@
     "cost": 2.325387,
     "minutes": 80.5,
     "cells": 12,
-    "place": 21
+    "place": 22
    },
    "fireworksember1claudecode": {
     "label": "fireworks/ember-1 (max) \u00b7 Claude Code",
@@ -407,7 +418,7 @@
     "cost": 9.444563500000001,
     "minutes": 77.5,
     "cells": 12,
-    "place": 21
+    "place": 22
    },
    "swe2maxdevin": {
     "label": "cognition/swe-2 (max)",
@@ -418,7 +429,7 @@
     "cost": 0.0,
     "minutes": 247.49,
     "cells": 12,
-    "place": 21
+    "place": 22
    },
    "claudehaiku55max": {
     "label": "claude-haiku-5-5 (max)",
@@ -429,7 +440,7 @@
     "cost": 1.3368134999999999,
     "minutes": 36.12,
     "cells": 12,
-    "place": 22
+    "place": 23
    },
    "fablelow": {
     "label": "claude-fable-5 (low)",
@@ -440,7 +451,7 @@
     "cost": 4.949040000000001,
     "minutes": 8.22,
     "cells": 3,
-    "place": 23
+    "place": 24
    },
    "gpt56lunamax": {
     "label": "gpt-5.6-luna (max)",
@@ -451,7 +462,7 @@
     "cost": 0.45029904,
     "minutes": 62.74,
     "cells": 12,
-    "place": 32
+    "place": 33
    },
    "metamusesparkopenclaudecode": {
     "label": "meta/muse-spark-open (max) \u00b7 Claude Code",
@@ -462,7 +473,7 @@
     "cost": 8.586422,
     "minutes": 76.51,
     "cells": 12,
-    "place": 35
+    "place": 36
    },
    "stealthcroutonalphaclaudecode": {
     "label": "stealth/crouton-alpha (max) \u00b7 Claude Code",
@@ -473,7 +484,7 @@
     "cost": 0.0,
     "minutes": 21.47,
     "cells": 11,
-    "place": 36
+    "place": 37
    },
    "stealthspacebunnyalphaclaudecode": {
     "label": "stealth/space-bunny-alpha (max) \u00b7 Claude Code",
@@ -484,7 +495,7 @@
     "cost": 0.0,
     "minutes": 114.94,
     "cells": 12,
-    "place": 36
+    "place": 37
    },
    "gemini38flash": {
     "label": "gemini-3.8-flash (high)",
@@ -495,7 +506,7 @@
     "cost": 3.330324675,
     "minutes": 39.51,
     "cells": 12,
-    "place": 36
+    "place": 37
    },
    "sonnetmax": {
     "label": "claude-sonnet-5 (max)",
@@ -506,7 +517,7 @@
     "cost": 15.032763100000004,
     "minutes": 60.73,
     "cells": 12,
-    "place": 36
+    "place": 37
    },
    "kimik3max": {
     "label": "kimi-k3 (thinking)",
@@ -517,7 +528,7 @@
     "cost": 5.844977500000001,
     "minutes": 125.14,
     "cells": 12,
-    "place": 36
+    "place": 37
    },
    "mistralaimistrallarge40claudecode": {
     "label": "mistralai/mistral-large-4-0 (max) \u00b7 Claude Code",
@@ -528,7 +539,7 @@
     "cost": 33.208745,
     "minutes": 688.59,
     "cells": 12,
-    "place": 36
+    "place": 37
    },
    "gemini": {
     "label": "gemini-3.1-pro (high)",
@@ -539,7 +550,7 @@
     "cost": 1.5500243999999999,
     "minutes": 16.75,
     "cells": 2,
-    "place": 36
+    "place": 37
    },
    "nvidianemotron35supervlfreeclaudecode": {
     "label": "nvidia/nemotron-3.5-super-vl (max) \u00b7 Claude Code",
@@ -550,7 +561,7 @@
     "cost": 0.7568904999999999,
     "minutes": 36.13,
     "cells": 12,
-    "place": 43
+    "place": 44
    },
    "step5previewclaudecode": {
     "label": "step-5-preview (max) \u00b7 Claude Code",
@@ -561,7 +572,7 @@
     "cost": 16.58585,
     "minutes": 427.17,
     "cells": 12,
-    "place": 44
+    "place": 45
    },
    "glm53flashmax": {
     "label": "glm-5.3-flash (max)",
@@ -572,7 +583,7 @@
     "cost": 0.21804560249999994,
     "minutes": 100.71,
     "cells": 12,
-    "place": 44
+    "place": 45
    },
    "haiku": {
     "label": "claude-haiku-4-5",
@@ -583,7 +594,7 @@
     "cost": 0.5243465500000001,
     "minutes": 10.85,
     "cells": 12,
-    "place": 45
+    "place": 46
    },
    "inklingfreeclaudecode": {
     "label": "thinkingmachines/inkling:free \u00b7 Claude Code",
@@ -594,7 +605,7 @@
     "cost": 0.0,
     "minutes": 4.31,
     "cells": 12,
-    "place": 45
+    "place": 46
    }
   }
  },
@@ -657,73 +668,73 @@
   "helsinki_122886734_enhanced_v1": {
    "union": false,
    "clean": true,
-   "n": 64,
+   "n": 65,
    "source": "Helsinki 3D city model"
   },
   "helsinki_122954081_enhanced_v1": {
    "union": false,
    "clean": true,
-   "n": 62,
+   "n": 63,
    "source": "Helsinki 3D city model"
   },
   "helsinki_123901485_enhanced_v1": {
    "union": false,
    "clean": true,
-   "n": 65,
+   "n": 66,
    "source": "Helsinki 3D city model"
   },
   "helsinki_8033120_enhanced_v1": {
    "union": false,
    "clean": true,
-   "n": 62,
+   "n": 63,
    "source": "Helsinki 3D city model"
   },
   "helsinki_cathedral_enhanced_v1": {
    "union": false,
    "clean": true,
-   "n": 67,
+   "n": 68,
    "source": "Helsinki 3D city model"
   },
   "melbourne_155809136_enhanced_v1": {
    "union": false,
    "clean": true,
-   "n": 62,
+   "n": 63,
    "source": "City of Melbourne 2020 photomesh"
   },
   "melbourne_22820458_enhanced_v1": {
    "union": false,
    "clean": true,
-   "n": 63,
+   "n": 64,
    "source": "City of Melbourne 2020 photomesh"
   },
   "melbourne_25422768_enhanced_v1": {
    "union": false,
    "clean": true,
-   "n": 65,
+   "n": 66,
    "source": "City of Melbourne 2020 photomesh"
   },
   "melbourne_296368687_enhanced_v1": {
    "union": false,
    "clean": true,
-   "n": 65,
+   "n": 66,
    "source": "City of Melbourne 2020 photomesh"
   },
   "melbourne_33106429_enhanced_v1": {
    "union": false,
    "clean": true,
-   "n": 63,
+   "n": 64,
    "source": "City of Melbourne 2020 photomesh"
   },
   "melbourne_45461060_enhanced_v1": {
    "union": false,
    "clean": true,
-   "n": 63,
+   "n": 64,
    "source": "City of Melbourne 2020 photomesh"
   },
   "melbourne_4817059_enhanced_v1": {
    "union": false,
    "clean": true,
-   "n": 64,
+   "n": 65,
    "source": "City of Melbourne 2020 photomesh"
   }
  }

@@ -1,9 +1,10 @@
 {
- "fingerprint": "00ce5fb4f9e4a154ee3da6ee036e6afe2b3093fff0f04e4bd505ede476fffaf7",
- "snapshot": "2026-11-16",
+ "fingerprint": "5cc492d1af46d45fbf4248f2bed67364168d92bcf2e5e9eb5b6498222154e2a0",
+ "snapshot": "2026-11-17",
  "buildings": 12,
- "results": 507,
+ "results": 519,
  "models": [
+  "GPT‑6.2 Sol (max)",
   "Claude Fable 5.2 (max)",
   "Claude Opus 5.5 (max)",
   "GPT‑6.1 Sol (max)",
@@ -49,6 +50,9 @@
   "Inkling"
  ],
  "incomplete": {
+  "gpt-6.2-sol": [
+   "name from OpenRouter ('GPT‑6.2 Sol')"
+  ],
   "claude-fable-5-2": [
    "name from OpenRouter ('Claude Fable 5.2')"
   ],
@@ -92,6 +96,7 @@
   ]
  },
  "dated": {
+  "gpt-6.2-sol": "2026-11-17 (OpenRouter listing)",
   "claude-fable-5-2": "2026-11-09 (OpenRouter listing)",
   "gemini-4-carbon": "2026-11-10 (OpenRouter listing)",
   "deepseek-v4.1-flash-1017": "2026-10-17 (OpenRouter listing)",
