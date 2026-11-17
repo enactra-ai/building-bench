@@ -6016,6 +6016,26 @@
 },
 {
 "site": "helsinki_122886734_enhanced_v1",
+"series": "gpt62astramax",
+"run": "helsinki_122886734_enhanced_v1-blind-gpt-6.2-astra-max-20261117T191129",
+"overall": 0.888,
+"surface_f": 0.879,
+"chamfer_m": null,
+"height_m": null,
+"triangles": null,
+"glb": "../bench-runs/helsinki_122886734_enhanced_v1-blind-gpt-6.2-astra-max-20261117T191129/submission/building.glb",
+"page": null,
+"cost": 9.75,
+"turns": 1.0,
+"nruns": 1,
+"allruns": [
+0.888
+],
+"ran": "2026-11-17",
+"minutes": 67.35
+},
+{
+"site": "helsinki_122886734_enhanced_v1",
 "series": "gpt62solmax",
 "run": "helsinki_122886734_enhanced_v1-blind-gpt-6.2-sol-max-20261117T191126",
 "overall": 0.867,
@@ -6973,6 +6993,26 @@
 },
 {
 "site": "helsinki_122954081_enhanced_v1",
+"series": "gpt62astramax",
+"run": "helsinki_122954081_enhanced_v1-blind-gpt-6.2-astra-max-20261117T191129",
+"overall": 0.923,
+"surface_f": 0.928,
+"chamfer_m": null,
+"height_m": null,
+"triangles": null,
+"glb": "../bench-runs/helsinki_122954081_enhanced_v1-blind-gpt-6.2-astra-max-20261117T191129/submission/building.glb",
+"page": null,
+"cost": 8.28,
+"turns": 1.0,
+"nruns": 1,
+"allruns": [
+0.923
+],
+"ran": "2026-11-17",
+"minutes": 81.85
+},
+{
+"site": "helsinki_122954081_enhanced_v1",
 "series": "gpt62solmax",
 "run": "helsinki_122954081_enhanced_v1-blind-gpt-6.2-sol-max-20261117T191126",
 "overall": 0.896,
@@ -7906,6 +7946,26 @@
 ],
 "ran": "2026-09-04",
 "minutes": 36.57
+},
+{
+"site": "helsinki_123901485_enhanced_v1",
+"series": "gpt62astramax",
+"run": "helsinki_123901485_enhanced_v1-blind-gpt-6.2-astra-max-20261117T191129",
+"overall": 0.915,
+"surface_f": 0.903,
+"chamfer_m": null,
+"height_m": null,
+"triangles": null,
+"glb": "../bench-runs/helsinki_123901485_enhanced_v1-blind-gpt-6.2-astra-max-20261117T191129/submission/building.glb",
+"page": null,
+"cost": 7.11,
+"turns": 1.0,
+"nruns": 1,
+"allruns": [
+0.915
+],
+"ran": "2026-11-17",
+"minutes": 64.78
 },
 {
 "site": "helsinki_123901485_enhanced_v1",
@@ -8887,6 +8947,26 @@
 },
 {
 "site": "helsinki_8033120_enhanced_v1",
+"series": "gpt62astramax",
+"run": "helsinki_8033120_enhanced_v1-blind-gpt-6.2-astra-max-20261117T191129",
+"overall": 0.792,
+"surface_f": 0.432,
+"chamfer_m": null,
+"height_m": null,
+"triangles": null,
+"glb": "../bench-runs/helsinki_8033120_enhanced_v1-blind-gpt-6.2-astra-max-20261117T191129/submission/building.glb",
+"page": null,
+"cost": 7.52,
+"turns": 1.0,
+"nruns": 1,
+"allruns": [
+0.792
+],
+"ran": "2026-11-17",
+"minutes": 77.47
+},
+{
+"site": "helsinki_8033120_enhanced_v1",
 "series": "gpt62solmax",
 "run": "helsinki_8033120_enhanced_v1-blind-gpt-6.2-sol-max-20261117T191126",
 "overall": 0.821,
@@ -9800,6 +9880,26 @@
 ],
 "ran": "2026-09-04",
 "minutes": 29.67
+},
+{
+"site": "helsinki_cathedral_enhanced_v1",
+"series": "gpt62astramax",
+"run": "helsinki_cathedral_enhanced_v1-blind-gpt-6.2-astra-max-20261117T191129",
+"overall": 0.934,
+"surface_f": 0.744,
+"chamfer_m": null,
+"height_m": null,
+"triangles": null,
+"glb": "../bench-runs/helsinki_cathedral_enhanced_v1-blind-gpt-6.2-astra-max-20261117T191129/submission/building.glb",
+"page": null,
+"cost": 8.1,
+"turns": 1.0,
+"nruns": 1,
+"allruns": [
+0.934
+],
+"ran": "2026-11-17",
+"minutes": 67.58
 },
 {
 "site": "helsinki_cathedral_enhanced_v1",
@@ -10782,6 +10882,26 @@
 },
 {
 "site": "melbourne_155809136_enhanced_v1",
+"series": "gpt62astramax",
+"run": "melbourne_155809136_enhanced_v1-blind-gpt-6.2-astra-max-20261117T191129",
+"overall": 0.944,
+"surface_f": 0.881,
+"chamfer_m": null,
+"height_m": null,
+"triangles": null,
+"glb": "../bench-runs/melbourne_155809136_enhanced_v1-blind-gpt-6.2-astra-max-20261117T191129/submission/building.glb",
+"page": null,
+"cost": 9.74,
+"turns": 1.0,
+"nruns": 1,
+"allruns": [
+0.944
+],
+"ran": "2026-11-17",
+"minutes": 89.17
+},
+{
+"site": "melbourne_155809136_enhanced_v1",
 "series": "gpt62solmax",
 "run": "melbourne_155809136_enhanced_v1-blind-gpt-6.2-sol-max-20261117T191126",
 "overall": 0.916,
@@ -11716,6 +11836,26 @@
 ],
 "ran": "2026-09-04",
 "minutes": 33.8
+},
+{
+"site": "melbourne_22820458_enhanced_v1",
+"series": "gpt62astramax",
+"run": "melbourne_22820458_enhanced_v1-blind-gpt-6.2-astra-max-20261117T191129",
+"overall": 0.904,
+"surface_f": 0.804,
+"chamfer_m": null,
+"height_m": null,
+"triangles": null,
+"glb": "../bench-runs/melbourne_22820458_enhanced_v1-blind-gpt-6.2-astra-max-20261117T191129/submission/building.glb",
+"page": null,
+"cost": 10.05,
+"turns": 1.0,
+"nruns": 1,
+"allruns": [
+0.904
+],
+"ran": "2026-11-17",
+"minutes": 73.6
 },
 {
 "site": "melbourne_22820458_enhanced_v1",
@@ -12673,6 +12813,26 @@
 ],
 "ran": "2026-09-04",
 "minutes": 32.13
+},
+{
+"site": "melbourne_25422768_enhanced_v1",
+"series": "gpt62astramax",
+"run": "melbourne_25422768_enhanced_v1-blind-gpt-6.2-astra-max-20261117T191129",
+"overall": 0.824,
+"surface_f": 0.805,
+"chamfer_m": null,
+"height_m": null,
+"triangles": null,
+"glb": "../bench-runs/melbourne_25422768_enhanced_v1-blind-gpt-6.2-astra-max-20261117T191129/submission/building.glb",
+"page": null,
+"cost": 12.34,
+"turns": 1.0,
+"nruns": 1,
+"allruns": [
+0.824
+],
+"ran": "2026-11-17",
+"minutes": 75.72
 },
 {
 "site": "melbourne_25422768_enhanced_v1",
@@ -13654,6 +13814,26 @@
 },
 {
 "site": "melbourne_296368687_enhanced_v1",
+"series": "gpt62astramax",
+"run": "melbourne_296368687_enhanced_v1-blind-gpt-6.2-astra-max-20261117T191129",
+"overall": 0.873,
+"surface_f": 0.834,
+"chamfer_m": null,
+"height_m": null,
+"triangles": null,
+"glb": "../bench-runs/melbourne_296368687_enhanced_v1-blind-gpt-6.2-astra-max-20261117T191129/submission/building.glb",
+"page": null,
+"cost": 11.65,
+"turns": 1.0,
+"nruns": 1,
+"allruns": [
+0.873
+],
+"ran": "2026-11-17",
+"minutes": 117.83
+},
+{
+"site": "melbourne_296368687_enhanced_v1",
 "series": "gpt62solmax",
 "run": "melbourne_296368687_enhanced_v1-blind-gpt-6.2-sol-max-20261117T191126",
 "overall": 0.879,
@@ -14609,6 +14789,26 @@
 ],
 "ran": "2026-09-04",
 "minutes": 36.55
+},
+{
+"site": "melbourne_33106429_enhanced_v1",
+"series": "gpt62astramax",
+"run": "melbourne_33106429_enhanced_v1-blind-gpt-6.2-astra-max-20261117T191129",
+"overall": 0.885,
+"surface_f": 0.85,
+"chamfer_m": null,
+"height_m": null,
+"triangles": null,
+"glb": "../bench-runs/melbourne_33106429_enhanced_v1-blind-gpt-6.2-astra-max-20261117T191129/submission/building.glb",
+"page": null,
+"cost": 8.22,
+"turns": 1.0,
+"nruns": 1,
+"allruns": [
+0.885
+],
+"ran": "2026-11-17",
+"minutes": 103.43
 },
 {
 "site": "melbourne_33106429_enhanced_v1",
@@ -15568,6 +15768,26 @@
 },
 {
 "site": "melbourne_45461060_enhanced_v1",
+"series": "gpt62astramax",
+"run": "melbourne_45461060_enhanced_v1-blind-gpt-6.2-astra-max-20261117T191129",
+"overall": 0.893,
+"surface_f": 0.603,
+"chamfer_m": null,
+"height_m": null,
+"triangles": null,
+"glb": "../bench-runs/melbourne_45461060_enhanced_v1-blind-gpt-6.2-astra-max-20261117T191129/submission/building.glb",
+"page": null,
+"cost": 8.33,
+"turns": 1.0,
+"nruns": 1,
+"allruns": [
+0.893
+],
+"ran": "2026-11-17",
+"minutes": 82.1
+},
+{
+"site": "melbourne_45461060_enhanced_v1",
 "series": "gpt62solmax",
 "run": "melbourne_45461060_enhanced_v1-blind-gpt-6.2-sol-max-20261117T191126",
 "overall": 0.905,
@@ -16522,6 +16742,26 @@
 ],
 "ran": "2026-09-05",
 "minutes": 53.95
+},
+{
+"site": "melbourne_4817059_enhanced_v1",
+"series": "gpt62astramax",
+"run": "melbourne_4817059_enhanced_v1-blind-gpt-6.2-astra-max-20261117T191129",
+"overall": 0.963,
+"surface_f": 0.928,
+"chamfer_m": null,
+"height_m": null,
+"triangles": null,
+"glb": "../bench-runs/melbourne_4817059_enhanced_v1-blind-gpt-6.2-astra-max-20261117T191129/submission/building.glb",
+"page": null,
+"cost": 9.33,
+"turns": 1.0,
+"nruns": 1,
+"allruns": [
+0.963
+],
+"ran": "2026-11-17",
+"minutes": 101.5
 },
 {
 "site": "melbourne_4817059_enhanced_v1",

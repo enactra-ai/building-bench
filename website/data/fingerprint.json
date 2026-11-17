@@ -1,9 +1,10 @@
 {
- "fingerprint": "5cc492d1af46d45fbf4248f2bed67364168d92bcf2e5e9eb5b6498222154e2a0",
+ "fingerprint": "17bcfdc1f77257765a98bec5b4eeaf3ba790705667ab02fa83bf098eebead4e5",
  "snapshot": "2026-11-17",
  "buildings": 12,
- "results": 519,
+ "results": 531,
  "models": [
+  "GPT‑6.2 Astra (max)",
   "GPT‑6.2 Sol (max)",
   "Claude Fable 5.2 (max)",
   "Claude Opus 5.5 (max)",
@@ -50,6 +51,9 @@
   "Inkling"
  ],
  "incomplete": {
+  "gpt-6.2-astra": [
+   "name from OpenRouter ('GPT‑6.2 Astra')"
+  ],
   "gpt-6.2-sol": [
    "name from OpenRouter ('GPT‑6.2 Sol')"
   ],
@@ -96,6 +100,7 @@
   ]
  },
  "dated": {
+  "gpt-6.2-astra": "2026-11-17 (OpenRouter listing)",
   "gpt-6.2-sol": "2026-11-17 (OpenRouter listing)",
   "claude-fable-5-2": "2026-11-09 (OpenRouter listing)",
   "gemini-4-carbon": "2026-11-10 (OpenRouter listing)",

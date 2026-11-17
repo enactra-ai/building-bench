@@ -41,6 +41,12 @@
   "openrouter": "openai/gpt-6.1-terra",
   "listed": "2026-10-26 18:13 UTC"
  },
+ "gpt-6.2-astra": {
+  "date": "2026-11-17",
+  "source": "OpenRouter listing",
+  "openrouter": "openai/gpt-6.2-astra",
+  "listed": "2026-11-17 18:00 UTC"
+ },
  "gpt-6.2-sol": {
   "date": "2026-11-17",
   "source": "OpenRouter listing",
