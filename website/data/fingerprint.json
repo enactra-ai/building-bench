@@ -1,14 +1,15 @@
 {
- "fingerprint": "17bcfdc1f77257765a98bec5b4eeaf3ba790705667ab02fa83bf098eebead4e5",
- "snapshot": "2026-11-17",
+ "fingerprint": "3f31e8cb927fe3080b08e6a28536ba64c8f9c23adfdc0691b27ecc928e0277e6",
+ "snapshot": "2026-11-18",
  "buildings": 12,
- "results": 531,
+ "results": 543,
  "models": [
   "GPT‑6.2 Astra (max)",
   "GPT‑6.2 Sol (max)",
   "Claude Fable 5.2 (max)",
   "Claude Opus 5.5 (max)",
   "GPT‑6.1 Sol (max)",
+  "Gemini 4 Neon (xhigh)",
   "Gemini 4 Carbon (high)",
   "Claude Sonnet 5.5 (max)",
   "DeepSeek V4.1 Flash 1017 (max)",
@@ -60,6 +61,9 @@
   "claude-fable-5-2": [
    "name from OpenRouter ('Claude Fable 5.2')"
   ],
+  "gemini-4-neon": [
+   "name from OpenRouter ('Gemini 4 Neon')"
+  ],
   "gemini-4-carbon": [
    "name from OpenRouter ('Gemini 4 Carbon')"
   ],
@@ -103,6 +107,7 @@
   "gpt-6.2-astra": "2026-11-17 (OpenRouter listing)",
   "gpt-6.2-sol": "2026-11-17 (OpenRouter listing)",
   "claude-fable-5-2": "2026-11-09 (OpenRouter listing)",
+  "gemini-4-neon": "2026-11-18 (OpenRouter listing)",
   "gemini-4-carbon": "2026-11-10 (OpenRouter listing)",
   "deepseek-v4.1-flash-1017": "2026-10-17 (OpenRouter listing)",
   "kimi-k3.1-pro": "2026-10-23 (OpenRouter listing)",
